@@ -37,19 +37,19 @@
                             </tr>
                             <tr>
                                 @foreach ($bk_list as $bk)
-                                @if (in_array($bk->kode_bk, $empty_bk))
+                                @if (in_array($bk->kodeBK, $empty_bk))
                                 <div class="tooltip">
                                     <th scope="col" style="background-color: yellow">
-                                        <span itemid="Foundation of Information System">
-                                            {{ $bk->kode_bk }}
+                                        <span itemid="{{ $bk->namaBK }}">
+                                            {{ $bk->kodeBK }}
                                         </span>
                                     </th>
                                 </div>
                                 @else
                                 <div class="tooltip">
                                     <th scope="col" >
-                                        <span itemid="Foundation of Information System">
-                                            {{ $bk->kode_bk }}
+                                        <span itemid="{{ $bk->namaBK }}">
+                                            {{ $bk->kodeBK }}
                                         </span>
                                     </th>
                                 </div>
@@ -66,15 +66,15 @@
                         @foreach ($empty as $item)
                             <tr>
                                 <th style="background-color: yellow;" scope="row">{{ $iter }}</th>
-                                <th style="background-color: yellow;" scope="row"><span itemid="{{ $mk_list->where('kodemk','===',$item)->first()["nama_mk"]}}">{{ $mk_list->where('kodemk','===',$item)->first()["kodemk"] }}</span></th>
-                                <th  style="background-color: yellow;"  scope="row" class="text-start">{{ $mk_list->where('kodemk','===',$item)->first()["nama_mk"]}}</th>
+                                <th style="background-color: yellow;" scope="row"><span itemid="{{ $mk_list->where('kodeMK','===',$item)->first()["namaMK"]}}">{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"] }}</span></th>
+                                <th  style="background-color: yellow;"  scope="row" class="text-start">{{ $mk_list->where('kodeMK','===',$item)->first()["namaMK"]}}</th>
                                 @foreach ($bk_list as $bk)
                                     <td style="background-color: yellow;" ><input type="checkbox"
-                                            id="checkbox_{{$mk_list->where('kodemk','===',$item)->first()["kodemk"]  }}-{{ $bk->kode_bk }}"
-                                            name="checkbox_{{ $mk_list->where('kodemk','===',$item)->first()["kodemk"]  }}-{{ $bk->kode_bk }}"
-                                            value="{{ $mk_list->where('kodemk','===',$item)->first()["kodemk"]  }}&{{ $bk->kode_bk }}" style="width:26px;height:26px;"
-                                            @if ($pemetaan->where('kodemk', '===', $mk_list->where('kodemk','===',$item)->first()["kodemk"] )->where('kode_bk', '===', $bk->kode_bk)->count()) checked @endif>
-                                            {{-- <span id="{{$mk_list->where('kodemk','===',$item)->first()["kodemk"] }}_{{ $bk->kode_bk }}" class="checkmark"></span> --}}
+                                            id="checkbox_{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
+                                            name="checkbox_{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
+                                            value="{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}&{{ $bk->kodeBK }}" style="width:26px;height:26px;"
+                                            @if ($pemetaan->where('kodeMK', '===', $mk_list->where('kodeMK','===',$item)->first()["kodeMK"] )->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif>
+                                            {{-- <span id="{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"] }}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @endforeach
                                 @php
@@ -85,27 +85,27 @@
                         @endforeach
     
                         @foreach ($mk_list as $mk)
-                        @if (!(in_array($mk->kodemk, $empty)))
+                        @if (!(in_array($mk->kodeMK, $empty)))
                         <tr>
                             <th scope="row">{{ $iter }}</th>
-                            <th scope="row" ><span itemid="{{ $mk->nama_mk }}">{{ $mk->kodemk }}</span></th>
-                            <th scope="row" class="text-start">{{ $mk->nama_mk }}</th>
+                            <th scope="row" ><span itemid="{{ $mk->namaMK }}">{{ $mk->kodeMK }}</span></th>
+                            <th scope="row" class="text-start">{{ $mk->namaMK }}</th>
                             @foreach ($bk_list as $bk)
-                                @if (in_array($bk->kode_bk, $empty_bk))
+                                @if (in_array($bk->kodeBK, $empty_bk))
                                     <td style="background-color: yellow"><input type="checkbox"
-                                        id="checkbox_{{ $mk->kodemk }}-{{ $bk->kode_bk }}"
-                                        name="checkbox_{{ $mk->kodemk }}-{{ $bk->kode_bk }}"
-                                        value="{{ $mk->kodemk }}&{{ $bk->kode_bk }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodemk', '===', $mk->kodemk)->where('kode_bk', '===', $bk->kode_bk)->count()) checked @endif>
-                                        {{-- <span id="{{$mk->kodemk}}_{{ $bk->kode_bk }}" class="checkmark"></span> --}}
+                                        id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
+                                        name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
+                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" style="width:26px;height:26px;"
+                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif>
+                                        {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @else
                                     <td ><input type="checkbox"
-                                        id="checkbox_{{ $mk->kodemk }}-{{ $bk->kode_bk }}"
-                                        name="checkbox_{{ $mk->kodemk }}-{{ $bk->kode_bk }}"
-                                        value="{{ $mk->kodemk }}&{{ $bk->kode_bk }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodemk', '===', $mk->kodemk)->where('kode_bk', '===', $bk->kode_bk)->count()) checked @endif>
-                                        {{-- <span id="{{$mk->kodemk}}_{{ $bk->kode_bk }}" class="checkmark"></span> --}}
+                                        id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
+                                        name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
+                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" style="width:26px;height:26px;"
+                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif>
+                                        {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @endif
                             @endforeach
