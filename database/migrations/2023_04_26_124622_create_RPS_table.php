@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('RPS', function (Blueprint $table) {
             $table->char('kodeRPS',6)->primary('kodeRPS');
             $table->year('tahunAjaran');
-            $table->char('kodeMK',5);
+            $table->char('kodeMK',10);
             $table->char('kps',18);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
             $table->foreign('kps')->references('nip')->on('Dosen')->onDelete('restrict');

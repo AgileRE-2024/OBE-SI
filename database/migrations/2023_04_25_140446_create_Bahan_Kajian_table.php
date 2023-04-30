@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Bahan_Kajian', function (Blueprint $table) {
-            $table->char('kodeBK',4)->primary('kodeBK');
+            $table->char('kodeBK',5)->primary('kodeBK');
             $table->string("namaBK", 100);
             $table->boolean("kategoriBK");
             $table->string("referensiBK", 100);
