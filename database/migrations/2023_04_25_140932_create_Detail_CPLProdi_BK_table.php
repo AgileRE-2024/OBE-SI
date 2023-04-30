@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_CPLProdi_BK', function (Blueprint $table) {
-            $table->char('kodeBK',5);
+            $table->char('kodeBK',4);
             $table->char('kodeCPL',5);
             $table->timestamps();
             $table->foreign('kodeBK')->references('kodeBK')->on('Bahan_Kajian')->onDelete('restrict');
