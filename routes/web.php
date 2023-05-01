@@ -54,8 +54,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         })->name('cpl_mk');
 
         Route::get('/cpl-pl', [PemetaanPlCplController::class, 'index'])->name('cpl_pl');
-        Route::get('/cpl-pl/table', [PemetaanPlCplController::class, 'table'])->name('table_cpl_pl');
-        Route::post('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
+        Route::put('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
         Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export');
 
         Route::get('/cpl-cpmk-mk', function () {
@@ -64,7 +63,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
     });
 
 
-    
+
     Route::prefix('/data')->name('data.')->group(function () {
         Route::get('/profil-lulusan', function () {
             return view('content.profil_lulusan', ['title' => 'Profil Lulusan']);
