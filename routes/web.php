@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BKMKController;
+use App\Http\Controllers\CPLBKController;
 use App\Http\Controllers\PemetaanPlCplController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,9 +30,13 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
 
         Route::put('/bk-mk/update', [BKMKController::class, 'update'])->name('update_pemetaan_bk_mk');
 
-        Route::get('/cpl-bk', function () {
-            return view('welcome');
-        })->name('cpl_bk');
+        // Route::get('/cpl-bk', function () {
+        //     return view('welcome');
+        // })->name('cpl_bk');
+
+        Route::get('/cpl-bk', [CPLBKController::class,'index','title' => 'Pemetaan CPL BK'])->name('cpl_bk');
+
+        Route::put('/cpl-bk/update', [CPLBKController::class, 'update'])->name('update_pemetaan_cpl_bk');
 
         Route::get('/cpl-bk-mk', function () {
             return view('welcome');
