@@ -63,6 +63,10 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::post('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
         Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export');
 
+        Route::get('/cpl-bk', [CPLBKController::class, 'index'])->name('cpl_bk');
+        Route::get('/cetak-pdf-cplbk',[CPLBKController::class,'cetakLaporanPDF'])-> name('cetakpdfcplbk');
+        Route::get('/cetak-excel-cplbk',[CPLBKController::class,'cetakLaporanExcel'])-> name('cetakexcelcplbk');
+
         Route::get('/cpl-cpmk-mk', function () {
             return view('welcome');
         })->name('cpl_cpmk_mk');
