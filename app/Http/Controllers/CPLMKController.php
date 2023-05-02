@@ -66,11 +66,11 @@ class CPLMKController extends Controller
     $detail_mk_cpmk = Detail_MK_CPMK::all();
     $list_cpmk = CPMK::all();  
 
-    return Excel::download(new PemetaanCPLMKExport($judul,$list_cpl,$list_mk,$detail_mk_cpmk,$list_cpmk), 'Laporan Pemetaan CPLMK.xlsx');
+    return Excel::download(new PemetaanCPLMKExport($judul, $list_cpl, $list_mk, $detail_mk_cpmk, $list_cpmk), 'Laporan Pemetaan CPLMK.xlsx');
     }
     
     public function viewExcel(){
-        $judul = "Matriks Capaian Pembelajaran Lulusan (CPL) & Mata Kuliah (MK)";
+        $judul = "Pemetaan Capaian Pembelajaran Lulusan (CPL) & Mata Kuliah (MK)";
         $list_cpl = CPL_Prodi::all();
         $list_mk = Mata_Kuliah::all();
         $detail_mk_cpmk = Detail_MK_CPMK::all();
