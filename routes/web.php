@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanPlCplController;
+use App\Http\Controllers\CPMKController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,9 +59,11 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::post('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
         Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export');
 
-        Route::get('/cpl-cpmk-mk', function () {
-            return view('welcome');
-        })->name('cpl_cpmk_mk');
+        Route::prefix('/cpl-cpmk-mk')->name('cpl_cpmk_mk.')->group(function () {
+            Route::name('index')->get('/', [CPMKController::class, 'index']);
+            Route::name('add_cpmk')->get('/add_cpmk/{cpl}', [CPMKController::class, 'create']);
+            Route::name('cpmk.store')->post('/add_cpmk', [CpmkController::class, 'store']);
+        });
     });
 
 

@@ -91,8 +91,8 @@
                             </ul>
                         </li>
                         <li class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">
-                            <a href="{{ route('kurikulum.pemetaan.bk_mk') }}"
-                                class="nav-link" @if (Request::is('*pemetaan*')) style="background-color: #ffffff; color: black;" @endif>
+                            <a href="{{ route('kurikulum.pemetaan.bk_mk') }}" class="nav-link"
+                                @if (Request::is('*pemetaan*')) style="background-color: #ffffff; color: black;" @endif>
                                 <p>
                                     <i class="bi bi-caret-right-fill"></i>
                                     Pemetaan
@@ -172,8 +172,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk') }}" class="nav-link"
-                                        @if (URL::current() === route('kurikulum.pemetaan.cpl_cpmk_mk')) style="background-color: #989898; color: black;" @endif>
+                                    <a href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.index') }}" class="nav-link"
+                                        @if (str_contains(URL::current(), route('kurikulum.pemetaan.cpl_cpmk_mk.index'))) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
                                             <i class="bi bi-caret-right-fill"></i>
                                             CPL-CPMK-MK
@@ -185,7 +185,8 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
+                    <a href="#" class="nav-link"
+                        @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-book"></i>
                             Penilaian
@@ -193,7 +194,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('rps') }}" class="nav-link" @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>
+                    <a href="{{ route('rps') }}" class="nav-link"
+                        @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-filetype-pdf"></i>
                             RPS
