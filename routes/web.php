@@ -19,6 +19,26 @@ Route::get('/dashboard/home', function () {
     return view('content.home', ['title' => 'Home OBE']);
 })->name('home');
 
+Route::get('/test', function () {
+    // $anggota = CPL_SN_Dikti::first();
+    return view('test', [
+        'CPL_SN_Dikti'=>CPL_SN_Dikti::first(),
+        'Profil_Lulusan'=>Profil_Lulusan::first(),
+        'Bahan_Kajian'=>Bahan_Kajian::first(),
+        'Mata_Kuliah'=>Mata_Kuliah::first(),
+        'RPS'=>RPS::first(),
+        'Detail_Peran_Dosen'=>Detail_Peran_Dosen::all(),
+        'CPMK'=>CPMK::first(),
+        'SubCPMK'=>SubCPMK::first(),
+        'Minggu_RPS'=>Minggu_RPS::first(),
+        'Detail_RPS'=>Detail_RPS::all(),
+        'Mahasiswa'=>Mahasiswa::first(),
+        'Kelas'=>Kelas::first(),
+        'Semua_Kelas'=>Kelas::all(),
+        'Detail_Nilai_Mahasiswa'=>Detail_Nilai_Mahasiswa::all(),
+    ]);
+});
+
 Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
     Route::prefix('/pemetaan')->name('pemetaan.')->group(function () {
         // Route::get('/bk-mk', function () {
