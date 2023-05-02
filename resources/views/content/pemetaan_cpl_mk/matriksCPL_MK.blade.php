@@ -106,6 +106,44 @@
           bottom: calc(100% + 10px);
           /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
         }
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 2px solid #ffffff;
+            border-radius: 1px;
+            width: 23px;
+            height: 25px;
+            outline: none;
+            cursor: pointer;
+            position: relative ;
+        }
+        input[type="checkbox"]:checked::before {
+            content: "\2714";
+            font-size: 14px;
+            color: white;
+            position: absolute;
+            /* left: 2px; */
+            /* top: 1px; */
+        }
+        
+        input[type="checkbox"]:checked {
+            background-color: white;
+            border-color: #686565;
+        }
         
         </style>
+        <script>
+        let getIdCheckbox = document.getElementById("color")
+        changeColor = () => {
+            if (getIdCheckbox.checked == true){
+                document.getElementById("red").style.color = 'red'
+                document.getElementById("green").style.color = 'green'
+            }else {
+                document.getElementById("red").style.color = 'white'
+                document.getElementById("green").style.color = 'white'
+            }
+        }   
+    </script>
 @endsection
