@@ -186,7 +186,7 @@
       content: attr(itemid);
       overflow: hidden;
       text-overflow: ellipsis;
-      /* width: 200px; */
+      width: 800px;
       background-color: #1F2F4D;
       color: white;
       padding: 9px;
@@ -198,7 +198,6 @@
       white-space: nowrap;
       z-index: 1;
       opacity: 1;
-      
       /* transition: opacity 3s; */
       /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
     
