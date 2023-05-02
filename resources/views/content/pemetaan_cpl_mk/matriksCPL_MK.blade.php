@@ -13,10 +13,10 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a class="btn btn-outline-danger" href="#"><i class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+                <a class="btn btn-outline-danger" href="{{ route('kurikulum.pemetaan.cetakpdfcplmk') }}"><i class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" href="#"><i class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+                <a class="btn btn-success" href="{{ route('kurikulum.pemetaan.cetakexcelcplmk') }}"><i class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
         <br>
@@ -26,15 +26,18 @@
                 <tr>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode MK</th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Nama</th>
-                    <th scope="col" colspan="{{ $list_cpl->count() }}">CPL</th>
+                    <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Nama Mata Kuliah</th>
+                    <th scope="col" colspan="{{ $list_cpl->count() }}">Capaian Pembelajaran Lulusan</th>
                 </tr>
                 <tr>
                     @foreach ($list_cpl as $cpl)
                         <th scope="col">
-                            <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                title="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span>
-                        </th>
+                            <span itemid="{{ $cpl->deskripsiCPL }}">
+                                {{ $cpl->kodeCPL }}
+                            </span>
+                            {{-- <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span> --}}
+                            </th>
                     @endforeach
                 </tr>
             </thead>
@@ -60,4 +63,49 @@
         </table>
 
     </div>
+    <style>
+    
+        /* Style the tooltip */
+        /* Style the tooltip */
+         span[itemid] {
+          position: relative;
+          cursor: pointer;
+          /* display: inline-block; */
+        }
+        
+        span[itemid]:hover::after {
+          content: attr(itemid);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          /* width: 200px; */
+          background-color: #1F2F4D;
+          color: white;
+          padding: 9px;
+          border-radius: 5px;
+          position: absolute;
+          bottom: -40px;
+          left: 120%;
+          transform: translateX(-50%);
+          white-space: nowrap;
+          z-index: 1;
+          opacity: 1;
+          /* transition: opacity 3s; */
+          /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
+        
+        }
+        
+        span[itemid]:hover::before {
+          content: "";
+          border-style: solid;
+          border-width: 0 8px 8px 8px;
+          border-color: transparent transparent #1F2F4D transparent;
+          position: absolute;
+          top: 12px;
+          left: 80%;
+          transform: translateX(-50%);
+          bottom: calc(100% + 10px);
+          /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
+        }
+        
+        </style>
 @endsection
