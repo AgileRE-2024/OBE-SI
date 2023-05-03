@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\CPL_Prodi;
 use App\Models\CPMK;
+use App\Models\Mata_Kuliah;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
@@ -18,11 +19,11 @@ class CPMKController extends Controller
     public function index()
     {
         $cpl = Cpl_Prodi::get();
-        // $cpmk = CPMK::with('kodeCPL')->get();
+        $mk = Mata_Kuliah::get();
         return view('content.pemetaan_cpl_cpmk_mk.index', [
             'title' => 'Pemetaan CPL CPMK',
-            // 'cpmk' => $cpmk,
-            'cpl' => $cpl
+            'cpl' => $cpl,
+            'mk' => $mk
         ]);
     }
 
@@ -106,9 +107,9 @@ class CPMKController extends Controller
      */
     public function show($id)
     {
-        $cpmk = CPMK::find($id);
+        // $cpmk = CPMK::find($id);
     
-        return view('cpmk.show', ['cpmk' => $cpmk]);
+        // return view('cpmk.show', ['cpmk' => $cpmk]);
     }
 
     /**
@@ -119,7 +120,7 @@ class CPMKController extends Controller
      */
     public function edit(CPMK $cpmk)
     {
-        return view('cpmk.edit', compact('cpmk'));
+        // return view('cpmk.edit', compact('cpmk'));
     }
 
     /**

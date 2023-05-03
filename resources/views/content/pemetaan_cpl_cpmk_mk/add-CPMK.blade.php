@@ -9,14 +9,23 @@
                 </div>
             </div>
         @endif
-        <div class="card border" style="background-color: rgb(197, 197, 197)">
+
+        <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
-                Input Capaian Pembelajaran Mata Kuliah (CPMK) Berdasarkan Capaian Pembelajaran Lulusan (CPL)
+                <h3>
+                    Input Capaian Pembelajaran Mata Kuliah (CPMK) Berdasarkan Capaian Pembelajaran Lulusan (CPL)
+                </h3>
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>
+                    Capaian Pembelajaran Mata Kuliah (CPMK) merupakan hasil penurunan dari Capaian Pembelajaran Lulusan
+                    (CPL) yang dibebankan pada Mata Kuliah (MK).
+                    <b style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b>
+                </h5>
             </div>
         </div>
+
         @csrf
         <div class="form-input mb-4">
-            <div class="form-group row mb-4">
+            <div class="form-group row my-4">
                 <label for="kodeCPL" class="col-sm-2 col-form-label">Capaian Pembelajaran</label>
                 <div class="col-sm-10">
                     <span type="text" readonly class="form-control-plaintext" name="kodeCPL" id="kodeCPL">
