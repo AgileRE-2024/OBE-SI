@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanPlCplController;
+use App\Http\Controllers\SusunanMKController;
+use App\Http\Controllers\OrganisasiMKController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,13 +39,19 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             return view('welcome');
         })->name('cpl_bk_mk');
 
-        Route::get('/susunan-mata-kuliah', function () {
-            return view('welcome');
-        })->name('susunan_mata_kuliah');
+        Route::get('/susunan-mata-kuliah', [SusunanMKController::class, 'index'])->name('susunan_mata_kuliah');
 
-        Route::get('/organisasi-mata-kuliah', function () {
-            return view('welcome');
-        })->name('organisasi_mata_kuliah');
+        Route::put('/susunan-mata-kuliah/update', [SusunanMKController::class, 'update'])->name('update_susunan_mk');
+
+        Route::get('/susunan-mata-kuliah/export/pdf', [SusunanMKController::class, 'exportToPDF'])->name('susunan_mk.export.pdf');
+
+        Route::get('/susunan-mata-kuliah/export/excel', [SusunanMKController::class, 'exportToExcel'])->name('susunan_mk.export.excel');
+
+        Route::get('/organisasi-mata-kuliah', [OrganisasiMKController::class, 'index'])->name('organisasi_mata_kuliah');
+
+        Route::get('/organisasi-mata-kuliah/export/pdf', [OrganisasiMKController::class, 'exportToPDF'])->name('organisasi_mk.export.pdf');
+
+        Route::get('/organisasi-mata-kuliah/export/excel', [OrganisasiMKController::class, 'exportToExcel'])->name('organisasi_mk.export.excel');
 
         Route::get('/cpl-sndikti-cpl-prodi', function () {
             return view('welcome');
