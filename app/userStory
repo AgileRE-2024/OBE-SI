@@ -1,0 +1,18 @@
+As a [Tim Kurikulum], I want to [view CPL – MK data on the curriculum matrix dashboard], so that [I can view CPLMK mapping and export file into pdf and excel format]
+
+User Scenario
+Feature : CPL and MK Mapping
+In order to export CPLMK
+As a Tim Kurikulum
+I need to be login on OBE-SI system
+
+Scenario : Export CPL-MK matrix dashboard into pdf format
+Given : I’m on the “http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-mk”
+When : I click on button “Export PDF”
+Then : I can click download to get soft copy
+I can review CPL-MK mapping and have the soft copy by click into button download
+
+Scenario : Export CPL-MK matrix dashboard into excel format
+Given : I’m on the “http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-mk”
+When : I click on button “Export Excel”
+Then : I can click download to get soft copy

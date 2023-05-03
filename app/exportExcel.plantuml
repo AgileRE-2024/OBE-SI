@@ -1,0 +1,25 @@
+@startuml View dan Export CPL-MK
+actor TimKurikulum as Foo
+boundary cpl_mk as Foo1
+boundary cetak_pdf_cplmk as Foo2
+control CPLMKController as Foo3
+entity detail_mk_cpmk as Foo4
+entity cpmk as Foo5
+
+activate Foo
+Foo -> Foo1 : click export excel
+activate Foo1
+Foo1 -> Foo3 : cetakLaporanExcel()
+activate Foo3
+Foo3 -> Foo4 : Select kodeMK FROM detail_mk_cpmk
+activate Foo4
+Foo4 --> Foo3 : return detail_mk_cpmk
+deactivate Foo4
+Foo3 -> Foo5 : Select kodeCPL FROM cpmk
+activate Foo5
+Foo5 --> Foo3 : return list_cpmk
+deactivate Foo5
+Foo3 --> Foo1 : return download file
+
+
+@enduml
