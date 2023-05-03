@@ -5,7 +5,7 @@
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>Matriks Capaian Pembelajaran Lulusan (CPL) & Mata Kuliah (MK)</h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Pemetaan CPL Program Studi terhadap PL
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>
                     Pemetaan CPL terhadap MK dilakukan untuk menunjukkan keterhubungan antara
                     mata kuliah terhadap CPL Program Studi.<b style="display:inline-block;transform: scaleX(-1)"><i
                             class="bi bi-quote"></i></b></h5>
