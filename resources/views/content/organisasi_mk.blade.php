@@ -25,10 +25,9 @@
                     <th class="align-middle" width="90px">Semester</th>
                     <th class="align-middle" width="90px">Total SKS</th>
                     <th class="align-middle" width="90px">Total MK</th>
-                    <th class="align-middle" width="90px">BK</th>
-                    <th class="align-middle" class="text-center" width="500px">MK Wajib</th>
-                    <th class="align-middle" width="200px">MK Pilihan</th>
-                    <th class="align-middle" width="200px">MKWK</th>
+                    <th class="align-middle">MK Wajib</th>
+                    <th class="align-middle">MK Pilihan</th>
+                    <th class="align-middle">MKWK</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,28 +36,17 @@
                         <td>{{ $smt }}</td>
                         <td>{{ $MKBysmt->sum('sks') }}</td>
                         <td>{{ $MKBysmt->count() }}</td>
-                        @foreach ($MKBysmt as $MKItem)
-                            <td>
-                                @foreach ($MKItem->Bahan_Kajian as $BK)
-                                <div>
-                                    <span data-namabk="{{ $BK->namaBK }}">
-                                        {{ $BK->kodeBK }}
-                                    </span>
-                                </div>
-                                @endforeach
-                            </td>
-                        @endforeach
-                        <td>
+                        <td class="text-left">
                             @foreach($MKBysmt->where('kategoriMK', 1) as $product)
                                 {{ $product->kodeMK }} {{ ":" }} {{ $product->namaMK }}<br>
                             @endforeach
                         </td>
-                        <td>
+                        <td class="text-left">
                             @foreach($MKBysmt->where('kategoriMK', 2) as $product)
                                 {{ $product->kodeMK }} {{ ":" }} {{ $product->namaMK }}<br>
                             @endforeach
                         </td>
-                        <td>
+                        <td class="text-left">
                             @foreach($MKBysmt->where('kategoriMK', 3) as $product)
                                 {{ $product->kodeMK }} {{ ":" }} {{ $product->namaMK }}<br>
                             @endforeach
@@ -72,51 +60,4 @@
             </tbody>
         </table>        
     </div>
-
-    <style>
-    
-        /* Style the tooltip */
-        /* Style the tooltip */
-         span[data-namabk] {
-          position: relative;
-          cursor: pointer;
-          display: inline-block
-          /* display: inline-block; */
-        }
-        
-        span[data-namabk]:hover::after {
-          content: attr(data-namabk);
-          overflow: hidden;
-          text-overflow: ellipsis;
-          /* width: 200px; */
-          background-color: #1F2F4D;
-          color: white;
-          padding: 9px;
-          border-radius: 5px;
-          position: absolute;
-          bottom: -40px;
-          left: 120%;
-          transform: translateX(-50%);
-          white-space: nowrap;
-          z-index: 1;
-          opacity: 1;
-          /* transition: opacity 3s; */
-          /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
-        
-        }
-        
-        span[data-namabk]:hover::before {
-          content: "";
-          border-style: solid;
-          border-width: 0 8px 8px 8px;
-          border-color: transparent transparent #1F2F4D transparent;
-          position: absolute;
-          top: 12px;
-          left: 80%;
-          transform: translateX(-50%);
-          bottom: calc(100% + 10px);
-          /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
-        }
-        
-        </style>
 @endsection

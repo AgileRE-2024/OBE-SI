@@ -25,7 +25,6 @@
                 <th class="align-middle">Semester</th>
                 <th class="align-middle">Total SKS</th>
                 <th class="align-middle">Total MK</th>
-                <th class="align-middle">BK</th>
                 <th class="align-middle" class="text-center">MK Wajib</th>
                 <th class="align-middle">MK Pilihan</th>
                 <th class="align-middle">MKWK</th>
@@ -37,17 +36,6 @@
                     <td>{{ $smt }}</td>
                     <td>{{ $MKBysmt->sum('sks') }}</td>
                     <td>{{ $MKBysmt->count() }}</td>
-                    @foreach ($MKBysmt as $MKItem)
-                        <td>
-                            @foreach ($MKItem->Bahan_Kajian as $BK)
-                            <div>
-                                <span data-namabk="{{ $BK->namaBK }}">
-                                    {{ $BK->kodeBK }}
-                                </span>
-                            </div>
-                            @endforeach
-                        </td>
-                    @endforeach
                     <td>
                         @foreach($MKBysmt->where('kategoriMK', 1) as $product)
                             {{ $product->kodeMK }}

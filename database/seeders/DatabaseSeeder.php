@@ -80,24 +80,46 @@ class DatabaseSeeder extends Seeder
             'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
         ]);
 
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK01',
-            'namaBK' => 'Foundation of Information Systems',
-            'kategoriBK' => TRUE,
-            "referensiBK" =>'IS2020',
+        Bahan_Kajian::insert([
+            [
+                'kodeBK' => 'BK01',
+                'namaBK' => 'Foundation of Information Systems',
+                'kategoriBK' => TRUE,
+                "referensiBK" =>'IS2020',
+            ],
+            [
+                'kodeBK' => 'BK02',
+                'namaBK' => 'Information Systems',
+                'kategoriBK' => TRUE,
+                "referensiBK" =>'IS2020',
+            ],
         ]);
 
-        Mata_Kuliah::create([
-            'kodeMK' => 'MK01',
-            'namaMK' => 'Konsep Sistem Informasi',
-            'jenisMK' => TRUE,
-            'sks'=>3,
-            'semester'=>'1',
-            'kategoriMK'=> TRUE,
-            'pustaka'=> 'Pustaka Belum Tau',
-            'deskripsiMK'=> 'Deskripsi MK Belum Tau',
-            'prasyaratTambahan'=> 'Prasyarat MK Belum Tau',
-            'mat_kodeMK'=>'MK01',
+        Mata_Kuliah::insert([
+            [
+                'kodeMK' => 'MK01',
+                'namaMK' => 'Konsep Sistem Informasi',
+                'jenisMK' => TRUE,
+                'sks'=>3,
+                'semester'=>'1',
+                'kategoriMK'=> TRUE,
+                'pustaka'=> 'Pustaka Belum Tau',
+                'deskripsiMK'=> 'Deskripsi MK Belum Tau',
+                'prasyaratTambahan'=> 'Prasyarat MK Belum Tau',
+                'mat_kodeMK'=>'MK01',
+            ],
+            [
+                'kodeMK' => 'MK02',
+                'namaMK' => 'Sistem Informasi',
+                'jenisMK' => TRUE,
+                'sks'=>3,
+                'semester'=>'1',
+                'kategoriMK'=> TRUE,
+                'pustaka'=> 'Pustaka Belum Tau',
+                'deskripsiMK'=> 'Deskripsi MK Belum Tau',
+                'prasyaratTambahan'=> 'Prasyarat MK Belum Tau',
+                'mat_kodeMK'=>'MK02',
+            ],
         ]);
 
         Dosen::create([
@@ -184,9 +206,15 @@ class DatabaseSeeder extends Seeder
             'kodeCPL' => 'CPL01',
         ]);
 
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK01',
-            'kodeMK' => 'MK01',
+        Detail_BK_MK::insert([
+            [
+                'kodeBK' => 'BK01',
+                'kodeMK' => 'MK01',
+            ],
+            [
+                'kodeBK' => 'BK02',
+                'kodeMK' => 'MK02',
+            ],
         ]);
         
         Detail_Peran_Dosen::create([

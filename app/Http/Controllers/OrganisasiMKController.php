@@ -43,18 +43,15 @@ class OrganisasiMKController extends Controller
                         'Semester' => $smt,
                         'Total SKS' => $MKBysmt->sum('sks'),
                         'Total MK' => $MKBysmt->count(),
-                        'BK' => $MKBysmt->map(function ($MKItem) {
-                            return $MKItem->Bahan_Kajian->pluck('kodeBK')->implode(', ');
-                        })->implode("\n"),
                         'MK Wajib' => $MKBysmt->where('kategoriMK', 1)->map(function ($product) {
                             return $product->kodeMK;
-                        })->implode("\n"),
+                        })->implode(", "),
                         'MK Pilihan' => $MKBysmt->where('kategoriMK', 2)->map(function ($product) {
                             return $product->kodeMK;
-                        })->implode("\n"),
+                        })->implode(", "),
                         'MKWK' => $MKBysmt->where('kategoriMK', 3)->map(function ($product) {
                             return $product->kodeMK;
-                        })->implode("\n"),
+                        })->implode(", "),
                     ];
                 })->push([
                     'Semester' => 'Total SKS',
@@ -62,14 +59,12 @@ class OrganisasiMKController extends Controller
                 ]);
             }
 
-
             public function headings(): array
             {
                 return [
                     'Semester',
                     'Total SKS',
                     'Total MK',
-                    'BK',
                     'MK Wajib',
                     'MK Pilihan',
                     'MKWK',
