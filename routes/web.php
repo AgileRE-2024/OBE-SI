@@ -17,6 +17,8 @@ use App\Models\Detail_Nilai_Mahasiswa;
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanPlCplController;
+use App\Http\Controllers\CPLMKController;
+use App\Http\Controllers\CPMKController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,6 +97,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::name('index')->get('/', [CPMKController::class, 'index']);
             Route::name('add_cpmk')->get('/add_cpmk/{cpl}', [CPMKController::class, 'create']);
             Route::name('cpmk.store')->post('/add_cpmk', [CpmkController::class, 'store']);
+            Route::name('edit_cpmk')->get('/edit_cpmk/{cpmk}', [CPMKController::class, 'edit']);
+            Route::name('cpmk.update')->put('/edit_cpmk/{cpmk}', [CpmkController::class, 'update']);
         });
     });
 

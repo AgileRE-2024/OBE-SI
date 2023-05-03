@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\CPL_Prodi;
 use App\Models\CPMK;
 use App\Models\Mata_Kuliah;
+use App\Models\Detail_MK_CPMK;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
@@ -86,7 +87,7 @@ class CPMKController extends Controller
 
             CPMK::create([
                 'kodeCPMK' => $nextId,
-                'deskripsi' => $cpmk,
+                'deskripsiCPMK' => $cpmk,
                 'kodeCPL' => $request->kodeCPL
             ]);
     
@@ -95,7 +96,7 @@ class CPMKController extends Controller
     
         // Cpmk::insert($data);
     
-        return redirect()->route('kurikulum.pemetaan.cpl_cpmk_mk.')
+        return redirect()->route('kurikulum.pemetaan.cpl_cpmk_mk.index')
             ->with('success', 'CPMK berhasil dibuat.');
     }
 
@@ -120,7 +121,12 @@ class CPMKController extends Controller
      */
     public function edit(CPMK $cpmk)
     {
-        // return view('cpmk.edit', compact('cpmk'));
+        $mk = Mata_Kuliah::get();
+        return view('content.pemetaan_cpl_cpmk_mk.edit-CPMK')->with([
+            'title' => 'Mengubah CPMK dan Memetakannya dengan Mata Kuliah',
+            'cpmk' => $cpmk,
+            'mata_kuliah' => $mk,
+        ]);
     }
 
     /**
@@ -132,13 +138,31 @@ class CPMKController extends Controller
      */
     public function update(Request $request, CPMK $cpmk)
     {
-        $request->validate([
-            'deskripsi' => 'required',
+        $rules = [
+            'deskripsiCPMK' => 'required',
+        ];
+
+        Validator::make($request->all(), $rules, $messages = $this->msg)->validate();
+
+        $cpmk->update([
+            'deskripsiCPMK' => $request->deskripsiCPMK
         ]);
 
-        $cpmk->update($request->all());
+        // hapus dulu semua relasi cpmk x sama semua mk (kalo ada)
+        $del = Detail_MK_CPMK::where('kodeCPMK', $cpmk->kodeCPMK)->get();
+        foreach ($del as $key) {
+            $key->delete();
+        }
 
-        return redirect()->route('kurikulum.pemetaan.cpl_cpmk_mk.')
+        $mata_kuliah = Mata_Kuliah::get();
+        foreach ($request->mk as $mk_req) {
+            Detail_MK_CPMK::create([
+                'kodeMK' => $mk_req,
+                'kodeCPMK' => $cpmk->kodeCPMK,
+            ]);
+        }
+
+        return redirect()->route('kurikulum.pemetaan.cpl_cpmk_mk.index')
             ->with('success', 'CPMK berhasil diubah.');
     }
 
@@ -152,6 +176,6 @@ class CPMKController extends Controller
     {
         $cpmk = CPMK::findOrFail($id);
         $cpmk->delete();
-        return redirect()->route('kurikulum.pemetaan.cpl_cpmk_mk.')->with('success', 'CPMK berhasil dihapus.');
+        return redirect()->route('kurikulum.pemetaan.cpl_cpmk_mk.index')->with('success', 'CPMK berhasil dihapus.');
     }
 }

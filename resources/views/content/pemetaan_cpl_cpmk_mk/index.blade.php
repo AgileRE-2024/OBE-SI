@@ -37,9 +37,52 @@
                 </thead>
                 <tbody>
                     @foreach ($cpl as $cpl)
+                        {{-- counting --}}
+                        @php
+                            for ($i = 0; $i < sizeof($cpl->Cpmk); $i++) {
+                                $x = 0;
+                                foreach ($cpl->Cpmk as $item) {
+                                    if (sizeof($item->Mata_Kuliah) > 0) {
+                                        $x = $x + sizeof($item->Mata_Kuliah);
+                                    } else {
+                                        $x = $x + 1;
+                                    }
+                                }
+                            }
+                        @endphp
+
                         @if (sizeof($cpl->Cpmk) > 0)
                             @for ($i = 0; $i < sizeof($cpl->Cpmk); $i++)
-                                @for ($j = 0; $j < sizeof($cpl->Cpmk[$i]->Mata_Kuliah); $j++)
+                                @if (sizeof($cpl->Cpmk[$i]->Mata_Kuliah) > 0)
+                                    @for ($j = 0; $j < sizeof($cpl->Cpmk[$i]->Mata_Kuliah); $j++)
+                                        {{-- normal. cpmk dan mk sudah terisi --}}
+                                        <tr>
+                                            @if ($i == 0 && $j == 0)
+                                                <td scope="row" rowspan="{{ $x }}" style="cursor: pointer"
+                                                    onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'"
+                                                    data-toggle="tooltip" title="Tekan untuk menambahkan CPMK baru">
+                                                    <span style="font-weight:600;">[{{ $cpl->kodeCPL }}]</span>
+                                                    {{ $cpl->deskripsiCPL }}
+                                                </td>
+                                            @endif
+                                            @if ($j == 0)
+                                                <td rowspan="{{ sizeof($cpl->Cpmk[$i]->Mata_Kuliah) }}"
+                                                    style="cursor: pointer"
+                                                    onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk', $cpl->Cpmk[$i]) }}'"
+                                                    data-toggle="tooltip"
+                                                    title="Tekan untuk mengubah CPMK atau memetakan dengan MK">
+                                                    <span style="font-weight:600;">[{{ $cpl->Cpmk[$i]->kodeCPMK }}]</span>
+                                                    {{ $cpl->Cpmk[$i]->deskripsiCPMK }}
+                                                </td>
+                                            @endif
+                                            <td><span
+                                                    style="font-weight:600;">[{{ $cpl->Cpmk[$i]->Mata_Kuliah[$j]->kodeMK }}]</span>
+                                                {{ $cpl->Cpmk[$i]->Mata_Kuliah[$j]->namaMK }}
+                                            </td>
+                                        </tr>
+                                    @endfor
+                                @else
+                                    {{-- agak normal. cpmk udah terisi, belum dipetakan dengan mk --}}
                                     <tr>
                                         @if ($i == 0)
                                             <td scope="row" rowspan="{{ sizeof($cpl->Cpmk) }}" style="cursor: pointer"
@@ -49,28 +92,28 @@
                                                 {{ $cpl->deskripsiCPL }}
                                             </td>
                                         @endif
-                                        <td rowspan="{{ sizeof($cpl->Cpmk[$i]->Mata_Kuliah) }}">
+                                        <td style="cursor: pointer"
+                                            onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk', $cpl->Cpmk[$i]) }}'"
+                                            data-toggle="tooltip"
+                                            title="Tekan untuk mengubah CPMK atau memetakan dengan MK">
                                             <span style="font-weight:600;">[{{ $cpl->Cpmk[$i]->kodeCPMK }}]</span>
                                             {{ $cpl->Cpmk[$i]->deskripsiCPMK }}
                                         </td>
-                                        <td><span
-                                                style="font-weight:600;">[{{ $cpl->Cpmk[$i]->Mata_Kuliah[$j]->kodeMK }}]</span>
-                                            {{ $cpl->Cpmk[$i]->Mata_Kuliah[$j]->namaMK }}
-                                        </td>
+                                        <td class="font-weight-light font-italic">Belum ada mata kuliah yang dipetakan</td>
                                     </tr>
-                                @endfor
+                                @endif
                             @endfor
                         @else
+                            {{-- gk normal blas. cpmk gada, mk gada --}}
                             <tr>
-                                <th scope="row">{{ $cpl->kodeCPL }}</th>
-                                <td style="cursor: pointer"
+                                <td scope="row" style="cursor: pointer"
                                     onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'"
                                     data-toggle="tooltip" title="Tekan untuk menambahkan CPMK baru">
-                                    <span style="font-weight:600;">[{{ $cpl->Cpmk[$i]->kodeCPMK }}]</span>
-                                    {{ $cpl->Cpmk[$i]->deskripsiCPMK }}
+                                    <span style="font-weight:600;">[{{ $cpl->kodeCPL }}]</span>
+                                    {{ $cpl->deskripsiCPL }}
                                 </td>
-                                <td rowspan=""></td>
-                                <td></td>
+                                <td class="font-weight-light font-italic">Belum ada CPMK yang ditambahkan</td>
+                                <td class="font-weight-light font-italic">Belum ada mata kuliah yang dipetakan</td>
                             </tr>
                         @endif
                     @endforeach

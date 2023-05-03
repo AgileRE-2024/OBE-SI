@@ -28,8 +28,11 @@
             <div class="form-group row my-4">
                 <label for="kodeCPL" class="col-sm-2 col-form-label">Capaian Pembelajaran</label>
                 <div class="col-sm-10">
-                    <span type="text" readonly class="form-control-plaintext" name="kodeCPL" id="kodeCPL">
-                        {{ $cpl->kodeCPL }} - {{ $cpl->deskripsiCPL }}</span>
+                    <span type="text" class="form-control-plaintext">
+                        {{ $cpl->kodeCPL }} - {{ $cpl->deskripsiCPL }}
+                    </span>
+                    <input type="hidden" readonly class="form-control-plaintext" name="kodeCPL" id="kodeCPL"
+                        value="{{ $cpl->kodeCPL }}">
                 </div>
             </div>
             <div class="form-group">
