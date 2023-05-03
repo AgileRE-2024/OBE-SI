@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\BKMKController;
-use App\Http\Controllers\PemetaanPlCplController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BKMKController;
+use App\Http\Controllers\PemetaanCPLBKMK;
+use App\Http\Controllers\PemetaanPlCplController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +34,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             return view('welcome');
         })->name('cpl_bk');
 
-        Route::get('/cpl-bk-mk', function () {
-            return view('welcome');
-        })->name('cpl_bk_mk');
+        Route::get('/cpl-bk-mk',[PemetaanCPLBKMK::class,'index','title' => 'Pemetaan CPL BK MK'])->name('cpl_bk_mk');
 
         Route::get('/susunan-mata-kuliah', function () {
             return view('welcome');
