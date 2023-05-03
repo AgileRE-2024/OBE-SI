@@ -41,12 +41,24 @@ class PemetaanCPLMKExport implements FromCollection, WithHeadings, WithColumnWid
             array_push($data_sementara, $mk->kodeMK);
             array_push($data_sementara, $mk->namaMK);
             foreach ($this->list_cpl as $cpl){
-                foreach ($this->list_cpmk as $cpmk) {
+                $isTrue=false;
+                foreach ($this->list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
                     if ($this->detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
-                        array_push($data_sementara, '✓');
-                    } else {
-                        array_push($data_sementara, '');
-                    }
+                        $isTrue=true;
+                        break;
+                        // if ($isTrue){
+                        //     array_push($data_sementara, '✓');
+                        // }
+                    } 
+                    // else {
+                    //     array_push($data_sementara, '');
+                    // }
+                }
+                if ($isTrue){
+                    array_push($data_sementara,'✓');
+                }
+                else{
+                    array_push($data_sementara, '');
                 }
             }
 

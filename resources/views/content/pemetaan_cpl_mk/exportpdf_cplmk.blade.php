@@ -24,8 +24,8 @@
             </div>
         </div>
         <div class="table-responsive ">
-            <table class="table table-bordered" style="text-align: center">
-                <thead>
+            <table class="table table-bordered" style="text-align: center; border: 1px inherit black solid">
+                <thead style="background-color: black; color: white">
                     <tr>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode MK</th>
@@ -52,12 +52,19 @@
                             {{ $mk->kodeMK }}</th>
                         <th scope="row" class="text-start">
                             {{ $mk->namaMK }}</th>
-                        @foreach ($list_cpl as $cpl)
-                            @foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk)
+                            @foreach ($list_cpl as $cpl)
+                            @php
+                                $isTrue = false;
+                                foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
+                                    if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
+                                        $isTrue = true;
+                                        break;
+                                    }
+                                }
+                            @endphp
                                 <td>
-                                    <input type="checkbox" disabled @if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) checked @endif>
+                                    <input type="checkbox" disabled @if ($isTrue) checked @endif>
                                 </td>
-                            @endforeach
                         @endforeach
                     </tr>
                 @endforeach

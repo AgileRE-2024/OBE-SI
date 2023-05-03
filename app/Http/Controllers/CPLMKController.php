@@ -14,6 +14,7 @@ use Illuminate\Contracts\View\Factory;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\PemetaanCPLMKExport;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 class CPLMKController extends Controller
 {
@@ -78,5 +79,38 @@ class CPLMKController extends Controller
 
         return view('content.pemetaan_cpl_mk.exportpdf_cplmk', compact('judul', 'list_cpl','list_mk','detail_mk_cpmk','list_cpmk'));
     }
+
+    // public function exportcplmk($type)
+    // {
+    //     date_default_timezone_set('Asia/Jakarta');
+
+    //     $view = view('content.pemetaan_cpl_mk.exportpdf_cplmk', [
+    //         'judul' => 'Pemetaan CPL MK',
+    //         'list_cpl' => CPL_Prodi::all(),
+    //         'list_mk' => Mata_Kuliah::all(),
+    //         'detail_mk_cpmk' => Detail_MK_CPMK::all(),
+    //         'list_cpmk' => CPMK::all(),
+    //     ]);
+
+    //     $date_time = date('Y_m_d_H_i_s');
+
+    //     if ($type === 'pdf') {
+    //         $dompdf = new Dompdf();
+    //         $dompdf->loadHtml($view);
+    //         $dompdf->setPaper('A4', 'landscape');
+
+    //         $dompdf->render();
+
+    //         $filename = "Pemetaan CPL dan MK_" . $date_time . ".pdf";
+
+    //         return Response::make($dompdf->output(), 200, [
+    //             'Content-Type' => 'application/pdf',
+    //             'Content-Disposition' => 'inline; filename=' . $filename
+    //         ]);
+    //     } else {
+    //         $filename = "Pemetaan CPL dan MK_" . $date_time . '.xlsx';
+    //         return Excel::download(new PemetaanCPLMKExport(CPL_Prodi::all(), Mata_Kuliah::all(), Detail_MK_CPMK::all(), CPMK::all()), $filename);
+    //     }
+    // }
 
 }
