@@ -50,13 +50,27 @@
                             {{ $mk->kodeMK }}</th>
                         <th scope="row" class="text-start">
                             {{ $mk->namaMK }}</th>
-                        @foreach ($list_cpl as $cpl)
+                            @foreach ($list_cpl as $cpl)
+                            @php
+                                $isTrue = false;
+                                foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
+                                    if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
+                                        $isTrue = true;
+                                        break;
+                                    }
+                                }
+                            @endphp
+                                <td>
+                                    <input type="checkbox" disabled @if ($isTrue) checked @endif>
+                                </td>
+                        @endforeach
+                        {{-- @foreach ($list_cpl as $cpl)
                             @foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk)
                                 <td>
                                     <input type="checkbox" disabled @if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) checked @endif>
                                 </td>
                             @endforeach
-                        @endforeach
+                        @endforeach --}}
                     </tr>
                 @endforeach
             </tbody>
@@ -64,48 +78,52 @@
 
     </div>
     <style>
-    
+
         /* Style the tooltip */
-        /* Style the tooltip */
-         span[itemid] {
-          position: relative;
-          cursor: pointer;
-          /* display: inline-block; */
+        span[itemid] {
+            position: relative;
+            cursor: pointer;
+            /* display: inline-block; */
         }
-        
         span[itemid]:hover::after {
-          content: attr(itemid);
-          overflow: hidden;
-          text-overflow: ellipsis;
-          /* width: 200px; */
-          background-color: #1F2F4D;
-          color: white;
-          padding: 9px;
-          border-radius: 5px;
-          position: absolute;
-          bottom: -40px;
-          left: 120%;
-          transform: translateX(-50%);
-          white-space: nowrap;
-          z-index: 1;
-          opacity: 1;
-          /* transition: opacity 3s; */
-          /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
-        
+            content: attr(itemid);
+            /* overflow: hidden; */
+            /* text-overflow: ellipsis; */
+            word-wrap: break-word;
+            /* membuat kata wrap ketika teks melebihi lebar elemen */
+            word-break: break-all;
+            /* memaksa kata dipisahkan ketika melebihi lebar elemen */
+            width: 350px;
+            height: auto;
+            background-color: #1F2F4D;
+            color: white;
+            padding: 9px;
+            border-radius: 5px;
+            position: absolute;
+            top: 35px;
+            /* bottom: -100px; */
+            /* left: 2%; */
+            transform: translateX(-88%);
+            /* white-space: nowrap; */
+            z-index: 1;
+            opacity: 1;
+            /* transition: opacity 3s; */
+            /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
         }
-        
         span[itemid]:hover::before {
-          content: "";
-          border-style: solid;
-          border-width: 0 8px 8px 8px;
-          border-color: transparent transparent #1F2F4D transparent;
-          position: absolute;
-          top: 12px;
-          left: 80%;
-          transform: translateX(-50%);
-          bottom: calc(100% + 10px);
-          /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
+            content: "";
+            border-style: solid;
+            border-width: 0 8px 8px 8px;
+            border-color: transparent transparent #1F2F4D transparent;
+            position: absolute;
+            top: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: calc(100% + 10px);
+            /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
         }
+
+
 
         input[type="checkbox"] {
             -webkit-appearance: none;
