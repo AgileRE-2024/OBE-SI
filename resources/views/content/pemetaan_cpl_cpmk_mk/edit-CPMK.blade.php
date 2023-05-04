@@ -34,27 +34,35 @@
                     </span>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="deskripsi">Deskripsi CPMK (Kode : {{ $cpmk->kodeCPMK }})</label>
-                <textarea class="form-control" name="deskripsiCPMK" id="deskripsi" rows="3">{{ $cpmk->deskripsiCPMK }}</textarea>
+            <div class="row">
+                <div class="form-group col-2">
+                    <label for="kode">Kode CPMK</label>
+                    <input type="text" class="form-control" name="kodeCPMK" id="kode" value="{{ $cpmk->kodeCPMK }}">
+                </div>
+                <div class="form-group col-10">
+                    <label for="deskripsi">Deskripsi CPMK</label>
+                    <textarea class="form-control" name="deskripsiCPMK" id="deskripsi" rows="3">{{ $cpmk->deskripsiCPMK }}</textarea>
+                </div>
             </div>
         </div>
 
         <div class="form-group my-4 pb-4 row">
             <label>Mata Kuliah yang terkait</label>
-            @foreach ($mata_kuliah as $mk)
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="mk[]" value="{{ $mk->kodeMK }}"
-                        id="{{ $mk->kodeMK }}"
-                        @foreach ($cpmk->Mata_Kuliah as $mk_checked)
+            <div class="row" style="gap: .5rem; margin-left: 1rem">
+                @foreach ($mata_kuliah as $mk)
+                    <div class="form-check" style="width: calc((100% - 2rem)/3)">
+                        <input class="form-check-input" type="checkbox" name="mk[]" value="{{ $mk->kodeMK }}"
+                            id="{{ $mk->kodeMK }}"
+                            @foreach ($cpmk->Mata_Kuliah as $mk_checked)
                     @if ($mk_checked->kodeMK == $mk->kodeMK)
-                        checked
+                    checked
                     @endif @endforeach>
-                    <label class="form-check-label" for="{{ $mk->kodeMK }}">
-                        {{ $mk->namaMK }}
-                    </label>
-                </div>
-            @endforeach
+                        <label class="form-check-label" for="{{ $mk->kodeMK }}">
+                            {{ $mk->kodeMK }} - {{ $mk->namaMK }}
+                        </label>
+                    </div>
+                @endforeach
+            </div>
         </div>
 
         <button type="submit" class="btn btn-primary">Kirim</button>
