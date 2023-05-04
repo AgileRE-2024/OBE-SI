@@ -55,7 +55,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
 
         Route::get('/cpl-pl', [PemetaanPlCplController::class, 'index'])->name('cpl_pl');
         Route::put('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
-        Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export');
+        Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export_cpl_pl');
 
         Route::get('/cpl-cpmk-mk', function () {
             return view('welcome');
