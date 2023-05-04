@@ -15,16 +15,18 @@ class CPLMKTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-mk')
-                    ->click('#exportPDFButton')
-                    ->pause(5000)
-                    ->assertPathIs('/dashboard/kurikulum/pemetaan/cpl-mk');
-        });
-
-        $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-mk')
                     ->click('#exportExcelButton')
                     ->pause(5000)
                     ->assertPathIs('/dashboard/kurikulum/pemetaan/cpl-mk');
+        
+        $this->browse(function (Browser $browser) {
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-mk')
+                    ->click('#exportPDFButton')
+                    ->pause(5000)
+                    ->assertPathIs('/dashboard/kurikulum/pemetaan/cetak-pdf-cplmk');
+        });
+
+        
         });
     }
 }
