@@ -41,7 +41,7 @@
             </div>
         </div>
         <textarea class="visually-hidden" name="deskripsi"></textarea>
-        <span class="btn btn-secondary" id="addField" data-lastid="{{ $nextID }}">Tambah field CPMK</span>
+        <button type="button" class="btn btn-secondary" id="addField" data-lastid="{{ $nextID }}">Tambah field CPMK</button>
         <button type="submit" class="btn btn-primary" id="submitCPMK">Kirim</button>
     </form>
 
