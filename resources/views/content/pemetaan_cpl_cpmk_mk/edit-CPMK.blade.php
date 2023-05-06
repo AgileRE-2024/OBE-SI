@@ -68,7 +68,3 @@
         <button type="submit" class="btn btn-primary">Kirim</button>
     </form>
 @endsection
-
-@section('js')
-    <script></script>
-@endsection
