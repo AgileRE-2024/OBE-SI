@@ -36,15 +36,23 @@
                 <tbody>
                     @foreach ($cpls as $cpl)
                         <tr>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $loop->iteration }}</td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $cpl->kodeCPL }}</td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $cpl->referensiCPL }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $cpl->deskripsiCPL }}
+                            </td>
+                            <td scope="row">
+                                <a class="btn btn-primary"
+                                    href="{{ route('kurikulum.data.edit_cpl_prodi', $cpl->kodeCPL) }}">Edit</a>
+                            </td>
+                            <td scope="row">
+                                <a class="btn btn-danger"
+                                    href="{{ route('kurikulum.data.delete_cpl_prodi', $cpl->kodeCPL) }}">Delete</a>
                             </td>
                         </tr>
                     @endforeach

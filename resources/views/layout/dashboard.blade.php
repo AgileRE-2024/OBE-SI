@@ -44,6 +44,18 @@
             </script>
         @endif
 
+        @if (session()->has('error'))
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: "{{ session('error') }}",
+                    showConfirmButton: false,
+                    timer: 2500,
+                })
+            </script>
+        @endif
+
         <!-- Main content -->
         <div class="content" style="padding-left: 20px; padding-bottom: 20px;">
             @yield('content')

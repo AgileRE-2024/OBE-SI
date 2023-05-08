@@ -1,41 +1,73 @@
 @extends('layout.dashboard')
 
 @section('content')
-    <div id="detail_teknisi_box" style="width:42%">
-        <div>
-            <div>
-                <h4>
-                    List CPL-SNDikti
-                </h4>
+    <div class="content px-4">
+        <div class="card border" style="background-color: white">
+            <div class="card-body" style="font-weight:600;">
+                <h3>CPL SN Dikti</h3>
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Daftar Capaian Pembelajaran dari SN Dikti<b
+                        style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
-        <hr>
-        <a href="{{ route('kurikulum.data.add_cpl_dikti') }}">Tambah</a>
-
-        @foreach (['Sikap', 'Keterampilan Umum', 'Keterampilan Khusus', 'Pengetahuan'] as $item)
-            <div
-                style="color:white;margin-top:20px;font-weight:normal;border-radius:8px;;padding:15px;text-align:center;font-weight:bold;background-color:#2c78bf">
-                {{ $item }}
+        <div class="d-flex justify-content-start pt-2">
+            <div>
+                <a class="btn btn-success" href="{{ route('kurikulum.data.add_cpl_dikti') }}"><i
+                        class="bi bi-file-earmark-excel">
+                    </i>Tambah</a>
             </div>
-
-            @foreach ($cpls as $cpl)
-                @if ($cpl->jenisSN == $item)
-                    <div
-                        style="margin-bottom:10px;font-weight:normal;border-radius:8px;border:silver 1px solid;padding:15px">
-                        <table>
-                            <tr>
-                                <td style="width:relative; padding-right:25px"">
-                                    <a
-                                        href="{{ route('kurikulum.data.show_cpl_dikti', [$cpl->kodeCPLSN]) }}">{{ $cpl->kodeCPLSN }}</a>
-                                </td>
-                                <td style=" width:relative;border-left:1px solid silver; padding-left:25px">
-                                    {{ $cpl->deskripsiSN }}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                @endif
-            @endforeach
-        @endforeach
+        </div>
+        <br>
+        <div class="d-flex">
+            <table class="table table-bordered" style="text-align: center">
+                <thead class="table" style="background-color: lightgray">
+                    <tr>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode CPL SN-Dikti</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi CPL SN-Dikti
+                        </th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Sumber CPL SN-Dikti</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kategori CPL SN-Dikti</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Jenis CPL SN-Dikti</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Edit</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($cpls as $cpl)
+                        <tr>
+                            <td scope="row">
+                                {{ $loop->iteration }}</td>
+                            <td scope="row">
+                                {{ $cpl->kodeCPLSN }}
+                            </td>
+                            <td scope="row">
+                                {{ $cpl->deskripsiSN }}
+                            </td>
+                            <td scope="row">
+                                {{ $cpl->sumberSN }}
+                            </td>
+                            <td scope="row">
+                                @if ($cpl->kategoriSN == '1')
+                                    {{ 'Wajib' }}
+                                @else
+                                    {{ 'Pilihan' }}
+                                @endif
+                            </td>
+                            <td scope="row">
+                                {{ $cpl->jenisSN }}
+                            </td>
+                            <td scope="row">
+                                <a class="btn btn-primary"
+                                    href="{{ route('kurikulum.data.edit_cpl_dikti', $cpl->kodeCPLSN) }}">Edit</a>
+                            </td>
+                            <td scope="row">
+                                <a class="btn btn-danger"
+                                    href="{{ route('kurikulum.data.delete_cpl_dikti', $cpl->kodeCPLSN) }}">Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 @endsection

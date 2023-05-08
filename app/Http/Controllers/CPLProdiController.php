@@ -13,10 +13,10 @@ class CPLProdiController extends Controller
         return view('content.cpl_prodi.cpl_prodi', ['title' => 'CPL Prodi', 'cpls' => $cpls]);
     }
 
-    public function show($cpl)
+    public function edit($cpl)
     {
         $cpl = CPL_Prodi::where('kodeCPL', $cpl)->first();
-        return view('content.cpl_prodi.show_cpl_prodi', ['title' => 'CPL Prodi', 'cpl' => $cpl]);
+        return view('content.cpl_prodi.edit_cpl_prodi', ['title' => 'CPL Prodi', 'cpl' => $cpl]);
     }
 
     public function addCPLProdi()
@@ -39,5 +39,32 @@ class CPLProdiController extends Controller
         ]);
 
         return redirect()->route('kurikulum.data.cpl_prodi')->with('success', 'CPL Prodi berhasil ditambahkan');
+    }
+
+    public function updateCPLProdi(Request $request, $cpl)
+    {
+        $request->validate([
+            'kodeCPL' => 'required',
+            'deskripsiCPL' => 'required',
+            'referensiCPL' => 'required',
+        ]);
+
+        $cpl = CPL_Prodi::where('kodeCPL', $cpl)->first();
+        $cpl->update([
+            'kodeCPL' => $request->kodeCPL,
+            'deskripsiCPL' => $request->deskripsiCPL,
+            'referensiCPL' => $request->referensiCPL,
+        ]);
+        $cpl->save();
+
+        return redirect()->route('kurikulum.data.cpl_prodi')->with('error', 'CPL Prodi berhasil diubah');
+    }
+
+    public function deleteCPLProdi($cpl)
+    {
+        $cpl = CPL_Prodi::where('kodeCPL', $cpl)->first();
+        $cpl->delete();
+
+        return redirect()->route('kurikulum.data.cpl_prodi')->with('success', 'CPL Prodi berhasil dihapus');
     }
 }

@@ -34,29 +34,29 @@
                 <tbody>
                     @foreach ($bks as $bk)
                         <tr>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $loop->iteration }}</td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $bk->kodeBK }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $bk->namaBK }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 @if ($bk->kategoriBK == '1')
                                     {{ 'Wajib' }}
                                 @else
                                     {{ 'Pilihan' }}
                                 @endif
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $bk->referensiBK }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 <a class="btn btn-primary"
                                     href="{{ route('kurikulum.data.edit_bahan_kajian', $bk->kodeBK) }}">Edit</a>
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 <a class="btn btn-danger"
                                     href="{{ route('kurikulum.data.delete_bahan_kajian', $bk->kodeBK) }}">Delete</a>
                             </td>

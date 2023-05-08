@@ -38,25 +38,25 @@
                 <tbody>
                     @foreach ($mks as $mk)
                         <tr>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $loop->iteration }}</td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $mk->kodeMK }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $mk->namaMK }}
                             </td>
-                            <td scope="row" style="background-color: yellow; width:10%">
+                            <td scope="row" style="width:10%">
                                 @if ($mk->mat_kodeMK)
                                     {{ $mk->mat_kodeMK }}
                                 @else
                                     {{ '-' }}
                                 @endif
                             </td>
-                            <td scope="row" style="background-color: yellow; width:10%">
+                            <td scope="row" style="width:10%">
                                 {{ $mk->prasyaratTambahan }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 @if ($mk->jenisMK == '1')
                                     {{ 'Teori' }}
                                 @elseif ($mk->jenisMK == '2')
@@ -65,27 +65,27 @@
                                     {{ 'Praktikum Lapangan' }}
                                 @endif
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 @if ($mk->kategoriMK == '1')
                                     {{ 'Wajib' }}
                                 @else
                                     {{ 'Pilihan' }}
                                 @endif
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $mk->sks }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $mk->semester }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $mk->deskripsiMK }}
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 <a class="btn btn-primary"
                                     href="{{ route('kurikulum.data.edit_mata_kuliah', $mk->kodeMK) }}">Edit</a>
                             </td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 <a class="btn btn-danger"
                                     href="{{ route('kurikulum.data.delete_mata_kuliah', $mk->kodeMK) }}">Delete</a>
                             </td>

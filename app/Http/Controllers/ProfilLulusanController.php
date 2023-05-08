@@ -33,4 +33,37 @@ class ProfilLulusanController extends Controller
 
         return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil ditambahkan');
     }
+
+    public function edit($pl)
+    {
+        $pl = Profil_Lulusan::where('kodePL', $pl)->first();
+
+        return view('content.profil_lulusan.edit_pl', ['title' => 'Edit Profil Lulusan', 'pl' => $pl]);
+    }
+
+    public function update($pl, Request $request)
+    {
+        $request->validate([
+            'kodePL' => 'required',
+            'deskripsiPL' => 'required',
+        ]);
+
+        $pl = Profil_Lulusan::where('kodePL', $pl)->first();
+        $pl->update([
+            'kodePL' => $request->kodePL,
+            'deskripsiPL' => $request->deskripsiPL,
+        ]);
+
+        $pl->save();
+
+        return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil diubah');
+    }
+
+    public function delete($pl)
+    {
+        $pl = Profil_Lulusan::where('kodePL', $pl)->first();
+        $pl->delete();
+
+        return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil dihapus');
+    }
 }

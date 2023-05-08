@@ -31,12 +31,20 @@
                 <tbody>
                     @foreach ($pls as $pl)
                         <tr>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $loop->iteration }}</td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $pl->kodePL }}</td>
-                            <td scope="row" style="background-color: yellow;">
+                            <td scope="row">
                                 {{ $pl->deskripsiPL }}</td>
+                            <td scope="row">
+                                <a class="btn btn-primary"
+                                    href="{{ route('kurikulum.data.edit_pl', $pl->kodePL) }}">Edit</a>
+                            </td>
+                            <td scope="row">
+                                <a class="btn btn-danger"
+                                    href="{{ route('kurikulum.data.delete_pl', $pl->kodePL) }}">Delete</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

@@ -126,9 +126,13 @@ class MataKuliahController extends Controller
 
     public function deleteMataKuliah($mk)
     {
-        $mk = Mata_Kuliah::where('kodeMK', $mk)->first();
-        $mk->delete();
+        if (Mata_Kuliah::where('mat_kodeMK', $mk)->exists()) {
+            return redirect()->route('kurikulum.data.mata_kuliah')->with('error', 'Bahan Kuliah gagal dihapus. Bahan Kuliah ini digunakan oleh bahan kuliah lain');
+        } else {
+            $mk = Mata_Kuliah::where('kodeMK', $mk)->first();
+            $mk->delete();
 
-        return redirect()->route('kurikulum.data.mata_kuliah')->with('success', 'Bahan Kuliah berhasil dihapus');
+            return redirect()->route('kurikulum.data.mata_kuliah')->with('success', 'Bahan Kuliah berhasil dihapus');
+        }
     }
 }
