@@ -14,16 +14,21 @@
         </div>
         <br>
 
-        <div class="text-center mt-3">
-            <label class="switch">
-              <input id="toggle-button" type="checkbox">
-              <span class="slider round"></span>
-            </label>
-          </div>
+        
+
+          
 
         <div class="row">
             <div class="card mt-5" style="padding: 2rem">
               <div class="card-body">
+                <div class="mt-2" style="padding-left : 7rem">
+                  <label class="switch">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="toggle-button" checked>
+                      <label class="form-check-label" for="flexSwitchCheckChecked">CPL sebagai Header</label>
+                    </div>
+                  </label>
+                </div>
                 <div class="container">
                   <div id="table1" class="table-container">
                     <table class="table table-hover rounded table-bordered mb-0">
