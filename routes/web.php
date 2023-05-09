@@ -19,6 +19,8 @@ use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\CPLMKController;
 use App\Http\Controllers\CPMKController;
+use App\Http\Controllers\PDFController;
+use Barryvdh\DomPDF\PDF;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,9 +101,14 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::name('cpmk.store')->post('/add_cpmk', [CpmkController::class, 'store']);
             Route::name('edit_cpmk')->get('/edit_cpmk/{cpmk}', [CPMKController::class, 'edit']);
             Route::name('cpmk.update')->put('/edit_cpmk/{cpmk}', [CpmkController::class, 'update']);
+            Route::name('export')->get('/export', [CPMKController::class, 'cetakpdf']);
+            Route::name('export-excel')->get('/exportexcel', [CPMKController::class, 'exportExcel']);
+   
+
         });
     });
 
+Route::name('generatepdf')->get('/generate', [PDFController::class, 'generatePDF']);
 
     
     Route::prefix('/data')->name('data.')->group(function () {
@@ -134,3 +141,5 @@ Route::get('/dashboard/penilaian', function() {
 Route::get('/dashboard/rps', function () {
     return view('content.rps', ['title' => 'RPS']);
 })->name('rps');
+
+Route::get('/generate-pdf', 'PDFController@generatePDF');

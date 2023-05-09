@@ -9,6 +9,10 @@ use App\Models\Mata_Kuliah;
 use App\Models\Detail_MK_CPMK;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
+use Barryvdh\DomPDF\PDF;
+use App;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PemetaanCplCpmkMkExport;
 
 class CPMKController extends Controller
 {
@@ -26,13 +30,29 @@ class CPMKController extends Controller
             'cpl' => $cpl,
             'mk' => $mk
         ]);
+        
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function cetakpdf()
+    {
+        $cpl = Cpl_Prodi::get();
+        $mk = Mata_Kuliah::get();
+    
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('content.pemetaan_cpl_cpmk_mk.cetakcpmk', [
+            'title' => 'Pemetaan CPL CPMK',
+            'cpl' => $cpl,
+            'mk' => $mk
+        ]);
+    
+        return $pdf->stream();
+    }
+
+    public function exportExcel()
+    {
+        return Excel::download(new PemetaanCplCpmkMkExport, 'pemetaan-cpl-cpmk-mk.xlsx');
+    }
+
     public function create( $cpl)
     {
         $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
