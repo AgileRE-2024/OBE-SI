@@ -18,7 +18,7 @@ return new class extends Migration
             $table->char('kodeRPS',6);
             $table->String('peranDosen',50);
             $table->timestamps();
-            $table->foreign('nip')->references('nip')->on('Dosen')->onDelete('restrict');
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
             $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict');
         });
     }
