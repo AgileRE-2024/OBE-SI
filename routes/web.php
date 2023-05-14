@@ -30,6 +30,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::put('/bk-mk/update', [BKMKController::class, 'update'])->name('update_pemetaan_bk_mk');
 
         Route::get('/bk-mk/exportExcel', [BKMKController::class, 'exportExcel'])->name('exportExcel');
+        Route::get('/bk-mk/exportPdf', [BKMKController::class, 'exportPdf'])->name('exportPdf');
 
         Route::get('/cpl-bk', function () {
             return view('welcome');

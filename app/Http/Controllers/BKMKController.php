@@ -80,5 +80,33 @@ class BKMKController extends Controller
         $filename = "Pemetaan BK dan MK_" . $date_time . '.xlsx';
         return Excel::download(new PemetaanBKMKExport(Bahan_Kajian::all(), Mata_Kuliah::all(), Detail_BK_MK::all()), $filename);
     }
+
+    public function exportPdf(Request $request)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+
+        $view = view('content.pemetaan_bk_mk.tablematriksbkmk', [
+            'title' => 'Pemetaan BK MK',
+            'bk_list' => Bahan_Kajian::all(),
+            'mk_list' => Mata_Kuliah::all(),
+            'pemetaan' => Detail_BK_MK::all(),
+        ]);
+
+        $date_time = date('Y_m_d_H_i_s');
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($view);
+        $dompdf->setPaper('A4', 'landscape');
+
+        $dompdf->render();
+
+        $filename = "Pemetaan BK dan MK_" . $date_time . ".pdf";
+
+        return Response::make($dompdf->output(), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename=' . $filename
+        ]);
+
+
+    }
     
 }
