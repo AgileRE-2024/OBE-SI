@@ -7,6 +7,10 @@ use App\Models\Mata_Kuliah;
 use App\Models\Detail_BK_MK;
 use App\Models\Bahan_Kajian;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
+use Maatwebsite\Excel\Facades\Excel;
+use Dompdf\Dompdf;
+use App\Exports\PemetaanBKMKExport;
 
 
 class BKMKController extends Controller
@@ -67,6 +71,14 @@ class BKMKController extends Controller
         }
 
         return redirect(url('/dashboard/kurikulum/pemetaan/bk-mk/'));
+    }
+
+    public function exportExcel(Request $request)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $date_time = date('Y_m_d_H_i_s');
+        $filename = "Pemetaan BK dan MK_" . $date_time . '.xlsx';
+        return Excel::download(new PemetaanBKMKExport(Bahan_Kajian::all(), Mata_Kuliah::all(), Detail_BK_MK::all()), $filename);
     }
     
 }

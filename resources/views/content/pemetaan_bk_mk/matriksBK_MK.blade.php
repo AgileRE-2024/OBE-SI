@@ -18,12 +18,12 @@
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" href="{{ route('kurikulum.pemetaan.export', ['excel']) }}"><i
+                <a class="btn btn-success" href="/dashboard/kurikulum/pemetaan/bk-mk/exportExcel"><i
                         class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
         <br>
-        <div class="d-flex">
+        <div class="pt-2" class="d-flex">
             <form id ="myForm"method="POST" action="{{ route('kurikulum.pemetaan.update_pemetaan_bk_mk') }}">
                 @csrf
                 @method('put')
