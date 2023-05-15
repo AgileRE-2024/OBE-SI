@@ -96,7 +96,7 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <form action="{{ route('kurikulum.pemetaan.update_susunan_mk', $p->kodeMK) }}" method="POST">
+                                <form action="{{ route('kurikulum.pemetaan.update_susunan_mk', $p->kodeMK) }}" class="myForm" method="POST">
                                     @csrf
                                     @method('PUT')
                                     <input type="hidden" name="kodeMK" value="{{ $p->kodeMK }}">
@@ -104,11 +104,11 @@
                                         <p class="text-center">{{ $p->kodeMK }} {{ ':' }} {{ $p->namaMK }}</p>
                                         <div class="form-group">
                                             <label for="sks">SKS</label>
-                                            <input type="integer" pattern="[1-8]+" title="1-8" class="form-control" id="sks" name="sks" value="{{ old('sks', $p->sks) }}" required>
+                                            <input type="number" min="1" max="6" class="form-control" id="sks" name="sks" value="{{ old('sks', $p->sks) }}" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="semester">Semester</label>
-                                            <input type="integer" pattern="[1-8]+" title="1-8" class="form-control" id="semester" name="semester" value="{{ old('semester', $p->semester) }}" required>
+                                            <input type="number" min="1" max="6" class="form-control" id="semester" name="semester" value="{{ old('semester', $p->semester) }}" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="kategoriMK">Keterangan</label>
@@ -120,8 +120,8 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
                                     </div>
                                 </form>
                             </div>
@@ -178,4 +178,27 @@
     }
     
     </style>
+    <script>
+        const forms = document.querySelectorAll(".myForm");
+        forms.forEach(form => {
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+    
+                Swal.fire({
+                    title: 'Peringatan',
+                    text: "Apakah Anda ingin menyimpan perubahan ?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Simpan'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If the user confirms, submit the form
+                        form.submit();
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

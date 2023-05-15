@@ -37,7 +37,7 @@ class SusunanMKController extends Controller
             'kategoriMK' => $request->kategoriMK
         ]);
  
-        return redirect(url('/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/'));
+        return redirect(url('/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/'))->with('success', 'Berhasil menyimpan perubahan!!');
     }
 
     public function exportToExcel(Request $request)
