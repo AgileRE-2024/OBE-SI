@@ -11,6 +11,7 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use PDF;
+use Carbon\Carbon;
 
 class OrganisasiMKController extends Controller
 {
@@ -26,7 +27,10 @@ class OrganisasiMKController extends Controller
 
     public function exportToExcel(Request $request)
     {
+        date_default_timezone_set('Asia/Jakarta');
         $data = Mata_Kuliah::all();
+        $dateTime = Carbon::now()->format('Y_m_d_H_i_s');
+        $filename = 'Organisasi MK_' . $dateTime . '.xlsx';
     
         return Excel::download(new class($data) implements FromCollection, WithHeadings, WithStyles{
             private $data;
@@ -91,13 +95,17 @@ class OrganisasiMKController extends Controller
                 ];
             }
 
-        }, 'organisasi_mk.xlsx');
+        }, $filename);
     }
 
     public function exportToPDF()
     {
+        date_default_timezone_set('Asia/Jakarta');
         $data = Mata_Kuliah::all();
+        $dateTime = Carbon::now()->format('Y_m_d_H_i_s');
+        $filename = 'Organisasi MK_' . $dateTime . '.xlsx';
+
         $pdf = PDF::loadView('content.organisasi_mk_pdf', ['data' => $data])->setPaper('a4', 'landscape');;
-        return $pdf->download('organisasi_mk.pdf');
+        return $pdf->download($filename);
     }
 }

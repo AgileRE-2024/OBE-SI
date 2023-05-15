@@ -12,6 +12,7 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use PDF;
+use Carbon\Carbon;
 
 class SusunanMKController extends Controller
 {
@@ -42,7 +43,10 @@ class SusunanMKController extends Controller
 
     public function exportToExcel(Request $request)
     {
+        date_default_timezone_set('Asia/Jakarta');
         $data = Mata_Kuliah::all();
+        $dateTime = Carbon::now()->format('Y_m_d_H_i_s');
+        $filename = 'Susunan MK_' . $dateTime . '.xlsx';
     
         return Excel::download(new class($data) implements FromCollection, WithHeadings, WithStyles{
             private $data;
@@ -131,13 +135,17 @@ class SusunanMKController extends Controller
                     ],
                 ];
             }
-        }, 'susunan_mk.xlsx');
+        }, $filename);
     }
 
     public function exportToPDF(Request $request)
     {
+        date_default_timezone_set('Asia/Jakarta');
         $data = Mata_Kuliah::all();
+        $dateTime = Carbon::now()->format('Y_m_d_H_i_s');
+        $filename = 'Susunan MK_' . $dateTime . '.pdf';
+
         $pdf = PDF::loadView('content.susunan_mk_pdf', ['data' => $data]);
-        return $pdf->download('susunan_mk.pdf');
+        return $pdf->download($filename);
     }
 }
