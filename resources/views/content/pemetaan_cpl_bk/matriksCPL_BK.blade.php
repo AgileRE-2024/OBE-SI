@@ -5,7 +5,7 @@
     <div class="content px-4">
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
-                <h3>Matriks Bahan Kajian (CPL) & Mata Kuliah (BK)</h3>
+                <h3>Matriks Bahan Kajian (BK) & Capaian Pembelajaran Lulusan (CPL)</h3>
                 <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Pemetaan CPL terhadap BK dilakukan untuk menunjukan turunan dari bahan kajian ke
                     beberapa mata kuliah. Bahan kajian dalam matakuliah akan mempengaruhi keluasan
                     BK yang akan mempengaruhi penentuan SKS.<b
