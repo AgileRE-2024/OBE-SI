@@ -23,7 +23,7 @@
             </div>
         </div>
         <br>
-        <div class="d-flex">
+        <div class="pt-2">
             <form id ="myForm"method="POST" action="{{ route('kurikulum.pemetaan.update_pemetaan_cpl_bk') }}">
                 @csrf
                 @method('put')
@@ -33,7 +33,7 @@
                                 <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                                 <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode BK</th>
                                 <th class="align-middle" scope="col" rowspan="2" style="width: 50%">BK</th>
-                                <th scope="col" colspan="{{ $cpl_list->count() }}">Bahan Kajian (CPL)</th>
+                                <th scope="col" colspan="{{ $cpl_list->count() }}">Capaian Pembelajaran Lulusan (CPL)</th>
                             </tr>
                             <tr>
                                 @foreach ($cpl_list as $cpl)
