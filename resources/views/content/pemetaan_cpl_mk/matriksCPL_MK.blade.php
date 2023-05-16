@@ -61,7 +61,7 @@
                                 }
                             @endphp
                                 <td>
-                                    <input type="checkbox" disabled @if ($isTrue) checked @endif>
+                                    <input type="checkbox" id="$mk->kodeMK . '_' . $cpmk->kodeCPMK" disabled @if ($isTrue) checked @endif>
                                 </td>
                         @endforeach
                         {{-- @foreach ($list_cpl as $cpl)
