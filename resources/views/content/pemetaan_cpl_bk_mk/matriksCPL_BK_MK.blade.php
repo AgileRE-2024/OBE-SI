@@ -13,11 +13,13 @@
             </div>
         </div>
         <br>
-
-        
-
-          
-
+        <div class="d-flex justify-content-end pt-2">
+          <div class="pr-3">
+              <a class="btn btn-outline-danger" href="{{ route('kurikulum.pemetaan.exportPDF', ['pdf']) }}"><i
+                      class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+          </div>
+      </div>
+      <br>
         <div class="row">
             <div class="card mt-5" style="padding: 2rem">
               <div class="card-body">
@@ -87,7 +89,7 @@
                       </tbody>
                     </table>
                   </div>
-    </div>
+                </div>
     <style>
     
     /* Style the tooltip */

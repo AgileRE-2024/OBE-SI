@@ -35,6 +35,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         })->name('cpl_bk');
 
         Route::get('/cpl-bk-mk',[PemetaanCPLBKMK::class,'index','title' => 'Pemetaan CPL BK MK'])->name('cpl_bk_mk');
+        Route::get('/cpl-bk-mk/export/{type}', [PemetaanCPLBKMK::class, 'export'])->name('exportPDF');
 
         Route::get('/susunan-mata-kuliah', function () {
             return view('welcome');
@@ -56,6 +57,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/cpl-pl/table', [PemetaanPlCplController::class, 'table'])->name('table_cpl_pl');
         Route::post('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
         Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export');
+        
 
         Route::get('/cpl-cpmk-mk', function () {
             return view('welcome');
