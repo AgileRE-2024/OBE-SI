@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Detail_Nilai_Mahasiswa;
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanCPLBKMK;
+use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\PemetaanPlCplController;
 
 /*
@@ -95,6 +96,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/cpl-cpmk-mk', function () {
             return view('welcome');
         })->name('cpl_cpmk_mk');
+
+        Route::get('/mk-cpmk-subcpmk',[PemetaanMkCpmkSubcpmk::class,'index','title' => 'Pemetaan MK CPMK SUBCPMK'])->name('mk_cpmk_subcpmk');
+
     });
 
 
