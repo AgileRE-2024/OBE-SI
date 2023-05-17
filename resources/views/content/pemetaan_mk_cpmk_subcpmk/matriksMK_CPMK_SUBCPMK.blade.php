@@ -34,8 +34,8 @@
             <tbody>
                 @foreach ($mk_list as $mk)
                     @php
-                        $counter = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK)->count();
-                        $cpmk = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK);
+                        $counter = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK)->count(); //ini jumlah cpmk per mk
+                        $cpmk = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK); //ini list cpmk per mk
                     @endphp
                     @for ($i = 0; $i < $counter; $i++)
                         <tr>
@@ -43,7 +43,9 @@
                         </tr>
                     @endfor
                 @endforeach
-                @foreach ($cpmk_list->where('kodeCPMK', ) as $cp)
+
+
+                @foreach ($cpmk_list as $cp)
                     @php
                         $counter = $subcpmk_list->where('kodeCPMK', $cp->kodeCPMK)->count();;
                     @endphp
