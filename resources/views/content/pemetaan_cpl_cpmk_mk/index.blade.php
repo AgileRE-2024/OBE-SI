@@ -17,11 +17,15 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a class="btn btn-outline-danger" href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.export') }}"><i class="bi bi-file-earmark-pdf-fill"> </i>Export
+                <a class="btn btn-outline-danger" target="_blank" rel="noopener noreferrer"
+                    href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.export') }}"><i class="bi bi-file-earmark-pdf-fill">
+                    </i>Export
                     PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.export-excel') }}"><i class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+                <a class="btn btn-success" target="_blank" rel="noopener noreferrer"
+                    href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.export-excel') }}"><i class="bi bi-file-earmark-excel">
+                    </i>Export Excel</a>
             </div>
         </div>
         <br>

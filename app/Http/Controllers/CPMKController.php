@@ -85,45 +85,34 @@ class CPMKController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            // 'deskripsi' => 'required',
-            // 'kode' => 'required',
+            'deskripsi' => 'required',
             'kodeCPL' => 'required',
-            'deskripsiCPMK'=> 'required',
-            'kodeCPMK'=> 'required'
+            'deskripsiCPMK'=> 'required'
         ];
 
         Validator::make($request->all(), $rules, $messages = $this->msg)->validate();
     
-        $deskripsi = str_getcsv($request->deskripsi, ",");
-        $kode = str_getcsv($request->kode, ",");
+        $data = str_getcsv($request->deskripsi, ",");
         // $count = 0;
         
-        for ($i=0; $i < sizeof($deskripsi); $i++) { 
+        foreach ($data as $cpmk) {
+            $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
+            
+            if ($lastCpmk) {
+                $lastId = intval(substr($lastCpmk->kodeCPMK, 4));
+                $nextId = 'CPMK'.str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
+            } else {
+                $nextId = 'CPMK001';
+            }
+
             CPMK::create([
-                'kodeCPMK' => $kode[$i],
-                'deskripsiCPMK' => $deskripsi[$i],
+                'kodeCPMK' => $nextId,
+                'deskripsiCPMK' => $cpmk,
                 'kodeCPL' => $request->kodeCPL
             ]);
-        }
-
-        // foreach ($deskripsi as $deskripsiCPMK) {
-        //     $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
-            
-        //     if ($lastCpmk) {
-        //         $lastId = intval(substr($lastCpmk->kodeCPMK, 4));
-        //         $nextId = 'CPMK'.str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
-        //     } else {
-        //         $nextId = 'CPMK001';
-        //     }
-
-        //     CPMK::create([
-        //         'kodeCPMK' => $nextId,
-        //         'deskripsiCPMK' => $deskripsiCPMK,
-        //         'kodeCPL' => $request->kodeCPL
-        //     ]);
     
-        //     // $count++;
-        // }
+            // $count++;
+        }
     
         // Cpmk::insert($data);
     
