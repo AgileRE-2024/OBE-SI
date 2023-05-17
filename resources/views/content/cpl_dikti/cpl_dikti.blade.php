@@ -16,6 +16,16 @@
                     </i>Tambah</a>
             </div>
         </div>
+        <div class="d-flex justify-content-end pt-2">
+            <div class="pr-3">
+                <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_cpl_dikti', ['pdf']) }}"><i
+                        class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+            </div>
+            <div>
+                <a class="btn btn-success" href="{{ route('kurikulum.data.export_cpl_dikti', ['excel']) }}"><i
+                        class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+            </div>
+        </div>
         <br>
         <div class="d-flex">
             <table class="table table-bordered" style="text-align: center">

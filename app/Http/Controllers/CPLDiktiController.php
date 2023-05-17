@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CPL_SN_Dikti;
+use Dompdf\Dompdf;
+use Illuminate\Support\Facades\Response;
 
 class CPLDiktiController extends Controller
 {
@@ -11,6 +13,36 @@ class CPLDiktiController extends Controller
     {
         $cpls = CPL_SN_Dikti::all();
         return view('content.cpl_dikti.cpl_dikti', ['title' => 'CPL Dikti', 'cpls' => $cpls]);
+    }
+
+    public function export($type)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+
+        $view = view('content.cpl_dikti.tableToEkspor', [
+            'title' => 'Tabel Capaian Pembelajaran SN Dikti',
+            'cpls' => CPL_SN_Dikti::all(),
+        ]);
+
+        $date_time = date('Y_m_d_H_i_s');
+
+        if ($type === 'pdf') {
+            $dompdf = new Dompdf();
+            $dompdf->loadHtml($view);
+            $dompdf->setPaper('A4', 'landscape');
+
+            $dompdf->render();
+
+            $filename = "Tabel CPL SN Dikti_" . $date_time . ".pdf";
+
+            return Response::make($dompdf->output(), 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename=' . $filename
+            ]);
+        } else {
+            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
+            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+        }
     }
 
     public function addCPLDikti()
@@ -21,7 +53,7 @@ class CPLDiktiController extends Controller
     public function storeCPLDikti(Request $request)
     {
         $request->validate([
-            'kodeCPLSN' => 'required',
+            'kodeCPLSN' => 'required|unique:cpl_sn_dikti, kodeCPLSN',
             'deskripsiSN' => 'required',
             'sumberSN' => 'required',
             'kategoriSN' => 'required',
@@ -55,6 +87,10 @@ class CPLDiktiController extends Controller
             'kategoriSN' => 'required',
             'jenisSN' => 'required',
         ]);
+
+        if (CPL_SN_Dikti::where('kodeCPLSN', $request->kodeCPLSN)->exists() && $request->kodeCPLSN != $cpl) {
+            return redirect()->back()->with('error', 'Kode CPL sudah ada');
+        }
 
         $cpl = CPL_SN_Dikti::where('kodeCPLSN', $cpl)->first();
         $cpl->update([

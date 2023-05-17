@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Dompdf\Dompdf;
+use App\Models\Mata_Kuliah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Models\Mata_Kuliah;
+use Illuminate\Support\Facades\Response;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class MataKuliahController extends Controller
 {
@@ -12,6 +16,36 @@ class MataKuliahController extends Controller
     {
         $mks = Mata_Kuliah::all();
         return view('content.mata_kuliah.mata_kuliah', ['title' => 'Mata Kuliah', 'mks' => $mks]);
+    }
+
+    public function export($type)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+
+        $view = view('content.mata_kuliah.tableToEkspor', [
+            'title' => 'Tabel Mata Kuliah',
+            'mks' => Mata_Kuliah::all(),
+        ]);
+
+        $date_time = date('Y_m_d_H_i_s');
+
+        if ($type === 'pdf') {
+            $dompdf = new Dompdf();
+            $dompdf->loadHtml($view);
+            $dompdf->setPaper('A4', 'landscape');
+
+            $dompdf->render();
+
+            $filename = "Tabel Mata Kuliah_" . $date_time . ".pdf";
+
+            return Response::make($dompdf->output(), 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename=' . $filename
+            ]);
+        } else {
+            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
+            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+        }
     }
 
     public function addMataKuliah()
@@ -32,14 +66,13 @@ class MataKuliahController extends Controller
     public function storeMataKuliah(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'kodeMK' => 'required',
+            'kodeMK' => 'required|unique:mata_kuliah,kodeMK',
             'namaMK' => 'required',
             'jenisMK' => 'required',
             'kategoriMK' => 'required',
             'sks' => 'required',
             'semester' => 'required',
             'deskripsi' => 'required',
-
         ]);
 
         if ($validator->fails()) {
@@ -92,6 +125,10 @@ class MataKuliahController extends Controller
         if ($validator->fails()) {
             // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        if (Mata_Kuliah::where('kodeMK', $request->kodeMK)->exists() && $request->kodeMK != $mk) {
+            return redirect()->back()->with('error', 'Kode Mata Kuliah sudah ada');
         }
 
         if ($request->mat_kodeMK == null) {

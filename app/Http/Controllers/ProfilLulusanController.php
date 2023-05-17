@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Profil_Lulusan;
+use Dompdf\Dompdf;
+use Illuminate\Support\Facades\Response;
 
 class ProfilLulusanController extends Controller
 {
@@ -14,6 +16,36 @@ class ProfilLulusanController extends Controller
         return view('content.profil_lulusan.profil_lulusan', ['title' => 'Profil Lulusan', 'pls' => $pls]);
     }
 
+    public function export($type)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+
+        $view = view('content.profil_lulusan.tableToEkspor', [
+            'title' => 'Tabel Profil Lulusan',
+            'pls' => Profil_Lulusan::all(),
+        ]);
+
+        $date_time = date('Y_m_d_H_i_s');
+
+        if ($type === 'pdf') {
+            $dompdf = new Dompdf();
+            $dompdf->loadHtml($view);
+            $dompdf->setPaper('A4', 'landscape');
+
+            $dompdf->render();
+
+            $filename = "Tabel Profil Lulusan_" . $date_time . ".pdf";
+
+            return Response::make($dompdf->output(), 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename=' . $filename
+            ]);
+        } else {
+            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
+            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+        }
+    }
+
     public function addProfilLulusan()
     {
         return view('content.profil_lulusan.add_pl', ['title' => 'Tambah Profil Lulusan']);
@@ -22,7 +54,7 @@ class ProfilLulusanController extends Controller
     public function storeProfilLulusan(Request $request)
     {
         $request->validate([
-            'kodePL' => 'required',
+            'kodePL' => 'required|unique:profil_lulusan, kodePL',
             'deskripsiPL' => 'required',
         ]);
 
@@ -47,6 +79,10 @@ class ProfilLulusanController extends Controller
             'kodePL' => 'required',
             'deskripsiPL' => 'required',
         ]);
+
+        if (Profil_Lulusan::where('kodePL', $request->kodePL)->exists() && $request->kodePL != $pl) {
+            return redirect()->back()->with('error', 'Kode Profil Lulusan sudah ada');
+        }
 
         $pl = Profil_Lulusan::where('kodePL', $pl)->first();
         $pl->update([

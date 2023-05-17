@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Bahan_Kajian;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Dompdf\Dompdf;
+use Illuminate\Support\Facades\Response;
 
 class BahanKajianController extends Controller
 {
@@ -13,6 +15,37 @@ class BahanKajianController extends Controller
         $bks = Bahan_Kajian::all();
         return view('content.bahan_kajian.bahan_kajian', ['title' => 'Bahan Kajian', 'bks' => $bks]);
     }
+
+    public function export($type)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+
+        $view = view('content.bahan_kajian.tableToEkspor', [
+            'title' => 'Tabel Bahan Kajian',
+            'bks' => Bahan_Kajian::all(),
+        ]);
+
+        $date_time = date('Y_m_d_H_i_s');
+
+        if ($type === 'pdf') {
+            $dompdf = new Dompdf();
+            $dompdf->loadHtml($view);
+            $dompdf->setPaper('A4', 'landscape');
+
+            $dompdf->render();
+
+            $filename = "Tabel Bahan Kajian_" . $date_time . ".pdf";
+
+            return Response::make($dompdf->output(), 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename=' . $filename
+            ]);
+        } else {
+            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
+            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+        }
+    }
+
     public function editBahanKajian($bk)
     {
         $bk = Bahan_Kajian::where('kodeBK', $bk)->first();
@@ -27,7 +60,7 @@ class BahanKajianController extends Controller
     public function storeBahanKajian(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'kodeBK' => 'required',
+            'kodeBK' => 'required|unique:bahan_kajian,kodeBK',
             'namaBK' => 'required',
             'kategoriBK' => 'required',
             'referensiBK' => 'required',
@@ -57,10 +90,13 @@ class BahanKajianController extends Controller
             'referensiBK' => 'required',
         ]);
 
-
         if ($validator->fails()) {
             // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        if (Bahan_Kajian::where('kodeBK', $request->kodeBK)->exists() && $request->kodeBK != $bk) {
+            return redirect()->back()->with('error', 'Kode Bahan Kajian sudah ada');
         }
 
         $bk = Bahan_Kajian::where('kodeBK', $bk)->first();
