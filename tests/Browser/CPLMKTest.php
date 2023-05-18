@@ -12,6 +12,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
+
 class CPLMKTest extends DuskTestCase
 {
     use DatabaseTransactions;
@@ -23,6 +24,15 @@ class CPLMKTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-mk')
                         ->pause(1000);   
+
+                $browser->click('#exportExcelButton')
+                ->pause(5000)
+                ->assertPathIs('/dashboard/kurikulum/pemetaan/cpl-mk');
+
+                $browser->click('#exportPDFButton')
+                ->pause(5000)
+                ->assertPathIs('/dashboard/kurikulum/pemetaan/cetak-pdf-cplmk');
+                
                 foreach (Mata_Kuliah::all() as $mk) {
                     foreach (CPL_Prodi::all() as $cpl) {
                         foreach (CPMK::all()->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
@@ -34,14 +44,6 @@ class CPLMKTest extends DuskTestCase
                         }
                     }
                 }
-
-                $browser->click('#exportExcelButton')
-                ->pause(5000)
-                ->assertPathIs('/dashboard/kurikulum/pemetaan/cpl-mk');
-
-                $browser->click('#exportPDFButton')
-                ->pause(5000)
-                ->assertPathIs('/dashboard/kurikulum/pemetaan/cetak-pdf-cplmk');
 
             
             
