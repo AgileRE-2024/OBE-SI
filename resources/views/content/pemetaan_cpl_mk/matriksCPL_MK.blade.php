@@ -61,7 +61,7 @@
                                 }
                             @endphp
                                 <td>
-                                    <input type="checkbox" id="$mk->kodeMK . '_' . $cpmk->kodeCPMK" disabled @if ($isTrue) checked @endif>
+                                    <input type="checkbox" id="{{ $mk->kodeMK }}_{{ $cpmk->kodeCPMK }}" disabled @if ($isTrue) checked @endif>
                                 </td>
                         @endforeach
                         {{-- @foreach ($list_cpl as $cpl)
@@ -145,12 +145,12 @@
             /* left: 2px; */
             /* top: 1px; */
         }
-        
+
         input[type="checkbox"]:checked {
             background-color: white;
             border-color: #686565;
         }
-        
+
         </style>
         <script>
         let getIdCheckbox = document.getElementById("color")
@@ -162,6 +162,6 @@
                 document.getElementById("red").style.color = 'white'
                 document.getElementById("green").style.color = 'white'
             }
-        }   
+        }
     </script>
 @endsection
