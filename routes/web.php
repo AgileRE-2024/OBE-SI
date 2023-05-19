@@ -98,7 +98,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         })->name('cpl_cpmk_mk');
 
         Route::get('/mk-cpmk-subcpmk',[PemetaanMkCpmkSubcpmk::class,'index','title' => 'Pemetaan MK CPMK SUBCPMK'])->name('mk_cpmk_subcpmk');
-
+        
     });
 
 
@@ -131,5 +131,9 @@ Route::get('/dashboard/penilaian', function() {
 })->name('penilaian');
 
 Route::get('/dashboard/rps', function () {
-    return view('content.rps', ['title' => 'RPS']);
+    return view('content.rps', ['title' => 'RPS',
+    'minggu_rps_list'=> Minggu_RPS::all(),
+    'rps_list'=>RPS::all(),
+    'detail_rps_list'=>Detail_RPS::all()
+]);
 })->name('rps');

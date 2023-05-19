@@ -374,6 +374,16 @@ class DatabaseSeeder extends Seeder
             'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
             'materiPembelajaran'=>'Isi materi pembelajaran RPS',
         ]);
+        Minggu_RPS::create([
+            'kodeMingguRPS'=> 'MR12',
+            'kodeSubCPMK'=> 'Sub-CPMK0111',
+            'mingguKe'=>'2',
+            'bentukPembelajaran'=>false,
+            'indikatorMingguRPS'=>'Isi indikator RPS',
+            'kriteriaMingguRPS'=>'Isi kriteria RPS',
+            'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
+            'materiPembelajaran'=>'Isi materi pembelajaran RPS',
+        ]);
 
         Mahasiswa::create([
             'nim'=>'082011633100',
