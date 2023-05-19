@@ -310,6 +310,21 @@ class DatabaseSeeder extends Seeder
             'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
             'kodeCPL' => 'CPL01'
         ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK013',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL01'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK014',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL02'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK015',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL02'
+        ]);
 
         SubCPMK::create([
             'kodeSubCPMK' => 'Sub-CPMK0111',
@@ -325,6 +340,11 @@ class DatabaseSeeder extends Seeder
             'kodeSubCPMK' => 'Sub-CPMK0121',
             'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
             'kodeCPMK' => 'CPMK012'
+        ]);
+        SubCPMK::create([
+            'kodeSubCPMK' => 'Sub-CPMK0122',
+            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
+            'kodeCPMK' => 'CPMK013'
         ]);
 
         Teknik_Penilaian::create([

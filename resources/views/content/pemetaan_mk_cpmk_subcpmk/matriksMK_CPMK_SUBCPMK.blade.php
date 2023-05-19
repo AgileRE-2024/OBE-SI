@@ -32,7 +32,7 @@
                     </tr>
             </thead>
             <tbody>
-                @foreach ($mk_list as $mk)
+                {{-- @foreach ($mk_list as $mk)
                     @php
                         $counter = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK)->count(); //ini jumlah cpmk per mk
                         $cpmk = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK); //ini list cpmk per mk
@@ -42,10 +42,10 @@
                             <td>{{ $cpmk[$i]->kodeCPMK }} <br> {{ $cpmk[$i]->deskripsiCPMK }}</td>
                         </tr>
                     @endfor
-                @endforeach
+                @endforeach --}}
 
-
-                @foreach ($cpmk_list as $cp)
+                {{-- ini merge cpmk haruse sing punya relasi wae--}}
+                {{-- @foreach ($cpmk_list as $cp)
                     @php
                         $counter = $subcpmk_list->where('kodeCPMK', $cp->kodeCPMK)->count();;
                     @endphp
@@ -59,7 +59,71 @@
                     @for ($i = 1; $i < $counter; $i++)
                         <td>{{ $subcpmk_list[$i]->kodeSubCPMK }} <br> {{ $subcpmk_list[$i]->deskripsiSubCPMK }}</td>
                     @endfor
+                @endforeach --}}
+                {{-- ini merge cpl --}}
+                @foreach ($mk_list as $mk)
+                    @php
+                        $cpmk_raw = $detailmkcpmk_list->where($cpmk_list->, $cpl->kodeCPL);
+                    @endphp
+                @foreach ($cpl_list as $cpl)
+                @foreach ($cpmk_list as $cp)
+                    @php
+                        $counter = $cpmk_list->where('kodeCPL', $cpl->kodeCPL)->count();
+                        $cpmk = $cpmk_list->where('kodeCPL', $cpl->kodeCPL);
+                    @endphp
                 @endforeach
+                @if ($counter!= 0)
+                    <tr>
+                        <th rowspan={{ $counter }}>LALA</th>
+                        <td rowspan={{ $counter }}>{{ $cpl->kodeCPL }}</td>
+                        <td>{{ $cpmk->first()->kodeCPMK }}</td>
+                        <td>{{ $cpmk->first()->deskripsiCPMK }}</td>
+                        <td>gtw</td>
+                        </tr>
+                    @for ($i = 1; $i < $counter; $i++)
+                    <tr>
+                        <td>{{ $cpmk_list[$i]->kodeCPMK }}</td>
+                        <td>{{ $cpmk_list[$i]->deskripsiCPMK }}</td>
+                        <td>gtw</td>
+                    </tr>
+                    @endfor
+                @endif
+                @endforeach
+                    
+                @endforeach
+                {{-- <tr>
+                    <th >LALA</th>
+                    <td rowspan={{ $counter }}>{{ $cpmk_list[0]->kodeCPL }}</td>
+                    <td>{{ $cpmk_list[0]->kodeCPMK }}</td>
+                    <td>gatau</td>
+                    <td>kkkkk</td>
+                </tr>
+
+                <tr>
+                    <th >LALA</th>
+                    <td>{{ $cpmk_list[1]->kodeCPMK }}</td>
+                    <td>gatau</td>
+                    <td>kkkkk</td>
+                </tr>
+                <tr>
+                    <th >LALA</th>
+                    <td>{{ $cpmk_list[2]->kodeCPMK }}</td>
+                    <td>gatau</td>
+                    <td>kkkkk</td>
+                </tr>
+                <tr>
+                    <th >LALA</th>
+                    <td>{{ $cpmk_list[3]->kodeCPMK }}</td>
+                    <td>gatau</td>
+                    <td>kkkkk</td>
+                </tr>
+                <tr>
+                    <th >LALA</th>
+                    <td>{{ $cpmk_list[4]->kodeCPMK }}</td>
+                    <td>gatau</td>
+                    <td>kkkkk</td>
+                </tr> --}}
+
               </tbody>
         </table>
     </div>
