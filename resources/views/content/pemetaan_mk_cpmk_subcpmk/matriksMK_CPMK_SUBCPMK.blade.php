@@ -12,11 +12,11 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a id="pdf" class="btn btn-outline-danger" href="/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk/exportPdf"><i
+                <a id="pdf" class="btn btn-outline-danger" href="{{ route('kurikulum.pemetaan.export_mk-cpmk-subcpmk', ['pdf']) }}"><i
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
             <div>
-                <a id="excel" class="btn btn-success" href="/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk/exportExcel"><i
+                <a id="excel" class="btn btn-success" href="{{ route('kurikulum.pemetaan.export_mk-cpmk-subcpmk', ['excel']) }}"><i
                         class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
