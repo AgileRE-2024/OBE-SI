@@ -80,9 +80,194 @@ class DatabaseSeeder extends Seeder
             'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
         ]);
 
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL02',
+            'deskripsiCPL' => 'Memiliki kemampuan untuk belajar seumur hidup (life-long learning).',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL03',
+            'deskripsiCPL' => 'Mampu menjelaskan, menganalisis, dan menilai konsep dasar dan peran sistem informasi dalam mengelola data dan memberikan rekomendasi pengambilan keputusan pada proses dan sistem organisasi.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL04',
+            'deskripsiCPL' => 'Mampu merancang dan menggunakan database, serta mengolah, menganalisa, dan memvisualisasi data dengan alat dan teknik pengolahan data.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL05',
+            'deskripsiCPL' => 'Mampu menjelaskan dan menggunakan berbagai metodologi pengembangan sistem beserta alat pemodelan sistem dan menganalisa kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL06',
+            'deskripsiCPL' => 'Mampu menjelaskan dan menerapkan kode etik dalam penggunaan informasi dan data pada perancangan, implementasi, dan penggunaan suatu sistem.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL07',
+            'deskripsiCPL' => 'Mampu merencanakan, menerapkan, memelihara dan meningkatkan sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi yang strategis baik jangka pendek maupun jangka panjang.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL09',
+            'deskripsiCPL' => 'Mampu menjelaskan konsep dan membuat perencanaan infrastruktur TI, arsitektur jaringan, layanan fisik dan cloud, menganalisa konsep identifikasi, otentikasi, otorisasi akses dalam konteks melindungi orang dan perangkat.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL10',
+            'deskripsiCPL' => 'Mampu menerapkan konsep kecerdasan bisnis untuk menyelesaikan permasalahan dalam organisasi.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL11',
+            'deskripsiCPL' => 'Mampu menjelaskan konsep matematika dan statistika yang digunakan dalam sistem informasi.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL12',
+            'deskripsiCPL' => 'Mampu mengidentifikasi peluang yang diciptakan oleh inovasi teknologi informasi menjadi nilai organisasi yang berkelanjutan melalui proses yang sistematis.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL13',
+            'deskripsiCPL' => 'Mampu menggunakan konsep logika dan algoritma untuk memecahkan permasalahan serta menerapkannya ke dalam beberapa bahasa pemrograman.',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
         Bahan_Kajian::create([
             'kodeBK' => 'BK01',
             'namaBK' => 'Foundation of Information Systems',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK02',
+            'namaBK' => 'Data/Information Management',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK03',
+            'namaBK' => 'IT Infrastructure',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK04',
+            'namaBK' => 'IS Project Management',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK06',
+            'namaBK' => 'IS Management and Strategy',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK07',
+            'namaBK' => 'Application Development / Programming',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK08',
+            'namaBK' => 'Secure Computing',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK09',
+            'namaBK' => 'Ethics, use and implication for society',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK10',
+            'namaBK' => 'Praktikum',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK11',
+            'namaBK' => 'Mathematics and statistics',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK12',
+            'namaBK' => 'Data / Business Analytics',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK13',
+            'namaBK' => 'Personality Development',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK14',
+            'namaBK' => 'Business Process Management',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK15',
+            'namaBK' => 'Enterprise Architecture',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK16',
+            'namaBK' => 'User Interface Design',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK17',
+            'namaBK' => 'Emerging Technologies',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK18',
+            'namaBK' => 'Digital Innovation',
+            'kategoriBK' => TRUE,
+            "referensiBK" =>'IS2020',
+        ]);
+
+        Bahan_Kajian::create([
+            'kodeBK' => 'BK19',
+            'namaBK' => 'Foundation of Science',
             'kategoriBK' => TRUE,
             "referensiBK" =>'IS2020',
         ]);
@@ -120,11 +305,46 @@ class DatabaseSeeder extends Seeder
             'deskripsiCPMK' => 'Mampu menjelaskan konsep dasar sistem',
             'kodeCPL' => 'CPL01'
         ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK012',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL01'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK013',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL01'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK014',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL02'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK015',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL02'
+        ]);
 
         SubCPMK::create([
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'deskripsiSubCPMK' => 'Mampu memahami konsep dasar sistem informasi',
             'kodeCPMK' => 'CPMK011'
+        ]);
+        SubCPMK::create([
+            'kodeSubCPMK' => 'Sub-CPMK0112',
+            'deskripsiSubCPMK' => 'Mampu menjelaskan konsep informasi dan sistem informasi',
+            'kodeCPMK' => 'CPMK011'
+        ]);
+        SubCPMK::create([
+            'kodeSubCPMK' => 'Sub-CPMK0121',
+            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
+            'kodeCPMK' => 'CPMK012'
+        ]);
+        SubCPMK::create([
+            'kodeSubCPMK' => 'Sub-CPMK0122',
+            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
+            'kodeCPMK' => 'CPMK013'
         ]);
 
         Teknik_Penilaian::create([
@@ -149,6 +369,16 @@ class DatabaseSeeder extends Seeder
             'kodeSubCPMK'=> 'Sub-CPMK0111',
             'mingguKe'=>'1',
             'bentukPembelajaran'=>true,
+            'indikatorMingguRPS'=>'Isi indikator RPS',
+            'kriteriaMingguRPS'=>'Isi kriteria RPS',
+            'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
+            'materiPembelajaran'=>'Isi materi pembelajaran RPS',
+        ]);
+        Minggu_RPS::create([
+            'kodeMingguRPS'=> 'MR12',
+            'kodeSubCPMK'=> 'Sub-CPMK0111',
+            'mingguKe'=>'2',
+            'bentukPembelajaran'=>false,
             'indikatorMingguRPS'=>'Isi indikator RPS',
             'kriteriaMingguRPS'=>'Isi kriteria RPS',
             'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
@@ -179,14 +409,574 @@ class DatabaseSeeder extends Seeder
             'kodeCPL' => 'CPL01',
         ]);
 
-        Detail_CPLProdi_BK::create([
-            'kodeBK' => 'BK01',
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL08',
+            'kodeBK' => 'BK01'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL04',
+            'kodeBK' => 'BK02'
+        ]);
+
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL09',
+            'kodeBK' => 'BK03'
+        ]);
+
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL08',
+            'kodeBK' => 'BK04'
+        ]);
+
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL05',
+            'kodeBK' => 'BK05'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL07',
+            'kodeBK' => 'BK06'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL05',
+            'kodeBK' => 'BK07'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL13',
+            'kodeBK' => 'BK07'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL07',
+            'kodeBK' => 'BK08'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL09',
+            'kodeBK' => 'BK08'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL06',
+            'kodeBK' => 'BK09'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
             'kodeCPL' => 'CPL01',
+            'kodeBK' => 'BK10'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL02',
+            'kodeBK' => 'BK10'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL11',
+            'kodeBK' => 'BK11'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL04',
+            'kodeBK' => 'BK12'
+        ]);
+
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL10',
+            'kodeBK' => 'BK12'
+        ]);
+
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL11',
+            'kodeBK' => 'BK12'
+        ]);
+
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL04',
+            'kodeBK' => 'BK12'
+        ]);
+
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL01',
+            'kodeBK' => 'BK13'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL02',
+            'kodeBK' => 'BK13'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL03',
+            'kodeBK' => 'BK14'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL12',
+            'kodeBK' => 'BK14'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL07',
+            'kodeBK' => 'BK15'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL05',
+            'kodeBK' => 'BK16'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL03',
+            'kodeBK' => 'BK17'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL12',
+            'kodeBK' => 'BK17'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL03',
+            'kodeBK' => 'BK18'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL12',
+            'kodeBK' => 'BK18'
+        ]);
+        
+        Detail_CPLProdi_Bk::create([
+            'kodeCPL' => 'CPL02',
+            'kodeBK' => 'BK19'
         ]);
 
         Detail_BK_MK::create([
             'kodeBK' => 'BK01',
-            'kodeMK' => 'MK01',
+            'kodeMK' => 'MK14'
+        ]);
+
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK02',
+            'kodeMK' => 'MK26'
+        ]);
+        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK02',
+            'kodeMK' => 'MK27'
+        ]);
+        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK03',
+            'kodeMK' => 'MK31'
+        ]);
+               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK03',
+            'kodeMK' => 'MK32'
+        ]);
+               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK03',
+            'kodeMK' => 'MK38'
+        ]);
+               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK03',
+            'kodeMK' => 'MK39'
+        ]);
+                       
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK04',
+            'kodeMK' => 'MK68'
+        ]);
+                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK05',
+            'kodeMK' => 'MK34'
+        ]);
+                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK05',
+            'kodeMK' => 'MK35'
+        ]);
+                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK05',
+            'kodeMK' => 'MK77'
+        ]);
+                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK06',
+            'kodeMK' => 'MK60'
+        ]);
+                                       
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK06',
+            'kodeMK' => 'MK63'
+        ]);
+                                       
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK06',
+            'kodeMK' => 'MK68'
+        ]);
+                                       
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK06',
+            'kodeMK' => 'MK73'
+        ]);
+                                       
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK06',
+            'kodeMK' => 'MK76'
+        ]);
+                                       
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK18'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK19'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK28'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK29'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK42'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK43'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK44'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK45'
+        ]);
+                                       
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK52'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK53'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK67'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK75'
+        ]);
+                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK07',
+            'kodeMK' => 'MK18'
+        ]);
+
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK08',
+            'kodeMK' => 'MK48'
+        ]);
+
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK09',
+            'kodeMK' => 'MK65'
+        ]);
+
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK10',
+            'kodeMK' => 'MK61'
+        ]);
+
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK10',
+            'kodeMK' => 'MK62'
+        ]);
+
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK10',
+            'kodeMK' => 'MK78'
+        ]);
+        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK11',
+            'kodeMK' => 'MK11'
+        ]);
+                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK11',
+            'kodeMK' => 'MK13'
+        ]);
+                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK11',
+            'kodeMK' => 'MK17'
+        ]);
+                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK11',
+            'kodeMK' => 'MK22'
+        ]);
+                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK11',
+            'kodeMK' => 'MK30'
+        ]);
+                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK11',
+            'kodeMK' => 'MK33'
+        ]);
+                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK11',
+            'kodeMK' => 'MK64'
+        ]);
+                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK36'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK37'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK54'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK55'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK64'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK66'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK69'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK70'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK71'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK72'
+        ]);
+                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK12',
+            'kodeMK' => 'MK74'
+        ]);
+                                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK01'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK02'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK03'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK04'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK05'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK06'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK07'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK08'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK12'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK16'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK20'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK21'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK23'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK41'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK47'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK49'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK58'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK13',
+            'kodeMK' => 'MK59'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK14',
+            'kodeMK' => 'MK24'
+        ]);
+                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK14',
+            'kodeMK' => 'MK25'
+        ]);
+                                                
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK15',
+            'kodeMK' => 'MK40'
+        ]);
+                                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK15',
+            'kodeMK' => 'MK56'
+        ]);
+                                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK15',
+            'kodeMK' => 'MK57'
+        ]);
+                                                        
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK16',
+            'kodeMK' => 'MK50'
+        ]);
+                                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK16',
+            'kodeMK' => 'MK51'
+        ]);
+                                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK17',
+            'kodeMK' => 'MK40'
+        ]);
+                                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK17',
+            'kodeMK' => 'MK46'
+        ]);
+                                                               
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK17',
+            'kodeMK' => 'MK50'
+        ]);
+                                                          
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK18',
+            'kodeMK' => 'MK46'
+        ]);
+                                                                  
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK18',
+            'kodeMK' => 'MK49'
+        ]);
+                                                                          
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK19',
+            'kodeMK' => 'MK09'
+        ]);
+                                                                                  
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK19',
+            'kodeMK' => 'MK10'
+        ]);
+                                                                                  
+        Detail_BK_MK::create([
+            'kodeBK' => 'BK19',
+            'kodeMK' => 'MK15'
         ]);
         
         Detail_Peran_Dosen::create([
@@ -198,6 +988,10 @@ class DatabaseSeeder extends Seeder
         Detail_MK_CPMK::create([
             'kodeMK' => 'MK01',
             'kodeCPMK' => 'CPMK011',
+        ]);
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MK01',
+            'kodeCPMK' => 'CPMK012',
         ]);
 
         Detail_RPS::create([

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_MK_CPMK', function (Blueprint $table) {
-            $table->char('kodeMK',4);
+            $table->char('kodeMK',10);
             $table->char('kodeCPMK',7);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
             $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
