@@ -285,6 +285,19 @@ class DatabaseSeeder extends Seeder
             'mat_kodeMK'=>'MK01',
         ]);
 
+        Mata_Kuliah::create([
+            'kodeMK' => 'MK02',
+            'namaMK' => 'Kkkk',
+            'jenisMK' => TRUE,
+            'sks'=>3,
+            'semester'=>'1',
+            'kategoriMK'=> TRUE,
+            'pustaka'=> 'Pustaka Belum Tau',
+            'deskripsiMK'=> 'Deskripsi MK Belum Tau',
+            'prasyaratTambahan'=> 'Prasyarat MK Belum Tau',
+            'mat_kodeMK'=>'MK01',
+        ]);
+
         Dosen::create([
             'nip' => '123456789987654321',
             'jabatanDosen' => 'kps',
@@ -308,7 +321,7 @@ class DatabaseSeeder extends Seeder
         CPMK::create([
             'kodeCPMK' => 'CPMK012',
             'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL01'
+            'kodeCPL' => 'CPL02'
         ]);
         CPMK::create([
             'kodeCPMK' => 'CPMK013',
@@ -990,8 +1003,16 @@ class DatabaseSeeder extends Seeder
             'kodeCPMK' => 'CPMK011',
         ]);
         Detail_MK_CPMK::create([
+            'kodeMK' => 'MK02',
+            'kodeCPMK' => 'CPMK011',
+        ]);
+        Detail_MK_CPMK::create([
             'kodeMK' => 'MK01',
             'kodeCPMK' => 'CPMK012',
+        ]);
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MK01',
+            'kodeCPMK' => 'CPMK013',
         ]);
 
         Detail_RPS::create([
