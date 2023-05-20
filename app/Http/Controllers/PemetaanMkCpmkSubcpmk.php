@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CPL_Prodi;
 use App\Models\CPMK;
 use App\Models\Detail_MK_CPMK;
 use App\Models\Mata_Kuliah;
@@ -24,6 +25,7 @@ class PemetaanMkCpmkSubcpmk extends Controller
             'subcpmk_list' => SubCPMK::all(),
             'detailmkcpmk_list' => Detail_MK_CPMK::all(),
             'mk_list' => Mata_Kuliah::all(),
+            'cpl_list' => CPL_Prodi::all()->sortBy('kodeCPL'),
         ]);
     }
     public function export($type)
