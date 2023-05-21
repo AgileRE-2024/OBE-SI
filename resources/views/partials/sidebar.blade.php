@@ -202,7 +202,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('rps') }}" class="nav-link" @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>
+                    <a href="/dashboard/rps" class="nav-link" @if (URL::current() === route('rps')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-filetype-pdf"></i>
                             RPS

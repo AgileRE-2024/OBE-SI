@@ -31,6 +31,12 @@
                     </tr>
             </thead>
             <tbody>
+                @php
+                    $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+                    print($rps);
+                    $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
+                    print($mk);
+                @endphp
                 <tr>
                     <th class="align-middle" scope="col" colspan="8" style="width: 100%">RENCANA PEMBELAJARAN SEMESTER</th>
                 </tr>
@@ -43,7 +49,7 @@
                     <th class="align-middle" scope="col" rowspan="1" style="width: 15%">Tanggal Penyusunan</th>
                 </tr>
                 <tr>
-                    <td class="align-middle" scope="col" rowspan="1" colspan="2" style="width: 25%">...</td>
+                    <td class="align-middle" scope="col" rowspan="1" colspan="2" style="width: 25%"></td>
                     <td class="align-middle" scope="col" rowspan="1" style="width: 10%">...</td>
                     <td class="align-middle" scope="col" rowspan="1" style="width: 10%">...</td>
                     <td class="align-middle" scope="col" rowspan="1" style="width: 15%">...</td>

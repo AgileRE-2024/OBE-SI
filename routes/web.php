@@ -18,6 +18,7 @@ use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\PemetaanPlCplController;
+use App\Http\Controllers\RPSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -130,10 +131,4 @@ Route::get('/dashboard/penilaian', function() {
     return view('welcome');
 })->name('penilaian');
 
-Route::get('/dashboard/rps', function () {
-    return view('content.rps', ['title' => 'RPS',
-    'minggu_rps_list'=> Minggu_RPS::all(),
-    'rps_list'=>RPS::all(),
-    'detail_rps_list'=>Detail_RPS::all()
-]);
-})->name('rps');
+Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');       
