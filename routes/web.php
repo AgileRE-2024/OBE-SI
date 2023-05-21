@@ -99,6 +99,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         })->name('cpl_cpmk_mk');
 
         Route::get('/mk-cpmk-subcpmk',[PemetaanMkCpmkSubcpmk::class,'index','title' => 'Pemetaan MK CPMK SUBCPMK'])->name('mk_cpmk_subcpmk');
+        Route::get('/mk-cpmk-subcpmk/export/{type}', [PemetaanMkCpmkSubcpmk::class, 'export'])->name('export_mk-cpmk-subcpmk');
         
     });
 
