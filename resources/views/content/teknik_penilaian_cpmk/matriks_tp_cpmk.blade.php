@@ -4,19 +4,20 @@
     <div class="content px-4">
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
-                <h3>Pemetaan Capaian Pembelajaran Lulusan (CPL) & Mata Kuliah (MK)</h3>
+                <h3>Teknik Penilaian Capaian Pembelajaran Kelulusan Mata Kuliah (CPMK)</h3>
                 <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>
-                    Pemetaan CPL terhadap MK dilakukan untuk menunjukkan keterhubungan antara
-                    mata kuliah terhadap CPL Program Studi.<b style="display:inline-block;transform: scaleX(-1)"><i
+                    Penentuan teknik penilaian CPMK perlu diperhatikan jenis mata kuliah yakni mata kuliah teori, 
+                    mata kuliah praktikum dan mata kuliah praktek. Standar teknik penilaian didistribusikan 
+                    sesuai dengan CPMK setiap mata kuliah<b style="display:inline-block;transform: scaleX(-1)"><i
                             class="bi bi-quote"></i></b></h5>
             </div>
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a class="btn btn-outline-danger" id="exportPDFButton" href="{{ route ('kurikulum.pemetaan.cetakpdfcplmk') }}"><i class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+                <a class="btn btn-outline-danger" id="exportPDFButton" href="{{ route ('penilaian.cetakpdftpcpmk') }}"><i class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" id="exportExcelButton" href="{{ route('kurikulum.pemetaan.cetakexcelcplmk') }}"><i class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+                <a class="btn btn-success" id="exportExcelButton" href="{{ route('penilaian.cetakexceltpcpmk') }}"><i class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
         <br>
@@ -24,16 +25,19 @@
         <table class="table table-bordered" style="text-align: center">
             <thead class="table" style="background-color: lightgray">
                 <tr>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode MK</th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Nama Mata Kuliah</th>
-                    <th scope="col" colspan="{{ $list_cpl->count() }}">Capaian Pembelajaran Lulusan</th>
-                </tr>
-                <tr>
-                    @foreach ($list_cpl as $cpl)
+                    <th class="align-middle" scope="col" style="width: 5%">No</th>
+                    <th class="align-middle" scope="col" style="width: 10%">Kode CPL</th>
+                    <th class="align-middle" scope="col" style="width: 50%">Kode MK</th>
+                    <th class="align-middle" scope="col" style="width: 50%">Kode CPMK</th>
+                    <th class="align-middle" scope="col" style="width: 50%">
+                    @foreach ($list_teknikpenilaian as $tpcpmk )
+
+                        
+                    @endforeach</th>
+                    @foreach ($list_teknikpenilaian as $tpcpmk)
                         <th scope="col">
-                            <span itemid="{{ $cpl->deskripsiCPL }}">
-                                {{ $cpl->kodeCPL }}
+                            <span>
+                                {{ $tpcpmk->teknikpenilaian }}
                             </span>
                             {{-- <span data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span> --}}
@@ -42,37 +46,6 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($list_mk as $mk)
-                    <tr>
-                        <th scope="row">
-                            {{ $loop->iteration }}</th>
-                        <th scope="row">
-                            {{ $mk->kodeMK }}</th>
-                        <th scope="row" class="text-start">
-                            {{ $mk->namaMK }}</th>
-                            @foreach ($list_cpl as $cpl)
-                            @php
-                                $isTrue = false;
-                                foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
-                                    if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
-                                        $isTrue = true;
-                                        break;
-                                    }
-                                }
-                            @endphp
-                                <td>
-                                    <input type="checkbox" id="{{ $mk->kodeMK }}_{{ $cpmk->kodeCPMK }}" disabled @if ($isTrue) checked @endif>
-                                </td>
-                        @endforeach
-                        {{-- @foreach ($list_cpl as $cpl)
-                            @foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk)
-                                <td>
-                                    <input type="checkbox" disabled @if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) checked @endif>
-                                </td>
-                            @endforeach
-                        @endforeach --}}
-                    </tr>
-                @endforeach
             </tbody>
         </table>
 
