@@ -367,6 +367,7 @@ class DatabaseSeeder extends Seeder
             'kriteriaPenilaian'=>'Isi kriteria penilaian',
             'tahapPenilaian'=>'Awal Tengah Semester',
             'instrumenPenilaian'=>'Rubrik holistik',
+            'kodeRPS'=>'RPS001',
         ]);
         Teknik_Penilaian::create([
             'kodePenilaian'=> '0002',
@@ -375,6 +376,7 @@ class DatabaseSeeder extends Seeder
             'kriteriaPenilaian'=>'Isi kriteria penilaian',
             'tahapPenilaian'=>'Tengah Semester',
             'instrumenPenilaian'=>'Rubrik holistik',
+            'kodeRPS'=>'RPS001',
         ]);
 
         Minggu_RPS::create([
