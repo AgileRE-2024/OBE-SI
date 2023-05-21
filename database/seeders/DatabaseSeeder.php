@@ -305,11 +305,46 @@ class DatabaseSeeder extends Seeder
             'deskripsiCPMK' => 'Mampu menjelaskan konsep dasar sistem',
             'kodeCPL' => 'CPL01'
         ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK012',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL01'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK013',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL01'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK014',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL02'
+        ]);
+        CPMK::create([
+            'kodeCPMK' => 'CPMK015',
+            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+            'kodeCPL' => 'CPL02'
+        ]);
 
         SubCPMK::create([
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'deskripsiSubCPMK' => 'Mampu memahami konsep dasar sistem informasi',
             'kodeCPMK' => 'CPMK011'
+        ]);
+        SubCPMK::create([
+            'kodeSubCPMK' => 'Sub-CPMK0112',
+            'deskripsiSubCPMK' => 'Mampu menjelaskan konsep informasi dan sistem informasi',
+            'kodeCPMK' => 'CPMK011'
+        ]);
+        SubCPMK::create([
+            'kodeSubCPMK' => 'Sub-CPMK0121',
+            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
+            'kodeCPMK' => 'CPMK012'
+        ]);
+        SubCPMK::create([
+            'kodeSubCPMK' => 'Sub-CPMK0122',
+            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
+            'kodeCPMK' => 'CPMK013'
         ]);
 
         Teknik_Penilaian::create([
@@ -319,6 +354,7 @@ class DatabaseSeeder extends Seeder
             'kriteriaPenilaian'=>'Isi kriteria penilaian',
             'tahapPenilaian'=>'Awal Tengah Semester',
             'instrumenPenilaian'=>'Rubrik holistik',
+            'kodeRPS'=>'RPS001',
         ]);
         Teknik_Penilaian::create([
             'kodePenilaian'=> '0002',
@@ -327,6 +363,7 @@ class DatabaseSeeder extends Seeder
             'kriteriaPenilaian'=>'Isi kriteria penilaian',
             'tahapPenilaian'=>'Tengah Semester',
             'instrumenPenilaian'=>'Rubrik holistik',
+            'kodeRPS'=>'RPS001',
         ]);
 
         Minggu_RPS::create([
@@ -334,6 +371,16 @@ class DatabaseSeeder extends Seeder
             'kodeSubCPMK'=> 'Sub-CPMK0111',
             'mingguKe'=>'1',
             'bentukPembelajaran'=>true,
+            'indikatorMingguRPS'=>'Isi indikator RPS',
+            'kriteriaMingguRPS'=>'Isi kriteria RPS',
+            'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
+            'materiPembelajaran'=>'Isi materi pembelajaran RPS',
+        ]);
+        Minggu_RPS::create([
+            'kodeMingguRPS'=> 'MR12',
+            'kodeSubCPMK'=> 'Sub-CPMK0111',
+            'mingguKe'=>'2',
+            'bentukPembelajaran'=>false,
             'indikatorMingguRPS'=>'Isi indikator RPS',
             'kriteriaMingguRPS'=>'Isi kriteria RPS',
             'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
@@ -943,6 +990,10 @@ class DatabaseSeeder extends Seeder
         Detail_MK_CPMK::create([
             'kodeMK' => 'MK01',
             'kodeCPMK' => 'CPMK011',
+        ]);
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MK01',
+            'kodeCPMK' => 'CPMK012',
         ]);
 
         Detail_RPS::create([

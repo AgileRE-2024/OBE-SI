@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Detail_Nilai_Mahasiswa;
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanCPLBKMK;
+use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\CPLMKController;
 use App\Http\Controllers\CPMKController;
@@ -67,6 +68,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
 
         Route::put('/bk-mk/update', [BKMKController::class, 'update'])->name('update_pemetaan_bk_mk');
 
+        Route::get('/bk-mk/exportExcel', [BKMKController::class, 'exportExcel'])->name('exportExcel');
+        Route::get('/bk-mk/exportPdf', [BKMKController::class, 'exportPdf'])->name('exportPdf');
+
         Route::get('/cpl-bk', function () {
             return view('welcome');
         })->name('cpl_bk');
@@ -91,9 +95,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/cpl-mk', [CPLMKController::class, 'index'])->name('cpl_mk');
 
         Route::get('/cpl-pl', [PemetaanPlCplController::class, 'index'])->name('cpl_pl');
-        Route::get('/cpl-pl/table', [PemetaanPlCplController::class, 'table'])->name('table_cpl_pl');
-        Route::post('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
-        Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export');
+        Route::put('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
+        Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export_cpl_pl');
 
         Route::prefix('/cpl-cpmk-mk')->name('cpl_cpmk_mk.')->group(function () {
             Route::name('index')->get('/', [CPMKController::class, 'index']);
@@ -110,7 +113,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
 
 Route::name('generatepdf')->get('/generate', [PDFController::class, 'generatePDF']);
 
-    
+
     Route::prefix('/data')->name('data.')->group(function () {
         Route::get('/profil-lulusan', function () {
             return view('content.profil_lulusan', ['title' => 'Profil Lulusan']);
@@ -139,7 +142,11 @@ Route::get('/dashboard/penilaian', function() {
 })->name('penilaian');
 
 Route::get('/dashboard/rps', function () {
-    return view('content.rps', ['title' => 'RPS']);
+    return view('content.rps', ['title' => 'RPS',
+    'minggu_rps_list'=> Minggu_RPS::all(),
+    'rps_list'=>RPS::all(),
+    'detail_rps_list'=>Detail_RPS::all()
+]);
 })->name('rps');
 
 Route::get('/generate-pdf', 'PDFController@generatePDF');

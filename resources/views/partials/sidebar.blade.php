@@ -25,7 +25,7 @@
                         </p>
                     </a>
                 </li> --}}
-                <li class="nav-item @if (Request::is('*kurikulum*')) menu-open @endif">
+                <li id="kurikulum" class="nav-item @if (Request::is('*kurikulum*')) menu-open @endif">
                     <a href="{{ route('kurikulum.data.profil_lulusan') }}" class="nav-link"
                         @if (Request::is('*kurikulum*')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
@@ -90,7 +90,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">
+                        <li id="pemetaan" class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">
                             <a href="{{ route('kurikulum.pemetaan.bk_mk') }}" class="nav-link"
                                 @if (Request::is('*pemetaan*')) style="background-color: #ffffff; color: black;" @endif>
                                 <p>
@@ -177,6 +177,15 @@
                                         <p style="font-size: 14px">
                                             <i class="bi bi-caret-right-fill"></i>
                                             CPL-CPMK-MK
+                                        </p>
+                                    </a>
+                                </li>
+                                <li id="mkcpmksubcpmk" class="nav-item">
+                                    <a href="{{ route('kurikulum.pemetaan.mk_cpmk_subcpmk') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.pemetaan.mk_cpmk_subcpmk')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            MK-CPMK-SUBCPMK
                                         </p>
                                     </a>
                                 </li>
