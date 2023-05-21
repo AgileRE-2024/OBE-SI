@@ -26,7 +26,7 @@
         <table class="table table-bordered" style="text-align: center; border-collapse: collapse;">
             <tr style="background-color: lightgray; ">
                 <th class="align-middle" scope="col" style="width: 15%; background-color: lightgray;">
-                    <img src="{{ public_path('unair.png') }}" width="75" height="75">
+                    <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/unair.png'))) }}" width="75" height="75">
                 </th>                
                 <th class="align-middle" scope="col"  colspan="5" style="width: 70%; background-color: lightgray;">
                     <div style="text-align: center;">
