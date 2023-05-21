@@ -14,16 +14,16 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a class="btn btn-outline-danger" href="{{ route('kurikulum.pemetaan.export', ['pdf']) }}"><i
+                <a id="pdf" class="btn btn-outline-danger" href="/dashboard/kurikulum/pemetaan/bk-mk/exportPdf"><i
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" href="{{ route('kurikulum.pemetaan.export', ['excel']) }}"><i
+                <a id="excel" class="btn btn-success" href="/dashboard/kurikulum/pemetaan/bk-mk/exportExcel"><i
                         class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
         <br>
-        <div class="d-flex">
+        <div class="pt-2" class="d-flex">
             <form id ="myForm"method="POST" action="{{ route('kurikulum.pemetaan.update_pemetaan_bk_mk') }}">
                 @csrf
                 @method('put')

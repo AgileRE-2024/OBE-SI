@@ -14,7 +14,7 @@ class BKMKTest extends DuskTestCase
     /**
      * A Dusk test example.
      */
-    public function testExample()
+    public function testChecked()
     {
         // $this->browse(function (Browser $browser) {
         //     $browser->visit('/')
@@ -38,6 +38,60 @@ class BKMKTest extends DuskTestCase
 
             
             // $browser->pause(1*600000);
+        });
+        
+    }
+
+    public function testUnChecked()
+    {
+
+        $this->browse(function (Browser $browser) {
+
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk/')
+
+                        ->assertSee('Matriks Bahan Kajian (BK) & Mata Kuliah (MK)');
+            // Click the login button
+            $browser->driver->findElement(WebDriverBy::cssSelector('input[id="checkbox_AGH101-BK01"]'))->click();
+            // $browser->pause(1*6000);
+            // $browser->driver->findElement(WebDriverBy::cssSelector('button[id="buttonsimpan"]'))->click();
+            
+            $browser->driver->executeScript("document.querySelector('#submitbutton').click()");
+            $browser->pause(1*600);
+            $browser->driver->executeScript("document.querySelector('.swal2-confirm.swal2-styled').click()");
+            $browser->pause(1*600);
+
+        });
+        
+    }
+
+    public function testExcel()
+    {
+
+        $this->browse(function (Browser $browser) {
+
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk/')
+
+                        ->assertSee('Matriks Bahan Kajian (BK) & Mata Kuliah (MK)');
+            // Click
+            $browser->driver->findElement(WebDriverBy::cssSelector('a[id="excel"]'))->click();
+            $browser->pause(1*600);
+        });
+        
+    }
+
+    public function testPDF()
+    {
+
+        $this->browse(function (Browser $browser) {
+
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk/')
+
+                        ->assertSee('Matriks Bahan Kajian (BK) & Mata Kuliah (MK)');
+            // Click
+            $browser->driver->findElement(WebDriverBy::cssSelector('a[id="pdf"]'))->click();
+            $browser->pause(1*600);
+
+
         });
         
     }
