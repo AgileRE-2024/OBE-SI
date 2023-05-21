@@ -146,4 +146,4 @@ Route::get('/dashboard/rps/minggurps', function () {
     'rps_list'=>RPS::all(),
     'detail_rps_list'=>Detail_RPS::all()
 ]);
-})->name('rps');
+})->name('minggu_rps.add_minggu_rps');
