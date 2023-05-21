@@ -133,13 +133,8 @@ Route::get('/dashboard/penilaian', function() {
     return view('welcome');
 })->name('penilaian');
 
-Route::get('/dashboard/rps', function () {
-    return view('content.rps', ['title' => 'RPS',
-    'minggu_rps_list'=> Minggu_RPS::all(),
-    'rps_list'=>RPS::all(),
-    'detail_rps_list'=>Detail_RPS::all()
-]);
-})->name('rps');
+
+Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');       
 
 Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
 Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
@@ -148,3 +143,4 @@ Route::post('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'storeMing
 Route::get('/dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
 Route::put('/dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
 Route::get('/dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
+

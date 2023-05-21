@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('kriteriaPenilaian',100);
             $table->string('tahapPenilaian',50);
             $table->string('instrumenPenilaian',50);
+            $table->char('kodeRPS',6);
+            $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict');
             $table->timestamps();
         });
     }
