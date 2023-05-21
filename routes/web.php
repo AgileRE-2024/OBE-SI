@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanPlCplController;
+use App\Http\Controllers\TeknikPenilaianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,6 +87,14 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/mata-kuliah', function () {
             return view('welcome');
         })->name('mata_kuliah');
+
+        Route::get('/teknik_penilaian', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
+        Route::get('/addTeknikPenilaian', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
+        Route::post('/addTeknikPenilaian', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
+        Route::get('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
+        Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
+        Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
+        Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
     });
 });
 
