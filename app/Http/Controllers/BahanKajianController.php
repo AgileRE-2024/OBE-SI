@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\BahanKajianExport;
+use Dompdf\Dompdf;
 use App\Models\Bahan_Kajian;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Dompdf\Dompdf;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
 
 class BahanKajianController extends Controller
 {
@@ -41,8 +43,8 @@ class BahanKajianController extends Controller
                 'Content-Disposition' => 'inline; filename=' . $filename
             ]);
         } else {
-            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
-            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+            $filename = "Tabel Bahan Kajian_" . $date_time . '.xlsx';
+            return Excel::download(new BahanKajianExport(), $filename);
         }
     }
 

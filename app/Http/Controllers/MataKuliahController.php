@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\MataKuliahExport;
 use Dompdf\Dompdf;
 use App\Models\Mata_Kuliah;
 use Illuminate\Http\Request;
@@ -43,8 +44,8 @@ class MataKuliahController extends Controller
                 'Content-Disposition' => 'inline; filename=' . $filename
             ]);
         } else {
-            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
-            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+            $filename = "Tabel Mata Kuliah_" . $date_time . '.xlsx';
+            return Excel::download(new MataKuliahExport(), $filename);
         }
     }
 

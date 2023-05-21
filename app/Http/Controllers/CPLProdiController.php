@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\CPLProdiExport;
 use Dompdf\Dompdf;
 use App\Models\CPL_Prodi;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 
 class CPLProdiController extends Controller
@@ -40,8 +42,8 @@ class CPLProdiController extends Controller
                 'Content-Disposition' => 'inline; filename=' . $filename
             ]);
         } else {
-            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
-            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+            $filename = "Tabel Capaian Pembelajaran Program Studi_" . $date_time . '.xlsx';
+            return Excel::download(new CPLProdiExport(), $filename);
         }
     }
 

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\CPL_SN_Dikti;
+use App\Exports\CPLDiktiExport;
 use Dompdf\Dompdf;
+use App\Models\CPL_SN_Dikti;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 
 class CPLDiktiController extends Controller
@@ -40,8 +42,8 @@ class CPLDiktiController extends Controller
                 'Content-Disposition' => 'inline; filename=' . $filename
             ]);
         } else {
-            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
-            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+            $filename = "Tabel CPL SN Dikti_" . $date_time . '.xlsx';
+            return Excel::download(new CPLDiktiExport(), $filename);
         }
     }
 

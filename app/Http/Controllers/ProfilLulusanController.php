@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ProfilLulusanExport;
+use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use App\Models\Profil_Lulusan;
-use Dompdf\Dompdf;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 
 class ProfilLulusanController extends Controller
@@ -41,8 +43,8 @@ class ProfilLulusanController extends Controller
                 'Content-Disposition' => 'inline; filename=' . $filename
             ]);
         } else {
-            // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
-            // return Excel::download(new ExportPemetaanCPLPL(ProfilLulusan::all(), CPLProdi::all(), PemetaanPlCpl::all()), $filename);
+            $filename = "Tabel Profil Lulusan_" . $date_time . '.xlsx';
+            return Excel::download(new ProfilLulusanExport(), $filename);
         }
     }
 
