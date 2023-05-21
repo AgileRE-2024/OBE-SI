@@ -29,15 +29,10 @@
                     <th class="align-middle" scope="col" style="width: 10%">Kode CPL</th>
                     <th class="align-middle" scope="col" style="width: 50%">Kode MK</th>
                     <th class="align-middle" scope="col" style="width: 50%">Kode CPMK</th>
-                    <th class="align-middle" scope="col" style="width: 50%">
-                    @foreach ($list_teknikpenilaian as $tpcpmk )
-
-                        
-                    @endforeach</th>
-                    @foreach ($list_teknikpenilaian as $tpcpmk)
+                    @foreach ($list_teknikpenilaian as $tp)
                         <th scope="col">
-                            <span>
-                                {{ $tpcpmk->teknikpenilaian }}
+                            <span itemid="{{ $tp->kodePenilaian }}">
+                                {{ $tp->teknikPenilaian}}
                             </span>
                             {{-- <span data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span> --}}
