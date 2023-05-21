@@ -19,7 +19,7 @@ return new class extends Migration
             $table->char('kodeMK',10);
             $table->char('kps',18);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-            $table->foreign('kps')->references('nip')->on('Dosen')->onDelete('restrict');
+            $table->foreign('kps')->references('nip')->on('users')->onDelete('restrict');
             $table->timestamps();
         });
     }
