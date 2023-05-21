@@ -1,27 +1,33 @@
-@extends('layout.dashboard')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPS</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
 
-<div class="content px-4">
-    <div class="content px-4">
-        <div class="card border" style="background-color: white">
-            <div class="card-body" style="font-weight:600;">
-                <h3>Rencana Pembelajaran Semester (RPS)</h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>RPS merupakan dokumen program pembelajaran yang dirancang untuk menghasilkan lulusan yang memiliki kemampuan sesuai CPL yang telah ditetapkan, sehingga harus dapat dijalankan oleh mahasiswa pada setiap tahapan belajar pada mata kuliah terkait.<b
-                        style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end pt-2">
-            <div class="pr-3">
-                <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['pdf']) }}"><i
-                        class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
-            </div>
-            <div>
-                <a id="excel" class="btn btn-success" href="/dashboard/rps/exportExcel"><i
-                        class="bi bi-file-earmark-excel"> </i>Export Excel</a>
-            </div>
-        </div>
-        <br>
+        thead tr th {
+            border: 1px black solid;
+        }
+
+        th,
+        td {
+            border: 1px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center; padding: 20px 0px 20px 0px; font-size: 24px; font-weight: bold;">
+        RPS
+    </div>
+
+    <div style="text-align: center;">
         <table class="table table-bordered" style="text-align: center">
             <thead style="background-color: lightgray">
                     <tr>
@@ -316,7 +322,7 @@
             </tbody>
         </table>
         
+    </div>
+</body>
 
-
-
-@endsection
+</html>
