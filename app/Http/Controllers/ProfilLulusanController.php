@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Profil_Lulusan;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
 
 class ProfilLulusanController extends Controller
 {
@@ -77,10 +78,15 @@ class ProfilLulusanController extends Controller
 
     public function update($pl, Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'kodePL' => 'required',
             'deskripsiPL' => 'required',
         ]);
+        
+        if ($validator->fails()) {
+            // flash('error')->error();
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
         if (Profil_Lulusan::where('kodePL', $request->kodePL)->exists() && $request->kodePL != $pl) {
             return redirect()->back()->with('error', 'Kode Profil Lulusan sudah ada');

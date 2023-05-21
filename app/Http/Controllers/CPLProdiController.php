@@ -8,6 +8,7 @@ use App\Models\CPL_Prodi;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
 
 class CPLProdiController extends Controller
 {
@@ -77,11 +78,16 @@ class CPLProdiController extends Controller
 
     public function updateCPLProdi(Request $request, $cpl)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'kodeCPL' => 'required',
             'deskripsiCPL' => 'required',
             'referensiCPL' => 'required',
         ]);
+        
+        if ($validator->fails()) {
+            // flash('error')->error();
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
 
         if (CPL_Prodi::where('kodeCPL', $request->kodeCPL)->exists() && $request->kodeCPL != $cpl) {
             return redirect()->back()->with('error', 'Kode CPL sudah ada');
@@ -95,7 +101,7 @@ class CPLProdiController extends Controller
         ]);
         $cpl->save();
 
-        return redirect()->route('kurikulum.data.cpl_prodi')->with('error', 'CPL Prodi berhasil diubah');
+        return redirect()->route('kurikulum.data.cpl_prodi')->with('success', 'CPL Prodi berhasil diubah');
     }
 
     public function deleteCPLProdi($cpl)

@@ -110,4 +110,22 @@ class CPLProdiTest extends DuskTestCase
                     ->press('submit');
         });
     }
+    public function testPDFExportSuccess(){
+        $this->browse(function (Browser $browser) {
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
+                    ->assertSee("Bahan Kajian")
+                    ->pause(1000)
+                    ->click('.btn-outline-danger:nth-child(1)')
+                    ->pause(1000);
+        });
+    }
+    public function testExcelExportSuccess(){
+        $this->browse(function (Browser $browser) {
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
+                    ->assertSee("Bahan Kajian")
+                    ->pause(1000)
+                    ->click('.btn-success:nth-child(2)')
+                    ->pause(1000);
+        });
+    }
 }
