@@ -10,32 +10,34 @@
         table {
             border-collapse: collapse;
         }
-
-        thead tr th {
-            border: 1px black solid;
+    
+        th, td {
+            border: 1px solid black;
         }
-
-        th,
-        td {
-            border: 1px black solid;
-        }
-    </style>
+    </style>    
 </head>
 
 <body>
-    <div style="text-align: center; padding: 20px 0px 20px 0px; font-size: 24px; font-weight: bold;">
+    <div style="text-align: center; padding: 20px 0px 20px 0px; font-size: 24px; font-weight: bold; margin:auto">
         RPS
     </div>
 
-    <div style="text-align: center;">
-        <table class="table table-bordered" style="text-align: center">
-            <thead style="background-color: lightgray">
-                    <tr>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%"><img src="{{ asset('unair.png') }}" width="75" height="75"></th>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="5" style="width: 70%">UNIVERSITAS AIRLANGGA<br>FAKULTAS SAINS DAN TEKNOLOGI<br>PRODI SISTEM INFORMASI</th>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%">Kode Dokumen</th>
-                    </tr>
-            </thead>
+    <<div style="text-align: center;">
+        <table class="table table-bordered" style="text-align: center; border-collapse: collapse;">
+            <tr style="background-color: lightgray; ">
+                <th class="align-middle" scope="col" style="width: 15%; background-color: lightgray;">
+                    <img src="{{ public_path('unair.png') }}" width="75" height="75">
+                </th>                
+                <th class="align-middle" scope="col"  colspan="5" style="width: 70%; background-color: lightgray;">
+                    <div style="text-align: center;">
+                        UNIVERSITAS AIRLANGGA<br>
+                        FAKULTAS SAINS DAN TEKNOLOGI<br>
+                        PRODI SISTEM INFORMASI
+                    </div>
+                </th>
+                <th class="align-middle" scope="col" style="width: 15%; background-color: lightgray; border-right: 1px solid black;">Kode Dokumen</th>
+            </tr>
+
             <tbody>
                 @php
                     $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
@@ -45,10 +47,11 @@
                     $bk_list=$mk->Bahan_Kajian;
                     $counterBk = $mk->Bahan_Kajian->count();
                 @endphp
-                {{-- <h1>{{ $mk->with('Bahan_Kajian')->first()->namaBK }}</h1> --}}
-                <tr>
+
+                <tr style="border-right: 1px solid black;">
                     <th class="align-middle" scope="col" colspan="7" style="width: 100%">RENCANA PEMBELAJARAN SEMESTER</th>
                 </tr>
+            
                 <tr>
                     <th class="align-middle"  rowspan="1" colspan="2" style="width: 25%">MATA KULIAH (MK)</th>
                     <th class="align-middle"  rowspan="1" style="width: 10%">KODE</th>
@@ -101,7 +104,7 @@
                         // print($bk_list);
                     @endphp
                     <tr>
-                        <th style="text-align: left;" colspan="2" rowspan="2" style="width: 25%">Pengesahan</th>
+                        <th style="vertical-align: top;" colspan="2" rowspan="2" style="width: 25%">Pengesahan</th>
                         <th style="text-align: left;" colspan="2" >Dosen Pengembang RPS</th>
                         <th style="text-align: left;" colspan="1" >Koordinator BK</th>
                         <th style="text-align: left;" colspan="3" >Ka Prodi</th>
@@ -186,10 +189,11 @@
                     $rowspanCP = $rowspanCP+$list_cpl->count()+$list_cpmk->count()+$list_subcpmk->count();
                 @endphp
                 <tr>
-                    <th style="text-align: left;" rowspan={{ $rowspanCP }} colspan="1">Capaian Pembelajaran</th>
+                    <th style="vertical-align: top;" rowspan={{ $rowspanCP }} colspan="1">Capaian Pembelajaran</th>
                 </tr>
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="3">CPL-PRODI yang dibebankan pada MK</th>
+                    <th style="text-align: left;" rowspan="1" colspan="5"></th>
                 </tr>
                 {{-- Looping CPL --}}
                 @foreach ($list_cpl as $cpl)
@@ -200,6 +204,7 @@
                 @endforeach
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="3">Capaian Pembelajaran Mata Kuliah (CPMK)</th>
+                    <th style="text-align: left;" rowspan="1" colspan="5"></th>
                 </tr>
                 @foreach ($list_cpmk as $cpmk)
                 <tr>
@@ -209,6 +214,7 @@
                 @endforeach
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="3">Kemampuan akhir tiap tahapan belajar (Sub-CPMK)</th>
+                    <th style="text-align: left;" rowspan="1" colspan="5"></th>
                 </tr>
                 @foreach ($list_subcpmk as $subcpmk)
                 <tr>
@@ -218,6 +224,7 @@
                 @endforeach
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="3">Korelasi CPMK terhadap Sub-CPMK</th>
+                    <th style="text-align: left;" rowspan="1" colspan="5"></th>
                 </tr>
                 <tr>
                     <td style="text-align: left;" scope="col" rowspan="1" colspan="7">
@@ -246,6 +253,7 @@
                     <th style="text-align: left;" rowspan="1" colspan="1">Deskripsi singkat MK</th>
                     <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->deskripsiMK }}</td>
                 </tr>
+                
                 {{-- <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Bahan Kajian: Materi Pembelajaran</th>
                     <th style="text-align: left;" rowspan="1" colspan="7">...</th>
@@ -254,6 +262,7 @@
                     <th style="text-align: left;" rowspan="1" colspan="1">Pustaka</th>
                     <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->pustaka }}</td>
                 </tr>
+                
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Dosen Pengampu</th>
                     <td style="text-align: left;" rowspan="1" colspan="7"> 
@@ -262,6 +271,7 @@
                     @endforeach
                     </td>
                 </tr>
+                
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Mata Kuliah Prasyarat</th>
                     <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->mat_kodeMK ? $mk->mat_kodeMK : '-'}}</td>
@@ -270,59 +280,54 @@
 
             </tbody>
         </table>
-        
-        <table class="table table-bordered" style="text-align: center">
+        <br>
+        <table class="table table-bordered" style="text-align: center" >
             <thead style="background-color: lightgray">
-                    <tr>
-                        <th class="align-middle" rowspan="2" style="width: 5%">Minggu Ke-</th>
-                        <th class="align-middle" rowspan="2" style="width: 15%">Kemampuan akhir tiap tahapan belajar (Sub-CPMK)</th>
-                        <th class="align-middle" rowspan="2" style="width: 10%">Indikator</th>
-                        <th class="align-middle" rowspan="2" style="width: 10%">Kriteria & Teknik</th>
-                        <th class="align-middle" colspan="2" style="width: 20%">Bentuk Pembelajaran Metode Pembelajaran Penugasan Mahasiswa [Estimasi Waktu]</th>
-                        <th class="align-middle" rowspan="2" style="width: 10%">Materi Pembelajaran[Pustaka]</th>
-                        <th class="align-middle" rowspan="2" style="width: 10%">Bobot Penilaian(%)</th>
-                    </tr>
-            </thead>
-            <tr style="background-color: lightgray" >
-                <th>(1)</th>
-                <th>(2)</th>
-                <th>(3)</th>
-                <th>(4)</th>
-                <th>Luring(5)</th>
-                <th>Daring(6)</th>
-                <th>(7)</th>
-                <th>(8)</th>
-            </tr>
+                <tr>
+                    <th class="align-middle" rowspan="2" style="width: 5%">Minggu Ke-</th>
+                    <th class="align-middle" rowspan="2" style="width: 15%">Kemampuan akhir tiap tahapan belajar (Sub-CPMK)</th>
+                    <th class="align-middle" rowspan="2" style="width: 10%">Indikator</th>
+                    <th class="align-middle" rowspan="2" style="width: 30%">Kriteria & Teknik</th>
+                    <th class="align-middle" colspan="2" rowspan="2" style="width: 20%">Bentuk Pembelajaran Metode Pembelajaran Penugasan Mahasiswa [Estimasi Waktu]</th>
+                    <th class="align-middle" rowspan="2" style="width: 10%">Materi Pembelajaran [Pustaka]</th>
+                    <th class="align-middle" rowspan="2" style="width: 10%">Bobot Penilaian (%)</th>
+                </tr>
+                <br>
+                <tr style="background-color: lightgray">
+                    <th>(1)</th>
+                    <th>(2)</th>
+                    <th>(3)</th>
+                    <th>(4)</th>
+                    <th>Luring (5)</th>
+                    <th>Daring (6)</th>
+                    <th>(7)</th>
+                    <th>(8)</th>
+                </tr>
+
             <tbody>
                 @foreach ($minggu_rps_list->whereIn('kodeMingguRPS', $list_kode_minggu_rps) as $minggu_rps)
-                <tr>
-                    <td scope="row">{{ $minggu_rps->mingguKe }}</td>
-                    <td scope="row">{{ $minggu_rps->kodeSubCPMK }}</td>
-                    <td scope="row">{{ $minggu_rps->indikatorMingguRPS }}</td>
-                    <td scope="row">{{ $minggu_rps->kriteriaMingguRPS }} <br> [ {{ $list_kode_penilaian->get(($loop->iteration)-1) }} ] <br> {{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->teknikPenilaian }}</td>
-                    @if ($minggu_rps->bentukPembelajaran == '1')
-                    <td scope="row">{{ 'Luring' }}</td>
-                    <td></td>
-                    @else
-                    <td></td>
-                    <td scope="row">{{ 'Daring' }} </td>
-                    @endif
-                    <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
-                    <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian }}</td>
-                </tr>
+                    <tr>
+                        <td scope="row">{{ $minggu_rps->mingguKe }}</td>
+                        <td scope="row">{{ $minggu_rps->kodeSubCPMK }}</td>
+                        <td scope="row">{{ $minggu_rps->indikatorMingguRPS }}</td>
+                        <td scope="row">
+                            {{ $minggu_rps->kriteriaMingguRPS }} <br>
+                            [ {{ $list_kode_penilaian->get(($loop->iteration)-1) }} ] <br>
+                            {{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->teknikPenilaian }}
+                        </td>
+                        @if ($minggu_rps->bentukPembelajaran == '1')
+                            <td scope="row">{{ 'Luring' }}</td>
+                            <td></td>
+                        @else
+                            <td></td>
+                            <td scope="row">{{ 'Daring' }}</td>
+                        @endif
+                        <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
+                        <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian }}</td>
+                    </tr>
                 @endforeach
-              </tbody>
-        </table>
-        
             </tbody>
         </table>
 
-
-        
-            </tbody>
-        </table>
-        
-    </div>
-</body>
 
 </html>
