@@ -19,7 +19,7 @@ class SusunanMKController extends Controller
     public function index(){
         $MK = Mata_Kuliah::get();
         $BK = Bahan_Kajian::get();
-        return view('content.susunan_mk',[
+        return view('content.pemetaan_susunan_mk.susunan_mk',[
             'title' => 'Susunan Mata Kuliah',
             'MK' => $MK,
             'BK' => $BK
@@ -145,7 +145,7 @@ class SusunanMKController extends Controller
         $dateTime = Carbon::now()->format('Y_m_d_H_i_s');
         $filename = 'Susunan MK_' . $dateTime . '.pdf';
 
-        $pdf = PDF::loadView('content.susunan_mk_pdf', ['data' => $data]);
+        $pdf = PDF::loadView('content.pemetaan_susunan_mk.susunan_mk_pdf', ['data' => $data]);
         return $pdf->download($filename);
     }
 }

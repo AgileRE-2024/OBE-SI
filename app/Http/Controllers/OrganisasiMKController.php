@@ -18,7 +18,7 @@ class OrganisasiMKController extends Controller
     public function index(){
         $MK = Mata_Kuliah::get();
         $BK = Bahan_Kajian::get();
-        return view('content.organisasi_mk',[
+        return view('content.pemetaan_organisasi_mk.organisasi_mk',[
             'title' => 'Organisasi Mata Kuliah',
             'MK' => $MK,
             'BK' => $BK
@@ -105,7 +105,7 @@ class OrganisasiMKController extends Controller
         $dateTime = Carbon::now()->format('Y_m_d_H_i_s');
         $filename = 'Organisasi MK_' . $dateTime . '.xlsx';
 
-        $pdf = PDF::loadView('content.organisasi_mk_pdf', ['data' => $data])->setPaper('a4', 'landscape');;
+        $pdf = PDF::loadView('content.pemetaan_organisasi_mk.organisasi_mk_pdf', ['data' => $data])->setPaper('a4', 'landscape');;
         return $pdf->download($filename);
     }
 }
