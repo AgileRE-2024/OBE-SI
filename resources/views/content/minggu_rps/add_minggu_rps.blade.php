@@ -19,6 +19,29 @@
                     <div class="col-sm-8">
                         <form method="post" action="{{ route('store_minggu_rps') }}">
                             @csrf
+                            @php
+                                $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+                                $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
+                                $list_cpmk = collect();
+                                $uniqueIds = [];
+                                
+                                foreach ($mk->CPMK as $cpmk) {
+                                    $kodeCPMK = $cpmk->kodeCPMK;
+                                    $deskripsiCPMK = $cpmk->deskripsiCPMK;
+                                
+                                    if (!in_array($kodeCPMK, $uniqueIds)) {
+                                        $uniqueIds[] = $kodeCPMK;
+                                        $list_cpmk->push([
+                                            'kodeCPMK' => $kodeCPMK,
+                                            'deskripsiCPMK' => $deskripsiCPMK,
+                                        ]);
+                                    }
+                                }
+                                $list_kodeCPMK = $list_cpmk->pluck('kodeCPMK');
+                            @endphp
+                            {{-- Passing data rps ke controller --}}
+                            <input type="hidden" name="kodeRPS" value={{ $rps->kodeRPS }} />
+
                             <div class="form-group">
                                 <label>Kode Minggu RPS</label>
                                 @error('kodeMingguRPS')
@@ -50,11 +73,12 @@
                             @endphp
 
                             <div class="form-group">
-                                <label>Kode Sub CPMK</label>
+                                <label>Sub CPMK</label>
                                 @error('kodeSubCPMK')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
                                 <select name="kodeSubCPMK" id='kodeSubCPMK' class="form-select">
+                                    <option value="">-- Pilih Sub CMPK --</option>
                                     @foreach ($scpmk->whereIn('kodeCPMK', $list_kodeCPMK) as $item)
                                         <option value="{{ $item->kodeSubCPMK }}">{{ $item->kodeSubCPMK }} - {{ $item->deskripsiSubCPMK }}</option>
                                     @endforeach
@@ -62,7 +86,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Minggu RPS</label>
+                                <label>Minggu RPS (Contoh. 1)</label>
                                 @error('mingguKe')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
@@ -114,6 +138,16 @@
                                     placeholder="Materi Pembelajaran">
                             </div>
 
+                            <div class="form-group">
+                                <label>Teknik Penilaian (Jika ada)</label>
+                                <select name="kodePenilaian" id='kodePenilaian' class="form-select">
+                                    <option value="">-- Pilih Teknik Penilaian --</option>
+                                    @foreach ($teknik_penilaian_list->whereIn('kodeRPS', $rps->kodeRPS) as $item)
+                                        <option value="{{ $item->kodePenilaian }}">{{ $item->kodePenilaian }} - {{ $item->teknikPenilaian }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div class="form-group pt-4">
                                 <button type="submit" name="submit" value="submit" id="submit"
                                     class="btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i>
@@ -125,7 +159,9 @@
             </div>
 
             <br>
-
+            @php
+                print($detail_rps_list);
+            @endphp
             <table class="table table-bordered" style="text-align: center">
                 <thead style="background-color: lightgray">
                     <tr>
@@ -142,6 +178,9 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 20%">Deskripsi Pembelajaran
                         </th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Materi Pembelajaran
+                        </th>
+                        </th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Teknik Penilaian
                         </th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Edit</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Delete</th>
@@ -164,6 +203,13 @@
                             <td scope="row">{{ $minggu_rps->kriteriaMingguRPS }}</td>
                             <td scope="row">{{ $minggu_rps->deskripsiPembelajaran }}</td>
                             <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
+                            <td scope="row">
+                                {{ $a=$detail_rps_list->where('kodeRPS', $rps->kodeRPS)->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first()->kodePenilaian ?? '-' }}
+                                <br>
+                                {{ $teknik_penilaian_list->where('kodePenilaian', $a)->where('kodeRPS', $rps->kodeRPS)->first()->teknikPenilaian ?? '-' }}
+
+                                {{-- {{ $teknik_penilaian['teknikPenilaian'] ?? '-' }} --}}
+                            </td>
                             <td scope="row">
                                 <a class="btn btn-primary"
                                     href="{{ route('edit_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Edit</a>

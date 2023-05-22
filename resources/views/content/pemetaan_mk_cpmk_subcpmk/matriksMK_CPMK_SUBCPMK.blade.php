@@ -32,6 +32,9 @@
                     </tr>
             </thead>
             <tbody>
+                @php
+                    use Illuminate\Support\Str;
+                @endphp
                 @foreach ($mk_list as $mk)
                     {{-- Mencari relasi dari mk --}}
                     @php
@@ -84,7 +87,7 @@
                                 $g=$g+$a; //ini rowspan CPL
                             @endphp
                         @endforeach
-                        <td rowspan={{ $g }}>{{ $wakil->kodeCPL }}</td>    
+                        <td rowspan={{ $g }}><span itemid="{{ Str::limit($cpl_list->where('kodeCPL', '=', $wakil->kodeCPL)->first()->deskripsiCPL, $limit = 50, $end = '...') }}">{{ $wakil->kodeCPL }}</td>    
                         @foreach ($cpmk_list->whereIn('kodeCPMK', $list_kode_cpmk) as $cpmk)
                             {{-- List CPMK per MK dan CPL --}}
                             @php

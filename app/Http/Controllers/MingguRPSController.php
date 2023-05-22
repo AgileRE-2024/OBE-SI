@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Detail_RPS;
 use App\Models\Mata_Kuliah;
 use App\Models\SubCPMK;
+use App\Models\Teknik_Penilaian;
 use Illuminate\Support\Facades\Validator;
 
 class MingguRPSController extends Controller
@@ -25,8 +26,11 @@ class MingguRPSController extends Controller
         return view('content.minggu_rps.add_minggu_rps', [
             'title' => 'Minggu RPS', 
             'minggu_rps_list'=> $minggu_rps,
+            'subcpmk_list'=> SubCPMK::all(),
             'mk_list' =>$mk,
-            'rps_list' => $rps
+            'rps_list' => $rps,
+            'teknik_penilaian_list' => Teknik_Penilaian::all(),
+            'detail_rps_list'=> Detail_RPS::all(),
         ]);
     }
 
@@ -59,7 +63,9 @@ class MingguRPSController extends Controller
             'minggu_rps_list'=> $minggu_rps,
             'scpmk' => $subcpmk,
             'mk_list' =>$mk,
-            'rps_list' => $rps
+            'rps_list' => $rps,
+            'teknik_penilaian_list' => Teknik_Penilaian::all(),
+            'detail_rps_list'=> Detail_RPS::all(),
         ]);
     }
 
@@ -100,6 +106,16 @@ class MingguRPSController extends Controller
             'materiPembelajaran' => $request->materiPembelajaran
 
         ]);
+        // Membuat data pada tabel pivot C
+            $detail_rps = [];
+                $detail_rps[] = [
+                    'kodeRPS' => $request->kodeRPS,
+                    'kodeMingguRPS' => $request->kodeMingguRPS,
+                    'kodePenilaian' => $request->kodePenilaian,
+                    // atribut tambahan lainnya di tabel pivot C
+                ];
+
+            Detail_RPS::insert($detail_rps);
 
         return redirect()->route('add_minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
     }

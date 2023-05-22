@@ -103,10 +103,42 @@
             
                     <tr>
                         <td class="align-middle" colspan="2" style="width: 20%"><br><br>TTD<br>
-                        {{ $dosen_list->where('nip', $detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Dosen Pengembang RPS')->first()->nip)->first()->namaDosen ?? '-'}}
+                            @php
+                            $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
+                                ->where('peranDosen', 'Dosen Pengembang RPS')->first())->nip)->first();
+                            @endphp
+                    
+                            @if ($dosen)
+                                {{ $dosen->namaDosen }}
+                            @else
+                                @php
+                            $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
+                                ->where('peranDosen', 'Koordinator BK')->first())->nip)->first();
+                            @endphp
+                    
+                            @if ($dosen)
+                                {{ $dosen->namaDosen }}
+                            @else
+                                <div class="alert alert-warning">
+                                    Tambahkan Koordinator BK
+                                </div>
+                            @endif
+                            @endif
                         </td>
                         <td class="align-middle" colspan="1" style="width: 30%"><br><br>TTD<br>
-                        {{ $dosen_list->where('nip', $detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Koordinator BK')->first()->nip)->first()->namaDosen ?? '-'}}
+                            @php
+                            $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
+                                ->where('peranDosen', 'Koordinator BK')->first())->nip)->first();
+                            @endphp
+                    
+                            @if ($dosen)
+                                {{ $dosen->namaDosen }}
+                            @else
+                                <div class="alert alert-warning">
+                                    Tambahkan Koordinator BK
+                                </div>
+                            @endif
+                        
                         </td>
                         <td class="align-middle" colspan="3" style="width: 25%"><br><br>TTD<br>{{ $dosen_list->where('nip','=',$rps->kps)->first()->namaDosen ?? '-'}}</td>
                     </tr>
@@ -251,9 +283,17 @@
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Dosen Pengampu</th>
                     <td style="text-align: left;" rowspan="1" colspan="7"> 
-                    @foreach ($dosen_list->whereIn('nip', $list_dosen_pengampu) as $dosen)
-                        <span>{{ $dosen->namaDosen }}, </span>
-                    @endforeach
+                    @if ($dosen_list)
+                        <div class="alert alert-warning"><span>
+
+                            Tambahkan Dosen Pengampu
+                        </span>
+                        </div>
+                    @else
+                        @foreach ($dosen_list->whereIn('nip', $list_dosen_pengampu) as $dosen)
+                            <span>{{ $dosen->namaDosen }}, </span>
+                        @endforeach
+                    @endif
                     </td>
                 </tr>
                 <tr>
@@ -293,7 +333,12 @@
                     <td scope="row">{{ $minggu_rps->mingguKe }}</td>
                     <td scope="row">{{ $minggu_rps->kodeSubCPMK }}</td>
                     <td scope="row">{{ $minggu_rps->indikatorMingguRPS }}</td>
-                    <td scope="row">{{ $minggu_rps->kriteriaMingguRPS }} <br> [ {{ $list_kode_penilaian->get(($loop->iteration)-1) }} ] <br> {{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->teknikPenilaian }}</td>
+                    <td scope="row">{{ $minggu_rps->kriteriaMingguRPS }} <br> 
+                        @if ( $list_kode_penilaian->get(($loop->iteration)-1)!=null)
+                        [ {{ $list_kode_penilaian->get(($loop->iteration)-1) }} ] <br> {{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->teknikPenilaian }}</td>
+                        @else
+                        - </td>
+                        @endif
                     @if ($minggu_rps->bentukPembelajaran == '1')
                     <td scope="row">{{ 'Luring' }}</td>
                     <td></td>
@@ -302,7 +347,7 @@
                     <td scope="row">{{ 'Daring' }} </td>
                     @endif
                     <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
-                    <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian }}</td>
+                    <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian ?? '-' }}</td>
                 </tr>
                 @endforeach
               </tbody>
