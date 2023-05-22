@@ -12,6 +12,15 @@ abstract class DuskTestCase extends BaseTestCase
 {
     use CreatesApplication;
 
+    protected function setUp(): void
+    {
+        // parent::setUp();
+
+        // $this->artisan(
+        //     'migrate:fresh --seed'
+        // );
+    }
+
     /**
      * Prepare for Dusk test execution.
      *
@@ -19,7 +28,7 @@ abstract class DuskTestCase extends BaseTestCase
      */
     public static function prepare(): void
     {
-        if (! static::runningInSail()) {
+        if (!static::runningInSail()) {
             static::startChromeDriver();
         }
     }
@@ -35,13 +44,15 @@ abstract class DuskTestCase extends BaseTestCase
             return $items->merge([
                 '--disable-gpu',
                 '--headless=new',
+                '--disable-dev-shm-usage',
             ]);
         })->all());
 
         return RemoteWebDriver::create(
             $_ENV['DUSK_DRIVER_URL'] ?? 'http://localhost:9515',
             DesiredCapabilities::chrome()->setCapability(
-                ChromeOptions::CAPABILITY, $options
+                ChromeOptions::CAPABILITY,
+                $options
             )
         );
     }
