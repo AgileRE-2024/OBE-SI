@@ -3,7 +3,6 @@
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\CPLMKController;
 use App\Http\Controllers\PemetaanPlCplController;
-use App\Http\Controllers\TeknikPenilaianCPMKController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -94,14 +93,10 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
     });
 });
 
-Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
-    Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
-    Route::get('/cetak-pdf-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanPDF'])-> name('cetakpdftpcpmk');
-    Route::get('/cetak-excel-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanExcel'])-> name('cetakexceltpcpmk');   
-});
-// Route::get('/dashboard/penilaian', function() {
-//     return view('welcome');
-// })->name('penilaian');
+
+Route::get('/dashboard/penilaian', function() {
+    return view('welcome');
+})->name('penilaian');
 
 Route::get('/dashboard/rps', function () {
     return view('content.rps', ['title' => 'RPS']);
