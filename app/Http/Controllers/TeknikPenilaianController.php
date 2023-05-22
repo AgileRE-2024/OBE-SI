@@ -24,7 +24,7 @@ class TeknikPenilaianController extends Controller
     {
         date_default_timezone_set('Asia/Jakarta');
 
-        $view = view('content.teknik_penilaian.exportpdf', [
+        $view = view('content.teknik_penilaian.tableToekspor', [
             'title' => 'Tabel Teknik Penilaian',
             'tps' => Teknik_Penilaian::all(),
         ]);
@@ -53,7 +53,7 @@ class TeknikPenilaianController extends Controller
     public function editTeknikPenilaian($tp)
     {
         $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        return view('content.teknik_penilaian.teknik_penilaian', ['title' => 'Teknik Penilaian', 'tp' => $tp]);
+        return view('content.teknik_penilaian.edit_penilaian', ['title' => 'Teknik Penilaian', 'tp' => $tp]);
     }
 
     public function addTeknikPenilaian()
@@ -101,6 +101,7 @@ class TeknikPenilaianController extends Controller
             'kriteriaPenilaian' => 'required',
             'tahapPenilaian' => 'required',
             'instrumenPenilaian' => 'required',
+            'kodeRPS' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -112,24 +113,25 @@ class TeknikPenilaianController extends Controller
             return redirect()->back()->with('error', 'Teknik Penilaian sudah ada');
         }
 
-        $bk = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        $bk->update([
+        $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
+        $tp->update([
             'kodePenilaian' => $request->kodePenilaian,
             'teknikPenilaian' => $request->teknikPenilaian,
             'bobotPenilaian' => $request->bobotPenilaian,
             'kriteriaPenilaian' => $request->kriteriaPenilaian,
             'tahapPenilaian' => $request->tahapPenilaian,
             'instrumenPenilaian' => $request->instrumenPenilaian,
+            'kodeRPS' => $request->kodeRPS,
         ]);
-        $bk->save();
+        $tp->save();
 
-        return redirect()->route('kurikulum.data.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil ditambahkan');
+        return redirect()->route('kurikulum.data.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil diupdate');
     }
 
     public function deleteBahanKajian($tp)
     {
-        $bk = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        $bk->delete();
+        $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
+        $tp->delete();
         return redirect()->route('kurikulum.data.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil dihapus');
     }
 }

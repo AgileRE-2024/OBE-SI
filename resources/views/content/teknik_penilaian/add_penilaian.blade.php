@@ -47,9 +47,9 @@
                         @enderror
                         <select name="tahapPenilaian" id='tahapPenilaian' class="form-select">
                             <option value="" selected disabled>-- Pilih Tahap Penilaian --</option>
-                            <option value="Awal Semester">Awal Semester</option>
-                            <option value="Tengah Semester">Tengah Semester</option>
-                            <option value="Akhir Semester">Akhir Semester</option>
+                            <option value="1">Awal Semester</option>
+                            <option value="2">Tengah Semester</option>
+                            <option value="3">Akhir Semester</option>
                         </select>
                     </div>
 
