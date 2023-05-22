@@ -29,10 +29,10 @@
                     <th class="align-middle" scope="col" style="width: 10%">Kode CPL</th>
                     <th class="align-middle" scope="col" style="width: 10%">Kode MK</th>
                     <th class="align-middle" scope="col" style="width: 10%">Kode CPMK</th>
-                    @foreach ($list_teknikpenilaian as $tp)
+                    @foreach ($list_kolom as $tp)
                         <th scope="col">
-                            <span itemid="{{ $tp->kodePenilaian }}">
-                                {{ $tp->teknikPenilaian}}
+                            <span itemid="{{ $tp }}">
+                                {{ $tp}}
                             </span>
                             </th>
                     @endforeach
@@ -54,6 +54,22 @@
                         <th scope="row" class="text-start">{{ $cpmk->kodeCPL }}</th>
                         <th scope="row" class="text-start">{{ $mk->kodeMK }}</th>
                         <th scope="row" class="text-start">{{ $cpmk->kodeCPMK }}</th>
+                        @foreach ($list_kolom as $tp)
+                        @php
+                                $checked = false;
+                                foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
+                                    foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
+                                        foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
+                                            if($subCpmks->SubCPMK->CPMK) {
+                                                $checked = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            @endphp
+                                <td><input type="checkbox" name="" id="" @if($checked) checked @endif disabled></td>
+                            
+                        @endforeach
                     </tr>
                 @endforeach 
             </tbody>

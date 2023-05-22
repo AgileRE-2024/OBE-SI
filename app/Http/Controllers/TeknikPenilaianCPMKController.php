@@ -37,6 +37,7 @@ class TeknikPenilaianCPMKController extends Controller
             'detail_mk_cpmk' => Detail_MK_CPMK::all(),
             'list_rps' => RPS::all(),
             'list_teknikpenilaian' => Teknik_Penilaian::all(),
+            'list_kolom' => ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'Tes Tulis (UTS)', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'],
             'list_minggurps' => Minggu_RPS::all(),
             'detail_rps' => Detail_RPS::all(),
             'list_subcpmk' => SubCPMK::all(),
