@@ -27,20 +27,35 @@
                 <tr>
                     <th class="align-middle" scope="col" style="width: 5%">No</th>
                     <th class="align-middle" scope="col" style="width: 10%">Kode CPL</th>
-                    <th class="align-middle" scope="col" style="width: 50%">Kode MK</th>
-                    <th class="align-middle" scope="col" style="width: 50%">Kode CPMK</th>
+                    <th class="align-middle" scope="col" style="width: 10%">Kode MK</th>
+                    <th class="align-middle" scope="col" style="width: 10%">Kode CPMK</th>
                     @foreach ($list_teknikpenilaian as $tp)
                         <th scope="col">
                             <span itemid="{{ $tp->kodePenilaian }}">
                                 {{ $tp->teknikPenilaian}}
                             </span>
-                            {{-- <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                title="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span> --}}
                             </th>
                     @endforeach
                 </tr>
             </thead>
             <tbody>
+                @foreach ( $list_mk as $mk )
+                @php
+                    $counter = $detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->count();
+                    $cpmk = $detail_mk_cpmk->where('kodeMK', $mk->kodeMK);
+                @endphp
+                @endforeach
+                @foreach ($list_cpmk as $cpmk )
+                    @php
+                        $counter = $list_subcpmk->where('kodeCPMK', $cpmk->kodeCPMK)->count();
+                    @endphp
+                    <tr>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <th scope="row" class="text-start">{{ $cpmk->kodeCPL }}</th>
+                        <th scope="row" class="text-start">{{ $mk->kodeMK }}</th>
+                        <th scope="row" class="text-start">{{ $cpmk->kodeCPMK }}</th>
+                    </tr>
+                @endforeach 
             </tbody>
         </table>
 
