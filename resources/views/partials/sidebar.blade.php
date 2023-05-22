@@ -172,8 +172,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.index') }}" class="nav-link"
-                                        @if (str_contains(URL::current(), route('kurikulum.pemetaan.cpl_cpmk_mk.index'))) style="background-color: #989898; color: black;" @endif>
+                                    <a href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk') }}" class="nav-link"
+                                        @if (str_contains(URL::current(), route('kurikulum.pemetaan.cpl_cpmk_mk'))) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
                                             <i class="bi bi-caret-right-fill"></i>
                                             CPL-CPMK-MK
