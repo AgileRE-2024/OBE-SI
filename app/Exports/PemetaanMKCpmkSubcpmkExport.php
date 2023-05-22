@@ -2,7 +2,7 @@
 
 namespace App\Exports;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithColumnWidths;
@@ -13,76 +13,101 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class PemetaanMKCpmkSubcpmkExport implements FromCollection, WithHeadings, WithColumnWidths, WithStyles
 {
-    protected $profil_lulusan;
-    protected $cpl_prodi;
-    protected $pemetaan_cpl_pl;
+    protected $mk_list;
+    protected $cpmk_list;
+    protected $subcpmk_list;
+    protected $detailmkcpmk_list;
 
-    public function __construct($profil_lulusan, $cpl_prodi, $pemetaan_cpl_pl)
+    public function __construct($mk_list, $cpmk_list, $subcpmk_list, $detailmkcpmk_list)
     {
-        $this->profil_lulusan = $profil_lulusan;
-        $this->cpl_prodi = $cpl_prodi;
-        $this->pemetaan_cpl_pl = $pemetaan_cpl_pl;
+        $this->mk_list = $mk_list;
+        $this->cpmk_list = $cpmk_list;
+        $this->subcpmk_list = $subcpmk_list;
+        $this->detailmkcpmk_list = $detailmkcpmk_list;
     }
 
     /**
      * @return \Illuminate\Support\Collection
      */
     public function collection(): Collection
-    {
-        $data = [];
-        $no = 1;
-        foreach ($this->cpl_prodi as $cpl) {
-            $data_sementara = [];
-            array_push($data_sementara, $no);
-            array_push($data_sementara, $cpl->kodeCPL);
-            array_push($data_sementara, $cpl->deskripsiCPL);
-            foreach ($this->profil_lulusan as $pl) {
-                if ($this->pemetaan_cpl_pl->where('kodeCPL', $cpl->kodeCPL)->where('kodePL', $pl->kodePL)->count()) {
-                    array_push($data_sementara, '✓');
-                } else {
-                    array_push($data_sementara, '');
-                }
-            }
+{
+    $data = collect([]);
+    $prevMK = null;
+    $prevCPL = null;
+    $prevCPMK = null;
+    $subCPMKs = '';
 
-            array_push($data, $data_sementara);
-            $no++;
+    foreach ($this->mk_list as $mk) {
+        $list_relasi_mk = $this->detailmkcpmk_list->where('kodeMK', $mk->kodeMK);
+        $list_kode_cpmk = $list_relasi_mk->pluck('kodeCPMK')->toArray();
+
+        foreach ($list_kode_cpmk as $kode_cpmk) {
+            $cpmk_filter2 = $this->cpmk_list->where('kodeCPMK', $kode_cpmk);
+            $cpmk_codes = $cpmk_filter2->pluck('kodeCPMK')->toArray();
+            $cpmk_desc = $cpmk_filter2->pluck('deskripsiCPMK')->toArray();
+
+            $subCPMKs = $this->subcpmk_list
+                ->whereIn('kodeCPMK', $cpmk_codes)
+                ->pluck('kodeSubCPMK')
+                ->map(function ($item) {
+                    return $item . ' ' . $this->subcpmk_list->where('kodeSubCPMK', $item)->first()->deskripsiSubCPMK;
+                })
+                ->implode(', ');
+
+            $mkCode = $prevMK === $mk->kodeMK ? '' : $mk->kodeMK;
+            $cplCode = $prevMK === $mk->kodeMK && $prevCPMK === $cpmk_codes[0] ? '' : $cpmk_filter2->first()->kodeCPL;
+            $cpmkCode = $prevCPMK === $cpmk_codes[0] ? '' : implode(', ', $cpmk_codes);
+            $descCPMK = $prevCPMK === $cpmk_codes[0] ? '' : implode(', ', $cpmk_desc);
+
+            $data->push([
+                'mk' => $mkCode,
+                'cpl' => $cplCode,
+                'cpmk' => $cpmkCode,
+                'deskripsi_cpmk' => $descCPMK,
+                'sub_cpmk' => $subCPMKs,
+            ]);
+
+            $prevMK = $mk->kodeMK;
+            $prevCPL = $cpmk_filter2->first()->kodeCPL;
+            $prevCPMK = $cpmk_codes[0];
         }
-        return new Collection($data);
     }
+
+    return $data;
+}
+
+
 
     public function headings(): array
     {
         $headers = ['MK', 'CPL', 'CPMK', 'Deskripsi CPMK', 'Sub-CPMK'];
-        foreach ($this->profil_lulusan as $pl) {
-            array_push($headers, $pl->kodePL);
-        }
         return $headers;
     }
 
     public function columnWidths(): array
     {
-        $columnWidth = [];
-        $columnWidth['A'] = 5;
-        $columnWidth['B'] = 15;
-        $columnWidth['C'] = 60;
-        foreach (range('D', 'Z') as $column) {
-            $columnWidth[$column] = 20;
-        }
+        $columnWidth = [
+            'A' => 10,
+            'B' => 10,
+            'C' => 10,
+            'D' => 30,
+            'E' => 40,
+        ];
 
         return $columnWidth;
     }
 
     public function styles(Worksheet $sheet)
     {
-        // wrapping deskripsi cpl
         $highestRow = $sheet->getHighestRow();
-        $sheet->getStyle('C1:C' . $highestRow)
+
+        $sheet->getStyle('A1:E' . $highestRow)
             ->getAlignment()
+            ->setHorizontal(Alignment::HORIZONTAL_CENTER)
+            ->setVertical(Alignment::VERTICAL_CENTER)
             ->setWrapText(true);
 
-        // bold header
-        $highestColumn = $sheet->getHighestColumn(1);
-        $sheet->getStyle("A1:{$highestColumn}1")
+        $sheet->getStyle('A1:E1')
             ->applyFromArray([
                 'font' => [
                     'bold' => true,
@@ -93,36 +118,15 @@ class PemetaanMKCpmkSubcpmkExport implements FromCollection, WithHeadings, WithC
                     'vertical' => Alignment::VERTICAL_CENTER,
                     'wrapText' => true,
                 ],
-            ]);
-
-        // Center aligment checklist
-        $sheet->getStyle("D2:{$highestColumn}{$highestRow}")
-            ->applyFromArray([
-                'alignment' => [
-                    'horizontal' => Alignment::HORIZONTAL_CENTER,
-                    'vertical' => Alignment::VERTICAL_CENTER,
-                    'wrapText' => true,
-                ],
-            ]);
-        $sheet->getStyle("A2:A{$highestRow}")
-            ->applyFromArray([
-                'alignment' => [
-                    'horizontal' => Alignment::HORIZONTAL_CENTER,
-                    'vertical' => Alignment::VERTICAL_CENTER,
-                    'wrapText' => true,
-                ],
-            ]);
-        $sheet->getStyle("B2:B{$highestRow}")
-            ->applyFromArray([
-                'alignment' => [
-                    'horizontal' => Alignment::HORIZONTAL_CENTER,
-                    'vertical' => Alignment::VERTICAL_CENTER,
-                    'wrapText' => true,
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => Border::BORDER_THIN,
+                        'color' => ['argb' => '000000'],
+                    ],
                 ],
             ]);
 
-        // Memberikan border
-        $sheet->getStyle("A1:{$highestColumn}{$highestRow}")
+        $sheet->getStyle('A2:E' . $highestRow)
             ->applyFromArray([
                 'borders' => [
                     'allBorders' => [
@@ -132,7 +136,14 @@ class PemetaanMKCpmkSubcpmkExport implements FromCollection, WithHeadings, WithC
                 ],
             ]);
 
-        // Memindahkan cursor ke cell A1
-        $sheet->getStyle('A1');
+        $sheet->getStyle('A1:E1')
+            ->applyFromArray([
+                'borders' => [
+                    'bottom' => [
+                        'borderStyle' => Border::BORDER_THICK,
+                        'color' => ['argb' => '000000'],
+                    ],
+                ],
+            ]);
     }
 }

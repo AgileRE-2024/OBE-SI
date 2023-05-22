@@ -6,13 +6,13 @@ use App\Models\CPL_Prodi;
 use App\Models\CPMK;
 use App\Models\Detail_MK_CPMK;
 use App\Models\Mata_Kuliah;
-use App\Models\MataKuliah;
 use App\Models\SubCPMK;
 use App\Exports\PemetaanMkCpmkSubcpmkExport as ExportPemetaanMKCpmkSubcpmk;
 use Illuminate\Http\Request;
 use Dompdf\Dompdf;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\View;
 
 class PemetaanMkCpmkSubcpmk extends Controller
 {
@@ -28,18 +28,21 @@ class PemetaanMkCpmkSubcpmk extends Controller
             'cpl_list' => CPL_Prodi::all()->sortBy('kodeCPL'),
         ]);
     }
+    
     public function export($type)
     {
         date_default_timezone_set('Asia/Jakarta');
 
-        $view = view('content.pemetaan_mk_cpmk_subcpmk.tableToEkspor', [
+        $data = [
             'title' => 'Tabel Pemetaan MK-CPMK-SUBCPMK',
             'list' => Detail_MK_CPMK::all(),
             'cpmk_list' => CPMK::all(),
             'subcpmk_list' => SubCPMK::all(),
             'detailmkcpmk_list' => Detail_MK_CPMK::all(),
             'mk_list' => Mata_Kuliah::all(),
-        ]);
+        ];
+
+        $view = View::make('content.pemetaan_mk_cpmk_subcpmk.tableToEkspor', $data)->render();
 
         $date_time = date('Y_m_d_H_i_s');
 
@@ -59,7 +62,7 @@ class PemetaanMkCpmkSubcpmk extends Controller
         } else {
             $filename = "Tabel Pemetaan MK-CPMK-SUBCPMK_" . $date_time . '.xlsx';
             return Excel::download(new ExportPemetaanMKCpmkSubcpmk(
-                Detail_MK_CPMK::all(), Mata_Kuliah::all(), SubCPMK::all(),CPMK::all()), $filename);
+                Mata_Kuliah::all(), CPMK::all(), SubCPMK::all(), Detail_MK_CPMK::all()), $filename);
         }
     }
 }
