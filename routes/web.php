@@ -134,7 +134,8 @@ Route::get('/dashboard/penilaian', function() {
 })->name('penilaian');
 
 
-Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');       
+Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
+Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');       
 
 Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
 Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
