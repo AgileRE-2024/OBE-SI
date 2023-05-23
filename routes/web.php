@@ -80,10 +80,6 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/bk-mk/exportExcel', [BKMKController::class, 'exportExcel'])->name('exportExcel');
         Route::get('/bk-mk/exportPdf', [BKMKController::class, 'exportPdf'])->name('exportPdf');
 
-        Route::get('/cpl-bk', function () {
-            return view('welcome');
-        })->name('cpl_bk');
-
         Route::get('/cpl-bk', [CPLBKController::class,'index','title' => 'Pemetaan CPL BK'])->name('cpl_bk');
 
         Route::put('/cpl-bk/update', [CPLBKController::class, 'update'])->name('update_pemetaan_cpl_bk');
