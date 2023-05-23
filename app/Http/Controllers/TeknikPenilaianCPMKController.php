@@ -37,7 +37,7 @@ class TeknikPenilaianCPMKController extends Controller
             'detail_mk_cpmk' => Detail_MK_CPMK::all(),
             'list_rps' => RPS::all(),
             'list_teknikpenilaian' => Teknik_Penilaian::all(),
-            'list_kolom' => ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'Tes Tulis (UTS)', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'],
+            'list_kolom' => ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'UTS', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'],
             'list_minggurps' => Minggu_RPS::all(),
             'detail_rps' => Detail_RPS::all(),
             'list_subcpmk' => SubCPMK::all(),
@@ -51,7 +51,7 @@ class TeknikPenilaianCPMKController extends Controller
         $list_cpmk = CPMK::all();
         $list_rps = RPS::all();
         $list_teknikpenilaian = Teknik_Penilaian::all();
-        $list_kolom = ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'Tes Tulis (UTS)', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
+        $list_kolom = ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'UTS', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
         $list_minggurps = Minggu_RPS::all();
         $detail_rps = Detail_RPS::all();
         $list_subcpmk = SubCPMK::all();       
@@ -91,24 +91,24 @@ class TeknikPenilaianCPMKController extends Controller
     $list_cpmk = CPMK::all();
     $list_rps = RPS::all();
     $list_teknikpenilaian = Teknik_Penilaian::all();
-    $list_kolom = ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'Tes Tulis (UTS)', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
+    $list_kolom = ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'UTS', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
     $list_minggurps = Minggu_RPS::all();
     $detail_rps = Detail_RPS::all();
-    $list_subcpmk = SubCPMK::all();   
+    $list_subcpmk = SubCPMK::all();    
 
-    return Excel::download(new TeknikPenilaianCPMKExport($judul, $list_cpl, $list_mk, $detail_mk_cpmk, 
-    $list_cpmk, $list_rps, $list_teknikpenilaian, $list_kolom, $list_minggurps, $detail_rps, $list_subcpmk), 'Laporan Pemetaan CPLMK.xlsx');
+    return Excel::download(new TeknikPenilaianCPMKExport($judul, $list_cpl, $list_mk, $detail_mk_cpmk,  $list_cpmk, 
+    $list_rps, $list_teknikpenilaian, $list_kolom, $list_minggurps, $detail_rps, $list_subcpmk), 'Laporan Teknik Penilaian CPMK.xlsx');
     }
     
     public function viewExcel(){
-        $judul = "Pemetaan Capaian Pembelajaran Lulusan (CPL) & Mata Kuliah (MK)";
+        $judul = "Teknik Penilaian Capaian Pembelajaran Mata Kuliah (CPMK)";
         $list_cpl = CPL_Prodi::all();
         $list_mk = Mata_Kuliah::all();
         $detail_mk_cpmk = Detail_MK_CPMK::all();
         $list_cpmk = CPMK::all();
         $list_rps = RPS::all();
         $list_teknikpenilaian = Teknik_Penilaian::all();
-        $list_kolom = ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'Tes Tulis (UTS)', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
+        $list_kolom = ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'UTS', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
         $list_minggurps = Minggu_RPS::all();
         $detail_rps = Detail_RPS::all();
         $list_subcpmk = SubCPMK::all();  

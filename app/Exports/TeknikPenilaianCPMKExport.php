@@ -25,7 +25,7 @@ class TeknikPenilaianCPMKExport implements FromCollection, WithHeadings, WithCol
     protected $detail_rps;
     protected $list_subcpmk;
 
-    public function __construct($judul, $list_cpl, $list_mk, $detail_mk_cpmk, $list_cpmk,$list_rps,$list_teknikpenilaian,$list_kolom, $list_minggurps,$detail_rps,$list_subcpmk)
+    public function __construct($judul, $list_cpl, $list_mk, $detail_mk_cpmk, $list_cpmk, $list_rps, $list_teknikpenilaian, $list_kolom, $list_minggurps,$detail_rps,$list_subcpmk)
     {
         $this->judul = $judul;
         $this->list_cpl = $list_cpl;
