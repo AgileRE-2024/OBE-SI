@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Dompdf\Dompdf;
 use App\Models\Teknik_Penilaian;
+use App\Models\Detail_RPS;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -131,10 +132,15 @@ class TeknikPenilaianController extends Controller
         return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil diupdate');
     }
 
-    public function deleteTeknikPenilaian($tp)
+    public function deleteTeknikPenilaian(String $tp)
     {
-        $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        $tp->delete();
+
+        $d = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
+        $a= Detail_RPS::all()->where('kodePenilaian','=',  $d->kodePenilaian)->where('kodeRPS', '=',$d->kodeRPS)->count();
+        if ($a>0) {
+            return redirect()->back()->with('warning', 'Hapus relasi pada rencana pembelajaran');
+        }
+        $d->delete();
         return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil dihapus');
     }
 }
