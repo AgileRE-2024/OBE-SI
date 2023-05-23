@@ -2,6 +2,7 @@
 
 namespace Tests\Browser;
 
+
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
@@ -17,13 +18,14 @@ class TeknikPenilaianCPMKTest extends DuskTestCase
             $browser->visit('http://127.0.0.1:8000/dashboard/penilaian/penilaiancpmk')
                     ->pause(1000);
             
+            $browser->click('#exportPDFButton')
+                    ->pause(5000)
+                    ->assertPathIs('/dashboard/penilaian/penilaiancpmk');
+
             $browser->click('#exportExcelButton')
                     ->pause(5000)
                     ->assertPathIs('/dashboard/penilaian/cetak-excel-tpcpmk');
 
-            $browser->click('#exportPDFButton')
-                    ->pause(5000)
-                    ->assertPathIs('/dashboard/penilaian/cetak-pdf-tpcpmk');
 
                     foreach (Mata_Kuliah::all() as $mk) {
                         foreach (CPL_Prodi::all() as $cpl) {
