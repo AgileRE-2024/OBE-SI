@@ -21,6 +21,7 @@ use App\Models\Mata_Kuliah;
 use Illuminate\Support\Facades\Route;
 use App\Models\Detail_Nilai_Mahasiswa;
 use App\Http\Controllers\BKMKController;
+use App\Http\Controllers\MingguRPSController;
 use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\PemetaanPlCplController;
@@ -186,14 +187,16 @@ Route::get('/dashboard/penilaian', function () {
     return view('welcome');
 })->name('penilaian');
 
-Route::get('/dashboard/rps', function () {
-    return view('content.rps', [
-        'title' => 'RPS',
-        'minggu_rps_list' => Minggu_RPS::all(),
-        'rps_list' => RPS::all(),
-        'detail_rps_list' => Detail_RPS::all()
-    ]);
-})->name('rps');
+
+Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
+Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');       
+
+Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
+Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
+Route::post('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
+Route::get('/dashboard/rps/minggu_rps/edit_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
+Route::put('/dashboard/rps/minggu_rps/edit_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
+Route::delete('/dashboard/rps/minggu_rps/delete_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
 
 Route::get('/generate-pdf', 'PDFController@generatePDF');
 Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {

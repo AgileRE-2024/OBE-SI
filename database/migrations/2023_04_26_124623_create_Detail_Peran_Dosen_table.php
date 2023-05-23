@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('Detail_Peran_Dosen', function (Blueprint $table) {
             $table->char('nip',18);
             $table->char('kodeRPS',6);
-            $table->String('peranDosen',50);
+            $table->String('peranDosen',100);
             $table->timestamps();
-            $table->foreign('nip')->references('nip')->on('Dosen')->onDelete('restrict');
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
             $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict');
         });
     }
