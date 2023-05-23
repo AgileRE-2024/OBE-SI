@@ -2,8 +2,13 @@
 
 namespace Tests\Browser;
 
-
+use App\Models\CPL_Prodi;
+use App\Models\CPMK;
+use App\Models\Detail_MK_CPMK;
+use App\Models\Mata_Kuliah;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
