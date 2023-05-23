@@ -81,9 +81,11 @@
                             @endif
                         </td>
                         <td>
+                            @if(auth()->user()->role==1)
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit{{ $p->kodeMK }}">
                                 <i class="fa-solid fa-pen">Edit</i>
                             </button>
+                            @endif
                         </td>
                     </tr>
                     <!-- Edit Modal -->

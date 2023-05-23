@@ -9,6 +9,7 @@
                     Program Studi<b style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
+        @if(auth()->user()->role==1)
         <div class="d-flex justify-content-start pt-2">
             <div>
                 <a class="btn btn-success" href="{{ route('kurikulum.data.add_bahan_kajian') }}"><i
@@ -16,6 +17,7 @@
                     </i>Tambah</a>
             </div>
         </div>
+        @endif
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
                 <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_bahan_kajian', ['pdf']) }}"><i
@@ -63,12 +65,16 @@
                                 {{ $bk->referensiBK }}
                             </td>
                             <td scope="row">
+                                @if(auth()->user()->role==1)
                                 <a class="btn btn-primary"
                                     href="{{ route('kurikulum.data.edit_bahan_kajian', $bk->kodeBK) }}">Edit</a>
+                                @endif
                             </td>
                             <td scope="row">
+                                @if(auth()->user()->role==1)
                                 <a class="btn btn-danger"
                                     href="{{ route('kurikulum.data.delete_bahan_kajian', $bk->kodeBK) }}">Delete</a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

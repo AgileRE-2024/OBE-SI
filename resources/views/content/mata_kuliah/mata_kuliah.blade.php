@@ -10,6 +10,7 @@
             </div>
         </div>
         <div>
+            @if(auth()->user()->role==1)
             <div class="d-flex justify-content-start pt-2">
                 <div>
                     <a class="btn btn-success" href="{{ route('kurikulum.data.add_mata_kuliah') }}"><i
@@ -17,6 +18,7 @@
                         </i>Tambah</a>
                 </div>
             </div>
+            @endif
             <div class="d-flex justify-content-end pt-2">
                 <div class="pr-3">
                     <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_mata_kuliah', ['pdf']) }}"><i
@@ -95,12 +97,16 @@
                                 {{ $mk->deskripsiMK }}
                             </td>
                             <td scope="row">
+                                @if(auth()->user()->role==1)
                                 <a class="btn btn-primary"
                                     href="{{ route('kurikulum.data.edit_mata_kuliah', $mk->kodeMK) }}">Edit</a>
+                                @endif
                             </td>
                             <td scope="row">
+                                @if(auth()->user()->role==1)
                                 <a class="btn btn-danger"
                                     href="{{ route('kurikulum.data.delete_mata_kuliah', $mk->kodeMK) }}">Delete</a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach
