@@ -55,25 +55,30 @@
 @if(isset($message) && $message == "Data ditemukan")
     <div class="content px-4">
         <div class="content px-4">
-            <div class="d-flex justify-content-end pt-2">
-                @php
-                    $currentYear = date('Y'); // Mengambil tahun saat ini
-                @endphp
-                @if ($tahunAjaran == $currentYear)
-                <div class="pr-3">
-                    <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['pdf']) }}"><i
-                            class="bi bi-file-earmark-pdf-fill"> </i>Edit RPS</a>
-                </div>
-                @endif
-                <div class="pr-3">
-                    <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['pdf']) }}"><i
-                            class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
-                </div>
+            <div style="display: flex; justify-content: space-between;">
                 <div>
-                    <a id="excel" class="btn btn-success" href="/dashboard/rps/exportExcel"><i
-                            class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+                    @php
+                        $currentYear = date('Y'); // Mengambil tahun saat ini
+                    @endphp
+                    @if ($tahunAjaran == $currentYear)
+                        <div class="pl-2">
+                            <a id="edit" class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian') }}" style="float: left;"><i
+                                    class="bi bi-pencil-square"></i> Edit RPS</a>
+                        </div>
+                    @endif
+                </div>
+                <div style="display: flex;">
+                    <div style="margin-right: 10px;">
+                        <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['pdf']) }}"><i
+                                class="bi bi-file-earmark-pdf-fill"></i> Export PDF</a>
+                    </div>
+                    {{-- <div>
+                        <a id="excel" class="btn btn-success" href="/dashboard/rps/exportExcel"><i
+                                class="bi bi-file-earmark-excel"></i> Export Excel</a>
+                    </div> --}}
                 </div>
             </div>
+            
             <br>
             <table class="table table-bordered" style="text-align: center">
                 @php

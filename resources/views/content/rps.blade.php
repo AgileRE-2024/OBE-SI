@@ -2,8 +2,9 @@
 
 @section('content')
 
-<div class="content px-4">
     <div class="content px-4">
+        @include('content.teknik_penilaian.button')
+        <br><br>
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>Rencana Pembelajaran Semester (RPS)</h3>
@@ -15,10 +16,6 @@
             <div class="pr-3">
                 <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['pdf']) }}"><i
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
-            </div>
-            <div>
-                <a id="excel" class="btn btn-success" href="/dashboard/rps/exportExcel"><i
-                        class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
         <br>
@@ -355,7 +352,7 @@
         
 
     </div>
-</div>        
+   
 
 
 
