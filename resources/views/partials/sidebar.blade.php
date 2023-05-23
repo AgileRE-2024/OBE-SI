@@ -194,6 +194,27 @@
                     </ul>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('penilaian.tp_cpmk') }}" class="nav-link" 
+                    @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
+                        <p>
+                            <i class="bi bi-book"></i>
+                            Penilaian
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview pl-3">
+                        <li class="nav-item">
+                            <a href="{{ route('penilaian.tp_cpmk') }}" class="nav-link"
+                                @if (URL::current() === route('penilaian.tp_cpmk')) style="background-color: #989898; color: black;" @endif>
+                                <p style="font-size: 14px">
+                                    <i class="bi bi-caret-right-fill"></i>
+                                    Teknik Penilaian CPMK
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{-- <li class="nav-item">
                     <a href="#" class="nav-link"
                         @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
@@ -201,7 +222,7 @@
                             Penilaian
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="{{ route('rps') }}" class="nav-link"
                         @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>

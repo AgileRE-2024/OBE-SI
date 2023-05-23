@@ -28,6 +28,7 @@ use App\Http\Controllers\SusunanMKController;
 use App\Http\Controllers\OrganisasiMKController;
 use App\Http\Controllers\CPLMKController;
 use App\Http\Controllers\CPMKController;
+use App\Http\Controllers\TeknikPenilaianCPMKController;
 use App\Http\Controllers\PDFController;
 use Barryvdh\DomPDF\PDF;
 
@@ -171,9 +172,15 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/mata_kuliah/export/{type}', [MataKuliahController::class, 'export'])->name('export_mata_kuliah');
     });
 });
-Route::get('/dashboard/penilaian', function () {
-    return view('welcome');
-})->name('penilaian');
+
+Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
+    Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
+    Route::get('/cetak-pdf-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanPDF'])-> name('cetakpdftpcpmk');
+    Route::get('/cetak-excel-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanExcel'])-> name('cetakexceltpcpmk');   
+});
+// Route::get('/dashboard/penilaian', function () {
+//     return view('welcome');
+// })->name('penilaian');
 
 Route::get('/dashboard/rps', function () {
     return view('content.rps', [
