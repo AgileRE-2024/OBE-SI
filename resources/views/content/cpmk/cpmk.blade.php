@@ -18,14 +18,14 @@
                 </div>
             </div>
             <div class="d-flex justify-content-end pt-2">
-                {{-- <div class="pr-3">
+                <div class="pr-3">
                     <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_cpmk', ['pdf']) }}"><i
                             class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
                 </div>
                 <div>
                     <a class="btn btn-success" href="{{ route('kurikulum.data.export_cpmk', ['excel']) }}"><i
                             class="bi bi-file-earmark-excel"> </i>Export Excel</a>
-                </div> --}}
+                </div>
             </div>
         </div>
 
@@ -60,10 +60,10 @@
                                 <a class="btn btn-primary"
                                     href="{{ route('kurikulum.data.edit_cpmk', $list_cpmk->kodeCPMK) }}">Edit</a>
                             </td>
-                            {{-- <td scope="row">
+                            <td scope="row">
                                 <a class="btn btn-danger"
                                     href="{{ route('kurikulum.data.delete_cpmk', $list_cpmk->kodeCPMK) }}">Delete</a>
-                            </td> --}}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

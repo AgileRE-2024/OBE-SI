@@ -167,6 +167,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::post('/addCPMK', [CRUDCPMKController::class, 'store'])->name('store_cpmk');
         Route::get('/editCPMK/{cpmk}', [CRUDCPMKController::class, 'edit'])->name('edit_cpmk');
         Route::put('/editCPMK/{cpmk}', [CRUDCPMKController::class, 'update'])->name('update_cpmk');
+        Route::get('/deleteCPMK/{cpmk}', [CRUDCPMKController::class, 'destroy'])->name('delete_cpmk');
+        Route::get('/cpmk/export/{type}', [CRUDCPMKController::class, 'export'])->name('export_cpmk');
     });
 });
 Route::get('/dashboard/penilaian', function () {
