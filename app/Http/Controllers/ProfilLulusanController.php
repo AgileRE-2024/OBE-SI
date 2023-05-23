@@ -57,7 +57,7 @@ class ProfilLulusanController extends Controller
     public function storeProfilLulusan(Request $request)
     {
         $request->validate([
-            'kodePL' => 'required|unique:profil_lulusan,kodePL',
+            'kodePL' => 'required|unique:profil_lulusan,kodePL|regex:/^PL\d{2}$/',
             'deskripsiPL' => 'required',
         ]);
 
@@ -80,12 +80,12 @@ class ProfilLulusanController extends Controller
     {
         if ($request->kodePL == $pl) {
             $validator = Validator::make($request->all(), [
-                'kodePL' => 'required',
+                'kodePL' => 'required|regex:/^PL\d{2}$/',
                 'deskripsiPL' => 'required',
             ]);
         } else {
             $validator = Validator::make($request->all(), [
-                'kodePL' => 'required|unique:profil_lulusan,kodePL',
+                'kodePL' => 'required|unique:profil_lulusan,kodePL|regex:/^PL\d{2}$/',
                 'deskripsiPL' => 'required',
             ]);
         }

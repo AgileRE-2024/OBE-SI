@@ -27,14 +27,14 @@
         Tabel Mata Kuliah
     </div>
 
-    <div>
-        <table style="text-align: center; border: 1px inherit black solid">
+    <div class="table table-responsive w-100 d-block d-md-table">
+        <table class="table" style="margin: auto; border: 1px inherit black solid; text-align: center">
             <thead style="background-color: black; color: white">
                 <tr>
                     <th scope="col" style="width: 5%">No</th>
                     <th scope="col" style="width: 10%">Kode Mata Kuliah</th>
-                    <th scope="col" style="width: 10%">Nama Mata Kuliah</th>
-                    <th scope="col" colspan="2" style="width: 20%">
+                    <th scope="col" style="width: 15%">Nama Mata Kuliah</th>
+                    <th scope="col" colspan="2" style="width: 30%">
                         Prasyarat
                     </th>
                     <th scope="col" style="width: 10%">Jenis Mata Kuliah</th>
@@ -43,7 +43,7 @@
                     <th scope="col" style="width: 10%">SKS Mata Kuliah</th>
                     <th scope="col" style="width: 10%">Semester Mata Kuliah
                     </th>
-                    <th scope="col" style="width: 50%">Deskripsi Mata Kuliah
+                    <th scope="col" style="width: 40%">Deskripsi Mata Kuliah
                     </th>
                 </tr>
             </thead>
@@ -59,14 +59,14 @@
                         <td scope="row">
                             {{ $mk->namaMK }}
                         </td>
-                        <td scope="row" style="width:10%">
+                        <td scope="row" style="width:15%">
                             @if ($mk->mat_kodeMK)
                                 {{ $mk->mat_kodeMK }}
                             @else
                                 {{ '-' }}
                             @endif
                         </td>
-                        <td scope="row" style="width:10%">
+                        <td scope="row" style="width:15%">
                             {{ $mk->prasyaratTambahan }}
                         </td>
                         <td scope="row">

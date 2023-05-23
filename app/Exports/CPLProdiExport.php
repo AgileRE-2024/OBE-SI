@@ -73,7 +73,8 @@ class CPLProdiExport implements FromCollection, WithHeadings, WithStyles
                     ],
                 ],
             ]);
-
+        $sheet->getColumnDimension('B')->setWidth(50);
+        $sheet->getColumnDimension('C')->setWidth(45);
         // Memindahkan cursor ke cell A1
         $sheet->getStyle('A1');
     }

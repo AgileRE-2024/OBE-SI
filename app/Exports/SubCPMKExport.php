@@ -73,7 +73,9 @@ class SubCPMKExport implements FromCollection, WithHeadings, WithStyles
                     ],
                 ],
             ]);
-
+        $sheet->getColumnDimension('A')->setWidth(15);
+        $sheet->getColumnDimension('B')->setWidth(15);
+        $sheet->getColumnDimension('C')->setWidth(50);
         // Memindahkan cursor ke cell A1
         $sheet->getStyle('A1');
     }

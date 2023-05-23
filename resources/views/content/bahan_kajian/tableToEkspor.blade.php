@@ -27,12 +27,12 @@
         Tabel Bahan Kajian
     </div>
 
-    <div style="text-align: center;">
-        <table style="margin: auto; border: 1px inherit black solid">
+    <div class="table table-responsive w-100 d-block d-md-table">
+        <table class="table" style="margin: auto; border: 1px inherit black solid; text-align: center">
             <thead style="background-color: black; color: white">
                 <tr>
                     <th scope="col" style="width: 5%">No</th>
-                    <th scope="col" style="width: 10%">Kode Bahan Kajian</th>
+                    <th scope="col" style="width: 15%">Kode Bahan Kajian</th>
                     <th scope="col" style="width: 50%">Nama Bahan Kajian</th>
                     <th scope="col" style="width: 10%">Kategori Bahan Kajian</th>
                     <th scope="col" style="width: 50%">Referensi Bahan Kajian</th>
