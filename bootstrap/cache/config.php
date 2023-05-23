@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:H3z7YHERI1cniudK+XpjXaBr0tC+OGEBJRph8DgzphI=',
+    'key' => 'base64:/ogBpNBubYERHsUtlqdG7pU0oRVOrwIi/6SCYSJcaEI=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -278,7 +278,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'obe',
+        'database' => 'laravel',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -288,7 +288,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obe',
+        'database' => 'laravel',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -308,7 +308,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obe',
+        'database' => 'laravel',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -323,7 +323,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obe',
+        'database' => 'laravel',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -368,13 +368,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\app',
+        'root' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\app/public',
+        'root' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -394,7 +394,7 @@
     ),
     'links' => 
     array (
-      'C:\\semester6\\PPL_PRAK\\OBE-SI\\public\\storage' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\app/public',
+      'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\public\\storage' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -433,13 +433,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -491,7 +491,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -503,11 +503,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'sandbox.smtp.mailtrap.io',
-        'port' => '2525',
-        'encryption' => 'tls',
-        'username' => 'e561d316230def',
-        'password' => '460decf1bc3871',
+        'host' => 'mailpit',
+        'port' => '1025',
+        'encryption' => NULL,
+        'username' => NULL,
+        'password' => NULL,
         'timeout' => NULL,
         'local_domain' => NULL,
       ),
@@ -549,15 +549,15 @@
     ),
     'from' => 
     array (
-      'address' => 'kiakgokil123@gmail.com',
-      'name' => 'mierjaX',
+      'address' => 'hello@example.com',
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -663,7 +663,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -683,9 +683,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\resources\\views',
+      0 => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\resources\\views',
     ),
-    'compiled' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework\\views',
   ),
   'dompdf' => 
   array (
@@ -694,10 +694,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\kiakg\\AppData\\Local\\Temp',
-      'chroot' => 'C:\\semester6\\PPL_PRAK\\OBE-SI',
+      'font_dir' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\fonts',
+      'font_cache' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\Lenovo\\AppData\\Local\\Temp',
+      'chroot' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -840,7 +840,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'C:\\semester6\\PPL_PRAK\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -919,7 +919,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'C:\\semester6\\PPL_PRAK\\OBE-SI',
+    'remote_sites_path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
