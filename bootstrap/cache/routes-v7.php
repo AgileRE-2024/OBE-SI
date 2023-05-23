@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::apM4VkbzmoRibnse',
+            '_route' => 'generated::rOXYXfk1QQOELqYE',
           ),
           1 => NULL,
           2 => 
@@ -142,7 +142,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::TxH1LBQhjK2j6EQY',
+            '_route' => 'generated::EzOVO0I3edovRcVa',
           ),
           1 => NULL,
           2 => 
@@ -255,6 +255,25 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/kurikulum/pemetaan/cpl-bk/update' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.update_pemetaan_cpl_bk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/dashboard/kurikulum/pemetaan/cpl-bk-mk' => 
       array (
         0 => 
@@ -295,6 +314,65 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/update' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.update_susunan_mk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/pdf' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.susunan_mk.export.pdf',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/excel' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.susunan_mk.export.excel',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah' => 
       array (
         0 => 
@@ -302,6 +380,46 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'kurikulum.pemetaan.organisasi_mata_kuliah',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/pdf' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.organisasi_mk.export.pdf',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/excel' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.organisasi_mk.export.excel',
           ),
           1 => NULL,
           2 => 
@@ -355,6 +473,46 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/kurikulum/pemetaan/cetak-pdf-cplmk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.cetakpdfcplmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/cetak-excel-cplmk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.cetakexcelcplmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/dashboard/kurikulum/pemetaan/cpl-pl' => 
       array (
         0 => 
@@ -387,6 +545,46 @@ app('router')->setCompiledRoutes(
           2 => 
           array (
             'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/cetak-pdf-cplbk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.cetakpdfcplbk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/cetak-excel-cplbk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.cetakexcelcplbk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -773,6 +971,62 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/kurikulum/data/sub_cpmk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.sub_cpmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/data/addSubCPMK' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.add_sub_cpmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.store_sub_cpmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/dashboard/penilaian' => 
       array (
         0 => 
@@ -819,7 +1073,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::MnqIBu3DCnlomGka',
+            '_route' => 'generated::JWiDVqsmZPBkxcmF',
           ),
           1 => NULL,
           2 => 
@@ -836,7 +1090,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:165)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:202)|edit_cpmk/([^/]++)(?|(*:231))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:282))|CPL(?|Dikti/([^/]++)(?|(*:314))|Prodi/([^/]++)(?|(*:340)))|BahanKajian/([^/]++)(?|(*:373))|MataKuliah/([^/]++)(?|(*:404)))|delete(?|ProfilLulusan/([^/]++)(*:445)|CPL(?|Dikti/([^/]++)(*:473)|Prodi/([^/]++)(*:495))|BahanKajian/([^/]++)(*:524)|MataKuliah/([^/]++)(*:551))|profilLulusan/export/([^/]++)(*:589)|cpl_(?|dikti/export/([^/]++)(*:625)|prodi/export/([^/]++)(*:654))|bahan_kajian/export/([^/]++)(*:691)|mata_kuliah/export/([^/]++)(*:726))))/?$}sDu',
+      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:165)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:202)|edit_cpmk/([^/]++)(?|(*:231))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:282))|CPL(?|Dikti/([^/]++)(?|(*:314))|Prodi/([^/]++)(?|(*:340)))|BahanKajian/([^/]++)(?|(*:373))|MataKuliah/([^/]++)(?|(*:404))|SubCPMK/([^/]++)(?|(*:432)))|delete(?|ProfilLulusan/([^/]++)(*:473)|CPL(?|Dikti/([^/]++)(*:501)|Prodi/([^/]++)(*:523))|BahanKajian/([^/]++)(*:552)|MataKuliah/([^/]++)(*:579)|SubCPMK/([^/]++)(*:603))|profilLulusan/export/([^/]++)(*:641)|cpl_(?|dikti/export/([^/]++)(*:677)|prodi/export/([^/]++)(*:706))|bahan_kajian/export/([^/]++)(*:743)|mata_kuliah/export/([^/]++)(*:778)|sub_cpmk/export/([^/]++)(*:810))))/?$}sDu',
     ),
     3 => 
     array (
@@ -1211,7 +1465,49 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      445 => 
+      432 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.edit_sub_cpmk',
+          ),
+          1 => 
+          array (
+            0 => 'scpmk',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.update_sub_cpmk',
+          ),
+          1 => 
+          array (
+            0 => 'scpmk',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      473 => 
       array (
         0 => 
         array (
@@ -1234,7 +1530,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      473 => 
+      501 => 
       array (
         0 => 
         array (
@@ -1257,7 +1553,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      495 => 
+      523 => 
       array (
         0 => 
         array (
@@ -1280,7 +1576,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      524 => 
+      552 => 
       array (
         0 => 
         array (
@@ -1303,7 +1599,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      551 => 
+      579 => 
       array (
         0 => 
         array (
@@ -1326,7 +1622,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      589 => 
+      603 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.delete_sub_cpmk',
+          ),
+          1 => 
+          array (
+            0 => 'scpmk',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      641 => 
       array (
         0 => 
         array (
@@ -1349,7 +1668,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      625 => 
+      677 => 
       array (
         0 => 
         array (
@@ -1372,7 +1691,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      654 => 
+      706 => 
       array (
         0 => 
         array (
@@ -1395,7 +1714,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      691 => 
+      743 => 
       array (
         0 => 
         array (
@@ -1418,13 +1737,36 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      726 => 
+      778 => 
       array (
         0 => 
         array (
           0 => 
           array (
             '_route' => 'kurikulum.data.export_mata_kuliah',
+          ),
+          1 => 
+          array (
+            0 => 'type',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      810 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.export_sub_cpmk',
           ),
           1 => 
           array (
@@ -1704,7 +2046,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::apM4VkbzmoRibnse' => 
+    'generated::rOXYXfk1QQOELqYE' => 
     array (
       'methods' => 
       array (
@@ -1727,7 +2069,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::apM4VkbzmoRibnse',
+        'as' => 'generated::rOXYXfk1QQOELqYE',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1781,7 +2123,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::TxH1LBQhjK2j6EQY' => 
+    'generated::EzOVO0I3edovRcVa' => 
     array (
       'methods' => 
       array (
@@ -1819,7 +2161,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::TxH1LBQhjK2j6EQY',
+        'as' => 'generated::EzOVO0I3edovRcVa',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1996,10 +2338,45 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:280:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:62:"function () {
-            return \\view(\'welcome\');
-        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005470000000000000000";}";s:4:"hash";s:44:"I/L97qoro2EV62L/1lGYe+COL1mS6hHgExA5S8zcC4Y=";}}',
+        'uses' => 'App\\Http\\Controllers\\CPLBKController@index',
+        'controller' => 'App\\Http\\Controllers\\CPLBKController@index',
         'as' => 'kurikulum.pemetaan.cpl_bk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.update_pemetaan_cpl_bk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk/update',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CPLBKController@update',
+        'controller' => 'App\\Http\\Controllers\\CPLBKController@update',
+        'as' => 'kurikulum.pemetaan.update_pemetaan_cpl_bk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
         'where' => 
@@ -2071,10 +2448,119 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:280:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:62:"function () {
-            return \\view(\'welcome\');
-        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000054a0000000000000000";}";s:4:"hash";s:44:"Wy0c9q9LfBrCNvzm/wt0H/irw8NEW6F0bD5mmKS0y8Y=";}}',
+        'uses' => 'App\\Http\\Controllers\\SusunanMKController@index',
+        'controller' => 'App\\Http\\Controllers\\SusunanMKController@index',
         'as' => 'kurikulum.pemetaan.susunan_mata_kuliah',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.update_susunan_mk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/susunan-mata-kuliah/update',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SusunanMKController@update',
+        'controller' => 'App\\Http\\Controllers\\SusunanMKController@update',
+        'as' => 'kurikulum.pemetaan.update_susunan_mk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.susunan_mk.export.pdf' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/pdf',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SusunanMKController@exportToPDF',
+        'controller' => 'App\\Http\\Controllers\\SusunanMKController@exportToPDF',
+        'as' => 'kurikulum.pemetaan.susunan_mk.export.pdf',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.susunan_mk.export.excel' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/excel',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SusunanMKController@exportToExcel',
+        'controller' => 'App\\Http\\Controllers\\SusunanMKController@exportToExcel',
+        'as' => 'kurikulum.pemetaan.susunan_mk.export.excel',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
         'where' => 
@@ -2109,10 +2595,83 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:280:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:62:"function () {
-            return \\view(\'welcome\');
-        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000054c0000000000000000";}";s:4:"hash";s:44:"irhDjbqGVJ0p6Dnwdu3Wyx1XPzeIQYQ+KqRACmHMSVk=";}}',
+        'uses' => 'App\\Http\\Controllers\\OrganisasiMKController@index',
+        'controller' => 'App\\Http\\Controllers\\OrganisasiMKController@index',
         'as' => 'kurikulum.pemetaan.organisasi_mata_kuliah',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.organisasi_mk.export.pdf' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/pdf',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToPDF',
+        'controller' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToPDF',
+        'as' => 'kurikulum.pemetaan.organisasi_mk.export.pdf',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.organisasi_mk.export.excel' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/excel',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToExcel',
+        'controller' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToExcel',
+        'as' => 'kurikulum.pemetaan.organisasi_mk.export.excel',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
         'where' => 
@@ -2149,7 +2708,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:280:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:62:"function () {
             return \\view(\'welcome\');
-        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000054e0000000000000000";}";s:4:"hash";s:44:"4AQpGL6ywUGjYFDwZ5xvRdP0VbmQqsP5YnX/EyL67hw=";}}',
+        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005510000000000000000";}";s:4:"hash";s:44:"eKNXNG6ANWZMGIv1rR2t4oHQVUihx1wDt8Mff4WHUkI=";}}',
         'as' => 'kurikulum.pemetaan.cpl_sndikti_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
@@ -2188,6 +2747,80 @@ app('router')->setCompiledRoutes(
         'uses' => 'App\\Http\\Controllers\\CPLMKController@index',
         'controller' => 'App\\Http\\Controllers\\CPLMKController@index',
         'as' => 'kurikulum.pemetaan.cpl_mk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.cetakpdfcplmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cetak-pdf-cplmk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanPDF',
+        'controller' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanPDF',
+        'as' => 'kurikulum.pemetaan.cetakpdfcplmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.cetakexcelcplmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cetak-excel-cplmk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanExcel',
+        'controller' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanExcel',
+        'as' => 'kurikulum.pemetaan.cetakexcelcplmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
         'where' => 
@@ -2298,6 +2931,80 @@ app('router')->setCompiledRoutes(
         'uses' => 'App\\Http\\Controllers\\PemetaanPlCplController@export',
         'controller' => 'App\\Http\\Controllers\\PemetaanPlCplController@export',
         'as' => 'kurikulum.pemetaan.export_cpl_pl',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.cetakpdfcplbk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cetak-pdf-cplbk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanPDF',
+        'controller' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanPDF',
+        'as' => 'kurikulum.pemetaan.cetakpdfcplbk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.cetakexcelcplbk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cetak-excel-cplbk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanExcel',
+        'controller' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanExcel',
+        'as' => 'kurikulum.pemetaan.cetakexcelcplbk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
         'where' => 
@@ -3897,6 +4604,263 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'kurikulum.data.sub_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/sub_cpmk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SubCPMKController@index',
+        'controller' => 'App\\Http\\Controllers\\SubCPMKController@index',
+        'as' => 'kurikulum.data.sub_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.add_sub_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/addSubCPMK',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SubCPMKController@addSubCPMK',
+        'controller' => 'App\\Http\\Controllers\\SubCPMKController@addSubCPMK',
+        'as' => 'kurikulum.data.add_sub_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.store_sub_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'dashboard/kurikulum/data/addSubCPMK',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SubCPMKController@storeSubCPMK',
+        'controller' => 'App\\Http\\Controllers\\SubCPMKController@storeSubCPMK',
+        'as' => 'kurikulum.data.store_sub_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.edit_sub_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/editSubCPMK/{scpmk}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SubCPMKController@editSubCPMK',
+        'controller' => 'App\\Http\\Controllers\\SubCPMKController@editSubCPMK',
+        'as' => 'kurikulum.data.edit_sub_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.update_sub_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'dashboard/kurikulum/data/editSubCPMK/{scpmk}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SubCPMKController@updateSubCPMK',
+        'controller' => 'App\\Http\\Controllers\\SubCPMKController@updateSubCPMK',
+        'as' => 'kurikulum.data.update_sub_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.delete_sub_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/deleteSubCPMK/{scpmk}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SubCPMKController@deleteSubCPMK',
+        'controller' => 'App\\Http\\Controllers\\SubCPMKController@deleteSubCPMK',
+        'as' => 'kurikulum.data.delete_sub_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.export_sub_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/sub_cpmk/export/{type}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SubCPMKController@export',
+        'controller' => 'App\\Http\\Controllers\\SubCPMKController@export',
+        'as' => 'kurikulum.data.export_sub_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'penilaian' => 
     array (
       'methods' => 
@@ -3978,7 +4942,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::MnqIBu3DCnlomGka' => 
+    'generated::JWiDVqsmZPBkxcmF' => 
     array (
       'methods' => 
       array (
@@ -3999,7 +4963,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::MnqIBu3DCnlomGka',
+        'as' => 'generated::JWiDVqsmZPBkxcmF',
       ),
       'fallback' => false,
       'defaults' => 

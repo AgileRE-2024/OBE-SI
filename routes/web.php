@@ -5,32 +5,33 @@ use App\Models\RPS;
 use App\Models\CPMK;
 use App\Models\Kelas;
 use App\Models\SubCPMK;
+use Barryvdh\DomPDF\PDF;
 use App\Models\Mahasiswa;
 use App\Models\Detail_RPS;
 use App\Models\Minggu_RPS;
+use App\Models\Mata_Kuliah;
 use App\Models\Bahan_Kajian;
 use App\Models\CPL_SN_Dikti;
 use App\Models\Profil_Lulusan;
 use App\Models\Detail_Peran_Dosen;
-use App\Http\Controllers\ProfilLulusanController;
-use App\Http\Controllers\CPLDiktiController;
-use App\Http\Controllers\CPLProdiController;
-use App\Http\Controllers\MataKuliahController;
-use App\Http\Controllers\BahanKajianController;
-use App\Models\Mata_Kuliah;
 use Illuminate\Support\Facades\Route;
 use App\Models\Detail_Nilai_Mahasiswa;
-use App\Http\Controllers\BKMKController;
-use App\Http\Controllers\PemetaanCPLBKMK;
-use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
-use App\Http\Controllers\CPLBKController;
-use App\Http\Controllers\PemetaanPlCplController;
-use App\Http\Controllers\SusunanMKController;
-use App\Http\Controllers\OrganisasiMKController;
-use App\Http\Controllers\CPLMKController;
-use App\Http\Controllers\CPMKController;
 use App\Http\Controllers\PDFController;
-use Barryvdh\DomPDF\PDF;
+use App\Http\Controllers\BKMKController;
+use App\Http\Controllers\CPMKController;
+use App\Http\Controllers\CPLBKController;
+use App\Http\Controllers\CPLMKController;
+use App\Http\Controllers\PemetaanCPLBKMK;
+use App\Http\Controllers\SubCPMKController;
+use App\Http\Controllers\CPLDiktiController;
+use App\Http\Controllers\CPLProdiController;
+use App\Http\Controllers\SusunanMKController;
+use App\Http\Controllers\MataKuliahController;
+use App\Http\Controllers\BahanKajianController;
+use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
+use App\Http\Controllers\OrganisasiMKController;
+use App\Http\Controllers\PemetaanPlCplController;
+use App\Http\Controllers\ProfilLulusanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,11 +81,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/bk-mk/exportExcel', [BKMKController::class, 'exportExcel'])->name('exportExcel');
         Route::get('/bk-mk/exportPdf', [BKMKController::class, 'exportPdf'])->name('exportPdf');
 
-        Route::get('/cpl-bk', function () {
-            return view('welcome');
-        })->name('cpl_bk');
-
-        Route::get('/cpl-bk', [CPLBKController::class,'index','title' => 'Pemetaan CPL BK'])->name('cpl_bk');
+        Route::get('/cpl-bk', [CPLBKController::class, 'index', 'title' => 'Pemetaan CPL BK'])->name('cpl_bk');
 
         Route::put('/cpl-bk/update', [CPLBKController::class, 'update'])->name('update_pemetaan_cpl_bk');
 
@@ -124,8 +121,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export_cpl_pl');
 
         Route::get('/cpl-bk', [CPLBKController::class, 'index'])->name('cpl_bk');
-        Route::get('/cetak-pdf-cplbk',[CPLBKController::class,'cetakLaporanPDF'])-> name('cetakpdfcplbk');
-        Route::get('/cetak-excel-cplbk',[CPLBKController::class,'cetakLaporanExcel'])-> name('cetakexcelcplbk');
+        Route::get('/cetak-pdf-cplbk', [CPLBKController::class, 'cetakLaporanPDF'])->name('cetakpdfcplbk');
+        Route::get('/cetak-excel-cplbk', [CPLBKController::class, 'cetakLaporanExcel'])->name('cetakexcelcplbk');
 
         Route::get('/cpl-cpmk-mk', function () {
             return view('welcome');
@@ -162,7 +159,6 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/deleteCPLDikti/{cpl}', [CPLDiktiController::class, 'delete'])->name('delete_cpl_dikti');
         Route::get('/cpl_dikti/export/{type}', [CPLDiktiController::class, 'export'])->name('export_cpl_dikti');
 
-
         Route::get('/cpl_prodi', [CPLProdiController::class, 'index'])->name('cpl_prodi');
         Route::get('/addCPLProdi', [CPLProdiController::class, 'addCPLProdi'])->name('add_cpl_prodi');
         Route::post('/addCPLProdi', [CPLProdiController::class, 'storeCPLProdi'])->name('store_cpl_prodi');
@@ -179,7 +175,6 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/deleteBahanKajian/{bk}', [BahanKajianController::class, 'deleteBahanKajian'])->name('delete_bahan_kajian');
         Route::get('/bahan_kajian/export/{type}', [BahanKajianController::class, 'export'])->name('export_bahan_kajian');
 
-
         Route::get('/mata_kuliah', [MataKuliahController::class, 'index'])->name('mata_kuliah');
         Route::get('/addMataKuliah', [MataKuliahController::class, 'addMataKuliah'])->name('add_mata_kuliah');
         Route::post('/addMataKuliah', [MataKuliahController::class, 'storeMataKuliah'])->name('store_mata_kuliah');
@@ -187,6 +182,14 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::put('/editMataKuliah/{mk}', [MataKuliahController::class, 'updateMataKuliah'])->name('update_mata_kuliah');
         Route::get('/deleteMataKuliah/{mk}', [MataKuliahController::class, 'deleteMataKuliah'])->name('delete_mata_kuliah');
         Route::get('/mata_kuliah/export/{type}', [MataKuliahController::class, 'export'])->name('export_mata_kuliah');
+
+        Route::get('/sub_cpmk', [SubCPMKController::class, 'index'])->name('sub_cpmk');
+        Route::get('/addSubCPMK', [SubCPMKController::class, 'addSubCPMK'])->name('add_sub_cpmk');
+        Route::post('/addSubCPMK', [SubCPMKController::class, 'storeSubCPMK'])->name('store_sub_cpmk');
+        Route::get('/editSubCPMK/{scpmk}', [SubCPMKController::class, 'editSubCPMK'])->name('edit_sub_cpmk');
+        Route::put('/editSubCPMK/{scpmk}', [SubCPMKController::class, 'updateSubCPMK'])->name('update_sub_cpmk');
+        Route::get('/deleteSubCPMK/{scpmk}', [SubCPMKController::class, 'deleteSubCPMK'])->name('delete_sub_cpmk');
+        Route::get('/sub_cpmk/export/{type}', [SubCPMKController::class, 'export'])->name('export_sub_cpmk');
     });
 });
 
