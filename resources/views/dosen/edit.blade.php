@@ -4,7 +4,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Tambah Peran Dosen</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Edit Peran Dosen</h6>
             {{-- <a href="/tambahpl" class="float-right btn btn-sm btn-dark"><i
             class="fa fa-fw fa-plus-circle"></i> Tambah PL</a> --}}
         </div>
@@ -46,7 +46,7 @@
                     @enderror
                     <select name="nip" id='nip' class="form-select">
                         <option value="">-- Pilih NIP --</option>
-                        @foreach ($users->whereIn('nip', $list_nips) as $item)
+                        @foreach ($users as $item)
                             <option value="{{ $item->nip }}">{{ $item->nip }} - {{ $item->namaDosen }}</option>
                         @endforeach
                     </select>

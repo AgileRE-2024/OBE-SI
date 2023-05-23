@@ -36,7 +36,7 @@ class DosenController extends Controller
     $users = User::all();
     $rpss = RPS::all();
 
-    return view('dosen.create', [ 'title' => 'Edit Profil Lulusan','details' => $details, 'users'=>$users, 'rpss'=>$rpss]);
+    return view('dosen.create', [ 'title' => 'Tambah Profil Lulusan','details' => $details, 'users'=>$users, 'rpss'=>$rpss]);
 }
 
 
@@ -51,17 +51,18 @@ class DosenController extends Controller
         $request->validate([
             'nip' => 'required',
             'kodeRPS' => 'required',
-            'peranDosen' => 'required'
+            'deskripsi' => 'required'
         ]);
 
-        Detail_Peran_Dosen::create([
+        $details = Detail_Peran_Dosen::create([
             'nip' => $request->nip,
             'kodeRPS' => $request->kodeRPS,
-            'peranDosen' => $request->peranDosen
+            'peranDosen' => $request->deskripsi
         ]);
+        $details->save();
 
         // Redirect atau tampilkan pesan sukses, sesuai dengan kebutuhan aplikasi
-        return redirect()->route('dosen.create')->with('success', 'Profil Lulusan berhasil ditambahkan');
+        return redirect()->route('dosen.index')->with('success', 'Profil Lulusan berhasil ditambahkan');
     }
 
     /**
@@ -89,8 +90,8 @@ class DosenController extends Controller
         $detail = Detail_Peran_Dosen::where('nip', $detail)->first();
         $details = Detail_Peran_Dosen::all();
         $details = Detail_Peran_Dosen::with('users')->get();
-    $users = User::all();
-    $rpss = RPS::all();
+        $users = User::all();
+        $rpss = RPS::all();
 
         return view('dosen.edit', ['title' => 'Detail Peran Dosen', 'detail' => $detail, 'details' => $details, 'users'=>$users, 'rpss'=>$rpss]);
     }
@@ -108,7 +109,7 @@ class DosenController extends Controller
         $detail = Detail_Peran_Dosen::where('nip', $detail)->first();
         $detail->update([
             'nip' => $request->nip,
-            'kodeRPS' => $request-> kodeRPS,
+            'kodeRPS' => $request->kodeRPS,
             'peranDosen' => $request->peranDosen,
         ]);
         $detail->save();
@@ -126,9 +127,11 @@ class DosenController extends Controller
      * @param  \App\Models\Details  $details
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Detail_Peran_Dosen $details)
+    public function destroy($details)
     {
-        //
+        $details = Detail_Peran_Dosen::where('nip', $details)->first();
+        $details->delete();
+        return redirect()->route('dosen.index')->with('success', 'Data Dosen berhasil dihapus');
     }
     public function getNamaDosen($nip)
 {
@@ -138,4 +141,4 @@ class DosenController extends Controller
     // Mengembalikan hasil dalam format yang sesuai (misalnya, JSON)
     return response()->json($namaDosen);
 }
-}
+}   
