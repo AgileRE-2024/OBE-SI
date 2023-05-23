@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ExportPemetaanCPLBKMK;
 use Illuminate\Http\Request;
 use App\Models\Mata_Kuliah;
 use App\Models\Detail_BK_MK;
@@ -10,6 +11,7 @@ use App\Models\Bahan_Kajian;
 use App\Models\CPL_Prodi;
 use Illuminate\Support\Facades\DB;
 use Dompdf\dompdf;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 
 
@@ -33,7 +35,15 @@ class PemetaanCPLBKMK extends Controller
         ]);
     }
 
-    public function export($type)
+    public function exportExcel(Request $request)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $date_time = date('Y_m_d_H_i_s');
+        $filename = "Pemetaan BK dan MK_" . $date_time . '.xlsx';
+        return Excel::download(new ExportPemetaanCPLBKMK(CPL_Prodi::all(),Bahan_Kajian::all(),Mata_Kuliah::all(),Detail_BK_MK::all(),Detail_CPLProdi_BK::all()), $filename);
+    }
+
+    public function exportPdf(Request $request)
     {
         date_default_timezone_set('Asia/Jakarta');
 
@@ -47,8 +57,6 @@ class PemetaanCPLBKMK extends Controller
         ]);
 
         $date_time = date('Y_m_d_H_i_s');
-
-        if ($type === 'pdf') {
             $dompdf = new Dompdf();
             $dompdf->loadHtml($view);
             $dompdf->setPaper('A4', 'landscape');
@@ -61,10 +69,6 @@ class PemetaanCPLBKMK extends Controller
                 'Content-Type' => 'application/pdf',
                 'Content-Disposition' => 'inline; filename=' . $filename
             ]);
-        } else {
-            //$filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
-            //return Excel::download(new ExportPemetaanCPLPL(Profil_Lulusan::all(), CPL_Prodi::all(), Detail_PL_CPLProdi::all()), $filename);
         }
-    }
 
 }

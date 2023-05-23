@@ -73,6 +73,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         })->name('cpl_bk');
 
         Route::get('/cpl-bk-mk',[PemetaanCPLBKMK::class,'index','title' => 'Pemetaan CPL BK MK'])->name('cpl_bk_mk');
+        Route::get('/cpl-bk-mk/exportPdf', [PemetaanCPLBKMK::class, 'exportPdf'])->name('exportPdf');
+        Route::get('/cpl-bk-mk/exportExcel', [PemetaanCPLBKMK::class, 'exportExcel'])->name('exportExcel');
 
         Route::get('/susunan-mata-kuliah', function () {
             return view('welcome');
