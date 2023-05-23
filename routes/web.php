@@ -28,6 +28,7 @@ use App\Models\Detail_Nilai_Mahasiswa;
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
+use App\Http\Controllers\CPLBKController;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\SusunanMKController;
 use App\Http\Controllers\OrganisasiMKController;
@@ -109,9 +110,13 @@ Route::group(['middleware' => 'role:kurikulum,admin'], function(){
             
             Route::get('/bk-mk/exportPdf', [BKMKController::class, 'exportPdf'])->name('exportPdf');
 
-            Route::get('/cpl-bk', function () {
-                return view('welcome');
-            })->name('cpl_bk');
+            Route::get('/cpl-bk', [CPLBKController::class,'index','title' => 'Pemetaan CPL BK'])->name('cpl_bk');
+
+            Route::put('/cpl-bk/update', [CPLBKController::class, 'update'])->name('update_pemetaan_cpl_bk');
+
+            Route::get('/cpl-bk', [CPLBKController::class, 'index'])->name('cpl_bk');
+            Route::get('/cetak-pdf-cplbk',[CPLBKController::class,'cetakLaporanPDF'])-> name('cetakpdfcplbk');
+            Route::get('/cetak-excel-cplbk',[CPLBKController::class,'cetakLaporanExcel'])-> name('cetakexcelcplbk');
 
             Route::get('/cpl-bk-mk', [PemetaanCPLBKMK::class, 'index', 'title' => 'Pemetaan CPL BK MK'])->name('cpl_bk_mk');
 
