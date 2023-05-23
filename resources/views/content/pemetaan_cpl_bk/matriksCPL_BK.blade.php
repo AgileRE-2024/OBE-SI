@@ -120,6 +120,7 @@
                         
                     </tbody>
                 </table>
+                @if(auth()->user()->role==1)
                 <div class="d-flex justify-content-end">
                     <!-- Button trigger modal -->
                     {{-- <button type="button" id="buttonsimpan" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -129,6 +130,7 @@
                         Simpan
                     </button>
                 </div>
+                @endif
     
                 <!-- Modal -->
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"

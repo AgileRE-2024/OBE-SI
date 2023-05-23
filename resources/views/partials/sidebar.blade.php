@@ -25,6 +25,7 @@
                         </p>
                     </a>
                 </li> --}}
+            @if(auth()->user()->role==1 || auth()->user()->role==2)
                 <li id="kurikulum" class="nav-item @if (Request::is('*kurikulum*')) menu-open @endif">
                     <a href="{{ route('kurikulum.data.profil_lulusan') }}" class="nav-link"
                         @if (Request::is('*kurikulum*')) style="background-color: #F6D743; color: black;" @endif>
@@ -193,6 +194,8 @@
                         </li>
                     </ul>
                 </li>
+                @endif
+                @if(auth()->user()->role==0 || auth()->user()->role==2)
                 <li class="nav-item">
                     <a href="#" class="nav-link"
                         @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
@@ -202,6 +205,8 @@
                         </p>
                     </a>
                 </li>
+                @endif
+                @if(auth()->user()->role==0 || auth()->user()->role==2)
                 <li class="nav-item">
                     <a href="{{ route('rps') }}" class="nav-link"
                         @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>
@@ -211,18 +216,22 @@
                         </p>
                     </a>
                 </li>
+                @endif
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
     </div>
     <!-- Sidebar footer -->
     <div>
+        <form action="/logout" method="post">
+        @csrf
         <div class="card mx-5 rounded-pill" style="background-color:rgba(255, 111, 0, 0.05)">
-            <button type="button" class="btn rounded-pill bg-light" style="font-weight:500;color:black">
+            <button type="submit" class="btn rounded-pill bg-light" style="font-weight:500;color:black">
                 <i class="bi bi-box-arrow-right"> </i>
                 Keluar
             </button>
         </div>
+        </form>
     </div>
     <!-- /Sidebar footer -->
     <!-- /.sidebar -->
