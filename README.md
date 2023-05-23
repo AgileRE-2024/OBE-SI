@@ -17,7 +17,9 @@ Project Kuliah Pembangunan Perangkat Lunak
     11. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 - Langkah-langkah Penggunaan
 - Prosedur untuk kontribusi github
-- 
+    1. Koordinator Github membuat branch untuk masing-masing kelompok
+    2. Setiap kelompok melakukan edit sesuai fitur yang dibagikan
+    3. Jika sudah selesai, perwakilan kelompok atau koordinator Github melakukan merge ke branch
 - Informasi lain (anggota team) <br>
 <table>
                 <thead style="background-color: lightgray">
