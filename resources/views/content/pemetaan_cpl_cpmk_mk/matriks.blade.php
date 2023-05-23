@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="d-flex" style="overflow: auto; width: 100%; max-height: calc(100vh - 2rem);">
+        <div class="d-flex mt-5" style="overflow: auto; width: 100%; max-height: calc(100vh - 4rem);">
             <table class="table" style="table-layout: fixed">
                 <thead style="position: sticky; background-color: #fff; z-index: 2; top: 0;">
                     <tr>
@@ -38,7 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @for ($i = 0; $i < 10; $i++) --}}
+                    {{-- @for ($x = 0; $x < 10; $x++) --}}
                     @foreach ($mk as $matkul)
                         <tr>
                             <td scope="row" style="position: sticky; background-color: #fff; z-index: 1; left: 0;">
@@ -57,15 +57,13 @@
                                     }
                                 @endphp
 
-                                @for ($i = 0; $i < sizeof($value); $i++)
-                                    <td data-toggle="tooltip" title="{{ $value[$i]->deskripsiCPMK }}">
-                                        {{ $value[$i]->kodeCPMK }}
-                                    </td>
-                                @endfor
-
-                                @for ($i = 0; $i < sizeof($cpl) - sizeof($value); $i++)
-                                    <td></td>
-                                @endfor
+                                <td>
+                                    @for ($i = 0; $i < sizeof($value); $i++)
+                                        <span data-toggle="tooltip" title="{{ $value[$i]->deskripsiCPMK }}">
+                                            {{ $value[$i]->kodeCPMK }}
+                                        </span>
+                                    @endfor
+                                </td>
 
                                 @php
                                     $value = [];
