@@ -20,6 +20,9 @@ use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\RpsController;
+use App\Models\MataKuliah;
+use App\Models\Teknik_Penilaian;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -133,15 +136,19 @@ Route::get('/dashboard/penilaian', function() {
     return view('welcome');
 })->name('penilaian');
 
+Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
+Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
 
 Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
 Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');       
 
 Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
-Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
-Route::post('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
+Route::get('/dashboard/cari_rps#minggu', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
+Route::post('/dashboard/cari_rps#minggu', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
 
 Route::get('/dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
 Route::put('/dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
 Route::get('/dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
 
+Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
+Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');

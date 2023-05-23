@@ -23,7 +23,7 @@ class MingguRPSController extends Controller
         $minggu_rps = Minggu_RPS::all();
         $mk = Mata_Kuliah::all();
         $rps = RPS::all();
-        return view('content.minggu_rps.add_minggu_rps', [
+        return view('content.cari_rps', [
             'title' => 'Minggu RPS', 
             'minggu_rps_list'=> $minggu_rps,
             'subcpmk_list'=> SubCPMK::all(),
@@ -58,7 +58,7 @@ class MingguRPSController extends Controller
         $mk = Mata_Kuliah::all();
         $rps = RPS::all();
         $subcpmk = SubCPMK::all();
-        return view('content.minggu_rps.add_minggu_rps', [
+        return view('content.cari_rps', [
             'title' => 'Tambah Minggu RPS',
             'minggu_rps_list'=> $minggu_rps,
             'scpmk' => $subcpmk,
@@ -91,7 +91,11 @@ class MingguRPSController extends Controller
 
         if ($validator->fails()) {
             // flash('error')->error();
-            return redirect()->back()->withErrors($validator)->withInput();
+            // return redirect()->back()->withErrors($validator)->withInput();
+        // return redirect()->route('store_minggu_rps')->with('success', 'Minggu RPS GAGAL');
+        return redirect()->back()->withErrors(['error' => 'Gagal membuat data.'])->withInput();
+
+
         }
 
         Minggu_RPS::create([
@@ -109,7 +113,7 @@ class MingguRPSController extends Controller
         // Membuat data pada tabel pivot C
             $detail_rps = [];
                 $detail_rps[] = [
-                    'kodeRPS' => $request->kodeRPS,
+                    'kodeRPS' => $request->input('kodeRPS'),
                     'kodeMingguRPS' => $request->kodeMingguRPS,
                     'kodePenilaian' => $request->kodePenilaian,
                     // atribut tambahan lainnya di tabel pivot C
@@ -117,7 +121,7 @@ class MingguRPSController extends Controller
 
             Detail_RPS::insert($detail_rps);
 
-        return redirect()->route('add_minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
+        return redirect()->route('store_minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
     }
 
     /**

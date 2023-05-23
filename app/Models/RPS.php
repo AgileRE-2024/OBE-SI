@@ -10,7 +10,7 @@ class RPS extends Model
     public $incrementing = false;
     protected $table = 'RPS';
     protected $fillable = [
-        'kodeRPS', 'tahunAjaran','kodeMK', 'nip'
+        'kodeRPS', 'tahunAjaran','kodeMK', 'kps'
     ];
 
     public function Mata_Kuliah()

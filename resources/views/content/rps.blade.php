@@ -353,14 +353,9 @@
               </tbody>
         </table>
         
-            </tbody>
-        </table>
 
-
-        
-            </tbody>
-        </table>
-        
+    </div>
+</div>        
 
 
 

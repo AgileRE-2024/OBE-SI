@@ -1,6 +1,6 @@
-@extends('layout.dashboard')
+{{-- @extends('layout.dashboard')
 
-@section('content')
+@section('content') --}}
     <div class="content px-4">
         <div class="content px-4">
             <div class="card border" style="background-color: white">
@@ -20,8 +20,8 @@
                         <form method="post" action="{{ route('store_minggu_rps') }}">
                             @csrf
                             @php
-                                $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
-                                $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
+                                $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
+                                $mk = $mk_list->where('kodeMK',$kodeMK)->first();
                                 $list_cpmk = collect();
                                 $uniqueIds = [];
                                 
@@ -52,8 +52,8 @@
                             </div>
 
                             @php
-                                $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
-                                $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
+                                $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
+                                $mk = $mk_list->where('kodeMK',$kodeMK)->first();
                                 $list_cpmk = collect();
                                 $uniqueIds = [];
                                 
@@ -71,7 +71,6 @@
                                 }
                                 $list_kodeCPMK = $list_cpmk->pluck('kodeCPMK');
                             @endphp
-
                             <div class="form-group">
                                 <label>Sub CPMK</label>
                                 @error('kodeSubCPMK')
@@ -79,7 +78,7 @@
                                 @enderror
                                 <select name="kodeSubCPMK" id='kodeSubCPMK' class="form-select">
                                     <option value="">-- Pilih Sub CMPK --</option>
-                                    @foreach ($scpmk->whereIn('kodeCPMK', $list_kodeCPMK) as $item)
+                                    @foreach ($subcpmk_list->whereIn('kodeCPMK', $list_kodeCPMK) as $item)
                                         <option value="{{ $item->kodeSubCPMK }}">{{ $item->kodeSubCPMK }} - {{ $item->deskripsiSubCPMK }}</option>
                                     @endforeach
                                 </select>
@@ -147,6 +146,7 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <input type="hidden" name="kodeRPS" value={{ $kodeRPS }} />
 
                             <div class="form-group pt-4">
                                 <button type="submit" name="submit" value="submit" id="submit"
@@ -222,7 +222,11 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+    </div>
 
-            </tbody>
-            </table>
-        @endsection
+    @if ($errors->has('error'))
+    <div class="alert alert-danger">
+        {{ $errors->first('error') }}
+    </div>
+@endif
