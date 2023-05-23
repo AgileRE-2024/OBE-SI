@@ -23,30 +23,17 @@ class MingguRPSController extends Controller
         $minggu_rps = Minggu_RPS::all();
         $mk = Mata_Kuliah::all();
         $rps = RPS::all();
-        return view('content.cari_rps', [
-            'title' => 'Minggu RPS', 
+        $subcpmk = SubCPMK::all();
+        return view('content.minggu_rps.minggu_rps', [
+            'title' => 'Tambah Minggu RPS',
             'minggu_rps_list'=> $minggu_rps,
-            'subcpmk_list'=> SubCPMK::all(),
+            'scpmk' => $subcpmk,
             'mk_list' =>$mk,
             'rps_list' => $rps,
             'teknik_penilaian_list' => Teknik_Penilaian::all(),
             'detail_rps_list'=> Detail_RPS::all(),
         ]);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Minggu_RPS  $minggu_RPS
-     * @return \Illuminate\Http\Response
-     */
-    public function editMingguRPS(Minggu_RPS $minggu_RPS)
-    {
-        $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $minggu_RPS)->first();
-
-        return view('content.minggu_rps.edit_minggu_rps', ['title' => 'Minggu RPS', 'minggu_RPS' => $minggu_RPS]);
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -66,6 +53,32 @@ class MingguRPSController extends Controller
             'rps_list' => $rps,
             'teknik_penilaian_list' => Teknik_Penilaian::all(),
             'detail_rps_list'=> Detail_RPS::all(),
+        ]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Minggu_RPS  $minggu_RPS
+     * @return \Illuminate\Http\Response
+     */
+    public function editMingguRPS(String $kodeMingguRPS)
+    {
+        $minggu_rps = Minggu_RPS::all();
+        $mk = Mata_Kuliah::all();
+        $rps = RPS::all();
+        $subcpmk = SubCPMK::all();
+        $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
+
+        return view('content.minggu_rps.edit_minggu_rps', [
+            'title' => 'Edit Minggu RPS', 
+            'minggu_rps_list' => $minggu_rps,
+            'scpmk' => $subcpmk,
+            'mk_list' =>$mk,
+            'rps_list' => $rps,
+            'teknik_penilaian_list' => Teknik_Penilaian::all(),
+            'detail_rps_list'=> Detail_RPS::all(),
+            'minggu_rps'=>$minggu_RPS,
         ]);
     }
 
@@ -121,7 +134,7 @@ class MingguRPSController extends Controller
 
             Detail_RPS::insert($detail_rps);
 
-        return redirect()->route('store_minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
+        return redirect()->route('edit_rps.minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
     }
 
     /**
@@ -143,12 +156,12 @@ class MingguRPSController extends Controller
      * @param  \App\Models\Minggu_RPS  $minggu_RPS
      * @return \Illuminate\Http\Response
      */
-    public function updateMingguRPS(Request $request, Minggu_RPS $minggu_RPS)
+    public function updateMingguRPS(Request $request, String $minggu_RPS)
     {
         $validator = Validator::make($request->all(), [
             'kodeMingguRPS' => 'required',
             'kodeSubCPMK' => 'required',
-            // 'kodePenilaian' => 'required',
+            'kodePenilaian' => 'nullable',
             'mingguKe' => 'required',
             'bentukPembelajaran' => 'required',
             'indikatorMingguRPS' => 'required',
@@ -156,14 +169,19 @@ class MingguRPSController extends Controller
             'deskripsiPembelajaran' => 'required',
             'materiPembelajaran' => 'required',
         ]);
-
-
+        
         if ($validator->fails()) {
-            // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
         }
-
+        
         $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $minggu_RPS)->first();
+        
+        if (!$minggu_RPS) {
+            return redirect()->back()->with('error', 'Minggu RPS tidak ditemukan');
+        }
+        
+        Detail_RPS::where('kodeMingguRPS', $minggu_RPS->kodeMingguRPS)->where('kodeRPS', $request->kodeRPS)->delete();
+        
         $minggu_RPS->update([
             'kodeMingguRPS' => $request->kodeMingguRPS,
             'kodeSubCPMK' => $request->kodeSubCPMK,
@@ -175,9 +193,22 @@ class MingguRPSController extends Controller
             'deskripsiPembelajaran' => $request->deskripsiPembelajaran,
             'materiPembelajaran' => $request->materiPembelajaran
         ]);
-        $minggu_RPS->save();
+        // $detail_rps->kodePenilaian = $request->input('kodePenilaian');
+        // $detail_rps->save();
 
-        return redirect()->route('dashboard.rps.minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
+            $detail_rps = [];
+                $detail_rps[] = [
+                    'kodeRPS' => $request->kodeRPS,
+                    'kodeMingguRPS' => $request->kodeMingguRPS,
+                    'kodePenilaian' => $request->kodePenilaian,
+                    // atribut tambahan lainnya di tabel pivot C
+                ];
+
+            Detail_RPS::insert($detail_rps);
+
+        
+        return redirect()->route('edit_rps.minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan'.$request->kodePenilaian);
+        
     }
 
     /**
@@ -186,10 +217,15 @@ class MingguRPSController extends Controller
      * @param  \App\Models\Minggu_RPS  $minggu_RPS
      * @return \Illuminate\Http\Response
      */
-    public function deleteMingguRPS(Minggu_RPS $minggu_RPS)
-    {
-        $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $minggu_RPS)->first();
-        $minggu_RPS->delete();
-        return redirect()->route('dashboard.rps.minggu_rps')->with('success', 'Minggu RPS berhasil dihapus');
-    }
+    public function deleteMingguRPS(Request $request, String $kodeMingguRPS)
+{
+    // Hapus detail RPS yang berelasi dengan minggu RPS
+    Detail_RPS::where('kodeMingguRPS', $kodeMingguRPS)->where('kodeRPS', $request->kodeRPS)->delete();
+
+    // Hapus minggu RPS
+    $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
+    $minggu_RPS->delete();
+
+    return redirect()->route('edit_rps.minggu_rps')->with('success', 'Minggu RPS berhasil dihapus');
+}
 }

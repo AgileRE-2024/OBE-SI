@@ -13,13 +13,48 @@
             </div>
         </div>
         <br>
-        <div class="d-flex">
-            <table class="table table-bordered" style="text-align: center">
-                <thead style="background-color: lightgray">
-                    <tr>
-                        <th scope="col"></th>
-                            @foreach ($bk_list as $bk)
-                                <th scope="col" data-toggle="tooltip" data-placement="top" title="{{ $bk->namaBK }}">{{ $bk->kodeBK }}</th>
+        <div class="d-flex justify-content-end pt-2">
+          <div class="pr-3">
+            <a id="pdf" class="btn btn-outline-danger" href="/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportPdf"><i
+                    class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+        </div>
+        <div>
+            <a id="excel" class="btn btn-success" href="/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportExcel"><i
+                    class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+        </div>
+      </div>
+      <br>
+        <div class="row">
+            <div class="card mt-5" style="padding: 2rem">
+              <div class="card-body">
+                <div class="mt-2" style="padding-left : 7rem">
+                  <label class="switch">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="toggle-button" checked>
+                      <label class="form-check-label" for="flexSwitchCheckChecked">CPL sebagai Header</label>
+                    </div>
+                  </label>
+                </div>
+                <div class="container">
+                  <div id="table1" class="table-container">
+                    <table class="table table-hover rounded table-bordered mb-0">
+                      <thead class="table-secondary">
+                        <tr class="text-center">
+                          <th scope="col"></th>
+                          @foreach ($bk_list as $bk)
+                          <th scope="col" data-toggle="tooltip" data-placement="top" title="{{ $bk->namaBK }}">{{ $bk->kodeBK }}</th>
+                          @endforeach
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach ($cpl_list as $cpl)
+                        <tr class="text-center">
+                          <th scope="row" data-toggle="tooltip" data-placement="top" title="{{ $cpl->deskripsiCPL}}">{{ $cpl->kodeCPL }}</th>
+                          @foreach ($bk_list as $bk)
+                          <td>
+                            @if ($pemetaan2->where('kodeBK', $bk->kodeBK)->where('kodeCPL', $cpl->kodeCPL)->count() != 0)
+                            @foreach ($pemetaan1->where('kodeBK', $bk->kodeBK) as $pemetaanbkmk)
+                            {{ $pemetaanbkmk->kodeMK }}
                             @endforeach
                     </tr>
                 </thead>
