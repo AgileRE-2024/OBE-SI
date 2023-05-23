@@ -126,8 +126,8 @@ class RPSController extends Controller
             'kodeRPS' => 'required|unique:rps,kodeRPS',
             'kodeMK' => 'required',
             'kps' => 'required',
-            'tahunAjaran' => 'required|different:tahunAjaran, ' . $request->kodeMataKuliah,
-        ]);
+            'required|different:tahunAjaran,' . $request->kodeMataKuliah,
+            ]);
 
         RPS::create([
             'kodeRPS' => $request->kodeRPS,
