@@ -29,7 +29,6 @@
                 </div>
             </div>
             <br>
-    
             <table class="table table-bordered" style="text-align: center">
                 <thead class="table" style="background-color: lightgray">
                     <tr>
@@ -39,45 +38,46 @@
                         <th class="align-middle" scope="col" style="width: 10%">Kode CPMK</th>
                         @foreach ($list_kolom as $tp)
                             <th scope="col">
-                                <span itemid="{{ $tp }}">
+                                {{-- <span itemid="{{ $tp }}"> --}}
                                     {{ $tp}}
-                                </span>
+                                {{-- </span> --}}
                                 </th>
                         @endforeach
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ( $list_mk as $mk )
-                    {{-- @php
-                        $counter = $detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->count();
-                        $cpmk = $detail_mk_cpmk->where('kodeMK', $mk->kodeMK);
-                    @endphp --}}
-                    @endforeach
-                    {{-- @foreach ($list_cpmk as $cpmk ) --}}
-                    @foreach ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK) as $detail)
-                    @foreach ($list_cpmk->where('kodeCPMK', $detail->kodeCPMK) as $cpmk)
+                    @php
+                        $iteration=0;
+                    @endphp
+                    @foreach ($list_cpl as $cpl)
+                    @foreach ($cpl->CPMK as $cpmk)
+                    @foreach($cpmk->Mata_Kuliah as $mk)
                         <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <th scope="row" class="text-start">{{ $cpmk->kodeCPL }}</th>
-                            <th scope="row" class="text-start">{{ $detail->kodeMK }}</th>
-                            <th scope="row" class="text-start">{{ $cpmk->kodeCPMK }}</th>
+                            @php
+                                $iteration++;
+                            @endphp
+                            <th scope="row">{{ $iteration }}</th>
+                            <th scope="row" class="text-start"><span itemid="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span></th>
+                            <th scope="row" class="text-start"><span itemid="{{ $mk->namaMK }}"> {{ $mk->kodeMK  }}</span></th>
+                            <th scope="row" class="text-start"><span itemid="{{ $cpmk->deskripsiCPMK }}"> {{ $cpmk->kodeCPMK  }}</span></th>
                             @foreach ($list_kolom as $tp)
                             @php
-                            $checked = false;
-                            foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
-                                foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
-                                    foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
-                                        if($subCpmks->SubCPMK->CPMK) {
-                                            $checked = true;
+                                    $checked = false;
+                                    foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
+                                        foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
+                                            foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
+                                                if($subCpmks->SubCPMK->CPMK) {
+                                                    $checked = true;
+                                                }
+                                            }
                                         }
                                     }
-                                }
-                            }
-                            @endphp
+                                @endphp
                                     <td><input type="checkbox" name="" id="" @if($checked) checked @endif disabled></td>
-                            @endforeach    
                             @endforeach
                         </tr>
+                    @endforeach
+                    @endforeach
                     @endforeach 
                 </tbody>
             </table>

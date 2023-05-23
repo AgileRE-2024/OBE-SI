@@ -47,26 +47,26 @@ class TeknikPenilaianCPMKExport implements FromCollection, WithHeadings, WithCol
     {
         $data = [];
         $no = 1;
-        foreach ($this->list_mk as $mk) {
-            $data_sementara = [];
-            array_push($data_sementara, $no);
-            array_push($data_sementara, $mk->kodeMK);
-            array_push($data_sementara, $mk->namaMK);
-            foreach ($this->list_cpl as $cpl){
-                $isTrue=false;
-                foreach ($this->list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
-                    if ($this->detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
-                        $isTrue=true;
-                        break;
-                        // if ($isTrue){
-                        //     array_push($data_sementara, '✓');
-                        // }
-                    } 
-                    // else {
-                    //     array_push($data_sementara, '');
-                    // }
-                }
-                if ($isTrue){
+        foreach ($this->list_cpl as $cpl) {
+            foreach($cpl->CPMK as $cpmk){
+                foreach ($cpmk->Mata_Kuliah as $mk ) {
+                    $data_sementara = [];
+                    array_push($data_sementara, $no);
+                    array_push($data_sementara, $cpl->kodeCPL);
+                    array_push($data_sementara, $cpmk->kodeCPMK);
+                    array_push($data_sementara, $mk->kodeMK);
+                    foreach ($this->list_kolom as $tp){
+                        $checked = false;
+                        foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
+                            foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
+                                foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
+                                    if($subCpmks->SubCPMK->CPMK) {
+                                        $checked = true;
+                                    }
+                                }
+                            }
+                        }
+                if ($checked){
                     array_push($data_sementara,'✓');
                 }
                 else{
@@ -77,15 +77,17 @@ class TeknikPenilaianCPMKExport implements FromCollection, WithHeadings, WithCol
 
             array_push($data, $data_sementara);
             $no++;
+                }
+            }
         }
         return new Collection($data);
     }
 
     public function headings(): array
     {
-        $headers = ['No', 'Kode MK', 'Nama Mata Kuliah'];
-        foreach ($this->list_cpl as $cpl) {
-            array_push($headers, $cpl->kodeCPL);
+        $headers = ['No', 'Kode CPL', 'Kode MK', 'Kode CPMK'];
+        foreach ($this->list_kolom as $tp) {
+            array_push($headers, $tp);
         }
         return $headers;
     }

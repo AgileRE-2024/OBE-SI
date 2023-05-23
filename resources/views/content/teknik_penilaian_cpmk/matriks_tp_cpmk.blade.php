@@ -31,28 +31,28 @@
                     <th class="align-middle" scope="col" style="width: 10%">Kode CPMK</th>
                     @foreach ($list_kolom as $tp)
                         <th scope="col">
-                            <span itemid="{{ $tp }}">
+                            {{-- <span itemid="{{ $tp }}"> --}}
                                 {{ $tp}}
-                            </span>
+                            {{-- </span> --}}
                             </th>
                     @endforeach
                 </tr>
             </thead>
             <tbody>
-                @foreach ( $list_mk as $mk )
-                {{-- @php
-                    $counter = $detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->count();
-                    $cpmk = $detail_mk_cpmk->where('kodeMK', $mk->kodeMK);
-                @endphp --}}
-                @endforeach
-                {{-- @foreach ($list_cpmk as $cpmk ) --}}
-                @foreach ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK) as $detail)
-                @foreach ($list_cpmk->where('kodeCPMK', $detail->kodeCPMK) as $cpmk)
+                @php
+                    $iteration=0;
+                @endphp
+                @foreach ($list_cpl as $cpl)
+                @foreach ($cpl->CPMK as $cpmk)
+                @foreach($cpmk->Mata_Kuliah as $mk)
                     <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
-                        <th scope="row" class="text-start">{{ $cpmk->kodeCPL }}</th>
-                        <th scope="row" class="text-start">{{ $detail->kodeMK }}</th>
-                        <th scope="row" class="text-start">{{ $cpmk->kodeCPMK }}</th>
+                        @php
+                            $iteration++;
+                        @endphp
+                        <th scope="row">{{ $iteration }}</th>
+                        <th scope="row" class="text-start"><span itemid="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span></th>
+                        <th scope="row" class="text-start"><span itemid="{{ $mk->namaMK }}"> {{ $mk->kodeMK  }}</span></th>
+                        <th scope="row" class="text-start"><span itemid="{{ $cpmk->deskripsiCPMK }}"> {{ $cpmk->kodeCPMK  }}</span></th>
                         @foreach ($list_kolom as $tp)
                         @php
                                 $checked = false;
@@ -68,8 +68,9 @@
                             @endphp
                                 <td><input type="checkbox" name="" id="" @if($checked) checked @endif disabled></td>
                         @endforeach    
-                        @endforeach
                     </tr>
+                @endforeach
+                @endforeach
                 @endforeach 
             </tbody>
         </table>
@@ -83,6 +84,7 @@
             cursor: pointer;
             /* display: inline-block; */
         }
+
         span[itemid]:hover::after {
             content: attr(itemid);
             /* overflow: hidden; */
@@ -101,13 +103,15 @@
             top: 35px;
             /* bottom: -100px; */
             /* left: 2%; */
-            transform: translateX(-88%);
+            transform: translateX(-35%);
             /* white-space: nowrap; */
             z-index: 1;
             opacity: 1;
             /* transition: opacity 3s; */
             /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
+
         }
+
         span[itemid]:hover::before {
             content: "";
             border-style: solid;

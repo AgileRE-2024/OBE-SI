@@ -63,7 +63,7 @@ class TeknikPenilaianCPMKController extends Controller
             'detail_mk_cpmk' => $detail_mk_cpmk,
             'list_cpmk' => $list_cpmk,
             'list_rps' => $list_rps,
-            'list_teknikpeniaian' => $list_teknikpenilaian,
+            'list_teknikpenilaian' => $list_teknikpenilaian,
             'list_kolom' => $list_kolom,
             'list_minggurps' => $list_minggurps,
             'detail_rps'=> $detail_rps,
