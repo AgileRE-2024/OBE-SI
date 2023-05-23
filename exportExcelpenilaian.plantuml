@@ -9,9 +9,9 @@ entity minggu_rps as Foo6
 entity subcpmk as Foo7
 
 activate Foo
-Foo -> Foo1 : click export pdf
+Foo -> Foo1 : click export excel
 activate Foo1
-Foo1 -> Foo3 : cetakLaporanPDF()
+Foo1 -> Foo3 : cetakLaporanExcel()
 loop
 activate Foo3
 Foo3 -> Foo4 : Select teknikPenilaian FROM teknik_penilaian
@@ -33,8 +33,7 @@ activate Foo7
 Foo7 --> Foo3 : return list_subcpmk
 deactivate Foo7
 end
-Foo3 -> Foo2 : viewExcel()
-activate Foo2
-deactivate Foo2
+Foo3 -> Foo1 : return download file
+deactivate Foo1
 
 @enduml
