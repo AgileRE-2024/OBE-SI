@@ -4,7 +4,8 @@
     <div class="content px-4 pt-3">
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
-                <h3>Tabel Capaian Pembelajaran Lulusan (CPL) - Capaian Pembelajaran Mata Kuliah (CPMK) - Mata Kuliah (MK)
+                <h3>
+                    Matriks Capaian Pembelajaran Lulusan (CPL) - Capaian Pembelajaran Mata Kuliah (CPMK) - Mata Kuliah (MK)
                 </h3>
                 <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Pemetaan Pembelajaran Lulusan (CPL),
                     Capaian Pembelajaran Mata Kuliah (CPMK), dan Mata Kuliah (MK) dilakukan untuk menunjukkan keterhubungan
@@ -16,21 +17,63 @@
             </div>
         </div>
 
-        <div class="d-flex">
-            <table class="table">
-                <thead>
+        <div class="d-flex" style="overflow: auto; width: 100%; max-height: calc(100vh - 2rem);">
+            <table class="table" style="table-layout: fixed">
+                <thead style="position: sticky; background-color: #fff; z-index: 2; top: 0;">
                     <tr>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 37%">Mata Kuliah</th>
-                        <th class="align-middle" scope="col" colspan="{{ sizeof($cpl) }}" style="width: 37%">CPL</th>
+                        <th class="align-middle" scope="col" rowspan="2"
+                            style="width: 240px; position: sticky; background-color: #fff; z-index: 1; left: 0;">
+                            Mata Kuliah
+                        </th>
+                        <th class="align-middle" colspan="{{ sizeof($cpl) }}"
+                            style="width: calc(100px * {{ sizeof($cpl) }}); text-align: center;">CPL</th>
                     </tr>
                     <tr>
-                        <th class="align-middle" scope="col" style="width: 37%">CPL</th>
+                        @foreach ($cpl as $item)
+                            <th class="align-middle" style="width: 200px" data-toggle="tooltip"
+                                title="{{ $item->deskripsiCPL }}">
+                                {{ $item->kodeCPL }}
+                            </th>
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                    </tr>
+                    {{-- @for ($i = 0; $i < 10; $i++) --}}
+                    @foreach ($mk as $matkul)
+                        <tr>
+                            <td scope="row" style="position: sticky; background-color: #fff; z-index: 1; left: 0;">
+                                <span style="font-weight:600;">[{{ $matkul->kodeMK }}]</span>
+                                {{ $matkul->namaMK }}
+                            </td>
+                            @foreach ($cpl as $item)
+                                @php
+                                    $value = [];
+                                    $i = 0;
+                                    foreach ($matkul->CPMK as $CPMKfromMK) {
+                                        if ($CPMKfromMK->CPL == $item) {
+                                            $value[$i] = $CPMKfromMK;
+                                            $i++;
+                                        }
+                                    }
+                                @endphp
+
+                                @for ($i = 0; $i < sizeof($value); $i++)
+                                    <td data-toggle="tooltip" title="{{ $value[$i]->deskripsiCPMK }}">
+                                        {{ $value[$i]->kodeCPMK }}
+                                    </td>
+                                @endfor
+
+                                @for ($i = 0; $i < sizeof($cpl) - sizeof($value); $i++)
+                                    <td></td>
+                                @endfor
+
+                                @php
+                                    $value = [];
+                                @endphp
+                            @endforeach
+                        </tr>
+                    @endforeach
+                    {{-- @endfor --}}
                 </tbody>
             </table>
         </div>

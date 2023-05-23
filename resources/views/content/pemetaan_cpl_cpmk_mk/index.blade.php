@@ -17,6 +17,11 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
+                <a class="btn btn-outline-primary" href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.matrix') }}"><i
+                        class="bi bi-table">
+                    </i>Lihat Matriks</a>
+            </div>
+            <div class="pr-3">
                 <a class="btn btn-outline-danger" target="_blank" rel="noopener noreferrer"
                     href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.export') }}"><i class="bi bi-file-earmark-pdf-fill">
                     </i>Export
