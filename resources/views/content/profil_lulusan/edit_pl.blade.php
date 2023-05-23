@@ -15,12 +15,18 @@
                     @method('put')
                     <div class="form-group">
                         <label>Kode Profil Lulusan (Kode PL)</label>
+                        @error('kodePL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <input type="text" name="kodePL" class="form-control" placeholder="Kode Profil Lulusan"
                             value="{{ old('kodePL') ? old('kodePL') : $pl->kodePL }}">
                     </div>
 
                     <div class="form-group">
                         <label>Deskripsi Profil Lulusan</label>
+                        @error('deskripsiPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <textarea name="deskripsiPL" rows="3" class="form-control" placeholder="Deskripsi Profil Lulusan">{{ old('deskripsiPL') ? old('deskripsiPL') : $pl->deskripsiPL }}</textarea>
                     </div>
 

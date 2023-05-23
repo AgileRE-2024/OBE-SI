@@ -14,17 +14,26 @@
                     @method('put')
                     <div class="form-group">
                         <label>Kode CPL Prodi</label>
+                        @error('kodeCPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <input type="text" name="kodeCPL" class="form-control" placeholder="Kode CPL Prodi"
                             value="{{ old('kodeCPL') ? old('kodeCPL') : $cpl->kodeCPL }}">
                     </div>
 
                     <div class="form-group">
                         <label>Deskripsi CPL Prodi</label>
+                        @error('deskripsiCPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <textarea name="deskripsiCPL" rows="3" class="form-control" placeholder="Deskripsi CPL Prodi">{{ old('deskripsiCPL') ? old('deskripsiCPL') : $cpl->deskripsiCPL }}</textarea>
                     </div>
 
                     <div class="form-group">
                         <label>Referensi CPL Prodi</label>
+                        @error('referensiCPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <input type="text" name="referensiCPL" class="form-control" placeholder="Referensi CPL Prodi"
                             value="{{ old('referensiCPL') ? old('referensiCPL') : $cpl->referensiCPL }}">
                     </div>

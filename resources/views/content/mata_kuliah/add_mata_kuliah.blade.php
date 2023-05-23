@@ -14,15 +14,15 @@
                     <div class="form-group">
                         <label>Kode Mata Kuliah</label>
                         @error('kodeMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah">
                     </div>
 
                     <div class="form-group">
                         <label>Mata Kuliah</label>
-                        @error('namaBK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                        @error('namaMK')
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="namaMK" class="form-control" placeholder="Nama Mata Kuliah">
                     </div>
@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label>Deskripsi Mata Kuliah</label>
                         @error('deskripsi')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <textarea name="deskripsi" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
                     </div>
@@ -39,7 +39,7 @@
                     <div class="form-group">
                         <label>Kategori Mata Kuliah</label>
                         @error('kategoriMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="kategoriMK" id='kategoriMK' class="form-select">
                             <option value="" selected disabled>-- Pilih Kategori MK --
@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label>Jenis Mata Kuliah</label>
                         @error('jenisMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="jenisMK" id='jenisMK' class="form-select">
                             <option value="" selected disabled>-- Pilih Jenis MK --</option>
@@ -65,7 +65,7 @@
                     <div class="form-group">
                         <label>Semester</label>
                         @error('semester')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="semester" id='semester' class="form-select">
                             <option value="" selected disabled>-- Pilih Semester --</option>
@@ -79,7 +79,7 @@
                     <div class="form-group">
                         <label>SKS</label>
                         @error('sks')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah">
                     </div>
@@ -87,7 +87,7 @@
                     <div class="form-group">
                         <label>Prasyarat Mata Kuliah</label>
                         @error('mat_kodeMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="mat_kodeMK" class="form-control">
                             <option value="" selected disabled>-- Pilih MK Prasyarat --</option>
@@ -95,13 +95,14 @@
                                 <option value="{{ $mk->kodeMK }}">
                                     {{ $mk->namaMK }}</option>
                             @endforeach
+                            <option value="">Tidak ada Prasyarat</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label>Prasyarat Tambahan</label>
                         @error('prasyarat_tambahan')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <textarea name="prasyarat_tambahan" row="3" class="form-control" placeholder="Prasyarat Tambahan Mata Kuliah"></textarea>
                     </div>
