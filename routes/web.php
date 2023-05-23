@@ -107,6 +107,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         //     return view('welcome');
         // })->name('cpl_mk');
         Route::get('/cpl-mk', [CPLMKController::class, 'index'])->name('cpl_mk');
+        Route::get('/cetak-pdf-cplmk', [CPLMKController::class, 'cetakLaporanPDF'])->name('cetakpdfcplmk');
+        Route::get('/cetak-excel-cplmk', [CPLMKController::class, 'cetakLaporanExcel'])->name('cetakexcelcplmk');
+        // Route::get('/cpl-mk/exportcplmk/{type}', [CPLMKController::class, 'exportcplmk'])->name('exportcplmk');
 
         Route::get('/cpl-pl', [PemetaanPlCplController::class, 'index'])->name('cpl_pl');
         Route::put('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
@@ -171,6 +174,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/mata_kuliah/export/{type}', [MataKuliahController::class, 'export'])->name('export_mata_kuliah');
     });
 });
+
 Route::get('/dashboard/penilaian', function () {
     return view('welcome');
 })->name('penilaian');
