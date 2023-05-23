@@ -23,6 +23,7 @@ use App\Models\Detail_Nilai_Mahasiswa;
 use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
+use App\Http\Controllers\CPLBKController;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\SusunanMKController;
 use App\Http\Controllers\OrganisasiMKController;
@@ -83,6 +84,13 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             return view('welcome');
         })->name('cpl_bk');
 
+        Route::get('/cpl-bk', [CPLBKController::class,'index','title' => 'Pemetaan CPL BK'])->name('cpl_bk');
+
+        Route::put('/cpl-bk/update', [CPLBKController::class, 'update'])->name('update_pemetaan_cpl_bk');
+
+        Route::get('/cpl-bk-mk', function () {
+            return view('welcome');
+        })->name('cpl_bk_mk');
         Route::get('/cpl-bk-mk', [PemetaanCPLBKMK::class, 'index', 'title' => 'Pemetaan CPL BK MK'])->name('cpl_bk_mk');
 
         Route::get('/susunan-mata-kuliah', [SusunanMKController::class, 'index'])->name('susunan_mata_kuliah');
@@ -115,6 +123,13 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::put('/cpl-pl/update', [PemetaanPlCplController::class, 'update'])->name('update_pemetaan_cpl_pl');
         Route::get('/cpl-pl/export/{type}', [PemetaanPlCplController::class, 'export'])->name('export_cpl_pl');
 
+        Route::get('/cpl-bk', [CPLBKController::class, 'index'])->name('cpl_bk');
+        Route::get('/cetak-pdf-cplbk',[CPLBKController::class,'cetakLaporanPDF'])-> name('cetakpdfcplbk');
+        Route::get('/cetak-excel-cplbk',[CPLBKController::class,'cetakLaporanExcel'])-> name('cetakexcelcplbk');
+
+        Route::get('/cpl-cpmk-mk', function () {
+            return view('welcome');
+        })->name('cpl_cpmk_mk');
         Route::prefix('/cpl-cpmk-mk')->name('cpl_cpmk_mk.')->group(function () {
             Route::name('index')->get('/', [CPMKController::class, 'index']);
             Route::name('add_cpmk')->get('/add_cpmk/{cpl}', [CPMKController::class, 'create']);
