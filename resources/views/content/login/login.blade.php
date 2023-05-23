@@ -31,9 +31,9 @@
                       <label class="form-check-label" for="exampleCheck1"> Simpan Saya Sebagai Pengguna Tetap </label>
                     </div> --}}
                     <center class = "mt-3 mb-10">
-                    <button type="submit" style="text-align:center; margin: -2px 0 0 0; width:100%; height:50px; border: 2px solid; background: white; border-radius: 10px; font-size:18px; color:#1F2261;  "><b>Masuk</b></button>
+                    <button name="tombolLogin" type="submit" style="text-align:center; margin: -2px 0 0 0; width:100%; height:50px; border: 2px solid; background: white; border-radius: 10px; font-size:18px; color:#1F2261;  "><b>Masuk</b></button>
                     <p class = "mt-10" style="margin: 50px 0 10px 0">Lupa Kata Sandi?</p>
-                    <a href="/forgot-password" style="text-align:center; margin: 0 0 0 0; color: white; text-decoration-line:underline;"><b>klik disini</b></a>
+                    <a href="/forgot-password" id="hyperReset" style="text-align:center; margin: 0 0 0 0; color: white; text-decoration-line:underline;"><b>Klik disini</b></a>
                     </center>
                   </form>
                 </div>

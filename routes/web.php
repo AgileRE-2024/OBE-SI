@@ -32,13 +32,26 @@ Route::get('/login', function () {
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/proseslogin', [LoginController::class, 'proseslogin'])->name('proseslogin');
 Route::get('/loginfailed', [LoginController::class, 'loginfailed'])->name('loginfailed');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout1');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout2');
 
-Route::group(['middleware' => 'admin'], function(){
+
+
+Route::group(['middleware' => 'role:admin'], function(){
     Route::get('/dashboard/admin', function () {
         return view('content.login.homeadmin', ['title' => 'Home OBE']);
     });
+    Route::get('/dashboard/admin', [LoginController::class, 'myprofile'])->name('profiladmin');
+});
+
+
+Route::group(['middleware' => 'role:kurikulum,admin'], function(){
+    Route::get('/dashboard/kurikulum', function () {
+        return view('content.login.homekurikulum', ['title' => 'Home OBE']);
+    });
+    
+    Route::get('/dashboard/kurikulum', [LoginController::class, 'myprofile'])->name('profil kurikulum');
+    
     Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::prefix('/pemetaan')->name('pemetaan.')->group(function () {
             // Route::get('/bk-mk', function () {
@@ -83,8 +96,6 @@ Route::group(['middleware' => 'admin'], function(){
             })->name('cpl_cpmk_mk');
         });
     
-    
-        
         Route::prefix('/data')->name('data.')->group(function () {
             Route::get('/profil-lulusan', function () {
                 return view('content.profil_lulusan', ['title' => 'Profil Lulusan']);
@@ -107,10 +118,15 @@ Route::group(['middleware' => 'admin'], function(){
             })->name('mata_kuliah');
         });
     });
-    Route::get('/dashboard/admin', [LoginController::class, 'myprofile'])->name('myprofile');
 });
 
-Route::group(['middleware' => 'user'], function(){
+Route::group(['middleware' => 'role:dosen,admin'], function(){
+    Route::get('/dashboard/dosen', function () {
+        return view('content.login.homedosen', ['title' => 'Home OBE']);
+    });
+    
+    Route::get('/dashboard/dosen', [LoginController::class, 'myprofile'])->name('profildosen');
+    
     Route::get('/dashboard/penilaian', function() {
         return view('welcome');
     })->name('penilaian');
@@ -118,8 +134,6 @@ Route::group(['middleware' => 'user'], function(){
     Route::get('/dashboard/rps', function () {
         return view('content.rps', ['title' => 'RPS']);
     })->name('rps');
-
-    Route::get('/dashboard/dosen', [LoginController::class, 'myprofile'])->name('myprofile');
 });
 
 Route::get('/ubahpw/{nip}', [LoginController::class, 'ubahpw'])->name('tampilprofile');

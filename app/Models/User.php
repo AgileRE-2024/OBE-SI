@@ -17,12 +17,8 @@ class User extends Authenticatable
     protected $primaryKey = 'nip';
     public $incrementing = false;
     protected $table = 'users';
-    protected $fillable = [
-        'nip', 'jabatanDosen','namaDosen', 'password','email', 'role'
-    ];
-    protected $hidden = [
-        'remember_token',
-    ];
+    protected $fillable = ['nip', 'jabatanDosen', 'namaDosen', 'password', 'email', 'role'];
+    protected $hidden = ['remember_token'];
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
@@ -44,5 +40,14 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(RPS::class, 'Detail_Peran_Dosen', 'nip', 'kodeRPS');
     }
-
+    public function hasRole($role)
+    {
+        $mapRoles = [
+            0 => 'dosen',
+            1 => 'kurikulum',
+            2 => 'admin'
+           ];
+           $userRoleName = $mapRoles[$this->role];
+           return $userRoleName === $role;
+    }
 }

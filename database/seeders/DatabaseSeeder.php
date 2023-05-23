@@ -100,13 +100,13 @@ class DatabaseSeeder extends Seeder
             'mat_kodeMK'=>'MK01',
         ]);
 
-        Dosen::create([
-            'nip' => '123456789987654321',
-            'jabatanDosen' => 'kps',
-            'namaDosen' => 'Rimuljo',
-            'password' => '1234',
-            'role'=>true,
-        ]);
+        // Dosen::create([
+        //     'nip' => '123456789987654321',
+        //     'jabatanDosen' => 'kps',
+        //     'namaDosen' => 'Rimuljo',
+        //     'password' => '1234',
+        //     'role'=>true,
+        // ]);
 
         RPS::create([
             'kodeRPS' => 'RPS001',

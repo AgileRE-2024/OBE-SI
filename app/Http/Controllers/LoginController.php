@@ -17,7 +17,10 @@ class LoginController extends Controller
     public function proseslogin (Request $request){
        if(Auth::attempt($request->only('nip','password'))){
             if (auth()->user()->role==1){
-                return redirect('/dashboard/admin'); 
+                return redirect('/dashboard/kurikulum'); 
+            }
+            elseif (auth()->user()->role==2){
+                return redirect('/dashboard/admin');
             }
             return redirect('/dashboard/dosen');
         }
@@ -36,12 +39,17 @@ class LoginController extends Controller
     }
     public function myprofile (){
         $data = User::where('nip',auth()->user()->nip)->first();
-        if(auth()->user()->role==0){
-            return view('content.login.homedosen',compact ('data'), [
+        if(auth()->user()->role==1){
+            return view('content.login.homekurikulum',compact ('data'), [
                 "title" => "My Profile"
             ]); 
         }
-        return view('content.login.homeadmin',compact ('data'), [
+        elseif(auth()->user()->role==2){
+            return view('content.login.homeadmin',compact ('data'), [
+                "title" => "My Profile"
+            ]); 
+        }
+        return view('content.login.homedosen',compact ('data'), [
             "title" => "My Profile"
         ]); 
     }
@@ -68,7 +76,7 @@ class LoginController extends Controller
             $user->update([
                 'password'=> Hash::make($request->new_password)
             ]);
-            return redirect('/dashboard/admin')->with('status','Kata sandi berhasil diubah');
+            return redirect('/dashboard/kurikulum')->with('status','Kata sandi berhasil diubah');
         }
             $user->update([
                 'password'=> Hash::make($request->new_password)
