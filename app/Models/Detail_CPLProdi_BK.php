@@ -8,6 +8,6 @@ class Detail_CPLProdi_BK extends Model
 {
     protected $table = 'Detail_CPLProdi_BK';
     protected $fillable = [
-        'kodeBK', 'kodeCPL'
+        'kodeCPL', 'kodeBK'
     ];
 }
