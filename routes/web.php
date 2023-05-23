@@ -29,6 +29,7 @@ use App\Http\Controllers\OrganisasiMKController;
 use App\Http\Controllers\CPLMKController;
 use App\Http\Controllers\CPMKController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\TeknikPenilaianController;
 use Barryvdh\DomPDF\PDF;
 
 /*

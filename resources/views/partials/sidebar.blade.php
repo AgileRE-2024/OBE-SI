@@ -203,12 +203,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                    <a href="#" class="nav-link"
-                        @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
-=======
                     <a href="#" class="nav-link" @if (Request::is('penilaian')) style="background-color: #F6D743; color: black;" @endif>
->>>>>>> 7608a2c5bfe3166a6467b2bbcb5fb92bbe433038
                         <p>
                             <i class="bi bi-book"></i>
                             Penilaian

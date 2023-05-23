@@ -46,6 +46,16 @@
             </div>
         </div> --}}
         <br>
+        @if (session('warning'))
+            <div class="alert alert-danger">
+                {{ session('warning') }}
+            </div>
+        @endif
+        {{-- @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif --}}
         <div class="d-flex">
             <table class="table table-bordered" style="text-align: center">
                 <thead class="table" style="background-color: lightgray">
@@ -58,8 +68,8 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 30%">Kriteria Penilaian</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 30%">Tahap Penilaian</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 30%">Instrumen Penilaian</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 60%">Action</th>
-                        {{-- <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Delete</th> --}}
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Edit</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -88,20 +98,20 @@
                             <td scope="row">
                                 {{ $tp->instrumenPenilaian }}
                             </td>
-                            <td class="text-center ">
+                            {{-- <td class="text-center ">
                                 <div class="d-flex" >
                                     <a class="btn btn-primary" href="{{ route('edit_rps.edit_teknik_penilaian', $tp->kodePenilaian) }}" style="margin-right:7pt">Edit</a>
                                 <a class="btn btn-danger" href="{{ route('edit_rps.delete_teknik_penilaian', $tp->kodePenilaian) }}">Delete</a>
                                 </div>
-                            </td>
-                            {{-- <td scope="row">
+                            </td> --}}
+                            <td scope="row">
                                 <a class="btn btn-primary"
-                                    href="{{ route('kurikulum.data.edit_teknik_penilaian', $tp->kodePenilaian) }}">Edit</a>
+                                    href="{{ route('edit_rps.edit_teknik_penilaian', $tp->kodePenilaian) }}">Edit</a>
                             </td>
                             <td scope="row">
                                 <a class="btn btn-danger"
-                                    href="{{ route('kurikulum.data.delete_teknik_penilaian', $tp->kodePenilaian) }}">Delete</a>
-                            </td> --}}
+                                    href="{{ route('edit_rps.delete_teknik_penilaian', $tp->kodePenilaian) }}">Delete</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
