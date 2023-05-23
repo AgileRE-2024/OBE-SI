@@ -57,22 +57,22 @@ class TeknikPenilaianCPMKExport implements FromCollection, WithHeadings, WithCol
                     array_push($data_sementara, $mk->kodeMK);
                     foreach ($this->list_kolom as $tp){
                         $checked = false;
-                        foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
-                            foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
-                                foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
+                        foreach ($this->list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
+                            foreach ($this->detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
+                                foreach ($this->list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
                                     if($subCpmks->SubCPMK->CPMK) {
                                         $checked = true;
                                     }
                                 }
                             }
                         }
-                if ($checked){
-                    array_push($data_sementara,'✓');
-                }
-                else{
-                    array_push($data_sementara, '');
-                }
-            }
+                        if ($checked){
+                            array_push($data_sementara,'✓');
+                        }
+                        else{
+                            array_push($data_sementara, '');
+                        }
+                    }
 
 
             array_push($data, $data_sementara);

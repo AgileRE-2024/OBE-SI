@@ -39,7 +39,41 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ( $list_mk as $mk )
                 @php
+                $iteration=0;
+                @endphp
+                @endforeach
+                {{-- @foreach ($list_cpmk as $cpmk ) --}}
+                @foreach ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK) as $detail)
+                @foreach ($list_cpmk->where('kodeCPMK', $detail->kodeCPMK) as $cpmk)
+                    <tr>
+                        @php
+                            $iteration++;
+                        @endphp
+                        <th scope="row">{{ $iteration }}</th>
+                        <th scope="row" class="text-start">{{ $cpmk->kodeCPL }}</th>
+                        <th scope="row" class="text-start">{{ $detail->kodeMK }}</th>
+                        <th scope="row" class="text-start">{{ $cpmk->kodeCPMK }}</th>
+                        @foreach ($list_kolom as $tp)
+                        @php
+                                $checked = false;
+                                foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
+                                    foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
+                                        foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
+                                            if($subCpmks->SubCPMK->CPMK) {
+                                                $checked = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            @endphp
+                                <td><input type="checkbox" name="" id="" @if($checked) checked @endif disabled></td>
+                        @endforeach    
+                        @endforeach
+                    </tr>
+                @endforeach 
+                {{-- @php
                     $iteration=0;
                 @endphp
                 @foreach ($list_cpl as $cpl)
@@ -71,7 +105,7 @@
                     </tr>
                 @endforeach
                 @endforeach
-                @endforeach 
+                @endforeach  --}}
             </tbody>
         </table>
 
