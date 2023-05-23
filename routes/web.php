@@ -83,7 +83,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             return view('welcome');
         })->name('cpl_bk');
 
-        Route::get('/cpl-bk-mk', [PemetaanCPLBKMK::class, 'index', 'title' => 'Pemetaan CPL BK MK'])->name('cpl_bk_mk');
+        Route::get('/cpl-bk-mk',[PemetaanCPLBKMK::class,'index','title' => 'Pemetaan CPL BK MK'])->name('cpl_bk_mk');
+        Route::get('/cpl-bk-mk/exportPdf', [PemetaanCPLBKMK::class, 'exportPdf'])->name('exportPdf');
+        Route::get('/cpl-bk-mk/exportExcel', [PemetaanCPLBKMK::class, 'exportExcel'])->name('exportExcel');
 
         Route::get('/susunan-mata-kuliah', [SusunanMKController::class, 'index'])->name('susunan_mata_kuliah');
 
@@ -169,6 +171,14 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::put('/editMataKuliah/{mk}', [MataKuliahController::class, 'updateMataKuliah'])->name('update_mata_kuliah');
         Route::get('/deleteMataKuliah/{mk}', [MataKuliahController::class, 'deleteMataKuliah'])->name('delete_mata_kuliah');
         Route::get('/mata_kuliah/export/{type}', [MataKuliahController::class, 'export'])->name('export_mata_kuliah');
+
+        // Route::get('/teknik_penilaian', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
+        // Route::get('/addTeknikPenilaian', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
+        // Route::post('/addTeknikPenilaian', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
+        // Route::get('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
+        // Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
+        // Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
+        // Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
     });
 });
 Route::get('/dashboard/penilaian', function () {
@@ -185,3 +195,12 @@ Route::get('/dashboard/rps', function () {
 })->name('rps');
 
 Route::get('/generate-pdf', 'PDFController@generatePDF');
+Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
+        Route::get('/teknik_penilaian', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
+        Route::get('/addTeknikPenilaian', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
+        Route::post('/addTeknikPenilaian', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
+        Route::get('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
+        Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
+        Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
+        Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
+});
