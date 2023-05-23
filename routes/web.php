@@ -140,8 +140,6 @@ Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->na
 Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
 Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
 Route::post('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
-
-Route::get('/dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
-Route::put('/dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
-Route::get('/dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
-
+Route::get('/dashboard/rps/minggu_rps/edit_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
+Route::put('/dashboard/rps/minggu_rps/edit_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
+Route::delete('/dashboard/rps/minggu_rps/delete_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');

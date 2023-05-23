@@ -211,12 +211,16 @@
                                 {{-- {{ $teknik_penilaian['teknikPenilaian'] ?? '-' }} --}}
                             </td>
                             <td scope="row">
-                                <a class="btn btn-primary"
-                                    href="{{ route('edit_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Edit</a>
+                                <a class="btn btn-primary" href="{{ route('edit_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Edit</a>
                             </td>
                             <td scope="row">
-                                <a class="btn btn-danger"
-                                    href="{{ route('delete_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Delete</a>
+                                <form action="{{ route('delete_minggu_rps', $minggu_rps->kodeMingguRPS) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="hidden" name="kodeRPS" value={{ $rps->kodeRPS }}>
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                                </form>
+                                {{-- <a class="btn btn-danger" href="{{ route('delete_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Delete</a> --}}
                             </td>
                         </tr>
                     @endforeach
