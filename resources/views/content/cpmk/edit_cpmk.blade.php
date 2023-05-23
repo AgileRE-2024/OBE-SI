@@ -17,7 +17,7 @@
                         @error('kodeCPMK')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK" value="{{ old('kodeCPMK', $cpmk->kodeCPMK) }}" disabled>
+                        <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK" value="{{ old('kodeCPMK', $cpmk->kodeCPMK) }}">
                     </div>
 
                     <div class="form-group">

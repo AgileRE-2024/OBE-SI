@@ -16,7 +16,7 @@
                         @error('kodeCPMK')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK">
+                        <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK" title="Misal CPMK001">
                     </div>
 
                     <div class="form-group">

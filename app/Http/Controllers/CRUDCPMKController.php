@@ -35,7 +35,7 @@ class CRUDCPMKController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'kodeCPMK' => 'required|unique:cpmk,kodeCPMK',
+            'kodeCPMK' => 'required|unique:cpmk,kodeCPMK|regex:/^CPMK\d{3}$/',
             'deskripsi' => 'required',
             'kodeCPL' => 'required'
         ]);
@@ -44,31 +44,12 @@ class CRUDCPMKController extends Controller
             // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
         }
-    
-        $data = str_getcsv($request->deskripsi, ",");
-        // $count = 0;
-        
-        foreach ($data as $cpmk) {
-            $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
-            
-            if ($lastCpmk) {
-                $lastId = intval(substr($lastCpmk->kodeCPMK, 4));
-                $nextId = 'CPMK'.str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
-            } else {
-                $nextId = 'CPMK001';
-            }
+        CPMK::create([
+            'kodeCPMK' => $request->kodeCPMK,
+            'deskripsiCPMK' => $request->deskripsi,
+            'kodeCPL' => $request->kodeCPL
+        ]);
 
-            CPMK::create([
-                'kodeCPMK' => $nextId,
-                'deskripsiCPMK' => $cpmk,
-                'kodeCPL' => $request->kodeCPL
-            ]);
-    
-            // $count++;
-        }
-    
-        // Cpmk::insert($data);
-    
         return redirect()->route('kurikulum.data.cpmk')
             ->with('success', 'CPMK berhasil dibuat.');
     }
@@ -96,20 +77,36 @@ class CRUDCPMKController extends Controller
      */
     public function update(Request $request, $cpmk)
     {
-        $validator = Validator::make($request->all(), [
-            'deskripsi' => 'required',
-            'kodeCPL' => 'required'
-        ]);
-
+        if ($cpmk == $request->kodeCPMK) {
+            $validator = Validator::make($request->all(), [
+                'deskripsi' => 'required',
+                'kodeCPL' => 'required'
+            ]);
+        } else {
+            $validator = Validator::make($request->all(), [
+                'kodeCPMK' => 'required|unique:cpmk,kodeCPMK|regex:/^CPMK\d{3}$/',
+                'deskripsi' => 'required',
+                'kodeCPL' => 'required'
+            ]);
+        }
+        
         if ($validator->fails()) {
             // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        CPMK::where('kodeCPMK', $cpmk)->first()->update([
-            'deskripsiCPMK' => $request->deskripsi,
-            'kodeCPL' => $request->kodeCPL
-        ]);
+        if ($cpmk == $request->kodeCPMK) {
+            CPMK::where('kodeCPMK', $cpmk)->first()->update([
+                'deskripsiCPMK' => $request->deskripsi,
+                'kodeCPL' => $request->kodeCPL
+            ]);
+        } else {
+            CPMK::where('kodeCPMK', $cpmk)->first()->update([
+                'kodeCPMK' => $request->kodeCPMK,
+                'deskripsiCPMK' => $request->deskripsi,
+                'kodeCPL' => $request->kodeCPL
+            ]);
+        }
 
         return redirect()->route('kurikulum.data.cpmk')
             ->with('success', 'CPMK berhasil diedit.');
