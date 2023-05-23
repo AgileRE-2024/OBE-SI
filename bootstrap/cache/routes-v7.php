@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::k36pJJLQQKsVGSXq',
+            '_route' => 'generated::rEKe81LJiaaLtjxu',
           ),
           1 => NULL,
           2 => 
@@ -217,7 +217,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::14dHMNaIf0PHAeMz',
+            '_route' => 'generated::S3OMwJgNbE4Pu5sC',
           ),
           1 => NULL,
           2 => 
@@ -1086,6 +1086,62 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/kurikulum/data/cpmk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.cpmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/data/addCPMK' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.add_cpmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.store_cpmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/dashboard/dosen' => 
       array (
         0 => 
@@ -1152,7 +1208,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::qpHiBxf9vTH7OHdv',
+            '_route' => 'generated::8o7SKSAlLpMbBQO7',
           ),
           1 => NULL,
           2 => 
@@ -1224,7 +1280,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:165)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:202)|edit_cpmk/([^/]++)(?|(*:231))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:282))|CPL(?|Dikti/([^/]++)(?|(*:314))|Prodi/([^/]++)(?|(*:340)))|BahanKajian/([^/]++)(?|(*:373))|MataKuliah/([^/]++)(?|(*:404)))|delete(?|ProfilLulusan/([^/]++)(*:445)|CPL(?|Dikti/([^/]++)(*:473)|Prodi/([^/]++)(*:495))|BahanKajian/([^/]++)(*:524)|MataKuliah/([^/]++)(*:551))|profilLulusan/export/([^/]++)(*:589)|cpl_(?|dikti/export/([^/]++)(*:625)|prodi/export/([^/]++)(*:654))|bahan_kajian/export/([^/]++)(*:691)|mata_kuliah/export/([^/]++)(*:726)))|/u(?|bahpw/([^/]++)(*:755)|pdateprofile/([^/]++)(*:784))|/reset\\-password/([^/]++)(*:818))/?$}sDu',
+      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:165)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:202)|edit_cpmk/([^/]++)(?|(*:231))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:282))|CP(?|L(?|Dikti/([^/]++)(?|(*:317))|Prodi/([^/]++)(?|(*:343)))|MK/([^/]++)(?|(*:367)))|BahanKajian/([^/]++)(?|(*:400))|MataKuliah/([^/]++)(?|(*:431)))|delete(?|ProfilLulusan/([^/]++)(*:472)|CP(?|L(?|Dikti/([^/]++)(*:503)|Prodi/([^/]++)(*:525))|MK/([^/]++)(*:545))|BahanKajian/([^/]++)(*:574)|MataKuliah/([^/]++)(*:601))|profilLulusan/export/([^/]++)(*:639)|cp(?|l_(?|dikti/export/([^/]++)(*:678)|prodi/export/([^/]++)(*:707))|mk/export/([^/]++)(*:734))|bahan_kajian/export/([^/]++)(*:771)|mata_kuliah/export/([^/]++)(*:806)))|/u(?|bahpw/([^/]++)(*:835)|pdateprofile/([^/]++)(*:864))|/reset\\-password/([^/]++)(*:898))/?$}sDu',
     ),
     3 => 
     array (
@@ -1431,7 +1487,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      314 => 
+      317 => 
       array (
         0 => 
         array (
@@ -1473,7 +1529,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      340 => 
+      343 => 
       array (
         0 => 
         array (
@@ -1515,7 +1571,49 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      373 => 
+      367 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.edit_cpmk',
+          ),
+          1 => 
+          array (
+            0 => 'cpmk',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.update_cpmk',
+          ),
+          1 => 
+          array (
+            0 => 'cpmk',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      400 => 
       array (
         0 => 
         array (
@@ -1557,7 +1655,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      404 => 
+      431 => 
       array (
         0 => 
         array (
@@ -1599,7 +1697,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      445 => 
+      472 => 
       array (
         0 => 
         array (
@@ -1622,7 +1720,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      473 => 
+      503 => 
       array (
         0 => 
         array (
@@ -1645,7 +1743,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      495 => 
+      525 => 
       array (
         0 => 
         array (
@@ -1668,7 +1766,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      524 => 
+      545 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.delete_cpmk',
+          ),
+          1 => 
+          array (
+            0 => 'cpmk',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      574 => 
       array (
         0 => 
         array (
@@ -1691,7 +1812,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      551 => 
+      601 => 
       array (
         0 => 
         array (
@@ -1714,7 +1835,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      589 => 
+      639 => 
       array (
         0 => 
         array (
@@ -1737,7 +1858,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      625 => 
+      678 => 
       array (
         0 => 
         array (
@@ -1760,7 +1881,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      654 => 
+      707 => 
       array (
         0 => 
         array (
@@ -1783,7 +1904,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      691 => 
+      734 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.data.export_cpmk',
+          ),
+          1 => 
+          array (
+            0 => 'type',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      771 => 
       array (
         0 => 
         array (
@@ -1806,7 +1950,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      726 => 
+      806 => 
       array (
         0 => 
         array (
@@ -1829,7 +1973,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      755 => 
+      835 => 
       array (
         0 => 
         array (
@@ -1852,7 +1996,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      784 => 
+      864 => 
       array (
         0 => 
         array (
@@ -1874,7 +2018,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      818 => 
+      898 => 
       array (
         0 => 
         array (
@@ -2160,7 +2304,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::k36pJJLQQKsVGSXq' => 
+    'generated::rEKe81LJiaaLtjxu' => 
     array (
       'methods' => 
       array (
@@ -2183,7 +2327,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::k36pJJLQQKsVGSXq',
+        'as' => 'generated::rEKe81LJiaaLtjxu',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2382,7 +2526,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::14dHMNaIf0PHAeMz' => 
+    'generated::S3OMwJgNbE4Pu5sC' => 
     array (
       'methods' => 
       array (
@@ -2420,7 +2564,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::14dHMNaIf0PHAeMz',
+        'as' => 'generated::S3OMwJgNbE4Pu5sC',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5005,6 +5149,270 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'kurikulum.data.cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/cpmk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@index',
+        'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@index',
+        'as' => 'kurikulum.data.cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.add_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/addCPMK',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@create',
+        'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@create',
+        'as' => 'kurikulum.data.add_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.store_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'dashboard/kurikulum/data/addCPMK',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@store',
+        'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@store',
+        'as' => 'kurikulum.data.store_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.edit_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/editCPMK/{cpmk}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@edit',
+        'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@edit',
+        'as' => 'kurikulum.data.edit_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.update_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'dashboard/kurikulum/data/editCPMK/{cpmk}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@update',
+        'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@update',
+        'as' => 'kurikulum.data.update_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.delete_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/deleteCPMK/{cpmk}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@destroy',
+        'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@destroy',
+        'as' => 'kurikulum.data.delete_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.data.export_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/data/cpmk/export/{type}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@export',
+        'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@export',
+        'as' => 'kurikulum.data.export_cpmk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/data',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'profildosen' => 
     array (
       'methods' => 
@@ -5126,7 +5534,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::qpHiBxf9vTH7OHdv' => 
+    'generated::8o7SKSAlLpMbBQO7' => 
     array (
       'methods' => 
       array (
@@ -5148,7 +5556,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::qpHiBxf9vTH7OHdv',
+        'as' => 'generated::8o7SKSAlLpMbBQO7',
       ),
       'fallback' => false,
       'defaults' => 
@@ -5252,9 +5660,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:289:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:71:"function(){
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
     return \\view(\'content.login.auth.forgot-password\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000058f0000000000000000";}";s:4:"hash";s:44:"MJCI9ZDHF3az2P/2nrbAU2O1kSm6zuPKagBxC99vhyc=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005960000000000000000";}";s:4:"hash";s:44:"u1cWUWL+h/K//+V9bOrFML5PxVY24Yfb9xnmxQjSqPU=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -5290,17 +5698,17 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:637:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:418:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:627:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:408:"function (\\Illuminate\\Http\\Request $request) {
     $request->validate([\'email\' => \'required|email\']);
- 
+
     $status = \\Illuminate\\Support\\Facades\\Password::sendResetLink(
         $request->only(\'email\')
     );
- 
+
     return $status === \\Illuminate\\Support\\Facades\\Password::RESET_LINK_SENT
-            ? \\back()->with([\'status\' => \\__($status)])
-            : \\back()->withErrors([\'email\' => \\__($status)]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005910000000000000000";}";s:4:"hash";s:44:"MdIqJngpxzvmbxSA6fNp4abtQE98g59/tzlCci/sDDY=";}}',
+        ? \\back()->with([\'status\' => \\__($status)])
+        : \\back()->withErrors([\'email\' => \\__($status)]);
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005980000000000000000";}";s:4:"hash";s:44:"7OJNEFsgH2J1r49HjKP2P2TDExMVGK18gxBVHPQ2CJA=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -5339,7 +5747,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:317:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
     return \\view(\'content.login.auth.reset-password\', [\'token\' => $token]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005930000000000000000";}";s:4:"hash";s:44:"BbM8oEXbnWHNLSogpSxKEoraL3UiRa7oRSC7nCpBw2I=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000059a0000000000000000";}";s:4:"hash";s:44:"Q85YkedlYlhK9e55iVYgNKiMTY5DpNBolzPVAMtoxns=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -5375,30 +5783,30 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1141:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:922:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1121:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:902:"function (\\Illuminate\\Http\\Request $request) {
     $request->validate([
         \'token\' => \'required\',
         \'email\' => \'required|email\',
         \'password\' => \'required|min:8|confirmed\',
     ]);
- 
+
     $status = \\Illuminate\\Support\\Facades\\Password::reset(
         $request->only(\'email\', \'password\', \'password_confirmation\', \'token\'),
         function ($user, $password) {
             $user->forceFill([
                 \'password\' => \\Illuminate\\Support\\Facades\\Hash::make($password)
             ])->setRememberToken(\\Illuminate\\Support\\Str::random(60));
- 
+
             $user->save();
- 
+
             \\event(new \\Illuminate\\Auth\\Events\\PasswordReset($user));
         }
     );
- 
+
     return $status === \\Illuminate\\Support\\Facades\\Password::PASSWORD_RESET
-                ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
-                : \\back()->withErrors([\'email\' => [\\__($status)]]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005950000000000000000";}";s:4:"hash";s:44:"jHZvyNUbd9L5y2x5eDmGdFggBqH90NnuNesLMHqbSuw=";}}',
+        ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
+        : \\back()->withErrors([\'email\' => [\\__($status)]]);
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000059c0000000000000000";}";s:4:"hash";s:44:"TxZviGetCRRH0h/kgT4n7/Ttj7ZYFypCyta0rluenmE=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
