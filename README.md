@@ -2,7 +2,7 @@
 Project Kuliah Pembangunan Perangkat Lunak
 
 - Penjelasan umum deskripsi project <br>
-  asdadsadada
+  Project ini merupakan
 - Petunjuk Instalasi
     1. Masuk ke dalam direktori htdocs dalam folder XAMPP dan membuat folder baru
     2. Masuk ke dalam direktori folder baru tersebut
