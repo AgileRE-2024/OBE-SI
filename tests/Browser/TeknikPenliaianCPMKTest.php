@@ -14,8 +14,16 @@ class TeknikPenliaianCPMKTest extends DuskTestCase
     public function testExample(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSee('Laravel');
+            $browser->visit('http://127.0.0.1:8000/dashboard/penilaian/penilaiancpmk')
+                    ->pause(1000);
+            
+            $browser->click('#exportExcelButton')
+                    ->pause(5000)
+                    ->assertPathIs('/dashboard/penilaian/cetak-excel-tpcpmk');
+
+            $browser->click('#exportPDFButton')
+                    ->pause(5000)
+                    ->assertPathIs('/dashboard/penilaian/cetak-pdf-tpcpmk');
         });
     }
 }
