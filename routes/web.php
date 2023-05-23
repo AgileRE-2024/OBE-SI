@@ -25,6 +25,7 @@ use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\CPLMKController;
 use App\Http\Controllers\CPMKController;
+use App\Http\Controllers\CRUDCPMKController;
 use App\Http\Controllers\PDFController;
 use Barryvdh\DomPDF\PDF;
 
@@ -160,6 +161,12 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::put('/editMataKuliah/{mk}', [MataKuliahController::class, 'updateMataKuliah'])->name('update_mata_kuliah');
         Route::get('/deleteMataKuliah/{mk}', [MataKuliahController::class, 'deleteMataKuliah'])->name('delete_mata_kuliah');
         Route::get('/mata_kuliah/export/{type}', [MataKuliahController::class, 'export'])->name('export_mata_kuliah');
+
+        Route::get('/cpmk', [CRUDCPMKController::class, 'index'])->name('cpmk');
+        Route::get('/addCPMK', [CRUDCPMKController::class, 'create'])->name('add_cpmk');
+        Route::post('/addCPMK', [CRUDCPMKController::class, 'store'])->name('store_cpmk');
+        Route::get('/editCPMK/{cpmk}', [CRUDCPMKController::class, 'edit'])->name('edit_cpmk');
+        Route::put('/editCPMK/{cpmk}', [CRUDCPMKController::class, 'update'])->name('update_cpmk');
     });
 });
 Route::get('/dashboard/penilaian', function () {

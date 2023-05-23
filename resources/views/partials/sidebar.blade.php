@@ -88,6 +88,15 @@
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('kurikulum.data.cpmk') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.data.cpmk')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            CPMK
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li id="pemetaan" class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">
