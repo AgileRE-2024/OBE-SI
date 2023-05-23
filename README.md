@@ -3,9 +3,20 @@ Project Kuliah Pembangunan Perangkat Lunak
 
 - Penjelasan umum deskripsi project <br>
   asdadsadada
-- Petunjuk Instalasi 
+- Petunjuk Instalasi
+    1. Masuk ke dalam direktori htdocs dalam folder XAMPP dan membuat folder baru
+    2. Masuk ke dalam direktori folder baru tersebut
+    3. Klik kanan dan pilih Open in Terminal
+    4. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git" 
+    5. Selanjutnya, ketik "composer update"
+    6. Lalu, ketik "cp .env.example .env"
+    7. Lalu, ketik "php artisan key:generate"
+    8. Ketik "php artisan migrate"
+    9. Ketik "php artisan serve"
+    10. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000/dashboard/kurikulum/data/profil-lulusan"
 - Langkah-langkah Penggunaan
 - Prosedur untuk kontribusi github
+- 
 - Informasi lain (anggota team) <br>
 <table>
                 <thead style="background-color: lightgray">
