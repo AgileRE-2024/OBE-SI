@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\CplProdi;
-use App\Models\CplDikti;
-use App\Models\Detail_CPLSN_CPLProdi;
+use App\Models\Cpl_SN_Dikti;
+use App\Models\Cpl_Prodi;
+use App\Models\Detail_SN_CPLProdi;
 use Dompdf\Dompdf;
 use App\Exports\CplDiktiCplProdiExport as ExportCPLDiktiCPLProdi;
 use Maatwebsite\Excel\Facades\Excel;
@@ -18,11 +18,11 @@ class PemetaanCplDiktiCplProdiController extends Controller
 
 
         // Return views
-        return view('Matriks.data', [
+        return view('content.pemetaan_sn_cplprodi.data', [
             'title' => 'Pemetaan CPLSNDikti CPL Prodi',
-            'cpldikti_list' => CplDikti::all(),
-            'cplprodi_list' => CplProdi::all(),
-            'pemetaan' => Detail_CPLSN_CPLProdi::all(),
+            'cpldikti_list' => Cpl_SN_Dikti::all(),
+            'cplprodi_list' => Cpl_Prodi::all(),
+            'pemetaan' => Detail_SN_CPLDikti::all(),
         ]);
     }
 
@@ -38,7 +38,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
     
     public function update(Request $request)
     {
-        foreach (Detail_CPLSN_CPLProdi::all() as $key => $pemetaan) {
+        foreach (Detail_SN_CPLDikti::all() as $key => $pemetaan) {
             if (!collect($request)->contains($pemetaan->kode_cpldikti . '&' . $pemetaan->kode_cplprodi)) {
                 $pemetaan->delete();
             } 
@@ -46,8 +46,8 @@ class PemetaanCplDiktiCplProdiController extends Controller
         foreach ($request->request as $key => $param) {
             if (strstr($param, '&')) {
                 $foreignList = explode('&', $param);
-                if (Detail_CPLSN_CPLProdi::all()->where('kode_cpldikti', $foreignList[0])->where('kode_cplprodi', '===', $foreignList[1])->count() == 0) {
-                    Detail_CPLSN_CPLProdi::create([
+                if (Detail_SN_CPLDikti::all()->where('kode_cpldikti', $foreignList[0])->where('kode_cplprodi', '===', $foreignList[1])->count() == 0) {
+                    Detail_SN_CPLDikti::create([
                         'kode_cpldikti' => $foreignList[0],
                         'kode_cplprodi' => $foreignList[1],
                     ]);
@@ -59,11 +59,11 @@ class PemetaanCplDiktiCplProdiController extends Controller
     public function table()
     {
         // Return views
-        return view('Matriks.tableMatriksCPLDiktiCPLProdi', [
+        return view('content.pemetaan_sn_cplprodi.tableMatriksCPLDiktiCPLProdi', [
             'title' => 'Pemetaan CPLDikti CPLProdi',
-            'cpldikti_list' => CplDikti::all(),
-            'cplprodi_list' => CplProdi::all(),
-            'pemetaan' => Detail_CPLSN_CPLProdi::all(),
+            'cpldikti_list' => Cpl_SN_Dikti::all(),
+            'cplprodi_list' => Cpl_Prodi::all(),
+            'pemetaan' => Detail_SN_CPLDikti::all(),
         ]);
     }
 
@@ -82,9 +82,9 @@ class PemetaanCplDiktiCplProdiController extends Controller
         date_default_timezone_set('Asia/Jakarta');
         $view = view('Matriks.Export', [
             'title' => 'Pemetaan CPLDikti CPLProdi',
-            'cpldikti_list' => CplDikti::all(),
-            'cplprodi_list' => CplProdi::all(),
-            'pemetaan' => Detail_CPLSN_CPLProdi::all(),
+            'cpldikti_list' => Cpl_SN_Dikti::all(),
+            'cplprodi_list' => Cpl_Prodi::all(),
+            'pemetaan' => Detail_SN_CPLDikti::all(),
         ]);
         $date_time = date('Y_m_d_H_i_s');
 
@@ -101,7 +101,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
             ]);
         } else {
             $filename = "Pemetaan CPLDikti dan CPLProdi_" . $date_time . ".xlsx";
-            return Excel::download(new ExportCPLDiktiCPLProdi(CplDikti::all(), CplProdi::all(), Detail_CPLSN_CPLProdi::all()),$filename);
+            return Excel::download(new ExportCPLDiktiCPLProdi(Cpl_SN_Dikti::all(), Cpl_Prodi::all(), Detail_SN_CPLDikti::all()),$filename);
         }
     }
 
@@ -111,7 +111,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
      * @param  \App\Models\PemetaanPlCpl  $pemetaanPlCpl
      * @return \Illuminate\Http\Response
      */
-    public function show(Detail_CPLSN_CPLProdi $Detail_CPLSN_CPLProdi)
+    public function show(Detail_SN_CPLProdi $Detail_SN_CPLProdi)
     {
         //
     }
@@ -122,12 +122,12 @@ class PemetaanCplDiktiCplProdiController extends Controller
      * @param  \App\Models\PemetaanPlCpl  $pemetaanPlCpl
      * @return \Illuminate\Http\Response
      */
-    public function edit(Detail_CPLSN_CPLProdi $Detail_CPLSN_CPLProdi)
+    public function edit(Detail_SN_CPLProdi $Detail_SN_CPLProdi)
     {
         return view('Matriks.edit', [
-            'cpldikti_list' => CplDikti::all(),
-            'cplprodi_list' => CplProdi::all(),
-            'pemetaan' => Detail_CPLSN_CPLProdi::all(),
+            'cpldikti_list' => Cpl_SN_Dikti::all(),
+            'cplprodi_list' => Cpl_Prodi::all(),
+            'pemetaan' => Detail_SN_CPLDikti::all(),
         ]);
     }
 

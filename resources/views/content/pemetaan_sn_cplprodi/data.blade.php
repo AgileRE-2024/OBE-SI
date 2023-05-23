@@ -37,7 +37,7 @@
                             @foreach ($cplprodi_list as $cplprod)
                             <th scope="col">
                                 <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                title="{{ $cplprod->deskripsi }}">{{ $cplprod->kode_cplprodi }}</span>
+                                title="{{ $cplprod->deskripsiCPL }}">{{ $cplprod->kodeCPL }}</span>
                                 @endforeach
                             </th> 
                         </tr>
@@ -45,23 +45,23 @@
                     <tbody>
                         @foreach ($cpldikti_list as $cpldik)
                             <tr>
-                                <th scope="row" @if ($pemetaan->where('kode_cpldikti', '===', $cpldik->kode_cpldikti)->count() == 0) style="background-color: yellow;" @endif>
+                                <th scope="row" @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow;" @endif>
                                     {{ $loop->iteration }}</th>
-                                <th scope="row" @if ($pemetaan->where('kode_cpldikti', '===', $cpldik->kode_cpldikti)->count() == 0) style="background-color: yellow;" @endif>
-                                    {{ $cpldik->kode_cpldikti }}</th>
+                                <th scope="row" @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow;" @endif>
+                                    {{ $cpldik->kodeCPLSN }}</th>
                                 <th scope="row" class="text-start"
-                                    @if ($pemetaan->where('kode_cpldikti', '===', $cpldik->kode_cpldikti)->count() == 0) style="background-color: yellow;" @endif>
-                                    {{ $cpldik->deskripsi }}</th>
+                                    @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow;" @endif>
+                                    {{ $cpldik->deskripsiSN }}</th>
                                 @foreach ($cplprodi_list as $cplprod)
                                 <td @if (
-                                    $pemetaan->where('kode_cplprodi', '===', $cplprod->kode_cplprodi)->count() == 0 ||
-                                        $pemetaan->where('kode_cpldikti', '===', $cpldik->kode_cpldikti)->count() == 0) style="background-color: yellow;" @endif>
+                                    $pemetaan->where('kodeCPL', '===', $cplprod->kodeCPL)->count() == 0 ||
+                                        $pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow;" @endif>
                                     <input type="checkbox"
-                                        id="checkbox_{{ $cpldik->kode_cpldikti }}-{{ $cplprod->kode_cplprodi }}" 
-                                        onclick="updateTable('{{ $cpldik->kode_cpldikti }}-{{ $cplprod->kode_cplprodi }}')"
-                                        name="checkbox_{{ $cpldik->kode_cpldikti }}-{{ $cplprod->kode_cplprodi }}"
-                                        value="{{ $cpldik->kode_cpldikti }}&{{ $cplprod->kode_cplprodi }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kode_cpldikti', '===', $cpldik->kode_cpldikti)->where('kode_cplprodi', '===', $cplprod->kode_cplprodi)->count()) checked @endif>
+                                        id="checkbox_{{ $cpldik->kodeCPLSN }}-{{ $cplprod->kodeCPL }}" 
+                                        onclick="updateTable('{{ $cpldik->kodeCPLSN }}-{{ $cplprod->kodeCPL }}')"
+                                        name="checkbox_{{ $cpldik->kodeCPLSN }}-{{ $cplprod->kodeCPL }}"
+                                        value="{{ $cpldik->kodeCPLSN }}&{{ $cplprod->kodeCPL }}" style="width:26px;height:26px;"
+                                        @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif>
                                 </td>
                                 @endforeach
                             </tr>
