@@ -61,10 +61,6 @@
         }
     },
     "config": {
-        
-        "platform-check": {
-            "php": "7.4.21"
-        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,

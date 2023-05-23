@@ -26,6 +26,7 @@ use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\CPLMKController;
 use App\Http\Controllers\CPMKController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\TahapPenilaianController;
 use Barryvdh\DomPDF\PDF;
 
 /*
@@ -162,9 +163,12 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/mata_kuliah/export/{type}', [MataKuliahController::class, 'export'])->name('export_mata_kuliah');
     });
 });
-Route::get('/dashboard/penilaian', function () {
-    return view('welcome');
-})->name('penilaian');
+Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
+    Route::prefix('/tahap-penilaian')->name('tahap_penilaian.')->group(function () {
+        Route::get('/',[TahapPenilaianController::class, 'index'])->name('index');
+        Route::get('/export/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
+    });
+});
 
 Route::get('/dashboard/rps', function () {
     return view('content.rps', [
