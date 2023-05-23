@@ -7,7 +7,7 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('kurikulum.data.store_teknik_penilaian') }}">
+                <form method="post" action="{{ route('edit_rps.store_teknik_penilaian') }}">
                     @csrf
                     <div class="form-group">
                         <label>Kode Teknik Penilaian</label>
@@ -47,9 +47,9 @@
                         @enderror
                         <select name="tahapPenilaian" id='tahapPenilaian' class="form-select">
                             <option value="" selected disabled>-- Pilih Tahap Penilaian --</option>
-                            <option value="1">Awal Semester</option>
-                            <option value="2">Tengah Semester</option>
-                            <option value="3">Akhir Semester</option>
+                            <option value="Awal Semester">Awal Semester</option>
+                            <option value="Tengah Semester">Tengah Semester</option>
+                            <option value="Akhir Semester">Akhir Semester</option>
                         </select>
                     </div>
 

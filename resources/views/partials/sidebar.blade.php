@@ -79,7 +79,7 @@
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{ route('kurikulum.data.teknik_penilaian') }}" class="nav-link"
                                         @if (URL::current() === route('kurikulum.data.teknik_penilaian')) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
@@ -87,7 +87,7 @@
                                             Teknik Penilaian
                                         </p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{ route('kurikulum.data.mata_kuliah') }}" class="nav-link"
                                         @if (URL::current() === route('kurikulum.data.mata_kuliah')) style="background-color: #989898; color: black;" @endif>

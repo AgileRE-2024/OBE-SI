@@ -89,7 +89,7 @@ class TeknikPenilaianController extends Controller
             'kodeRPS' => $request->kodeRPS,
         ]);
 
-        return redirect()->route('kurikulum.data.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil ditambahkan');
+        return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil ditambahkan');
     }
 
     public function updateTeknikPenilaian(Request $request, $tp)
@@ -125,13 +125,13 @@ class TeknikPenilaianController extends Controller
         ]);
         $tp->save();
 
-        return redirect()->route('kurikulum.data.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil diupdate');
+        return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil diupdate');
     }
 
-    public function deleteBahanKajian($tp)
+    public function deleteTeknikPenilaian($tp)
     {
         $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
         $tp->delete();
-        return redirect()->route('kurikulum.data.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil dihapus');
+        return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil dihapus');
     }
 }

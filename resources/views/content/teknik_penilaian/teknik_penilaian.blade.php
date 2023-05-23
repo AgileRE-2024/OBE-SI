@@ -10,18 +10,18 @@
         </div>
         <div class="d-flex justify-content-start pt-2">
             <div>
-                <a class="btn btn-success" href="{{ route('kurikulum.data.add_teknik_penilaian') }}"><i
+                <a class="btn btn-success" href="{{ route('edit_rps.add_teknik_penilaian') }}"><i
                         class="bi bi-plus-square">
                     </i>Tambah</a>
             </div>
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_teknik_penilaian', ['pdf']) }}"><i
+                <a class="btn btn-outline-danger" href="{{ route('edit_rps.export_teknik_penilaian', ['pdf']) }}"><i
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" href="{{ route('kurikulum.data.export_teknik_penilaian', ['excel']) }}"><i
+                <a class="btn btn-success" href="{{ route('edit_rps.export_teknik_penilaian', ['excel']) }}"><i
                         class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
@@ -70,8 +70,8 @@
                             </td>
                             <td class="text-center ">
                                 <div class="d-flex" >
-                                    <a class="btn btn-primary" href="{{ route('kurikulum.data.edit_teknik_penilaian', $tp->kodePenilaian) }}" style="margin-right:7pt">Edit</a>
-                                <a class="btn btn-danger" href="{{ route('kurikulum.data.delete_teknik_penilaian', $tp->kodePenilaian) }}">Delete</a>
+                                    <a class="btn btn-primary" href="{{ route('edit_rps.edit_teknik_penilaian', $tp->kodePenilaian) }}" style="margin-right:7pt">Edit</a>
+                                <a class="btn btn-danger" href="{{ route('edit_rps.delete_teknik_penilaian', $tp->kodePenilaian) }}">Delete</a>
                                 </div>
                             </td>
                             {{-- <td scope="row">
