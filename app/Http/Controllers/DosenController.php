@@ -36,7 +36,7 @@ class DosenController extends Controller
     $users = User::all();
     $rpss = RPS::all();
 
-    return view('dosen.create', [ 'title' => 'Tambah Profil Lulusan','details' => $details, 'users'=>$users, 'rpss'=>$rpss]);
+    return view('dosen.create', [ 'title' => 'Tambah Peran Dosen','details' => $details, 'users'=>$users, 'rpss'=>$rpss]);
 }
 
 

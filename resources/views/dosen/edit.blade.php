@@ -87,12 +87,25 @@
                         @endforeach
                     </select>
                 </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label>Detail Peran</label>
                         @error('peranDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <textarea name="peranDosen" row="3" class="form-control" placeholder="Detail Peran">{{ old('peranDosen') ? old('peranDosen') : $detail->peranDosen }}</textarea>
+                    </div> --}}
+                    <div class="form-group">
+                        <label>Detail Peran</label>
+                        @error('peranDosen')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <select name="peranDosen" id='peranDosen' class="form-select">
+                            <option value="" selected disabled>-- Pilih Peran Dosen --
+                            </option>
+                            <option value="1">Dosen Pengembang RPS</option>
+                            <option value="2">Koordinator BK</option>
+                            <option value="3">Dosen Pengampu</option>
+                        </select>
                     </div>
 
                     <div class="form-group pt-4">

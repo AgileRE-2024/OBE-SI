@@ -48,7 +48,13 @@
                         @error('deskripsi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea name="deskripsi" row="3" class="form-control" placeholder="Detail Peran"></textarea>
+                        <select name="deskripsi" id='deskripsi' class="form-select">
+                            <option value="" selected disabled>-- Pilih Peran Dosen --
+                            </option>
+                            <option value="1">Dosen Pengembang RPS</option>
+                            <option value="2">Koordinator BK</option>
+                            <option value="3">Dosen Pengampu</option>
+                        </select>
                     </div>
 
                     <div class="form-group pt-4">
