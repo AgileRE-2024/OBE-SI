@@ -14,6 +14,7 @@ Project Kuliah Pembangunan Perangkat Lunak
     8. Ketik "php artisan migrate"
     9. Ketik "php artisan serve"
     10. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000/dashboard/kurikulum/data/profil-lulusan"
+    11. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 - Langkah-langkah Penggunaan
 - Prosedur untuk kontribusi github
 - 
