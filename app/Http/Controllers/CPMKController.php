@@ -21,6 +21,25 @@ class CPMKController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function matrix()
+    {
+        $cpl = Cpl_Prodi::get();
+        $mk = Mata_Kuliah::get();
+        $cpmk = CPMK::get();
+        return view('content.pemetaan_cpl_cpmk_mk.matriks', [
+            'title' => 'Matriks Pemetaan CPL CPMK',
+            'cpl' => $cpl,
+            'mk' => $mk,
+            'cpmk' => $cpmk
+        ]);
+        
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $cpl = Cpl_Prodi::get();

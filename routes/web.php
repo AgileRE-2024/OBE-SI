@@ -106,8 +106,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::name('cpmk.update')->put('/edit_cpmk/{cpmk}', [CpmkController::class, 'update']);
             Route::name('export')->get('/export', [CPMKController::class, 'cetakpdf']);
             Route::name('export-excel')->get('/exportexcel', [CPMKController::class, 'exportExcel']);
-   
-
+            
+            Route::name('matrix')->get('/matriks', [CPMKController::class, 'matrix']);
         });
     });
 
