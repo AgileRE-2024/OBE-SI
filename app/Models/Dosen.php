@@ -27,13 +27,4 @@ class Dosen extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function RPS()
-    {
-        return $this->hasMany(RPS::class, 'nip', 'kps');
-    }
-    public function RPS1()
-    {
-        return $this->belongsToMany(RPS::class, 'Detail_Peran_Dosen', 'nip', 'kodeRPS');
-    }
 }

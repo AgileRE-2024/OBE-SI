@@ -18,14 +18,14 @@ class RPS extends Model
         return $this->belongsTo(Mata_Kuliah::class, 'kodeMK', 'kodeMK');
     }
 
-    public function Dosen()
+    public function User()
     {
-        return $this->belongsTo(Dosen::class, 'kps', 'nip');
+        return $this->belongsTo(User::class, 'kps', 'nip');
     }
 
-    public function Dosen1()
+    public function User1()
     {
-        return $this->belongsToMany(Dosen::class, 'Detail_Peran_Dosen', 'kodeRPS', 'nip');
+        return $this->belongsToMany(User::class, 'Detail_Peran_Dosen', 'kodeRPS', 'nip');
     }
     
     public function Minggu_RPS()
