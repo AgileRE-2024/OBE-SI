@@ -2,6 +2,26 @@
 
 @section('content')
     <div class="content px-4">
+        <div class="d-flex justify-content-start pt-2">
+
+            <div>
+                <a class="btn btn-danger" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+                        class="bi bi-ui-checks"> </i>Teknik Penilaian</a>
+            </div>
+            <div>
+                <a class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+                        class="bi bi-ui-checks"> </i>Peran Dosen</a>
+            </div>
+            <div>
+                <a class="btn btn-success" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+                        class="bi bi-ui-checks"> </i>Rencana Pembelajaran</a>
+            </div>
+            <div>
+                <a class="btn btn-primary" href="{{ route('edit_rps.teknik_penilaian') }}"><i
+                        class="bi bi-file-earmark-bar-graph"> </i>RPS</a>
+            </div>
+        </div>
+        <br><br>
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>Teknik Penilaian</h3>
@@ -15,7 +35,7 @@
                     </i>Tambah</a>
             </div>
         </div>
-        <div class="d-flex justify-content-end pt-2">
+        {{-- <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
                 <a class="btn btn-outline-danger" href="{{ route('edit_rps.export_teknik_penilaian', ['pdf']) }}"><i
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
@@ -24,7 +44,7 @@
                 <a class="btn btn-success" href="{{ route('edit_rps.export_teknik_penilaian', ['excel']) }}"><i
                         class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
-        </div>
+        </div> --}}
         <br>
         <div class="d-flex">
             <table class="table table-bordered" style="text-align: center">

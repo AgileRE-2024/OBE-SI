@@ -63,8 +63,11 @@ class TeknikPenilaianController extends Controller
 
     public function storeTeknikPenilaian(Request $request)
     {
+        $kodePenilaian=Teknik_Penilaian::all()->last()->kodePenilaian;
+        $kodePenilaian=(int)$kodePenilaian;
+        $kodePenilaian++;
+
         $validator = Validator::make($request->all(), [
-            'kodePenilaian' => 'required|unique:teknik_penilaian,kodePenilaian',
             'teknikPenilaian' => 'required',
             'bobotPenilaian' => 'required',
             'kriteriaPenilaian' => 'required',
@@ -80,7 +83,7 @@ class TeknikPenilaianController extends Controller
         }
 
         Teknik_Penilaian::create([
-            'kodePenilaian' => $request->kodePenilaian,
+            'kodePenilaian' => $kodePenilaian,
             'teknikPenilaian' => $request->teknikPenilaian,
             'bobotPenilaian' => $request->bobotPenilaian,
             'kriteriaPenilaian' => $request->kriteriaPenilaian,
@@ -95,7 +98,7 @@ class TeknikPenilaianController extends Controller
     public function updateTeknikPenilaian(Request $request, $tp)
     {
         $validator = Validator::make($request->all(), [
-            'kodePenilaian' => 'required',
+            // 'kodePenilaian' => 'required',
             'teknikPenilaian' => 'required',
             'bobotPenilaian' => 'required',
             'kriteriaPenilaian' => 'required',
@@ -115,7 +118,7 @@ class TeknikPenilaianController extends Controller
 
         $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
         $tp->update([
-            'kodePenilaian' => $request->kodePenilaian,
+            'kodePenilaian' => $tp->kodePenilaian,
             'teknikPenilaian' => $request->teknikPenilaian,
             'bobotPenilaian' => $request->bobotPenilaian,
             'kriteriaPenilaian' => $request->kriteriaPenilaian,
