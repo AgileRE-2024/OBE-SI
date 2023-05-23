@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-body" style="width: auto">
                     <div class="col-sm-8">
-                        <form method="post" action="{{ route('update_minggu_rps', $minggu_rps->kodeMingguRPS) }}">
+                        <form method="post" action="{{ route('edit_rps.update_minggu_rps', $minggu_rps->kodeMingguRPS) }}">
                             @csrf
                             @method('put')
                             @php
@@ -74,9 +74,6 @@
                                 $options=$scpmk->whereIn('kodeCPMK', $list_kodeCPMK)->pluck('kodeSubCPMK');
                                 $subcpmk=$scpmk->whereIn('kodeCPMK', $list_kodeCPMK);
                                 $detail=$detail_rps_list->where('kodeRPS', $rps->kodeRPS)->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first();
-                                // print($minggu_rps->kriteriaMingguRPS);
-                                print($detail);
-                                // print($minggu_rps->deskripsiPembelajaran);
                             @endphp
 
                             <div class="form-group">

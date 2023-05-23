@@ -23,17 +23,17 @@ class MingguRPSController extends Controller
         $minggu_rps = Minggu_RPS::all();
         $mk = Mata_Kuliah::all();
         $rps = RPS::all();
-        return view('content.minggu_rps.add_minggu_rps', [
-            'title' => 'Minggu RPS', 
+        $subcpmk = SubCPMK::all();
+        return view('content.minggu_rps.minggu_rps', [
+            'title' => 'Tambah Minggu RPS',
             'minggu_rps_list'=> $minggu_rps,
-            'subcpmk_list'=> SubCPMK::all(),
+            'scpmk' => $subcpmk,
             'mk_list' =>$mk,
             'rps_list' => $rps,
             'teknik_penilaian_list' => Teknik_Penilaian::all(),
             'detail_rps_list'=> Detail_RPS::all(),
         ]);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -130,7 +130,7 @@ class MingguRPSController extends Controller
 
             Detail_RPS::insert($detail_rps);
 
-        return redirect()->route('add_minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
+        return redirect()->route('edit_rps.minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan');
     }
 
     /**
@@ -203,7 +203,7 @@ class MingguRPSController extends Controller
             Detail_RPS::insert($detail_rps);
 
         
-        return redirect()->route('add_minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan'.$request->kodePenilaian);
+        return redirect()->route('edit_rps.minggu_rps')->with('success', 'Minggu RPS berhasil ditambahkan'.$request->kodePenilaian);
         
     }
 
@@ -222,6 +222,6 @@ class MingguRPSController extends Controller
     $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
     $minggu_RPS->delete();
 
-    return redirect()->route('store_minggu_rps')->with('success', 'Minggu RPS berhasil dihapus');
+    return redirect()->route('edit_rps.minggu_rps')->with('success', 'Minggu RPS berhasil dihapus');
 }
 }
