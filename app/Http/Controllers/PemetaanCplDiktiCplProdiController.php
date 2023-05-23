@@ -22,7 +22,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
             'title' => 'Pemetaan CPLSNDikti CPL Prodi',
             'cpldikti_list' => Cpl_SN_Dikti::all(),
             'cplprodi_list' => Cpl_Prodi::all(),
-            'pemetaan' => Detail_SN_CPLDikti::all(),
+            'pemetaan' => Detail_SN_CPLProdi::all(),
         ]);
     }
 
@@ -38,7 +38,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
     
     public function update(Request $request)
     {
-        foreach (Detail_SN_CPLDikti::all() as $key => $pemetaan) {
+        foreach (Detail_SN_CPLProdi::all() as $key => $pemetaan) {
             if (!collect($request)->contains($pemetaan->kode_cpldikti . '&' . $pemetaan->kode_cplprodi)) {
                 $pemetaan->delete();
             } 
@@ -46,8 +46,8 @@ class PemetaanCplDiktiCplProdiController extends Controller
         foreach ($request->request as $key => $param) {
             if (strstr($param, '&')) {
                 $foreignList = explode('&', $param);
-                if (Detail_SN_CPLDikti::all()->where('kode_cpldikti', $foreignList[0])->where('kode_cplprodi', '===', $foreignList[1])->count() == 0) {
-                    Detail_SN_CPLDikti::create([
+                if (Detail_SN_CPLProdi::all()->where('kode_cpldikti', $foreignList[0])->where('kode_cplprodi', '===', $foreignList[1])->count() == 0) {
+                    Detail_SN_CPLProdi::create([
                         'kode_cpldikti' => $foreignList[0],
                         'kode_cplprodi' => $foreignList[1],
                     ]);
@@ -63,7 +63,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
             'title' => 'Pemetaan CPLDikti CPLProdi',
             'cpldikti_list' => Cpl_SN_Dikti::all(),
             'cplprodi_list' => Cpl_Prodi::all(),
-            'pemetaan' => Detail_SN_CPLDikti::all(),
+            'pemetaan' => Detail_SN_CPLProdi::all(),
         ]);
     }
 
@@ -84,7 +84,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
             'title' => 'Pemetaan CPLDikti CPLProdi',
             'cpldikti_list' => Cpl_SN_Dikti::all(),
             'cplprodi_list' => Cpl_Prodi::all(),
-            'pemetaan' => Detail_SN_CPLDikti::all(),
+            'pemetaan' => Detail_SN_CPLProdi::all(),
         ]);
         $date_time = date('Y_m_d_H_i_s');
 
@@ -101,7 +101,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
             ]);
         } else {
             $filename = "Pemetaan CPLDikti dan CPLProdi_" . $date_time . ".xlsx";
-            return Excel::download(new ExportCPLDiktiCPLProdi(Cpl_SN_Dikti::all(), Cpl_Prodi::all(), Detail_SN_CPLDikti::all()),$filename);
+            return Excel::download(new ExportCPLDiktiCPLProdi(Cpl_SN_Dikti::all(), Cpl_Prodi::all(), Detail_SN_CPLProdi::all()),$filename);
         }
     }
 
@@ -127,7 +127,7 @@ class PemetaanCplDiktiCplProdiController extends Controller
         return view('Matriks.edit', [
             'cpldikti_list' => Cpl_SN_Dikti::all(),
             'cplprodi_list' => Cpl_Prodi::all(),
-            'pemetaan' => Detail_SN_CPLDikti::all(),
+            'pemetaan' => Detail_SN_CPLProdi::all(),
         ]);
     }
 
