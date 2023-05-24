@@ -42,7 +42,7 @@
                             @endforeach
                         </td>
                         <td class="text-left">
-                            @foreach($MKBysmt->where('kategoriMK', 2) as $product)
+                            @foreach($MKBysmt->where('kategoriMK', 0) as $product)
                                 {{ $product->kodeMK }} {{ ":" }} {{ $product->namaMK }}<br>
                             @endforeach
                         </td>
