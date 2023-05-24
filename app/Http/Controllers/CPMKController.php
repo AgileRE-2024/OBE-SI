@@ -21,6 +21,25 @@ class CPMKController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function matrix()
+    {
+        $cpl = Cpl_Prodi::get();
+        $mk = Mata_Kuliah::get();
+        $cpmk = CPMK::get();
+        return view('content.pemetaan_cpl_cpmk_mk.matriks', [
+            'title' => 'Matriks Pemetaan CPL CPMK',
+            'cpl' => $cpl,
+            'mk' => $mk,
+            'cpmk' => $cpmk
+        ]);
+        
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $cpl = Cpl_Prodi::get();
@@ -85,34 +104,45 @@ class CPMKController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'deskripsi' => 'required',
+            // 'deskripsi' => 'required',
+            // 'kode' => 'required',
             'kodeCPL' => 'required',
-            'deskripsiCPMK'=> 'required'
+            'deskripsiCPMK'=> 'required',
+            'kodeCPMK'=> 'required'
         ];
 
         Validator::make($request->all(), $rules, $messages = $this->msg)->validate();
     
-        $data = str_getcsv($request->deskripsi, ",");
+        $deskripsi = str_getcsv($request->deskripsi, ",");
+        $kode = str_getcsv($request->kode, ",");
         // $count = 0;
         
-        foreach ($data as $cpmk) {
-            $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
-            
-            if ($lastCpmk) {
-                $lastId = intval(substr($lastCpmk->kodeCPMK, 4));
-                $nextId = 'CPMK'.str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
-            } else {
-                $nextId = 'CPMK001';
-            }
-
+        for ($i=0; $i < sizeof($deskripsi); $i++) { 
             CPMK::create([
-                'kodeCPMK' => $nextId,
-                'deskripsiCPMK' => $cpmk,
+                'kodeCPMK' => $kode[$i],
+                'deskripsiCPMK' => $deskripsi[$i],
                 'kodeCPL' => $request->kodeCPL
             ]);
-    
-            // $count++;
         }
+
+        // foreach ($deskripsi as $deskripsiCPMK) {
+        //     $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
+            
+        //     if ($lastCpmk) {
+        //         $lastId = intval(substr($lastCpmk->kodeCPMK, 4));
+        //         $nextId = 'CPMK'.str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
+        //     } else {
+        //         $nextId = 'CPMK001';
+        //     }
+
+        //     CPMK::create([
+        //         'kodeCPMK' => $nextId,
+        //         'deskripsiCPMK' => $deskripsiCPMK,
+        //         'kodeCPL' => $request->kodeCPL
+        //     ]);
+    
+        //     // $count++;
+        // }
     
         // Cpmk::insert($data);
     
