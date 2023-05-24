@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 use Dompdf\Dompdf;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Validation\Rule;
 
 class RPSController extends Controller
 {
@@ -137,23 +138,38 @@ class RPSController extends Controller
         ]);
     }
 
+    
+
     public function store(Request $request)
     {
         $request->validate([
-            'kodeRPS' => 'required|unique:rps,kodeRPS',
+            'kodeRPS' => [
+                'required',
+                Rule::unique('rps', 'kodeRPS')->where(function ($query) use ($request) {
+                    return $query->where('kodeMK', $request->kodeMK)
+                        ->where('tahunAjaran', $request->tahunAjaran);
+                }),
+            ],
             'kodeMK' => 'required',
             'kps' => 'required',
-            // 'tahunAjaran'=>'required',
-            'required|different:tahunAjaran,'. $request->kodeMataKuliah,
-            ]);
-
+            'tahunAjaran' => [
+                'required',
+                Rule::unique('rps')->where(function ($query) use ($request) {
+                    return $query->where('kodeMK', $request->kodeMK);
+                }),
+            ],
+        ], [
+            'kodeRPS.unique' => 'Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.',
+            'tahunAjaran.unique' => 'Tahun ajaran sudah digunakan untuk kodeMK yang sama.',
+        ]);
+    
         RPS::create([
             'kodeRPS' => $request->kodeRPS,
             'tahunAjaran' => $request->tahunAjaran,
             'kodeMK' => $request->kodeMK,
             'kps' => $request->kps,
         ]);
-
+    
         return redirect()->route('edit_rps.teknik_penilaian')->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
     }
 }
