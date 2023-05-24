@@ -20,15 +20,7 @@
         </div>
         <br>
         <table class="table table-bordered" style="text-align: center">
-            <thead style="background-color: lightgray">
-                    <tr>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%"><img src="{{ asset('unair.png') }}" width="75" height="75"></th>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="5" style="width: 70%">UNIVERSITAS AIRLANGGA<br>FAKULTAS SAINS DAN TEKNOLOGI<br>PRODI SISTEM INFORMASI</th>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%">Kode Dokumen</th>
-                    </tr>
-            </thead>
-            <tbody>
-                @php
+            @php
                     $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
                     // print($rps);
                     $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
@@ -36,6 +28,14 @@
                     $bk_list=$mk->Bahan_Kajian;
                     $counterBk = $mk->Bahan_Kajian->count();
                 @endphp
+            <thead style="background-color: lightgray">
+                    <tr>
+                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%"><img src="{{ asset('unair.png') }}" width="75" height="75"></th>
+                        <th class="align-middle" scope="col" rowspan="3" colspan="5" style="width: 70%">UNIVERSITAS AIRLANGGA<br>FAKULTAS SAINS DAN TEKNOLOGI<br>PRODI SISTEM INFORMASI</th>
+                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%">{{ $rps->kodeRPS }}</th>
+                    </tr>
+            </thead>
+            <tbody>
                 {{-- <h1>{{ $mk->with('Bahan_Kajian')->first()->namaBK }}</h1> --}}
                 <tr>
                     <th class="align-middle" scope="col" colspan="7" style="width: 100%">RENCANA PEMBELAJARAN SEMESTER</th>
@@ -347,9 +347,8 @@
                     <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian ?? '-' }}</td>
                 </tr>
                 @endforeach
-              </tbody>
+            </tbody>
         </table>
-        
 
     </div>
    
