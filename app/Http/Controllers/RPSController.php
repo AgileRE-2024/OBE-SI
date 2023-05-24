@@ -128,10 +128,12 @@ class RPSController extends Controller
     }
     public function create()
     {
+        $kodeRPS=session('kodeRPS');
         return view('content.create_rps', [
             'title'=>'Buat RPS',
             'mk_list'=>Mata_Kuliah::all(),
             'dosen_list'=>User::all(),
+            'kodeRPS'=>$kodeRPS,
         ]);
     }
 
@@ -141,16 +143,17 @@ class RPSController extends Controller
             'kodeRPS' => 'required|unique:rps,kodeRPS',
             'kodeMK' => 'required',
             'kps' => 'required',
-            'required|different:tahunAjaran,' . $request->kodeMataKuliah,
+            // 'tahunAjaran'=>'required',
+            'required|different:tahunAjaran,'. $request->kodeMataKuliah,
             ]);
 
         RPS::create([
             'kodeRPS' => $request->kodeRPS,
+            'tahunAjaran' => $request->tahunAjaran,
             'kodeMK' => $request->kodeMK,
             'kps' => $request->kps,
-            'tahunAjaran' => $request->tahunAjaran,
         ]);
 
-        return redirect()->route('rps_create')->with('success', 'Data RPS berhasil ditambahkan.');
+        return redirect()->route('edit_rps.teknik_penilaian')->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
     }
 }

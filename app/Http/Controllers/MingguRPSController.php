@@ -45,7 +45,7 @@ class MingguRPSController extends Controller
         $mk = Mata_Kuliah::all();
         $rps = RPS::all();
         $subcpmk = SubCPMK::all();
-        return view('content.cari_rps', [
+        return view('content.minggu_rps.add_minggu_rps', [
             'title' => 'Tambah Minggu RPS',
             'minggu_rps_list'=> $minggu_rps,
             'scpmk' => $subcpmk,

@@ -122,8 +122,8 @@
                                 @error('indikatorMingguRPS')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <input type="text" name="indikatorMingguRPS" class="form-control"
-                                    placeholder="Indikator Minggu RPS" value="{{ $minggu_rps->indikatorMingguRPS }}">
+                                <textarea  rows="3" name="indikatorMingguRPS" class="form-control" 
+                                placeholder="Indikator Minggu RPS" value="{{ $minggu_rps->indikatorMingguRPS }}">{{ old('indikatorPembelajaran') ? old('indikatorPembelajaran') : $minggu_rps->indikatorMingguRPS }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Kriteria Minggu RPS</label>
@@ -138,8 +138,8 @@
                                 @error('deskripsiPembelajaran')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <input type="text" name="deskripsiPembelajaran" class="form-control"
-                                    placeholder="Deskripsi Pembelajaran" value="{{ $minggu_rps->deskripsiPembelajaran }}">
+                                <textarea  rows="3"  name="deskripsiPembelajaran" class="form-control"
+                                    placeholder="Deskripsi Pembelajaran" value="{{ $minggu_rps->deskripsiPembelajaran }}">{{ old('deskripsiPembelajaran') ? old('deskripsiPembelajaran') : $minggu_rps->deskripsiPembelajaran }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Materi Pembelajaran</label>

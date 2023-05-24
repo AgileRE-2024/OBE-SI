@@ -71,7 +71,7 @@
                         Buat RPS</button>
                 </div>
             </form>
-            @if (isset($message))
+            {{-- @if (isset($message))
             <div class="alert alert-warning">
                 {{ $message }}
             </div>
@@ -81,7 +81,7 @@
                         class="bi bi-file-earmark-pdf-fill"> </i>Buat RPS</a>
             </div>
             @endif
-        @endif
+        @endif --}}
         </div>
     </div>
 </div>
