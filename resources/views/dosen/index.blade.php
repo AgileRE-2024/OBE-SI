@@ -72,7 +72,7 @@
             <a class="btn btn-primary" href="/dosens/{{$detail->nip}}/edit">Edit</a>
         </td>
         <td scope="row">
-            <a class="btn btn-danger" href="/dosens/{{$detail->nip}}/hapus">Delete</a>
+            <a class="btn btn-danger" href="/dosens/{{$detail->nip}}/{{$detail->kodeRPS}}">Delete</a>
         </td>
     </tr>
 @endforeach

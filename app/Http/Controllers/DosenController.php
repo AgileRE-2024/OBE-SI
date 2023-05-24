@@ -127,9 +127,9 @@ class DosenController extends Controller
      * @param  \App\Models\Details  $details
      * @return \Illuminate\Http\Response
      */
-    public function destroy($details)
+    public function destroy($nip, $kodeRPS)
     {
-        $details = Detail_Peran_Dosen::where('nip', $details)->first();
+        $details = Detail_Peran_Dosen::where('nip', $nip)->where('kodeRPS', $kodeRPS)->first();
         $details->delete();
         return redirect()->route('dosen.index')->with('success', 'Data Dosen berhasil dihapus');
     }
