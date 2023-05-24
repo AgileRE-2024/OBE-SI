@@ -42,7 +42,7 @@
                         <tr class="text-center">
                           <th scope="col"></th>
                           @foreach ($bk_list as $bk)
-                          <th scope="col" data-toggle="tooltip" data-placement="top" title="{{ $bk->namaBK }}">{{ $bk->kodeBK }}</th>
+                            <th scope="col" data-toggle="tooltip" data-placement="top" title="{{ $bk->namaBK }}">{{ $bk->kodeBK }}</th>
                           @endforeach
                         </tr>
                       </thead>
@@ -53,10 +53,14 @@
                           @foreach ($bk_list as $bk)
                           <td>
                             @if ($pemetaan2->where('kodeBK', $bk->kodeBK)->where('kodeCPL', $cpl->kodeCPL)->count() != 0)
-                            @foreach ($pemetaan1->where('kodeBK', $bk->kodeBK) as $pemetaanbkmk)
-                            {{ $pemetaanbkmk->kodeMK }}
-                            @endforeach
+                                @foreach ($pemetaan1->where('kodeBK', $bk->kodeBK) as $pemetaanbkmk)
+                                    {{ $pemetaanbkmk->kodeMK }}
+                                @endforeach
+                            @endif
+                          </td>
+                          @endforeach
                     </tr>
+                    @endforeach
                 </thead>
                 <tbody>
                     @foreach ($cpl_list as $cpl)
