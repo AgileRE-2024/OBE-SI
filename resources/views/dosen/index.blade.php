@@ -72,7 +72,16 @@
             <a class="btn btn-primary" href="/dosens/{{$detail->nip}}/edit">Edit</a>
         </td>
         <td scope="row">
-            <a class="btn btn-danger" href="/dosens/{{$detail->nip}}/{{$detail->kodeRPS}}">Delete</a>
+            {{-- <a class="btn btn-danger" href="{{ route('dosen.destroy', ['nip'=>$detail->nip, 'kodeRPS'=>$detail->kodeRPS, 'peranDosen'=>$detail->peranDosen ]) }}" data-method="DELETE">Delete</a>
+             --}}
+             <form action="{{ route('dosen.destroy', ['nip' => $detail->nip, 'kodeRPS' => $detail->kodeRPS, 'peranDosen' => $detail->peranDosen]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            
+            
+            {{-- <a class="btn btn-danger" href="/dosens/{{ $detail->nip }}/{{ $detail->kodeRPS }}/{{ $detail->peranDosen }} " method="POST">Delete</a> --}}
         </td>
     </tr>
 @endforeach

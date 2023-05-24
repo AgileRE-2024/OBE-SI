@@ -107,15 +107,21 @@ class DatabaseSeeder extends Seeder
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email'=>'rimuljo@gmail.com',
             'role'=>true,
-        ]);
+        ]
+    );
 
         RPS::create([
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2022,
             'kodeMK' => 'MK01',
             'kps' => '123456789987654321'
-        ]);
-
+        ],);
+        RPS::create([
+            'kodeRPS' => 'RPS003',
+            'tahunAjaran' => 2022,
+            'kodeMK' => 'MK01',
+            'kps' => '123456789987654321'
+        ],);
         CPMK::create([
             'kodeCPMK' => 'CPMK011',
             'deskripsiCPMK' => 'Mampu menjelaskan konsep dasar sistem',

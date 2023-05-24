@@ -186,7 +186,7 @@ Route::get('/create', [DosenController::class, 'create'])->name('dosen.create');
 Route::post('/dosens/store', [DosenController::class, 'store'])->name('dosen.store');
 
 //DELETE
-Route::get('/dosens/{nip}/{kodeRPS}', [DosenController::class, 'destroy'])->name('dosen.destroy');
+Route::delete('/dosens/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'destroy'])->name('dosen.destroy');
 
 
 

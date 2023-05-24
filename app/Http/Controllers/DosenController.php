@@ -127,12 +127,21 @@ class DosenController extends Controller
      * @param  \App\Models\Details  $details
      * @return \Illuminate\Http\Response
      */
-    public function destroy($nip, $kodeRPS)
-    {
-        $details = Detail_Peran_Dosen::where('nip', $nip)->where('kodeRPS', $kodeRPS)->first();
-        $details->delete();
+    public function destroy($nip, $kodeRPS, $peranDosen)
+{
+    $detail = Detail_Peran_Dosen::where('nip', $nip)
+                                ->where('kodeRPS', $kodeRPS)
+                                ->where('peranDosen', $peranDosen)
+                                ->first();
+
+    if ($detail) {
+        $detail->delete();
         return redirect()->route('dosen.index')->with('success', 'Data Dosen berhasil dihapus');
+    } else {
+        return redirect()->route('dosen.index')->with('error', 'Data Dosen tidak ditemukan');
     }
+}
+
     public function getNamaDosen($nip)
 {
     // Lakukan query atau manipulasi data untuk mendapatkan Nama Dosen berdasarkan NIP
