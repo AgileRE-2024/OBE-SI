@@ -83,7 +83,11 @@ class CPLDiktiExport implements FromCollection, WithHeadings, WithMapping, WithS
                     ],
                 ],
             ]);
-
+        $sheet->getColumnDimension('A')->setWidth(13);
+        $sheet->getColumnDimension('B')->setWidth(13);
+        $sheet->getColumnDimension('C')->setWidth(13);
+        $sheet->getColumnDimension('D')->setWidth(13);
+        $sheet->getColumnDimension('E')->setWidth(50);
         // Memindahkan cursor ke cell A1
         $sheet->getStyle('A1');
     }

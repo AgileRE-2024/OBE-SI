@@ -70,12 +70,13 @@
                     @endforeach
                 </tbody>
             </table>
-
+            @if(auth()->user()->role==1)
             <div class="d-flex justify-content-end">
                 <button id="submitbutton" class="btn btn-success">
                     Simpan
                 </button>
             </div>
+            @endif
 
     </div>
 

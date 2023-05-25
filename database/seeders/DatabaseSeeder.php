@@ -17,7 +17,7 @@ use App\Models\Profil_Lulusan;
 use App\Models\Bahan_Kajian;
 use App\Models\Mata_Kuliah;
 use App\Models\RPS;
-use App\Models\Dosen;
+use App\Models\User;
 use App\Models\Prodi;
 use App\Models\CPMK;
 use App\Models\Mahasiswa;
@@ -285,11 +285,12 @@ class DatabaseSeeder extends Seeder
             'mat_kodeMK'=>'MK01',
         ]);
 
-        Dosen::create([
+        User::create([
             'nip' => '123456789987654321',
             'jabatanDosen' => 'kps',
             'namaDosen' => 'Rimuljo',
-            'password' => '1234',
+            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'email'=>'rimuljo@gmail.com',
             'role'=>true,
         ]);
 

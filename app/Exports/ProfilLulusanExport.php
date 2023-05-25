@@ -75,6 +75,7 @@ class ProfilLulusanExport implements FromCollection, WithHeadings, WithStyles
                 ],
             ]);
 
+        $sheet->getColumnDimension('B')->setWidth(55);
         // Memindahkan cursor ke cell A1
         $sheet->getStyle('A1');
     }

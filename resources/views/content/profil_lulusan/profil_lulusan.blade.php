@@ -9,12 +9,14 @@
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
+        @if(auth()->user()->role==1)
         <div class="d-flex justify-content-start pt-2">
             <div>
                 <a class="btn btn-success" href="{{ route('kurikulum.data.add_pl') }}"><i class="bi bi-file-earmark-excel">
                     </i>Tambah</a>
             </div>
         </div>
+        @endif
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
                 <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_pl', ['pdf']) }}"><i
@@ -48,12 +50,16 @@
                             <td scope="row">
                                 {{ $pl->deskripsiPL }}</td>
                             <td scope="row">
+                                @if(auth()->user()->role==1)
                                 <a class="btn btn-primary"
                                     href="{{ route('kurikulum.data.edit_pl', $pl->kodePL) }}">Edit</a>
+                                @endif
                             </td>
                             <td scope="row">
+                                @if(auth()->user()->role==1)
                                 <a class="btn btn-danger"
                                     href="{{ route('kurikulum.data.delete_pl', $pl->kodePL) }}">Delete</a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

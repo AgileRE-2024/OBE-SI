@@ -86,7 +86,10 @@ class BahanKajianExport implements FromCollection, WithHeadings, WithMapping, Wi
                     ],
                 ],
             ]);
-
+        $sheet->getColumnDimension('A')->setWidth(10);
+        $sheet->getColumnDimension('B')->setWidth(25);
+        $sheet->getColumnDimension('C')->setWidth(13);
+        $sheet->getColumnDimension('D')->setWidth(13);
         // Memindahkan cursor ke cell A1
         $sheet->getStyle('A1');
     }

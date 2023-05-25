@@ -62,7 +62,7 @@ class BahanKajianController extends Controller
     public function storeBahanKajian(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'kodeBK' => 'required|unique:bahan_kajian,kodeBK',
+            'kodeBK' => 'required|unique:bahan_kajian,kodeBK|regex:/^BK\d{2}$/',
             'namaBK' => 'required',
             'kategoriBK' => 'required',
             'referensiBK' => 'required',
@@ -85,13 +85,21 @@ class BahanKajianController extends Controller
 
     public function updateBahanKajian(Request $request, $bk)
     {
-        $validator = Validator::make($request->all(), [
-            'kodeBK' => 'required',
-            'namaBK' => 'required',
-            'kategoriBK' => 'required',
-            'referensiBK' => 'required',
-        ]);
-
+        if ($request->kodeBK != $bk) {
+            $validator = Validator::make($request->all(), [
+                'kodeBK' => 'required|unique:bahan_kajian,kodeBK|regex:/^BK\d{2}$/',
+                'namaBK' => 'required',
+                'kategoriBK' => 'required',
+                'referensiBK' => 'required',
+            ]);
+        } else {
+            $validator = Validator::make($request->all(), [
+                'kodeBK' => 'required|regex:/^BK\d{2}$/',
+                'namaBK' => 'required',
+                'kategoriBK' => 'required',
+                'referensiBK' => 'required',
+            ]);
+        }
         if ($validator->fails()) {
             // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
