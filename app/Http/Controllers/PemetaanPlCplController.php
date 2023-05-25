@@ -40,7 +40,8 @@ class PemetaanPlCplController extends Controller
         // Drop pemetaan jika gaada di request
         foreach (Detail_PL_CPLProdi::all() as $key => $pemetaan) {
             if (!collect($request)->contains($pemetaan->kodeCPL . '&' . $pemetaan->kodePL)) {
-                $pemetaan->delete();
+               // $pemetaan->delete();
+                DB::delete('DELETE FROM detail_PL_CPLProdi WHERE kodeCPL = ? AND kodePL = ?', [$pemetaan->kodeCPL, $pemetaan->kodePL]);
             }
         }
 
