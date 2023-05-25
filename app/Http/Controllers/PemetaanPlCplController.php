@@ -8,6 +8,7 @@ use App\Exports\PemetaanCPLPLExport as ExportPemetaanCPLPL;
 use App\Models\Detail_PL_CPLProdi;
 use Dompdf\Dompdf;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 
