@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-start pt-2">
 
     <div>
-        <a class="btn btn-danger" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+        <a class="btn btn-danger" href="{{ route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS]) }}" style="margin-right:7pt"><i
                 class="bi bi-ui-checks"> </i>Teknik Penilaian</a>
     </div>
     <div>
-        <a class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+        <a class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS]) }}" style="margin-right:7pt"><i
                 class="bi bi-ui-checks"> </i>Peran Dosen</a>
     </div>
     <div>

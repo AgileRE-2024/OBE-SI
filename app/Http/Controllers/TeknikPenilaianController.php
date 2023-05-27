@@ -15,10 +15,11 @@ class TeknikPenilaianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($kodeRPS)
     {
-        $tps = Teknik_Penilaian::all();
-        return view('content.teknik_penilaian.teknik_penilaian', ['title' => 'Teknik Penilaian', 'tps' => $tps]);
+        $kodeRPS = $kodeRPS;
+        $tps = Teknik_Penilaian::all()->where('kodeRPS',$kodeRPS);
+        return view('content.teknik_penilaian.teknik_penilaian', ['title' => 'Teknik Penilaian', 'tps' => $tps, 'kodeRPS' => $kodeRPS]);
     }
 
     public function export($type)
@@ -57,12 +58,12 @@ class TeknikPenilaianController extends Controller
         return view('content.teknik_penilaian.edit_penilaian', ['title' => 'Teknik Penilaian', 'tp' => $tp]);
     }
 
-    public function addTeknikPenilaian()
+    public function addTeknikPenilaian($kodeRPS)
     {
-        return view('content.teknik_penilaian.add_penilaian', ['title' => 'Tambah Teknik Penilaian']);
+        return view('content.teknik_penilaian.add_penilaian', ['title' => 'Tambah Teknik Penilaian', 'kodeRPS' => $kodeRPS]);
     }
 
-    public function storeTeknikPenilaian(Request $request)
+    public function storeTeknikPenilaian(Request $request, $kodeRPS)
     {
         $kodePenilaian=Teknik_Penilaian::all()->last()->kodePenilaian;
         $kodePenilaian=(int)$kodePenilaian;
@@ -93,7 +94,7 @@ class TeknikPenilaianController extends Controller
             'kodeRPS' => $request->kodeRPS,
         ]);
 
-        return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil ditambahkan');
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with('success', 'Teknik Penilaian berhasil ditambahkan');
     }
 
     public function updateTeknikPenilaian(Request $request, $tp)
@@ -129,18 +130,19 @@ class TeknikPenilaianController extends Controller
         ]);
         $tp->save();
 
-        return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil diupdate');
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $request->kodeRPS ])->with('success', 'Teknik Penilaian berhasil diupdate');
     }
 
     public function deleteTeknikPenilaian(String $tp)
     {
 
         $d = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
+        $kodeRPS=$d->kodeRPS;
         $a= Detail_RPS::all()->where('kodePenilaian','=',  $d->kodePenilaian)->where('kodeRPS', '=',$d->kodeRPS)->count();
         if ($a>0) {
             return redirect()->back()->with('warning', 'Hapus relasi pada rencana pembelajaran');
         }
         $d->delete();
-        return redirect()->route('edit_rps.teknik_penilaian')->with('success', 'Teknik Penilaian berhasil dihapus');
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with('success', 'Teknik Penilaian berhasil dihapus');
     }
 }

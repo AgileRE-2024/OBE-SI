@@ -172,6 +172,6 @@ class RPSController extends Controller
             'kps' => $request->kps,
         ]);
     
-        return redirect()->route('edit_rps.teknik_penilaian')->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $request->kodeRPS ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
     }
 }

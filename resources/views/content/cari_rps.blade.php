@@ -53,6 +53,14 @@
 </div>
 
 @if(isset($message) && $message == "Data ditemukan")
+    @php
+        $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
+        // print($rps);
+        $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
+        // print($mk);
+        $bk_list=$mk->Bahan_Kajian;
+        $counterBk = $mk->Bahan_Kajian->count();
+    @endphp
     <div class="content px-4">
         <div class="content px-4">
             <div style="display: flex; justify-content: space-between;">
@@ -60,9 +68,9 @@
                     @php
                         $currentYear = date('Y'); // Mengambil tahun saat ini
                     @endphp
-                    @if ($tahunAjaran == $currentYear)
+                    @if ($tahunAjaran >= $currentYear)
                         <div class="pl-2">
-                            <a id="edit" class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian') }}" style="float: left;"><i
+                            <a id="edit" class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian', ['kodeRPS' => $rps->kodeRPS]) }}" style="float: left;"><i
                                     class="bi bi-pencil-square"></i> Edit RPS</a>
                         </div>
                     @endif
@@ -81,14 +89,7 @@
             
             <br>
             <table class="table table-bordered" style="text-align: center">
-                @php
-                        $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
-                        // print($rps);
-                        $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
-                        // print($mk);
-                        $bk_list=$mk->Bahan_Kajian;
-                        $counterBk = $mk->Bahan_Kajian->count();
-                    @endphp
+                
                 <thead style="background-color: lightgray">
                         <tr>
                             <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%"><img src="{{ asset('unair.png') }}" width="75" height="75"></th>

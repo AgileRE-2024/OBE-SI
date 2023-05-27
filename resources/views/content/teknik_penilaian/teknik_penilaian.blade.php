@@ -1,8 +1,9 @@
 @extends('layout.dashboard')
 
 @section('content')
+{{-- <H1>{{ $kodeRPS }}</H1> --}}
     <div class="content px-4">
-        @include('content.teknik_penilaian.button')
+        @include('content.teknik_penilaian.button', ['kodeRPS' => $kodeRPS])
         <br><br>
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
@@ -12,7 +13,7 @@
         </div>
         <div class="d-flex justify-content-start pt-2">
             <div>
-                <a class="btn btn-success" href="{{ route('edit_rps.add_teknik_penilaian') }}"><i
+                <a class="btn btn-success" href="{{ route('edit_rps.add_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}"><i
                         class="bi bi-plus-square">
                     </i>Tambah</a>
             </div>

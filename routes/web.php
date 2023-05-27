@@ -191,17 +191,17 @@ Route::get('/dashboard/penilaian', function () {
     return view('welcome');
 })->name('penilaian');
 
-Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
-Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
-
 Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
+Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
+Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
+
 Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');       
 
 Route::get('/generate-pdf', 'PDFController@generatePDF');
 Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
-        Route::get('/teknik_penilaian', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
-        Route::get('/addTeknikPenilaian', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
-        Route::post('/addTeknikPenilaian', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
+        Route::get('/teknik_penilaian/{kodeRPS}', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
+        Route::get('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
+        Route::post('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
         Route::get('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
         Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
         Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
