@@ -65,6 +65,15 @@
                         placeholder="Tahun Ajaran">
                 </div>
 
+                <div class="form-group">
+                    <label>Pustaka</label>
+                    @error('pustaka')
+                        <h6 style="color: #BF2C45">{{ $message }}</h6>
+                    @enderror
+                    <textarea  rows="3" name="pustaka" class="form-control"
+                        placeholder="Pustaka"></textarea>
+                </div>
+
                 <div class="form-group pt-4">
                     <button type="submit" name="submit" value="submit" id="submit"
                         class="btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i>

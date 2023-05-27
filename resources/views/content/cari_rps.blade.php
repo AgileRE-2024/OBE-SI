@@ -336,7 +336,7 @@
                     </tr> --}}
                     <tr>
                         <th style="text-align: left;" rowspan="1" colspan="1">Pustaka</th>
-                        <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->pustaka }}</td>
+                        <td style="text-align: left;" rowspan="1" colspan="7">{{ $rps->pustaka }}</td>
                     </tr>
                     <tr>
                         <th style="text-align: left;" rowspan="1" colspan="1">Dosen Pengampu</th>

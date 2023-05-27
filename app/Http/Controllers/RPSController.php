@@ -158,6 +158,7 @@ class RPSController extends Controller
                     return $query->where('kodeMK', $request->kodeMK);
                 }),
             ],
+            'pustaka'=>'required',
         ], [
             'kodeRPS.unique' => 'Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.',
             'tahunAjaran.unique' => 'Tahun ajaran sudah digunakan untuk kodeMK yang sama.',
@@ -166,6 +167,7 @@ class RPSController extends Controller
         RPS::create([
             'kodeRPS' => $request->kodeRPS,
             'tahunAjaran' => $request->tahunAjaran,
+            'pustaka'=> $request->pustaka,
             'kodeMK' => $request->kodeMK,
             'kps' => $request->kps,
         ]);
