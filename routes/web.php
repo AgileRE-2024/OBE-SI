@@ -207,12 +207,12 @@ Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
         Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
         Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
 
-        Route::get('/minggu_rps', [MingguRPSController::class, 'index'])->name('minggu_rps');
-        Route::get('/add_minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
-        Route::post('/add_minggu_rps', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
-        Route::get('/minggu_rps/edit_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
-        Route::put('/minggu_rps/edit_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
-        Route::delete('/minggu_rps/delete_minggu_rps/{minggu_rps}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
+        Route::get('/minggu_rps/{kodeRPS}', [MingguRPSController::class, 'index'])->name('minggu_rps');
+        Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
+        Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
+        Route::get('/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
+        Route::put('/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
+        Route::get('/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
         
         Route::get('/rps', [RPSController::class, 'show'])->name('rps_show');
     });

@@ -1,6 +1,7 @@
 @extends('layout.dashboard')
 
 @section('content')
+
     <div class="content px-4">
         <div class="content px-4">
             <div class="card border" style="background-color: white">
@@ -17,11 +18,11 @@
                 </div>
                 <div class="card-body" style="width: auto">
                     <div class="col-sm-8">
-                        <form method="post" action="{{ route('edit_rps.update_minggu_rps', $minggu_rps->kodeMingguRPS) }}">
+                        <form method="post" action="{{ route('edit_rps.update_minggu_rps', ['kodeMingguRPS' => $kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">
                             @csrf
                             @method('put')
                             @php
-                                $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+                                $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                                 $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
                                 $list_cpmk = collect();
                                 $uniqueIds = [];
@@ -40,20 +41,18 @@
                                 }
                                 $list_kodeCPMK = $list_cpmk->pluck('kodeCPMK');
                             @endphp
-                            {{-- Passing data rps ke controller --}}
-                            <input type="hidden" name="kodeRPS" value="{{ $rps->kodeRPS }}" />
 
                             <div class="form-group">
                                 <label>Kode Minggu RPS</label>
                                 @error('kodeMingguRPS')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <input type="text" name="kodeMingguRPS" class="form-control"
+                                <input type="hidden" name="kodeMingguRPS" class="form-control"
                                     placeholder="Kode Minggu RPS" value="{{ old('kodeMingguRPS') ? old('kodeMingguRPS') : $minggu_rps->kodeMingguRPS }}">
                             </div>
 
                             @php
-                                $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+                                $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                                 $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
                                 $list_cpmk = collect();
                                 $uniqueIds = [];

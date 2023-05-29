@@ -14,7 +14,7 @@
             </div>
         <div class="d-flex justify-content-start pt-2">
             <div>
-                <a class="btn btn-success" href="{{ route('edit_rps.add_minggu_rps') }}"><i
+                <a class="btn btn-success" href="{{ route('edit_rps.add_minggu_rps',['kodeRPS' => $kodeRPS]) }}"><i
                         class="bi bi-plus-square">
                     </i>Tambah</a>
             </div>
@@ -90,25 +90,20 @@
                     <td scope="row">{{ $minggu_rps->deskripsiPembelajaran }}</td>
                     <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
                     <td scope="row">
-                        {{ $a =$detail_rps_list->where('kodeRPS', $rps->kodeRPS)->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first()->kodePenilaian ?? '-' }}
+                        {{ $a =$detail_rps_list->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first()->kodePenilaian ?? '-' }}
                         <br>
-                        {{ $teknik_penilaian_list->where('kodePenilaian', $a)->where('kodeRPS', $rps->kodeRPS)->first()->teknikPenilaian ?? '-' }}
+                        {{ $teknik_penilaian_list->where('kodePenilaian', $a)->first()->teknikPenilaian ?? '-' }}
 
                         {{-- {{ $teknik_penilaian['teknikPenilaian'] ?? '-' }} --}}
                     </td>
                     <td scope="row">
                         <a class="btn btn-primary"
-                            href="{{ route('edit_rps.edit_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Edit</a>
+                            href="{{ route('edit_rps.edit_minggu_rps',['kodeMingguRPS' => $minggu_rps->kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">Edit</a>
                     </td>
                     <td scope="row">
-                        <form action="{{ route('edit_rps.delete_minggu_rps', $minggu_rps->kodeMingguRPS) }}"
-                            method="POST" class="d-inline">
-                            @csrf
-                            @method('DELETE')
-                            <input type="hidden" name="kodeRPS" value={{ $rps->kodeRPS }}>
-                            <button type="submit" class="btn btn-danger"
-                                onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
-                        </form>
+                        <a class="btn btn-danger"
+                            href="{{ route('edit_rps.delete_minggu_rps',['kodeMingguRPS' => $minggu_rps->kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">Delete</a>
+                    
                         {{-- <a class="btn btn-danger" href="{{ route('delete_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Delete</a> --}}
                     </td>
                 </tr>
