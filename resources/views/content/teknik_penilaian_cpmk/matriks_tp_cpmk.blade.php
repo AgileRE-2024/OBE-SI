@@ -13,6 +13,20 @@
             </div>
         </div>
         <div class="d-flex justify-content-end pt-2">
+            <form method="GET" action="{{ route('rps.filter') }}">
+                <div class="form-group">
+                    <label for="tahun">Filter Berdasarkan Tahun:</label>
+                    <select name="tahun" id="tahun" class="form-control">
+                        <option value="">-- Pilih Tahun --</option>
+                        @foreach($list_rps as $tahun)
+                            <option value="{{ $tahun }}" {{ request()->get('tahunAjaran') == $tahun ? 'selected' : '' }}>{{ $tahun }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
                 <a class="btn btn-outline-danger" id="exportPDFButton" href="{{ route ('penilaian.cetakpdftpcpmk') }}"><i class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>

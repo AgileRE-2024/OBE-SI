@@ -191,4 +191,13 @@ Route::get('/dashboard/rps', function () {
     ]);
 })->name('rps');
 
+Route::get('/', function () {
+    $tahun_list = RPS::pluck('tahunAjaran')->unique();
+    $rpsData = RPS::when(request('tahun'), function ($query) {
+        return $query->where('tahunAjaran', request('tahun'));
+    })->get();
+
+    return view('index', compact('tahun_list', 'rpsData'));
+})->name('rps.filter');
+
 Route::get('/generate-pdf', 'PDFController@generatePDF');
