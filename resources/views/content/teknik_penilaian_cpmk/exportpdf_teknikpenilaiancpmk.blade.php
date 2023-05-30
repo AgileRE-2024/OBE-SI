@@ -24,7 +24,7 @@
 
 <body>
     <div style="text-align: center; padding: 20px 0px 20px 0px; font-size: 24px; font-weight: bold;">
-        Teknik Penilaian<br /> Tahun Ajaran {{ $tahun_ajaran }}
+        Teknik Penilaian Capaian Pembelajaran Mata Kuliah (CPMK)<br /> Tahun Ajaran {{ $tahun_ajaran }}
     </div>
     <div style="padding-top: 20px;">
         <table align="center" style="text-align: center">
