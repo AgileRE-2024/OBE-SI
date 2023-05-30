@@ -66,7 +66,7 @@
                         @foreach ($empty as $item)
                             <tr>
                                 <th style="background-color: yellow;" scope="row">{{ $iter }}</th>
-                                <th style="background-color: yellow;" scope="row"><span itemid="{{ $bk_list->where('kodeBK','===',$item)->first()["namaBK"]}}">{{ $bk_list->where('kodeBK','===',$item)->first()["kodeBK"] }}</span></th>
+                                <th style="background-color: yellow;" scope="row"><span name="{{ $bk_list->where('kodeBK','===',$item)->first()["namaBK"]}}">{{ $bk_list->where('kodeBK','===',$item)->first()["kodeBK"] }}</span></th>
                                 <th  style="background-color: yellow;"  scope="row" class="text-start">{{ $bk_list->where('kodeBK','===',$item)->first()["namaBK"]}}</th>
                                 @foreach ($cpl_list as $cpl)
                                     <td style="background-color: yellow;" ><input type="checkbox"
@@ -88,7 +88,7 @@
                         @if (!(in_array($bk->kodeBK, $empty)))
                         <tr>
                             <th scope="row">{{ $iter }}</th>
-                            <th scope="row" ><span itemid="{{ $bk->namaBK }}">{{ $bk->kodeBK }}</span></th>
+                            <th scope="row" ><span name="{{ $bk->namaBK }}">{{ $bk->kodeBK }}</span></th>
                             <th scope="row" class="text-start">{{ $bk->namaBK }}</th>
                             @foreach ($cpl_list as $cpl)
                                 @if (in_array($cpl->kodeCPL, $empty_cpl))
@@ -175,48 +175,49 @@
     </div>
     <style>
     
-    /* Style the tooltip */
-    /* Style the tooltip */
-     span[itemid] {
-      position: relative;
-      cursor: pointer;
-      
-      /* display: inline-block; */
-    }
-    
-    span[itemid]:hover::after {
-      content: attr(itemid);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 800px;
-      background-color: #1F2F4D;
-      color: white;
-      padding: 9px;
-      border-radius: 5px;
-      position: absolute;
-      bottom: -40px;
-      left: 120%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      z-index: 1;
-      opacity: 1;
-      /* transition: opacity 3s; */
-      /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
-    
-    }
-    
-    span[itemid]:hover::before {
-      content: "";
-      border-style: solid;
-      border-width: 0 8px 8px 8px;
-      border-color: transparent transparent #1F2F4D transparent;
-      position: absolute;
-      top: 12px;
-      left: 80%;
-      transform: translateX(-50%);
-      bottom: calc(100% + 10px);
-      /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
-    }
+        /* Style the tooltip */
+        span[itemid] {
+            position: relative;
+            cursor: pointer;
+            /* display: inline-block; */
+        }
+        span[itemid]:hover::after {
+            content: attr(itemid);
+            /* overflow: hidden; */
+            /* text-overflow: ellipsis; */
+            word-wrap: break-word;
+            /* membuat kata wrap ketika teks melebihi lebar elemen */
+            /* word-break: break-all; */
+            /* memaksa kata dipisahkan ketika melebihi lebar elemen */
+            width: 350px;
+            height: auto;
+            background-color: #1F2F4D;
+            color: white;
+            padding: 9px;
+            border-radius: 5px;
+            position: absolute;
+            top: 35px;
+            /* bottom: -100px; */
+            /* left: 2%; */
+            transform: translateX(-88%);
+            /* white-space: nowrap; */
+            z-index: 1;
+            opacity: 1;
+            /* transition: opacity 3s; */
+            /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
+        }
+        span[itemid]:hover::before {
+            content: "";
+            border-style: solid;
+            border-width: 0 8px 8px 8px;
+            border-color: transparent transparent #1F2F4D transparent;
+            position: absolute;
+            top: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: calc(100% + 10px);
+            /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
+        }
     
     </style>
     
