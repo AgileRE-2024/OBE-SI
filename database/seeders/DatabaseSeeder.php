@@ -17,10 +17,7 @@ use App\Models\Profil_Lulusan;
 use App\Models\Bahan_Kajian;
 use App\Models\Mata_Kuliah;
 use App\Models\RPS;
-<<<<<<< HEAD
 use App\Models\User;
-=======
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
 use App\Models\Prodi;
 use App\Models\CPMK;
 use App\Models\Mahasiswa;
@@ -31,7 +28,7 @@ use App\Models\Page;
 use App\Models\Nilai_Mahasiswa;
 use App\Models\Detail_Nilai_Mahasiswa;
 use App\Models\Teknik_Penilaian;
-use App\Models\User;
+// use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -104,8 +101,6 @@ class DatabaseSeeder extends Seeder
             'mat_kodeMK'=>'MK01',
         ]);
 
-<<<<<<< HEAD
-=======
         Mata_Kuliah::create([
             'kodeMK' => 'MK02',
             'namaMK' => 'Kkkk',
@@ -119,7 +114,6 @@ class DatabaseSeeder extends Seeder
             'mat_kodeMK'=>'MK01',
         ]);
 
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
         User::create([
             'nip' => '123456789987654321',
             'jabatanDosen' => 'kps',
@@ -127,26 +121,23 @@ class DatabaseSeeder extends Seeder
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email'=>'rimuljo@gmail.com',
             'role'=>true,
-<<<<<<< HEAD
-        ]
-    );
-=======
         ]);
         User::create([
             'nip' => '123456789987654322',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Guntur',
             'password' => '1234',
+            'email'=>'guntur@gmail.com',
             'role'=>true,
         ]);
         User::create([
             'nip' => '123456789987654323',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Petir',
+            'email'=>'petir@gmail.com',
             'password' => '1234',
             'role'=>true,
         ]);
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
 
         RPS::create([
             'kodeRPS' => 'RPS001',
@@ -159,6 +150,7 @@ class DatabaseSeeder extends Seeder
             'kodeRPS' => 'RPS003',
             'tahunAjaran' => 2022,
             'kodeMK' => 'MK01',
+            'pustaka'=> 'isi pustaka',
             'kps' => '123456789987654321'
         ],);
         CPMK::create([
@@ -166,26 +158,26 @@ class DatabaseSeeder extends Seeder
             'deskripsiCPMK' => 'Mampu menjelaskan konsep dasar sistem',
             'kodeCPL' => 'CPL01'
         ]);
-        CPMK::create([
-            'kodeCPMK' => 'CPMK012',
-            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL02'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK012',
+        //     'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+        //     'kodeCPL' => 'CPL02'
+        // ]);
         CPMK::create([
             'kodeCPMK' => 'CPMK013',
             'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
             'kodeCPL' => 'CPL01'
         ]);
-        CPMK::create([
-            'kodeCPMK' => 'CPMK014',
-            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL02'
-        ]);
-        CPMK::create([
-            'kodeCPMK' => 'CPMK015',
-            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL02'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK014',
+        //     'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+        //     'kodeCPL' => 'CPL02'
+        // ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK015',
+        //     'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+        //     'kodeCPL' => 'CPL02'
+        // ]);
 
         SubCPMK::create([
             'kodeSubCPMK' => 'Sub-CPMK0111',
@@ -197,16 +189,16 @@ class DatabaseSeeder extends Seeder
             'deskripsiSubCPMK' => 'Mampu menjelaskan konsep informasi dan sistem informasi',
             'kodeCPMK' => 'CPMK011'
         ]);
-        SubCPMK::create([
-            'kodeSubCPMK' => 'Sub-CPMK0121',
-            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
-            'kodeCPMK' => 'CPMK012'
-        ]);
-        SubCPMK::create([
-            'kodeSubCPMK' => 'Sub-CPMK0122',
-            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
-            'kodeCPMK' => 'CPMK013'
-        ]);
+        // SubCPMK::create([
+        //     'kodeSubCPMK' => 'Sub-CPMK0121',
+        //     'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
+        //     'kodeCPMK' => 'CPMK012'
+        // ]);
+        // SubCPMK::create([
+        //     'kodeSubCPMK' => 'Sub-CPMK0122',
+        //     'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
+        //     'kodeCPMK' => 'CPMK013'
+        // ]);
 
         Teknik_Penilaian::create([
             'kodePenilaian'=> '0001',

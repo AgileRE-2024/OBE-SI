@@ -18,10 +18,7 @@ return new class extends Migration
             $table->string('jabatanDosen', 20);
             $table->string('namaDosen', 50);
             $table->string('password', 1406);
-<<<<<<< HEAD
             $table->string('email')->unique();
-=======
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
             $table->boolean('role')->default(false);
             $table->string('remember_token')->nullable();
             $table->timestamps();  

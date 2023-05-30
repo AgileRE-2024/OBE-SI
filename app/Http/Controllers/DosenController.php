@@ -6,6 +6,7 @@ use App\Models\Detail_Peran_Dosen;
 use App\Models\User;
 use App\Models\RPS;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DosenController extends Controller
 {
@@ -20,7 +21,10 @@ class DosenController extends Controller
     $details = Detail_Peran_Dosen::with('users')->get();
     $title = 'Detail Peran Dosen';
     $kodeRPS=$kodeRPS;
-    return view('content.dosen.index', ['title'  => $title, 'details' => $details, 'kodeRPS' => $kodeRPS]);
+    $detail = DB::select('SELECT detail.nip, dosen.namaDosen, detail.kodeRPS, detail.peranDosen FROM `detail_peran_dosen` detail JOIN users dosen ON detail.nip=dosen.nip WHERE detail.kodeRPS = ? ', [$kodeRPS]);
+    // $firstRow = isset($detail[0]) ? $detail[0] : null;
+    // dd($detail);
+    return view('content.dosen.index', ['title'  => $title, 'details' => $detail , 'kodeRPS' => $kodeRPS]);
 }
 
 
@@ -83,17 +87,29 @@ class DosenController extends Controller
      * @param  \App\Models\Details  $details
      * @return \Illuminate\Http\Response
      */
-    public function editPeranDosen($detail)
+    public function editPeranDosen($nip,$rps, $peranDosen)
     {
         // $detail = Detail_Peran_Dosen::findOrFail($nip);
         // return view('dosen.edit', compact('detail'));
-        $detail = Detail_Peran_Dosen::where('nip', $detail)->first();
+        $detail = DB::select('SELECT detail.nip, dosen.namaDosen, detail.kodeRPS, detail.peranDosen FROM `detail_peran_dosen` detail JOIN users dosen ON detail.nip=dosen.nip WHERE detail.nip= ? AND detail.kodeRPS = ? AND detail.peranDosen= ?', [$nip,$rps,$peranDosen]);
+        $firstRow = isset($detail[0]) ? $detail[0] : null;
+        // dd($firstRow);
         $details = Detail_Peran_Dosen::all();
-        $details = Detail_Peran_Dosen::with('users')->get();
+        $details = Detail_Peran_Dosen::with('users')->get()->where('nip','=',$nip)->where('kodeRPS','=',$rps);
+        // dd($details);
+        $empty = array();
+        $kode = ['1','2','3'];
+        foreach ($details as $detailss ) {
+            if(in_array($detailss->peranDosen, $kode)){
+                // dd($detailss->kodeRPS);
+                $empty[]=$detailss->peranDosen;
+            }
+        }
         $users = User::all();
         $rpss = RPS::all();
-
-        return view('content.dosen.edit', ['title' => 'Detail Peran Dosen', 'detail' => $detail, 'details' => $details, 'users'=>$users, 'rpss'=>$rpss]);
+        // $kode = ;
+        // dd($empty);
+        return view('content.dosen.edit', ['title' => 'Detail Peran Dosen', 'data' => $firstRow , 'details' => $details, 'users'=>$users, 'rpss'=>$rpss, 'empty'=>$empty]);
     }
 
     /**
@@ -103,18 +119,20 @@ class DosenController extends Controller
      * @param  \App\Models\Details  $details
      * @return \Illuminate\Http\Response
      */
-    public function updatePeranDosen(Request $request, $detail)
+    public function updatePeranDosen($nip,$rps,$peran,Request $request)
     {
         
-        $detail = Detail_Peran_Dosen::where('nip', $detail)->first();
-        $detail->update([
-            'nip' => $request->nip,
-            'kodeRPS' => $request->kodeRPS,
-            'peranDosen' => $request->peranDosen,
-        ]);
+        $detail = Detail_Peran_Dosen::where('nip', $nip)->where('kodeRPS',$rps)->where('peranDosen',$peran)->first();
+        // dd($detail);
+        if ($detail) {
+            $detail->peranDosen = $request->peranDosen;
         $detail->save();
 
-        return redirect()->route('edit_rps.peran_dosen')->with('success', 'Data Dosen berhasil diperbarui');
+            // Redirect or show success message
+        }
+        // dd($detail);
+
+        return redirect()->route('edit_rps.peran_dosen',$rps)->with('success', 'Data Dosen berhasil diperbarui');
     }
 // $detail = Detail_Peran_Dosen::findOrFail($nip);
         // $detail->nip = $request->input('nip');
@@ -129,17 +147,8 @@ class DosenController extends Controller
      */
     public function deletePeranDosen($nip, $kodeRPS, $peranDosen)
 {
-    $detail = Detail_Peran_Dosen::where('nip', $nip)
-                                ->where('kodeRPS', $kodeRPS)
-                                ->where('peranDosen', $peranDosen)
-                                ->first();
-
-    if ($detail) {
-        $detail->delete();
-        return redirect()->route('edit_rps.peran_dosen')->with('success', 'Data Dosen berhasil dihapus');
-    } else {
-        return redirect()->route('edit_rps.peran_dosen')->with('error', 'Data Dosen tidak ditemukan');
-    }
+    DB::delete('DELETE FROM detail_peran_dosen WHERE nip = ? AND kodeRPS= ? AND peranDosen = ?', [$nip,$kodeRPS,$peranDosen]);
+    return redirect()->route('edit_rps.peran_dosen',$kodeRPS)->with('success', 'Data Dosen berhasil dihapus');
 }
 
     public function getNamaDosen($nip)

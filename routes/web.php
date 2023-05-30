@@ -218,9 +218,9 @@ Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
         Route::get('/peran_dosen/{kodeRPS}', [DosenController::class, 'index'])->name('peran_dosen');
         Route::get('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'addPeranDosen'])->name('add_peran_dosen');
         Route::post('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'storePeranDosen'])->name('store_peran_dosen');
-        Route::get('/edit_peran_dosen/{nip}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
-        Route::put('/edit_peran_dosen/{nip}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
-        Route::get('/delete_peran_dosen/{nip}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
+        Route::get('/edit_peran_dosen/{nip}/{rps}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
+        Route::put('/edit_peran_dosen/{nip}/{rps}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
+        Route::get('/delete_peran_dosen/{nip}/{rps}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
         
         Route::get('/rps', [RPSController::class, 'show'])->name('rps_show');
     });
