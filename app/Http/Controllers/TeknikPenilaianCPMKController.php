@@ -83,7 +83,7 @@ class TeknikPenilaianCPMKController extends Controller
                 'Content-Disposition' => 'inline; filename=' . 'Teknik Penilaian CPMK Tahun Ajaran ' . $tahun_ajaran . "_" . $date_time . '.pdf'
             ]);
         } else {
-            return Excel::download(new TeknikPenilaianExport($tahun_ajaran), 'Teknik Penilaian CPMK Tahun Ajaran ' . $tahun_ajaran . "_" . $date_time . '.xlsx');
+            return Excel::download(new TeknikPenilaianCPMKExport($tahun_ajaran), 'Teknik Penilaian CPMK Tahun Ajaran ' . $tahun_ajaran . "_" . $date_time . '.xlsx');
         }
     }
     

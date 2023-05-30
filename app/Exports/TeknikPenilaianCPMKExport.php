@@ -2,6 +2,15 @@
 
 namespace App\Exports;
 
+use App\Models\CPL_Prodi;
+use App\Models\CPMK;
+use App\Models\Detail_MK_CPMK;
+use App\Models\Mata_Kuliah;
+use App\Models\Detail_RPS;
+use App\Models\RPS;
+use App\Models\Teknik_Penilaian;
+use App\Models\Minggu_RPS;
+use App\Models\SubCPMK;
 use Illuminate\Database\Eloquent\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
@@ -20,24 +29,14 @@ class TeknikPenilaianCPMKExport implements FromCollection, WithHeadings, WithCol
     protected $list_cpmk;
     protected $list_rps;
     protected $list_teknikpenilaian;
-    protected $list_kolom;
     protected $list_minggurps;
     protected $detail_rps;
     protected $list_subcpmk;
+    protected $tahun_ajaran;
 
-    public function __construct($judul, $list_cpl, $list_mk, $detail_mk_cpmk, $list_cpmk, $list_rps, $list_teknikpenilaian, $list_kolom, $list_minggurps,$detail_rps,$list_subcpmk)
+    public function __construct($tahun_ajaran)
     {
-        $this->judul = $judul;
-        $this->list_cpl = $list_cpl;
-        $this->list_mk = $list_mk;
-        $this->detail_mk_cpmk = $detail_mk_cpmk;
-        $this->list_cpmk = $list_cpmk;
-        $this->list_rps = $list_rps;
-        $this->list_teknikpenilaian = $list_teknikpenilaian;
-        $this->list_kolom = $list_kolom;
-        $this->list_minggurps = $list_minggurps;
-        $this->detail_rps = $detail_rps;
-        $this->list_subcpmk = $list_subcpmk;
+        $this->tahun_ajaran = $tahun_ajaran;
     }
 
     /**
@@ -45,28 +44,68 @@ class TeknikPenilaianCPMKExport implements FromCollection, WithHeadings, WithCol
      */
     public function collection(): Collection
     {
-        $data = [];
+        $excel_data = [];
         $no = 1;
-        foreach ($this->list_cpl as $cpl) {
+        $list_kolom = ['MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'UTS', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
+
+        if (!function_exists('setTeknikPenilaian')) {
+            function setTeknikPenilaian($asli, $baru)
+            {
+                if ($asli !== '') {
+                    $prefix_asli = explode(' ', $asli)[0];
+                    $prefix_baru = explode(' ', $baru)[0];
+                    if (strpos($asli, $prefix_baru) === false) {
+                        if (strpos($asli, '-')) {
+                            if (($prefix_asli === 'Awal' && explode(' ', $asli)[2] !== 'Akhir') || ($prefix_asli !== 'Awal' && explode(' ', $asli)[2] === 'Akhir')) {
+                                return 'Awal - Akhir Semester';
+                            }
+                            return $asli;
+                        } else {
+                            switch ($prefix_asli) {
+                                case 'Awal':
+                                    return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+
+                                case 'Tengah':
+                                    if ($prefix_baru == 'Awal') {
+                                        return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+                                    } else {
+                                        return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+                                    }
+
+                                case 'Akhir':
+                                    return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+
+                                default:
+                                    return $asli;
+                            }
+                        }
+                    }
+                    return $asli;
+                }
+                return $baru;
+            }
+        }
+        foreach (CPL_Prodi::all() as $cpl) {
             foreach($cpl->CPMK as $cpmk){
-                foreach ($cpmk->Mata_Kuliah as $mk ) {
+                foreach (Detail_Mk_CPMK::all()->where('kodeCPMK',$cpmk->kodeCPMK) as $mk ) {
                     $data_sementara = [];
                     array_push($data_sementara, $no);
                     array_push($data_sementara, $cpl->kodeCPL);
                     array_push($data_sementara, $cpmk->kodeCPMK);
                     array_push($data_sementara, $mk->kodeMK);
-                    foreach ($this->list_kolom as $tp){
+                    foreach ($list_kolom as $tp){
                         $checked = false;
-                        foreach ($this->list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
-                            if ($this->detail_rps->where('kodePenilaian',$ltp->kodePenilaian) != null) {
-                            foreach ($this->detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
-                                foreach ($this->list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
-                                    if($subCpmks->SubCPMK->CPMK) {
+                        foreach (Teknik_Penilaian::all()->where('teknikPenilaian', $tp) as $ltp) {
+                            // if (Detail_RPS::all()>where('kodePenilaian',$ltp->kodePenilaian) != null) {
+                            foreach (Detail_RPS::all()->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
+                                foreach (Minggu_RPS::all()->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
+                                    if($subCpmks->SubCPMK->CPMK->kodeCPMK == $cpmk->kodeCPMK) {
                                         $checked = true;
                                     }
                                 }
                             }
-                        }}
+                        // }
+                    }
                         if ($checked){
                             array_push($data_sementara,'✓');
                         }
@@ -76,20 +115,20 @@ class TeknikPenilaianCPMKExport implements FromCollection, WithHeadings, WithCol
                     }
 
 
-            array_push($data, $data_sementara);
+            array_push($excel_data, $data_sementara);
             $no++;
                 }
             }
         }
-        return new Collection($data);
+        return new Collection($excel_data);
     }
 
     public function headings(): array
     {
-        $headers = ['No', 'Kode CPL', 'Kode MK', 'Kode CPMK'];
-        foreach ($this->list_kolom as $tp) {
-            array_push($headers, $tp);
-        }
+        $headers = ['No', 'Kode CPL', 'Kode MK', 'Kode CPMK','MBKM', 'Partisipasi (Kehadiran / Quiz)', 'Observasi (Praktek / Tugas)', 'Unjuk Kerja (Presentasi)', 'UTS', 'Tes Tulis (UAS)', 'Tes Lisan (Tugas Kelompok)'];
+        // foreach ($this->list_kolom as $tp) {
+        //     array_push($headers, $tp);
+        // }
         return $headers;
     }
 
