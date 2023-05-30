@@ -1,37 +1,27 @@
-@extends('layout.dashboard')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Report</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-@section('content')
-    <div class="content px-4 pt-3">
-        <div class="card border" style="background-color: white">
-            <div class="card-body" style="font-weight:600;">
-                <h3>
-                    Matriks Capaian Pembelajaran Lulusan (CPL) - Capaian Pembelajaran Mata Kuliah (CPMK) - Mata Kuliah (MK)
-                </h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Pemetaan Pembelajaran Lulusan (CPL),
-                    Capaian Pembelajaran Mata Kuliah (CPMK), dan Mata Kuliah (MK) dilakukan untuk menunjukkan keterhubungan
-                    antara ketiganya. Untuk menambahkan Capaian Pembelajaran Mata Kuliah (CPMK) baru dapat dengan menekan
-                    Capaian Pembelajaran Lulusan (CPL) terkait. Untuk menambahkan Mata Kuliah (MK) atau mengubah Capaian
-                    Pembelajaran Lulusan (CPL) dapat dengan menekan Capaian Pembelajaran Mata Kuliah (CPMK) terkait.
-                    <b style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b>
-                </h5>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end pt-2">
-            <div class="pr-3">
-                <a class="btn btn-outline-danger" target="_blank" rel="noopener noreferrer"
-                    href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf') }}"><i class="bi bi-file-earmark-pdf-fill">
-                    </i>Export
-                    PDF</a>
-            </div>
-            <div>
-                <a class="btn btn-success" target="_blank" rel="noopener noreferrer"
-                    href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix') }}"><i class="bi bi-file-earmark-excel">
-                    </i>Export Excel</a>
-            </div>
-        </div>
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
 
-        <div class="d-flex mt-5" style="overflow: auto; width: 100%; max-height: calc(100vh - 4rem);">
-            <table class="table" style="table-layout: fixed">
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF REPORT PEMETAAN CPMK</h1>
+    <table class="table" style="table-layout: fixed">
                 <thead style="position: sticky; background-color: #fff; z-index: 2; top: 0;">
                     <tr>
                         <th class="align-middle" scope="col" rowspan="2"
@@ -69,7 +59,6 @@
                                         }
                                     }
                                 @endphp
-
                                 <td>
                                     @for ($i = 0; $i < sizeof($value); $i++)
                                         <span data-toggle="tooltip" title="{{ $value[$i]->deskripsiCPMK }}">
@@ -87,6 +76,5 @@
                     {{-- @endfor --}}
                 </tbody>
             </table>
-        </div>
-    </div>
-@endsection
+</body>
+</html>
