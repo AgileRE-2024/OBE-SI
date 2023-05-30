@@ -13,6 +13,8 @@
     
         th, td {
             border: 1px solid black;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 11px;
         }
     </style>    
 </head>

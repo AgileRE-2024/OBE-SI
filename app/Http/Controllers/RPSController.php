@@ -74,7 +74,7 @@ class RPSController extends Controller
         if ($type === 'pdf') {
             $dompdf = new Dompdf();
             $dompdf->loadHtml($view);
-            $dompdf->setPaper('A4', 'portrait');
+            $dompdf->setPaper('A4', 'landscape');
 
             $dompdf->render();
 
