@@ -22,7 +22,7 @@ return new class extends Migration
             $table->boolean('role')->default(false);
             $table->string('remember_token')->nullable();
             $table->string('status')->nullable();
-            $table->timestamps();  
+            $table->timestamps();
         });
     }
 

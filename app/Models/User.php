@@ -13,7 +13,6 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, CanResetPassword;
-
     protected $primaryKey = 'nip';
     public $incrementing = false;
     protected $table = 'users';
@@ -46,8 +45,8 @@ class User extends Authenticatable
             0 => 'dosen',
             1 => 'kurikulum',
             2 => 'admin'
-           ];
-           $userRoleName = $mapRoles[$this->role];
-           return $userRoleName === $role;
+        ];
+        $userRoleName = $mapRoles[$this->role];
+        return $userRoleName === $role;
     }
 }

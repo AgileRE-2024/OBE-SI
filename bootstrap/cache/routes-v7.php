@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::X6J8JwDgzj6lRBF9',
+            '_route' => 'generated::iLqjbkPwById9Ktz',
           ),
           1 => NULL,
           2 => 
@@ -217,7 +217,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ORuPoYJewc3Q45bu',
+            '_route' => 'generated::JVWAi9y5p81w0Eyw',
           ),
           1 => NULL,
           2 => 
@@ -1278,6 +1278,42 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/rps/minggu_rps' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'add_minggu_rps',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'store_minggu_rps',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/dashboard/rps/edit/teknik_penilaian' => 
       array (
         0 => 
@@ -1340,7 +1376,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::LptFeteC2WaHqS57',
+            '_route' => 'generated::kGq7eaqyoiSPH8LK',
           ),
           1 => NULL,
           2 => 
@@ -1412,7 +1448,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:168)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:205)|edit_cpmk/([^/]++)(?|(*:234))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:285))|CP(?|L(?|Dikti/([^/]++)(?|(*:320))|Prodi/([^/]++)(?|(*:346)))|MK/([^/]++)(?|(*:370)))|BahanKajian/([^/]++)(?|(*:403))|MataKuliah/([^/]++)(?|(*:434))|SubCPMK/([^/]++)(?|(*:462)))|delete(?|ProfilLulusan/([^/]++)(*:503)|CP(?|L(?|Dikti/([^/]++)(*:534)|Prodi/([^/]++)(*:556))|MK/([^/]++)(*:576))|BahanKajian/([^/]++)(*:605)|MataKuliah/([^/]++)(*:632)|SubCPMK/([^/]++)(*:656))|profilLulusan/export/([^/]++)(*:694)|cp(?|l_(?|dikti/export/([^/]++)(*:733)|prodi/export/([^/]++)(*:762))|mk/export/([^/]++)(*:789))|bahan_kajian/export/([^/]++)(*:826)|mata_kuliah/export/([^/]++)(*:861)|sub_cpmk/export/([^/]++)(*:893)))|rps/edit/(?|editTeknikPenilaian/([^/]++)(?|(*:946))|deleteTeknikPenilaian/([^/]++)(*:985)|teknik_pdf/export/([^/]++)(*:1019)))|/u(?|bahpw/([^/]++)(*:1049)|pdateprofile/([^/]++)(*:1079))|/reset\\-password/([^/]++)(*:1114))/?$}sDu',
+      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:168)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:205)|edit_cpmk/([^/]++)(?|(*:234))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:285))|CP(?|L(?|Dikti/([^/]++)(?|(*:320))|Prodi/([^/]++)(?|(*:346)))|MK/([^/]++)(?|(*:370)))|BahanKajian/([^/]++)(?|(*:403))|MataKuliah/([^/]++)(?|(*:434))|SubCPMK/([^/]++)(?|(*:462)))|delete(?|ProfilLulusan/([^/]++)(*:503)|CP(?|L(?|Dikti/([^/]++)(*:534)|Prodi/([^/]++)(*:556))|MK/([^/]++)(*:576))|BahanKajian/([^/]++)(*:605)|MataKuliah/([^/]++)(*:632)|SubCPMK/([^/]++)(*:656))|profilLulusan/export/([^/]++)(*:694)|cp(?|l_(?|dikti/export/([^/]++)(*:733)|prodi/export/([^/]++)(*:762))|mk/export/([^/]++)(*:789))|bahan_kajian/export/([^/]++)(*:826)|mata_kuliah/export/([^/]++)(*:861)|sub_cpmk/export/([^/]++)(*:893)))|rps/(?|e(?|xport/([^/]++)(*:928)|dit/(?|editTeknikPenilaian/([^/]++)(?|(*:974))|deleteTeknikPenilaian/([^/]++)(*:1013)|teknik_pdf/export/([^/]++)(*:1048)))|minggu_rps/(?|editMingguRPS(?|/([^/]++)(*:1098)|([^/]++)(*:1115))|deleteMingguRPS/([^/]++)(*:1149))))|/u(?|bahpw/([^/]++)(*:1180)|pdateprofile/([^/]++)(*:1210))|/reset\\-password/([^/]++)(*:1245))/?$}sDu',
     ),
     3 => 
     array (
@@ -2193,7 +2229,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      946 => 
+      928 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'export_rps',
+          ),
+          1 => 
+          array (
+            0 => 'type',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      974 => 
       array (
         0 => 
         array (
@@ -2235,7 +2294,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      985 => 
+      1013 => 
       array (
         0 => 
         array (
@@ -2258,7 +2317,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1019 => 
+      1048 => 
       array (
         0 => 
         array (
@@ -2281,7 +2340,75 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1049 => 
+      1098 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'edit_minggu_rps',
+          ),
+          1 => 
+          array (
+            0 => 'minggu_rps_list',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1115 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'update_minggu_rps',
+          ),
+          1 => 
+          array (
+            0 => 'minggu_rps_list',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1149 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delete_minggu_rps',
+          ),
+          1 => 
+          array (
+            0 => 'minggu_rps_list',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1180 => 
       array (
         0 => 
         array (
@@ -2304,7 +2431,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1079 => 
+      1210 => 
       array (
         0 => 
         array (
@@ -2326,7 +2453,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1114 => 
+      1245 => 
       array (
         0 => 
         array (
@@ -2612,7 +2739,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::X6J8JwDgzj6lRBF9' => 
+    'generated::iLqjbkPwById9Ktz' => 
     array (
       'methods' => 
       array (
@@ -2635,7 +2762,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::X6J8JwDgzj6lRBF9',
+        'as' => 'generated::iLqjbkPwById9Ktz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2834,7 +2961,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ORuPoYJewc3Q45bu' => 
+    'generated::JVWAi9y5p81w0Eyw' => 
     array (
       'methods' => 
       array (
@@ -2872,7 +2999,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::ORuPoYJewc3Q45bu',
+        'as' => 'generated::JVWAi9y5p81w0Eyw',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6115,20 +6242,240 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'role:dosen,admin',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:502:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:283:"function () {
-        return \\view(\'content.rps\', [
-            \'title\' => \'RPS\',
-            \'minggu_rps_list\' => \\App\\Models\\Minggu_RPS::all(),
-            \'rps_list\' => \\App\\Models\\RPS::all(),
-            \'detail_rps_list\' => \\App\\Models\\Detail_RPS::all()
-        ]);
-    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005610000000000000000";}";s:4:"hash";s:44:"C50tn4dZE3hM2D+7WWIrRh0FCW+L7xl+uWJd3FNcCwc=";}}',
+        'uses' => 'App\\Http\\Controllers\\RpsController@index',
+        'controller' => 'App\\Http\\Controllers\\RpsController@index',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
         'as' => 'rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'export_rps' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/rps/export/{type}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RpsController@export',
+        'controller' => 'App\\Http\\Controllers\\RpsController@export',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'export_rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'add_minggu_rps' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/rps/minggu_rps',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MingguRPSController@addMingguRPS',
+        'controller' => 'App\\Http\\Controllers\\MingguRPSController@addMingguRPS',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'add_minggu_rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'store_minggu_rps' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'dashboard/rps/minggu_rps',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MingguRPSController@storeMingguRPS',
+        'controller' => 'App\\Http\\Controllers\\MingguRPSController@storeMingguRPS',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'store_minggu_rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'edit_minggu_rps' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MingguRPSController@editMingguRPS',
+        'controller' => 'App\\Http\\Controllers\\MingguRPSController@editMingguRPS',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'edit_minggu_rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'update_minggu_rps' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MingguRPSController@updateMingguRPS',
+        'controller' => 'App\\Http\\Controllers\\MingguRPSController@updateMingguRPS',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'update_minggu_rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delete_minggu_rps' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MingguRPSController@deleteMingguRPS',
+        'controller' => 'App\\Http\\Controllers\\MingguRPSController@deleteMingguRPS',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'delete_minggu_rps',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6408,7 +6755,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::LptFeteC2WaHqS57' => 
+    'generated::kGq7eaqyoiSPH8LK' => 
     array (
       'methods' => 
       array (
@@ -6430,7 +6777,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::LptFeteC2WaHqS57',
+        'as' => 'generated::kGq7eaqyoiSPH8LK',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6536,7 +6883,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
     return \\view(\'content.login.auth.forgot-password\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a50000000000000000";}";s:4:"hash";s:44:"4fXQmwpkxVGW7DXXJyglJeARuH3IfMMk70NnDTFqPdU=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005aa0000000000000000";}";s:4:"hash";s:44:"JBstfzlAbWhjpTUNMuRnPwboK3oAeMOOUUtq4ROqen4=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -6582,7 +6929,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::RESET_LINK_SENT
         ? \\back()->with([\'status\' => \\__($status)])
         : \\back()->withErrors([\'email\' => \\__($status)]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a70000000000000000";}";s:4:"hash";s:44:"M5lYFH3fC/TqaVCFIccnjFtQyOcF+8iLiFaazz7HMas=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005ac0000000000000000";}";s:4:"hash";s:44:"4Ugm4kvySQjDyWFa7kUJjPss56lVAYaZswzm+uHtkVY=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -6621,7 +6968,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:317:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
     return \\view(\'content.login.auth.reset-password\', [\'token\' => $token]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a90000000000000000";}";s:4:"hash";s:44:"bc2t83FzfYmChTX2ZLhs8IPumUlqmXTVbkJrpHVCyCA=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005ae0000000000000000";}";s:4:"hash";s:44:"gNS10RSDNLyiatZ0B/KFKlLzoJNHdYZqf04KR5qIZH8=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -6680,7 +7027,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::PASSWORD_RESET
         ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
         : \\back()->withErrors([\'email\' => [\\__($status)]]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005ab0000000000000000";}";s:4:"hash";s:44:"zM1DLOkC7p9Oj0XYnCKpHFY3OO3uAAoCti9CP4nJuiE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005b00000000000000000";}";s:4:"hash";s:44:"HuOqyb0hWas6YWB9rR+cx5nfl+WBht7f6A/djAeW+/k=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 

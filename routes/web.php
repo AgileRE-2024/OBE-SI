@@ -27,6 +27,7 @@ use App\Http\Controllers\BKMKController;
 use App\Http\Controllers\CPMKController;
 use App\Http\Controllers\CPLBKController;
 use App\Http\Controllers\CPLMKController;
+use App\Http\Controllers\MingguRPSController;
 use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\SubCPMKController;
 use App\Http\Controllers\CPLDiktiController;
@@ -39,6 +40,7 @@ use App\Http\Controllers\OrganisasiMKController;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\ProfilLulusanController;
 use App\Http\Controllers\TeknikPenilaianController;
+use App\Http\Controllers\RpsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -234,14 +236,16 @@ Route::group(['middleware' => 'role:dosen,admin'], function () {
         return view('welcome');
     })->name('penilaian');
 
-    Route::get('/dashboard/rps', function () {
-        return view('content.rps', [
-            'title' => 'RPS',
-            'minggu_rps_list' => Minggu_RPS::all(),
-            'rps_list' => RPS::all(),
-            'detail_rps_list' => Detail_RPS::all()
-        ]);
-    })->name('rps');
+    Route::get('/dashboard/rps', [RPSController::class, 'index', 'title' => 'RPS'])->name('rps');
+    Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');
+
+    Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
+    Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
+    Route::post('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
+
+    Route::get('/dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
+    Route::put('/dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
+    Route::get('/dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
 
     Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
         Route::get('/teknik_penilaian', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
