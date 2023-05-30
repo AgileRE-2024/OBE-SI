@@ -106,7 +106,7 @@
                                 foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
                                     foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
                                         foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
-                                            if($subCpmks->SubCPMK->CPMK) {
+                                            if($subCpmks->SubCPMK->CPMK->kodeCPMK == $cpmk->kodeCPMK) {
                                                 $checked = true;
                                             }
                                         }
