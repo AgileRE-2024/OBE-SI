@@ -18,25 +18,25 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 {{-- <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link @if (Request::is('*home*')) active @endif">
+                    <a href="{{ route('home') }}" class="nav-link @if (Request::is('home')) active @endif">
                         <p>
                             <i class="bi bi-house"></i>
                             Home
                         </p>
                     </a>
                 </li> --}}
-                <li class="nav-item @if (Request::is('*kurikulum*')) menu-open @endif">
+                <li id="kurikulum" class="nav-item @if (Request::is('*kurikulum*')) menu-open @endif">
                     <a href="{{ route('kurikulum.data.profil_lulusan') }}" class="nav-link"
-                        @if (Request::is('*kurikulum*')) style="background-color: #F6D743; color: black;" @endif>
+                        @if (Request::is('kurikulum')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-files"></i>
                             Kurikulum
                         </p>
                     </a>
                     <ul class="nav nav-treeview pl-3">
-                        <li class="nav-item @if (Request::is('*data*')) menu-open @endif">
+                        <li class="nav-item @if (Request::is('data')) menu-open @endif">
                             <a href="{{ route('kurikulum.data.profil_lulusan') }}" class="nav-link"
-                                @if (Request::is('*data*')) style="background-color: #ffffff; color: black;" @endif>
+                                @if (Request::is('data')) style="background-color: #ffffff; color: black;" @endif>
                                 <p>
                                     <i class="bi bi-caret-right-fill"></i>
                                     Data
@@ -79,6 +79,15 @@
                                         </p>
                                     </a>
                                 </li>
+                                {{-- <li class="nav-item">
+                                    <a href="{{ route('kurikulum.data.teknik_penilaian') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.data.teknik_penilaian')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            Teknik Penilaian
+                                        </p>
+                                    </a>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{ route('kurikulum.data.mata_kuliah') }}" class="nav-link"
                                         @if (URL::current() === route('kurikulum.data.mata_kuliah')) style="background-color: #989898; color: black;" @endif>
@@ -90,9 +99,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">
-                            <a href="{{ route('kurikulum.pemetaan.bk_mk') }}" class="nav-link"
-                                @if (Request::is('*pemetaan*')) style="background-color: #ffffff; color: black;" @endif>
+                        <li id="pemetaan" class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">
+                            <a href="{{ route('kurikulum.pemetaan.bk_mk') }}"
+                                class="nav-link" @if (Request::is('pemetaan')) style="background-color: #ffffff; color: black;" @endif>
                                 <p>
                                     <i class="bi bi-caret-right-fill"></i>
                                     Pemetaan
@@ -117,7 +126,7 @@
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li id= "cplbkmk" class="nav-item">
                                     <a href="{{ route('kurikulum.pemetaan.cpl_bk_mk') }}" class="nav-link"
                                         @if (URL::current() === route('kurikulum.pemetaan.cpl_bk_mk')) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
@@ -172,21 +181,29 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk') }}" class="nav-link"
-                                        @if (URL::current() === route('kurikulum.pemetaan.cpl_cpmk_mk')) style="background-color: #989898; color: black;" @endif>
+                                    <a href="{{ route('kurikulum.pemetaan.cpl_cpmk_mk.index') }}" class="nav-link"
+                                        @if (str_contains(URL::current(), route('kurikulum.pemetaan.cpl_cpmk_mk.index'))) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
                                             <i class="bi bi-caret-right-fill"></i>
                                             CPL-CPMK-MK
                                         </p>
                                     </a>
                                 </li>
+                                {{-- <li id="mkcpmksubcpmk" class="nav-item">
+                                    <a href="{{ route('kurikulum.pemetaan.mk_cpmk_subcpmk') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.pemetaan.mk_cpmk_subcpmk')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            MK-CPMK-SUBCPMK
+                                        </p>
+                                    </a>
+                                </li> --}}
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"
-                        @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
+                    <a href="#" class="nav-link" @if (Request::is('penilaian')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-book"></i>
                             Penilaian
@@ -194,8 +211,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('rps') }}" class="nav-link"
-                        @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>
+                    <a href="/dashboard/rps" class="nav-link" @if (URL::current() === route('rps')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-filetype-pdf"></i>
                             RPS

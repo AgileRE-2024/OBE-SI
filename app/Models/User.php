@@ -14,28 +14,27 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, CanResetPassword;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $primaryKey = 'nip';
     public $incrementing = false;
     protected $table = 'users';
-    protected $fillable = [
-        'nip', 'jabatanDosen','namaDosen', 'password','email', 'role'
-    ];
+    protected $fillable = ['nip', 'jabatanDosen','namaDosen', 'password','email', 'role'];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
     protected $hidden = [
         'remember_token',
     ];
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function getAuthIdentifierName()
-    {
-        return 'nip';
-    }
-
-    public function getAuthIdentifier()
-    {
-        return $this->nip;
-    }
-
     public function RPS()
     {
         return $this->hasMany(RPS::class, 'nip', 'kps');
@@ -44,5 +43,4 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(RPS::class, 'Detail_Peran_Dosen', 'nip', 'kodeRPS');
     }
-
 }
