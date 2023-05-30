@@ -232,7 +232,7 @@
                                     @if (URL::current() === route('penilaian.tahap_penilaian.index')) style="background-color: #ffffff; color: black;" @endif>
                                     <p style="font-size: 14px">
                                         <i class="bi bi-caret-right-fill"></i>
-                                        Tahap Penilaian
+                                        Mekanisme dan Tahap
                                     </p>
                                 </a>
                             </li>

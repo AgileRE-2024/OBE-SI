@@ -3,7 +3,9 @@
 namespace App\Exports;
 
 use App\Models\CPL_Prodi;
+use App\Models\Detail_MK_CPMK;
 use App\Models\Detail_RPS;
+use App\Models\RPS;
 use Illuminate\Database\Eloquent\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithColumnWidths;
@@ -15,6 +17,12 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class TahapPenilaianExport implements FromCollection, WithHeadings, WithColumnWidths, WithStyles
 {
+    protected $tahun_ajaran;
+
+    public function __construct($tahun_ajaran)
+    {
+        $this->tahun_ajaran = $tahun_ajaran;
+    }
     /**
      * @return \Illuminate\Support\Collection
      */
@@ -63,7 +71,7 @@ class TahapPenilaianExport implements FromCollection, WithHeadings, WithColumnWi
 
         foreach (CPL_Prodi::all() as $cpl) {
             foreach ($cpl->CPMK as $cpmk) {
-                foreach ($cpmk->Mata_Kuliah as $mk) {
+                foreach (Detail_MK_CPMK::all()->where('kodeCPMK', $cpmk->kodeCPMK) as $mk) {
                     $data_sementara = [];
                     $bobot = 0;
                     $tahap_penilaian = '';
@@ -71,8 +79,8 @@ class TahapPenilaianExport implements FromCollection, WithHeadings, WithColumnWi
                     $instrumen = [];
                     $kriteria = [];
                     foreach ($cpmk->SubCPMK as $subCpmk) {
-                        if ($subCpmk->Minggu_RPS->count()) {
-                            foreach (Detail_RPS::all()->where('kodeMingguRPS', $subCpmk->Minggu_RPS->first()->kodeMingguRPS) as $detail_rps) {
+                        foreach ($subCpmk->Minggu_RPS as $minggu_rps) {
+                            foreach (Detail_RPS::all()->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->where('kodeRPS', RPS::all()->where('kodeMK', $mk->kodeMK)->where('tahunAjaran', $this->tahun_ajaran)->first()->kodeRPS) as $detail_rps) {
                                 $data_teknik_penilaian = $detail_rps->Teknik_Penilaian;
 
                                 $bobot += $data_teknik_penilaian->bobotPenilaian;

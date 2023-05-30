@@ -38,6 +38,7 @@ use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\OrganisasiMKController;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\ProfilLulusanController;
+use App\Http\Controllers\TahapPenilaianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -235,7 +236,8 @@ Route::group(['middleware' => 'role:dosen,admin'], function () {
     Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
         Route::prefix('/tahap-penilaian')->name('tahap_penilaian.')->group(function () {
             Route::get('/',[TahapPenilaianController::class, 'index'])->name('index');
-            Route::get('/export/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
+            Route::get('/{tahun_ajaran}',[TahapPenilaianController::class, 'table'])->name('data_penilaian');
+            Route::get('/export/{tahun_ajaran}/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
         });
     });
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mekanisme dan Tahap Penilaian</title>
+    <title>Mekanisme dan Tahap Penilaian Tahun Ajaran {{ $tahun_ajaran }}</title>
     <style>
         table {
             border-collapse: collapse;
@@ -24,7 +24,7 @@
 
 <body>
     <div style="text-align: center; padding: 20px 0px 20px 0px; font-size: 24px; font-weight: bold;">
-        Mekanisme dan Tahap Penilaian
+        Mekanisme dan Tahap Penilaian<br /> Tahun Ajaran {{ $tahun_ajaran }}
     </div>
     <div style="padding-top: 20px;">
         <table align="center" style="text-align: center">
@@ -85,7 +85,7 @@
                 @endphp
                 @foreach ($list_cpl as $cpl)
                     @foreach ($cpl->CPMK as $cpmk)
-                        @foreach ($cpmk->Mata_Kuliah as $mk)
+                        @foreach ($detail_mk_cpmk->where('kodeCPMK', $cpmk->kodeCPMK) as $mk)
                             <tr>
                                 @php
                                     $iteration++;
@@ -94,14 +94,17 @@
                                     $teknik_penilaian = '';
                                     $instrumen = [];
                                     $kriteria = [];
+
                                     foreach ($cpmk->SubCPMK as $subCpmk) {
-                                        if ($subCpmk->Minggu_RPS->count()) {
-                                            foreach ($list_detail_rps->where('kodeMingguRPS', $subCpmk->Minggu_RPS->first()->kodeMingguRPS) as $detail_rps) {
+                                        foreach ($subCpmk->Minggu_RPS as $minggu_rps) {
+                                            foreach ($list_detail_rps->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->where('kodeRPS', $list_rps->firstWhere('kodeMK', $mk->kodeMK)->kodeRPS) as $detail_rps) {
                                                 $data_teknik_penilaian = $detail_rps->Teknik_Penilaian;
 
                                                 $bobot += $data_teknik_penilaian->bobotPenilaian;
+
                                                 $tahap_penilaian = setTahapPenilaian($tahap_penilaian, $data_teknik_penilaian->tahapPenilaian);
-                                                $teknik_penilaian = ($teknik_penilaian > 0 ? $teknik_penilaian . $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian) == '' ? $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian;
+
+                                                $teknik_penilaian = $teknik_penilaian > 0 ? $teknik_penilaian . '; ' . $data_teknik_penilaian->teknikPenilaian : ($teknik_penilaian == '' ? $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian);
                                                 if (!in_array($data_teknik_penilaian->instrumenPenilaian, $instrumen)) {
                                                     array_push($instrumen, $data_teknik_penilaian->instrumenPenilaian);
                                                 }
