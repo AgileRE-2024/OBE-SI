@@ -175,8 +175,10 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
 
 Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
     Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
-    Route::get('/cetak-pdf-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanPDF'])-> name('cetakpdftpcpmk');
-    Route::get('/cetak-excel-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanExcel'])-> name('cetakexceltpcpmk');   
+    Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
+    Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
+    // Route::get('/cetak-pdf-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanPDF'])-> name('cetakpdftpcpmk');
+    // Route::get('/cetak-excel-tpcpmk',[TeknikPenilaianCPMKController::class,'cetakLaporanExcel'])-> name('cetakexceltpcpmk');   
 });
 // Route::get('/dashboard/penilaian', function () {
 //     return view('welcome');
@@ -191,13 +193,5 @@ Route::get('/dashboard/rps', function () {
     ]);
 })->name('rps');
 
-Route::get('/', function () {
-    $tahun_list = RPS::pluck('tahunAjaran')->unique();
-    $rpsData = RPS::when(request('tahun'), function ($query) {
-        return $query->where('tahunAjaran', request('tahun'));
-    })->get();
-
-    return view('index', compact('tahun_list', 'rpsData'));
-})->name('rps.filter');
 
 Route::get('/generate-pdf', 'PDFController@generatePDF');

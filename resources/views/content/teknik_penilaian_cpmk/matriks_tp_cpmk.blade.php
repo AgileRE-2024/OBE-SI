@@ -1,4 +1,4 @@
-@extends('layout.dashboard')
+{{-- @extends('layout.dashboard')
 
 @section('content')
     <div class="content px-4">
@@ -13,20 +13,6 @@
             </div>
         </div>
         <div class="d-flex justify-content-end pt-2">
-            <form method="GET" action="{{ route('rps.filter') }}">
-                <div class="form-group">
-                    <label for="tahun">Filter Berdasarkan Tahun:</label>
-                    <select name="tahun" id="tahun" class="form-control">
-                        <option value="">-- Pilih Tahun --</option>
-                        @foreach($list_rps as $tahun)
-                            <option value="{{ $tahun }}" {{ request()->get('tahunAjaran') == $tahun ? 'selected' : '' }}>{{ $tahun }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Filter</button>
-            </form>
-        </div>
-        <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
                 <a class="btn btn-outline-danger" id="exportPDFButton" href="{{ route ('penilaian.cetakpdftpcpmk') }}"><i class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
@@ -34,7 +20,7 @@
                 <a class="btn btn-success" id="exportExcelButton" href="{{ route('penilaian.cetakexceltpcpmk') }}"><i class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
-        <br>
+        <br> --}}
 
         <table class="table table-bordered" style="text-align: center">
             <thead class="table" style="background-color: lightgray">
@@ -45,14 +31,53 @@
                     <th class="align-middle" scope="col" style="width: 10%">Kode CPMK</th>
                     @foreach ($list_kolom as $tp)
                         <th scope="col">
-                            {{-- <span itemid="{{ $tp }}"> --}}
                                 {{ $tp}}
-                            {{-- </span> --}}
                             </th>
                     @endforeach
                 </tr>
             </thead>
             <tbody>
+                @php
+                if (!function_exists('setTeknikPenilaian')) {
+                    function setTeknikPenilaian($asli, $baru)
+                    {
+                        if ($asli !== '') {
+                            $prefix_asli = explode(' ', $asli)[0];
+                            $prefix_baru = explode(' ', $baru)[0];
+                            if (strpos($asli, $prefix_baru) === false) {
+                                if (strpos($asli, '-')) {
+                                    if (($prefix_asli === 'Awal' && explode(' ', $asli)[2] !== 'Akhir') || ($prefix_asli !== 'Awal' && explode(' ', $asli)[2] === 'Akhir')) {
+                                        return 'Awal - Akhir Semester';
+                                    }
+                                    return $asli;
+                                } else {
+                                    switch ($prefix_asli) {
+                                        case 'Awal':
+                                            return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+    
+                                        case 'Tengah':
+                                            if ($prefix_baru == 'Awal') {
+                                                return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+                                            } else {
+                                                return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+                                            }
+    
+                                        case 'Akhir':
+                                            return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+    
+                                        default:
+                                            return $asli;
+                                    }
+                                }
+                            }
+                            return $asli;
+                        }
+                        return $baru;
+                    }
+                }
+    
+                $iteration = 0;
+            @endphp
                 {{-- @foreach ( $list_mk as $mk )
                 @php
                 $iteration=0;
@@ -213,4 +238,4 @@
             }
         }
     </script>
-@endsection
+{{-- @endsection --}}
