@@ -13,8 +13,7 @@
             @if (auth()->user()->role == 1)
                 <div class="d-flex justify-content-start pt-2">
                     <div>
-                        <a class="btn btn-success" href="{{ route('kurikulum.data.add_cpmk') }}"><i
-                                class="bi bi-file-earmark-excel">
+                        <a class="btn btn-dark" href="{{ route('kurikulum.data.add_cpmk') }}"><i class="bi bi-plus-square">
                             </i>Tambah</a>
                     </div>
                 </div>

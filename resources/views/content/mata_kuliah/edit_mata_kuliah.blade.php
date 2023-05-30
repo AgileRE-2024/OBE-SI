@@ -49,6 +49,7 @@
                             </option>
                             <option value="1" @if ($mk->kategoriMK == 1) selected @endif>Wajib</option>
                             <option value="0" @if ($mk->kategoriMK == 0) selected @endif>Pilihan</option>
+                            <option value="2" @if ($mk->kategoriMK == 2) selected @endif>MKWK</option>
                         </select>
                     </div>
 
@@ -101,6 +102,7 @@
                                 <option value="{{ $item->kodeMK }}" @if ($mk->mat_kodeMK == $item->kodeMK) selected @endif>
                                     {{ $item->namaMK }}</option>
                             @endforeach
+                            <option value="">Tidak ada Prasyarat</option>
                         </select>
                     </div>
 

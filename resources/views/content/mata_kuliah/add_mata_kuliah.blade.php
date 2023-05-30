@@ -46,6 +46,7 @@
                             </option>
                             <option value="1">Wajib</option>
                             <option value="0">Pilihan</option>
+                            <option value="2">MKWK</option>
                         </select>
                     </div>
 

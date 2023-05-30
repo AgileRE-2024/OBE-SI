@@ -12,6 +12,21 @@
                 <form action="{{ route('kurikulum.data.store_sub_cpmk') }}" method="POST">
                     @csrf
                     <div class="form-group">
+                        <label>Kode CPMK</label>
+                        @error('kodeCPMK')
+                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                        @enderror
+                        <select name="kodeCPMK" class="form-select">
+                            <option value="" selected disabled>-- Pilih CPMK --</option>
+                            @foreach ($cpmks as $cpmk)
+                                <option value="{{ $cpmk->kodeCPMK }}">
+                                    {{ $cpmk->kodeCPMK }} - {{ Illuminate\Support\Str::limit($cpmk->deskripsiCPMK, 40) }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label>Kode Sub CPMK</label>
                         @error('kodeSubCPMK')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
@@ -25,20 +40,6 @@
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
                         <textarea name="deskripsiSubCPMK" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Kode CPMK</label>
-                        @error('kodeCPMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
-                        @enderror
-                        <select name="kodeCPMK" class="form-control">
-                            <option value="" selected disabled>-- Pilih CPMK --</option>
-                            @foreach ($cpmks as $cpmk)
-                                <option value="{{ $cpmk->kodeCPMK }}">
-                                    {{ $cpmk->kodeCPMK }} - {{ $cpmk->deskripsiCPMK }}</option>
-                            @endforeach
-                        </select>
                     </div>
 
                     <div class="form-group pt-4">

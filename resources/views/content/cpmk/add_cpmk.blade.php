@@ -11,21 +11,6 @@
             <div class="col-sm-8">
                 <form action="{{ route('kurikulum.data.store_cpmk') }}" method="POST">
                     @csrf
-                    <div class="form-group">
-                        <label>Kode CPMK</label>
-                        @error('kodeCPMK')
-                            <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror
-                        <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK" title="Misal CPMK001">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Deskripsi CPMK</label>
-                        @error('deskripsi')
-                            <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror
-                        <textarea name="deskripsi" row="3" class="form-control" placeholder="Deskripsi CPMK"></textarea>
-                    </div>
 
                     <div class="form-group">
                         <label>Kode CPL</label>
@@ -36,9 +21,27 @@
                             <option value="" selected disabled>-- Pilih CPL Prodi --
                             </option>
                             @foreach ($cplp as $list_cplp)
-                                <option value="{{ $list_cplp->kodeCPL }}">{{ $list_cplp->kodeCPL }}</option>
+                                <option value="{{ $list_cplp->kodeCPL }}">{{ $list_cplp->kodeCPL }} {{ '-' }}
+                                    {{ Illuminate\Support\Str::limit($list_cplp->deskripsiCPL, 40) }}</option>
                             @endforeach
                         </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kode CPMK</label>
+                        @error('kodeCPMK')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK"
+                            title="Misal CPMK001">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Deskripsi CPMK</label>
+                        @error('deskripsi')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <textarea name="deskripsi" row="3" class="form-control" placeholder="Deskripsi CPMK"></textarea>
                     </div>
 
                     <div class="form-group pt-4">

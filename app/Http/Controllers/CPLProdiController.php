@@ -62,7 +62,7 @@ class CPLProdiController extends Controller
     public function storeCPLProdi(Request $request)
     {
         $request->validate([
-            'kodeCPL' => 'required|unique:cpl_prodi,kodeCPL|regex:/^CPL\d{2}$/',
+            'kodeCPL' => 'required|unique:cpl_prodi,kodeCPL',
             'deskripsiCPL' => 'required',
             'referensiCPL' => 'required',
         ]);
@@ -81,13 +81,13 @@ class CPLProdiController extends Controller
 
         if ($request->kodeCPL == $cpl) {
             $validator = Validator::make($request->all(), [
-                'kodeCPL' => 'required|regex:/^CPL\d{2}$/',
+                'kodeCPL' => 'required',
                 'deskripsiCPL' => 'required',
                 'referensiCPL' => 'required',
             ]);
         } else {
             $validator = Validator::make($request->all(), [
-                'kodeCPL' => 'required|unique:cpl_prodi,kodeCPL|regex:/^CPL\d{2}$/',
+                'kodeCPL' => 'required|unique:cpl_prodi,kodeCPL',
                 'deskripsiCPL' => 'required',
                 'referensiCPL' => 'required',
             ]);

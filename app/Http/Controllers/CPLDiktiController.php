@@ -84,7 +84,7 @@ class CPLDiktiController extends Controller
     {
         if ($request->kodeCPLSN == $cpl) {
             $request->validate([
-                'kodeCPLSN' => 'required|regex:/^CPL-\d{3}$/',
+                'kodeCPLSN' => 'required',
                 'deskripsiSN' => 'required',
                 'sumberSN' => 'required',
                 'kategoriSN' => 'required',
@@ -92,7 +92,7 @@ class CPLDiktiController extends Controller
             ]);
         } else {
             $request->validate([
-                'kodeCPLSN' => 'required|unique:cpl_sn_dikti,kodeCPLSN|regex:/^CPL-\d{3}$/',
+                'kodeCPLSN' => 'required|unique:cpl_sn_dikti,kodeCPLSN',
                 'deskripsiSN' => 'required',
                 'sumberSN' => 'required',
                 'kategoriSN' => 'required',
