@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->boolean('role')->default(false);
             $table->string('remember_token')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();  
         });
     }

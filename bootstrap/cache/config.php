@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:kQ2aQTLqrmUckymOa04NLpomwAQ9WC9ErtfIFq5bQQ0=',
+    'key' => 'base64:h9jwH1yhkFDS4xFitk19xV5TVXMWGx1Q8AV+AaVPnas=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -368,13 +368,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\app',
+        'root' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\app/public',
+        'root' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -394,7 +394,7 @@
     ),
     'links' => 
     array (
-      'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\public\\storage' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\app/public',
+      'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\public\\storage' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -433,13 +433,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -491,7 +491,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -503,11 +503,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'mailpit',
-        'port' => '1025',
-        'encryption' => NULL,
-        'username' => NULL,
-        'password' => NULL,
+        'host' => 'smtp.gmail.com',
+        'port' => '587',
+        'encryption' => 'tls',
+        'username' => 'agusti.sinaga@gmail.com',
+        'password' => 'fdxmdbgfgxygnjgg',
         'timeout' => NULL,
         'local_domain' => NULL,
       ),
@@ -549,15 +549,15 @@
     ),
     'from' => 
     array (
-      'address' => 'hello@example.com',
-      'name' => 'Laravel',
+      'address' => 'agusti.sinaga@gmail.com',
+      'name' => 'laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -663,7 +663,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -683,9 +683,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\resources\\views',
+      0 => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\resources\\views',
     ),
-    'compiled' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\framework\\views',
   ),
   'dompdf' => 
   array (
@@ -694,10 +694,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\fonts',
+      'font_dir' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\fonts',
+      'font_cache' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\fonts',
       'temp_dir' => 'C:\\Users\\Asus\\AppData\\Local\\Temp',
-      'chroot' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI',
+      'chroot' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -840,7 +840,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -919,7 +919,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\xampp\\htdocs\\PL\\test\\OBE-SI',
+    'remote_sites_path' => 'D:\\xampp\\htdocs\\PL\\test\\test\\OBE-SI',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

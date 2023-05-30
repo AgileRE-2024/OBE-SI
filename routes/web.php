@@ -95,6 +95,7 @@ Route::group(['middleware' => 'role:kurikulum,admin'], function () {
     Route::get('/dashboard/kurikulum', function () {
         return view('content.login.homekurikulum', ['title' => 'Home OBE']);
     });
+    Route::get('/dashboard/kurikulum', [LoginController::class, 'myprofile'])->name('profil kurikulum');
 
     Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::prefix('/pemetaan')->name('pemetaan.')->group(function () {

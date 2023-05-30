@@ -292,6 +292,27 @@ class DatabaseSeeder extends Seeder
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email'=>'rimuljo@gmail.com',
             'role'=>true,
+            'status'=> "Aktif Mengajar"
+        ]);
+
+        User::create([
+            'nip' => '32532425252',
+            'jabatanDosen' => 'Dosen',
+            'namaDosen' => 'Taufik',
+            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'email'=>'taufik@gmail.com',
+            'role'=>0,
+            'status'=> "Aktif Mengajar"
+        ]);
+
+        User::create([
+            'nip' => '32525252523',
+            'jabatanDosen' => 'Admin',
+            'namaDosen' => 'Admin',
+            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'email'=>'admin@gmail.com',
+            'role'=>2,
+            'status'=> "Aktif Bekerja"
         ]);
 
         RPS::create([

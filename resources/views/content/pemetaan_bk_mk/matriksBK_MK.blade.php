@@ -96,7 +96,7 @@
                                         id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif>
+                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
                                         {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @else
