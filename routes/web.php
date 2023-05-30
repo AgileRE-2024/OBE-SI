@@ -41,6 +41,7 @@ use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\ProfilLulusanController;
 use App\Http\Controllers\TeknikPenilaianController;
 use App\Http\Controllers\RpsController;
+use App\Http\Controllers\PemetaanCplDiktiCplProdiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -138,9 +139,15 @@ Route::group(['middleware' => 'role:kurikulum,admin'], function () {
 
             Route::get('/organisasi-mata-kuliah/export/excel', [OrganisasiMKController::class, 'exportToExcel'])->name('organisasi_mk.export.excel');
 
-            Route::get('/cpl-sndikti-cpl-prodi', function () {
-                return view('welcome');
-            })->name('cpl_sndikti_cpl_prodi');
+            // Route::get('/cpl-sndikti-cpl-prodi', function () {
+            //     return view('welcome');
+            // })->name('cpl_sndikti_cpl_prodi');
+
+            Route::get('/cpl-sndikti-cpl-prodi', [PemetaanCplDiktiCplProdiController::class, 'index'])->name('cpl_sndikti_cpl_prodi');
+            Route::get('/cpl-sndikti-cpl-prodi/cetak', [PemetaanCplDiktiCplProdiController::class, 'cetak_pdf']);
+            Route::put('/cpl-sndikti-cpl-prodi/update', [PemetaanCplDiktiCplProdiController::class, 'update'])->name('update_pemetaan_cpldikti_cplprodi');
+            Route::get('/cpl-sndikti-cpl-prodi/table', [PemetaanCplDiktiCplProdiController::class, 'table'])->name('table_cpldikti_cplprodi');
+            Route::get('/cpl-sndikti-cpl-prodi/export/{type}', [PemetaanCplDiktiCplProdiController::class, 'export'])->name('export');
 
             // Route::get('/cpl-mk', function () {
             //     return view('welcome');
