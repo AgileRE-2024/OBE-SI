@@ -64,14 +64,14 @@
                         @foreach ($empty as $item)
                             <tr>
                                 <th style="background-color: yellow;" scope="row">{{ $iter }}</th>
-                                <th style="background-color: yellow;" scope="row"><span itemid="{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["deskripsiSN"]}}">{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] }}</span></th>
+                                <th style="background-color: yellow;" scope="row"><span name="{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["deskripsiSN"]}}">{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] }}</span></th>
                                 <th  style="background-color: yellow;"  scope="row" class="text-start">{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["deskripsiSN"]}}</th>
                                 @foreach ($cplprodi_list as $cplprod)
                                     <td style="background-color: yellow;" ><input type="checkbox"
                                             id="checkbox_{{$cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"]  }}-{{ $cplprod->kodeCPL }}"
                                             name="checkbox_{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"]  }}-{{ $cplprod->kodeCPL }}"
                                             value="{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"]  }}&{{ $cplprod->kodeCPL }}" style="width:26px;height:26px;"
-                                            @if ($pemetaan->where('kodeCPLSN', '===', $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] )->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif>
+                                            @if ($pemetaan->where('kodeCPLSN', '===', $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] )->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif> 
                                             {{-- <span id="{{$cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] }}_{{ $cplprod->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @endforeach
@@ -86,7 +86,7 @@
                         @if (!(in_array($cplsn->kodeCPLSN, $empty)))
                         <tr>
                             <th scope="row">{{ $iter }}</th>
-                            <th scope="row" ><span itemid="{{ $cplsn->deskripsiSN }}">{{ $cplsn->kodeCPLSN }}</span></th>
+                            <th scope="row" ><span name="{{ $cplsn->deskripsiSN }}">{{ $cplsn->kodeCPLSN }}</span></th>
                             <th scope="row" class="text-start">{{ $cplsn->deskripsiSN }}</th>
                             @foreach ($cplprodi_list as $cplprod)
                                 @if (in_array($cplprod->kodeCPL, $empty_prod))
@@ -102,7 +102,7 @@
                                         id="checkbox_{{ $cplsn->kodeCPLSN }}-{{ $cplprod->kodeCPL }}"
                                         name="checkbox_{{ $cplsn->kodeCPLSN }}-{{ $cplprod->kodeCPL }}"
                                         value="{{ $cplsn->kodeCPLSN }}&{{ $cplprod->kodeCPL }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeCPLSN', '===', $cplsn->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif>
+                                        @if ($pemetaan->where('kodeCPLSN', '===', $cplsn->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
                                         {{-- <span id="{{$cplsn->kodeCPLSN}}_{{ $cplprod->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @endif

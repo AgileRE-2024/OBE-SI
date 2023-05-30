@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::u6SCukPKPgfQBAhT',
+            '_route' => 'generated::ZZrv3mByjBNW8BLX',
           ),
           1 => NULL,
           2 => 
@@ -217,7 +217,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::71tpGPGZpQGe2Psg',
+            '_route' => 'generated::1VOi7fFtjpv2UtOg',
           ),
           1 => NULL,
           2 => 
@@ -1455,7 +1455,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::C2PrAVvmXx8Z3YtF',
+            '_route' => 'generated::XRGL26B15Q55DavM',
           ),
           1 => NULL,
           2 => 
@@ -2864,7 +2864,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::u6SCukPKPgfQBAhT' => 
+    'generated::ZZrv3mByjBNW8BLX' => 
     array (
       'methods' => 
       array (
@@ -2881,13 +2881,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005390000000000000000";}";s:4:"hash";s:44:"yKb39nHyzxVjYVnQWd5qdGWeAVz9Wv+HrP6xaQ1OYuE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000519235b3000000003d070e30";}";s:4:"hash";s:44:"AxAtPhYIQ68y6q3KpgunnhPNlQKaemLB9UDbZ4mGyvM=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::u6SCukPKPgfQBAhT',
+        'as' => 'generated::ZZrv3mByjBNW8BLX',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3086,7 +3086,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::71tpGPGZpQGe2Psg' => 
+    'generated::1VOi7fFtjpv2UtOg' => 
     array (
       'methods' => 
       array (
@@ -3118,13 +3118,13 @@ app('router')->setCompiledRoutes(
         \'Semua_Kelas\' => \\App\\Models\\Kelas::all(),
         \'Detail_Nilai_Mahasiswa\' => \\App\\Models\\Detail_Nilai_Mahasiswa::all(),
     ]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005400000000000000000";}";s:4:"hash";s:44:"/vd+vwt2f+psibgKAbTLYM2PngJQbel3elnIe9qyOwE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000519235aa000000003d070e30";}";s:4:"hash";s:44:"gUEz7FeauW50Mzx1Tz90suW2qEN6nOYY4k+8TOXfc24=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::71tpGPGZpQGe2Psg',
+        'as' => 'generated::1VOi7fFtjpv2UtOg',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6556,7 +6556,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:272:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:54:"function () {
         return \\view(\'welcome\');
-    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005440000000000000000";}";s:4:"hash";s:44:"/PsD+uMBJWC6s5lVdO2faXYruhkOkEnTfNaOFgNUG98=";}}',
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000519235a6000000003d070e30";}";s:4:"hash";s:44:"aKQ0QWGpH1ziDa32RJ1MuX11t0et8lbt/iz9Az+d32k=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7106,7 +7106,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::C2PrAVvmXx8Z3YtF' => 
+    'generated::XRGL26B15Q55DavM' => 
     array (
       'methods' => 
       array (
@@ -7128,7 +7128,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::C2PrAVvmXx8Z3YtF',
+        'as' => 'generated::XRGL26B15Q55DavM',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7234,7 +7234,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
     return \\view(\'content.login.auth.forgot-password\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005af0000000000000000";}";s:4:"hash";s:44:"2hQssV/fHDYr3cPw0WSRgzz78ct6FOEwYT3hSCTZqFs=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000051923539000000003d070e30";}";s:4:"hash";s:44:"INxO7vS7QhwBl9GKP69WIQJ8okMJlA26ELOUUc2FzcQ=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7280,7 +7280,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::RESET_LINK_SENT
         ? \\back()->with([\'status\' => \\__($status)])
         : \\back()->withErrors([\'email\' => \\__($status)]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005b10000000000000000";}";s:4:"hash";s:44:"y53dPbIQZM+hW7475zwI4S7N8AMBxwUAJhifwJcoV6o=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005192353b000000003d070e30";}";s:4:"hash";s:44:"ZaQNgtZzFX1fuhy35RjrIcZJpbs+4MxgPzKoDu25yqY=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7319,7 +7319,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:317:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
     return \\view(\'content.login.auth.reset-password\', [\'token\' => $token]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005b30000000000000000";}";s:4:"hash";s:44:"q/5xwrtINDmIBOgat8/13CsuMTx5js9a/bAvEJX9V8I=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000051923535000000003d070e30";}";s:4:"hash";s:44:"IQ+CnprMrY1j8UYVACzR0lzuQBoLPKilosZCFQLgQ2w=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7378,7 +7378,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::PASSWORD_RESET
         ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
         : \\back()->withErrors([\'email\' => [\\__($status)]]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005b50000000000000000";}";s:4:"hash";s:44:"Fgk/8rbhBDjePB8GF8oXEbQ/OSoD6KRmkfKK94XZQy8=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000051923537000000003d070e30";}";s:4:"hash";s:44:"3G7eLoJlD2lkc6VHNiVo4uCDlNRJPKaq/+9sFAWocJg=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 

@@ -72,8 +72,8 @@
                                     <td style="background-color: yellow;" ><input type="checkbox"
                                             id="checkbox_{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
                                             name="checkbox_{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
-                                            value="{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}&{{ $bk->kodeBK }}" style="width:26px;height:26px;"
-                                            @if ($pemetaan->where('kodeMK', '===', $mk_list->where('kodeMK','===',$item)->first()["kodeMK"] )->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif>
+                                            value="{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}&{{ $bk->kodeBK }}" 
+                                            @if ($pemetaan->where('kodeMK', '===', $mk_list->where('kodeMK','===',$item)->first()["kodeMK"] )->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif style="width:26px;height:26px; @if(auth()->user()->role!=1) width:26px;height:26px;background-color: blue !important; @endif">
                                             {{-- <span id="{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"] }}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @endforeach
@@ -95,16 +95,16 @@
                                     <td style="background-color: yellow"><input type="checkbox"
                                         id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
-                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
+                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" 
+                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif style="width:26px;height:26px; @if(auth()->user()->role!=1) width:26px;height:26px;background-color: blue !important; @endif">
                                         {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @else
                                     <td ><input type="checkbox"
                                         id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
-                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif>
+                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" 
+                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1)  disabled @endif style="width:26px;height:26px; @if(auth()->user()->role!=1) width:26px;height:26px;background-color: blue !important; @endif">
                                         {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @endif
