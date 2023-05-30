@@ -30,7 +30,7 @@
         </div>
         <br />
         <div class="form-group" style="display: flex; flex-direction: column;">
-            <label>Tahun Pembelajaran</label>
+            <label>Tahun Ajaran</label>
             <select name="tahunAjaran" id="tahunAjaran" class="form-select" data-live-search="true"
                 onchange="getTableDataByTahunAjaran(value)">
                 <option value="" selected disabled>-------Pilih Tahun Ajaran-------
