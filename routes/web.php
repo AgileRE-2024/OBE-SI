@@ -222,7 +222,7 @@ Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
         Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
         Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
         
-        Route::get('/rps', [RPSController::class, 'show'])->name('rps_show');
+        Route::get('/rps/{kodeRPS}', [RPSController::class, 'show'])->name('rps_show');
     });
     
     Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');

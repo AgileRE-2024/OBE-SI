@@ -21,7 +21,7 @@
         <br>
         <table class="table table-bordered" style="text-align: center">
             @php
-                    $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+                    $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                     // print($rps);
                     $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
                     // print($mk);
@@ -174,15 +174,15 @@
                                 ]);
                         }
                     }
-                    $list_dosen_pengampu = array();
-                    $uniqueIds = [];
-                    foreach ($detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Dosen Pengampu') as $dpd) {
-                            $nip = $dpd->nip;
-                            if (!in_array($nip, $uniqueIds)) {
-                                $uniqueIds[] = $nip;
-                                array_push($list_dosen_pengampu, $nip);
-                        }
-                    }
+                    $list_dosen_pengampu = $detail_peran_dosen_list->where('peranDosen', 'Dosen Pengampu')->pluck('nip');
+                    // $uniqueIds = [];
+                    // foreach ($detail_peran_dosen_list->where('peranDosen', '=', 'Dosen Pengampu') as $dpd) {
+                    //         $nip = $dpd->nip;
+                    //         if (!in_array($nip, $uniqueIds)) {
+                    //             $uniqueIds[] = $nip;
+                    //             array_push($list_dosen_pengampu, $nip);
+                    //     }
+                    // }
                     $list_minggu_rps = collect();
                     $uniqueIds = [];
                     foreach ($detail_rps_list->where('kodeRPS', '=', $rps->kodeRPS) as $dr) {
@@ -280,7 +280,7 @@
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Dosen Pengampu</th>
                     <td style="text-align: left;" rowspan="1" colspan="7"> 
-                    @if ($dosen_list)
+                    @if (!$dosen_list)
                         <div class="alert alert-warning"><span>
 
                             Tambahkan Dosen Pengampu

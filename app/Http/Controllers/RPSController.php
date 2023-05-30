@@ -36,17 +36,18 @@ class RPSController extends Controller
             'teknik_penilaian_list'=>Teknik_Penilaian::all(),
         ]);
     }
-    public function show()
+    public function show($kodeRPS)
     {
         return view('content.rps', [
             'title' => 'RPS',
+            'kodeRPS'=>$kodeRPS,
             'rps_list'=> RPS::all(),
             'teknik_penilaian_list'=> Teknik_Penilaian::all(),
             'detail_rps_list'=> Detail_RPS::all(),
             'dosen_list'=> User::all(),
             'mk_list' => Mata_Kuliah::all(),
             'minggu_rps_list' => Minggu_RPS::all(),
-            'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
+            'detail_peran_dosen_list' => Detail_Peran_Dosen::all()->where('kodeRPS', $kodeRPS),
             'subcpmk_list'=>SubCPMK::all(),
             'teknik_penilaian_list'=>Teknik_Penilaian::all(),
         ]);

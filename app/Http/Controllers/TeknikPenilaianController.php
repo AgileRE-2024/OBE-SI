@@ -65,9 +65,14 @@ class TeknikPenilaianController extends Controller
 
     public function storeTeknikPenilaian(Request $request, $kodeRPS)
     {
-        $kodePenilaian=Teknik_Penilaian::all()->last()->kodePenilaian;
-        $kodePenilaian=(int)$kodePenilaian;
-        $kodePenilaian++;
+        if (Teknik_Penilaian::all()->count() == 0) {
+            $kodePenilaian=1;
+        }else{
+            $kodePenilaian=Teknik_Penilaian::all()->last()->kodePenilaian;
+            $kodePenilaian=(int)$kodePenilaian;
+            $kodePenilaian++;
+        }
+        
 
         $validator = Validator::make($request->all(), [
             'teknikPenilaian' => 'required',
