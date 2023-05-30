@@ -54,7 +54,12 @@
                 width: '265px'
             });
 
-            exportPDF.onclick = function() {
+            // Cek apakah sudah ada opsi pada select yang terpilih sebelumnya
+            var tahun_ajaran = document.getElementById('tahunAjaran');
+            if(tahun_ajaran.value) {
+                getTableDataByTahunAjaran(tahun_ajaran.value);
+            } else {
+                exportPDF.onclick = function() {
                 errorPopup();
                 return false;
             };
@@ -63,6 +68,7 @@
                 errorPopup();
                 return false;
             };
+            }
         });
 
         function errorPopup() {
