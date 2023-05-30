@@ -11,13 +11,13 @@
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
-        <div class="d-flex justify-content-start pt-2">
+        <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a class="btn btn-primary" href="{{ route('kurikulum.pemetaan.export', ['pdf']) }}"><i
+                <a id="exportPDF" class="btn btn-outline-danger" href="{{ route('kurikulum.pemetaan.export', ['pdf']) }}"><i
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" href="{{ route('kurikulum.pemetaan.export', ['excel']) }}"><i
+                <a id="exportExcel" class="btn btn-success" href="{{ route('kurikulum.pemetaan.export', ['excel']) }}"><i
                         class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
