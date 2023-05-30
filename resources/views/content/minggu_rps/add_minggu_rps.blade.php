@@ -32,13 +32,13 @@
                     {{-- Passing data rps ke controller --}}
                     <input type="hidden" name="kodeRPS" value={{ $rps->kodeRPS }} />
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label>Kode Minggu RPS</label>
                         @error('kodeMingguRPS')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
                         <input type="text" name="kodeMingguRPS" class="form-control" placeholder="Kode Minggu RPS">
-                    </div>
+                    </div> --}}
 
                     @php
                         $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();

@@ -96,8 +96,16 @@ class MingguRPSController extends Controller
      */
     public function storeMingguRPS(Request $request, $kodeRPS)
     {
+        if (Minggu_RPS::all()->count() == 0) {
+            $kodeMingguRPS=1;
+        }else{
+            $kodeMingguRPS=Minggu_RPS::all()->last()->kodeMingguRPS;
+            $kodeMingguRPS=(int)$kodeMingguRPS;
+            $kodeMingguRPS++;
+        }
+        
         $validator = Validator::make($request->all(), [
-            'kodeMingguRPS' => 'required',
+            // 'kodeMingguRPS' => 'required',
             'kodeSubCPMK' => 'required',
             // 'kodePenilaian' => 'required',
             'mingguKe' => 'required',
@@ -118,7 +126,7 @@ class MingguRPSController extends Controller
         }
 
         Minggu_RPS::create([
-            'kodeMingguRPS' => $request->kodeMingguRPS,
+            'kodeMingguRPS' => $kodeMingguRPS,
             'kodeSubCPMK' => $request->kodeSubCPMK,
             // 'kodePenilaian' => $request->,
             'mingguKe' => $request->mingguKe,
@@ -133,7 +141,7 @@ class MingguRPSController extends Controller
             $detail_rps = [];
                 $detail_rps[] = [
                     'kodeRPS' => $kodeRPS,
-                    'kodeMingguRPS' => $request->kodeMingguRPS,
+                    'kodeMingguRPS' => $kodeMingguRPS,
                     'kodePenilaian' => $request->kodePenilaian,
                     // atribut tambahan lainnya di tabel pivot C
                 ];

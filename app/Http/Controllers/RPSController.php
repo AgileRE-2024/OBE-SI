@@ -143,13 +143,13 @@ class RPSController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kodeRPS' => [
-                'required',
-                Rule::unique('rps', 'kodeRPS')->where(function ($query) use ($request) {
-                    return $query->where('kodeMK', $request->kodeMK)
-                        ->where('tahunAjaran', $request->tahunAjaran);
-                }),
-            ],
+            // 'kodeRPS' => [
+            //     'required',
+            //     Rule::unique('rps', 'kodeRPS')->where(function ($query) use ($request) {
+            //         return $query->where('kodeMK', $request->kodeMK)
+            //             ->where('tahunAjaran', $request->tahunAjaran);
+            //     }),
+            // ],
             'kodeMK' => 'required',
             'kps' => 'required',
             'tahunAjaran' => [
@@ -163,15 +163,18 @@ class RPSController extends Controller
             'kodeRPS.unique' => 'Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.',
             'tahunAjaran.unique' => 'Tahun ajaran sudah digunakan untuk kodeMK yang sama.',
         ]);
-    
+        // Menggabungkan kodeMK, semester, dan tahun menjadi kodeRPS
+        $mk=Mata_Kuliah::where('kodeMK', $request->kodeMK)->first();
+        $kodeRPS = $request->kodeMK . $mk->semester . $request->tahunAjaran;
+
         RPS::create([
-            'kodeRPS' => $request->kodeRPS,
+            'kodeRPS' => $kodeRPS,
             'tahunAjaran' => $request->tahunAjaran,
             'pustaka'=> $request->pustaka,
             'kodeMK' => $request->kodeMK,
             'kps' => $request->kps,
         ]);
     
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $request->kodeRPS ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
     }
 }

@@ -9,20 +9,6 @@
         <div class="col-sm-8">
             <form method="post" action="{{ route('rps_store') }}">
                 @csrf
-                    <div class="form-group">
-                        <label for="kodeRPS">Kode RPS</label>
-                        @error('kodeRPS')
-                            <h6 style="color: #BF2C45">
-                                @if($message === 'The kode r p s has already been taken.')
-                                    Kode RPS harus berbeda
-                                @else
-                                    {{ $message }}
-                                @endif
-                            </h6>
-                        @enderror
-                        <input type="text" name="kodeRPS" class="form-control"
-                            placeholder="Kode RPS">
-                    </div>
 
                     <div class="form-group">
                         <label for="kodeMK">Mata Kuliah</label>
