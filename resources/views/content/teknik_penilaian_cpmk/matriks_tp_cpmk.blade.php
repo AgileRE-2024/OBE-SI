@@ -53,12 +53,11 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ( $list_mk as $mk )
+                {{-- @foreach ( $list_mk as $mk )
                 @php
                 $iteration=0;
                 @endphp
                 @endforeach
-                {{-- @foreach ($list_cpmk as $cpmk ) --}}
                 @foreach ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK) as $detail)
                 @foreach ($list_cpmk->where('kodeCPMK', $detail->kodeCPMK) as $cpmk)
                     <tr>
@@ -86,8 +85,8 @@
                         @endforeach    
                         @endforeach
                     </tr>
-                @endforeach 
-                {{-- @php
+                @endforeach  --}}
+                @php
                     $iteration=0;
                 @endphp
                 @foreach ($list_cpl as $cpl)
@@ -119,7 +118,7 @@
                     </tr>
                 @endforeach
                 @endforeach
-                @endforeach  --}}
+                @endforeach 
             </tbody>
         </table>
 
