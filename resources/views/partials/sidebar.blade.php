@@ -201,6 +201,17 @@
                             Penilaian
                         </p>
                     </a>
+                    {{-- <ul class="nav nav-treeview pl-3">
+                        <li class="nav-item">
+                            <a href="{{ route('penilaian.tp_cpmk') }}" class="nav-link"
+                                @if (URL::current() === route('penilaian.tp_cpmk')) style="background-color: #ffffff; color: black;" @endif>
+                                <p style="font-size: 14px">
+                                    <i class="bi bi-caret-right-fill"></i>
+                                    Teknik Penilaian CPMK
+                                </p>
+                            </a>
+                        </li>
+                    </ul> --}}
                     <ul class="nav nav-treeview pl-3">
                         <li class="nav-item">
                             <a href="{{ route('penilaian.tp_cpmk') }}" class="nav-link"
