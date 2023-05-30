@@ -10,104 +10,41 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="POST" action="{{ route('dosen.update', $detail->nip) }}">
+                <form method="POST" action="{{ route('edit_rps.update_peran_dosen', ['nip'=>$detail->nip, 'kodeRPS'=>$kodeRPS, 'peranDosen'=>$detail->peranDosen]) }}">
                     @csrf
                     @method('put')
-                    @php
-    $list_nip = collect();
-    $uniqueIds = [];
-
-    foreach ($details as $detail) {
-        $user = $detail->users; // Mengambil entitas User dari relasi
-
-        if ($user && isset($user->nip)) {
-            $nip = $user->nip;
-            $namaDosen = $user->namaDosen;
-
-            if (!in_array($nip, $uniqueIds)) {
-                $uniqueIds[] = $nip;
-                $list_nip->push([
-                    'nip' => $nip,
-                    'namaDosen' => $namaDosen,
-                ]);
-            }
-        }
-    }
-    $list_nips = $list_nip->pluck('nip');
-@endphp
-
-
-
-
-                <div class="form-group">
-                    <label>NIP</label>
-                    @error('nip')
-                        <h6 style="color: #BF2C45">{{ $message }}</h6>
-                    @enderror
-                    <select name="nip" id='nip' class="form-select">
-                        <option value="">-- Pilih NIP --</option>
-                        @foreach ($users as $item)
-                            <option value="{{ $item->nip }}">{{ $item->nip }} - {{ $item->namaDosen }}</option>
-                        @endforeach
-                    </select>
-                </div>
                     <div class="form-group">
-                        <label>Nama Dosen</label>
-                        <input type="text" name="namaDosen" id="namaDosen" class="form-control" readonly>
-                    </div>
-                    @php
-    $list_kodeRPS = collect();
-    $uniqueIds = [];
-
-    foreach ($details as $detail) {
-        $rps = $detail->rpss; // Mengambil entitas User dari relasi
-
-        if ($rps && isset($rps->kodeRPS)) {
-            $kodeRPS = $rps->kodeRPS;
-
-            if (!in_array($kodeRPS, $uniqueIds)) {
-                $uniqueIds[] = $kodeRPS;
-                $list_kodeRPS->push([
-                    'kodeRPS' => $kodeRPS,
-                ]);
-            }
-        }
-    }
-    $list_kodeRPSs = $list_kodeRPS->pluck('kodeRPS');
-@endphp
-                <div class="form-group">
-                    <label>Kode RPS</label>
-                    @error('kodeRPS')
-                        <h6 style="color: #BF2C45">{{ $message }}</h6>
-                    @enderror
-                    <select name="kodeRPS" id='kodeRPS' class="form-select">
-                        <option value="">-- Pilih Kode RPS --</option>
-                        @foreach ($rpss->whereIn('kodeRPS', $list_kodeRPSs) as $item)
-                            <option value="{{ $item->kodeRPS }}">{{ $item->kodeRPS }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                    {{-- <div class="form-group">
-                        <label>Detail Peran</label>
-                        @error('peranDosen')
-                            <p style="color: #BF2C45">{{ $message }}</p>
+                        <label>Dosen</label>
+                        @error('nip')
+                            <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
-                        <textarea name="peranDosen" row="3" class="form-control" placeholder="Detail Peran">{{ old('peranDosen') ? old('peranDosen') : $detail->peranDosen }}</textarea>
-                    </div> --}}
-                    <div class="form-group">
-                        <label>Detail Peran</label>
-                        @error('peranDosen')
-                            <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror
-                        <select name="peranDosen" id='peranDosen' class="form-select">
-                            <option value="" selected disabled>-- Pilih Peran Dosen --
-                            </option>
-                            <option value="1">Dosen Pengembang RPS</option>
-                            <option value="2">Koordinator BK</option>
-                            <option value="3">Dosen Pengampu</option>
+                        <select name="nip" id='nip' class="form-select">
+                            <option value="">-- Pilih Dosen --</option>
+                            @foreach ($dosen as $item)
+                                <option value="{{ $item->nip }}"{{ $item->nip ==  $detail->nip ? 'selected' : ''}}>{{ $item->nip }} -
+                                    {{ $item->namaDosen }}</option>
+                            @endforeach
                         </select>
                     </div>
-
+    
+                    <div class="form-group">
+                            <label>Peran Dosen</label>
+                            @error('peranDosen')
+                                <p style="color: #BF2C45">{{ $message }}</p>
+                            @enderror
+                            <select name="peranDosen" id='peranDosen' class="form-select">
+                                <option value="" selected disabled>-- Pilih Peran Dosen --
+                                </option>
+                                @php
+                                    $options=["Dosen Pengembang RPS", "Koordinator BK", "Dosen Pengampu"];
+                                @endphp
+                            @foreach ($options as $item)
+                                {{-- @foreach ($opsi as $sc) --}}
+                                <option value="{{ $item }}" {{ $item ==  $detail->peranDosen ? 'selected' : ''}}>{{ $item }}</option>
+                                {{-- @endforeach --}}
+                            @endforeach
+                            </select>
+                    </div>
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i
                                 class="fa fa-fw fa-plus-circle"></i>

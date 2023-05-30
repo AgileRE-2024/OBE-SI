@@ -12,9 +12,7 @@
             <div class="col-sm-8">
                 <form method="POST" action="{{ route('edit_rps.store_peran_dosen', ['kodeRPS' => $kodeRPS]) }}">
                     @csrf
-                    
-
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label>NIP</label>
                     @error('nip')
                         <h6 style="color: #BF2C45">{{ $message }}</h6>
@@ -25,37 +23,34 @@
                             <option value="{{ $item->nip }}">{{ $item->nip }} - {{ $item->namaDosen }}</option>
                         @endforeach
                     </select>
-                </div>
-                    <div class="form-group">
-                        <label>Nama Dosen</label>
-                        <input type="text" name="namaDosen" id="namaDosen" class="form-control" readonly>
-                    </div>
-
+                </div> --}}
                 <div class="form-group">
-                    <label>Kode RPS</label>
-                    @error('kodeRPS')
+                    <label>Dosen</label>
+                    @error('nip')
                         <h6 style="color: #BF2C45">{{ $message }}</h6>
                     @enderror
-                    <select name="kodeRPS" id='kodeRPS' class="form-select">
-                        <option value="">-- Pilih Kode RPS --</option>
-                        @foreach ($rpss as $item)
-                            <option value="{{ $item->kodeRPS }}">{{ $item->kodeRPS }}</option>
+                    <select name="nip" id='nip' class="form-select">
+                        <option value="">-- Pilih Dosen --</option>
+                        @foreach ($dosen as $item)
+                            <option value="{{ $item->nip }}">{{ $item->nip }} -
+                                {{ $item->namaDosen }}</option>
                         @endforeach
                     </select>
-                </div>
-                    <div class="form-group">
-                        <label>Detail Peran</label>
-                        @error('deskripsi')
+                </div>
+
+                <div class="form-group">
+                        <label>Peran Dosen</label>
+                        @error('peranDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <select name="deskripsi" id='deskripsi' class="form-select">
+                        <select name="peranDosen" id='peranDosen' class="form-select">
                             <option value="" selected disabled>-- Pilih Peran Dosen --
                             </option>
-                            <option value="1">Dosen Pengembang RPS</option>
-                            <option value="2">Koordinator BK</option>
-                            <option value="3">Dosen Pengampu</option>
+                            <option value="Dosen Pengembang RPS">Dosen Pengembang RPS</option>
+                            <option value="Koordinator BK">Koordinator BK</option>
+                            <option value="Dosen Pengampu">Dosen Pengampu</option>
                         </select>
-                    </div>
+                </div>
 
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Detail_Peran_Dosen;
 use App\Models\User;
 use App\Models\RPS;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class DosenController extends Controller
@@ -17,7 +18,7 @@ class DosenController extends Controller
     public function index($kodeRPS)
 {
     //$details = Detail_Peran_Dosen::all();
-    $details = Detail_Peran_Dosen::with('users')->get();
+    $details = Detail_Peran_Dosen::with('users')->where('kodeRPS', $kodeRPS)->get();
     $title = 'Detail Peran Dosen';
     $kodeRPS=$kodeRPS;
     return view('content.dosen.index', ['title'  => $title, 'details' => $details, 'kodeRPS' => $kodeRPS]);
@@ -32,11 +33,9 @@ class DosenController extends Controller
     public function addPeranDosen($kodeRPS)
 {
     //$detail = Detail_Peran_Dosen::where('nip', $detail)->first();
-    $details = Detail_Peran_Dosen::with('users')->get();
-    $users = User::all();
-    $rpss = RPS::all();
+    $dosen = User::all();
 
-    return view('content.dosen.create', [ 'title' => 'Tambah Peran Dosen','details' => $details, 'users'=>$users, 'rpss'=>$rpss, 'kodeRPS' => $kodeRPS]);
+    return view('content.dosen.create', [ 'title' => 'Tambah Peran Dosen', 'dosen'=>$dosen, 'kodeRPS'=>$kodeRPS]);
 }
 
 
@@ -48,21 +47,24 @@ class DosenController extends Controller
      */
     public function storePeranDosen(Request $request, $kodeRPS)
     {
-        $request->validate([
+
+        $validator = Validator::make($request->all(), [
             'nip' => 'required',
-            'kodeRPS' => 'required',
-            'deskripsi' => 'required'
+            'peranDosen' => 'required'
         ]);
 
-        $details = Detail_Peran_Dosen::create([
+        if ($validator->fails()) {
+            // flash('error')->error();
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        Detail_Peran_Dosen::create([
             'nip' => $request->nip,
-            'kodeRPS' => $request->kodeRPS,
-            'peranDosen' => $request->deskripsi
+            'kodeRPS' => $kodeRPS,
+            'peranDosen' => $request->peranDosen,
         ]);
-        $details->save();
-        $details = Detail_Peran_Dosen::with('users')->get();
         // Redirect atau tampilkan pesan sukses, sesuai dengan kebutuhan aplikasi
-        return redirect()->route('edit_rps.peran_dosen', ['title'=>"Daftar Peran Dosen",'details' => $details,'kodeRPS' => $kodeRPS ])->with('success', 'Minggu RPS berhasil ditambahkan');
+        return redirect()->route('edit_rps.peran_dosen', ['title'=>"Daftar Peran Dosen",'kodeRPS' => $kodeRPS ])->with('success', 'Minggu RPS berhasil ditambahkan');
     }
 
     /**
@@ -83,17 +85,13 @@ class DosenController extends Controller
      * @param  \App\Models\Details  $details
      * @return \Illuminate\Http\Response
      */
-    public function editPeranDosen($detail)
+    public function editPeranDosen($nip, $kodeRPS, $peranDosen)
     {
         // $detail = Detail_Peran_Dosen::findOrFail($nip);
         // return view('dosen.edit', compact('detail'));
-        $detail = Detail_Peran_Dosen::where('nip', $detail)->first();
-        $details = Detail_Peran_Dosen::all();
-        $details = Detail_Peran_Dosen::with('users')->get();
-        $users = User::all();
-        $rpss = RPS::all();
-
-        return view('content.dosen.edit', ['title' => 'Detail Peran Dosen', 'detail' => $detail, 'details' => $details, 'users'=>$users, 'rpss'=>$rpss]);
+        $detail = Detail_Peran_Dosen::where('nip', $nip)->where('kodeRPS', $kodeRPS)->where('peranDosen', $peranDosen)->first();
+        $dosen = User::all();
+        return view('content.dosen.edit', ['title' => 'Detail Peran Dosen', 'detail' => $detail, 'dosen'=>$dosen, 'kodeRPS'=>$kodeRPS]);
     }
 
     /**
@@ -103,18 +101,17 @@ class DosenController extends Controller
      * @param  \App\Models\Details  $details
      * @return \Illuminate\Http\Response
      */
-    public function updatePeranDosen(Request $request, $detail)
+    public function updatePeranDosen(Request $request, $nip, $kodeRPS, $peranDosen)
     {
         
-        $detail = Detail_Peran_Dosen::where('nip', $detail)->first();
-        $detail->update([
-            'nip' => $request->nip,
-            'kodeRPS' => $request->kodeRPS,
+        Detail_Peran_Dosen::where('nip', $nip)->where('kodeRPS', $kodeRPS)->where('peranDosen', $peranDosen)->delete();
+        Detail_Peran_Dosen::create([
+            'nip' => $nip,
+            'kodeRPS' => $kodeRPS,
             'peranDosen' => $request->peranDosen,
         ]);
-        $detail->save();
 
-        return redirect()->route('edit_rps.peran_dosen')->with('success', 'Data Dosen berhasil diperbarui');
+        return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS])->with('success', 'Data Dosen berhasil diperbarui');
     }
 // $detail = Detail_Peran_Dosen::findOrFail($nip);
         // $detail->nip = $request->input('nip');
@@ -132,14 +129,9 @@ class DosenController extends Controller
     $detail = Detail_Peran_Dosen::where('nip', $nip)
                                 ->where('kodeRPS', $kodeRPS)
                                 ->where('peranDosen', $peranDosen)
-                                ->first();
+                                ->delete();
 
-    if ($detail) {
-        $detail->delete();
-        return redirect()->route('edit_rps.peran_dosen')->with('success', 'Data Dosen berhasil dihapus');
-    } else {
-        return redirect()->route('edit_rps.peran_dosen')->with('error', 'Data Dosen tidak ditemukan');
-    }
+        return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS])->with('success', 'Data Dosen berhasil dihapus');
 }
 
     public function getNamaDosen($nip)
