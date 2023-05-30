@@ -38,6 +38,7 @@ use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\OrganisasiMKController;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\ProfilLulusanController;
+use App\Http\Controllers\TeknikPenilaianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -160,7 +161,6 @@ Route::group(['middleware' => 'role:kurikulum,admin'], function () {
                 Route::name('export')->get('/export', [CPMKController::class, 'cetakpdf']);
                 Route::name('export-excel')->get('/exportexcel', [CPMKController::class, 'exportExcel']);
                 Route::name('matrix')->get('/matriks', [CPMKController::class, 'matrix']);
-
             });
         });
 
@@ -227,9 +227,6 @@ Route::group(['middleware' => 'role:kurikulum,admin'], function () {
 });
 
 Route::group(['middleware' => 'role:dosen,admin'], function () {
-    Route::get('/dashboard/dosen', function () {
-        return view('content.login.homedosen', ['title' => 'Home OBE']);
-    });
 
     Route::get('/dashboard/dosen', [LoginController::class, 'myprofile'])->name('profildosen');
 
@@ -245,6 +242,16 @@ Route::group(['middleware' => 'role:dosen,admin'], function () {
             'detail_rps_list' => Detail_RPS::all()
         ]);
     })->name('rps');
+
+    Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
+        Route::get('/teknik_penilaian', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
+        Route::get('/addTeknikPenilaian', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
+        Route::post('/addTeknikPenilaian', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
+        Route::get('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
+        Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
+        Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
+        Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
+    });
 
     Route::get('/generate-pdf', 'PDFController@generatePDF');
 });

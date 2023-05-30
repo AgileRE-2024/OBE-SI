@@ -18,7 +18,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 {{-- <li class="nav-item">
-                    <a href="{{ route('home') }}" class="nav-link @if (Request::is('*home*')) active @endif">
+                    <a href="{{ route('home') }}" class="nav-link @if (Request::is('home')) active @endif">
                         <p>
                             <i class="bi bi-house"></i>
                             Home
