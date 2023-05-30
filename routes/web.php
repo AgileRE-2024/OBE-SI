@@ -164,6 +164,9 @@ Route::group(['middleware' => 'role:kurikulum,admin'], function () {
                 Route::name('export-excel')->get('/exportexcel', [CPMKController::class, 'exportExcel']);
                 Route::name('matrix')->get('/matriks', [CPMKController::class, 'matrix']);
             });
+
+            Route::get('/mk-cpmk-subcpmk', [PemetaanMkCpmkSubcpmk::class, 'index', 'title' => 'Pemetaan MK CPMK SUBCPMK'])->name('mk_cpmk_subcpmk');
+            Route::get('/mk-cpmk-subcpmk/export/{type}', [PemetaanMkCpmkSubcpmk::class, 'export'])->name('export_mk-cpmk-subcpmk');
         });
 
         Route::name('generatepdf')->get('/generate', [PDFController::class, 'generatePDF']);

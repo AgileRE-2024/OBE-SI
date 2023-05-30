@@ -203,7 +203,7 @@
                                             </p>
                                         </a>
                                     </li>
-                                    {{-- <li id="mkcpmksubcpmk" class="nav-item">
+                                    <li id="mkcpmksubcpmk" class="nav-item">
                                         <a href="{{ route('kurikulum.pemetaan.mk_cpmk_subcpmk') }}" class="nav-link"
                                             @if (URL::current() === route('kurikulum.pemetaan.mk_cpmk_subcpmk')) style="background-color: #989898; color: black;" @endif>
                                             <p style="font-size: 14px">
@@ -211,7 +211,7 @@
                                                 MK-CPMK-SUBCPMK
                                             </p>
                                         </a>
-                                    </li> --}}
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
