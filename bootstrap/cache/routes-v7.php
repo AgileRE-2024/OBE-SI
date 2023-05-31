@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ZZrv3mByjBNW8BLX',
+            '_route' => 'generated::5bzo7Dg9kk9T1U90',
           ),
           1 => NULL,
           2 => 
@@ -217,7 +217,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::1VOi7fFtjpv2UtOg',
+            '_route' => 'generated::jrPzDpXtqUU0POS3',
           ),
           1 => NULL,
           2 => 
@@ -436,6 +436,46 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'kurikulum.pemetaan.cpl_bk_mk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportPdf' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.exportPdfCplBkMk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportExcel' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.exportExcelCplBkMk',
           ),
           1 => NULL,
           2 => 
@@ -852,6 +892,46 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.matrix',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportmatrixpdf' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcelmatrix' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix',
           ),
           1 => NULL,
           2 => 
@@ -1455,7 +1535,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::XRGL26B15Q55DavM',
+            '_route' => 'generated::zORO66IP60O7PBCQ',
           ),
           1 => NULL,
           2 => 
@@ -2864,7 +2944,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ZZrv3mByjBNW8BLX' => 
+    'generated::5bzo7Dg9kk9T1U90' => 
     array (
       'methods' => 
       array (
@@ -2881,13 +2961,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000519235b3000000003d070e30";}";s:4:"hash";s:44:"AxAtPhYIQ68y6q3KpgunnhPNlQKaemLB9UDbZ4mGyvM=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006809b7e7000000001be31155";}";s:4:"hash";s:44:"e03DaGrTPVISYYTi4gHjviCNP90zTiE8n90DhTYHPtU=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::ZZrv3mByjBNW8BLX',
+        'as' => 'generated::5bzo7Dg9kk9T1U90',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3086,7 +3166,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::1VOi7fFtjpv2UtOg' => 
+    'generated::jrPzDpXtqUU0POS3' => 
     array (
       'methods' => 
       array (
@@ -3118,13 +3198,13 @@ app('router')->setCompiledRoutes(
         \'Semua_Kelas\' => \\App\\Models\\Kelas::all(),
         \'Detail_Nilai_Mahasiswa\' => \\App\\Models\\Detail_Nilai_Mahasiswa::all(),
     ]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000519235aa000000003d070e30";}";s:4:"hash";s:44:"gUEz7FeauW50Mzx1Tz90suW2qEN6nOYY4k+8TOXfc24=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006809b7ee000000001be31155";}";s:4:"hash";s:44:"sNHnpQ52L2Yfzlx2slIh//tMCMcp1UvYzm2LIKu7O+Q=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::1VOi7fFtjpv2UtOg',
+        'as' => 'generated::jrPzDpXtqUU0POS3',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3536,6 +3616,82 @@ app('router')->setCompiledRoutes(
         'uses' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@index',
         'controller' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@index',
         'as' => 'kurikulum.pemetaan.cpl_bk_mk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.exportPdfCplBkMk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk-mk/exportPdf',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportPdf',
+        'controller' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportPdf',
+        'as' => 'kurikulum.pemetaan.exportPdfCplBkMk',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.exportExcelCplBkMk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk-mk/exportExcel',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportExcel',
+        'controller' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportExcel',
+        'as' => 'kurikulum.pemetaan.exportExcelCplBkMk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
         'where' => 
@@ -4519,6 +4675,82 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.matrix',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@matrix',
         'controller' => '\\App\\Http\\Controllers\\CPMKController@matrix',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportmatrixpdf',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf',
+        'uses' => '\\App\\Http\\Controllers\\CPMKController@matrixcetakpdf',
+        'controller' => '\\App\\Http\\Controllers\\CPMKController@matrixcetakpdf',
+        'namespace' => NULL,
+        'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcelmatrix',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:kurikulum,admin',
+        ),
+        'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix',
+        'uses' => '\\App\\Http\\Controllers\\CPMKController@exportExcelmatrix',
+        'controller' => '\\App\\Http\\Controllers\\CPMKController@exportExcelmatrix',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
         'where' => 
@@ -6556,7 +6788,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:272:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:54:"function () {
         return \\view(\'welcome\');
-    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000519235a6000000003d070e30";}";s:4:"hash";s:44:"aKQ0QWGpH1ziDa32RJ1MuX11t0et8lbt/iz9Az+d32k=";}}',
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006809b7ea000000001be31155";}";s:4:"hash";s:44:"lhMY6RgFCyIYDGFxbgB3SIG58Felk6AURG1J+pYA8Ps=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7106,7 +7338,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::XRGL26B15Q55DavM' => 
+    'generated::zORO66IP60O7PBCQ' => 
     array (
       'methods' => 
       array (
@@ -7128,7 +7360,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::XRGL26B15Q55DavM',
+        'as' => 'generated::zORO66IP60O7PBCQ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7234,7 +7466,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
     return \\view(\'content.login.auth.forgot-password\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000051923539000000003d070e30";}";s:4:"hash";s:44:"INxO7vS7QhwBl9GKP69WIQJ8okMJlA26ELOUUc2FzcQ=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006809b719000000001be31155";}";s:4:"hash";s:44:"hn9vwvtg94C+II0qtCJekJRie9adYvILTfS1DEOdA8k=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7280,7 +7512,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::RESET_LINK_SENT
         ? \\back()->with([\'status\' => \\__($status)])
         : \\back()->withErrors([\'email\' => \\__($status)]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005192353b000000003d070e30";}";s:4:"hash";s:44:"ZaQNgtZzFX1fuhy35RjrIcZJpbs+4MxgPzKoDu25yqY=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006809b71b000000001be31155";}";s:4:"hash";s:44:"E+JceIoPGb7W0DCXKpyjEdGdIEDPLFc0nvndMoLCSI0=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7319,7 +7551,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:317:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
     return \\view(\'content.login.auth.reset-password\', [\'token\' => $token]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000051923535000000003d070e30";}";s:4:"hash";s:44:"IQ+CnprMrY1j8UYVACzR0lzuQBoLPKilosZCFQLgQ2w=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006809b765000000001be31155";}";s:4:"hash";s:44:"DfnqYl4pKAm/A/VeyokhfumYrGtTcR6+wniik5t8R0w=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7378,7 +7610,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::PASSWORD_RESET
         ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
         : \\back()->withErrors([\'email\' => [\\__($status)]]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000051923537000000003d070e30";}";s:4:"hash";s:44:"3G7eLoJlD2lkc6VHNiVo4uCDlNRJPKaq/+9sFAWocJg=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000006809b767000000001be31155";}";s:4:"hash";s:44:"COBbrdEhHkRpT3Gs8M3v+Wf8m5qTguwvSYGEtjIpzr8=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
