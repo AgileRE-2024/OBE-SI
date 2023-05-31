@@ -196,7 +196,7 @@ Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->na
 Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
 Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
 
-Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');       
+Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
 
 Route::get('/generate-pdf', 'PDFController@generatePDF');
 Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {

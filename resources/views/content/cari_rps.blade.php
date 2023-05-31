@@ -127,7 +127,7 @@
                             <td class="align-middle"  rowspan="1" style="width: 25%">({{ $bk_list->first()->kodeBK }}) <br> {{ $bk_list->first()->namaBK }}</td>
                             <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $mk->sks }}</td>
                             <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 10%">{{ $mk->semester }}</td>
-                            <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $mk->created_at->format('d-m-Y') }}</td>
+                            <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $rps->created_at->format('d-m-Y') }}</td>
                         </tr>
                         @else
                         @for ($i = 0; $i < $counterBk; $i++)

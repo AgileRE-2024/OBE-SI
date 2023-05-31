@@ -13,6 +13,8 @@
     
         th, td {
             border: 1px solid black;
+            font-size: 11px;
+            font-family: 'Times New Roman', Times, serif;
         }
     </style>    
 </head>
@@ -35,12 +37,12 @@
                         PRODI SISTEM INFORMASI
                     </div>
                 </th>
-                <th class="align-middle" scope="col" style="width: 15%; background-color: lightgray; border-right: 1px solid black;">Kode Dokumen</th>
+                <th class="align-middle" scope="col" style="width: 15%; background-color: lightgray; border-right: 1px solid black;">{{ $kodeRPS }}</th>
             </tr>
 
             <tbody>
                 @php
-                    $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+                    $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                     // print($rps);
                     $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
                     // print($mk);
@@ -77,7 +79,7 @@
                         <td class="align-middle"  rowspan="1" style="width: 25%">({{ $bk_list->first()->kodeBK }}) <br> {{ $bk_list->first()->namaBK }}</td>
                         <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $mk->sks }}</td>
                         <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 10%">{{ $mk->semester }}</td>
-                        <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $mk->created_at->format('d-m-Y') }}</td>
+                        <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $rps->created_at->format('d-m-Y') }}</td>
                     </tr>
                     @else
                     @for ($i = 0; $i < $counterBk; $i++)
@@ -154,15 +156,7 @@
                                 ]);
                         }
                     }
-                    $list_dosen_pengampu = array();
-                    $uniqueIds = [];
-                    foreach ($detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Dosen Pengampu') as $dpd) {
-                            $nip = $dpd->nip;
-                            if (!in_array($nip, $uniqueIds)) {
-                                $uniqueIds[] = $nip;
-                                array_push($list_dosen_pengampu, $nip);
-                        }
-                    }
+                    $list_dosen_pengampu = $detail_peran_dosen_list->where('peranDosen', 'Dosen Pengampu')->pluck('nip');
                     $list_minggu_rps = collect();
                     $uniqueIds = [];
                     foreach ($detail_rps_list->where('kodeRPS', '=', $rps->kodeRPS) as $dr) {
@@ -266,9 +260,17 @@
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Dosen Pengampu</th>
                     <td style="text-align: left;" rowspan="1" colspan="7"> 
-                    @foreach ($dosen_list->whereIn('nip', $list_dosen_pengampu) as $dosen)
-                        <span>{{ $dosen->namaDosen }}, </span>
-                    @endforeach
+                        @if (!$dosen_list)
+                        <div class="alert alert-warning"><span>
+
+                            Tambahkan Dosen Pengampu
+                        </span>
+                        </div>
+                    @else
+                        @foreach ($dosen_list->whereIn('nip', $list_dosen_pengampu) as $dosen)
+                            <span>{{ $dosen->namaDosen }}, </span>
+                        @endforeach
+                    @endif
                     </td>
                 </tr>
                 
@@ -306,25 +308,26 @@
 
             <tbody>
                 @foreach ($minggu_rps_list->whereIn('kodeMingguRPS', $list_kode_minggu_rps) as $minggu_rps)
-                    <tr>
-                        <td scope="row">{{ $minggu_rps->mingguKe }}</td>
-                        <td scope="row">{{ $minggu_rps->kodeSubCPMK }}</td>
-                        <td scope="row">{{ $minggu_rps->indikatorMingguRPS }}</td>
-                        <td scope="row">
-                            {{ $minggu_rps->kriteriaMingguRPS }} <br>
-                            [ {{ $list_kode_penilaian->get(($loop->iteration)-1) }} ] <br>
-                            {{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->teknikPenilaian }}
-                        </td>
-                        @if ($minggu_rps->bentukPembelajaran == '1')
-                            <td scope="row">{{ 'Luring' }}</td>
-                            <td></td>
+                <tr>
+                    <td scope="row">{{ $minggu_rps->mingguKe }}</td>
+                    <td scope="row">{{ $minggu_rps->kodeSubCPMK }}</td>
+                    <td scope="row">{{ $minggu_rps->indikatorMingguRPS }}</td>
+                    <td scope="row">{{ $minggu_rps->kriteriaMingguRPS }} <br> 
+                        @if ( $list_kode_penilaian->get(($loop->iteration)-1)!=null)
+                        [ {{ $list_kode_penilaian->get(($loop->iteration)-1) }} ] <br> {{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->teknikPenilaian }}</td>
                         @else
-                            <td></td>
-                            <td scope="row">{{ 'Daring' }}</td>
+                        - </td>
                         @endif
-                        <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
-                        <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian }}</td>
-                    </tr>
+                    @if ($minggu_rps->bentukPembelajaran == '1')
+                    <td scope="row">{{ 'Luring' }}</td>
+                    <td></td>
+                    @else
+                    <td></td>
+                    <td scope="row">{{ 'Daring' }} </td>
+                    @endif
+                    <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
+                    <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian ?? '-' }}</td>
+                </tr>
                 @endforeach
             </tbody>
         </table>
