@@ -105,7 +105,7 @@
 
                                                     $tahap_penilaian = setTahapPenilaian($tahap_penilaian, $data_teknik_penilaian->tahapPenilaian);
 
-                                                    $teknik_penilaian = $teknik_penilaian > 0 ? $teknik_penilaian . '; ' . $data_teknik_penilaian->teknikPenilaian : ($teknik_penilaian == '' ? $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian);
+                                                    $teknik_penilaian = $teknik_penilaian !== '' ? $teknik_penilaian . '; ' . $data_teknik_penilaian->teknikPenilaian : $data_teknik_penilaian->teknikPenilaian;
                                                     if (!in_array($data_teknik_penilaian->instrumenPenilaian, $instrumen)) {
                                                         array_push($instrumen, $data_teknik_penilaian->instrumenPenilaian);
                                                     }

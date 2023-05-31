@@ -86,7 +86,7 @@ class TahapPenilaianExport implements FromCollection, WithHeadings, WithColumnWi
 
                                     $bobot += $data_teknik_penilaian->bobotPenilaian;
                                     $tahap_penilaian = setTahapPenilaian($tahap_penilaian, $data_teknik_penilaian->tahapPenilaian);
-                                    $teknik_penilaian = ($teknik_penilaian > 0 ? $teknik_penilaian . $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian) == '' ? $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian;
+                                    $teknik_penilaian = $teknik_penilaian !== '' ? $teknik_penilaian . '; ' . $data_teknik_penilaian->teknikPenilaian : $data_teknik_penilaian->teknikPenilaian;
                                     if (!in_array($data_teknik_penilaian->instrumenPenilaian, $instrumen)) {
                                         array_push($instrumen, $data_teknik_penilaian->instrumenPenilaian);
                                     }
@@ -141,14 +141,11 @@ class TahapPenilaianExport implements FromCollection, WithHeadings, WithColumnWi
 
     public function styles(Worksheet $sheet)
     {
-        // wrapping Tahap penilaian
+        // get highestRow and highestColumn
         $highestRow = $sheet->getHighestRow();
-        $sheet->getStyle('E1:E' . $highestRow)
-            ->getAlignment()
-            ->setWrapText(true);
+        $highestColumn = $sheet->getHighestColumn(1);
 
         // bold header
-        $highestColumn = $sheet->getHighestColumn(1);
         $sheet->getStyle("A1:{$highestColumn}1")
             ->applyFromArray([
                 'font' => [
@@ -157,12 +154,10 @@ class TahapPenilaianExport implements FromCollection, WithHeadings, WithColumnWi
                 ],
                 'alignment' => [
                     'horizontal' => Alignment::HORIZONTAL_CENTER,
-                    'vertical' => Alignment::VERTICAL_CENTER,
-                    'wrapText' => true,
                 ],
             ]);
 
-        // Memberikan border
+        // Memberikan border, posisi tengah vertikal, dan wrap text pada setiap sel
         $sheet->getStyle("A1:{$highestColumn}{$highestRow}")
             ->applyFromArray([
                 'borders' => [
@@ -170,6 +165,10 @@ class TahapPenilaianExport implements FromCollection, WithHeadings, WithColumnWi
                         'borderStyle' => Border::BORDER_THIN,
                         'color' => ['argb' => '000000'],
                     ],
+                ],
+                'alignment' => [
+                    'vertical' => Alignment::VERTICAL_CENTER,
+                    'wrapText' => True,
                 ],
             ]);
 
