@@ -68,19 +68,21 @@
 
                             foreach ($cpmk->SubCPMK as $subCpmk) {
                                 foreach ($subCpmk->Minggu_RPS as $minggu_rps) {
-                                    foreach ($list_detail_rps->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->where('kodeRPS', $list_rps->firstWhere('kodeMK', $mk->kodeMK)->kodeRPS) as $detail_rps) {
-                                        $data_teknik_penilaian = $detail_rps->Teknik_Penilaian;
+                                    if ($list_rps->where('kodeMK', $mk->kodeMK)->count()) {
+                                        foreach ($list_detail_rps->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->where('kodeRPS', $list_rps->firstWhere('kodeMK', $mk->kodeMK)->kodeRPS) as $detail_rps) {
+                                            $data_teknik_penilaian = $detail_rps->Teknik_Penilaian;
 
-                                        $bobot += $data_teknik_penilaian->bobotPenilaian;
+                                            $bobot += $data_teknik_penilaian->bobotPenilaian;
 
-                                        $tahap_penilaian = setTahapPenilaian($tahap_penilaian, $data_teknik_penilaian->tahapPenilaian);
+                                            $tahap_penilaian = setTahapPenilaian($tahap_penilaian, $data_teknik_penilaian->tahapPenilaian);
 
-                                        $teknik_penilaian = $teknik_penilaian > 0 ? $teknik_penilaian . '; ' . $data_teknik_penilaian->teknikPenilaian : ($teknik_penilaian == '' ? $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian);
-                                        if (!in_array($data_teknik_penilaian->instrumenPenilaian, $instrumen)) {
-                                            array_push($instrumen, $data_teknik_penilaian->instrumenPenilaian);
-                                        }
-                                        if (!in_array($data_teknik_penilaian->kriteriaPenilaian, $kriteria)) {
-                                            array_push($kriteria, $data_teknik_penilaian->kriteriaPenilaian);
+                                            $teknik_penilaian = $teknik_penilaian > 0 ? $teknik_penilaian . '; ' . $data_teknik_penilaian->teknikPenilaian : ($teknik_penilaian == '' ? $data_teknik_penilaian->teknikPenilaian : $teknik_penilaian);
+                                            if (!in_array($data_teknik_penilaian->instrumenPenilaian, $instrumen)) {
+                                                array_push($instrumen, $data_teknik_penilaian->instrumenPenilaian);
+                                            }
+                                            if (!in_array($data_teknik_penilaian->kriteriaPenilaian, $kriteria)) {
+                                                array_push($kriteria, $data_teknik_penilaian->kriteriaPenilaian);
+                                            }
                                         }
                                     }
                                 }
