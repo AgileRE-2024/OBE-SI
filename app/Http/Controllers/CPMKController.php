@@ -13,6 +13,7 @@ use Barryvdh\DomPDF\PDF;
 use App;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\PemetaanCplCpmkMkExport;
+use App\Exports\matrixcplcpmkmk;
 
 class CPMKController extends Controller
 {
@@ -67,9 +68,35 @@ class CPMKController extends Controller
         return $pdf->stream();
     }
 
+    public function matrixcetakpdf()
+    {
+        $cpl = Cpl_Prodi::get();
+        $mk = Mata_Kuliah::get();
+        $cpmk = CPMK::get();
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->setPaper('A3', 'landscape');
+        $pdf->loadView('content.pemetaan_cpl_cpmk_mk.cetakcpmkmatriks', [
+            'title' => 'Matriks Pemetaan CPL CPMK',
+            'cpl' => $cpl,
+            'mk' => $mk,
+            'cpmk' => $cpmk
+        ]);
+        return $pdf->stream();
+    }
+    
+    
+
     public function exportExcel()
     {
-        return Excel::download(new PemetaanCplCpmkMkExport, 'pemetaan-cpl-cpmk-mk.xlsx');
+        $cplData = Cpl_Prodi::get();
+        return Excel::download(new PemetaanCplCpmkMkExport($cplData), 'PemetaanCplCpmkMkExport.xlsx');
+    }
+
+    public function exportExcelmatrix()
+    {
+        $mk = Mata_Kuliah::get(); // Fetch the $mk data from your database or any other source
+        $cpl = Cpl_Prodi::get(); // Fetch the $cpl data from your database or any other source
+        return Excel::download(new matrixcplcpmkmk($mk, $cpl), 'matrixcplcpmkmk.xlsx');
     }
 
     public function create( $cpl)
