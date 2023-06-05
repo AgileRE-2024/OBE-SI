@@ -1,0 +1,39 @@
+@startuml View dan Export Penilaian CPMK
+actor TimKurikulum as Foo
+boundary penilaiancpmk as Foo1
+boundary cetak_pdf_tpcpmk as Foo2
+control TeknikPenilaianCPMKController as Foo3
+entity teknik_penilaian as Foo4
+entity detail_rps as Foo5
+entity minggu_rps as Foo6
+entity subcpmk as Foo7
+
+activate Foo
+Foo -> Foo1 : click export excel
+activate Foo1
+Foo1 -> Foo3 : cetakLaporanExcel()
+loop
+activate Foo3
+Foo3 -> Foo4 : Select teknikPenilaian FROM teknik_penilaian
+activate Foo4
+Foo4 --> Foo3 : return list_teknikpenilaian
+deactivate Foo4
+Foo3 -> Foo5 : Select kodeMingguRPS FROM detail_rps
+activate Foo5
+Foo5 --> Foo3 : return detail_rps
+deactivate Foo5
+Foo3 -> Foo6 : Select kodePenilaian FROM minggu_rps
+activate Foo6
+Foo6 --> Foo3 : return list_minggurps
+Foo3 -> Foo6 : Select kodeSubCPMK FROM minggu_rps
+Foo6 --> Foo3 : return list_minggurps
+deactivate Foo6
+Foo3 -> Foo7 : Select kodeCPMK FROM subcpmk
+activate Foo7
+Foo7 --> Foo3 : return list_subcpmk
+deactivate Foo7
+end
+Foo3 -> Foo1 : return download file
+deactivate Foo1
+
+@enduml

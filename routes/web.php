@@ -39,6 +39,7 @@ use App\Http\Controllers\OrganisasiMKController;
 use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\ProfilLulusanController;
 use App\Http\Controllers\TahapPenilaianController;
+use App\Http\Controllers\TeknikPenilaianCPMKController;
 
 /*
 |--------------------------------------------------------------------------
@@ -240,6 +241,10 @@ Route::group(['middleware' => 'role:dosen,admin'], function () {
             Route::get('/export/{tahun_ajaran}/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
         });
     });
+
+    Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
+    Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
+    Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
 
     Route::get('/dashboard/rps', function () {
         return view('content.rps', [
