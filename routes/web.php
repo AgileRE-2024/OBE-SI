@@ -42,6 +42,8 @@ use App\Http\Controllers\ProfilLulusanController;
 use App\Http\Controllers\TeknikPenilaianController;
 use App\Http\Controllers\RpsController;
 use App\Http\Controllers\PemetaanCplDiktiCplProdiController;
+use App\Http\Controllers\TahapPenilaianController;
+use App\Http\Controllers\TeknikPenilaianCPMKController;
 
 /*
 |--------------------------------------------------------------------------
@@ -245,9 +247,17 @@ Route::group(['middleware' => 'role:dosen,admin'], function () {
 
     Route::get('/dashboard/dosen', [LoginController::class, 'myprofile'])->name('profildosen');
 
-    Route::get('/dashboard/penilaian', function () {
-        return view('welcome');
-    })->name('penilaian');
+    Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
+        Route::prefix('/tahap-penilaian')->name('tahap_penilaian.')->group(function () {
+            Route::get('/',[TahapPenilaianController::class, 'index'])->name('index');
+            Route::get('/{tahun_ajaran}',[TahapPenilaianController::class, 'table'])->name('data_penilaian');
+            Route::get('/export/{tahun_ajaran}/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
+        });
+
+        Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
+        Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
+        Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
+    });
 
     Route::get('/dashboard/rps', [RPSController::class, 'index', 'title' => 'RPS'])->name('rps');
     Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');

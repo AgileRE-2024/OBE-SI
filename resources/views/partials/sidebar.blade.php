@@ -218,7 +218,7 @@
                     </li>
                 @endif
                 @if (auth()->user()->role == 0 || auth()->user()->role == 2)
-                    <li class="nav-item">
+                    <li class="nav-item @if (Request::is('*penilaian*')) menu-open @endif">
                         <a href="#" class="nav-link"
                             @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif>
                             <p>
@@ -226,6 +226,26 @@
                                 Penilaian
                             </p>
                         </a>
+                        <ul class="nav nav-treeview pl-3">
+                            <li class="nav-item">
+                                <a href="{{ route('penilaian.tp_cpmk') }}" class="nav-link"
+                                    @if (URL::current() === route('penilaian.tp_cpmk')) style="background-color: #ffffff; color: black;" @endif>
+                                    <p style="font-size: 14px">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        Teknik Penilaian CPMK
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('penilaian.tahap_penilaian.index') }}" class="nav-link"
+                                    @if (URL::current() === route('penilaian.tahap_penilaian.index')) style="background-color: #ffffff; color: black;" @endif>
+                                    <p style="font-size: 14px">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        Mekanisme dan Tahap
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 @endif
                 @if (auth()->user()->role == 0 || auth()->user()->role == 2)
