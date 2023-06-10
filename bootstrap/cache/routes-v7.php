@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::wZ3OQBPl5BYiTAaS',
+            '_route' => 'generated::Uowceh8ZlvhvqTwX',
           ),
           1 => NULL,
           2 => 
@@ -217,7 +217,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::lUgiV4AkdfMgvTxl',
+            '_route' => 'generated::rl2BvUM0ZhOYsDmw',
           ),
           1 => NULL,
           2 => 
@@ -257,7 +257,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::6AKLhFZI5faJt76a',
+            '_route' => 'generated::wgk1GL43Vv9lfQbN',
           ),
           1 => NULL,
           2 => 
@@ -1258,6 +1258,26 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/penilaian/penilaiancpmk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'penilaian.tp_cpmk',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/dashboard/rps' => 
       array (
         0 => 
@@ -1284,7 +1304,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::V30KDpaAoMqgAaXo',
+            '_route' => 'generated::VZCS33nzF6wGpqBR',
           ),
           1 => NULL,
           2 => 
@@ -1356,7 +1376,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:168)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:205)|edit_cpmk/([^/]++)(?|(*:234))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:285))|CP(?|L(?|Dikti/([^/]++)(?|(*:320))|Prodi/([^/]++)(?|(*:346)))|MK/([^/]++)(?|(*:370)))|BahanKajian/([^/]++)(?|(*:403))|MataKuliah/([^/]++)(?|(*:434))|SubCPMK/([^/]++)(?|(*:462)))|delete(?|ProfilLulusan/([^/]++)(*:503)|CP(?|L(?|Dikti/([^/]++)(*:534)|Prodi/([^/]++)(*:556))|MK/([^/]++)(*:576))|BahanKajian/([^/]++)(*:605)|MataKuliah/([^/]++)(*:632)|SubCPMK/([^/]++)(*:656))|profilLulusan/export/([^/]++)(*:694)|cp(?|l_(?|dikti/export/([^/]++)(*:733)|prodi/export/([^/]++)(*:762))|mk/export/([^/]++)(*:789))|bahan_kajian/export/([^/]++)(*:826)|mata_kuliah/export/([^/]++)(*:861)|sub_cpmk/export/([^/]++)(*:893)))|penilaian/tahap\\-penilaian/(?|([^/]++)(*:941)|export/([^/]++)/([^/]++)(*:973)))|/u(?|bahpw/([^/]++)(*:1002)|pdateprofile/([^/]++)(*:1032))|/reset\\-password/([^/]++)(*:1067))/?$}sDu',
+      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/cpl\\-(?|pl/export/([^/]++)(*:168)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:205)|edit_cpmk/([^/]++)(?|(*:234))))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:285))|CP(?|L(?|Dikti/([^/]++)(?|(*:320))|Prodi/([^/]++)(?|(*:346)))|MK/([^/]++)(?|(*:370)))|BahanKajian/([^/]++)(?|(*:403))|MataKuliah/([^/]++)(?|(*:434))|SubCPMK/([^/]++)(?|(*:462)))|delete(?|ProfilLulusan/([^/]++)(*:503)|CP(?|L(?|Dikti/([^/]++)(*:534)|Prodi/([^/]++)(*:556))|MK/([^/]++)(*:576))|BahanKajian/([^/]++)(*:605)|MataKuliah/([^/]++)(*:632)|SubCPMK/([^/]++)(*:656))|profilLulusan/export/([^/]++)(*:694)|cp(?|l_(?|dikti/export/([^/]++)(*:733)|prodi/export/([^/]++)(*:762))|mk/export/([^/]++)(*:789))|bahan_kajian/export/([^/]++)(*:826)|mata_kuliah/export/([^/]++)(*:861)|sub_cpmk/export/([^/]++)(*:893)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:944)|export/([^/]++)/([^/]++)(*:976))|([^/]++)(*:993)|export/([^/]++)/([^/]++)(*:1025)))|/u(?|bahpw/([^/]++)(*:1055)|pdateprofile/([^/]++)(*:1085))|/reset\\-password/([^/]++)(*:1120))/?$}sDu',
     ),
     3 => 
     array (
@@ -2137,7 +2157,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      941 => 
+      944 => 
       array (
         0 => 
         array (
@@ -2160,7 +2180,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      973 => 
+      976 => 
       array (
         0 => 
         array (
@@ -2184,7 +2204,54 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1002 => 
+      993 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'penilaian.data_penilaian',
+          ),
+          1 => 
+          array (
+            0 => 'tahun_ajaran',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1025 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'penilaian.export',
+          ),
+          1 => 
+          array (
+            0 => 'tahun_ajaran',
+            1 => 'type',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1055 => 
       array (
         0 => 
         array (
@@ -2207,7 +2274,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1032 => 
+      1085 => 
       array (
         0 => 
         array (
@@ -2229,7 +2296,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1067 => 
+      1120 => 
       array (
         0 => 
         array (
@@ -2515,7 +2582,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::wZ3OQBPl5BYiTAaS' => 
+    'generated::Uowceh8ZlvhvqTwX' => 
     array (
       'methods' => 
       array (
@@ -2538,7 +2605,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::wZ3OQBPl5BYiTAaS',
+        'as' => 'generated::Uowceh8ZlvhvqTwX',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2737,7 +2804,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::lUgiV4AkdfMgvTxl' => 
+    'generated::rl2BvUM0ZhOYsDmw' => 
     array (
       'methods' => 
       array (
@@ -2775,7 +2842,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::lUgiV4AkdfMgvTxl',
+        'as' => 'generated::rl2BvUM0ZhOYsDmw',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2829,7 +2896,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::6AKLhFZI5faJt76a' => 
+    'generated::wgk1GL43Vv9lfQbN' => 
     array (
       'methods' => 
       array (
@@ -2852,7 +2919,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::6AKLhFZI5faJt76a',
+        'as' => 'generated::wgk1GL43Vv9lfQbN',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6079,6 +6146,120 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'penilaian.tp_cpmk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/penilaian/penilaiancpmk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@index',
+        'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@index',
+        'as' => 'penilaian.tp_cpmk',
+        'namespace' => NULL,
+        'prefix' => '/dashboard/penilaian',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'penilaian.data_penilaian' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/penilaian/{tahun_ajaran}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@table',
+        'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@table',
+        'as' => 'penilaian.data_penilaian',
+        'namespace' => NULL,
+        'prefix' => '/dashboard/penilaian',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'penilaian.export' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/penilaian/export/{tahun_ajaran}/{type}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@exportFile',
+        'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@exportFile',
+        'as' => 'penilaian.export',
+        'namespace' => NULL,
+        'prefix' => '/dashboard/penilaian',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'rps' => 
     array (
       'methods' => 
@@ -6123,7 +6304,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::V30KDpaAoMqgAaXo' => 
+    'generated::VZCS33nzF6wGpqBR' => 
     array (
       'methods' => 
       array (
@@ -6145,7 +6326,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::V30KDpaAoMqgAaXo',
+        'as' => 'generated::VZCS33nzF6wGpqBR',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6251,7 +6432,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
     return \\view(\'content.login.auth.forgot-password\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a00000000000000000";}";s:4:"hash";s:44:"0hYGuztQec74ePzQP0DiK7NEs5iAJOuPXSBjeyxShBI=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a30000000000000000";}";s:4:"hash";s:44:"ZB1btaylYvUK6n/ipcdQp7xcjwYSZLDau62lgxv0HGM=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -6297,7 +6478,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::RESET_LINK_SENT
         ? \\back()->with([\'status\' => \\__($status)])
         : \\back()->withErrors([\'email\' => \\__($status)]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a20000000000000000";}";s:4:"hash";s:44:"NS3sCa5YqWTjjeTHpLu22ZWKN4kedASPjylnAknexGE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a50000000000000000";}";s:4:"hash";s:44:"lxows+TyxVKPpB0k/8DlJvyCffBkvr18MOOz0c9Awj0=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -6336,7 +6517,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:317:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
     return \\view(\'content.login.auth.reset-password\', [\'token\' => $token]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a40000000000000000";}";s:4:"hash";s:44:"7F3rebOB3tuiOeGEOIZvNgxyEhkqdXZbR3bBm9EBwzU=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a70000000000000000";}";s:4:"hash";s:44:"1pu7CiBJ4fnQW9nEDDlZqydXhRUWohhS9tu3EuUzBb4=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -6395,7 +6576,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::PASSWORD_RESET
         ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
         : \\back()->withErrors([\'email\' => [\\__($status)]]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a60000000000000000";}";s:4:"hash";s:44:"i17bmuHognUOcsXP17HEqD7B4knMKAbQF8fhQ74zq80=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005a90000000000000000";}";s:4:"hash";s:44:"LsboceG2Ib5U6jyfVcx28xaN7ie/hy8A8FIS6AMNgk0=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
