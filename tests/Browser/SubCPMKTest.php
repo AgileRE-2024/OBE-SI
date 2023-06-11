@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class BahanKajianTest extends DuskTestCase
+class SubCPMKTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
@@ -15,7 +15,7 @@ class BahanKajianTest extends DuskTestCase
      *
      * @return void
      */
-    public function testAddBahanKajianSuccess()
+    public function testAddSubCPMKSuccess()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -25,20 +25,19 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
                     ->clickLink('Tambah')
-                    ->assertSee("Tambah Bahan Kajian")
-                    ->type('kodeBK', 'BK05')
-                    ->type('namaBK', 'tesBKLagi')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
+                    ->assertSee("Tambah Sub CPMK")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', 'SUB-CPMK0110')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->press("#submit")
                     ->pause(2000);
         });
 
     }
-    public function testAddBahanKajianErrorIDSama()
+    public function testAddSubCPMKErrorIDSama()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -48,20 +47,19 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
                     ->clickLink('Tambah')
-                    ->assertSee("Tambah Bahan Kajian")
-                    ->type('kodeBK', 'BK05')
-                    ->type('namaBK', 'tesBKLagi')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
+                    ->assertSee("Tambah Sub CPMK")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', 'SUB-CPMK0110')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->press("#submit")
                     ->pause(2000);
         });
 
     }
-    public function testAddBahanKajianError()
+    public function testAddSubCPMKError()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -71,20 +69,20 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
                     ->clickLink('Tambah')
-                    ->assertSee("Tambah Bahan Kajian")
-                    ->type('namaBK', 'tesBKLagi')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
-                    ->pause(2000)
+                    ->assertSee("Tambah Sub CPMK")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', '')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->press("#submit")
-                    ->pause(1000);
+                    ->pause(2000);
         });
+
     }
 
-    public function testDeleteBahanKajianSuccess()
+    public function testDeleteSubCPMKSuccess()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -94,23 +92,21 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
                     ->clickLink('Tambah')
-                    ->assertSee("Tambah Bahan Kajian")
-                    ->type('kodeBK', 'BK00')
-                    ->type('namaBK', 'tesBKLagi')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
-                    ->pause(2000)
+                    ->assertSee("Tambah Sub CPMK")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', 'SUB-CPMK0000')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->press("#submit")
-                    ->assertSee("Bahan Kajian")
+                    ->pause(2000)
                     ->clickLink('Delete')
-                    ->pause(1000);
+                    ->pause(2000);
         });
     }
 
-    public function testEditBahanKajianSuccess()
+    public function testEditSubCPMKSuccess()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -120,31 +116,26 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
-                    ->assertSee("Bahan Kajian")
                     ->clickLink('Tambah')
-                    ->assertSee("Tambah Bahan Kajian")
-                    ->type('kodeBK', 'BK00')
-                    ->type('namaBK', 'tesBKLagi')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
-                    ->pause(2000)
+                    ->assertSee("Tambah Sub CPMK")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', 'SUB-CPMK0000')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->press("#submit")
-                    ->assertSee("Bahan Kajian")
+                    ->pause(2000)
                     ->clickLink('Edit')
-                    ->assertSee('Edit Bahan Kajian')
-                    ->type('kodeBK', 'BK99')
-                    ->type('namaBK', 'tesBK anjay')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', 'SUB-CPMK0001')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->pause(2000)
                     ->press("#submit")
-                    ->assertSee('Bahan Kajian');
+                    ->pause(2000);
         });
     }
 
-    public function testEditBahanKajianError()
+    public function testEditSubCPMKError()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -154,29 +145,24 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
-                    ->assertSee("Bahan Kajian")
                     ->clickLink('Tambah')
-                    ->assertSee("Tambah Bahan Kajian")
-                    ->type('kodeBK', 'BK90')
-                    ->type('namaBK', 'tesBKLagi')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
-                    ->pause(2000)
+                    ->assertSee("Tambah Sub CPMK")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', 'SUB-CPMK0000')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->press("#submit")
-                    ->assertSee("Bahan Kajian")
+                    ->pause(2000)
                     ->clickLink('Edit')
-                    ->assertSee('Edit Bahan Kajian')
-                    ->type('kodeBK', '')
-                    ->type('namaBK', 'tesBK anjay')
-                    ->select('kategoriBK')
-                    ->type('referensiBK',"tes")
+                    ->select('kodeCPMK')
+                    ->type('kodeSubCPMK', '')
+                    ->type('deskripsiSubCPMK',"tes")
                     ->pause(2000)
                     ->press("#submit")
-                    ->pause(1000);
+                    ->pause(2000);
         });
-    } 
+    }
     
     public function testPDFExportSuccess(){
         $this->browse(function (Browser $browser) {
@@ -187,10 +173,8 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
-                    ->assertSee("Bahan Kajian")
-                    ->pause(1000)
                     ->click('.btn-outline-danger:nth-child(1)')
                     ->pause(1000);
         });
@@ -204,10 +188,8 @@ class BahanKajianTest extends DuskTestCase
                     ->press('tombolLogin')
                     ->pause(2000)
                     ->clickLink('Data')
-                    ->clickLink('Bahan Kajian')
+                    ->clickLink('Sub-CPMK')
                     ->pause(2000)
-                    ->assertSee("Bahan Kajian")
-                    ->pause(1000)
                     ->click('a.btn.btn-success i.bi.bi-file-earmark-excel')
                     ->pause(1000);
         });

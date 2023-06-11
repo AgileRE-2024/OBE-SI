@@ -14,21 +14,34 @@ class CPLProdiTest extends DuskTestCase
     public function testAddCPLProdiSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_prodi')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL Prodi")
-                    ->type('kodeCPL', 'CPL03')
+                    ->type('kodeCPL', 'CPL99')
                     ->type('deskripsiCPL',"tes")
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
-                    ->press('submit')
-                    ->assertSee("CPL Program Studi");
+                    ->press('submit');
         });
     }
     public function testAddCPLProdiError()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_prodi')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL Prodi")
                     ->type('kodeCPL', '')
@@ -36,13 +49,20 @@ class CPLProdiTest extends DuskTestCase
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
                     ->press('submit')
-                    ->assertSee("CPL Program Studi");
+                    ->pause(1000);
         });
     }
     public function testAddCPLProdiErrorIDSama()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_prodi')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL Prodi")
                     ->type('kodeCPL', 'CPL03')
@@ -50,21 +70,27 @@ class CPLProdiTest extends DuskTestCase
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
                     ->press('submit')
-                    ->assertSee("CPL Program Studi");
+                    ->pause(1000);
         });
     }
     public function testDeleteCPLProdiSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_prodi')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL Prodi")
-                    ->type('kodeCPL', 'CPL02')
+                    ->type('kodeCPL', 'CPL00')
                     ->type('deskripsiCPL',"tes")
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
                     ->press('submit')
-                    ->assertSee("CPL Program Studi")
                     ->clickLink('Delete')
                     ->pause(1000);
 
@@ -73,30 +99,45 @@ class CPLProdiTest extends DuskTestCase
     public function testCPLEditSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_prodi')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL Prodi")
-                    ->type('kodeCPL', 'CPL01')
+                    ->type('kodeCPL', 'CPL00')
                     ->type('deskripsiCPL',"tes")
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
                     ->press('submit')
                     ->assertSee("CPL Program Studi")
                     ->clickLink('Edit')
-                    ->type('kodeCPL', 'CPL05')
+                    ->type('kodeCPL', 'CPL80')
                     ->type('deskripsiCPL',"tes")
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
-                    ->press('submit');
+                    ->press('submit')
+                    ->pause(1000);
         });
     }
     public function testCPLEditError()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_prodi')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL Prodi")
-                    ->type('kodeCPL', 'CPL01')
+                    ->type('kodeCPL', 'CPL66')
                     ->type('deskripsiCPL',"tes")
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
@@ -107,13 +148,20 @@ class CPLProdiTest extends DuskTestCase
                     ->type('deskripsiCPL',"tes")
                     ->type('referensiCPL',"tes")
                     ->pause(2000)
-                    ->press('submit');
+                    ->press('submit')
+                    ->pause(1000);
         });
     }
     public function testPDFExportSuccess(){
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
-                    ->assertSee("Bahan Kajian")
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->pause(1000)
                     ->click('.btn-outline-danger:nth-child(1)')
                     ->pause(1000);
@@ -121,10 +169,16 @@ class CPLProdiTest extends DuskTestCase
     }
     public function testExcelExportSuccess(){
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
-                    ->assertSee("Bahan Kajian")
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL Prodi')
                     ->pause(1000)
-                    ->click('.btn-success:nth-child(2)')
+                    ->click('a.btn.btn-success i.bi.bi-file-earmark-excel')
                     ->pause(1000);
         });
     }

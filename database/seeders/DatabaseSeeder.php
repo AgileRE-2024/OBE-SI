@@ -331,6 +331,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '123456789987654322',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Guntur',
+            'email' => 'tes123@gmail.com',
             'password' => '1234',
             'role' => true,
         ]);
@@ -338,6 +339,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '123456789987654323',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Petir',
+            'email' => 'tes1245@gmail.com',
             'password' => '1234',
             'role' => true,
         ]);

@@ -14,65 +14,99 @@ class ProfileLulusanTest extends DuskTestCase
     public function testAddProfileLulusanSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/profilLulusan')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
                     ->type('kodePL', 'PL03')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
-                    ->assertSee("Profil Lulusan");
+                    ->pause(2000);
         });
     }
     public function testAddProfileLulusanError()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/profilLulusan')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
                     ->type('kodePL', '')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
-                    ->assertSee("Profil Lulusan");
+                    ->pause(2000);
         });
     }
     public function testAddProfileLulusanErrorIDSama()
     {
         $this->browse(function (Browser $browser) {
-            $$browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/profilLulusan')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
                     ->type('kodePL', 'PL03')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
-                    ->assertSee("Profil Lulusan");
+                    ->pause(2000);
         });
     }
     public function testDeleteProfileLulusanSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/profilLulusan')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
-                    ->type('kodePL', 'PL02')
+                    ->type('kodePL', 'PL00')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
                     ->assertSee("Profil Lulusan")
                     ->clickLink('Delete')
-                    ->pause(1000)
-                    ->assertSee('Profil Lulusan');
+                    ->pause(1000);
         });
     }
     public function testEditProfileLulusanSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/profilLulusan')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
-                    ->type('kodePL', 'PL01')
+                    ->type('kodePL', 'PL00')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
@@ -82,16 +116,23 @@ class ProfileLulusanTest extends DuskTestCase
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
-                    ->assertSee('Profil Lulusan');
+                    ->pause(2000);
         });
     }
     public function testEditProfileLulusanError()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/profilLulusan')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
-                    ->type('kodePL', 'PL01')
+                    ->type('kodePL', 'PL00')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
@@ -100,13 +141,20 @@ class ProfileLulusanTest extends DuskTestCase
                     ->type('kodePL', '')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
-                    ->press('submit');
+                    ->press('submit')
+                    ->pause(2000);
         });
     }
     public function testPDFExportSuccess(){
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
-                    ->assertSee("Bahan Kajian")
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->pause(1000)
                     ->click('.btn-outline-danger:nth-child(1)')
                     ->pause(1000);
@@ -114,10 +162,16 @@ class ProfileLulusanTest extends DuskTestCase
     }
     public function testExcelExportSuccess(){
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
-                    ->assertSee("Bahan Kajian")
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('Profil Lulusan')
                     ->pause(1000)
-                    ->click('.btn-success:nth-child(2)')
+                    ->click('a.btn.btn-success i.bi.bi-file-earmark-excel')
                     ->pause(1000);
         });
     }

@@ -14,23 +14,36 @@ class CPLDiktiTest extends DuskTestCase
     public function testAddCPLSNDiktiSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_dikti')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL SN Dikti")
-                    ->type('kodeCPLSN', 'CPL03')
+                    ->type('kodeCPLSN', 'CPL-S02')
                     ->type('deskripsiSN',"tes")
                     ->type('sumberSN',"tes")
                     ->select('kategoriSN')
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit');
-                    // ->assertSee("CPL SN Dikti");
         });
     }
     public function testAddCPLSNDiktiError()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_dikti')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL SN Dikti")
                     ->type('kodeCPLSN', '')
@@ -40,39 +53,50 @@ class CPLDiktiTest extends DuskTestCase
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit');
-                    // ->assertSee("CPL SN Dikti");
         });
     }
     public function testAddCPLSNDiktiErrorIDSama()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_dikti')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL SN Dikti")
-                    ->type('kodeCPLSN', 'CPL03')
+                    ->type('kodeCPLSN', 'CPL-S01')
                     ->type('deskripsiSN',"tes")
                     ->type('sumberSN',"tes")
                     ->select('kategoriSN')
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit');
-                    // ->assertSee("CPL SN Dikti");
         });
     }
     public function testDeleteCPLSNDiktiSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_dikti')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL SN Dikti")
-                    ->type('kodeCPLSN', 'CPL02')
+                    ->type('kodeCPLSN', 'CPL-S00')
                     ->type('deskripsiSN',"tes")
                     ->type('sumberSN',"tes")
                     ->select('kategoriSN')
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit')
-                    // ->assertSee("CPL SN Dikti");
                     ->clickLink('Delete')
                     ->pause(1000);
         });
@@ -81,44 +105,55 @@ class CPLDiktiTest extends DuskTestCase
     public function testEditCPLSNDiktiSuccess()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_dikti')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL SN Dikti")
-                    ->type('kodeCPLSN', 'CPL01')
+                    ->type('kodeCPLSN', 'CPL-S00')
                     ->type('deskripsiSN',"tes")
                     ->type('sumberSN',"tes")
                     ->select('kategoriSN')
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit')
-                    // ->assertSee("CPL SN Dikti");
                     ->clickLink('Edit')
                     ->assertSee("Tambah CPL SN Dikti")
-                    ->type('kodeCPLSN', 'CPL02')
+                    ->type('kodeCPLSN', 'CPL-S05')
                     ->type('deskripsiSN',"tes")
                     ->type('sumberSN',"tes")
                     ->select('kategoriSN')
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit')
-                    // ->assertSee("CPL SN Dikti");
                     ->pause(1000);
         });
     }
     public function testEditCPLSNDiktiError()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/cpl_dikti')
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah CPL SN Dikti")
-                    ->type('kodeCPLSN', 'CPL01')
+                    ->type('kodeCPLSN', 'CPL-S00')
                     ->type('deskripsiSN',"tes")
                     ->type('sumberSN',"tes")
                     ->select('kategoriSN')
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit')
-                    // ->assertSee("CPL SN Dikti");
                     ->clickLink('Edit')
                     ->assertSee("Tambah CPL SN Dikti")
                     ->type('kodeCPLSN', '')
@@ -128,14 +163,19 @@ class CPLDiktiTest extends DuskTestCase
                     ->select('jenisSN')
                     ->pause(2000)
                     ->press('submit')
-                    // ->assertSee("CPL SN Dikti");
                     ->pause(1000);
         });
     }
     public function testPDFExportSuccess(){
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
-                    ->assertSee("Bahan Kajian")
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->pause(1000)
                     ->click('.btn-outline-danger:nth-child(1)')
                     ->pause(1000);
@@ -143,10 +183,16 @@ class CPLDiktiTest extends DuskTestCase
     }
     public function testExcelExportSuccess(){
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/data/bahan_kajian')
-                    ->assertSee("Bahan Kajian")
+            $browser->visit('http://127.0.0.1:8000/login')
+                    ->assertSee('Selamat Datang')
+                    ->type('nip','123456789987654321')
+                    ->type('password','coba123')
+                    ->press('tombolLogin')
+                    ->pause(2000)
+                    ->clickLink('Data')
+                    ->clickLink('CPL SNDikti')
                     ->pause(1000)
-                    ->click('.btn-success:nth-child(2)')
+                    ->click('a.btn.btn-success i.bi.bi-file-earmark-excel')
                     ->pause(1000);
         });
     }

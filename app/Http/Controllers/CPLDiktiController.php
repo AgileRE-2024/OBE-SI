@@ -55,7 +55,7 @@ class CPLDiktiController extends Controller
     public function storeCPLDikti(Request $request)
     {
         $request->validate([
-            'kodeCPLSN' => 'required|unique:cpl_sn_dikti,kodeCPLSN|regex:/^CPL\d{3}$/',
+            'kodeCPLSN' => 'required|unique:cpl_sn_dikti,kodeCPLSN',
             'deskripsiSN' => 'required',
             'sumberSN' => 'required',
             'kategoriSN' => 'required',
