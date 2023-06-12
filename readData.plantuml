@@ -1,0 +1,37 @@
+@startuml View dan Export Penilaian CPMK
+actor TimKurikulum as Foo
+boundary penilaiancpmk as Foo1
+control TeknikPenilaianCPMKController as Foo2
+entity teknik_penilaian as Foo3
+entity detail_rps as Foo4
+entity minggu_rps as Foo5
+entity subcpmk as Foo6
+
+activate Foo
+Foo -> Foo1 : pilih tahun ajaran
+activate Foo1
+Foo1 -> Foo2 : table($tahun_ajaran)
+loop
+activate Foo2
+Foo2 -> Foo3 : Select teknikPenilaian FROM teknik_penilaian
+activate Foo3
+Foo3 --> Foo2 : return list_teknikpenilaian
+deactivate Foo3
+Foo2 -> Foo4 : Select kodeMingguRPS FROM detail_rps
+activate Foo4
+Foo4 --> Foo2 : return detail_rps
+deactivate Foo4
+Foo2 -> Foo5 : Select kodePenilaian FROM minggu_rps
+activate Foo5
+Foo5 --> Foo2 : return list_minggurps
+Foo2 -> Foo5 : Select kodeSubCPMK FROM minggu_rps
+Foo5 --> Foo2 : return list_minggurps
+deactivate Foo5
+Foo2 -> Foo6 : Select kodeCPMK FROM subcpmk
+activate Foo6
+Foo6 --> Foo2 : return list_subcpmk
+deactivate Foo6
+end
+Foo2 -> Foo1 : displayData()
+
+@enduml
