@@ -1,0 +1,26 @@
+@startuml View dan Export CPL-MK
+actor TimKurikulum as Foo
+boundary other_page as Foo1
+boundary cpl_mk as Foo2
+control CPLMKController as Foo3
+entity detail_mk_cpmk as Foo4
+entity cpmk as Foo5
+
+activate Foo
+Foo -> Foo1 : click CPL-MK
+activate Foo1
+Foo1 -> Foo3 : view()
+activate Foo3
+Foo3 -> Foo4 : Select kodeMK FROM detail_mk_cpmk
+activate Foo4
+Foo4 --> Foo3 : return detail_mk_cpmk
+deactivate Foo4
+Foo3 -> Foo5 : Select kodeCPL FROM cpmk
+activate Foo5
+Foo5 --> Foo3 : return list_cpmk
+deactivate Foo5
+Foo3 -> Foo2 : displayData()
+activate Foo2
+deactivate Foo2
+
+@enduml
