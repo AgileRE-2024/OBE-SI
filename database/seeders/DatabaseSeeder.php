@@ -296,6 +296,7 @@ class DatabaseSeeder extends Seeder
         RPS::create([
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2022,
+            'pustaka'=> 'Pustaka Belum Tau',
             'kodeMK' => 'MK01',
             'kps' => '123456789987654321'
         ]);
@@ -348,7 +349,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Teknik_Penilaian::create([
-            'kodePenilaian'=> '0001',
+            'kodePenilaian'=> '1',
             'teknikPenilaian'=> 'Partisipasi (Kehadiran / Quiz)',
             'bobotPenilaian'=>'35',
             'kriteriaPenilaian'=>'Isi kriteria penilaian',
@@ -357,7 +358,7 @@ class DatabaseSeeder extends Seeder
             'kodeRPS'=>'RPS001',
         ]);
         Teknik_Penilaian::create([
-            'kodePenilaian'=> '0002',
+            'kodePenilaian'=> '2',
             'teknikPenilaian'=> 'UTS',
             'bobotPenilaian'=>'65',
             'kriteriaPenilaian'=>'Isi kriteria penilaian',
@@ -999,7 +1000,7 @@ class DatabaseSeeder extends Seeder
         Detail_RPS::create([
             'kodeRPS' => 'RPS001',
             'kodeMingguRPS' => 'MR11',
-            'kodePenilaian'=> '0001',
+            'kodePenilaian'=> '1',
         ]);
 
         Nilai_Mahasiswa::create([
@@ -1012,13 +1013,13 @@ class DatabaseSeeder extends Seeder
 
         Detail_Nilai_Mahasiswa::create([
             'kodeNilai'=>'1', 
-            'kodePenilaian' => '0001',  
+            'kodePenilaian' => '1',  
             'nilaiPerTeknik'=>'60', 
         ]);
 
         Detail_Nilai_Mahasiswa::create([
             'kodeNilai'=>'1', 
-            'kodePenilaian' => '0002', 
+            'kodePenilaian' => '2', 
             'nilaiPerTeknik'=>'40', 
         ]);
         // $SN_Dikti = CPL_SN_Dikti::where('kodeCPLSN', '=', 'CPL-S01');
