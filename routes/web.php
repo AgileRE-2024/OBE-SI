@@ -32,18 +32,22 @@ use App\Http\Controllers\PemetaanCPLBKMK;
 use App\Http\Controllers\SubCPMKController;
 use App\Http\Controllers\CPLDiktiController;
 use App\Http\Controllers\CPLProdiController;
+use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
+use App\Http\Controllers\PemetaanPlCplController;
+use App\Http\Controllers\RpsController;
+use App\Models\MataKuliah;
+use App\Models\Teknik_Penilaian;
+use App\Models\User;
 use App\Http\Controllers\SusunanMKController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\BahanKajianController;
-use App\Http\Controllers\PemetaanMkCpmkSubcpmk;
 use App\Http\Controllers\OrganisasiMKController;
-use App\Http\Controllers\PemetaanPlCplController;
 use App\Http\Controllers\ProfilLulusanController;
 use App\Http\Controllers\TeknikPenilaianController;
-use App\Http\Controllers\RpsController;
 use App\Http\Controllers\PemetaanCplDiktiCplProdiController;
 use App\Http\Controllers\TahapPenilaianController;
 use App\Http\Controllers\TeknikPenilaianCPMKController;
+use App\Http\Controllers\DosenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,9 +60,9 @@ use App\Http\Controllers\TeknikPenilaianCPMKController;
 |
 */
 
-// Route::get('/dashboard/home', function () {
-//     return view('content.home', ['title' => 'Home OBE']);
-// })->name('home');
+Route::get('/dashboard/home', function () {
+    return view('content.home', ['title' => 'Home OBE']);
+})->name('home');
 
 Route::get('/login', function () {
     return view('content.login.login', ["title" => "Login OBE"]);
@@ -258,17 +262,38 @@ Route::group(['middleware' => 'role:dosen,admin'], function () {
         Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
         Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
     });
+    Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
+    Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
+    Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
+    
+    Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
+    
+    Route::get('/generate-pdf', 'PDFController@generatePDF');
 
-    Route::get('/dashboard/rps', [RPSController::class, 'index', 'title' => 'RPS'])->name('rps');
-    Route::get('/dashboard/rps/export/{type}', [RPSController::class, 'export'])->name('export_rps');
+    // Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
+    // Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
+    // Route::post('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
 
-    Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('minggu_rps');
-    Route::get('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
-    Route::post('/dashboard/rps/minggu_rps', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
+    // Route::get('/dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
+    // Route::put('/dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
+    // Route::get('/dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
+    Route::get('/minggu_rps/{kodeRPS}', [MingguRPSController::class, 'index'])->name('minggu_rps');
+    Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
+    Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
+    Route::get('/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
+    Route::put('/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
+    Route::get('/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
 
-    Route::get('/dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
-    Route::put('/dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
-    Route::get('/dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
+    Route::get('/peran_dosen/{kodeRPS}', [DosenController::class, 'index'])->name('peran_dosen');
+    Route::get('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'addPeranDosen'])->name('add_peran_dosen');
+    Route::post('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'storePeranDosen'])->name('store_peran_dosen');
+    Route::get('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
+    Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
+    Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
+    
+    Route::get('/rps/{kodeRPS}', [RPSController::class, 'show'])->name('rps_show');
+    Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
+    Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');
 
     Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
         Route::get('/teknik_penilaian', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
@@ -279,8 +304,7 @@ Route::group(['middleware' => 'role:dosen,admin'], function () {
         Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
         Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
     });
-
-    Route::get('/generate-pdf', 'PDFController@generatePDF');
+        
 });
 
 Route::get('/ubahpw/{nip}', [LoginController::class, 'ubahpw'])->name('tampilprofile');

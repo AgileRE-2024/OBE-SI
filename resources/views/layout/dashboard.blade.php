@@ -81,6 +81,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+    <script>
+        $(document).ready(function() {
+            $('#nip').change(function() {
+                var selectedNip = $(this).val();
+                $.get('/get-nama-dosen/' + selectedNip, function(response) {
+                    // Isi field "Nama Dosen" dengan response yang diterima
+                    $('#namaDosen').val(response.namaDosen);
+                });
+            });
+        });
+    </script>
+    
+    <script>
+        // Mendapatkan nilai NIP saat dropdown dipilih
+        $('#nip').change(function() {
+            var nip = $(this).val();
+    
+            // Mengirim permintaan AJAX ke endpoint untuk mendapatkan Nama Dosen
+            $.ajax({
+                url: '/get-nama-dosen/' + nip,
+                type: 'GET',
+                success: function(response) {
+                    // Mengisi nilai Nama Dosen pada input
+                    $('#namaDosen').val(response);
+                },
+                error: function(xhr, status, error) {
+                    // Menangani kesalahan jika terjadi
+                    console.log(xhr.responseText);
+                }
+            });
+        });
+    </script>
     @yield('js')
 </body>
 

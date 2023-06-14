@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Minggu_RPS', function (Blueprint $table) {
-            $table->char('kodeMingguRPS',4)->primary('kodeMingguRPS');
+            $table->char('kodeMingguRPS',10)->primary('kodeMingguRPS');
             $table->char('kodeSubCPMK',12);
             $table->string('mingguKe',2);
             $table->boolean('bentukPembelajaran');

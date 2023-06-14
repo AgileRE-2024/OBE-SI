@@ -1,23 +1,25 @@
 @extends('layout.dashboard')
 
 @section('content')
+{{-- <H1>{{ $kodeRPS }}</H1> --}}
     <div class="content px-4">
+        {{-- @include('content.teknik_penilaian.button', ['kodeRPS' => $kodeRPS]) --}}
         <div class="d-flex justify-content-start pt-2">
 
             <div>
-                <a class="btn btn-danger" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+                <a class="btn btn-danger" href="{{ route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS]) }}" style="margin-right:7pt"><i
                         class="bi bi-ui-checks"> </i>Teknik Penilaian</a>
             </div>
             <div>
-                <a class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+                <a class="btn btn-warning" href="{{ route('edit_rps.peran_dosen', ['kodeRPS' => $kodeRPS]) }}" style="margin-right:7pt"><i
                         class="bi bi-ui-checks"> </i>Peran Dosen</a>
             </div>
             <div>
-                <a class="btn btn-success" href="{{ route('edit_rps.teknik_penilaian') }}" style="margin-right:7pt"><i
+                <a class="btn btn-success" href="{{ route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS]) }}" style="margin-right:7pt"><i
                         class="bi bi-ui-checks"> </i>Rencana Pembelajaran</a>
             </div>
             <div>
-                <a class="btn btn-primary" href="{{ route('edit_rps.teknik_penilaian') }}"><i
+                <a class="btn btn-primary" href="{{ route('edit_rps.rps_show', ['kodeRPS' => $kodeRPS]) }}"><i
                         class="bi bi-file-earmark-bar-graph"> </i>RPS</a>
             </div>
         </div>
@@ -31,7 +33,8 @@
         </div>
         <div class="d-flex justify-content-start pt-2">
             <div>
-                <a class="btn btn-dark" href="{{ route('edit_rps.add_teknik_penilaian') }}"><i class="bi bi-plus-square">
+                <a class="btn btn-success" href="{{ route('edit_rps.add_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}"><i
+                        class="bi bi-plus-square">
                     </i>Tambah</a>
             </div>
         </div>

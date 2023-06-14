@@ -2,8 +2,9 @@
 
 @section('content')
 
-<div class="content px-4">
     <div class="content px-4">
+        @include('content.teknik_penilaian.button')
+        <br><br>
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>Rencana Pembelajaran Semester (RPS)</h3>
@@ -13,32 +14,28 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['pdf']) }}"><i
+                <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['type'=>'pdf', 'kodeRPS'=>$kodeRPS]) }}"><i
                         class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
-            </div>
-            <div>
-                <a id="excel" class="btn btn-success" href="/dashboard/rps/exportExcel"><i
-                        class="bi bi-file-earmark-excel"> </i>Export Excel</a>
             </div>
         </div>
         <br>
         <table class="table table-bordered" style="text-align: center">
-            <thead style="background-color: lightgray">
-                    <tr>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%"><img src="{{ asset('unair.png') }}" width="75" height="75"></th>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="5" style="width: 70%">UNIVERSITAS AIRLANGGA<br>FAKULTAS SAINS DAN TEKNOLOGI<br>PRODI SISTEM INFORMASI</th>
-                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%">Kode Dokumen</th>
-                    </tr>
-            </thead>
-            <tbody>
-                @php
-                    $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+            @php
+                    $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                     // print($rps);
                     $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
                     // print($mk);
                     $bk_list=$mk->Bahan_Kajian;
                     $counterBk = $mk->Bahan_Kajian->count();
                 @endphp
+            <thead style="background-color: lightgray">
+                    <tr>
+                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%"><img src="{{ asset('unair.png') }}" width="75" height="75"></th>
+                        <th class="align-middle" scope="col" rowspan="3" colspan="5" style="width: 70%">UNIVERSITAS AIRLANGGA<br>FAKULTAS SAINS DAN TEKNOLOGI<br>PRODI SISTEM INFORMASI</th>
+                        <th class="align-middle" scope="col" rowspan="3" colspan="1" style="width: 15%">{{ $rps->kodeRPS }}</th>
+                    </tr>
+            </thead>
+            <tbody>
                 {{-- <h1>{{ $mk->with('Bahan_Kajian')->first()->namaBK }}</h1> --}}
                 <tr>
                     <th class="align-middle" scope="col" colspan="7" style="width: 100%">RENCANA PEMBELAJARAN SEMESTER</th>
@@ -68,7 +65,7 @@
                         <td class="align-middle"  rowspan="1" style="width: 25%">({{ $bk_list->first()->kodeBK }}) <br> {{ $bk_list->first()->namaBK }}</td>
                         <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $mk->sks }}</td>
                         <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 10%">{{ $mk->semester }}</td>
-                        <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $mk->created_at->format('d-m-Y') }}</td>
+                        <td class="align-middle"  rowspan={{ $counterBk  }} style="width: 15%">{{ $rps->created_at->format('d-m-Y') }}</td>
                     </tr>
                     @else
                     @for ($i = 0; $i < $counterBk; $i++)
@@ -111,19 +108,11 @@
                             @if ($dosen)
                                 {{ $dosen->namaDosen }}
                             @else
-                                @php
-                            $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
-                                ->where('peranDosen', 'Koordinator BK')->first())->nip)->first();
-                            @endphp
-                    
-                            @if ($dosen)
-                                {{ $dosen->namaDosen }}
-                            @else
                                 <div class="alert alert-warning">
-                                    Tambahkan Koordinator BK
+                                    Tambahkan Dosen Pengembang RPS
                                 </div>
                             @endif
-                            @endif
+                            
                         </td>
                         <td class="align-middle" colspan="1" style="width: 30%"><br><br>TTD<br>
                             @php
@@ -177,15 +166,15 @@
                                 ]);
                         }
                     }
-                    $list_dosen_pengampu = array();
-                    $uniqueIds = [];
-                    foreach ($detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Dosen Pengampu') as $dpd) {
-                            $nip = $dpd->nip;
-                            if (!in_array($nip, $uniqueIds)) {
-                                $uniqueIds[] = $nip;
-                                array_push($list_dosen_pengampu, $nip);
-                        }
-                    }
+                    $list_dosen_pengampu = $detail_peran_dosen_list->where('peranDosen', 'Dosen Pengampu')->pluck('nip');
+                    // $uniqueIds = [];
+                    // foreach ($detail_peran_dosen_list->where('peranDosen', '=', 'Dosen Pengampu') as $dpd) {
+                    //         $nip = $dpd->nip;
+                    //         if (!in_array($nip, $uniqueIds)) {
+                    //             $uniqueIds[] = $nip;
+                    //             array_push($list_dosen_pengampu, $nip);
+                    //     }
+                    // }
                     $list_minggu_rps = collect();
                     $uniqueIds = [];
                     foreach ($detail_rps_list->where('kodeRPS', '=', $rps->kodeRPS) as $dr) {
@@ -278,12 +267,12 @@
                 </tr> --}}
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Pustaka</th>
-                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->pustaka }}</td>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $rps->pustaka }}</td>
                 </tr>
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Dosen Pengampu</th>
                     <td style="text-align: left;" rowspan="1" colspan="7"> 
-                    @if ($dosen_list)
+                    @if (!$dosen_list)
                         <div class="alert alert-warning"><span>
 
                             Tambahkan Dosen Pengampu
@@ -350,17 +339,11 @@
                     <td scope="row">{{ $teknik_penilaian_list->where('kodePenilaian', '=', $list_kode_penilaian->get(($loop->iteration)-1))->where('kodeRPS', '=', $rps->kodeRPS)->first()->bobotPenilaian ?? '-' }}</td>
                 </tr>
                 @endforeach
-              </tbody>
-        </table>
-        
             </tbody>
         </table>
 
-
-        
-            </tbody>
-        </table>
-        
+    </div>
+   
 
 
 

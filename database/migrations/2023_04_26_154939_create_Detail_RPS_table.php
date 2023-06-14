@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_RPS', function (Blueprint $table) {
-            $table->char('kodeRPS',6);
-            $table->char('kodeMingguRPS',4);
-            $table->string('kodePenilaian',4)->nullable();
+            $table->char('kodeRPS',16);
+            $table->char('kodeMingguRPS',10);
+            $table->string('kodePenilaian',10)->nullable();
             $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict');
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
             $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('restrict');

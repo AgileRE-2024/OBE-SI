@@ -82,67 +82,7 @@ class DatabaseSeeder extends Seeder
 
         CPL_Prodi::create([
             'kodeCPL' => 'CPL02',
-            'deskripsiCPL' => 'Memiliki kemampuan untuk belajar seumur hidup (life-long learning).',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL03',
-            'deskripsiCPL' => 'Mampu menjelaskan, menganalisis, dan menilai konsep dasar dan peran sistem informasi dalam mengelola data dan memberikan rekomendasi pengambilan keputusan pada proses dan sistem organisasi.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL04',
-            'deskripsiCPL' => 'Mampu merancang dan menggunakan database, serta mengolah, menganalisa, dan memvisualisasi data dengan alat dan teknik pengolahan data.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL05',
-            'deskripsiCPL' => 'Mampu menjelaskan dan menggunakan berbagai metodologi pengembangan sistem beserta alat pemodelan sistem dan menganalisa kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL06',
-            'deskripsiCPL' => 'Mampu menjelaskan dan menerapkan kode etik dalam penggunaan informasi dan data pada perancangan, implementasi, dan penggunaan suatu sistem.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL07',
-            'deskripsiCPL' => 'Mampu merencanakan, menerapkan, memelihara dan meningkatkan sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi yang strategis baik jangka pendek maupun jangka panjang.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL09',
-            'deskripsiCPL' => 'Mampu menjelaskan konsep dan membuat perencanaan infrastruktur TI, arsitektur jaringan, layanan fisik dan cloud, menganalisa konsep identifikasi, otentikasi, otorisasi akses dalam konteks melindungi orang dan perangkat.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL10',
-            'deskripsiCPL' => 'Mampu menerapkan konsep kecerdasan bisnis untuk menyelesaikan permasalahan dalam organisasi.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL11',
-            'deskripsiCPL' => 'Mampu menjelaskan konsep matematika dan statistika yang digunakan dalam sistem informasi.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL12',
-            'deskripsiCPL' => 'Mampu mengidentifikasi peluang yang diciptakan oleh inovasi teknologi informasi menjadi nilai organisasi yang berkelanjutan melalui proses yang sistematis.',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL13',
-            'deskripsiCPL' => 'Mampu menggunakan konsep logika dan algoritma untuk memecahkan permasalahan serta menerapkannya ke dalam beberapa bahasa pemrograman.',
+            'deskripsiCPL' => 'Menganalisis, dan menilai konsep dasar dan peran sistem informasi dalam mengelola data dan memberikan rekomendasi pengambilan keputusan pada proses dan sistem organisasi',
             'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
         ]);
 
@@ -332,23 +272,32 @@ class DatabaseSeeder extends Seeder
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Guntur',
             'password' => '1234',
-            'role' => true,
+            'email'=>'Guntur@gmail.com',
+            'role'=>true,
         ]);
         User::create([
             'nip' => '123456789987654323',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Petir',
             'password' => '1234',
-            'role' => true,
+            'email'=>'Petir@gmail.com',
+            'role'=>true,
         ]);
 
         RPS::create([
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2022,
+            'pustaka'=> 'isi pustaka',
             'kodeMK' => 'MK01',
             'kps' => '123456789987654321'
-        ]);
-
+        ],);
+        RPS::create([
+            'kodeRPS' => 'RPS003',
+            'tahunAjaran' => 2022,
+            'pustaka'=> 'isi pustaka',
+            'kodeMK' => 'MK01',
+            'kps' => '123456789987654321'
+        ],);
         CPMK::create([
             'kodeCPMK' => 'CPMK011',
             'deskripsiCPMK' => 'Mampu menjelaskan konsep dasar sistem',
@@ -416,24 +365,24 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'kodeMingguRPS' => 'MR11',
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'mingguKe' => '1',
-            'bentukPembelajaran' => true,
-            'indikatorMingguRPS' => 'Isi indikator RPS',
-            'kriteriaMingguRPS' => 'Isi kriteria RPS',
-            'deskripsiPembelajaran' => 'Isi deskripsi pembelajaran RPS',
-            'materiPembelajaran' => 'Isi materi pembelajaran RPS',
+            'kodeMingguRPS'=> '2',
+            'kodeSubCPMK'=> 'Sub-CPMK0111',
+            'mingguKe'=>'1',
+            'bentukPembelajaran'=>true,
+            'indikatorMingguRPS'=>'Isi indikator RPS',
+            'kriteriaMingguRPS'=>'Isi kriteria RPS',
+            'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
+            'materiPembelajaran'=>'Isi materi pembelajaran RPS',
         ]);
         Minggu_RPS::create([
-            'kodeMingguRPS' => 'MR12',
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'mingguKe' => '2',
-            'bentukPembelajaran' => false,
-            'indikatorMingguRPS' => 'Isi indikator RPS',
-            'kriteriaMingguRPS' => 'Isi kriteria RPS',
-            'deskripsiPembelajaran' => 'Isi deskripsi pembelajaran RPS',
-            'materiPembelajaran' => 'Isi materi pembelajaran RPS',
+            'kodeMingguRPS'=> '3',
+            'kodeSubCPMK'=> 'Sub-CPMK0111',
+            'mingguKe'=>'2',
+            'bentukPembelajaran'=>false,
+            'indikatorMingguRPS'=>'Isi indikator RPS',
+            'kriteriaMingguRPS'=>'Isi kriteria RPS',
+            'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
+            'materiPembelajaran'=>'Isi materi pembelajaran RPS',
         ]);
 
         Mahasiswa::create([
@@ -604,7 +553,10 @@ class DatabaseSeeder extends Seeder
             'kodeCPL' => 'CPL02',
             'kodeBK' => 'BK19'
         ]);
-
+        Detail_CPLProdi_BK::create([
+            'kodeBK' => 'BK01',
+            'kodeCPL' => 'CPL01',
+        ]);
         Detail_BK_MK::create([
             'kodeBK' => 'BK01',
             'kodeMK' => 'MK14'
@@ -1065,8 +1017,8 @@ class DatabaseSeeder extends Seeder
 
         Detail_RPS::create([
             'kodeRPS' => 'RPS001',
-            'kodeMingguRPS' => 'MR11',
-            'kodePenilaian' => '0001',
+            'kodeMingguRPS' => '2',
+            'kodePenilaian'=> '0001',
         ]);
 
         Nilai_Mahasiswa::create([
