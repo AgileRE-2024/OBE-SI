@@ -43,7 +43,7 @@
             </div>
             @if ($message == "Data tidak ditemukan, Silakan buat RPS")
             <div class="pr-3">
-                <a id="pdf" class="btn btn-outline-success" href="{{ route('rps_create') }}"><i
+                <a id="buatRPS" class="btn btn-outline-success" href="{{ route('rps_create') }}"><i
                         class="bi bi-pencil-square"> </i>Buat RPS</a>
             </div>
             @endif
