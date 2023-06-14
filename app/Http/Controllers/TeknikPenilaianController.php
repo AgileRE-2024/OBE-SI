@@ -65,7 +65,7 @@ class TeknikPenilaianController extends Controller
 
     public function storeTeknikPenilaian(Request $request, $kodeRPS)
     {
-        if (Teknik_Penilaian::all()->count() == 0) {
+        if (Teknik_Penilaian::all()->count() == null) {
             $kodePenilaian=1;
         }else{
             $kodePenilaian=Teknik_Penilaian::all()->last()->kodePenilaian;

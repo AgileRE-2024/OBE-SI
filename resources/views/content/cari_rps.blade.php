@@ -77,7 +77,7 @@
                 </div>
                 <div style="display: flex;">
                     <div style="margin-right: 10px;">
-                        <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['pdf']) }}"><i
+                        <a id="pdf" class="btn btn-outline-danger" href="{{ route('export_rps', ['type'=>'pdf', 'kodeRPS'=>$kodeRPS]) }}"><i
                                 class="bi bi-file-earmark-pdf-fill"></i> Export PDF</a>
                     </div>
                     {{-- <div>
@@ -166,23 +166,14 @@
                                 $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
                                     ->where('peranDosen', 'Dosen Pengembang RPS')->first())->nip)->first();
                                 @endphp
-                        
-                                @if ($dosen)
-                                    {{ $dosen->namaDosen }}
-                                @else
-                                    @php
-                                $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
-                                    ->where('peranDosen', 'Koordinator BK')->first())->nip)->first();
-                                @endphp
-                        
                                 @if ($dosen)
                                     {{ $dosen->namaDosen }}
                                 @else
                                     <div class="alert alert-warning">
-                                        Tambahkan Koordinator BK
+                                        Tambahkan Dosen Pengembang RPS
                                     </div>
                                 @endif
-                                @endif
+                                
                             </td>
                             <td class="align-middle" colspan="1" style="width: 30%"><br><br>TTD<br>
                                 @php

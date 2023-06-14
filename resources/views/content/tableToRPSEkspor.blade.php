@@ -114,10 +114,32 @@
             
                     <tr>
                         <td class="align-middle" colspan="2" style="width: 20%"><br><br>TTD<br>
-                        {{ $dosen_list->where('nip', $detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Dosen Pengembang RPS')->first()->nip)->first()->namaDosen ?? '-'}}
+                            @php
+                            $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
+                                ->where('peranDosen', 'Dosen Pengembang RPS')->first())->nip)->first();
+                            @endphp
+                            @if ($dosen)
+                                {{ $dosen->namaDosen }}
+                            @else
+                                
+                                    Tambahkan Dosen Pengembang RPS
+                                
+                            @endif
+                        {{-- {{ $dosen_list->where('nip', $detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Dosen Pengembang RPS')->first()->nip)->first()->namaDosen ?? '-'}} --}}
                         </td>
                         <td class="align-middle" colspan="1" style="width: 30%"><br><br>TTD<br>
-                        {{ $dosen_list->where('nip', $detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Koordinator BK')->first()->nip)->first()->namaDosen ?? '-'}}
+                            @php
+                            $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
+                                ->where('peranDosen', 'Koordinator BK')->first())->nip)->first();
+                            @endphp
+                            @if ($dosen)
+                                {{ $dosen->namaDosen }}
+                            @else
+                                
+                                    Tambahkan Koordinator BK
+                                
+                            @endif
+                            {{-- {{ $dosen_list->where('nip', $detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Koordinator BK')->first()->nip)->first()->namaDosen ?? '-'}} --}}
                         </td>
                         <td class="align-middle" colspan="3" style="width: 25%"><br><br>TTD<br>{{ $dosen_list->where('nip','=',$rps->kps)->first()->namaDosen ?? '-'}}</td>
                     </tr>

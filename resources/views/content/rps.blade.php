@@ -108,19 +108,11 @@
                             @if ($dosen)
                                 {{ $dosen->namaDosen }}
                             @else
-                                @php
-                            $dosen = $dosen_list->where('nip', optional($detail_peran_dosen_list->where('kodeRPS', $rps->kodeRPS)
-                                ->where('peranDosen', 'Koordinator BK')->first())->nip)->first();
-                            @endphp
-                    
-                            @if ($dosen)
-                                {{ $dosen->namaDosen }}
-                            @else
                                 <div class="alert alert-warning">
-                                    Tambahkan Koordinator BK
+                                    Tambahkan Dosen Pengembang RPS
                                 </div>
                             @endif
-                            @endif
+                            
                         </td>
                         <td class="align-middle" colspan="1" style="width: 30%"><br><br>TTD<br>
                             @php

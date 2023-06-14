@@ -31,8 +31,8 @@
             <table class="table table-bordered" style="text-align: center">
         <thead style="background-color: lightgray">
             <tr>
-                <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Kode Minggu RPS</th>
-                <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Kode Penilaian</th>
+                {{-- <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Kode Minggu RPS</th> --}}
+                {{-- <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Kode Penilaian</th> --}}
                 <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Kode SubCMPK</th>
                 <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Minggu Ke-</th>
                 <th class="align-middle" scope="col" colspan="1" style="width: 10%">Bentuk Pembelajaran
@@ -76,8 +76,6 @@
                     @endphp
             @foreach ($minggu_rps_list as $minggu_rps)
                 <tr>
-                    <td scope="row">{{ $minggu_rps->kodeMingguRPS }}</td>
-                    <td scope="row">kode penilaian</td>
                     <td scope="row">{{ $minggu_rps->kodeSubCPMK }}</td>
                     <td scope="row">{{ $minggu_rps->mingguKe }}</td>
                     @if ($minggu_rps->bentukPembelajaran == '1')

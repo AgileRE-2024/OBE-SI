@@ -17,10 +17,6 @@ use App\Models\Profil_Lulusan;
 use App\Models\Bahan_Kajian;
 use App\Models\Mata_Kuliah;
 use App\Models\RPS;
-<<<<<<< HEAD
-use App\Models\User;
-=======
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
 use App\Models\Prodi;
 use App\Models\CPMK;
 use App\Models\Mahasiswa;
@@ -84,6 +80,12 @@ class DatabaseSeeder extends Seeder
             'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
         ]);
 
+        CPL_Prodi::create([
+            'kodeCPL' => 'CPL02',
+            'deskripsiCPL' => 'Menganalisis, dan menilai konsep dasar dan peran sistem informasi dalam mengelola data dan memberikan rekomendasi pengambilan keputusan pada proses dan sistem organisasi',
+            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
+        ]);
+
         Bahan_Kajian::create([
             'kodeBK' => 'BK01',
             'namaBK' => 'Foundation of Information Systems',
@@ -104,8 +106,6 @@ class DatabaseSeeder extends Seeder
             'mat_kodeMK'=>'MK01',
         ]);
 
-<<<<<<< HEAD
-=======
         Mata_Kuliah::create([
             'kodeMK' => 'MK02',
             'namaMK' => 'Kkkk',
@@ -119,7 +119,6 @@ class DatabaseSeeder extends Seeder
             'mat_kodeMK'=>'MK01',
         ]);
 
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
         User::create([
             'nip' => '123456789987654321',
             'jabatanDosen' => 'kps',
@@ -127,16 +126,14 @@ class DatabaseSeeder extends Seeder
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email'=>'rimuljo@gmail.com',
             'role'=>true,
-<<<<<<< HEAD
         ]
     );
-=======
-        ]);
         User::create([
             'nip' => '123456789987654322',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Guntur',
             'password' => '1234',
+            'email'=>'Guntur@gmail.com',
             'role'=>true,
         ]);
         User::create([
@@ -144,9 +141,9 @@ class DatabaseSeeder extends Seeder
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Petir',
             'password' => '1234',
+            'email'=>'Petir@gmail.com',
             'role'=>true,
         ]);
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
 
         RPS::create([
             'kodeRPS' => 'RPS001',
@@ -158,6 +155,7 @@ class DatabaseSeeder extends Seeder
         RPS::create([
             'kodeRPS' => 'RPS003',
             'tahunAjaran' => 2022,
+            'pustaka'=> 'isi pustaka',
             'kodeMK' => 'MK01',
             'kps' => '123456789987654321'
         ],);
@@ -228,7 +226,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'kodeMingguRPS'=> 'MR11',
+            'kodeMingguRPS'=> '2',
             'kodeSubCPMK'=> 'Sub-CPMK0111',
             'mingguKe'=>'1',
             'bentukPembelajaran'=>true,
@@ -238,7 +236,7 @@ class DatabaseSeeder extends Seeder
             'materiPembelajaran'=>'Isi materi pembelajaran RPS',
         ]);
         Minggu_RPS::create([
-            'kodeMingguRPS'=> 'MR12',
+            'kodeMingguRPS'=> '3',
             'kodeSubCPMK'=> 'Sub-CPMK0111',
             'mingguKe'=>'2',
             'bentukPembelajaran'=>false,
@@ -317,7 +315,7 @@ class DatabaseSeeder extends Seeder
 
         Detail_RPS::create([
             'kodeRPS' => 'RPS001',
-            'kodeMingguRPS' => 'MR11',
+            'kodeMingguRPS' => '2',
             'kodePenilaian'=> '0001',
         ]);
 

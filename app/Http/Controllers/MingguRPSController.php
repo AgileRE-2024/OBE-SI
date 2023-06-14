@@ -96,7 +96,7 @@ class MingguRPSController extends Controller
      */
     public function storeMingguRPS(Request $request, $kodeRPS)
     {
-        if (Minggu_RPS::all()->count() == 0) {
+        if (Minggu_RPS::all()->count() == null) {
             $kodeMingguRPS=1;
         }else{
             $kodeMingguRPS=Minggu_RPS::all()->last()->kodeMingguRPS;

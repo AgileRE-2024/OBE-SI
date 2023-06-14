@@ -23,15 +23,10 @@ return new class extends Migration
             $table->string('pustaka', 1000);
             $table->string('deskripsiMK', 100);
             $table->text('prasyaratTambahan');
-<<<<<<< HEAD
-            $table->text('mat_kodeMK')->nullable();
-            // $table->foreign('mat_kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-=======
             $table->char('mat_kodeMK', 10)->index()->nullable();
 
             $table->primary('kodeMK');
             $table->foreign('mat_kodeMK')->references('kodeMK')->on('Mata_Kuliah');
->>>>>>> 2cc2e26279fc65657722c58e8d68c1af10fc6992
             $table->timestamps();
         });
     }
