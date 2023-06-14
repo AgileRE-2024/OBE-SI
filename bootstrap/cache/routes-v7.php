@@ -102,7 +102,27 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::F833by7JKrSwsAy2',
+            '_route' => 'generated::SkdyFqG3fugmSfrh',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/home' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'home',
           ),
           1 => NULL,
           2 => 
@@ -217,7 +237,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::sFtTBmLOdL2ITRli',
+            '_route' => 'generated::74PofRhwgpHajWJT',
           ),
           1 => NULL,
           2 => 
@@ -1457,13 +1477,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/rps/minggu_rps' => 
+      '/dashboard/cari_rps' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'add_minggu_rps',
+            '_route' => 'index',
           ),
           1 => NULL,
           2 => 
@@ -1480,7 +1500,66 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'store_minggu_rps',
+            '_route' => 'processForm',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/generate-pdf' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::95nxLbkeF0SJAHEU',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/rps/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rps_create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/rps/store' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rps_store',
           ),
           1 => NULL,
           2 => 
@@ -1549,26 +1628,6 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/generate-pdf' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::MZqChBfUe0cgmUpb',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
       '/forgot-password' => 
       array (
         0 => 
@@ -1627,7 +1686,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/(?|cpl\\-(?|sndikti\\-cpl\\-prodi/export/([^/]++)(*:188)|pl/export/([^/]++)(*:214)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:251)|edit_cpmk/([^/]++)(?|(*:280))))|mk\\-cpmk\\-subcpmk/export/([^/]++)(*:324))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:373))|CP(?|L(?|Dikti/([^/]++)(?|(*:408))|Prodi/([^/]++)(?|(*:434)))|MK/([^/]++)(?|(*:458)))|BahanKajian/([^/]++)(?|(*:491))|MataKuliah/([^/]++)(?|(*:522))|SubCPMK/([^/]++)(?|(*:550)))|delete(?|ProfilLulusan/([^/]++)(*:591)|CP(?|L(?|Dikti/([^/]++)(*:622)|Prodi/([^/]++)(*:644))|MK/([^/]++)(*:664))|BahanKajian/([^/]++)(*:693)|MataKuliah/([^/]++)(*:720)|SubCPMK/([^/]++)(*:744))|profilLulusan/export/([^/]++)(*:782)|cp(?|l_(?|dikti/export/([^/]++)(*:821)|prodi/export/([^/]++)(*:850))|mk/export/([^/]++)(*:877))|bahan_kajian/export/([^/]++)(*:914)|mata_kuliah/export/([^/]++)(*:949)|sub_cpmk/export/([^/]++)(*:981)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:1032)|export/([^/]++)/([^/]++)(*:1065))|([^/]++)(*:1083)|export/([^/]++)/([^/]++)(*:1116))|rps/(?|e(?|xport/([^/]++)(*:1151)|dit/(?|editTeknikPenilaian/([^/]++)(?|(*:1198))|deleteTeknikPenilaian/([^/]++)(*:1238)|teknik_pdf/export/([^/]++)(*:1273)))|minggu_rps/(?|editMingguRPS(?|/([^/]++)(*:1323)|([^/]++)(*:1340))|deleteMingguRPS/([^/]++)(*:1374))))|/u(?|bahpw/([^/]++)(*:1405)|pdateprofile/([^/]++)(*:1435))|/reset\\-password/([^/]++)(*:1470))/?$}sDu',
+      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/d(?|ashboard/(?|kurikulum/(?|pemetaan/(?|cpl\\-(?|sndikti\\-cpl\\-prodi/export/([^/]++)(*:191)|pl/export/([^/]++)(*:217)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:254)|edit_cpmk/([^/]++)(?|(*:283))))|mk\\-cpmk\\-subcpmk/export/([^/]++)(*:327))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:376))|CP(?|L(?|Dikti/([^/]++)(?|(*:411))|Prodi/([^/]++)(?|(*:437)))|MK/([^/]++)(?|(*:461)))|BahanKajian/([^/]++)(?|(*:494))|MataKuliah/([^/]++)(?|(*:525))|SubCPMK/([^/]++)(?|(*:553)))|delete(?|ProfilLulusan/([^/]++)(*:594)|CP(?|L(?|Dikti/([^/]++)(*:625)|Prodi/([^/]++)(*:647))|MK/([^/]++)(*:667))|BahanKajian/([^/]++)(*:696)|MataKuliah/([^/]++)(*:723)|SubCPMK/([^/]++)(*:747))|profilLulusan/export/([^/]++)(*:785)|cp(?|l_(?|dikti/export/([^/]++)(*:824)|prodi/export/([^/]++)(*:853))|mk/export/([^/]++)(*:880))|bahan_kajian/export/([^/]++)(*:917)|mata_kuliah/export/([^/]++)(*:952)|sub_cpmk/export/([^/]++)(*:984)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:1035)|export/([^/]++)/([^/]++)(*:1068))|([^/]++)(*:1086)|export/([^/]++)/([^/]++)(*:1119))|rps/e(?|xport/([^/]++)/([^/]++)(*:1160)|dit/(?|editTeknikPenilaian/([^/]++)(?|(*:1207))|deleteTeknikPenilaian/([^/]++)(*:1247)|teknik_pdf/export/([^/]++)(*:1282))))|elete_(?|minggu_rps/([^/]++)/([^/]++)(*:1331)|peran_dosen/([^/]++)/([^/]++)/([^/]++)(*:1378)))|/minggu_rps/([^/]++)(*:1409)|/add_(?|minggu_rps/([^/]++)(?|(*:1448))|peran_dosen/([^/]++)(?|(*:1481)))|/edit_(?|minggu_rps/([^/]++)/([^/]++)(?|(*:1532))|peran_dosen/([^/]++)/([^/]++)/([^/]++)(?|(*:1583)))|/peran_dosen/([^/]++)(*:1615)|/r(?|ps/([^/]++)(*:1640)|eset\\-password/([^/]++)(*:1672))|/u(?|bahpw/([^/]++)(*:1701)|pdateprofile/([^/]++)(*:1731)))/?$}sDu',
     ),
     3 => 
     array (
@@ -1704,7 +1763,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      188 => 
+      191 => 
       array (
         0 => 
         array (
@@ -1727,7 +1786,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      214 => 
+      217 => 
       array (
         0 => 
         array (
@@ -1750,7 +1809,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      251 => 
+      254 => 
       array (
         0 => 
         array (
@@ -1773,7 +1832,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      280 => 
+      283 => 
       array (
         0 => 
         array (
@@ -1815,7 +1874,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      324 => 
+      327 => 
       array (
         0 => 
         array (
@@ -1838,7 +1897,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      373 => 
+      376 => 
       array (
         0 => 
         array (
@@ -1880,7 +1939,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      408 => 
+      411 => 
       array (
         0 => 
         array (
@@ -1922,7 +1981,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      434 => 
+      437 => 
       array (
         0 => 
         array (
@@ -1964,7 +2023,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      458 => 
+      461 => 
       array (
         0 => 
         array (
@@ -2006,7 +2065,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      491 => 
+      494 => 
       array (
         0 => 
         array (
@@ -2048,7 +2107,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      522 => 
+      525 => 
       array (
         0 => 
         array (
@@ -2090,7 +2149,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      550 => 
+      553 => 
       array (
         0 => 
         array (
@@ -2132,7 +2191,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      591 => 
+      594 => 
       array (
         0 => 
         array (
@@ -2155,7 +2214,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      622 => 
+      625 => 
       array (
         0 => 
         array (
@@ -2178,7 +2237,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      644 => 
+      647 => 
       array (
         0 => 
         array (
@@ -2201,7 +2260,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      664 => 
+      667 => 
       array (
         0 => 
         array (
@@ -2224,7 +2283,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      693 => 
+      696 => 
       array (
         0 => 
         array (
@@ -2247,7 +2306,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      720 => 
+      723 => 
       array (
         0 => 
         array (
@@ -2270,7 +2329,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      744 => 
+      747 => 
       array (
         0 => 
         array (
@@ -2293,7 +2352,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      782 => 
+      785 => 
       array (
         0 => 
         array (
@@ -2316,7 +2375,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      821 => 
+      824 => 
       array (
         0 => 
         array (
@@ -2339,7 +2398,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      850 => 
+      853 => 
       array (
         0 => 
         array (
@@ -2362,7 +2421,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      877 => 
+      880 => 
       array (
         0 => 
         array (
@@ -2385,7 +2444,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      914 => 
+      917 => 
       array (
         0 => 
         array (
@@ -2408,7 +2467,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      949 => 
+      952 => 
       array (
         0 => 
         array (
@@ -2431,7 +2490,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      981 => 
+      984 => 
       array (
         0 => 
         array (
@@ -2454,7 +2513,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1032 => 
+      1035 => 
       array (
         0 => 
         array (
@@ -2477,7 +2536,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1065 => 
+      1068 => 
       array (
         0 => 
         array (
@@ -2501,7 +2560,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1083 => 
+      1086 => 
       array (
         0 => 
         array (
@@ -2524,7 +2583,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1116 => 
+      1119 => 
       array (
         0 => 
         array (
@@ -2548,7 +2607,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1151 => 
+      1160 => 
       array (
         0 => 
         array (
@@ -2559,6 +2618,7 @@ app('router')->setCompiledRoutes(
           1 => 
           array (
             0 => 'type',
+            1 => 'kodeRPS',
           ),
           2 => 
           array (
@@ -2571,7 +2631,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1198 => 
+      1207 => 
       array (
         0 => 
         array (
@@ -2613,7 +2673,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1238 => 
+      1247 => 
       array (
         0 => 
         array (
@@ -2636,7 +2696,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1273 => 
+      1282 => 
       array (
         0 => 
         array (
@@ -2659,17 +2719,18 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1323 => 
+      1331 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'edit_minggu_rps',
+            '_route' => 'delete_minggu_rps',
           ),
           1 => 
           array (
-            0 => 'minggu_rps_list',
+            0 => 'kodeMingguRPS',
+            1 => 'kodeRPS',
           ),
           2 => 
           array (
@@ -2682,9 +2743,162 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1340 => 
+      1378 => 
       array (
         0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'delete_peran_dosen',
+          ),
+          1 => 
+          array (
+            0 => 'nip',
+            1 => 'kodeRPS',
+            2 => 'peranDosen',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1409 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'minggu_rps',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1448 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'add_minggu_rps',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'store_minggu_rps',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1481 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'add_peran_dosen',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'store_peran_dosen',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1532 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'edit_minggu_rps',
+          ),
+          1 => 
+          array (
+            0 => 'kodeMingguRPS',
+            1 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
         array (
           0 => 
           array (
@@ -2692,7 +2906,8 @@ app('router')->setCompiledRoutes(
           ),
           1 => 
           array (
-            0 => 'minggu_rps_list',
+            0 => 'kodeMingguRPS',
+            1 => 'kodeRPS',
           ),
           2 => 
           array (
@@ -2704,17 +2919,63 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1374 => 
+      1583 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'delete_minggu_rps',
+            '_route' => 'edit_peran_dosen',
           ),
           1 => 
           array (
-            0 => 'minggu_rps_list',
+            0 => 'nip',
+            1 => 'kodeRPS',
+            2 => 'peranDosen',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'update_peran_dosen',
+          ),
+          1 => 
+          array (
+            0 => 'nip',
+            1 => 'kodeRPS',
+            2 => 'peranDosen',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1615 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'peran_dosen',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
           ),
           2 => 
           array (
@@ -2727,7 +2988,53 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1405 => 
+      1640 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'rps_show',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1672 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'password.reset',
+          ),
+          1 => 
+          array (
+            0 => 'token',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1701 => 
       array (
         0 => 
         array (
@@ -2750,7 +3057,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1435 => 
+      1731 => 
       array (
         0 => 
         array (
@@ -2765,29 +3072,6 @@ app('router')->setCompiledRoutes(
           2 => 
           array (
             'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      1470 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'password.reset',
-          ),
-          1 => 
-          array (
-            0 => 'token',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -3058,7 +3342,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::F833by7JKrSwsAy2' => 
+    'generated::SkdyFqG3fugmSfrh' => 
     array (
       'methods' => 
       array (
@@ -3073,15 +3357,53 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:sanctum',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005380000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005390000000000000000";}";s:4:"hash";s:44:"96nTAcLm8awWQ8yxcKxoahdHYvgYiGnPgrmNgxTJd2Q=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::F833by7JKrSwsAy2',
+        'as' => 'generated::SkdyFqG3fugmSfrh',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'home' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/home',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:294:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:76:"function () {
+    return \\view(\'content.home\', [\'title\' => \'Home OBE\']);
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000053b0000000000000000";}";s:4:"hash";s:44:"MQOZXyZR5HkNKyybk4QMRt2CfgkB3FIsY4W9Mp5zgpY=";}}',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'home',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3280,7 +3602,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::sFtTBmLOdL2ITRli' => 
+    'generated::74PofRhwgpHajWJT' => 
     array (
       'methods' => 
       array (
@@ -3294,7 +3616,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:909:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1128:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:909:"function () {
     // $anggota = CPL_SN_Dikti::first();
     return \\view(\'test\', [
         \'CPL_SN_Dikti\' => \\App\\Models\\CPL_SN_Dikti::first(),
@@ -3312,13 +3634,13 @@ app('router')->setCompiledRoutes(
         \'Semua_Kelas\' => \\App\\Models\\Kelas::all(),
         \'Detail_Nilai_Mahasiswa\' => \\App\\Models\\Detail_Nilai_Mahasiswa::all(),
     ]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000053f0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005420000000000000000";}";s:4:"hash";s:44:"VNSCDGTNqCHbk68ceBDV4wFBIjzpTwK2jqa9piVTjSg=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::sFtTBmLOdL2ITRli',
+        'as' => 'generated::74PofRhwgpHajWJT',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7151,6 +7473,81 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/cari_rps',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RpsController@index',
+        'controller' => 'App\\Http\\Controllers\\RpsController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'processForm' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'dashboard/cari_rps',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RpsController@processData',
+        'controller' => 'App\\Http\\Controllers\\RpsController@processData',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'processForm',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'export_rps' => 
     array (
       'methods' => 
@@ -7158,7 +7555,7 @@ app('router')->setCompiledRoutes(
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'dashboard/rps/export/{type}',
+      'uri' => 'dashboard/rps/export/{type}/{kodeRPS}',
       'action' => 
       array (
         'middleware' => 
@@ -7189,6 +7586,82 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'generated::95nxLbkeF0SJAHEU' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'generate-pdf',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'PDFController@generatePDF',
+        'controller' => 'PDFController@generatePDF',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::95nxLbkeF0SJAHEU',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'minggu_rps' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'minggu_rps/{kodeRPS}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\MingguRPSController@index',
+        'controller' => 'App\\Http\\Controllers\\MingguRPSController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'minggu_rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'add_minggu_rps' => 
     array (
       'methods' => 
@@ -7196,7 +7669,7 @@ app('router')->setCompiledRoutes(
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'dashboard/rps/minggu_rps',
+      'uri' => 'add_minggu_rps/{kodeRPS}',
       'action' => 
       array (
         'middleware' => 
@@ -7233,7 +7706,7 @@ app('router')->setCompiledRoutes(
       array (
         0 => 'POST',
       ),
-      'uri' => 'dashboard/rps/minggu_rps',
+      'uri' => 'add_minggu_rps/{kodeRPS}',
       'action' => 
       array (
         'middleware' => 
@@ -7271,7 +7744,7 @@ app('router')->setCompiledRoutes(
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'dashboard/rps/minggu_rps/editMingguRPS/{minggu_rps_list}',
+      'uri' => 'edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}',
       'action' => 
       array (
         'middleware' => 
@@ -7308,7 +7781,7 @@ app('router')->setCompiledRoutes(
       array (
         0 => 'PUT',
       ),
-      'uri' => 'dashboard/rps/minggu_rps/editMingguRPS{minggu_rps_list}',
+      'uri' => 'edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}',
       'action' => 
       array (
         'middleware' => 
@@ -7346,7 +7819,7 @@ app('router')->setCompiledRoutes(
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'dashboard/rps/minggu_rps/deleteMingguRPS/{minggu_rps_list}',
+      'uri' => 'delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}',
       'action' => 
       array (
         'middleware' => 
@@ -7362,6 +7835,345 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'delete_minggu_rps',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'peran_dosen' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'peran_dosen/{kodeRPS}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DosenController@index',
+        'controller' => 'App\\Http\\Controllers\\DosenController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'peran_dosen',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'add_peran_dosen' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'add_peran_dosen/{kodeRPS}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DosenController@addPeranDosen',
+        'controller' => 'App\\Http\\Controllers\\DosenController@addPeranDosen',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'add_peran_dosen',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'store_peran_dosen' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'add_peran_dosen/{kodeRPS}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DosenController@storePeranDosen',
+        'controller' => 'App\\Http\\Controllers\\DosenController@storePeranDosen',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'store_peran_dosen',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'edit_peran_dosen' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DosenController@editPeranDosen',
+        'controller' => 'App\\Http\\Controllers\\DosenController@editPeranDosen',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'edit_peran_dosen',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'update_peran_dosen' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DosenController@updatePeranDosen',
+        'controller' => 'App\\Http\\Controllers\\DosenController@updatePeranDosen',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'update_peran_dosen',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'delete_peran_dosen' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DosenController@deletePeranDosen',
+        'controller' => 'App\\Http\\Controllers\\DosenController@deletePeranDosen',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'delete_peran_dosen',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rps_show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'rps/{kodeRPS}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RpsController@show',
+        'controller' => 'App\\Http\\Controllers\\RpsController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'rps_show',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rps_create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/rps/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RpsController@create',
+        'controller' => 'App\\Http\\Controllers\\RpsController@create',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'rps_create',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'rps_store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'dashboard/rps/store',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RpsController@store',
+        'controller' => 'App\\Http\\Controllers\\RpsController@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'rps_store',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7641,44 +8453,6 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::MZqChBfUe0cgmUpb' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'generate-pdf',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'role:dosen,admin',
-        ),
-        'uses' => 'PDFController@generatePDF',
-        'controller' => 'PDFController@generatePDF',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::MZqChBfUe0cgmUpb',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
     'tampilprofile' => 
     array (
       'methods' => 
@@ -7767,9 +8541,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
     return \\view(\'content.login.auth.forgot-password\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005b60000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005be0000000000000000";}";s:4:"hash";s:44:"44eRubGGMg5bewsAqWaydQDLX4AKPGtZFOb4c1MmEM0=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7805,7 +8579,7 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:408:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:627:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:408:"function (\\Illuminate\\Http\\Request $request) {
     $request->validate([\'email\' => \'required|email\']);
 
     $status = \\Illuminate\\Support\\Facades\\Password::sendResetLink(
@@ -7815,7 +8589,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::RESET_LINK_SENT
         ? \\back()->with([\'status\' => \\__($status)])
         : \\back()->withErrors([\'email\' => \\__($status)]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005b80000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005c70000000000000000";}";s:4:"hash";s:44:"Uk6lDaLVoYf5HH2SpjBOckQjBw+nTVyQl+9xgMOrqdE=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7852,9 +8626,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:317:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
     return \\view(\'content.login.auth.reset-password\', [\'token\' => $token]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005ba0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005c90000000000000000";}";s:4:"hash";s:44:"4yQheWykQoH2gawSxk/RrhJ0l+5xbCrjxG0S+NsBzJQ=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -7890,7 +8664,7 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:902:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1121:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:902:"function (\\Illuminate\\Http\\Request $request) {
     $request->validate([
         \'token\' => \'required\',
         \'email\' => \'required|email\',
@@ -7913,7 +8687,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::PASSWORD_RESET
         ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
         : \\back()->withErrors([\'email\' => [\\__($status)]]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005bc0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005cb0000000000000000";}";s:4:"hash";s:44:"EV4P+8b8yEuCt/xQ1GzJ3IbERuDOXyW/D10ICFM/EHE=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
