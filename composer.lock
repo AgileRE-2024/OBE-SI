@@ -1950,13 +1950,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-<<<<<<< HEAD
-            "license": [
-                "MIT"
-            ],
-=======
             "license": ["MIT"],
->>>>>>> origin/RPS
             "authors": [
                 {
                     "name": "Frank de Jonge",
@@ -1964,17 +1958,7 @@
                 }
             ],
             "description": "Local filesystem adapter for Flysystem.",
-<<<<<<< HEAD
-            "keywords": [
-                "Flysystem",
-                "file",
-                "files",
-                "filesystem",
-                "local"
-            ],
-=======
             "keywords": ["Flysystem", "file", "files", "filesystem", "local"],
->>>>>>> origin/RPS
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem-local/issues",
                 "source": "https://github.com/thephpleague/flysystem-local/tree/3.15.0"
