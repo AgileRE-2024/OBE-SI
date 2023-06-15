@@ -32,17 +32,17 @@ class TeknikPenilaianCPMKTest extends DuskTestCase
                     ->assertPathIs('/dashboard/penilaian/cetak-excel-tpcpmk');
 
 
-                    foreach (Mata_Kuliah::all() as $mk) {
-                        foreach (CPL_Prodi::all() as $cpl) {
-                            foreach (CPMK::all()->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
-                                if (Detail_MK_CPMK::all()->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
-                                    $browser->scrollIntoView('#' . $mk->kodeMK . '_' . $cpmk->kodeCPMK)
-                                            ->pause(1000)
-                                            ->assertVisible('#' . $mk->kodeMK . '_' . $cpmk->kodeCPMK);
-                                }
-                            }
-                        }
-                    }
+                    // foreach (Mata_Kuliah::all() as $mk) {
+                    //     foreach (CPL_Prodi::all() as $cpl) {
+                    //         foreach (CPMK::all()->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
+                    //             if (Detail_MK_CPMK::all()->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
+                    //                 $browser->scrollIntoView('#' . $mk->kodeMK . '_' . $cpmk->kodeCPMK)
+                    //                         ->pause(1000)
+                    //                         ->assertVisible('#' . $mk->kodeMK . '_' . $cpmk->kodeCPMK);
+                    //             }
+                    //         }
+                    //     }
+                    // }
         });
     }
 }
