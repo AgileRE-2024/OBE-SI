@@ -14,7 +14,7 @@
             </div>
         <div class="d-flex justify-content-start pt-2">
             <div>
-                <a class="btn btn-success" href="{{ route('edit_rps.add_minggu_rps',['kodeRPS' => $kodeRPS]) }}"><i
+                <a id="tambah" class="btn btn-success" href="{{ route('edit_rps.add_minggu_rps',['kodeRPS' => $kodeRPS]) }}"><i
                         class="bi bi-plus-square">
                     </i>Tambah</a>
             </div>
@@ -48,7 +48,7 @@
                 </th>
                 <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Teknik Penilaian
                 </th>
-                <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Edit</th>
+                <th id="edit" class="align-middle" scope="col" rowspan="2" style="width: 15%">Edit</th>
                 <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Delete</th>
             </tr>
         </thead>
@@ -95,11 +95,11 @@
                         {{-- {{ $teknik_penilaian['teknikPenilaian'] ?? '-' }} --}}
                     </td>
                     <td scope="row">
-                        <a class="btn btn-primary"
+                        <a id="edit" class="btn btn-primary"
                             href="{{ route('edit_rps.edit_minggu_rps',['kodeMingguRPS' => $minggu_rps->kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">Edit</a>
                     </td>
                     <td scope="row">
-                        <a class="btn btn-danger"
+                        <a id="delete" class="btn btn-danger"
                             href="{{ route('edit_rps.delete_minggu_rps',['kodeMingguRPS' => $minggu_rps->kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">Delete</a>
                     
                         {{-- <a class="btn btn-danger" href="{{ route('delete_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Delete</a> --}}

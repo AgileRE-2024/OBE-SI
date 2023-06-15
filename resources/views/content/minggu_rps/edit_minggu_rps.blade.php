@@ -173,7 +173,7 @@
                             </div>
 
                             <div class="form-group pt-4">
-                                <button type="submit" name="submit" value="submit" id="submit"
+                                <button type="submit" name="submit" value="submit" id="confirm"
                                     class="btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i>
                                     Confirm</button>
                             </div>

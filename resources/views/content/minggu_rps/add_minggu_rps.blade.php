@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="form-group pt-4">
-                        <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i
+                        <button type="submit" name="submit" value="submit" id="tambahMinggu" class="btn btn-dark btn-sm"><i
                                 class="fa fa-fw fa-plus-circle"></i>
                             Tambah Minggu RPS</button>
                     </div>
