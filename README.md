@@ -18,9 +18,9 @@ Project Kuliah Pembangunan Perangkat Lunak
     12. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 - Langkah-langkah Penggunaan
     1. Terdapat 3 role yaitu Admin, Kurikulum, dan Dosen
-    2. Role Admin merupakan role yang mempunyai hak untuk melihat semua fitur yang ada tanpa terlibat dengan Create, Update, dan Delete pada fitur tersebut.
-    3. Role Kurikulum merupakan role yang mempunyai hak untuk melakukan Create, Update, dan Delete pada fitur kurikulum.
-    4. Role Dosen merupakan role yang mempunyai hak untuk melakukan Create dab Update pada fitur RPS 
+    2. Role Admin (role=2) merupakan role yang mempunyai hak untuk melihat semua fitur yang ada tanpa terlibat dengan Create, Update, dan Delete pada fitur tersebut.
+    3. Role Kurikulum (Role=1) merupakan role yang mempunyai hak untuk melakukan Create, Update, dan Delete pada fitur kurikulum.
+    4. Role Dosen (Role=0) merupakan role yang mempunyai hak untuk melakukan Create dab Update pada fitur RPS 
     5. Password yang digunakan telah diencrypt yakni coba123
 - Prosedur untuk kontribusi github
     1. Koordinator Github membuat branch untuk masing-masing kelompok
