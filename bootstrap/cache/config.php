@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:/ogBpNBubYERHsUtlqdG7pU0oRVOrwIi/6SCYSJcaEI=',
+    'key' => 'base64:86D4+94RxnE6SDcN8jhmiPg3oTa+YCVoHwQEombY/G4=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -367,10 +367,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\Lenovo\\AppData\\Local\\Temp',
-      'chroot' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI',
+      'font_dir' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\fonts',
+      'font_cache' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\HP\\AppData\\Local\\Temp',
+      'chroot' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -415,13 +415,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\app',
+        'root' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\app/public',
+        'root' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -441,7 +441,7 @@
     ),
     'links' => 
     array (
-      'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\public\\storage' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\app/public',
+      'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\public\\storage' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -480,13 +480,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -538,7 +538,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -604,7 +604,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -710,7 +710,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -730,9 +730,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\resources\\views',
+      0 => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\resources\\views',
     ),
-    'compiled' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\framework\\views',
   ),
   'excel' => 
   array (
@@ -840,7 +840,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -919,7 +919,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\Kuliah\\FileVsCode\\laravel\\OBE-SI',
+    'remote_sites_path' => 'E:\\KULYEAH\\Kuliah\\SMT 6\\PPL Prak\\New folder (4)\\OBE-SI',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

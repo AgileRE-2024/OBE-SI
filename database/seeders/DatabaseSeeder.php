@@ -146,6 +146,8 @@ class DatabaseSeeder extends Seeder
             'pustaka' => 'isi pustaka',
             'kodeMK' => 'SII103',
             'kps' => '123456789987654321'
+        ]);
+        
         RPS::create([
             'kodeRPS' => 'RPS003',
             'tahunAjaran' => 2022,

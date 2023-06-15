@@ -24,7 +24,7 @@ class ProfileLulusanTest extends DuskTestCase
                     ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
-                    ->type('kodePL', 'PL03')
+                    ->type('kodePL', 'PL99')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
@@ -64,7 +64,7 @@ class ProfileLulusanTest extends DuskTestCase
                     ->clickLink('Profil Lulusan')
                     ->clickLink('Tambah')
                     ->assertSee("Tambah Profil Lulusan")
-                    ->type('kodePL', 'PL03')
+                    ->type('kodePL', 'PL98')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
@@ -112,7 +112,7 @@ class ProfileLulusanTest extends DuskTestCase
                     ->press('submit')
                     ->assertSee("Profil Lulusan")
                     ->clickLink('Edit')
-                    ->type('kodePL', 'PL03')
+                    ->type('kodePL', 'PL88')
                     ->type('deskripsiPL',"tes")
                     ->pause(2000)
                     ->press('submit')
@@ -145,6 +145,7 @@ class ProfileLulusanTest extends DuskTestCase
                     ->pause(2000);
         });
     }
+
     public function testPDFExportSuccess(){
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
