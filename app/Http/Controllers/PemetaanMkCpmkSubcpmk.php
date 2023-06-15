@@ -40,6 +40,7 @@ class PemetaanMkCpmkSubcpmk extends Controller
             'subcpmk_list' => SubCPMK::all(),
             'detailmkcpmk_list' => Detail_MK_CPMK::all(),
             'mk_list' => Mata_Kuliah::all(),
+            'cpl_list' => CPL_Prodi::all()->sortBy('kodeCPL'),
         ];
 
         $view = View::make('content.pemetaan_mk_cpmk_subcpmk.tableToEkspor', $data)->render();
@@ -62,7 +63,7 @@ class PemetaanMkCpmkSubcpmk extends Controller
         } else {
             $filename = "Tabel Pemetaan MK-CPMK-SUBCPMK_" . $date_time . '.xlsx';
             return Excel::download(new ExportPemetaanMKCpmkSubcpmk(
-                Mata_Kuliah::all(), CPMK::all(), SubCPMK::all(), Detail_MK_CPMK::all()), $filename);
+                Mata_Kuliah::all(), CPMK::all(), SubCPMK::all(), Detail_MK_CPMK::all(), CPL_Prodi::all()), $filename);
         }
     }
 }

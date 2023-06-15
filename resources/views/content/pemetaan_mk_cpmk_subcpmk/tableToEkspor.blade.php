@@ -39,89 +39,50 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($mk_list as $mk)
-                    {{-- Mencari relasi dari mk --}}
+                @php
+                    use Illuminate\Support\Str;
+                    $mkpunyarelasi=$detailmkcpmk_list->pluck('kodeMK');
+                    $mkfix=$mk_list->whereIn('kodeMK', $mkpunyarelasi);
+                @endphp
+                @foreach ($mkfix as $mk)
+                    {{-- Cari rowspan mk --}}
                     @php
-                        $list_relasi_mk = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK);
-                        $list_kode_cpmk = [];
+                        $cpmkfix = $detailmkcpmk_list->where('kodeMK', $mk->kodeMK)->pluck('kodeCPMK');
+                        $rowspanmk = $subcpmk_list->whereIn('kodeCPMK', $cpmkfix)->count();
                     @endphp
-                    {{-- Menyimpan kode CPMK yang berelasi --}}
-                    @foreach ($list_relasi_mk as $lrm)
+                    {{-- Cari rowspan cpl --}}
+                    @php
+                        $cplfix = $cpmk_list->whereIn('kodeCPMK', $cpmkfix)->pluck('kodeCPL')->unique();
+                        // $rowspanmk = $subcpmk_list->whereIn('kodeCPMK', $cpmkfix)->count();
+                    @endphp
+                    <tr>
+                    <td rowspan={{ $rowspanmk }}><span itemid="{{ $mk->namaMK }}">{{ $mk->kodeMK }}</td>
+                    
+
+                    {{-- looping percpl --}}
+                    @foreach ($cplfix as $cpl)
                         @php
-                            array_push($list_kode_cpmk, $lrm->kodeCPMK);
+                            $cpmkfixs = $cpmk_list->whereIn('kodeCPMK', $cpmkfix)->whereIn('kodeCPL', $cpl)->pluck('kodeCPMK');
+                            $rowspancpl = $subcpmk_list->whereIn('kodeCPMK', $cpmkfixs)->count();
+                            
                         @endphp
-                    @endforeach
-                    {{-- List CPMK hasil filter 1 --}}
-                    @php
-                        $cpmk_filter1 = $cpmk_list->whereIn('kodeCPMK', $list_kode_cpmk)->groupBy('kodeCPL');
-                        $counterCPMK = $cpmk_list
-                            ->whereIn('kodeCPMK', $list_kode_cpmk)
-                            ->groupBy('kodeCPL')
-                            ->count();
-                        $rowspanCPL = [];
-                        $subPerCPL = [];
-                        $cpmk_filter2 = [];
-                    @endphp
-                    {{-- Hitung rowspan untuk MK --}}
-                    @php
-                        $rowspanMK = $subcpmk_list->whereIn('kodeCPMK', $list_kode_cpmk)->count();
-                    @endphp
-                    {{-- CPMK untuk menghitung --}}
-                    @php
-                        $wakil_cpmk_filter2 = $cpmk_list->whereIn('kodeCPMK', $list_kode_cpmk)->keyBy('kodeCPL');
-                    @endphp
-                    @foreach ($wakil_cpmk_filter2 as $wakil)
-                        @php
-                            $g = 0; //ini rowspan CPL
-                        @endphp
-                        @foreach ($cpmk_list->whereIn('kodeCPMK', $list_kode_cpmk) as $cpmk)
-                            {{-- List CPMK per MK dan CPL --}}
+                        <td rowspan={{ $rowspancpl }}><span itemid="{{ $cpl_list->where('kodeCPL',$cpl)->first()->deskripsiCPL }}">{{ $cpl }}</td>
+                        {{-- looping percpmk --}}
+                        @foreach ($cpmkfixs as $cpmk)
                             @php
-                                $a = 0;
+                                $rowspancpmk = $subcpmk_list->whereIn('kodeCPMK', $cpmk)->count();   
+                                $sub=$subcpmk_list->whereIn('kodeCPMK', $cpmk);
                             @endphp
-                            @if ($cpmk->kodeCPL == $wakil->kodeCPL)
-                                @php
-                                    $b = $subcpmk_list->where('kodeCPMK', $cpmk->kodeCPMK)->count();
-                                    $c = $subcpmk_list->where('kodeCPMK', $cpmk->kodeCPMK);
-                                    $a = $a + $b;
-                                    array_push($cpmk_filter2, $cpmk->kodeCPMK);
-                                @endphp
-                            @endif
-                            @php
-                                $g = $g + $a; //ini rowspan CPL
-                            @endphp
-                        @endforeach
-                        <tr>
-                            @if ($wakil->kodeCPL === $cpmk_list->whereIn('kodeCPMK', $list_kode_cpmk)->first()->kodeCPL)
-                                <th rowspan="{{ $rowspanMK }}">{{ $mk->kodeMK }}</th>
-                            @endif
-                            <td rowspan="{{ $g }}">{{ $wakil->kodeCPL }}</td>
-                            @foreach ($cpmk_list->whereIn('kodeCPMK', $list_kode_cpmk) as $cpmk)
-                                {{-- List CPMK per MK dan CPL --}}
-                                @php
-                                    $a = 0;
-                                @endphp
-                                @if ($cpmk->kodeCPL == $wakil->kodeCPL)
-                                    @php
-                                        $d = $cpmk->kodeCPL;
-                                        $e = $cpmk->kodeCPMK;
-                                        $f = $cpmk->deskripsiCPMK;
-                                        $b = $subcpmk_list->where('kodeCPMK', $cpmk->kodeCPMK)->count();
-                                        $c = $subcpmk_list->where('kodeCPMK', $cpmk->kodeCPMK);
-                                        $a = $a + $b;
-                                        array_push($cpmk_filter2, $cpmk->kodeCPMK);
-                                    @endphp
-                                    <td rowspan="{{ $a }}">{{ $e }}</td>
-                                    <td rowspan="{{ $a }}">{{ $f }}</td>
-                                    <td>{{ $c->first()->kodeSubCPMK }} <br> {{ $c->first()->deskripsiSubCPMK }}</td>
-                                </tr>
-                                @if ($a > 1)
-                                    @for ($i = 1; $i < $a; $i++)
-                                        <tr>
-                                            <td>{{ $c->get($i)->kodeSubCPMK }} <br> {{ $c->get($i)->deskripsiSubCPMK }}</td>
-                                        </tr>
-                                    @endfor
-                                @endif
+                            <td rowspan={{ $rowspancpmk }}>{{ $cpmk }}</td>
+                            <td rowspan={{ $rowspancpmk }}>{{ $cpmk_list->where('kodeCPMK', $cpmk)->first()->deskripsiCPMK }}</td>
+                            <td>{{ $sub->first()->kodeSubCPMK }} <br> {{ $sub->first()->deskripsiSubCPMK }}</td>
+                            </tr>
+                            @if ($sub->count() > 1)
+                                @foreach ($sub->skip(1) as $item)
+                                    <tr>
+                                        <td>{{ $item->kodeSubCPMK }} <br> {{ $item->deskripsiSubCPMK }}</td>
+                                    </tr>
+                                @endforeach
                             @endif
                         @endforeach
                     @endforeach
