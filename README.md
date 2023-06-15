@@ -3,9 +3,9 @@ Project Kuliah Pembangunan Perangkat Lunak
 
 - Penjelasan umum deskripsi project <br>
   Project ini merupakan
-- Petunjuk Instalasi
+- Petunjuk Instalasi<br>
   Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
-    1. Masuk ke dalam direktori htdocs dalam folder XAMPP dan membuat folder baru
+    1. Setelah tools telah terpasang secara sempurna, masuk ke dalam direktori xampp yang dimana file tersebut disimpan.
     2. Masuk ke dalam direktori folder baru tersebut
     3. Klik kanan dan pilih Open in Terminal
     4. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git" 
