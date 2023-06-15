@@ -5,8 +5,8 @@
                 {{ getdate(date("U"))["weekday"] }}, {{getdate(date("U"))["mday"] }} {{ getdate(date("U"))["month"] }} {{ getdate(date("U"))["year"] }} <i class="bi bi-calendar3"></i>
             </div>
             <div class="col" style="padding-right: 20px; text-align:end;">
-                Tim Kurikulum <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                    class="rounded-circle" alt="..." width="60px">
+                Tim {{ $data->jabatanDosen }}
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="rounded-circle" alt="..." width="60px">
             </div>
         </div>
         <div class="pb-3">
