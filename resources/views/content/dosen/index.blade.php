@@ -69,7 +69,7 @@
             <a class="btn btn-primary" href={{ route('edit_rps.edit_peran_dosen', ['nip'=>$detail->nip, 'kodeRPS' => $kodeRPS, 'peranDosen'=>$detail->peranDosen]) }}>Edit</a>
         </td>
         <td scope="row">
-            <a class="btn btn-danger"
+            <a name="delete" class="btn btn-danger"
                 href={{ route('edit_rps.delete_peran_dosen', ['nip'=>$detail->nip, 'kodeRPS' => $kodeRPS, 'peranDosen'=>$detail->peranDosen]) }}>Delete</a>
         </td>
     </tr>
