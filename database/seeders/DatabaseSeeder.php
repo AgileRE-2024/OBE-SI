@@ -271,7 +271,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '123456789987654322',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Guntur',
-            'password' => '1234',
+            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email'=>'Guntur@gmail.com',
             'role'=>true,
         ]);
@@ -279,7 +279,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '123456789987654323',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Petir',
-            'password' => '1234',
+            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email'=>'Petir@gmail.com',
             'role'=>true,
         ]);

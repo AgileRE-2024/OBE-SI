@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::yLXHVYDExQm1sz92',
+            '_route' => 'generated::7x9hCph79XGpfKTb',
           ),
           1 => NULL,
           2 => 
@@ -116,13 +116,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/home' => 
+      '/' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'home',
+            '_route' => 'generated::I51Li8307TTcroBV',
           ),
           1 => NULL,
           2 => 
@@ -237,7 +237,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::wZlwzQcPoS00q3FE',
+            '_route' => 'generated::rEbrC2wZiIUIPlnO',
           ),
           1 => NULL,
           2 => 
@@ -1519,7 +1519,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ie5StQhphWFmoBKT',
+            '_route' => 'generated::LmGyWvnPdJKj1fe9',
           ),
           1 => NULL,
           2 => 
@@ -3351,7 +3351,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::yLXHVYDExQm1sz92' => 
+    'generated::7x9hCph79XGpfKTb' => 
     array (
       'methods' => 
       array (
@@ -3374,7 +3374,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::yLXHVYDExQm1sz92',
+        'as' => 'generated::7x9hCph79XGpfKTb',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3390,29 +3390,29 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'home' => 
+    'generated::I51Li8307TTcroBV' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'dashboard/home',
+      'uri' => '/',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:294:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:76:"function () {
-    return \\view(\'content.home\', [\'title\' => \'Home OBE\']);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000053b0000000000000000";}";s:4:"hash";s:44:"zVZJWxni5vkaQyLfM4Lx3UJpI9FS7IbLSRPV0Mvm+uU=";}}',
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:303:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:85:"function () {
+    return \\view(\'content.login.login\', ["tittle" => "Login OBE"]);
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000053b0000000000000000";}";s:4:"hash";s:44:"6yXsN+jYqs92zxagxbn3Y6HQ6ngwSmG3A/j6lw47OSA=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'home',
+        'as' => 'generated::I51Li8307TTcroBV',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3611,7 +3611,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::wZlwzQcPoS00q3FE' => 
+    'generated::rEbrC2wZiIUIPlnO' => 
     array (
       'methods' => 
       array (
@@ -3649,7 +3649,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::wZlwzQcPoS00q3FE',
+        'as' => 'generated::rEbrC2wZiIUIPlnO',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7182,6 +7182,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TahapPenilaianController@index',
         'controller' => 'App\\Http\\Controllers\\TahapPenilaianController@index',
@@ -7219,6 +7220,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TahapPenilaianController@table',
         'controller' => 'App\\Http\\Controllers\\TahapPenilaianController@table',
@@ -7256,6 +7258,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TahapPenilaianController@exportFile',
         'controller' => 'App\\Http\\Controllers\\TahapPenilaianController@exportFile',
@@ -7293,6 +7296,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@index',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@index',
@@ -7330,6 +7334,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@table',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@table',
@@ -7367,6 +7372,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@exportFile',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@exportFile',
@@ -7404,6 +7410,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@index',
         'controller' => 'App\\Http\\Controllers\\RpsController@index',
@@ -7441,6 +7448,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@index',
         'controller' => 'App\\Http\\Controllers\\RpsController@index',
@@ -7477,6 +7485,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@processData',
         'controller' => 'App\\Http\\Controllers\\RpsController@processData',
@@ -7514,6 +7523,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@export',
         'controller' => 'App\\Http\\Controllers\\RpsController@export',
@@ -7538,7 +7548,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ie5StQhphWFmoBKT' => 
+    'generated::LmGyWvnPdJKj1fe9' => 
     array (
       'methods' => 
       array (
@@ -7551,6 +7561,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
+          1 => 'role:dosen,admin,kurikulum',
         ),
         'uses' => 'PDFController@generatePDF',
         'controller' => 'PDFController@generatePDF',
@@ -7559,7 +7570,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::ie5StQhphWFmoBKT',
+        'as' => 'generated::LmGyWvnPdJKj1fe9',
       ),
       'fallback' => false,
       'defaults' => 

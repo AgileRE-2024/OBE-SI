@@ -4,7 +4,7 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://localhost/',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
@@ -422,7 +422,7 @@
       array (
         'driver' => 'local',
         'root' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'http://localhost//storage',
         'visibility' => 'public',
         'throw' => false,
       ),

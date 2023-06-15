@@ -60,9 +60,9 @@ use App\Http\Controllers\DosenController;
 |
 */
 
-Route::get('/dashboard/home', function () {
-    return view('content.home', ['title' => 'Home OBE']);
-})->name('home');
+Route::get('/', function () {
+    return view('content.login.login', ["tittle" => "Login OBE"]);
+});
 
 Route::get('/login', function () {
     return view('content.login.login', ["title" => "Login OBE"]);
@@ -235,25 +235,27 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
     });
 });
 
-
-Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
-    Route::prefix('/tahap-penilaian')->name('tahap_penilaian.')->group(function () {
-        Route::get('/',[TahapPenilaianController::class, 'index'])->name('index');
-        Route::get('/{tahun_ajaran}',[TahapPenilaianController::class, 'table'])->name('data_penilaian');
-        Route::get('/export/{tahun_ajaran}/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
+Route::group(['middleware' => 'role:dosen,admin,kurikulum'], function () {
+    Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
+        Route::prefix('/tahap-penilaian')->name('tahap_penilaian.')->group(function () {
+            Route::get('/',[TahapPenilaianController::class, 'index'])->name('index');
+            Route::get('/{tahun_ajaran}',[TahapPenilaianController::class, 'table'])->name('data_penilaian');
+            Route::get('/export/{tahun_ajaran}/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
+        });
+    
+        Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
+        Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
+        Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
     });
-
-    Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
-    Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
-    Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
+    
+    Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
+    Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
+    Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
+    Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
+    
+    Route::get('/generate-pdf', 'PDFController@generatePDF');
 });
 
-Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
-Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
-Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
-Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
-
-Route::get('/generate-pdf', 'PDFController@generatePDF');
 
 Route::group(['middleware' => 'role:dosen'], function () {
     Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
