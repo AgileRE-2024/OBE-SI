@@ -16,7 +16,10 @@ Project Kuliah Pembangunan Perangkat Lunak
     10. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000/dashboard/kurikulum/data/profil-lulusan"
     11. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 - Langkah-langkah Penggunaan
-    1. (PENJELASAN ROLE MENYUSUL)
+    1. Terdapat 3 role yaitu Admin, Kurikulum, dan Dosen
+    2. Role Admin merupakan role yang mempunyai hak untuk melihat semua fitur yang ada tanpa terlibat dengan Create, Update, dan Delete pada fitur tersebut.
+    3. Role Kurikulum merupakan role yang mempunyai hak untuk melakukan Create, Update, dan Delete pada fitur kurikulum.
+    4. Role Dosen merupakan role yang mempunyai hak untuk melakukan Create dab Update pada fitur RPS 
 - Prosedur untuk kontribusi github
     1. Koordinator Github membuat branch untuk masing-masing kelompok
     2. Setiap kelompok melakukan edit sesuai fitur yang dibagikan
