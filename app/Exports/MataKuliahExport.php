@@ -30,7 +30,6 @@ class MataKuliahExport implements FromCollection, WithHeadings, WithMapping, Wit
             'kategoriMK',
             'sks',
             'semester',
-            'pustaka',
             'deskripsiMK',
         );
     }
@@ -54,7 +53,8 @@ class MataKuliahExport implements FromCollection, WithHeadings, WithMapping, Wit
     {
         $kategoriMKLabels = [
             1 => 'Wajib',
-            2 => 'Pilihan'
+            0 => 'Pilihan',
+            2 => 'MKWK'
         ];
 
         $jenisMKLabels = [

@@ -101,7 +101,6 @@ class MataKuliahController extends Controller
             'kategoriMK' => (int)$request->kategoriMK,
             'sks' => (int)$request->sks,
             'semester' => (int)$request->semester,
-            'pustaka' => 'none',
             'deskripsiMK' => $request->deskripsi,
             'prasyaratTambahan' => $prasyarat_tambahan,
         ]);
@@ -166,7 +165,6 @@ class MataKuliahController extends Controller
             'kategoriMK' => (int)$request->kategoriMK,
             'sks' => (int)$request->sks,
             'semester' => (int)$request->semester,
-            'pustaka' => 'none',
             'deskripsiMK' => $request->deskripsi,
             'prasyaratTambahan' => $prasyarat_tambahan,
         ]);

@@ -14,7 +14,15 @@ class susunanMKTest extends DuskTestCase
     public function testInputSukses(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://fiturobe.test/dashboard/kurikulum/pemetaan/susunan-mata-kuliah')
+            $browser->visit('http://fiturobe.test/login')
+                ->assertSee('Selamat Datang')
+                ->type('nip', '123456789987654321')
+                ->type('password', 'coba123')
+                ->press('tombolLogin')
+                ->pause(2000)
+                ->clickLink('Pemetaan')
+                ->clickLink('Susunan Mata Kuliah')
+                ->pause(2000)
                 ->assertSee('Matriks Susunan Mata Kuliah')
                 ->pause(2000)
                 ->press('Edit')

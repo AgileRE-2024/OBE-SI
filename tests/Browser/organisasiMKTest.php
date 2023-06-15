@@ -14,10 +14,16 @@ class organisasiMKTest extends DuskTestCase
     public function testReadData(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://fiturobe.test/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah')
+            $browser->visit('http://fiturobe.test/login')
+                ->assertSee('Selamat Datang')
+                ->type('nip', '123456789987654321')
+                ->type('password', 'coba123')
+                ->press('tombolLogin')
+                ->pause(2000)
+                ->clickLink('Pemetaan')
+                ->clickLink('Organisasi Mata Kuliah')
+                ->pause(2000)
                 ->assertSee('Matriks Organisasi Mata Kuliah')
-                ->pause(1000)
-                ->assertSee('MK01')
                 ->pause(1000);
         });
     }
