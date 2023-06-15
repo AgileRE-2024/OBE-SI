@@ -4,6 +4,7 @@ Project Kuliah Pembangunan Perangkat Lunak
 - Penjelasan umum deskripsi project <br>
   Project ini merupakan
 - Petunjuk Instalasi
+  Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
     1. Masuk ke dalam direktori htdocs dalam folder XAMPP dan membuat folder baru
     2. Masuk ke dalam direktori folder baru tersebut
     3. Klik kanan dan pilih Open in Terminal
