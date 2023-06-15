@@ -118,9 +118,11 @@
                         
                     </tbody>
                 </table>  
+                @if (auth()->user()->role == 1)
                 <button type="submit" class="btn btn-success" style="float: right">
                     Simpan
                 </button>
+                @endif
             </form>
         </div>
         

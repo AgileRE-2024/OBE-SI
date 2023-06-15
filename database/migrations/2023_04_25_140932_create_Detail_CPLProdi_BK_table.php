@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_CPLProdi_BK', function (Blueprint $table) {
-            $table->char('kodeBK',4);
-            $table->char('kodeCPL',5);
+            $table->char('kodeBK', 10);
+            $table->char('kodeCPL', 10);
             $table->timestamps();
             //$table->foreign('kodeBK')->references('kodeBK')->on('Bahan_Kajian')->onDelete('restrict');
             //$table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
-        
+
         });
     }
 

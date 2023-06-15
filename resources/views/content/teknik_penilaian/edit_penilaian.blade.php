@@ -73,7 +73,7 @@
                         @error('kodeRPS')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <input type="text" name="kodeRPS" class="form-control" placeholder="kodeRPS" value="RPS001">
+                        <input type="text" name="kodeRPS" class="form-control" placeholder="kodeRPS" value={{ $tp->kodeRPS }}>
                     </div>
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i

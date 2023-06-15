@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('CPMK', function (Blueprint $table) {
-            $table->char('kodeCPMK', 7)->primary('kodeCPMK');
+            $table->char('kodeCPMK', 10)->primary('kodeCPMK');
             $table->text('deskripsiCPMK');
-            $table->char('kodeCPL', 5);
+            $table->char('kodeCPL', 10);
             $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
             $table->timestamps();
         });

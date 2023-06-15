@@ -1,13 +1,14 @@
 @extends('layout.dashboard')
 
 @section('content')
+    {{-- <h1>{{ $kodeRPS }}</h1> --}}
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Tambah Teknik Penilaian</h6>
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('edit_rps.store_teknik_penilaian') }}">
+                <form method="post" action="{{ route('edit_rps.store_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}">
                     @csrf
                     {{-- <div class="form-group">
                         <label>Kode Teknik Penilaian</label>
@@ -66,7 +67,7 @@
                         @error('kodeRPS')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <input type="text" name="kodeRPS" class="form-control" placeholder="Kode RPS"  value="RPS001">
+                        <input type="text" name="kodeRPS" class="form-control" placeholder="Kode RPS"  value={{ $kodeRPS }}>
                     </div>
 
                     <div class="form-group pt-4">
