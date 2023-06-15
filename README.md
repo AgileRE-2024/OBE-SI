@@ -11,11 +11,12 @@ Project Kuliah Pembangunan Perangkat Lunak
     5. Selanjutnya, ketik "composer update"
     6. Lalu, ketik "cp .env.example .env"
     7. Lalu, ketik "php artisan key:generate"
-    8. Ketik "php artisan migrate"
+    8. Ketik "php artisan migrate:fresh --seed"
     9. Ketik "php artisan serve"
     10. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000/dashboard/kurikulum/data/profil-lulusan"
     11. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 - Langkah-langkah Penggunaan
+    1. (PENJELASAN ROLE MENYUSUL)
 - Prosedur untuk kontribusi github
     1. Koordinator Github membuat branch untuk masing-masing kelompok
     2. Setiap kelompok melakukan edit sesuai fitur yang dibagikan
