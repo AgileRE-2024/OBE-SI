@@ -11,7 +11,7 @@ class Mata_Kuliah extends Model
     public $incrementing = false;
     protected $table = 'Mata_Kuliah';
     protected $fillable = [
-        'kodeMK', 'namaMK', 'jenisMK', 'sks', 'semester', 'kategoriMK', 'pustaka', 'deskripsiMK', 'prasyaratTambahan', 'mat_kodeMK'
+        'kodeMK', 'namaMK', 'jenisMK', 'sks', 'semester', 'kategoriMK', 'deskripsiMK', 'prasyaratTambahan', 'mat_kodeMK'
     ];
 
     public function Bahan_Kajian()
@@ -36,7 +36,6 @@ class Mata_Kuliah extends Model
 
     public function Kelas()
     {
-        return $this->hasMany(Kelas::class,'kodeMK', 'kodeMK');
+        return $this->hasMany(Kelas::class, 'kodeMK', 'kodeMK');
     }
-
 }

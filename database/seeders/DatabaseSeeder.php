@@ -39,6 +39,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(BahanKajianSeeder::class);
+        $this->call(CPLDiktiSeeder::class);
+        $this->call(ProfilLulusanSeeder::class);
+        $this->call(CPLProdiSeeder::class);
+
         Prodi::create([
             'namaProdi' => 'S1 Sistem Informasi',
             'fakultas' => 'Sains dan Teknologi',
@@ -61,182 +66,33 @@ class DatabaseSeeder extends Seeder
             'pemetaan' => 'cpl-mk',
             'deskripsi' => 'Pemetaan CPL terhadap MK dilakukan untuk menunjukkan keterhubungan antara mata kuliah terhadap CPL Program Studi pada Tabel 9 Pemetaan CPL terhadap MK.',
         ]);
-        Profil_Lulusan::create([
-            'kodePL' => 'PL01',
-            'deskripsiPL' => 'Lulusan memiliki kemampuan menganalisis, merancang, membuat, dan melakukan evaluasi sistem informasi yang selaras dengan tujuan organisasi. (IS2020)'
-        ]);
 
-        CPL_SN_Dikti::create([
-            'kodeCPLSN' => 'CPL-S01',
-            'deskripsiSN' => 'Bertakwa kepada Tuhan Yang Maha Esa dan mampu menunjukkan sikap religius.',
-            'sumberSN' => 'SN-DIKTI',
-            'kategoriSN' => TRUE,
-            'jenisSN' => 'MK praktikum'
-        ]);
+        $this->call(MataKuliahSeeder::class);
+        // Mata_Kuliah::create([
+        //     'kodeMK' => 'SII103',
+        //     'namaMK' => 'Konsep Sistem Informasi',
+        //     'jenisMK' => TRUE,
+        //     'sks' => 3,
+        //     'semester' => '1',
+        //     'kategoriMK' => TRUE,
+        //     'pustaka' => 'Pustaka Belum Tau',
+        //     'deskripsiMK' => 'Deskripsi MK Belum Tau',
+        //     'prasyaratTambahan' => 'Prasyarat MK Belum Tau',
+        //     'mat_kodeMK' => 'SII103',
+        // ]);
 
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL01',
-            'deskripsiCPL' => 'Mampu memahami, menganalisis, dan menilai konsep dasar dan peran sistem informasi dalam mengelola data dan memberikan rekomendasi pengambilan keputusan pada proses dan sistem organisasi',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        CPL_Prodi::create([
-            'kodeCPL' => 'CPL02',
-            'deskripsiCPL' => 'Menganalisis, dan menilai konsep dasar dan peran sistem informasi dalam mengelola data dan memberikan rekomendasi pengambilan keputusan pada proses dan sistem organisasi',
-            'referensiCPL' => 'IS2020 A3.1 Foundations Competency Realm'
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK01',
-            'namaBK' => 'Foundation of Information Systems',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK02',
-            'namaBK' => 'Data/Information Management',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK03',
-            'namaBK' => 'IT Infrastructure',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK04',
-            'namaBK' => 'IS Project Management',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK06',
-            'namaBK' => 'IS Management and Strategy',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK07',
-            'namaBK' => 'Application Development / Programming',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK08',
-            'namaBK' => 'Secure Computing',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK09',
-            'namaBK' => 'Ethics, use and implication for society',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK10',
-            'namaBK' => 'Praktikum',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK11',
-            'namaBK' => 'Mathematics and statistics',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK12',
-            'namaBK' => 'Data / Business Analytics',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK13',
-            'namaBK' => 'Personality Development',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK14',
-            'namaBK' => 'Business Process Management',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK15',
-            'namaBK' => 'Enterprise Architecture',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK16',
-            'namaBK' => 'User Interface Design',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK17',
-            'namaBK' => 'Emerging Technologies',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK18',
-            'namaBK' => 'Digital Innovation',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Bahan_Kajian::create([
-            'kodeBK' => 'BK19',
-            'namaBK' => 'Foundation of Science',
-            'kategoriBK' => TRUE,
-            "referensiBK" => 'IS2020',
-        ]);
-
-        Mata_Kuliah::create([
-            'kodeMK' => 'MK01',
-            'namaMK' => 'Konsep Sistem Informasi',
-            'jenisMK' => TRUE,
-            'sks' => 3,
-            'semester' => '1',
-            'kategoriMK' => TRUE,
-            'pustaka' => 'Pustaka Belum Tau',
-            'deskripsiMK' => 'Deskripsi MK Belum Tau',
-            'prasyaratTambahan' => 'Prasyarat MK Belum Tau',
-            'mat_kodeMK' => 'MK01',
-        ]);
-
-        Mata_Kuliah::create([
-            'kodeMK' => 'MK02',
-            'namaMK' => 'Kkkk',
-            'jenisMK' => TRUE,
-            'sks' => 3,
-            'semester' => '1',
-            'kategoriMK' => TRUE,
-            'pustaka' => 'Pustaka Belum Tau',
-            'deskripsiMK' => 'Deskripsi MK Belum Tau',
-            'prasyaratTambahan' => 'Prasyarat MK Belum Tau',
-            'mat_kodeMK' => 'MK01',
-        ]);
+        // Mata_Kuliah::create([
+        //     'kodeMK' => 'PHP103',
+        //     'namaMK' => 'Sistem Informasi Manajemen',
+        //     'jenisMK' => TRUE,
+        //     'sks' => 3,
+        //     'semester' => '2',
+        //     'kategoriMK' => TRUE,
+        //     'pustaka' => 'Pustaka Belum Tau',
+        //     'deskripsiMK' => 'Deskripsi MK Belum Tau',
+        //     'prasyaratTambahan' => 'Prasyarat MK Belum Tau',
+        //     'mat_kodeMK' => 'SII103',
+        // ]);
 
         User::create([
             'nip' => '123456789987654321',
@@ -272,78 +128,60 @@ class DatabaseSeeder extends Seeder
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Guntur',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
-            'email'=>'Guntur@gmail.com',
-            'role'=>true,
+            'email' => 'Guntur@gmail.com',
+            'role' => true,
         ]);
         User::create([
             'nip' => '123456789987654323',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Petir',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
-            'email'=>'Petir@gmail.com',
-            'role'=>true,
+            'email' => 'Petir@gmail.com',
+            'role' => true,
         ]);
 
         RPS::create([
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2022,
-            'pustaka'=> 'isi pustaka',
-            'kodeMK' => 'MK01',
+            'pustaka' => 'isi pustaka',
+            'kodeMK' => 'SII103',
             'kps' => '123456789987654321'
         ],);
         RPS::create([
             'kodeRPS' => 'RPS003',
             'tahunAjaran' => 2022,
-            'pustaka'=> 'isi pustaka',
-            'kodeMK' => 'MK01',
+            'pustaka' => 'isi pustaka',
+            'kodeMK' => 'SII103',
             'kps' => '123456789987654321'
         ],);
+
         CPMK::create([
             'kodeCPMK' => 'CPMK011',
             'deskripsiCPMK' => 'Mampu menjelaskan konsep dasar sistem',
-            'kodeCPL' => 'CPL01'
+            'kodeCPL' => 'CPL-01'
         ]);
         CPMK::create([
             'kodeCPMK' => 'CPMK012',
             'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL02'
+            'kodeCPL' => 'CPL-02'
         ]);
         CPMK::create([
             'kodeCPMK' => 'CPMK013',
             'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL01'
+            'kodeCPL' => 'CPL-01'
         ]);
         CPMK::create([
             'kodeCPMK' => 'CPMK014',
             'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL02'
+            'kodeCPL' => 'CPL-02'
         ]);
         CPMK::create([
             'kodeCPMK' => 'CPMK015',
             'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL02'
+            'kodeCPL' => 'CPL-02'
         ]);
 
-        SubCPMK::create([
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'deskripsiSubCPMK' => 'Mampu memahami konsep dasar sistem informasi',
-            'kodeCPMK' => 'CPMK011'
-        ]);
-        SubCPMK::create([
-            'kodeSubCPMK' => 'Sub-CPMK0112',
-            'deskripsiSubCPMK' => 'Mampu menjelaskan konsep informasi dan sistem informasi',
-            'kodeCPMK' => 'CPMK011'
-        ]);
-        SubCPMK::create([
-            'kodeSubCPMK' => 'Sub-CPMK0121',
-            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
-            'kodeCPMK' => 'CPMK012'
-        ]);
-        SubCPMK::create([
-            'kodeSubCPMK' => 'Sub-CPMK0122',
-            'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi',
-            'kodeCPMK' => 'CPMK013'
-        ]);
+        $this->call(SubCpmkSeeder::class);
 
         Teknik_Penilaian::create([
             'kodePenilaian' => '0001',
@@ -354,6 +192,7 @@ class DatabaseSeeder extends Seeder
             'instrumenPenilaian' => 'Rubrik holistik',
             'kodeRPS' => 'RPS001',
         ]);
+
         Teknik_Penilaian::create([
             'kodePenilaian' => '0002',
             'teknikPenilaian' => 'UTS',
@@ -365,24 +204,24 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'kodeMingguRPS'=> '2',
-            'kodeSubCPMK'=> 'Sub-CPMK0111',
-            'mingguKe'=>'1',
-            'bentukPembelajaran'=>true,
-            'indikatorMingguRPS'=>'Isi indikator RPS',
-            'kriteriaMingguRPS'=>'Isi kriteria RPS',
-            'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
-            'materiPembelajaran'=>'Isi materi pembelajaran RPS',
+            'kodeMingguRPS' => '2',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '1',
+            'bentukPembelajaran' => true,
+            'indikatorMingguRPS' => 'Isi indikator RPS',
+            'kriteriaMingguRPS' => 'Isi kriteria RPS',
+            'deskripsiPembelajaran' => 'Isi deskripsi pembelajaran RPS',
+            'materiPembelajaran' => 'Isi materi pembelajaran RPS',
         ]);
         Minggu_RPS::create([
-            'kodeMingguRPS'=> '3',
-            'kodeSubCPMK'=> 'Sub-CPMK0111',
-            'mingguKe'=>'2',
-            'bentukPembelajaran'=>false,
-            'indikatorMingguRPS'=>'Isi indikator RPS',
-            'kriteriaMingguRPS'=>'Isi kriteria RPS',
-            'deskripsiPembelajaran'=>'Isi deskripsi pembelajaran RPS',
-            'materiPembelajaran'=>'Isi materi pembelajaran RPS',
+            'kodeMingguRPS' => '3',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '2',
+            'bentukPembelajaran' => false,
+            'indikatorMingguRPS' => 'Isi indikator RPS',
+            'kriteriaMingguRPS' => 'Isi kriteria RPS',
+            'deskripsiPembelajaran' => 'Isi deskripsi pembelajaran RPS',
+            'materiPembelajaran' => 'Isi materi pembelajaran RPS',
         ]);
 
         Mahasiswa::create([
@@ -396,17 +235,17 @@ class DatabaseSeeder extends Seeder
             'namaKelas' => 'Konsep Sistem Informasi Teori',
             'jadwal' => 'Selasa 7-8',
             'kuota' => '60',
-            'kodeMK' => 'MK01'
+            'kodeMK' => 'SII103'
         ]);
 
         Detail_SN_CPLProdi::create([
             'kodeCPLSN' => 'CPL-S01',
-            'kodeCPL' => 'CPL01',
+            'kodeCPL' => 'CPL-01',
         ]);
 
         Detail_PL_CPLProdi::create([
             'kodePL' => 'PL01',
-            'kodeCPL' => 'CPL01',
+            'kodeCPL' => 'CPL-01',
         ]);
 
         Detail_CPLProdi_Bk::create([
@@ -465,12 +304,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL01',
+            'kodeCPL' => 'CPL-01',
             'kodeBK' => 'BK10'
         ]);
 
         Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL02',
+            'kodeCPL' => 'CPL-02',
             'kodeBK' => 'BK10'
         ]);
 
@@ -500,12 +339,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL01',
+            'kodeCPL' => 'CPL-01',
             'kodeBK' => 'BK13'
         ]);
 
         Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL02',
+            'kodeCPL' => 'CPL-02',
             'kodeBK' => 'BK13'
         ]);
 
@@ -550,12 +389,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL02',
+            'kodeCPL' => 'CPL-02',
             'kodeBK' => 'BK19'
         ]);
         Detail_CPLProdi_BK::create([
             'kodeBK' => 'BK01',
-            'kodeCPL' => 'CPL01',
+            'kodeCPL' => 'CPL-01',
         ]);
         Detail_BK_MK::create([
             'kodeBK' => 'BK01',
@@ -819,12 +658,12 @@ class DatabaseSeeder extends Seeder
 
         Detail_BK_MK::create([
             'kodeBK' => 'BK13',
-            'kodeMK' => 'MK01'
+            'kodeMK' => 'SII103'
         ]);
 
         Detail_BK_MK::create([
             'kodeBK' => 'BK13',
-            'kodeMK' => 'MK02'
+            'kodeMK' => 'PHP103'
         ]);
 
         Detail_BK_MK::create([
@@ -999,26 +838,26 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Detail_MK_CPMK::create([
-            'kodeMK' => 'MK01',
+            'kodeMK' => 'SII103',
             'kodeCPMK' => 'CPMK011',
         ]);
         Detail_MK_CPMK::create([
-            'kodeMK' => 'MK02',
+            'kodeMK' => 'PHP103',
             'kodeCPMK' => 'CPMK011',
         ]);
         Detail_MK_CPMK::create([
-            'kodeMK' => 'MK01',
+            'kodeMK' => 'SII103',
             'kodeCPMK' => 'CPMK012',
         ]);
         Detail_MK_CPMK::create([
-            'kodeMK' => 'MK01',
+            'kodeMK' => 'SII103',
             'kodeCPMK' => 'CPMK013',
         ]);
 
         Detail_RPS::create([
             'kodeRPS' => 'RPS001',
             'kodeMingguRPS' => '2',
-            'kodePenilaian'=> '0001',
+            'kodePenilaian' => '0001',
         ]);
 
         Nilai_Mahasiswa::create([
@@ -1041,9 +880,9 @@ class DatabaseSeeder extends Seeder
             'nilaiPerTeknik' => '40',
         ]);
         // $SN_Dikti = CPL_SN_Dikti::where('kodeCPLSN', '=', 'CPL-S01');
-        // $SN_Dikti->CPL_Prodi()->attach('CPL01');
-        // // $SN_Prodi = CPL_Prodi::where('kodeCPL', '=', 'CPL01')->update()->CPL_SN_Dikti()->attach('CPL-S01');
-        // // $SN_Prodi = CPL_Prodi::where('kodeCPL', 'CPL01')->get();
-        // // $SN_Dikti->CPL_Prodi()->attach('CPL01');
+        // $SN_Dikti->CPL_Prodi()->attach('CPL-01');
+        // // $SN_Prodi = CPL_Prodi::where('kodeCPL', '=', 'CPL-01')->update()->CPL_SN_Dikti()->attach('CPL-S01');
+        // // $SN_Prodi = CPL_Prodi::where('kodeCPL', 'CPL-01')->get();
+        // // $SN_Dikti->CPL_Prodi()->attach('CPL-01');
     }
 }

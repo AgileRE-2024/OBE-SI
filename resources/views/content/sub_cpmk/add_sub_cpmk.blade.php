@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <label>Kode CPMK</label>
                         @error('kodeCPMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="kodeCPMK" class="form-select">
                             <option value="" selected disabled>-- Pilih CPMK --</option>
@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <label>Kode Sub CPMK</label>
                         @error('kodeSubCPMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="kodeSubCPMK" class="form-control" placeholder="Kode Sub CPMK">
                     </div>
@@ -37,7 +37,7 @@
                     <div class="form-group">
                         <label>Deskripsi Sub CPMK</label>
                         @error('deskripsiSubCPMK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <textarea name="deskripsiSubCPMK" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
                     </div>
