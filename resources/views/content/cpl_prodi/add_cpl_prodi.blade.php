@@ -13,16 +13,25 @@
                     @csrf
                     <div class="form-group">
                         <label>Kode CPL Prodi</label>
+                        @error('kodeCPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <input type="text" name="kodeCPL" class="form-control" placeholder="Kode CPL Prodi">
                     </div>
 
                     <div class="form-group">
                         <label>Deskripsi CPL Prodi</label>
+                        @error('deskripsiCPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <textarea name="deskripsiCPL" rows="3" class="form-control" placeholder="Deskripsi CPL Prodi"></textarea>
                     </div>
 
                     <div class="form-group">
                         <label>Referensi CPL Prodi</label>
+                        @error('referensiCPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
                         <input type="text" name="referensiCPL" class="form-control" placeholder="Referensi CPL Prodi">
                     </div>
 

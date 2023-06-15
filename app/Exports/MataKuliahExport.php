@@ -131,6 +131,10 @@ class MataKuliahExport implements FromCollection, WithHeadings, WithMapping, Wit
                 ],
             ]);
 
+        $sheet->getColumnDimension('B')->setWidth(15);
+        $sheet->getColumnDimension('C')->setWidth(12);
+        $sheet->getColumnDimension('D')->setWidth(12);
+        $sheet->getColumnDimension('I')->setWidth(50);
         // Memindahkan cursor ke cell A1
         $sheet->getStyle('A1');
     }

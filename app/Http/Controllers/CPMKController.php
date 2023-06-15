@@ -13,9 +13,29 @@ use Barryvdh\DomPDF\PDF;
 use App;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\PemetaanCplCpmkMkExport;
+use App\Exports\matrixcplcpmkmk;
 
 class CPMKController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function matrix()
+    {
+        $cpl = Cpl_Prodi::get();
+        $mk = Mata_Kuliah::get();
+        $cpmk = CPMK::get();
+        return view('content.pemetaan_cpl_cpmk_mk.matriks', [
+            'title' => 'Matriks Pemetaan CPL CPMK',
+            'cpl' => $cpl,
+            'mk' => $mk,
+            'cpmk' => $cpmk
+        ]);
+        
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -48,9 +68,35 @@ class CPMKController extends Controller
         return $pdf->stream();
     }
 
+    public function matrixcetakpdf()
+    {
+        $cpl = Cpl_Prodi::get();
+        $mk = Mata_Kuliah::get();
+        $cpmk = CPMK::get();
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->setPaper('A3', 'landscape');
+        $pdf->loadView('content.pemetaan_cpl_cpmk_mk.cetakcpmkmatriks', [
+            'title' => 'Matriks Pemetaan CPL CPMK',
+            'cpl' => $cpl,
+            'mk' => $mk,
+            'cpmk' => $cpmk
+        ]);
+        return $pdf->stream();
+    }
+    
+    
+
     public function exportExcel()
     {
-        return Excel::download(new PemetaanCplCpmkMkExport, 'pemetaan-cpl-cpmk-mk.xlsx');
+        $cplData = Cpl_Prodi::get();
+        return Excel::download(new PemetaanCplCpmkMkExport($cplData), 'PemetaanCplCpmkMkExport.xlsx');
+    }
+
+    public function exportExcelmatrix()
+    {
+        $mk = Mata_Kuliah::get(); // Fetch the $mk data from your database or any other source
+        $cpl = Cpl_Prodi::get(); // Fetch the $cpl data from your database or any other source
+        return Excel::download(new matrixcplcpmkmk($mk, $cpl), 'matrixcplcpmkmk.xlsx');
     }
 
     public function create( $cpl)
@@ -85,34 +131,45 @@ class CPMKController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'deskripsi' => 'required',
+            // 'deskripsi' => 'required',
+            // 'kode' => 'required',
             'kodeCPL' => 'required',
-            'deskripsiCPMK'=> 'required'
+            'deskripsiCPMK'=> 'required',
+            'kodeCPMK'=> 'required'
         ];
 
         Validator::make($request->all(), $rules, $messages = $this->msg)->validate();
     
-        $data = str_getcsv($request->deskripsi, ",");
+        $deskripsi = str_getcsv($request->deskripsi, ",");
+        $kode = str_getcsv($request->kode, ",");
         // $count = 0;
         
-        foreach ($data as $cpmk) {
-            $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
-            
-            if ($lastCpmk) {
-                $lastId = intval(substr($lastCpmk->kodeCPMK, 4));
-                $nextId = 'CPMK'.str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
-            } else {
-                $nextId = 'CPMK001';
-            }
-
+        for ($i=0; $i < sizeof($deskripsi); $i++) { 
             CPMK::create([
-                'kodeCPMK' => $nextId,
-                'deskripsiCPMK' => $cpmk,
+                'kodeCPMK' => $kode[$i],
+                'deskripsiCPMK' => $deskripsi[$i],
                 'kodeCPL' => $request->kodeCPL
             ]);
-    
-            // $count++;
         }
+
+        // foreach ($deskripsi as $deskripsiCPMK) {
+        //     $lastCpmk = CPMK::orderBy('kodeCPMK', 'desc')->first();
+            
+        //     if ($lastCpmk) {
+        //         $lastId = intval(substr($lastCpmk->kodeCPMK, 4));
+        //         $nextId = 'CPMK'.str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
+        //     } else {
+        //         $nextId = 'CPMK001';
+        //     }
+
+        //     CPMK::create([
+        //         'kodeCPMK' => $nextId,
+        //         'deskripsiCPMK' => $deskripsiCPMK,
+        //         'kodeCPL' => $request->kodeCPL
+        //     ]);
+    
+        //     // $count++;
+        // }
     
         // Cpmk::insert($data);
     

@@ -13,28 +13,24 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, CanResetPassword;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $primaryKey = 'nip';
     public $incrementing = false;
     protected $table = 'users';
-    protected $fillable = ['nip', 'jabatanDosen','namaDosen', 'password','email', 'role'];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'remember_token',
-    ];
+    protected $fillable = ['nip', 'jabatanDosen', 'namaDosen', 'password', 'email', 'role'];
+    protected $hidden = ['remember_token'];
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function getAuthIdentifierName()
+    {
+        return 'nip';
+    }
+
+    public function getAuthIdentifier()
+    {
+        return $this->nip;
+    }
+
     public function RPS()
     {
         return $this->hasMany(RPS::class, 'nip', 'kps');
@@ -42,5 +38,15 @@ class User extends Authenticatable
     public function RPS1()
     {
         return $this->belongsToMany(RPS::class, 'Detail_Peran_Dosen', 'nip', 'kodeRPS');
+    }
+    public function hasRole($role)
+    {
+        $mapRoles = [
+            0 => 'dosen',
+            1 => 'kurikulum',
+            2 => 'admin'
+        ];
+        $userRoleName = $mapRoles[$this->role];
+        return $userRoleName === $role;
     }
 }

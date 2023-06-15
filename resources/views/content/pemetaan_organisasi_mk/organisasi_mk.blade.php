@@ -4,7 +4,9 @@
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>Matriks Organisasi Mata Kuliah</h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Organisasi Mata Kuliah berfungsi untuk menampilkan hasil pemetaan pada halaman Susunan Mata Kuliah yang dikelompokkan berdasarkan semester dan jenis mata kuliah mencakup MK Wajib, MK Pilihan, dan MKWU.<b
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Organisasi Mata Kuliah berfungsi untuk
+                    menampilkan hasil pemetaan pada halaman Susunan Mata Kuliah yang dikelompokkan berdasarkan semester dan
+                    jenis mata kuliah mencakup MK Wajib, MK Pilihan, dan MKWU.<b
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
@@ -31,24 +33,24 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($MK->sortByDesc('semester')->groupBy('semester') as $smt => $MKBysmt)
+                @foreach ($MK->sortByDesc('semester')->groupBy('semester') as $smt => $MKBysmt)
                     <tr>
                         <td>{{ $smt }}</td>
                         <td>{{ $MKBysmt->sum('sks') }}</td>
                         <td>{{ $MKBysmt->count() }}</td>
                         <td class="text-left">
-                            @foreach($MKBysmt->where('kategoriMK', 1) as $product)
-                                {{ $product->kodeMK }} {{ ":" }} {{ $product->namaMK }}<br>
+                            @foreach ($MKBysmt->where('kategoriMK', 1) as $product)
+                                {{ $product->kodeMK }} {{ ':' }} {{ $product->namaMK }}<br>
                             @endforeach
                         </td>
                         <td class="text-left">
-                            @foreach($MKBysmt->where('kategoriMK', 2) as $product)
-                                {{ $product->kodeMK }} {{ ":" }} {{ $product->namaMK }}<br>
+                            @foreach ($MKBysmt->where('kategoriMK', 0) as $product)
+                                {{ $product->kodeMK }} {{ ':' }} {{ $product->namaMK }}<br>
                             @endforeach
                         </td>
                         <td class="text-left">
-                            @foreach($MKBysmt->where('kategoriMK', 3) as $product)
-                                {{ $product->kodeMK }} {{ ":" }} {{ $product->namaMK }}<br>
+                            @foreach ($MKBysmt->where('kategoriMK', 2) as $product)
+                                {{ $product->kodeMK }} {{ ':' }} {{ $product->namaMK }}<br>
                             @endforeach
                         </td>
                     </tr>
@@ -58,6 +60,6 @@
                     <td><b>{{ $MK->sum('sks') }}</b></td>
                 </tr>
             </tbody>
-        </table>        
+        </table>
     </div>
 @endsection

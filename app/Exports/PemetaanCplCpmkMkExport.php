@@ -1,68 +1,69 @@
 <?php
 namespace App\Exports;
 
-use App\Models\Cpl_Prodi;
+use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class PemetaanCplCpmkMkExport implements FromCollection, WithHeadings
 {
-    public function collection()
+    protected $cpl;
+
+    public function __construct($cpl)
     {
-        $cpl = Cpl_Prodi::get();
-        $data = [];
-        $count = 0;
-        foreach ($cpl as $cpl) {
-            if (sizeof($cpl->Cpmk) > 0) {
-                foreach ($cpl->Cpmk as $cpmk) {
-                    if (sizeof($cpmk->Mata_Kuliah) > 0) {
-                        foreach ($cpmk->Mata_Kuliah as $mk) {
-                            $row = [];
-                            if ($count === 0) {
-                                $row[] = $cpl->deskripsiCPL;
-                            } else {
-                                $row[] = '';
-                            }
-                            if ($count % sizeof($cpl->Cpmk) === 0) {
-                                $row[] = $cpmk->deskripsiCPMK;
-                            } else {
-                                $row[] = '';
-                            }
-                            $row[] = $mk->namaMK;
-                            $data[] = $row;
-                            $count++;
-                        }
-                    } else {
-                        $row = [];
-                        if ($count === 0) {
-                            $row[] = $cpl->deskripsiCPL;
-                        } else {
-                            $row[] = '';
-                        }
-                        $row[] = $cpmk->deskripsiCPMK;
-                        $row[] = 'Belum ada mata kuliah yang dipetakan';
-                        $data[] = $row;
-                        $count++;
-                    }
-                }
-            } else {
-                $row = [];
-                $row[] = $cpl->deskripsiCPL;
-                $row[] = 'Belum ada CPMK yang dipetakan';
-                $row[] = 'Belum ada mata kuliah yang dipetakan';
-                $data[] = $row;
-                $count++;
-            }
-        }
-        return collect($data);
+        $this->cpl = $cpl;
     }
+
+public function collection(): Collection
+{
+    $data = collect();
+
+    foreach ($this->cpl as $cpl) {
+        // Counting
+        $x = 0;
+        foreach ($cpl->Cpmk as $item) {
+            $x += (sizeof($item->Mata_Kuliah) > 0) ? sizeof($item->Mata_Kuliah) : 1;
+        }
+
+        if (sizeof($cpl->Cpmk) > 0) {
+            for ($i = 0; $i < sizeof($cpl->Cpmk); $i++) {
+                if (sizeof($cpl->Cpmk[$i]->Mata_Kuliah) > 0) {
+                    for ($j = 0; $j < sizeof($cpl->Cpmk[$i]->Mata_Kuliah); $j++) {
+                        $row = [
+                            '[' . $cpl->kodeCPL . '] ' . $cpl->deskripsiCPL,
+                            '[' . $cpl->Cpmk[$i]->kodeCPMK . '] ' . $cpl->Cpmk[$i]->deskripsiCPMK,
+                            '[' . $cpl->Cpmk[$i]->Mata_Kuliah[$j]->kodeMK . '] ' . $cpl->Cpmk[$i]->Mata_Kuliah[$j]->namaMK,
+                        ];
+
+                        $data->push($row);
+                    }
+                } else {
+                    $row = [
+                        ($i == 0) ? '[' . $cpl->kodeCPL . '] ' . $cpl->deskripsiCPL : '',
+                        '[' . $cpl->Cpmk[$i]->kodeCPMK . '] ' . $cpl->Cpmk[$i]->deskripsiCPMK,
+                        'Belum ada mata kuliah yang dipetakan',
+                    ];
+
+                    $data->push($row);
+                }
+            }
+        } else {
+            $row = [
+                '[' . $cpl->kodeCPL . '] ' . $cpl->deskripsiCPL,
+                'Belum ada CPMK yang ditambahkan',
+                'Belum ada mata kuliah yang dipetakan',
+            ];
+
+            $data->push($row);
+        }
+    }
+
+    return $data;
+}
+
 
     public function headings(): array
     {
-        return [
-            'Capaian Pembelajaran Lulusan',
-            'Capaian Pembelajaran Mata Kuliah',
-            'Mata Kuliah',
-        ];
+        return ['CPL', 'CPMK', 'Mata Kuliah'];
     }
 }

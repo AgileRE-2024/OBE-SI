@@ -22,9 +22,8 @@ return new class extends Migration
             $table->boolean('kategoriMK');
             $table->string('pustaka', 1000);
             $table->string('deskripsiMK', 100);
-            $table->text('prasyaratTambahan');
+            $table->text('prasyaratTambahan')->nullable();
             $table->char('mat_kodeMK', 10)->index()->nullable();
-
             $table->primary('kodeMK');
             $table->foreign('mat_kodeMK')->references('kodeMK')->on('Mata_Kuliah');
             $table->timestamps();

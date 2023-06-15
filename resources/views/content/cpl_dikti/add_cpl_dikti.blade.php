@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <label>Kode CPL SN Dikti</label>
                         @error('kodeCPLSN')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="kodeCPLSN" class="form-control" placeholder="Kode CPL SN Dikti">
                     </div>
@@ -22,7 +22,7 @@
                     <div class="form-group">
                         <label>Deskripsi CPL SN Dikti</label>
                         @error('deskripsiSN')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <textarea name="deskripsiSN" row="3" class="form-control" placeholder="Deskripsi CPL SN Dikti"></textarea>
                     </div>
@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label>Sumber</label>
                         @error('sumberSN')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="sumberSN" class="form-control" placeholder="Sumber CPL SN Dikti">
                     </div>
@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <label>Kategori CPL SN Dikti</label>
                         @error('kategoriSN')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="kategoriSN" id='kategoriSN' class="form-select">
                             <option value="" selected disabled>-- Pilih Kategori CPL --
@@ -51,7 +51,7 @@
                     <div class="form-group">
                         <label>Jenis CPL SN Dikti</label>
                         @error('jenisSN')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="jenisSN" id='jenisSN' class="form-select">
                             <option value="" selected disabled>-- Pilih Jenis CPL --</option>

@@ -112,16 +112,29 @@ class MataKuliahController extends Controller
 
     public function updateMataKuliah(Request $request, $mk)
     {
-        $validator = Validator::make($request->all(), [
-            'kodeMK' => 'required',
-            'namaMK' => 'required',
-            'jenisMK' => 'required',
-            'kategoriMK' => 'required',
-            'sks' => 'required',
-            'semester' => 'required',
-            'deskripsi' => 'required',
+        if ($request->kodeMK == $mk) {
+            $validator = Validator::make($request->all(), [
+                'kodeMK' => 'required',
+                'namaMK' => 'required',
+                'jenisMK' => 'required',
+                'kategoriMK' => 'required',
+                'sks' => 'required',
+                'semester' => 'required',
+                'deskripsi' => 'required',
 
-        ]);
+            ]);
+        } else {
+            $validator = Validator::make($request->all(), [
+                'kodeMK' => 'required|unique:mata_kuliah,kodeMK',
+                'namaMK' => 'required',
+                'jenisMK' => 'required',
+                'kategoriMK' => 'required',
+                'sks' => 'required',
+                'semester' => 'required',
+                'deskripsi' => 'required',
+
+            ]);
+        }
 
         if ($validator->fails()) {
             // flash('error')->error();

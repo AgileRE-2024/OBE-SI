@@ -27,8 +27,8 @@
         Tabel Capaian Pembelajaran SN Dikti
     </div>
 
-    <div style="text-align: center;">
-        <table class="table table-bordered" style="margin: auto; border: 1px inherit black solid">
+    <div class="table table-responsive w-100 d-block d-md-table">
+        <table class="table" style="margin: auto; border: 1px inherit black solid; text-align: center">
             <thead style="background-color: black; color: white">
                 <tr>
                     <th class="align-middle" scope="col" style="width: 5%">No</th>
@@ -37,7 +37,7 @@
                     </th>
                     <th class="align-middle" scope="col" style="width: 10%">Sumber CPL SN-Dikti</th>
                     <th class="align-middle" scope="col" style="width: 10%">Kategori CPL SN-Dikti</th>
-                    <th class="align-middle" scope="col" style="width: 10%">Jenis CPL SN-Dikti</th>
+                    <th class="align-middle" scope="col" style="width: 9%">Jenis CPL SN-Dikti</th>
                 </tr>
             </thead>
             <tbody>

@@ -10,13 +10,15 @@
             </div>
         </div>
         <div>
-            <div class="d-flex justify-content-start pt-2">
-                <div>
-                    <a class="btn btn-success" href="{{ route('kurikulum.data.add_mata_kuliah') }}"><i
-                            class="bi bi-file-earmark-excel">
-                        </i>Tambah</a>
+            @if (auth()->user()->role == 1)
+                <div class="d-flex justify-content-start pt-2">
+                    <div>
+                        <a class="btn btn-dark" href="{{ route('kurikulum.data.add_mata_kuliah') }}"><i
+                                class="bi bi-plus-square">
+                            </i>Tambah</a>
+                    </div>
                 </div>
-            </div>
+            @endif
             <div class="d-flex justify-content-end pt-2">
                 <div class="pr-3">
                     <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_mata_kuliah', ['pdf']) }}"><i
@@ -81,7 +83,9 @@
                             <td scope="row">
                                 @if ($mk->kategoriMK == '1')
                                     {{ 'Wajib' }}
-                                @else
+                                @elseif ($mk->kategoriMK == '2')
+                                    {{ 'MKWK' }}
+                                @elseif ($mk->kategoriMK == '0')
                                     {{ 'Pilihan' }}
                                 @endif
                             </td>
@@ -95,12 +99,16 @@
                                 {{ $mk->deskripsiMK }}
                             </td>
                             <td scope="row">
-                                <a class="btn btn-primary"
-                                    href="{{ route('kurikulum.data.edit_mata_kuliah', $mk->kodeMK) }}">Edit</a>
+                                @if (auth()->user()->role == 1)
+                                    <a class="btn btn-primary"
+                                        href="{{ route('kurikulum.data.edit_mata_kuliah', $mk->kodeMK) }}">Edit</a>
+                                @endif
                             </td>
                             <td scope="row">
-                                <a class="btn btn-danger"
-                                    href="{{ route('kurikulum.data.delete_mata_kuliah', $mk->kodeMK) }}">Delete</a>
+                                @if (auth()->user()->role == 1)
+                                    <a class="btn btn-danger"
+                                        href="{{ route('kurikulum.data.delete_mata_kuliah', $mk->kodeMK) }}">Delete</a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

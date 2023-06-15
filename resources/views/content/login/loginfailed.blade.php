@@ -3,7 +3,7 @@
 @section('container')
     <center>
     <div > <button type="button" class="btn btn-danger"> <h6> NIP atau kata sandi salah! Silakan Login Ulang!<h6> </button> </div>
-      <div class="card text-white mt-100" style="width: 480px; height:auto; max-height:auto; background-color: #1F2261; border-radius: 50px; margin: 20px 0 0 0; padding: 0 50px 0 50px">
+      <div class="card text-white mt-100" style="width: 480px; height:auto; max-height:auto; background-color: #1F2F4D; border-radius: 50px; margin: 20px 0 0 0; padding: 0 50px 0 50px">
         <div class="card-body">
           @if (session()->has('status'))
             <div class="alert alert-success">
@@ -28,7 +28,7 @@
               <label class="form-check-label" for="exampleCheck1"> Simpan Saya Sebagai Pengguna Tetap </label>
             </div> --}}
             <center class = "mt-3 mb-10">
-            <button type="submit" style="text-align:center; margin: -2px 0 0 0; width:100%; height:50px; border: 2px solid; background: white; border-radius: 10px; font-size:18px; color:#1F2261;  "><b>Masuk</b></button>
+            <button name="tombolLogin" type="submit" style="text-align:center; margin: -2px 0 0 0; width:100%; height:50px; border: 2px solid; background: white; border-radius: 10px; font-size:18px; color:#1F2261;  "><b>Masuk</b></button>
             <p class = "mt-10" style="margin: 50px 0 10px 0">Lupa Kata Sandi?</p>
             <a href="/forgot-password" style="text-align:center; margin: 0 0 0 0; color: white; text-decoration-line:underline;"><b>klik disini</b></a>
             </center>

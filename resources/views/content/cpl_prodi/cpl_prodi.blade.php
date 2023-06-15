@@ -10,13 +10,14 @@
                             class="bi bi-quote"></i></b></h5>
             </div>
         </div>
-        <div class="d-flex justify-content-start pt-2">
-            <div>
-                <a class="btn btn-success" href="{{ route('kurikulum.data.add_cpl_prodi') }}"><i
-                        class="bi bi-file-earmark-excel">
-                    </i>Tambah</a>
+        @if (auth()->user()->role == 1)
+            <div class="d-flex justify-content-start pt-2">
+                <div>
+                    <a class="btn btn-dark" href="{{ route('kurikulum.data.add_cpl_prodi') }}"><i class="bi bi-plus-square">
+                        </i>Tambah</a>
+                </div>
             </div>
-        </div>
+        @endif
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
                 <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_cpl_prodi', ['pdf']) }}"><i
@@ -57,12 +58,16 @@
                                 {{ $cpl->deskripsiCPL }}
                             </td>
                             <td scope="row">
-                                <a class="btn btn-primary"
-                                    href="{{ route('kurikulum.data.edit_cpl_prodi', $cpl->kodeCPL) }}">Edit</a>
+                                @if (auth()->user()->role == 1)
+                                    <a class="btn btn-primary"
+                                        href="{{ route('kurikulum.data.edit_cpl_prodi', $cpl->kodeCPL) }}">Edit</a>
+                                @endif
                             </td>
                             <td scope="row">
-                                <a class="btn btn-danger"
-                                    href="{{ route('kurikulum.data.delete_cpl_prodi', $cpl->kodeCPL) }}">Delete</a>
+                                @if (auth()->user()->role == 1)
+                                    <a class="btn btn-danger"
+                                        href="{{ route('kurikulum.data.delete_cpl_prodi', $cpl->kodeCPL) }}">Delete</a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

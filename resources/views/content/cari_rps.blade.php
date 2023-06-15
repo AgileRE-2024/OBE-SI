@@ -42,12 +42,14 @@
                 {{ $message }}
             </div>
             @if ($message == "Data tidak ditemukan, Silakan buat RPS")
+            @if (auth()->user()->role == 0)
             <div class="pr-3">
                 <a id="buatRPS" class="btn btn-outline-success" href="{{ route('rps_create') }}"><i
                         class="bi bi-pencil-square"> </i>Buat RPS</a>
             </div>
             @endif
-        @endif
+            @endif
+            @endif
         </div>
     </div>
 </div>
@@ -69,10 +71,12 @@
                         $currentYear = date('Y'); // Mengambil tahun saat ini
                     @endphp
                     @if ($tahunAjaran >= $currentYear)
+                    @if (auth()->user()->role == 0)
                         <div class="pl-2">
                             <a id="edit" class="btn btn-warning" href="{{ route('edit_rps.teknik_penilaian', ['kodeRPS' => $rps->kodeRPS]) }}" style="float: left;"><i
                                     class="bi bi-pencil-square"></i> Edit RPS</a>
                         </div>
+                    @endif
                     @endif
                 </div>
                 <div style="display: flex;">

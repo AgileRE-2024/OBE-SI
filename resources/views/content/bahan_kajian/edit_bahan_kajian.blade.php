@@ -13,7 +13,7 @@
                     <div class="form-group">
                         <label>Kode Bahan Kajian</label>
                         @error('kodeBK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="kodeBK" class="form-control" placeholder="Kode Bahan Kajian"
                             value="{{ old('kodeBK') ? old('kodeBK') : $bk->kodeBK }}">
@@ -22,7 +22,7 @@
                     <div class="form-group">
                         <label>Bahan Kajian</label>
                         @error('namaBK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="namaBK" class="form-control" placeholder="Nama Bahan Kajian"
                             value="{{ old('namaBK') ? old('namaBK') : $bk->namaBK }}">
@@ -31,7 +31,7 @@
                     <div class="form-group">
                         <label>Kategori Bahan Kajian</label>
                         @error('kategoriBK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="kategoriBK" id='kategoriBK' class="form-select">
                             <option value="" selected disabled>-- Pilih Kategori BK --
@@ -44,7 +44,7 @@
                     <div class="form-group">
                         <label>Referensi</label>
                         @error('referensiBK')
-                            <h1 style="color: #BF2C45">{{ $message }}</h1>
+                            <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="referensiBK" class="form-control" placeholder="Referensi Bahan Kajian"
                             value="{{ old('referensiBK') ? old('referensiBK') : $bk->referensiBK }}">

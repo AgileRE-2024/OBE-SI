@@ -22,13 +22,11 @@
                         class="card-text" style="text-align: left">
                         @csrf
                         <div class="mb-1">
-                            <label for="exampleInputPassword1" class="form-label" style="color:white">Kata Sandi
-                                Lama</label>
+                            <label for="pwlama" class="form-label" style="color:white">Kata Sandi Lama</label>
                             <input type="password" name="old_password" class="form-control" id="exampleInputOldPassword1">
-                            <label for="exampleInputPassword1" class="form-label" style="color:white">Kata Sandi
-                                Baru</label>
+                            <label for="pwbaru" class="form-label" style="color:white">Kata Sandi Baru</label>
                             <input type="password" name="new_password" class="form-control" id="exampleInputNewPassword1">
-                            <label for="exampleInputPassword1" class="form-label" style="color:white">Konfirmasi Kata Sandi
+                            <label for="pwkonfirmasi" class="form-label" style="color:white">Konfirmasi Kata Sandi
                                 Baru</label>
                             <input type="password" name="new_password_confirmation" class="form-control"
                                 id="exampleInputConfirmNewPassword1">

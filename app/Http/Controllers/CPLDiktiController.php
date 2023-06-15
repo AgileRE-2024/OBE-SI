@@ -55,7 +55,7 @@ class CPLDiktiController extends Controller
     public function storeCPLDikti(Request $request)
     {
         $request->validate([
-            'kodeCPLSN' => 'required|unique:cpl_sn_dikti, kodeCPLSN',
+            'kodeCPLSN' => 'required|unique:cpl_sn_dikti,kodeCPLSN|regex:/^CPL\d{3}$/',
             'deskripsiSN' => 'required',
             'sumberSN' => 'required',
             'kategoriSN' => 'required',
@@ -70,7 +70,7 @@ class CPLDiktiController extends Controller
             'jenisSN' => $request->jenisSN,
         ]);
 
-        return redirect()->route('kurikulum.data.cpl_dikti')->with('success', 'CPL SN Dikti berhasil ditambahkan');
+        return redirect()->route('kurikulum.data.cpl_sndikti')->with('success', 'CPL SN Dikti berhasil ditambahkan');
     }
 
     public function edit($cpl)
@@ -82,13 +82,23 @@ class CPLDiktiController extends Controller
 
     public function update($cpl, Request $request)
     {
-        $request->validate([
-            'kodeCPLSN' => 'required',
-            'deskripsiSN' => 'required',
-            'sumberSN' => 'required',
-            'kategoriSN' => 'required',
-            'jenisSN' => 'required',
-        ]);
+        if ($request->kodeCPLSN == $cpl) {
+            $request->validate([
+                'kodeCPLSN' => 'required',
+                'deskripsiSN' => 'required',
+                'sumberSN' => 'required',
+                'kategoriSN' => 'required',
+                'jenisSN' => 'required',
+            ]);
+        } else {
+            $request->validate([
+                'kodeCPLSN' => 'required|unique:cpl_sn_dikti,kodeCPLSN',
+                'deskripsiSN' => 'required',
+                'sumberSN' => 'required',
+                'kategoriSN' => 'required',
+                'jenisSN' => 'required',
+            ]);
+        }
 
         if (CPL_SN_Dikti::where('kodeCPLSN', $request->kodeCPLSN)->exists() && $request->kodeCPLSN != $cpl) {
             return redirect()->back()->with('error', 'Kode CPL sudah ada');

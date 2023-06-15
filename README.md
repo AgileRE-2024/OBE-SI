@@ -2,10 +2,30 @@
 Project Kuliah Pembangunan Perangkat Lunak
 
 - Penjelasan umum deskripsi project <br>
-  asdadsadada
-- Petunjuk Instalasi 
+  Project ini merupakan
+- Petunjuk Instalasi
+    1. Masuk ke dalam direktori htdocs dalam folder XAMPP dan membuat folder baru
+    2. Masuk ke dalam direktori folder baru tersebut
+    3. Klik kanan dan pilih Open in Terminal
+    4. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git" 
+    5. Selanjutnya, ketik masuk ke folder OBE-SI dan ketik "composer update"
+    6. Lalu, ketik "cp .env.example .env"
+    7. Kemudian buat database baru lalu buka file .env untuk merubah DB_DATABASE sesuai database yang dibuat.
+    8. Lalu, ketik "php artisan key:generate"
+    9. Ketik "php artisan migrate:fresh --seed"
+    10. Ketik "php artisan serve"
+    11. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000"
+    12. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 - Langkah-langkah Penggunaan
+    1. Terdapat 3 role yaitu Admin, Kurikulum, dan Dosen
+    2. Role Admin (role=2) merupakan role yang mempunyai hak untuk melihat semua fitur yang ada tanpa terlibat dengan Create, Update, dan Delete pada fitur tersebut.
+    3. Role Kurikulum (Role=1) merupakan role yang mempunyai hak untuk melakukan Create, Update, dan Delete pada fitur kurikulum.
+    4. Role Dosen (Role=0) merupakan role yang mempunyai hak untuk melakukan Create dab Update pada fitur RPS 
+    5. Password yang digunakan telah diencrypt yakni coba123
 - Prosedur untuk kontribusi github
+    1. Koordinator Github membuat branch untuk masing-masing kelompok
+    2. Setiap kelompok melakukan edit sesuai fitur yang dibagikan
+    3. Jika sudah selesai, perwakilan kelompok atau koordinator Github melakukan merge ke branch
 - Informasi lain (anggota team) <br>
 <table>
                 <thead style="background-color: lightgray">

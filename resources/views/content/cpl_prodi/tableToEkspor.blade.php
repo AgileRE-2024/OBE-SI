@@ -27,8 +27,8 @@
         Tabel Capaian Pembelajaran Program Studi
     </div>
 
-    <div style="text-align: center;">
-        <table style="margin: auto; border: 1px inherit black solid">
+    <div class="table table-responsive w-100 d-block d-md-table">
+        <table class="table" style="margin: auto; border: 1px inherit black solid; text-align: center">
             <thead style="background-color: black; color: white">
                 <tr>
                     <th class="align-middle" scope="col" style="width: 5%">No</th>

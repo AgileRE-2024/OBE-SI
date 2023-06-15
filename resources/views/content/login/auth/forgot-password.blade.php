@@ -23,7 +23,7 @@
                   <form action="{{ route('password.email') }}" method = "POST" class="card-text" style="text-align: left"> <br>
                     @csrf 
                     <div class="la" style="text-align: left; margin:10px 0 0 0;">
-                      <label for="exampleInputEmail1" class="form-label">Email</label>
+                      <label for="exampleInputEmail1" name="email" class="form-label">Email</label>
                       <input type="string" class="form-control" name="email" placeholder="Masukkan email anda">
                       {{-- <div id="emailHelp" class="form-text">Pastikan email yang Anda masukkan benar.</div> --}}
                     </div>
