@@ -24,7 +24,11 @@ Project Kuliah Pembangunan Perangkat Lunak
     4. Role Dosen (Role=0) merupakan role yang mempunyai hak untuk melakukan Create dab Update pada fitur RPS 
     5. Username menggunakan nip dan password yang digunakan telah diencrypt yakni coba123 (Pak Indra role Dosen dan Pak Badrus role Kurikulum)
 - Langkah-langkah pengujian BDD
-    1. Untuk pengujian RPS skenario data tidak ditemukan, harus dipastikan data rps untuk mata kuliah SII103 tahun 2023 belum dibuat.
+    1. Pastikan sudah laravel dusk sudah terinstall
+    2. Jalankan perintah php artisan dusk
+    3. Jika ingin menguji file tertentu gunakan perintah php artisan dusk --filter=namaFileTest
+    4. Jika terdapat eror jalankan php artisan dusk:chrome-driver
+    5. Untuk pengujian RPS skenario data tidak ditemukan, harus dipastikan data rps untuk mata kuliah SII103 tahun 2023 belum dibuat.
 - Prosedur untuk kontribusi github
     1. Koordinator Github membuat branch untuk masing-masing kelompok
     2. Setiap kelompok melakukan edit sesuai fitur yang dibagikan
