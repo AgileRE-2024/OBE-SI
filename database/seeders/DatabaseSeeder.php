@@ -289,159 +289,214 @@ class DatabaseSeeder extends Seeder
         
         Detail_SN_CPLProdi::insert($sncplprodiData);
 
-        Detail_PL_CPLProdi::create([
-            'kodePL' => 'PL01',
-            'kodeCPL' => 'CPL-01',
-        ]);
+        $cplbkData = [
+            ['kodeBK' => 'BK01', 'kodeCPL' => 'CPL-03'],
+            ['kodeBK' => 'BK02', 'kodeCPL' => 'CPL-04'],
+            ['kodeBK' => 'BK03', 'kodeCPL' => 'CPL-09'],
+            ['kodeBK' => 'BK04', 'kodeCPL' => 'CPL-08'],
+            ['kodeBK' => 'BK05', 'kodeCPL' => 'CPL-05'],
+            ['kodeBK' => 'BK06', 'kodeCPL' => 'CPL-07'],
+            ['kodeBK' => 'BK07', 'kodeCPL' => 'CPL-13'],
+            ['kodeBK' => 'BK08', 'kodeCPL' => 'CPL-07'],
+            ['kodeBK' => 'BK08', 'kodeCPL' => 'CPL-09'],
+            ['kodeBK' => 'BK09', 'kodeCPL' => 'CPL-06'],
+            ['kodeBK' => 'BK10', 'kodeCPL' => 'CPL-01'],
+            ['kodeBK' => 'BK10', 'kodeCPL' => 'CPL-02'],
+            ['kodeBK' => 'BK11', 'kodeCPL' => 'CPL-11'],
+            ['kodeBK' => 'BK12', 'kodeCPL' => 'CPL-04'],
+            ['kodeBK' => 'BK12', 'kodeCPL' => 'CPL-10'],
+            ['kodeBK' => 'BK12', 'kodeCPL' => 'CPL-11'],
+            ['kodeBK' => 'BK13', 'kodeCPL' => 'CPL-01'],
+            ['kodeBK' => 'BK13', 'kodeCPL' => 'CPL-02'],
+            ['kodeBK' => 'BK14', 'kodeCPL' => 'CPL-03'],
+            ['kodeBK' => 'BK14', 'kodeCPL' => 'CPL-12'],
+            ['kodeBK' => 'BK15', 'kodeCPL' => 'CPL-07'],
+            ['kodeBK' => 'BK16', 'kodeCPL' => 'CPL-05'],
+            ['kodeBK' => 'BK17', 'kodeCPL' => 'CPL-03'],
+            ['kodeBK' => 'BK17', 'kodeCPL' => 'CPL-12'],
+            ['kodeBK' => 'BK18', 'kodeCPL' => 'CPL-03'],
+            ['kodeBK' => 'BK18', 'kodeCPL' => 'CPL-12'],
+            ['kodeBK' => 'BK19', 'kodeCPL' => 'CPL-02'],
+        ];
+        Detail_CPLProdi_Bk::insert($cplbkData);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL08',
-            'kodeBK' => 'BK01'
-        ]);
+        
+        $cplplData = [
+            ['kodeCPL' => 'CPL-01', 'kodePL' => 'PL04'],
+            ['kodeCPL' => 'CPL-02', 'kodePL' => 'PL03'],
+            ['kodeCPL' => 'CPL-03', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-03', 'kodePL' => 'PL02'],
+            ['kodeCPL' => 'CPL-04', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-04', 'kodePL' => 'PL02'],
+            ['kodeCPL' => 'CPL-05', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-06', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-06', 'kodePL' => 'PL02'],
+            ['kodeCPL' => 'CPL-07', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-07', 'kodePL' => 'PL03'],
+            ['kodeCPL' => 'CPL-08', 'kodePL' => 'PL03'],
+            ['kodeCPL' => 'CPL-09', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-10', 'kodePL' => 'PL02'],
+            ['kodeCPL' => 'CPL-11', 'kodePL' => 'PL02'],
+            ['kodeCPL' => 'CPL-12', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-12', 'kodePL' => 'PL02'],
+            ['kodeCPL' => 'CPL-13', 'kodePL' => 'PL01'],
+            ['kodeCPL' => 'CPL-13', 'kodePL' => 'PL02'],
+        ];
+        Detail_PL_CPLProdi::insert($cplplData);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL04',
-            'kodeBK' => 'BK02'
-        ]);
+        // Detail_PL_CPLProdi::create([
+        //     'kodePL' => 'PL01',
+        //     'kodeCPL' => 'CPL-01',
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL09',
-            'kodeBK' => 'BK03'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL08',
+        //     'kodeBK' => 'BK01'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL08',
-            'kodeBK' => 'BK04'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL04',
+        //     'kodeBK' => 'BK02'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL05',
-            'kodeBK' => 'BK05'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL09',
+        //     'kodeBK' => 'BK03'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL07',
-            'kodeBK' => 'BK06'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL08',
+        //     'kodeBK' => 'BK04'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL05',
-            'kodeBK' => 'BK07'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL05',
+        //     'kodeBK' => 'BK05'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL13',
-            'kodeBK' => 'BK07'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL07',
+        //     'kodeBK' => 'BK06'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL07',
-            'kodeBK' => 'BK08'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL05',
+        //     'kodeBK' => 'BK07'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL09',
-            'kodeBK' => 'BK08'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL13',
+        //     'kodeBK' => 'BK07'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL06',
-            'kodeBK' => 'BK09'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL07',
+        //     'kodeBK' => 'BK08'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL-01',
-            'kodeBK' => 'BK10'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL09',
+        //     'kodeBK' => 'BK08'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL-02',
-            'kodeBK' => 'BK10'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL06',
+        //     'kodeBK' => 'BK09'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL11',
-            'kodeBK' => 'BK11'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL-01',
+        //     'kodeBK' => 'BK10'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL04',
-            'kodeBK' => 'BK12'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL-02',
+        //     'kodeBK' => 'BK10'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL10',
-            'kodeBK' => 'BK12'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL11',
+        //     'kodeBK' => 'BK11'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL11',
-            'kodeBK' => 'BK12'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL04',
+        //     'kodeBK' => 'BK12'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL04',
-            'kodeBK' => 'BK12'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL10',
+        //     'kodeBK' => 'BK12'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL-01',
-            'kodeBK' => 'BK13'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL11',
+        //     'kodeBK' => 'BK12'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL-02',
-            'kodeBK' => 'BK13'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL04',
+        //     'kodeBK' => 'BK12'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL03',
-            'kodeBK' => 'BK14'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL-01',
+        //     'kodeBK' => 'BK13'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL12',
-            'kodeBK' => 'BK14'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL-02',
+        //     'kodeBK' => 'BK13'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL07',
-            'kodeBK' => 'BK15'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL03',
+        //     'kodeBK' => 'BK14'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL05',
-            'kodeBK' => 'BK16'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL12',
+        //     'kodeBK' => 'BK14'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL03',
-            'kodeBK' => 'BK17'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL07',
+        //     'kodeBK' => 'BK15'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL12',
-            'kodeBK' => 'BK17'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL05',
+        //     'kodeBK' => 'BK16'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL03',
-            'kodeBK' => 'BK18'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL03',
+        //     'kodeBK' => 'BK17'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL12',
-            'kodeBK' => 'BK18'
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL12',
+        //     'kodeBK' => 'BK17'
+        // ]);
 
-        Detail_CPLProdi_Bk::create([
-            'kodeCPL' => 'CPL-02',
-            'kodeBK' => 'BK19'
-        ]);
-        Detail_CPLProdi_BK::create([
-            'kodeBK' => 'BK01',
-            'kodeCPL' => 'CPL-01',
-        ]);
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL03',
+        //     'kodeBK' => 'BK18'
+        // ]);
+
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL12',
+        //     'kodeBK' => 'BK18'
+        // ]);
+
+        // Detail_CPLProdi_Bk::create([
+        //     'kodeCPL' => 'CPL-02',
+        //     'kodeBK' => 'BK19'
+        // ]);
+        // Detail_CPLProdi_BK::create([
+        //     'kodeBK' => 'BK01',
+        //     'kodeCPL' => 'CPL-01',
+        // ]);
 
         $bkmkData = [
             ['kodeMK' => 'AGI101', 'kodeBK' => 'BK13'],
