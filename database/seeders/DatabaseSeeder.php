@@ -228,10 +228,66 @@ class DatabaseSeeder extends Seeder
             'kodeMK' => 'SII103'
         ]);
 
-        Detail_SN_CPLProdi::create([
-            'kodeCPLSN' => 'CPL-S01',
-            'kodeCPL' => 'CPL-01',
-        ]);
+        $sncplprodiData = [
+            ['kodeCPLSN' => 'CPL-S01', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S02', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S03', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S04', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S05', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S06', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S07', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S08', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S09', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-S10', 'kodeCPL' => 'CPL-01'],
+            ['kodeCPLSN' => 'CPL-KU01', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU02', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU03', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU04', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU05', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU06', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU07', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU08', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU09', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KU10', 'kodeCPL' => 'CPL-02'],
+            ['kodeCPLSN' => 'CPL-KK01', 'kodeCPL' => 'CPL-03'],
+            ['kodeCPLSN' => 'CPL-KK02', 'kodeCPL' => 'CPL-04'],
+            ['kodeCPLSN' => 'CPL-KK03', 'kodeCPL' => 'CPL-09'],
+            ['kodeCPLSN' => 'CPL-KK04', 'kodeCPL' => 'CPL-05'],
+            ['kodeCPLSN' => 'CPL-KK05', 'kodeCPL' => 'CPL-11'],
+            ['kodeCPLSN' => 'CPL-KK06', 'kodeCPL' => 'CPL-06'],
+            ['kodeCPLSN' => 'CPL-KK07', 'kodeCPL' => 'CPL-07'],
+            ['kodeCPLSN' => 'CPL-KK08', 'kodeCPL' => 'CPL-07'],
+            ['kodeCPLSN' => 'CPL-KK09', 'kodeCPL' => 'CPL-08'],
+            ['kodeCPLSN' => 'CPL-KK10', 'kodeCPL' => 'CPL-13'],
+            ['kodeCPLSN' => 'CPL-KK11', 'kodeCPL' => 'CPL-13'],
+            ['kodeCPLSN' => 'CPL-KK12', 'kodeCPL' => 'CPL-13'],
+            ['kodeCPLSN' => 'CPL-KK13', 'kodeCPL' => 'CPL-05'],
+            ['kodeCPLSN' => 'CPL-KK14', 'kodeCPL' => 'CPL-10'],
+            ['kodeCPLSN' => 'CPL-KK15', 'kodeCPL' => 'CPL-07'],
+            ['kodeCPLSN' => 'CPL-KK16', 'kodeCPL' => 'CPL-12'],
+            ['kodeCPLSN' => 'CPL-KK17', 'kodeCPL' => 'CPL-10'],
+            ['kodeCPLSN' => 'CPL-KK18', 'kodeCPL' => 'CPL-09'],
+            ['kodeCPLSN' => 'CPL-P01', 'kodeCPL' => 'CPL-03'],
+            ['kodeCPLSN' => 'CPL-P02', 'kodeCPL' => 'CPL-04'],
+            ['kodeCPLSN' => 'CPL-P03', 'kodeCPL' => 'CPL-09'],
+            ['kodeCPLSN' => 'CPL-P04', 'kodeCPL' => 'CPL-05'],
+            ['kodeCPLSN' => 'CPL-P05', 'kodeCPL' => 'CPL-11'],
+            ['kodeCPLSN' => 'CPL-P06', 'kodeCPL' => 'CPL-06'],
+            ['kodeCPLSN' => 'CPL-P07', 'kodeCPL' => 'CPL-07'],
+            ['kodeCPLSN' => 'CPL-P08', 'kodeCPL' => 'CPL-08'],
+            ['kodeCPLSN' => 'CPL-P09', 'kodeCPL' => 'CPL-05'],
+            ['kodeCPLSN' => 'CPL-P10', 'kodeCPL' => 'CPL-05'],
+            ['kodeCPLSN' => 'CPL-P11', 'kodeCPL' => 'CPL-04'],
+            ['kodeCPLSN' => 'CPL-P11', 'kodeCPL' => 'CPL-10'],
+            ['kodeCPLSN' => 'CPL-P12', 'kodeCPL' => 'CPL-13'],
+            ['kodeCPLSN' => 'CPL-P13', 'kodeCPL' => 'CPL-13'],
+            ['kodeCPLSN' => 'CPL-P14', 'kodeCPL' => 'CPL-05'],
+            ['kodeCPLSN' => 'CPL-P15', 'kodeCPL' => 'CPL-12'],
+            ['kodeCPLSN' => 'CPL-P16', 'kodeCPL' => 'CPL-07'],
+            ['kodeCPLSN' => 'CPL-P17', 'kodeCPL' => 'CPL-12'],
+        ];
+        
+        Detail_SN_CPLProdi::insert($sncplprodiData);
 
         Detail_PL_CPLProdi::create([
             'kodePL' => 'PL01',
@@ -386,430 +442,94 @@ class DatabaseSeeder extends Seeder
             'kodeBK' => 'BK01',
             'kodeCPL' => 'CPL-01',
         ]);
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK01',
-            'kodeMK' => 'MK14'
-        ]);
 
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK02',
-            'kodeMK' => 'MK26'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK02',
-            'kodeMK' => 'MK27'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK03',
-            'kodeMK' => 'MK31'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK03',
-            'kodeMK' => 'MK32'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK03',
-            'kodeMK' => 'MK38'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK03',
-            'kodeMK' => 'MK39'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK04',
-            'kodeMK' => 'MK68'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK05',
-            'kodeMK' => 'MK34'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK05',
-            'kodeMK' => 'MK35'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK05',
-            'kodeMK' => 'MK77'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK06',
-            'kodeMK' => 'MK60'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK06',
-            'kodeMK' => 'MK63'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK06',
-            'kodeMK' => 'MK68'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK06',
-            'kodeMK' => 'MK73'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK06',
-            'kodeMK' => 'MK76'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK18'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK19'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK28'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK29'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK42'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK43'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK44'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK45'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK52'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK53'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK67'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK75'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK07',
-            'kodeMK' => 'MK18'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK08',
-            'kodeMK' => 'MK48'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK09',
-            'kodeMK' => 'MK65'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK10',
-            'kodeMK' => 'MK61'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK10',
-            'kodeMK' => 'MK62'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK10',
-            'kodeMK' => 'MK78'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK11',
-            'kodeMK' => 'MK11'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK11',
-            'kodeMK' => 'MK13'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK11',
-            'kodeMK' => 'MK17'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK11',
-            'kodeMK' => 'MK22'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK11',
-            'kodeMK' => 'MK30'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK11',
-            'kodeMK' => 'MK33'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK11',
-            'kodeMK' => 'MK64'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK36'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK37'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK54'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK55'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK64'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK66'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK69'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK70'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK71'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK72'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK12',
-            'kodeMK' => 'MK74'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'SII103'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'PHP103'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK03'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK04'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK05'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK06'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK07'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK08'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK12'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK16'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK20'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK21'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK23'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK41'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK47'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK49'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK58'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK13',
-            'kodeMK' => 'MK59'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK14',
-            'kodeMK' => 'MK24'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK14',
-            'kodeMK' => 'MK25'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK15',
-            'kodeMK' => 'MK40'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK15',
-            'kodeMK' => 'MK56'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK15',
-            'kodeMK' => 'MK57'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK16',
-            'kodeMK' => 'MK50'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK16',
-            'kodeMK' => 'MK51'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK17',
-            'kodeMK' => 'MK40'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK17',
-            'kodeMK' => 'MK46'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK17',
-            'kodeMK' => 'MK50'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK18',
-            'kodeMK' => 'MK46'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK18',
-            'kodeMK' => 'MK49'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK19',
-            'kodeMK' => 'MK09'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK19',
-            'kodeMK' => 'MK10'
-        ]);
-
-        Detail_BK_MK::create([
-            'kodeBK' => 'BK19',
-            'kodeMK' => 'MK15'
-        ]);
+        $bkmkData = [
+            ['kodeMK' => 'AGI101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'AGP101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'AGK101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'AGH101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'AGB101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'AGC101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'NOP103', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'NOP101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'KID107', 'kodeBK' => 'BK19'],
+            ['kodeMK' => 'BID108', 'kodeBK' => 'BK19'],
+            ['kodeMK' => 'MAA101', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'BAI101', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'SIP107', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'SII103', 'kodeBK' => 'BK01'],
+            ['kodeMK' => 'FID112', 'kodeBK' => 'BK19'],
+            ['kodeMK' => 'PHP103', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'MAL102', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'MAT101', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'MAT102', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'MNM107', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'MNM106', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'MAS118', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'BAE111', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'SIA204', 'kodeBK' => 'BK14'],
+            ['kodeMK' => 'SIA205', 'kodeBK' => 'BK14'],
+            ['kodeMK' => 'SID201', 'kodeBK' => 'BK02'],
+            ['kodeMK' => 'SID203', 'kodeBK' => 'BK02'],
+            ['kodeMK' => 'SIR201', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'SIR203', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'MAS234', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'SIJ201', 'kodeBK' => 'BK03'],
+            ['kodeMK' => 'SIJ203', 'kodeBK' => 'BK03'],
+            ['kodeMK' => 'MAL204', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'SII301', 'kodeBK' => 'BK05'],
+            ['kodeMK' => 'SII314', 'kodeBK' => 'BK05'],
+            ['kodeMK' => 'SIC201', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SIC202', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SIJ202', 'kodeBK' => 'BK03'],
+            ['kodeMK' => 'SIJ204', 'kodeBK' => 'BK03'],
+            ['kodeMK' => 'SIS202', 'kodeBK' => 'BK15'],
+            ['kodeMK' => 'SIS202', 'kodeBK' => 'BK18'],
+            ['kodeMK' => 'MNM203', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'SIS204', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'SIS205', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'SIS304', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'SIS305', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'SII213', 'kodeBK' => 'BK17'],
+            ['kodeMK' => 'SII213', 'kodeBK' => 'BK18'],
+            ['kodeMK' => 'BAE112', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'SIS309', 'kodeBK' => 'BK08'],
+            ['kodeMK' => 'MNW401', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'MNW401', 'kodeBK' => 'BK18'],
+            ['kodeMK' => 'SII208', 'kodeBK' => 'BK16'],
+            ['kodeMK' => 'SII209', 'kodeBK' => 'BK16'],
+            ['kodeMK' => 'SII318', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'SII319', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'SID303', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SID304', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SIA301', 'kodeBK' => 'BK15'],
+            ['kodeMK' => 'SIA302', 'kodeBK' => 'BK15'],
+            ['kodeMK' => 'KNT401', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'ETT301', 'kodeBK' => 'BK13'],
+            ['kodeMK' => 'SII323', 'kodeBK' => 'BK06'],
+            ['kodeMK' => 'PNT497', 'kodeBK' => 'BK10'],
+            ['kodeMK' => 'KLT301', 'kodeBK' => 'BK10'],
+            ['kodeMK' => 'MNG206', 'kodeBK' => 'BK06'],
+            ['kodeMK' => 'MAS235', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'MAS235', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SII214', 'kodeBK' => 'BK09'],
+            ['kodeMK' => 'SII322', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SIS308', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'MNG310', 'kodeBK' => 'BK04'],
+            ['kodeMK' => 'MNG310', 'kodeBK' => 'BK06'],
+            ['kodeMK' => 'SIC401', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SIC402', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SIR301', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'MAS324', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SII404', 'kodeBK' => 'BK06'],
+            ['kodeMK' => 'SIC404', 'kodeBK' => 'BK12'],
+            ['kodeMK' => 'SII408', 'kodeBK' => 'BK07'],
+            ['kodeMK' => 'MNG402', 'kodeBK' => 'BK06'],
+            ['kodeMK' => 'SII317', 'kodeBK' => 'BK05'],
+            ['kodeMK' => 'PNT499', 'kodeBK' => 'BK10']
+        ];
+        
+        Detail_BK_MK::insert($bkmkData);
 
         Detail_Peran_Dosen::create([
             'kodeRPS' => 'RPS001',

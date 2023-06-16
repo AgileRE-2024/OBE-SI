@@ -13,21 +13,21 @@
 
 app('router')->setCompiledRoutes(
     array (
-  'compiled' => 
+  'compiled' =>
   array (
     0 => false,
-    1 => 
+    1 =>
     array (
-      '/sanctum/csrf-cookie' => 
+      '/sanctum/csrf-cookie' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'sanctum.csrf-cookie',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -38,16 +38,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/_ignition/health-check' => 
+      '/_ignition/health-check' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'ignition.healthCheck',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -58,16 +58,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/_ignition/execute-solution' => 
+      '/_ignition/execute-solution' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'ignition.executeSolution',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -77,16 +77,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/_ignition/update-config' => 
+      '/_ignition/update-config' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'ignition.updateConfig',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -96,16 +96,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/api/user' => 
+      '/api/user' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::N6M2husEYXH3pNi9',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -116,16 +116,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/' => 
+      '/' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::yMBSYImtivSQUfod',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -136,16 +136,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/login' => 
+      '/login' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'login',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -156,16 +156,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/proseslogin' => 
+      '/proseslogin' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'proseslogin',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -175,16 +175,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/loginfailed' => 
+      '/loginfailed' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'loginfailed',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -195,16 +195,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/logout' => 
+      '/logout' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'logout1',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -213,14 +213,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'logout2',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -231,16 +231,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/test' => 
+      '/test' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::aENh5HsvQHPzPQiR',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -251,16 +251,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum' => 
+      '/dashboard/kurikulum' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'profil kurikulum',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -271,16 +271,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/dosen' => 
+      '/dashboard/dosen' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'profildosen',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -291,16 +291,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/admin' => 
+      '/dashboard/admin' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'profiladmin',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -311,16 +311,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/bk-mk/update' => 
+      '/dashboard/kurikulum/pemetaan/bk-mk/update' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.update_pemetaan_bk_mk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -330,16 +330,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-bk/update' => 
+      '/dashboard/kurikulum/pemetaan/cpl-bk/update' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.update_pemetaan_cpl_bk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -349,16 +349,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/update' => 
+      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/update' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.update_susunan_mk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -368,16 +368,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/update' => 
+      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/update' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.update_pemetaan_cpldikti_cplprodi',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -387,16 +387,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-pl/update' => 
+      '/dashboard/kurikulum/pemetaan/cpl-pl/update' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.update_pemetaan_cpl_pl',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -406,16 +406,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/bk-mk' => 
+      '/dashboard/kurikulum/pemetaan/bk-mk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.bk_mk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -426,16 +426,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/bk-mk/exportExcel' => 
+      '/dashboard/kurikulum/pemetaan/bk-mk/exportExcel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.exportExcel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -446,16 +446,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/bk-mk/exportPdf' => 
+      '/dashboard/kurikulum/pemetaan/bk-mk/exportPdf' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.exportPdf',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -466,16 +466,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-bk' => 
+      '/dashboard/kurikulum/pemetaan/cpl-bk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_bk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -486,16 +486,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cetak-pdf-cplbk' => 
+      '/dashboard/kurikulum/pemetaan/cetak-pdf-cplbk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cetakpdfcplbk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -506,16 +506,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cetak-excel-cplbk' => 
+      '/dashboard/kurikulum/pemetaan/cetak-excel-cplbk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cetakexcelcplbk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -526,16 +526,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-bk-mk' => 
+      '/dashboard/kurikulum/pemetaan/cpl-bk-mk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_bk_mk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -546,16 +546,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportPdf' => 
+      '/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportPdf' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.exportPdfCplBkMk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -566,16 +566,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportExcel' => 
+      '/dashboard/kurikulum/pemetaan/cpl-bk-mk/exportExcel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.exportExcelCplBkMk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -586,16 +586,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah' => 
+      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.susunan_mata_kuliah',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -606,16 +606,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/pdf' => 
+      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/pdf' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.susunan_mk.export.pdf',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -626,16 +626,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/excel' => 
+      '/dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/excel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.susunan_mk.export.excel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -646,16 +646,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah' => 
+      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.organisasi_mata_kuliah',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -666,16 +666,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/pdf' => 
+      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/pdf' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.organisasi_mk.export.pdf',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -686,16 +686,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/excel' => 
+      '/dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/excel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.organisasi_mk.export.excel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -706,16 +706,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi' => 
+      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_sndikti_cpl_prodi',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -726,16 +726,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/cetak' => 
+      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/cetak' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -746,16 +746,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/table' => 
+      '/dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/table' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.table_cpldikti_cplprodi',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -766,16 +766,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-mk' => 
+      '/dashboard/kurikulum/pemetaan/cpl-mk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_mk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -786,16 +786,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cetak-pdf-cplmk' => 
+      '/dashboard/kurikulum/pemetaan/cetak-pdf-cplmk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cetakpdfcplmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -806,16 +806,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cetak-excel-cplmk' => 
+      '/dashboard/kurikulum/pemetaan/cetak-excel-cplmk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cetakexcelcplmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -826,16 +826,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-pl' => 
+      '/dashboard/kurikulum/pemetaan/cpl-pl' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_pl',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -846,16 +846,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/add_cpmk' => 
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/add_cpmk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.store',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -865,16 +865,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk' => 
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.index',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -885,16 +885,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/export' => 
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/export' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.export',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -905,16 +905,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcel' => 
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcel' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.export-excel',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -925,16 +925,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/matriks' => 
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/matriks' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.matrix',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -945,16 +945,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportmatrixpdf' => 
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportmatrixpdf' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -965,16 +965,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcelmatrix' => 
+      '/dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcelmatrix' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -985,16 +985,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk' => 
+      '/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.mk_cpmk_subcpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1005,16 +1005,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/generate' => 
+      '/dashboard/kurikulum/generate' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1025,16 +1025,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/addProfilLulusan' => 
+      '/dashboard/kurikulum/data/addProfilLulusan' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.add_pl',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1044,14 +1044,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.store_pl',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1061,16 +1061,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/addCPLDikti' => 
+      '/dashboard/kurikulum/data/addCPLDikti' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.add_cpl_dikti',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1080,14 +1080,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.store_cpl_dikti',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1097,16 +1097,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/addCPLProdi' => 
+      '/dashboard/kurikulum/data/addCPLProdi' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.add_cpl_prodi',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1116,14 +1116,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.store_cpl_prodi',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1133,16 +1133,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/addBahanKajian' => 
+      '/dashboard/kurikulum/data/addBahanKajian' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.add_bahan_kajian',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1152,14 +1152,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.store_bahan_kajian',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1169,16 +1169,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/addMataKuliah' => 
+      '/dashboard/kurikulum/data/addMataKuliah' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.add_mata_kuliah',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1188,14 +1188,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.store_mata_kuliah',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1205,16 +1205,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/addCPMK' => 
+      '/dashboard/kurikulum/data/addCPMK' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.add_cpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1224,14 +1224,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.store_cpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1241,16 +1241,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/addSubCPMK' => 
+      '/dashboard/kurikulum/data/addSubCPMK' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.add_sub_cpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1260,14 +1260,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.store_sub_cpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1277,16 +1277,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/profilLulusan' => 
+      '/dashboard/kurikulum/data/profilLulusan' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.profil_lulusan',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1297,16 +1297,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/cpl_dikti' => 
+      '/dashboard/kurikulum/data/cpl_dikti' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.cpl_sndikti',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1317,16 +1317,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/cpl_prodi' => 
+      '/dashboard/kurikulum/data/cpl_prodi' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.cpl_prodi',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1337,16 +1337,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/bahan_kajian' => 
+      '/dashboard/kurikulum/data/bahan_kajian' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.bahan_kajian',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1357,16 +1357,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/mata_kuliah' => 
+      '/dashboard/kurikulum/data/mata_kuliah' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.mata_kuliah',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1377,16 +1377,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/cpmk' => 
+      '/dashboard/kurikulum/data/cpmk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.cpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1397,16 +1397,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/kurikulum/data/sub_cpmk' => 
+      '/dashboard/kurikulum/data/sub_cpmk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.sub_cpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1417,16 +1417,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/penilaian/tahap-penilaian' => 
+      '/dashboard/penilaian/tahap-penilaian' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'penilaian.tahap_penilaian.index',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1437,16 +1437,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/penilaian/penilaiancpmk' => 
+      '/dashboard/penilaian/penilaiancpmk' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'penilaian.tp_cpmk',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1457,16 +1457,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/rps' => 
+      '/dashboard/rps' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'rps',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1477,16 +1477,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/cari_rps' => 
+      '/dashboard/cari_rps' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'index',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1496,14 +1496,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'processForm',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1513,16 +1513,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/generate-pdf' => 
+      '/generate-pdf' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'generated::3JJMf2DJxjyaKwKV',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1533,16 +1533,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/rps/create' => 
+      '/dashboard/rps/create' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'rps_create',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1553,16 +1553,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/rps/store' => 
+      '/dashboard/rps/store' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'rps_store',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1572,16 +1572,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/forgot-password' => 
+      '/forgot-password' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'password.request',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1591,14 +1591,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'password.email',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1608,16 +1608,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/reset-password' => 
+      '/reset-password' =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'password.update',
           ),
           1 => NULL,
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -1628,27 +1628,27 @@ app('router')->setCompiledRoutes(
         ),
       ),
     ),
-    2 => 
+    2 =>
     array (
       0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/(?|cpl\\-(?|sndikti\\-cpl\\-prodi/export/([^/]++)(*:188)|pl/export/([^/]++)(*:214)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:251)|edit_cpmk/([^/]++)(?|(*:280))))|mk\\-cpmk\\-subcpmk/export/([^/]++)(*:324))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:373))|CP(?|L(?|Dikti/([^/]++)(?|(*:408))|Prodi/([^/]++)(?|(*:434)))|MK/([^/]++)(?|(*:458)))|BahanKajian/([^/]++)(?|(*:491))|MataKuliah/([^/]++)(?|(*:522))|SubCPMK/([^/]++)(?|(*:550)))|delete(?|ProfilLulusan/([^/]++)(*:591)|CP(?|L(?|Dikti/([^/]++)(*:622)|Prodi/([^/]++)(*:644))|MK/([^/]++)(*:664))|BahanKajian/([^/]++)(*:693)|MataKuliah/([^/]++)(*:720)|SubCPMK/([^/]++)(*:744))|profilLulusan/export/([^/]++)(*:782)|cp(?|l_(?|dikti/export/([^/]++)(*:821)|prodi/export/([^/]++)(*:850))|mk/export/([^/]++)(*:877))|bahan_kajian/export/([^/]++)(*:914)|mata_kuliah/export/([^/]++)(*:949)|sub_cpmk/export/([^/]++)(*:981)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:1032)|export/([^/]++)/([^/]++)(*:1065))|([^/]++)(*:1083)|export/([^/]++)/([^/]++)(*:1116))|rps/e(?|xport/([^/]++)/([^/]++)(*:1157)|dit/(?|teknik_p(?|enilaian/([^/]++)(*:1201)|df/export/([^/]++)(*:1228))|add(?|TeknikPenilaian/([^/]++)(?|(*:1271))|_(?|minggu_rps/([^/]++)(?|(*:1307))|peran_dosen/([^/]++)(?|(*:1340))))|edit(?|TeknikPenilaian/([^/]++)(?|(*:1386))|_(?|minggu_rps/([^/]++)/([^/]++)(?|(*:1431))|peran_dosen/([^/]++)/([^/]++)/([^/]++)(?|(*:1482))))|delete(?|TeknikPenilaian/([^/]++)(*:1527)|_(?|minggu_rps/([^/]++)/([^/]++)(*:1568)|peran_dosen/([^/]++)/([^/]++)/([^/]++)(*:1615)))|minggu_rps/([^/]++)(*:1645)|peran_dosen/([^/]++)(*:1674)|rps/([^/]++)(*:1695))))|/u(?|bahpw/([^/]++)(*:1726)|pdateprofile/([^/]++)(*:1756))|/reset\\-password/([^/]++)(*:1791))/?$}sDu',
     ),
-    3 => 
+    3 =>
     array (
-      48 => 
+      48 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'dusk.login',
             'guard' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'userId',
             1 => 'guard',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1659,20 +1659,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      72 => 
+      72 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'dusk.logout',
             'guard' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'guard',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1683,20 +1683,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      98 => 
+      98 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'dusk.user',
             'guard' => NULL,
           ),
-          1 => 
+          1 =>
           array (
             0 => 'guard',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1707,19 +1707,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      188 => 
+      188 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.export',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1730,19 +1730,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      214 => 
+      214 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.export_cpl_pl',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1753,19 +1753,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      251 => 
+      251 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpl',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1776,19 +1776,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      280 => 
+      280 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpmk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1798,17 +1798,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.update',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpmk',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -1818,19 +1818,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      324 => 
+      324 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.pemetaan.export_mk-cpmk-subcpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1841,19 +1841,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      373 => 
+      373 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.edit_pl',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'pl',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1863,17 +1863,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.update_pl',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'pl',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -1883,19 +1883,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      408 => 
+      408 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.edit_cpl_dikti',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpl',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1905,17 +1905,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.update_cpl_dikti',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpl',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -1925,19 +1925,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      434 => 
+      434 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.edit_cpl_prodi',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpl',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1947,17 +1947,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.update_cpl_prodi',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpl',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -1967,19 +1967,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      458 => 
+      458 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.edit_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpmk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1989,17 +1989,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.update_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpmk',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -2009,19 +2009,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      491 => 
+      491 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.edit_bahan_kajian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'bk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2031,17 +2031,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.update_bahan_kajian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'bk',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -2051,19 +2051,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      522 => 
+      522 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.edit_mata_kuliah',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'mk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2073,17 +2073,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.update_mata_kuliah',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'mk',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -2093,19 +2093,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      550 => 
+      550 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.edit_sub_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'scpmk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2115,17 +2115,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.update_sub_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'scpmk',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -2135,19 +2135,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      591 => 
+      591 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.delete_pl',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'pl',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2158,19 +2158,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      622 => 
+      622 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.delete_cpl_dikti',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpl',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2181,19 +2181,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      644 => 
+      644 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.delete_cpl_prodi',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpl',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2204,19 +2204,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      664 => 
+      664 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.delete_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'cpmk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2227,19 +2227,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      693 => 
+      693 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.delete_bahan_kajian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'bk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2250,19 +2250,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      720 => 
+      720 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.delete_mata_kuliah',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'mk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2273,19 +2273,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      744 => 
+      744 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.delete_sub_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'scpmk',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2296,19 +2296,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      782 => 
+      782 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.export_pl',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2319,19 +2319,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      821 => 
+      821 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.export_cpl_dikti',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2342,19 +2342,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      850 => 
+      850 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.export_cpl_prodi',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2365,19 +2365,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      877 => 
+      877 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.export_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2388,19 +2388,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      914 => 
+      914 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.export_bahan_kajian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2411,19 +2411,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      949 => 
+      949 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.export_mata_kuliah',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2434,19 +2434,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      981 => 
+      981 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'kurikulum.data.export_sub_cpmk',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2457,19 +2457,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1032 => 
+      1032 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'penilaian.tahap_penilaian.data_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tahun_ajaran',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2480,20 +2480,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1065 => 
+      1065 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'penilaian.tahap_penilaian.export',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tahun_ajaran',
             1 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2504,19 +2504,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1083 => 
+      1083 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'penilaian.data_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tahun_ajaran',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2527,20 +2527,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1116 => 
+      1116 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'penilaian.export',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tahun_ajaran',
             1 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2551,20 +2551,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1157 => 
+      1157 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'export_rps',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
             1 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2575,19 +2575,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1201 => 
+      1201 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.teknik_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2598,19 +2598,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1228 => 
+      1228 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.export_teknik_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'type',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2621,19 +2621,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1271 => 
+      1271 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.add_teknik_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2643,17 +2643,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.store_teknik_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2663,19 +2663,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1307 => 
+      1307 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.add_minggu_rps',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2685,17 +2685,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.store_minggu_rps',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2705,19 +2705,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1340 => 
+      1340 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.add_peran_dosen',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2727,17 +2727,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.store_peran_dosen',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -2747,19 +2747,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1386 => 
+      1386 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.edit_teknik_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tp',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2769,17 +2769,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.update_teknik_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tp',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -2789,20 +2789,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1431 => 
+      1431 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.edit_minggu_rps',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeMingguRPS',
             1 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2812,18 +2812,18 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.update_minggu_rps',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeMingguRPS',
             1 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -2833,21 +2833,21 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1482 => 
+      1482 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.edit_peran_dosen',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'nip',
             1 => 'kodeRPS',
             2 => 'peranDosen',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2857,19 +2857,19 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.update_peran_dosen',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'nip',
             1 => 'kodeRPS',
             2 => 'peranDosen',
           ),
-          2 => 
+          2 =>
           array (
             'PUT' => 0,
           ),
@@ -2879,19 +2879,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1527 => 
+      1527 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.delete_teknik_penilaian',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'tp',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2902,20 +2902,20 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1568 => 
+      1568 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.delete_minggu_rps',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeMingguRPS',
             1 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2926,21 +2926,21 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1615 => 
+      1615 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.delete_peran_dosen',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'nip',
             1 => 'kodeRPS',
             2 => 'peranDosen',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2951,19 +2951,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1645 => 
+      1645 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.minggu_rps',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2974,19 +2974,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1674 => 
+      1674 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.peran_dosen',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2997,19 +2997,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1695 => 
+      1695 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'edit_rps.rps_show',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'kodeRPS',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -3020,19 +3020,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1726 => 
+      1726 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'tampilprofile',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'nip',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -3043,19 +3043,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1756 => 
+      1756 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'updateprofile',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'nip',
           ),
-          2 => 
+          2 =>
           array (
             'POST' => 0,
           ),
@@ -3065,19 +3065,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1791 => 
+      1791 =>
       array (
-        0 => 
+        0 =>
         array (
-          0 => 
+          0 =>
           array (
             '_route' => 'password.reset',
           ),
-          1 => 
+          1 =>
           array (
             0 => 'token',
           ),
-          2 => 
+          2 =>
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -3087,7 +3087,7 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 => 
+        1 =>
         array (
           0 => NULL,
           1 => NULL,
@@ -3101,17 +3101,17 @@ app('router')->setCompiledRoutes(
     ),
     4 => NULL,
   ),
-  'attributes' => 
+  'attributes' =>
   array (
-    'dusk.login' => 
+    'dusk.login' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '_dusk/login/{userId}/{guard?}',
-      'action' => 
+      'action' =>
       array (
         'middleware' => 'web',
         'uses' => 'Laravel\\Dusk\\Http\\Controllers\\UserController@login',
@@ -3119,33 +3119,33 @@ app('router')->setCompiledRoutes(
         'controller' => 'Laravel\\Dusk\\Http\\Controllers\\UserController@login',
         'namespace' => NULL,
         'prefix' => '_dusk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'dusk.logout' => 
+    'dusk.logout' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '_dusk/logout/{guard?}',
-      'action' => 
+      'action' =>
       array (
         'middleware' => 'web',
         'uses' => 'Laravel\\Dusk\\Http\\Controllers\\UserController@logout',
@@ -3153,33 +3153,33 @@ app('router')->setCompiledRoutes(
         'controller' => 'Laravel\\Dusk\\Http\\Controllers\\UserController@logout',
         'namespace' => NULL,
         'prefix' => '_dusk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'dusk.user' => 
+    'dusk.user' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '_dusk/user/{guard?}',
-      'action' => 
+      'action' =>
       array (
         'middleware' => 'web',
         'uses' => 'Laravel\\Dusk\\Http\\Controllers\\UserController@user',
@@ -3187,72 +3187,72 @@ app('router')->setCompiledRoutes(
         'controller' => 'Laravel\\Dusk\\Http\\Controllers\\UserController@user',
         'namespace' => NULL,
         'prefix' => '_dusk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'sanctum.csrf-cookie' => 
+    'sanctum.csrf-cookie' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'sanctum/csrf-cookie',
-      'action' => 
+      'action' =>
       array (
         'uses' => 'Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController@show',
         'controller' => 'Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController@show',
         'namespace' => NULL,
         'prefix' => 'sanctum',
-        'where' => 
+        'where' =>
         array (
         ),
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
         'as' => 'sanctum.csrf-cookie',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'ignition.healthCheck' => 
+    'ignition.healthCheck' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '_ignition/health-check',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'Spatie\\LaravelIgnition\\Http\\Middleware\\RunnableSolutionsEnabled',
         ),
@@ -3261,34 +3261,34 @@ app('router')->setCompiledRoutes(
         'as' => 'ignition.healthCheck',
         'namespace' => NULL,
         'prefix' => '_ignition',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'ignition.executeSolution' => 
+    'ignition.executeSolution' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => '_ignition/execute-solution',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'Spatie\\LaravelIgnition\\Http\\Middleware\\RunnableSolutionsEnabled',
         ),
@@ -3297,34 +3297,34 @@ app('router')->setCompiledRoutes(
         'as' => 'ignition.executeSolution',
         'namespace' => NULL,
         'prefix' => '_ignition',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'ignition.updateConfig' => 
+    'ignition.updateConfig' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => '_ignition/update-config',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'Spatie\\LaravelIgnition\\Http\\Middleware\\RunnableSolutionsEnabled',
         ),
@@ -3333,35 +3333,35 @@ app('router')->setCompiledRoutes(
         'as' => 'ignition.updateConfig',
         'namespace' => NULL,
         'prefix' => '_ignition',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::N6M2husEYXH3pNi9' => 
+    'generated::N6M2husEYXH3pNi9' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'api/user',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'api',
           1 => 'auth:sanctum',
@@ -3371,36 +3371,36 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005390000000000000000";}";s:4:"hash";s:44:"oAB0jtKYWZNKyVGi51P/TlQC6ixC9iUhl5zdneK4qJc=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::N6M2husEYXH3pNi9',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::yMBSYImtivSQUfod' => 
+    'generated::yMBSYImtivSQUfod' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '/',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -3409,36 +3409,36 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000053b0000000000000000";}";s:4:"hash";s:44:"jN80eX/uwvZ/xPeijWmCEgAMrIqgU/v6aotLs54E5P8=";}}',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::yMBSYImtivSQUfod',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'login' => 
+    'login' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'login',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -3446,35 +3446,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@login',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'login',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'proseslogin' => 
+    'proseslogin' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'proseslogin',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -3482,36 +3482,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@proseslogin',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'proseslogin',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'loginfailed' => 
+    'loginfailed' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'loginfailed',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -3519,35 +3519,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@loginfailed',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'loginfailed',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'logout1' => 
+    'logout1' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'logout',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -3555,36 +3555,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@logout',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'logout1',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'logout2' => 
+    'logout2' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'logout',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -3592,36 +3592,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@logout',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'logout2',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::aENh5HsvQHPzPQiR' => 
+    'generated::aENh5HsvQHPzPQiR' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'test',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -3646,36 +3646,36 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005420000000000000000";}";s:4:"hash";s:44:"4evQVLPczAVBv09vOqZjbL9ua5uSK3KhnXhNWMkFOvY=";}}',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::aENh5HsvQHPzPQiR',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'profil kurikulum' => 
+    'profil kurikulum' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -3684,36 +3684,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@myprofile',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'profil kurikulum',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'profildosen' => 
+    'profildosen' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/dosen',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -3722,36 +3722,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@myprofile',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'profildosen',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'profiladmin' => 
+    'profiladmin' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/admin',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin',
@@ -3760,35 +3760,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@myprofile',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'profiladmin',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.update_pemetaan_bk_mk' => 
+    'kurikulum.pemetaan.update_pemetaan_bk_mk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/bk-mk/update',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -3798,34 +3798,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.update_pemetaan_bk_mk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.update_pemetaan_cpl_bk' => 
+    'kurikulum.pemetaan.update_pemetaan_cpl_bk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk/update',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -3835,34 +3835,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.update_pemetaan_cpl_bk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.update_susunan_mk' => 
+    'kurikulum.pemetaan.update_susunan_mk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/susunan-mata-kuliah/update',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -3872,34 +3872,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.update_susunan_mk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.update_pemetaan_cpldikti_cplprodi' => 
+    'kurikulum.pemetaan.update_pemetaan_cpldikti_cplprodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/update',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -3909,34 +3909,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.update_pemetaan_cpldikti_cplprodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.update_pemetaan_cpl_pl' => 
+    'kurikulum.pemetaan.update_pemetaan_cpl_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-pl/update',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -3946,35 +3946,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.update_pemetaan_cpl_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.bk_mk' => 
+    'kurikulum.pemetaan.bk_mk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/bk-mk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -3984,35 +3984,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.bk_mk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.exportExcel' => 
+    'kurikulum.pemetaan.exportExcel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/bk-mk/exportExcel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4022,35 +4022,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.exportExcel',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.exportPdf' => 
+    'kurikulum.pemetaan.exportPdf' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/bk-mk/exportPdf',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4060,35 +4060,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.exportPdf',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_bk' => 
+    'kurikulum.pemetaan.cpl_bk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4098,35 +4098,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cpl_bk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cetakpdfcplbk' => 
+    'kurikulum.pemetaan.cetakpdfcplbk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cetak-pdf-cplbk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4136,35 +4136,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cetakpdfcplbk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cetakexcelcplbk' => 
+    'kurikulum.pemetaan.cetakexcelcplbk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cetak-excel-cplbk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4174,35 +4174,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cetakexcelcplbk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_bk_mk' => 
+    'kurikulum.pemetaan.cpl_bk_mk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk-mk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4212,35 +4212,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cpl_bk_mk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.exportPdfCplBkMk' => 
+    'kurikulum.pemetaan.exportPdfCplBkMk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk-mk/exportPdf',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4250,35 +4250,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.exportPdfCplBkMk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.exportExcelCplBkMk' => 
+    'kurikulum.pemetaan.exportExcelCplBkMk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-bk-mk/exportExcel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4288,35 +4288,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.exportExcelCplBkMk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.susunan_mata_kuliah' => 
+    'kurikulum.pemetaan.susunan_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/susunan-mata-kuliah',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4326,35 +4326,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.susunan_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.susunan_mk.export.pdf' => 
+    'kurikulum.pemetaan.susunan_mk.export.pdf' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/pdf',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4364,35 +4364,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.susunan_mk.export.pdf',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.susunan_mk.export.excel' => 
+    'kurikulum.pemetaan.susunan_mk.export.excel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/susunan-mata-kuliah/export/excel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4402,35 +4402,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.susunan_mk.export.excel',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.organisasi_mata_kuliah' => 
+    'kurikulum.pemetaan.organisasi_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/organisasi-mata-kuliah',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4440,35 +4440,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.organisasi_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.organisasi_mk.export.pdf' => 
+    'kurikulum.pemetaan.organisasi_mk.export.pdf' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/pdf',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4478,35 +4478,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.organisasi_mk.export.pdf',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.organisasi_mk.export.excel' => 
+    'kurikulum.pemetaan.organisasi_mk.export.excel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/organisasi-mata-kuliah/export/excel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4516,35 +4516,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.organisasi_mk.export.excel',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_sndikti_cpl_prodi' => 
+    'kurikulum.pemetaan.cpl_sndikti_cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4554,35 +4554,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cpl_sndikti_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.' => 
+    'kurikulum.pemetaan.' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/cetak',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4592,35 +4592,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.table_cpldikti_cplprodi' => 
+    'kurikulum.pemetaan.table_cpldikti_cplprodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/table',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4630,35 +4630,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.table_cpldikti_cplprodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.export' => 
+    'kurikulum.pemetaan.export' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-sndikti-cpl-prodi/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4668,35 +4668,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.export',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_mk' => 
+    'kurikulum.pemetaan.cpl_mk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-mk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4706,35 +4706,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cpl_mk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cetakpdfcplmk' => 
+    'kurikulum.pemetaan.cetakpdfcplmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cetak-pdf-cplmk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4744,35 +4744,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cetakpdfcplmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cetakexcelcplmk' => 
+    'kurikulum.pemetaan.cetakexcelcplmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cetak-excel-cplmk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4782,35 +4782,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cetakexcelcplmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_pl' => 
+    'kurikulum.pemetaan.cpl_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-pl',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4820,35 +4820,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.cpl_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.export_cpl_pl' => 
+    'kurikulum.pemetaan.export_cpl_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-pl/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -4858,35 +4858,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.export_cpl_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/add_cpmk/{cpl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -4896,34 +4896,34 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@create',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.store' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.store' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/add_cpmk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -4933,35 +4933,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@store',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/edit_cpmk/{cpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -4971,34 +4971,34 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@edit',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.update' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.update' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/edit_cpmk/{cpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5008,35 +5008,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@update',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.index' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.index' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5046,35 +5046,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@index',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.export' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.export' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/export',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5084,35 +5084,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@cetakpdf',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.export-excel' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.export-excel' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcel',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5122,35 +5122,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@exportExcel',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.matrix' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.matrix' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/matriks',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5160,35 +5160,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@matrix',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportmatrixpdf',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5198,35 +5198,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@matrixcetakpdf',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix' => 
+    'kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk/exportexcelmatrix',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5236,35 +5236,35 @@ app('router')->setCompiledRoutes(
         'controller' => '\\App\\Http\\Controllers\\CPMKController@exportExcelmatrix',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan/cpl-cpmk-mk',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.mk_cpmk_subcpmk' => 
+    'kurikulum.pemetaan.mk_cpmk_subcpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5274,35 +5274,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.mk_cpmk_subcpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.pemetaan.export_mk-cpmk-subcpmk' => 
+    'kurikulum.pemetaan.export_mk-cpmk-subcpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -5312,35 +5312,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.pemetaan.export_mk-cpmk-subcpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/pemetaan',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.' => 
+    'kurikulum.' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/generate',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -5349,35 +5349,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.',
         'namespace' => NULL,
         'prefix' => '/dashboard/kurikulum',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.add_pl' => 
+    'kurikulum.data.add_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/addProfilLulusan',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5387,34 +5387,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.add_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.store_pl' => 
+    'kurikulum.data.store_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/data/addProfilLulusan',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5424,35 +5424,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.store_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.edit_pl' => 
+    'kurikulum.data.edit_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/editProfilLulusan/{pl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5462,34 +5462,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.edit_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.update_pl' => 
+    'kurikulum.data.update_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/data/editProfilLulusan/{pl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5499,35 +5499,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.update_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.delete_pl' => 
+    'kurikulum.data.delete_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/deleteProfilLulusan/{pl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5537,35 +5537,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.delete_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.add_cpl_dikti' => 
+    'kurikulum.data.add_cpl_dikti' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/addCPLDikti',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5575,34 +5575,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.add_cpl_dikti',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.store_cpl_dikti' => 
+    'kurikulum.data.store_cpl_dikti' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/data/addCPLDikti',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5612,35 +5612,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.store_cpl_dikti',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.edit_cpl_dikti' => 
+    'kurikulum.data.edit_cpl_dikti' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/editCPLDikti/{cpl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5650,34 +5650,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.edit_cpl_dikti',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.update_cpl_dikti' => 
+    'kurikulum.data.update_cpl_dikti' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/data/editCPLDikti/{cpl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5687,35 +5687,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.update_cpl_dikti',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.delete_cpl_dikti' => 
+    'kurikulum.data.delete_cpl_dikti' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/deleteCPLDikti/{cpl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5725,35 +5725,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.delete_cpl_dikti',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.add_cpl_prodi' => 
+    'kurikulum.data.add_cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/addCPLProdi',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5763,34 +5763,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.add_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.store_cpl_prodi' => 
+    'kurikulum.data.store_cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/data/addCPLProdi',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5800,35 +5800,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.store_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.edit_cpl_prodi' => 
+    'kurikulum.data.edit_cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/editCPLProdi/{cpl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5838,34 +5838,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.edit_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.update_cpl_prodi' => 
+    'kurikulum.data.update_cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/data/editCPLProdi/{cpl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5875,35 +5875,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.update_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.delete_cpl_prodi' => 
+    'kurikulum.data.delete_cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/deleteCPLProdi/{cpl}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5913,35 +5913,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.delete_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.add_bahan_kajian' => 
+    'kurikulum.data.add_bahan_kajian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/addBahanKajian',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5951,34 +5951,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.add_bahan_kajian',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.store_bahan_kajian' => 
+    'kurikulum.data.store_bahan_kajian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/data/addBahanKajian',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -5988,35 +5988,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.store_bahan_kajian',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.edit_bahan_kajian' => 
+    'kurikulum.data.edit_bahan_kajian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/editBahanKajian/{bk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6026,34 +6026,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.edit_bahan_kajian',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.update_bahan_kajian' => 
+    'kurikulum.data.update_bahan_kajian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/data/editBahanKajian/{bk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6063,35 +6063,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.update_bahan_kajian',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.delete_bahan_kajian' => 
+    'kurikulum.data.delete_bahan_kajian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/deleteBahanKajian/{bk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6101,35 +6101,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.delete_bahan_kajian',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.add_mata_kuliah' => 
+    'kurikulum.data.add_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/addMataKuliah',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6139,34 +6139,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.add_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.store_mata_kuliah' => 
+    'kurikulum.data.store_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/data/addMataKuliah',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6176,35 +6176,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.store_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.edit_mata_kuliah' => 
+    'kurikulum.data.edit_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/editMataKuliah/{mk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6214,34 +6214,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.edit_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.update_mata_kuliah' => 
+    'kurikulum.data.update_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/data/editMataKuliah/{mk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6251,35 +6251,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.update_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.delete_mata_kuliah' => 
+    'kurikulum.data.delete_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/deleteMataKuliah/{mk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6289,35 +6289,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.delete_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.add_cpmk' => 
+    'kurikulum.data.add_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/addCPMK',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6327,34 +6327,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.add_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.store_cpmk' => 
+    'kurikulum.data.store_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/data/addCPMK',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6364,35 +6364,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.store_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.edit_cpmk' => 
+    'kurikulum.data.edit_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/editCPMK/{cpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6402,34 +6402,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.edit_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.update_cpmk' => 
+    'kurikulum.data.update_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/data/editCPMK/{cpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6439,35 +6439,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.update_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.delete_cpmk' => 
+    'kurikulum.data.delete_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/deleteCPMK/{cpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6477,35 +6477,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.delete_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.add_sub_cpmk' => 
+    'kurikulum.data.add_sub_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/addSubCPMK',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6515,34 +6515,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.add_sub_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.store_sub_cpmk' => 
+    'kurikulum.data.store_sub_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/kurikulum/data/addSubCPMK',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6552,35 +6552,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.store_sub_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.edit_sub_cpmk' => 
+    'kurikulum.data.edit_sub_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/editSubCPMK/{scpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6590,34 +6590,34 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.edit_sub_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.update_sub_cpmk' => 
+    'kurikulum.data.update_sub_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/kurikulum/data/editSubCPMK/{scpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6627,35 +6627,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.update_sub_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.delete_sub_cpmk' => 
+    'kurikulum.data.delete_sub_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/deleteSubCPMK/{scpmk}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:kurikulum',
@@ -6665,35 +6665,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.delete_sub_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.profil_lulusan' => 
+    'kurikulum.data.profil_lulusan' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/profilLulusan',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6703,35 +6703,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.profil_lulusan',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.export_pl' => 
+    'kurikulum.data.export_pl' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/profilLulusan/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6741,35 +6741,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.export_pl',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.cpl_sndikti' => 
+    'kurikulum.data.cpl_sndikti' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/cpl_dikti',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6779,35 +6779,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.cpl_sndikti',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.export_cpl_dikti' => 
+    'kurikulum.data.export_cpl_dikti' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/cpl_dikti/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6817,35 +6817,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.export_cpl_dikti',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.cpl_prodi' => 
+    'kurikulum.data.cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/cpl_prodi',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6855,35 +6855,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.export_cpl_prodi' => 
+    'kurikulum.data.export_cpl_prodi' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/cpl_prodi/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6893,35 +6893,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.export_cpl_prodi',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.bahan_kajian' => 
+    'kurikulum.data.bahan_kajian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/bahan_kajian',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6931,35 +6931,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.bahan_kajian',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.export_bahan_kajian' => 
+    'kurikulum.data.export_bahan_kajian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/bahan_kajian/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -6969,35 +6969,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.export_bahan_kajian',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.mata_kuliah' => 
+    'kurikulum.data.mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/mata_kuliah',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -7007,35 +7007,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.export_mata_kuliah' => 
+    'kurikulum.data.export_mata_kuliah' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/mata_kuliah/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -7045,35 +7045,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.export_mata_kuliah',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.cpmk' => 
+    'kurikulum.data.cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/cpmk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -7083,35 +7083,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.export_cpmk' => 
+    'kurikulum.data.export_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/cpmk/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -7121,35 +7121,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.export_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.sub_cpmk' => 
+    'kurikulum.data.sub_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/sub_cpmk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -7159,35 +7159,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.sub_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'kurikulum.data.export_sub_cpmk' => 
+    'kurikulum.data.export_sub_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/kurikulum/data/sub_cpmk/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:admin,dosen,kurikulum',
@@ -7197,35 +7197,35 @@ app('router')->setCompiledRoutes(
         'as' => 'kurikulum.data.export_sub_cpmk',
         'namespace' => NULL,
         'prefix' => 'dashboard/kurikulum/data',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'penilaian.tahap_penilaian.index' => 
+    'penilaian.tahap_penilaian.index' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/penilaian/tahap-penilaian',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7235,35 +7235,35 @@ app('router')->setCompiledRoutes(
         'as' => 'penilaian.tahap_penilaian.index',
         'namespace' => NULL,
         'prefix' => 'dashboard/penilaian/tahap-penilaian',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'penilaian.tahap_penilaian.data_penilaian' => 
+    'penilaian.tahap_penilaian.data_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/penilaian/tahap-penilaian/{tahun_ajaran}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7273,35 +7273,35 @@ app('router')->setCompiledRoutes(
         'as' => 'penilaian.tahap_penilaian.data_penilaian',
         'namespace' => NULL,
         'prefix' => 'dashboard/penilaian/tahap-penilaian',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'penilaian.tahap_penilaian.export' => 
+    'penilaian.tahap_penilaian.export' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/penilaian/tahap-penilaian/export/{tahun_ajaran}/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7311,35 +7311,35 @@ app('router')->setCompiledRoutes(
         'as' => 'penilaian.tahap_penilaian.export',
         'namespace' => NULL,
         'prefix' => 'dashboard/penilaian/tahap-penilaian',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'penilaian.tp_cpmk' => 
+    'penilaian.tp_cpmk' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/penilaian/penilaiancpmk',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7349,35 +7349,35 @@ app('router')->setCompiledRoutes(
         'as' => 'penilaian.tp_cpmk',
         'namespace' => NULL,
         'prefix' => '/dashboard/penilaian',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'penilaian.data_penilaian' => 
+    'penilaian.data_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/penilaian/{tahun_ajaran}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7387,35 +7387,35 @@ app('router')->setCompiledRoutes(
         'as' => 'penilaian.data_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/penilaian',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'penilaian.export' => 
+    'penilaian.export' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/penilaian/export/{tahun_ajaran}/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7425,35 +7425,35 @@ app('router')->setCompiledRoutes(
         'as' => 'penilaian.export',
         'namespace' => NULL,
         'prefix' => '/dashboard/penilaian',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'rps' => 
+    'rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7462,36 +7462,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\RpsController@index',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'rps',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'index' => 
+    'index' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/cari_rps',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7500,35 +7500,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\RpsController@index',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'index',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'processForm' => 
+    'processForm' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/cari_rps',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7537,36 +7537,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\RpsController@processData',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'processForm',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'export_rps' => 
+    'export_rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/export/{type}/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7575,36 +7575,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\RpsController@export',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'export_rps',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::3JJMf2DJxjyaKwKV' => 
+    'generated::3JJMf2DJxjyaKwKV' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'generate-pdf',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen,admin,kurikulum',
@@ -7613,36 +7613,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'PDFController@generatePDF',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'generated::3JJMf2DJxjyaKwKV',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.teknik_penilaian' => 
+    'edit_rps.teknik_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/teknik_penilaian/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7652,35 +7652,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.teknik_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.add_teknik_penilaian' => 
+    'edit_rps.add_teknik_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/addTeknikPenilaian/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7690,34 +7690,34 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.add_teknik_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.store_teknik_penilaian' => 
+    'edit_rps.store_teknik_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/rps/edit/addTeknikPenilaian/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7727,35 +7727,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.store_teknik_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.edit_teknik_penilaian' => 
+    'edit_rps.edit_teknik_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/editTeknikPenilaian/{tp}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7765,34 +7765,34 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.edit_teknik_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.update_teknik_penilaian' => 
+    'edit_rps.update_teknik_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/rps/edit/editTeknikPenilaian/{tp}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7802,35 +7802,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.update_teknik_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.delete_teknik_penilaian' => 
+    'edit_rps.delete_teknik_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/deleteTeknikPenilaian/{tp}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7840,35 +7840,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.delete_teknik_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.export_teknik_penilaian' => 
+    'edit_rps.export_teknik_penilaian' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/teknik_pdf/export/{type}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7878,35 +7878,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.export_teknik_penilaian',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.minggu_rps' => 
+    'edit_rps.minggu_rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/minggu_rps/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7916,35 +7916,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.minggu_rps',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.add_minggu_rps' => 
+    'edit_rps.add_minggu_rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/add_minggu_rps/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7954,34 +7954,34 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.add_minggu_rps',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.store_minggu_rps' => 
+    'edit_rps.store_minggu_rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/rps/edit/add_minggu_rps/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -7991,35 +7991,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.store_minggu_rps',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.edit_minggu_rps' => 
+    'edit_rps.edit_minggu_rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8029,34 +8029,34 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.edit_minggu_rps',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.update_minggu_rps' => 
+    'edit_rps.update_minggu_rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/rps/edit/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8066,35 +8066,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.update_minggu_rps',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.delete_minggu_rps' => 
+    'edit_rps.delete_minggu_rps' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8104,35 +8104,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.delete_minggu_rps',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.peran_dosen' => 
+    'edit_rps.peran_dosen' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/peran_dosen/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8142,35 +8142,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.peran_dosen',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.add_peran_dosen' => 
+    'edit_rps.add_peran_dosen' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/add_peran_dosen/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8180,34 +8180,34 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.add_peran_dosen',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.store_peran_dosen' => 
+    'edit_rps.store_peran_dosen' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/rps/edit/add_peran_dosen/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8217,35 +8217,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.store_peran_dosen',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.edit_peran_dosen' => 
+    'edit_rps.edit_peran_dosen' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8255,34 +8255,34 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.edit_peran_dosen',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.update_peran_dosen' => 
+    'edit_rps.update_peran_dosen' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'PUT',
       ),
       'uri' => 'dashboard/rps/edit/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8292,35 +8292,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.update_peran_dosen',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.delete_peran_dosen' => 
+    'edit_rps.delete_peran_dosen' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8330,35 +8330,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.delete_peran_dosen',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'edit_rps.rps_show' => 
+    'edit_rps.rps_show' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/edit/rps/{kodeRPS}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8368,35 +8368,35 @@ app('router')->setCompiledRoutes(
         'as' => 'edit_rps.rps_show',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
-        'where' => 
+        'where' =>
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'rps_create' => 
+    'rps_create' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'dashboard/rps/create',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8405,35 +8405,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\RpsController@create',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'rps_create',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'rps_store' => 
+    'rps_store' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'dashboard/rps/store',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'role:dosen',
@@ -8442,36 +8442,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\RpsController@store',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'rps_store',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'tampilprofile' => 
+    'tampilprofile' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'ubahpw/{nip}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -8479,35 +8479,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@ubahpw',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'tampilprofile',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'updateprofile' => 
+    'updateprofile' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'updateprofile/{nip}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
         ),
@@ -8515,36 +8515,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\LoginController@updateprofile',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'updateprofile',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.request' => 
+    'password.request' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'forgot-password',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'guest',
@@ -8554,35 +8554,35 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005c50000000000000000";}";s:4:"hash";s:44:"Z/wuE0rC1jxJVPDqpdEXQKmmomNGjXppxjdm56yxRao=";}}',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'password.request',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.email' => 
+    'password.email' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'forgot-password',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'guest',
@@ -8600,36 +8600,36 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005c70000000000000000";}";s:4:"hash";s:44:"A03j3txGAGLQu/CFWDcfxp/hSMqznuE+ZYR4k/oKzsY=";}}',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'password.email',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.reset' => 
+    'password.reset' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'reset-password/{token}',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'guest',
@@ -8639,35 +8639,35 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005c90000000000000000";}";s:4:"hash";s:44:"Xmy4kiaEZW7azZO2iuDPbNlnY039/3qJo0S4ErrUCkE=";}}',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'password.reset',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.update' => 
+    'password.update' =>
     array (
-      'methods' => 
+      'methods' =>
       array (
         0 => 'POST',
       ),
       'uri' => 'reset-password',
-      'action' => 
+      'action' =>
       array (
-        'middleware' => 
+        'middleware' =>
         array (
           0 => 'web',
           1 => 'guest',
@@ -8698,19 +8698,19 @@ app('router')->setCompiledRoutes(
 }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005cb0000000000000000";}";s:4:"hash";s:44:"NdE/pleVmfH2xdnCFHDGuwQ4UTr8ufNx52hOUrn/DT8=";}}',
         'namespace' => NULL,
         'prefix' => '',
-        'where' => 
+        'where' =>
         array (
         ),
         'as' => 'password.update',
       ),
       'fallback' => false,
-      'defaults' => 
+      'defaults' =>
       array (
       ),
-      'wheres' => 
+      'wheres' =>
       array (
       ),
-      'bindingFields' => 
+      'bindingFields' =>
       array (
       ),
       'lockSeconds' => NULL,

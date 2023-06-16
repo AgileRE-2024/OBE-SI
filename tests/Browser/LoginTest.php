@@ -111,7 +111,7 @@ class LoginTest extends DuskTestCase
                     ->assertSee('Selamat Datang')
                     ->type('nip','32525252523')
                     ->type('password','coba12345')
-                    ->press('Masuk')
+                    ->press('tombolLogin')
                     ->assertSee('Selamat')
                     ->pause(2000)
                     ->press('Keluar');
