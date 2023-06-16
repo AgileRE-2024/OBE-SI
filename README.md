@@ -2,21 +2,23 @@
 Project Kuliah Pembangunan Perangkat Lunak
 
 - Penjelasan umum deskripsi project <br>
-  Project ini merupakan
+  Project ini merupakan sistem informasi untuk kurikulum program studi Sistem Informasi yang berbasis web. Project ini dibangun menggunakan Framework Laravel dan menggunakan database MySQL. Project ini berisi 3  fitur, antara lain Kurikulum, Penilaian, dan RPS. Setiap fitur dilakukan pemecahan menjadi banyak fitur. Kurikulum dibagi menjadi dua fitur dibawahnya, antara lain Data dan Pemetaan. Data adalah fitur yang digunakan untuk melakukan CRUD Master Data. Data yang digunakan adalah Profil Lulusan, CPL SNDikti, CPL Prodi, Bahan Kajian, Mata Kuliah, CPMK, dan Sub-CPMK. Sedangkan Pemetaan adalah matriks hubungan antara beberapa master data. Pemetaan matriks yang tersedia adalah BK-MK, CPL-BK, CPL-BK-MK, Susunan Mata Kuliah, Organisasi Mata Kuliah, CPL SNDikti-CPL Prodi, CPL-PL, CPL-CPMK-MK, dan MK-CPMK-SUBCPMK. Fitur Penilaian adalah pemetaan yang berfungsi untuk melihat jenis-jenis penilaian berdasarkan tahun. Lalu, Fitur RPS adalah untuk menampilkan dan membuat Rencana Pembelajaran Semester. RPS menampilkan fitur mencari RPS berdasarkan tahun. Jika belum tersedia, dapat dilakukan pembuatan. Jika tersedia, dapat dilakukan pengubahan data pada RPS.
 - Petunjuk Instalasi<br>
   Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
-    1. Setelah tools telah terpasang secara sempurna, masuk ke dalam direktori xampp yang dimana file tersebut disimpan.
-    2. Masuk ke dalam direktori folder baru tersebut
-    3. Klik kanan dan pilih Open in Terminal
-    4. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git" 
-    5. Selanjutnya, ketik masuk ke folder OBE-SI dan ketik "composer update"
-    6. Lalu, ketik "cp .env.example .env"
-    7. Kemudian buat database baru lalu buka file .env untuk merubah DB_DATABASE sesuai database yang dibuat.
-    8. Lalu, ketik "php artisan key:generate"
-    9. Ketik "php artisan migrate:fresh --seed"
-    10. Ketik "php artisan serve"
-    11. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000"
-    12. Jika terdapat pesan error, coba jalankan "php artisan optimize"
+    1. Aktifkan XAMPP dengan membuka XAMPP Control Panel. Tekan tombol "Start" pada module Apache dan MySQL.
+    2. Jika baru pertama kali, buka http://localhost/phpmyadmin/index.php dan klik menu Database pada sebelah atas. Ketik "laravel" pada  kolom input database name dan klik tombol create.
+    4. Setelah tools telah terpasang secara sempurna, masuk ke dalam direktori xampp yang dimana file tersebut disimpan saat dilakukan penginstallan pertama kali
+    5. Buatlah sebuah folder dengan nama bebas dan masuk ke dalam direktori folder baru tersebut
+    6. Klik kanan dan pilih Open in Terminal
+    7. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git" 
+    8. Selanjutnya, ketik masuk ke folder OBE-SI dan ketik "composer update"
+    9. Lalu, ketik "cp .env.example .env"
+    10. Kemudian buat database baru lalu buka file .env untuk merubah DB_DATABASE sesuai database yang dibuat.
+    11. Lalu, ketik "php artisan key:generate"
+    12. Ketik "php artisan migrate:fresh --seed"
+    13. Ketik "php artisan serve"
+    14. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000"
+    15. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 - Langkah-langkah Penggunaan
     1. Terdapat 3 role yaitu Admin, Kurikulum, dan Dosen
     2. Role Admin (role=2) merupakan role yang mempunyai hak untuk melihat semua fitur yang ada tanpa terlibat dengan Create, Update, dan Delete pada fitur tersebut.
