@@ -33,4 +33,10 @@
                         </div>
                         <center class="mt-3">
                             <button style="text-align:center" type="submit" class="btn btn-light">Ubah Kata Sandi</button>
-                        @endsection
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </center>
+@endsection
