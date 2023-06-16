@@ -67,35 +67,12 @@ class DatabaseSeeder extends Seeder
             'deskripsi' => 'Pemetaan CPL terhadap MK dilakukan untuk menunjukkan keterhubungan antara mata kuliah terhadap CPL Program Studi pada Tabel 9 Pemetaan CPL terhadap MK.',
         ]);
 
-        $this->call(MataKuliahSeeder::class);
-        // Mata_Kuliah::create([
-        //     'kodeMK' => 'SII103',
-        //     'namaMK' => 'Konsep Sistem Informasi',
-        //     'jenisMK' => TRUE,
-        //     'sks' => 3,
-        //     'semester' => '1',
-        //     'kategoriMK' => TRUE,
-        //     'pustaka' => 'Pustaka Belum Tau',
-        //     'deskripsiMK' => 'Deskripsi MK Belum Tau',
-        //     'prasyaratTambahan' => 'Prasyarat MK Belum Tau',
-        //     'mat_kodeMK' => 'SII103',
-        // ]);
 
-        // Mata_Kuliah::create([
-        //     'kodeMK' => 'PHP103',
-        //     'namaMK' => 'Sistem Informasi Manajemen',
-        //     'jenisMK' => TRUE,
-        //     'sks' => 3,
-        //     'semester' => '2',
-        //     'kategoriMK' => TRUE,
-        //     'pustaka' => 'Pustaka Belum Tau',
-        //     'deskripsiMK' => 'Deskripsi MK Belum Tau',
-        //     'prasyaratTambahan' => 'Prasyarat MK Belum Tau',
-        //     'mat_kodeMK' => 'SII103',
-        // ]);
+        $this->call(MataKuliahSeeder::class);
+
 
         User::create([
-            'nip' => '123456789987654321',
+            'nip' => '197102111997021001',
             'jabatanDosen' => 'kps',
             'namaDosen' => 'Rimuljo',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
@@ -105,7 +82,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::create([
-            'nip' => '32532425252',
+            'nip' => '197101042008121001',
             'jabatanDosen' => 'Dosen',
             'namaDosen' => 'Taufik',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
@@ -124,17 +101,17 @@ class DatabaseSeeder extends Seeder
             'status' => "Aktif Bekerja"
         ]);
         User::create([
-            'nip' => '123456789987654322',
+            'nip' => '198410272010122005',
             'jabatanDosen' => 'lektor',
-            'namaDosen' => 'Guntur',
+            'namaDosen' => 'Ira Puspitasari',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email' => 'Guntur@gmail.com',
             'role' => true,
         ]);
         User::create([
-            'nip' => '123456789987654323',
+            'nip' => '198206062007101001',
             'jabatanDosen' => 'lektor',
-            'namaDosen' => 'Petir',
+            'namaDosen' => 'Faried Effendy',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email' => 'Petir@gmail.com',
             'role' => true,
@@ -143,16 +120,9 @@ class DatabaseSeeder extends Seeder
         RPS::create([
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2022,
-            'pustaka' => 'isi pustaka',
-            'kodeMK' => 'SII103',
-            'kps' => '123456789987654321'
-        ],);
-        RPS::create([
-            'kodeRPS' => 'RPS003',
-            'tahunAjaran' => 2022,
-            'pustaka' => 'isi pustaka',
-            'kodeMK' => 'SII103',
-            'kps' => '123456789987654321'
+            'pustaka'=> 'Johnson and Wichern, 2002. Applied Multivariate Statistical Analysis, Prentice Hall.',
+            'kodeMK' => 'SIJ202',
+            'kps' => '197102111997021001'
         ],);
 
         CPMK::create([
@@ -204,24 +174,24 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'kodeMingguRPS' => '2',
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'mingguKe' => '1',
-            'bentukPembelajaran' => true,
-            'indikatorMingguRPS' => 'Isi indikator RPS',
-            'kriteriaMingguRPS' => 'Isi kriteria RPS',
-            'deskripsiPembelajaran' => 'Isi deskripsi pembelajaran RPS',
-            'materiPembelajaran' => 'Isi materi pembelajaran RPS',
+            'kodeMingguRPS'=> '2',
+            'kodeSubCPMK'=> 'Sub-CPMK0111',
+            'mingguKe'=>'1',
+            'bentukPembelajaran'=>true,
+            'indikatorMingguRPS'=>'Mahasiswa dapat mengimplementasikan visualisasi data dan grafik pada tools yang ditentukan',
+            'kriteriaMingguRPS'=>'Ketepatan dan penguasaan',
+            'deskripsiPembelajaran'=>'Visualisasi data dengan membuat dan menginterpretasikan grafik',
+            'materiPembelajaran'=>'Pengenalan R Studio',
         ]);
         Minggu_RPS::create([
-            'kodeMingguRPS' => '3',
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'mingguKe' => '2',
-            'bentukPembelajaran' => false,
-            'indikatorMingguRPS' => 'Isi indikator RPS',
-            'kriteriaMingguRPS' => 'Isi kriteria RPS',
-            'deskripsiPembelajaran' => 'Isi deskripsi pembelajaran RPS',
-            'materiPembelajaran' => 'Isi materi pembelajaran RPS',
+            'kodeMingguRPS'=> '3',
+            'kodeSubCPMK'=> 'Sub-CPMK0111',
+            'mingguKe'=>'2',
+            'bentukPembelajaran'=>false,
+            'indikatorMingguRPS'=>'Mahasiswa dapat menghitung standar deviasi pada tools yang ditentukan',
+            'kriteriaMingguRPS'=>'Ketepatan dan sistematika',
+            'deskripsiPembelajaran'=>'Mengukur penyebaran data menggunakan rentang dan deviasi standar serta mengidentifikasi outlier dalam data set menggunakan konsep rentang interkuartil',
+            'materiPembelajaran'=>'Standar Deviasi pada R Studio',
         ]);
 
         Mahasiswa::create([
@@ -823,17 +793,17 @@ class DatabaseSeeder extends Seeder
 
         Detail_Peran_Dosen::create([
             'kodeRPS' => 'RPS001',
-            'nip' => '123456789987654321',
+            'nip' => '198206062007101001',
             'peranDosen' => 'Dosen Pengembang RPS',
         ]);
         Detail_Peran_Dosen::create([
             'kodeRPS' => 'RPS001',
-            'nip' => '123456789987654322',
+            'nip' => '197101042008121001',
             'peranDosen' => 'Koordinator BK',
         ]);
         Detail_Peran_Dosen::create([
             'kodeRPS' => 'RPS001',
-            'nip' => '123456789987654323',
+            'nip' => '197101042008121001',
             'peranDosen' => 'Dosen Pengampu',
         ]);
 

@@ -15,7 +15,7 @@
                         class="bi bi-ui-checks"> </i>Peran Dosen</a>
             </div>
             <div>
-                <a class="btn btn-success" href="{{ route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS]) }}" style="margin-right:7pt"><i
+                <a id="rencana" class="btn btn-success" href="{{ route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS]) }}" style="margin-right:7pt"><i
                         class="bi bi-ui-checks"> </i>Rencana Pembelajaran</a>
             </div>
             <div>
