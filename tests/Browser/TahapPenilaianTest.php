@@ -13,7 +13,7 @@ class TahapPenilaianTest extends DuskTestCase
     public function login($browser)
     {
         $browser->pause(500)
-            ->type('nip', '32525252523')
+            ->type('nip', '198110282006041003')
             ->pause(500)
             ->type('password', 'coba123')
             ->pause(500)

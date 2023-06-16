@@ -15,7 +15,7 @@ class PemetaanCPLPLTest extends DuskTestCase
     public function login($browser)
     {
         $browser->pause(500)
-            ->type('nip', '123456789987654321')
+            ->type('nip', '197801262006041001')
             ->pause(500)
             ->type('password', 'coba123')
             ->pause(500)

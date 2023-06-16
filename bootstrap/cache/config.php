@@ -4,13 +4,13 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://127.0.0.1:8000/',
+    'url' => 'http://localhost:8000',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:EcxhprgcAfEncGjIBqhZY3zWLshYbFiZYXSMLmmzPtE=',
+    'key' => 'base64:zqd5pBbD+k+2G7C48pCWALh/QxNU/ZW9UqMP33+RoKI=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -278,7 +278,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'obe-si',
+        'database' => 'obe_si',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -288,7 +288,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obe-si',
+        'database' => 'obe_si',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -308,7 +308,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obe-si',
+        'database' => 'obe_si',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -323,7 +323,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obe-si',
+        'database' => 'obe_si',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -367,10 +367,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\ASUS\\AppData\\Local\\Temp',
-      'chroot' => 'D:\\laravel\\New folder\\OBE-SI',
+      'font_dir' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\fonts',
+      'font_cache' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\ROBANU~1\\AppData\\Local\\Temp',
+      'chroot' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -415,14 +415,14 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\app',
+        'root' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\app/public',
-        'url' => 'http://127.0.0.1:8000//storage',
+        'root' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\app/public',
+        'url' => 'http://localhost:8000/storage',
         'visibility' => 'public',
         'throw' => false,
       ),
@@ -441,7 +441,7 @@
     ),
     'links' => 
     array (
-      'D:\\laravel\\New folder\\OBE-SI\\public\\storage' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\app/public',
+      'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\public\\storage' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -480,13 +480,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -538,7 +538,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -550,11 +550,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.gmail.com',
-        'port' => '587',
-        'encryption' => 'tls',
-        'username' => 'agusti.sinaga@gmail.com',
-        'password' => 'fdxmdbgfgxygnjgg',
+        'host' => 'mailpit',
+        'port' => '1025',
+        'encryption' => NULL,
+        'username' => NULL,
+        'password' => NULL,
         'timeout' => NULL,
         'local_domain' => NULL,
       ),
@@ -596,15 +596,15 @@
     ),
     'from' => 
     array (
-      'address' => 'agusti.sinaga@gmail.com',
-      'name' => 'laravel',
+      'address' => 'hello@example.com',
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\laravel\\New folder\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -671,7 +671,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => '127.0.0.1:8000',
+      5 => 'localhost:8000',
     ),
     'guard' => 
     array (
@@ -710,7 +710,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -730,9 +730,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\laravel\\New folder\\OBE-SI\\resources\\views',
+      0 => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\resources\\views',
     ),
-    'compiled' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\framework\\views',
   ),
   'excel' => 
   array (
@@ -840,7 +840,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -919,7 +919,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\laravel\\New folder\\OBE-SI',
+    'remote_sites_path' => 'C:\\Users\\ROBANU DAKHAYIN\\Documents\\ApplicationWeb\\OBE-Project-Latest',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
