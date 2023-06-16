@@ -7,8 +7,7 @@ use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 use Facebook\WebDriver\WebDriverBy;
 
-
-class PeranDosenTest extends DuskTestCase
+class TeknikPenilaianTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
@@ -28,12 +27,12 @@ class PeranDosenTest extends DuskTestCase
 
             $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();     
             $browser->pause(1*6000);       
-            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/peran_dosen/MK0112023')
+            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/teknik_penilaian/MK0112023')
                         // ->pause(60 * 60000);
-                        ->assertSee('Detail Peran Dosen');
+                        ->assertSee('Teknik Penilaian');
         });
     }
-    
+
     public function testAdd(): void
     {
         $this->browse(function (Browser $browser) {
@@ -48,17 +47,18 @@ class PeranDosenTest extends DuskTestCase
             $browser->type('input[name="password"]', 'coba123');
 
             $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();     
-            $browser->pause(1*6000);     
-
-            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/add_peran_dosen/MK0112023')
+            $browser->pause(1*6000);       
+            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/teknik_penilaian/MK0112023')
                         // ->pause(60 * 60000);
-                        ->assertSee('Tambah Peran Dosen');
+                        ->assertSee('Teknik Penilaian');
+            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/addTeknikPenilaian/MK0112023')->assertSee('Tambah Teknik Penilaian');
+            $browser->type('input[name="teknikPenilaian"]', '0004');
+            $browser->type('input[name="bobotPenilaian"]', 30);
+            $browser->type('input[name="kriteriaPenilaian"]', "Isi kriteria penilaian");
+            $browser->select('select[name="tahapPenilaian"]', "Akhir Semester");
+            $browser->type('input[name="instrumenPenilaian"]', "Rubrik holistik");
+            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="submit"]'))->click();  
 
-            $browser->select('select[name="nip"]', '123456789987654323');
-            $browser->select('select[name="peranDosen"]', 'Dosen Pengampu');
-            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="submit"]'))->click();
-            // $browser->click('button', 'Confirm');
-            // $browser->pause(60 * 60000);
         });
     }
 
@@ -75,25 +75,22 @@ class PeranDosenTest extends DuskTestCase
             $browser->type('input[name="nip"]', '32532425252');
             $browser->type('input[name="password"]', 'coba123');
 
-            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();                 
-            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/peran_dosen/MK0112023')
+            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();     
+            $browser->pause(1*6000);       
+            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/teknik_penilaian/MK0112023')
                         // ->pause(60 * 60000);
-                        ->assertSee('Detail Peran Dosen');
+                        ->assertSee('Teknik Penilaian');
+            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/editTeknikPenilaian/3')->assertSee('Edit Teknik Penilaian');
+            $browser->type('input[name="teknikPenilaian"]', '0005');
+            $browser->type('input[name="bobotPenilaian"]', 40);
+            $browser->type('input[name="kriteriaPenilaian"]', "Isi kriteria penilaian lain");
+            $browser->select('select[name="tahapPenilaian"]', "Tengah Semester");
+            $browser->type('input[name="instrumenPenilaian"]', "Rubrik holistik");
+            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="submit"]'))->click();  
 
-            // $browser->click('a', 'Edit');
-            $browser->pause(10000);
-            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/edit_peran_dosen/123456789987654323/MK0112023/Dosen%20Pengampu')
-            // ->pause(60 * 60000);
-            ->assertSee('Edit Peran Dosen');
-            // $browser->click('a', 'Edit');
-            // $browser->select('select[name="peranDosen"]', 'Dosen Pengampu');
-            $browser->select('select[name="nip"]', '32525252523');
-            $browser->select('select[name="peranDosen"]', 'Koordinator BK');
-            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="submit"]'))->click();
-
-            // $browser->pause(60 * 60000);
         });
     }
+
 
     public function testDelete(): void
     {
@@ -108,22 +105,13 @@ class PeranDosenTest extends DuskTestCase
             $browser->type('input[name="nip"]', '32532425252');
             $browser->type('input[name="password"]', 'coba123');
 
-            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();                 
-            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/peran_dosen/MK0112023')
+            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();     
+            $browser->pause(1*6000);       
+            $browser->visit('http://127.0.0.1:8000/dashboard/rps/edit/teknik_penilaian/MK0112023')
                         // ->pause(60 * 60000);
-                        ->assertSee('Detail Peran Dosen');
+                        ->assertSee('Teknik Penilaian');
+            $browser->clickLink('Delete');
 
-            // $browser->click('a', 'Edit');
-            $browser->pause(1000);
-            $browser->driver->findElement(WebDriverBy::cssSelector('a[name="delete"]'))->click();
-            $browser->pause(1000);
-            // $browser->click('a', 'Edit');
-            // $browser->select('select[name="peranDosen"]', 'Dosen Pengampu');
-            // $browser->select('select[name="nip"]', '32525252523');
-            // $browser->select('select[name="peranDosen"]', 'Koordinator BK');
-            // $browser->driver->findElement(WebDriverBy::cssSelector('button[name="submit"]'))->click();
-
-            // $browser->pause(60 * 60000);
         });
     }
 }

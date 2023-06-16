@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('CPL_Prodi', function (Blueprint $table) {
-            $table->char('kodeCPL',5)->primary('kodeCPL');
+            $table->char('kodeCPL', 10)->primary('kodeCPL');
             $table->text("deskripsiCPL");
             $table->string("referensiCPL", 100);
             $table->timestamps();

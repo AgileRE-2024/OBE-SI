@@ -16,10 +16,6 @@ class BKMKTest extends DuskTestCase
      */
     public function testChecked()
     {
-        // $this->browse(function (Browser $browser) {
-        //     $browser->visit('/')
-        //             ->assertSee('Laravel');
-        // });
         $this->browse(function (Browser $browser) {
             // File::ensureDirectoryExists(base_path('tests/Browser/console'));
             // Visit the login page
@@ -33,9 +29,6 @@ class BKMKTest extends DuskTestCase
             $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();
 
             $browser->pause(1*6000);
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk')
-            // ->pause(60 * 60000);
-            ->assertSee('Matriks Bahan Kajian (BK) & Mata Kuliah (MK)');
             $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk')
             // ->pause(60 * 60000);
             ->assertSee('Matriks Bahan Kajian (BK) & Mata Kuliah (MK)');
@@ -74,9 +67,6 @@ class BKMKTest extends DuskTestCase
             $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk')
             // ->pause(60 * 60000);
             ->assertSee('Matriks Bahan Kajian (BK) & Mata Kuliah (MK)');
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk')
-            // ->pause(60 * 60000);
-            ->assertSee('Matriks Bahan Kajian (BK) & Mata Kuliah (MK)');
             $browser->driver->findElement(WebDriverBy::cssSelector('input[id="checkbox_MK01-BK01"]'))->click();
 
             
@@ -92,6 +82,7 @@ class BKMKTest extends DuskTestCase
         });
         
     }
+    
     public function testCancel()
     {
 

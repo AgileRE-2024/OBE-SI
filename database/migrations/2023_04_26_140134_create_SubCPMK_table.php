@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('SubCPMK', function (Blueprint $table) {
-            $table->char('kodeSubCPMK',12)->primary('kodeSubCPMK');
+            $table->char('kodeSubCPMK', 12)->primary('kodeSubCPMK');
             $table->text('deskripsiSubCPMK');
-            $table->char('kodeCPMK',7);
+            $table->char('kodeCPMK', 10);
             $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
             $table->timestamps();
         });

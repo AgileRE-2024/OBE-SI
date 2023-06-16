@@ -20,8 +20,7 @@ return new class extends Migration
             $table->integer('sks');
             $table->char('semester', 1)->nullable();
             $table->boolean('kategoriMK');
-            $table->string('pustaka', 1000);
-            $table->string('deskripsiMK', 1000);
+            $table->string('deskripsiMK', 100);
             $table->text('prasyaratTambahan')->nullable();
             $table->char('mat_kodeMK', 10)->index()->nullable();
             $table->primary('kodeMK');

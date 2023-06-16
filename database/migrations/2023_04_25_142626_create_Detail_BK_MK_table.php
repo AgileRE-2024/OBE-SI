@@ -14,13 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_BK_MK', function (Blueprint $table) {
-            $table->char('kodeBK',4);
-            $table->char('kodeMK',10);
+            $table->char('kodeBK', 10);
+            $table->char('kodeMK', 10);
             // $table->timestamps();
             $table->timestamp('created_at')->useCurrent();
             // $table->foreign('kodeBK')->references('kodeBK')->on('Bahan_Kajian')->onDelete('restrict');
             // $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-        
+
         });
     }
 
