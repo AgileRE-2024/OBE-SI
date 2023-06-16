@@ -24,15 +24,30 @@ class PemetaanCPLPLTest extends DuskTestCase
     }
 
     /**
+     * view matrix
+     */
+     public function testView()
+     {
+        $this->browse(function (Browser $browser) {
+            // Login
+            $browser->visit('http://127.0.0.1:8000/login');
+            $this->login($browser);
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
+            ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
+            ->assertSee('No')
+            ->assertSee('Kode CPL')
+            ->assertSee('CPL')
+            ->assertSee('Profil Lulusan (PL)')
+            ->pause(1000);
+        });
+     }
+
+    /**
      * Check one checkbox
      */
     public function testOneCheck(): void
     {
         $this->browse(function (Browser $browser) {
-            // Login
-            $browser->visit('http://127.0.0.1:8000/login');
-            $this->login($browser);
-
             $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
                 ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
                 ->pause(1000)
