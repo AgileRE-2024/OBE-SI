@@ -245,7 +245,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('rps') }}" class="nav-link"
+                        <a id="rps" href="{{ route('rps') }}" class="nav-link"
                             @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>
                             <p>
                                 <i class="bi bi-filetype-pdf"></i>
