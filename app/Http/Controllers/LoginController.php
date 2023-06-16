@@ -72,28 +72,23 @@ class LoginController extends Controller
         }
 
         $user=User::find(auth()->user()->nip);
-        if(auth()->user()->role==1){
+        if(auth()->user()->role==2){
+            $user->update([
+                'password'=> Hash::make($request->new_password)
+            ]);
+            return redirect('/dashboard/admin')->with('status','Kata sandi berhasil diubah');
+        }
+        elseif(auth()->user()->role==1){
             $user->update([
                 'password'=> Hash::make($request->new_password)
             ]);
             return redirect('/dashboard/kurikulum')->with('status','Kata sandi berhasil diubah');
         }
+        elseif(auth()->user()->role==0){
             $user->update([
                 'password'=> Hash::make($request->new_password)
             ]);
             return redirect('/dashboard/dosen')->with('status','Kata sandi berhasil diubah');
-        
-        
-
-        // $data = User::find($id);
-        // $validatedData = $request->validate([
-        //     'new_password' => 'nullable|string|min:8',
-        // ]);
-        // $data['new_password']=bcrypt($request->password);
-        // $data->save();
-        // $request->session()->flash('success', 'Profile updated successfully!');
-        // return view('profilpengguna', compact ('data'), [
-        //     "title" => "Profile Updated"
-        // ]);
+        }
     }
 }

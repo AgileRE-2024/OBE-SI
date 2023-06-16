@@ -4,13 +4,13 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://localhost/',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:qtOLDIpuCyQIi/Hxe0aQ2WNlu7h+jZ2RVIyNJtzQrvw=',
+    'key' => 'base64:ndio3mffjlq2AvQpHyLlRv6Wg4X+7xRC/HKgjRiiyd4=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -278,7 +278,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'laravel',
+        'database' => 'obe',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -288,7 +288,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel',
+        'database' => 'obe',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -308,7 +308,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel',
+        'database' => 'obe',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -323,7 +323,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel',
+        'database' => 'obe',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -367,10 +367,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\Asus\\AppData\\Local\\Temp',
-      'chroot' => 'D:\\xampp\\htdocs\\test\\OBE-SI',
+      'font_dir' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\fonts',
+      'font_cache' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\kiakg\\AppData\\Local\\Temp',
+      'chroot' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -415,14 +415,14 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\app',
+        'root' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\app/public',
-        'url' => 'http://localhost/storage',
+        'root' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\app/public',
+        'url' => 'http://localhost//storage',
         'visibility' => 'public',
         'throw' => false,
       ),
@@ -441,7 +441,7 @@
     ),
     'links' => 
     array (
-      'D:\\xampp\\htdocs\\test\\OBE-SI\\public\\storage' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\app/public',
+      'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\public\\storage' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -480,13 +480,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -538,7 +538,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -604,7 +604,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\xampp\\htdocs\\test\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -710,7 +710,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -730,9 +730,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\xampp\\htdocs\\test\\OBE-SI\\resources\\views',
+      0 => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\resources\\views',
     ),
-    'compiled' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\framework\\views',
   ),
   'excel' => 
   array (
@@ -840,7 +840,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'D:\\xampp\\htdocs\\test\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -919,7 +919,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\xampp\\htdocs\\test\\OBE-SI',
+    'remote_sites_path' => 'C:\\semester6\\PPL_PRAK\\TES\\OBE-SI',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
