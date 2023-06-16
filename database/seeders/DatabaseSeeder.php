@@ -106,7 +106,8 @@ class DatabaseSeeder extends Seeder
             'namaDosen' => 'Ira Puspitasari',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email' => 'Guntur@gmail.com',
-            'role' => true,
+            'role' => 0,
+            'status' => "Aktif Bekerja"
         ]);
         User::create([
             'nip' => '198206062007101001',
@@ -114,14 +115,33 @@ class DatabaseSeeder extends Seeder
             'namaDosen' => 'Faried Effendy',
             'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
             'email' => 'Petir@gmail.com',
-            'role' => true,
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '198110282006041003',
+            'jabatanDosen' => 'lektor',
+            'namaDosen' => 'Indra Kharisma R, S.Kom., M.T.',
+            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'email' => 'indra.kharisma@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '197801262006041001',
+            'jabatanDosen' => 'lektor',
+            'namaDosen' => 'Badrus Zaman, S.Kom., M.Cs.',
+            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'email' => 'badruszaman@fst.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
         ]);
 
         RPS::create([
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2022,
             'pustaka'=> 'Johnson and Wichern, 2002. Applied Multivariate Statistical Analysis, Prentice Hall.',
-            'kodeMK' => 'SIJ202',
+            'kodeMK' => 'SII103',
             'kps' => '197102111997021001'
         ],);
 

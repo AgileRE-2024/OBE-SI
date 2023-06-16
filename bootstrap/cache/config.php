@@ -4,13 +4,13 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://127.0.0.1:8000',
+    'url' => 'http://127.0.0.1:8000/',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:wgiFghAW1q/SeOPy0nJj68DXBweEFKWuyTdQFBCjikw=',
+    'key' => 'base64:EcxhprgcAfEncGjIBqhZY3zWLshYbFiZYXSMLmmzPtE=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -367,10 +367,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\fonts',
+      'font_dir' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\fonts',
+      'font_cache' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\fonts',
       'temp_dir' => 'C:\\Users\\ASUS\\AppData\\Local\\Temp',
-      'chroot' => 'D:\\laravel\\OBE-SI\\OBE-SI',
+      'chroot' => 'D:\\laravel\\New folder\\OBE-SI',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -415,14 +415,14 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\app',
+        'root' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\app/public',
-        'url' => 'http://127.0.0.1:8000/storage',
+        'root' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\app/public',
+        'url' => 'http://127.0.0.1:8000//storage',
         'visibility' => 'public',
         'throw' => false,
       ),
@@ -441,7 +441,7 @@
     ),
     'links' => 
     array (
-      'D:\\laravel\\OBE-SI\\OBE-SI\\public\\storage' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\app/public',
+      'D:\\laravel\\New folder\\OBE-SI\\public\\storage' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -480,13 +480,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -538,7 +538,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -550,11 +550,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'mailpit',
-        'port' => '1025',
-        'encryption' => NULL,
-        'username' => NULL,
-        'password' => NULL,
+        'host' => 'smtp.gmail.com',
+        'port' => '587',
+        'encryption' => 'tls',
+        'username' => 'agusti.sinaga@gmail.com',
+        'password' => 'fdxmdbgfgxygnjgg',
         'timeout' => NULL,
         'local_domain' => NULL,
       ),
@@ -596,15 +596,15 @@
     ),
     'from' => 
     array (
-      'address' => 'hello@example.com',
-      'name' => 'Laravel',
+      'address' => 'agusti.sinaga@gmail.com',
+      'name' => 'laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\laravel\\OBE-SI\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'D:\\laravel\\New folder\\OBE-SI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -710,7 +710,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -730,9 +730,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\laravel\\OBE-SI\\OBE-SI\\resources\\views',
+      0 => 'D:\\laravel\\New folder\\OBE-SI\\resources\\views',
     ),
-    'compiled' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework\\views',
   ),
   'excel' => 
   array (
@@ -840,7 +840,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'D:\\laravel\\OBE-SI\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'D:\\laravel\\New folder\\OBE-SI\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -919,7 +919,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\laravel\\OBE-SI\\OBE-SI',
+    'remote_sites_path' => 'D:\\laravel\\New folder\\OBE-SI',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',

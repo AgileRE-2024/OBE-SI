@@ -22,7 +22,9 @@ Project Kuliah Pembangunan Perangkat Lunak
     2. Role Admin (role=2) merupakan role yang mempunyai hak untuk melihat semua fitur yang ada tanpa terlibat dengan Create, Update, dan Delete pada fitur tersebut.
     3. Role Kurikulum (Role=1) merupakan role yang mempunyai hak untuk melakukan Create, Update, dan Delete pada fitur kurikulum.
     4. Role Dosen (Role=0) merupakan role yang mempunyai hak untuk melakukan Create dab Update pada fitur RPS 
-    5. Password yang digunakan telah diencrypt yakni coba123
+    5. Username menggunakan nip dan password yang digunakan telah diencrypt yakni coba123 (Pak Indra role Dosen dan Pak Badrus role Kurikulum)
+- Langkah-langkah pengujian BDD
+    1. Untuk pengujian RPS skenario data tidak ditemukan, harus dipastikan data rps untuk mata kuliah SII103 tahun 2023 belum dibuat.
 - Prosedur untuk kontribusi github
     1. Koordinator Github membuat branch untuk masing-masing kelompok
     2. Setiap kelompok melakukan edit sesuai fitur yang dibagikan

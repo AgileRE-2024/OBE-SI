@@ -15,64 +15,38 @@ class Mk_Cpmk_SubCPMKTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
-                        ->assertSee('Silakan memasukkan NIP dan kata sandi');
-            $browser->type('input[name="nip"]', '123456789987654321');
-            $browser->type('input[name="password"]', 'coba123');
-            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();
-            $browser->pause(1*6000);
-            // $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk');
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum')->assertSee('Kurikulum');
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id="kurikulum"]'))->click();
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id="pemetaan"]'))->click();
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id= "mkcpmksubcpmk"]'))->click();
-            $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk');
-            $browser->pause(1*600);
+                ->assertSee('Silakan memasukkan NIP dan kata sandi')
+                ->type('input[name="nip"]', '198110282006041003')
+                ->type('input[name="password"]', 'coba123')
+                ->press('button[name="tombolLogin"]')
+                ->pause(6000)
+                ->click('li[id="kurikulum"]')
+                ->pause(600)
+                ->click('li[id="pemetaan"]')
+                ->pause(600)
+                ->click('li[id="mkcpmksubcpmk"]')
+                ->assertUrlIs('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk')
+                ->pause(600);
         });
     }
+
     public function testExcel(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/login')
-                        ->assertSee('Silakan memasukkan NIP dan kata sandi');
-            $browser->type('input[name="nip"]', '123456789987654321');
-            $browser->type('input[name="password"]', 'coba123');
-            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();
-            $browser->pause(1*6000);
-            // $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk');
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum')->assertSee('Kurikulum');
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id="kurikulum"]'))->click();
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id="pemetaan"]'))->click();
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id= "mkcpmksubcpmk"]'))->click();
-            $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk');
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('a[id="excel"]'))->click();
-            $browser->pause(1*1500);
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk')
+                ->pause(1000)
+                ->click('a[id="excel"]')
+                ->pause(1500);
         });
     }
+
     public function testPdf(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/login')
-                        ->assertSee('Silakan memasukkan NIP dan kata sandi');
-            $browser->type('input[name="nip"]', '123456789987654321');
-            $browser->type('input[name="password"]', 'coba123');
-            $browser->driver->findElement(WebDriverBy::cssSelector('button[name="tombolLogin"]'))->click();
-            $browser->pause(1*6000);
-            // $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/bk-mk');
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum')->assertSee('Kurikulum');
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id="kurikulum"]'))->click();
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id="pemetaan"]'))->click();
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('li[id= "mkcpmksubcpmk"]'))->click();
-            $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk');
-            $browser->pause(1*600);
-            $browser->driver->findElement(WebDriverBy::cssSelector('a[id="pdf"]'))->click();
-            $browser->pause(1*1500);
+            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/mk-cpmk-subcpmk')
+                ->pause(1000)
+                ->click('a[id="pdf"]')
+                ->pause(1500);
         });
     }
 }

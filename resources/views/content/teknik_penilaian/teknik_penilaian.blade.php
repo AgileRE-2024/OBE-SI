@@ -19,7 +19,7 @@
                         class="bi bi-ui-checks"> </i>Rencana Pembelajaran</a>
             </div>
             <div>
-                <a class="btn btn-primary" href="{{ route('edit_rps.rps_show', ['kodeRPS' => $kodeRPS]) }}"><i
+                <a id="rpss" class="btn btn-primary" href="{{ route('edit_rps.rps_show', ['kodeRPS' => $kodeRPS]) }}"><i
                         class="bi bi-file-earmark-bar-graph"> </i>RPS</a>
             </div>
         </div>
