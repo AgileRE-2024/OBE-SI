@@ -2,7 +2,7 @@
 Project Kuliah Pembangunan Perangkat Lunak
 
 - Penjelasan umum deskripsi project <br>
-  Project ini merupakan
+  Project ini merupakan sistem informasi untuk kurikulum program studi Sistem Informasi yang berbasis web. Project ini dibangun menggunakan Framework Laravel dan menggunakan database MySQL. Project ini berisi 3  fitur, antara lain Kurikulum, Penilaian, dan RPS. Setiap fitur dilakukan pemecahan menjadi banyak fitur. Kurikulum dibagi menjadi dua fitur dibawahnya, antara lain Data dan Pemetaan. Data adalah fitur yang digunakan untuk melakukan CRUD Master Data. Data yang digunakan adalah Profil Lulusan, CPL SNDikti, CPL Prodi, Bahan Kajian, Mata Kuliah, CPMK, dan Sub-CPMK. Sedangkan Pemetaan adalah matriks hubungan antara beberapa master data. Pemetaan matriks yang tersedia adalah BK-MK, CPL-BK, CPL-BK-MK, Susunan Mata Kuliah, Organisasi Mata Kuliah, CPL SNDikti-CPL Prodi, CPL-PL, CPL-CPMK-MK, dan MK-CPMK-SUBCPMK. Fitur Penilaian adalah pemetaan yang berfungsi untuk melihat jenis-jenis penilaian berdasarkan tahun. Lalu, Fitur RPS adalah untuk menampilkan dan membuat Rencana Pembelajaran Semester. RPS menampilkan fitur mencari RPS berdasarkan tahun. Jika belum tersedia, dapat dilakukan pembuatan. Jika tersedia, dapat dilakukan pengubahan data pada RPS.
 - Petunjuk Instalasi<br>
   Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
     1. Setelah tools telah terpasang secara sempurna, masuk ke dalam direktori xampp yang dimana file tersebut disimpan.
