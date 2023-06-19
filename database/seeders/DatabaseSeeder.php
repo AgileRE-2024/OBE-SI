@@ -140,7 +140,7 @@ class DatabaseSeeder extends Seeder
         RPS::create([
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2022,
-            'pustaka'=> 'Johnson and Wichern, 2002. Applied Multivariate Statistical Analysis, Prentice Hall.',
+            'pustaka' => 'Johnson and Wichern, 2002. Applied Multivariate Statistical Analysis, Prentice Hall.',
             'kodeMK' => 'SII103',
             'kps' => '197102111997021001'
         ],);
@@ -194,24 +194,24 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'kodeMingguRPS'=> '2',
-            'kodeSubCPMK'=> 'Sub-CPMK0111',
-            'mingguKe'=>'1',
-            'bentukPembelajaran'=>true,
-            'indikatorMingguRPS'=>'Mahasiswa dapat mengimplementasikan visualisasi data dan grafik pada tools yang ditentukan',
-            'kriteriaMingguRPS'=>'Ketepatan dan penguasaan',
-            'deskripsiPembelajaran'=>'Visualisasi data dengan membuat dan menginterpretasikan grafik',
-            'materiPembelajaran'=>'Pengenalan R Studio',
+            'kodeMingguRPS' => '2',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '1',
+            'bentukPembelajaran' => true,
+            'indikatorMingguRPS' => 'Mahasiswa dapat mengimplementasikan visualisasi data dan grafik pada tools yang ditentukan',
+            'kriteriaMingguRPS' => 'Ketepatan dan penguasaan',
+            'deskripsiPembelajaran' => 'Visualisasi data dengan membuat dan menginterpretasikan grafik',
+            'materiPembelajaran' => 'Pengenalan R Studio',
         ]);
         Minggu_RPS::create([
-            'kodeMingguRPS'=> '3',
-            'kodeSubCPMK'=> 'Sub-CPMK0111',
-            'mingguKe'=>'2',
-            'bentukPembelajaran'=>false,
-            'indikatorMingguRPS'=>'Mahasiswa dapat menghitung standar deviasi pada tools yang ditentukan',
-            'kriteriaMingguRPS'=>'Ketepatan dan sistematika',
-            'deskripsiPembelajaran'=>'Mengukur penyebaran data menggunakan rentang dan deviasi standar serta mengidentifikasi outlier dalam data set menggunakan konsep rentang interkuartil',
-            'materiPembelajaran'=>'Standar Deviasi pada R Studio',
+            'kodeMingguRPS' => '3',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '2',
+            'bentukPembelajaran' => false,
+            'indikatorMingguRPS' => 'Mahasiswa dapat menghitung standar deviasi pada tools yang ditentukan',
+            'kriteriaMingguRPS' => 'Ketepatan dan sistematika',
+            'deskripsiPembelajaran' => 'Mengukur penyebaran data menggunakan rentang dan deviasi standar serta mengidentifikasi outlier dalam data set menggunakan konsep rentang interkuartil',
+            'materiPembelajaran' => 'Standar Deviasi pada R Studio',
         ]);
 
         Mahasiswa::create([
@@ -286,7 +286,7 @@ class DatabaseSeeder extends Seeder
             ['kodeCPLSN' => 'CPL-P16', 'kodeCPL' => 'CPL-07'],
             ['kodeCPLSN' => 'CPL-P17', 'kodeCPL' => 'CPL-12'],
         ];
-        
+
         Detail_SN_CPLProdi::insert($sncplprodiData);
 
         $cplbkData = [
@@ -320,7 +320,7 @@ class DatabaseSeeder extends Seeder
         ];
         Detail_CPLProdi_Bk::insert($cplbkData);
 
-        
+
         $cplplData = [
             ['kodeCPL' => 'CPL-01', 'kodePL' => 'PL04'],
             ['kodeCPL' => 'CPL-02', 'kodePL' => 'PL03'],
@@ -583,7 +583,7 @@ class DatabaseSeeder extends Seeder
             ['kodeMK' => 'SII317', 'kodeBK' => 'BK05'],
             ['kodeMK' => 'PNT499', 'kodeBK' => 'BK10']
         ];
-        
+
         Detail_BK_MK::insert($bkmkData);
 
         Detail_Peran_Dosen::create([

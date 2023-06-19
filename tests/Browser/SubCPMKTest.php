@@ -6,12 +6,16 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class CPLDiktiTest extends DuskTestCase
+class SubCPMKTest extends DuskTestCase
 {
+    use DatabaseMigrations;
+
     /**
-     * A Dusk test example.
+     * Test adding a new Bahan Kajian successfully
+     *
+     * @return void
      */
-    public function testAddCPLSNDiktiSuccess()
+    public function testAddSubCPMKSuccess()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -21,19 +25,18 @@ class CPLDiktiTest extends DuskTestCase
                 ->press('tombolLogin')
                 ->pause(2000)
                 ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
-                ->clickLink('Tambah')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', 'CPL-KK01')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
+                ->clickLink('Sub-CPMK')
                 ->pause(2000)
-                ->press('submit');
+                ->clickLink('Tambah')
+                ->assertSee("Tambah Sub CPMK")
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', 'SUB-CPMK0110')
+                ->type('deskripsiSubCPMK', "tes")
+                ->press("#submit")
+                ->pause(2000);
         });
     }
-    public function testAddCPLSNDiktiError()
+    public function testAddSubCPMKErrorIDSama()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -43,19 +46,18 @@ class CPLDiktiTest extends DuskTestCase
                 ->press('tombolLogin')
                 ->pause(2000)
                 ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
-                ->clickLink('Tambah')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', '')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
+                ->clickLink('Sub-CPMK')
                 ->pause(2000)
-                ->press('submit');
+                ->clickLink('Tambah')
+                ->assertSee("Tambah Sub CPMK")
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', 'SUB-CPMK0110')
+                ->type('deskripsiSubCPMK', "tes")
+                ->press("#submit")
+                ->pause(2000);
         });
     }
-    public function testAddCPLSNDiktiErrorIDSama()
+    public function testAddSubCPMKError()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -65,44 +67,19 @@ class CPLDiktiTest extends DuskTestCase
                 ->press('tombolLogin')
                 ->pause(2000)
                 ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
+                ->clickLink('Sub-CPMK')
+                ->pause(2000)
                 ->clickLink('Tambah')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', 'CPL-KK01')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
-                ->pause(2000)
-                ->press('submit');
-        });
-    }
-    public function testDeleteCPLSNDiktiSuccess()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/login')
-                ->assertSee('Selamat Datang')
-                ->type('nip', '197102111997021001')
-                ->type('password', 'coba123')
-                ->press('tombolLogin')
-                ->pause(2000)
-                ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
-                ->clickLink('Tambah')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', 'CPL-KK00')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
-                ->pause(2000)
-                ->press('submit')
-                ->clickLink('Delete')
-                ->pause(1000);
+                ->assertSee("Tambah Sub CPMK")
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', '')
+                ->type('deskripsiSubCPMK', "tes")
+                ->press("#submit")
+                ->pause(2000);
         });
     }
 
-    public function testEditCPLSNDiktiSuccess()
+    public function testDeleteSubCPMKSuccess()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -112,29 +89,21 @@ class CPLDiktiTest extends DuskTestCase
                 ->press('tombolLogin')
                 ->pause(2000)
                 ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
+                ->clickLink('Sub-CPMK')
+                ->pause(2000)
                 ->clickLink('Tambah')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', 'CPL-KK00')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
+                ->assertSee("Tambah Sub CPMK")
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', 'SUB-CPMK0000')
+                ->type('deskripsiSubCPMK', "tes")
+                ->press("#submit")
                 ->pause(2000)
-                ->press('submit')
-                ->clickLink('Edit')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', 'CPL-KK99')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
-                ->pause(2000)
-                ->press('submit')
-                ->pause(1000);
+                ->clickLink('Delete')
+                ->pause(2000);
         });
     }
-    public function testEditCPLSNDiktiError()
+
+    public function testEditSubCPMKSuccess()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('http://127.0.0.1:8000/login')
@@ -144,28 +113,54 @@ class CPLDiktiTest extends DuskTestCase
                 ->press('tombolLogin')
                 ->pause(2000)
                 ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
+                ->clickLink('Sub-CPMK')
+                ->pause(2000)
                 ->clickLink('Tambah')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', 'CPL-KK00')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
+                ->assertSee("Tambah Sub CPMK")
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', 'SUB-CPMK0000')
+                ->type('deskripsiSubCPMK', "tes")
+                ->press("#submit")
                 ->pause(2000)
-                ->press('submit')
                 ->clickLink('Edit')
-                ->assertSee("Tambah CPL SN Dikti")
-                ->type('kodeCPLSN', '')
-                ->type('deskripsiSN', "tes")
-                ->type('sumberSN', "tes")
-                ->select('kategoriSN')
-                ->select('jenisSN')
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', 'SUB-CPMK0001')
+                ->type('deskripsiSubCPMK', "tes")
                 ->pause(2000)
-                ->press('submit')
-                ->pause(1000);
+                ->press("#submit")
+                ->pause(2000);
         });
     }
+
+    public function testEditSubCPMKError()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('http://127.0.0.1:8000/login')
+                ->assertSee('Selamat Datang')
+                ->type('nip', '197102111997021001')
+                ->type('password', 'coba123')
+                ->press('tombolLogin')
+                ->pause(2000)
+                ->clickLink('Data')
+                ->clickLink('Sub-CPMK')
+                ->pause(2000)
+                ->clickLink('Tambah')
+                ->assertSee("Tambah Sub CPMK")
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', 'SUB-CPMK0000')
+                ->type('deskripsiSubCPMK', "tes")
+                ->press("#submit")
+                ->pause(2000)
+                ->clickLink('Edit')
+                ->select('kodeCPMK')
+                ->type('kodeSubCPMK', '')
+                ->type('deskripsiSubCPMK', "tes")
+                ->pause(2000)
+                ->press("#submit")
+                ->pause(2000);
+        });
+    }
+
     public function testPDFExportSuccess()
     {
         $this->browse(function (Browser $browser) {
@@ -176,8 +171,8 @@ class CPLDiktiTest extends DuskTestCase
                 ->press('tombolLogin')
                 ->pause(2000)
                 ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
-                ->pause(1000)
+                ->clickLink('Sub-CPMK')
+                ->pause(2000)
                 ->click('.btn-outline-danger:nth-child(1)')
                 ->pause(1000);
         });
@@ -192,8 +187,8 @@ class CPLDiktiTest extends DuskTestCase
                 ->press('tombolLogin')
                 ->pause(2000)
                 ->clickLink('Data')
-                ->clickLink('CPL SNDikti')
-                ->pause(1000)
+                ->clickLink('Sub-CPMK')
+                ->pause(2000)
                 ->click('a.btn.btn-success i.bi.bi-file-earmark-excel')
                 ->pause(1000);
         });
