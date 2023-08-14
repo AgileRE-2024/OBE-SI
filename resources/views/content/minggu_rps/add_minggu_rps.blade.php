@@ -10,7 +10,7 @@
                 <form method="post" action="{{ route('edit_rps.store_minggu_rps', ['kodeRPS' => $kodeRPS]) }}">
                     @csrf
                     @php
-                        $rps = $rps_list->where('kodeRPS', 'RPS001')->first();
+                        $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                         $mk = $mk_list->where('kodeMK', $rps->kodeMK)->first();
                         $list_cpmk = collect();
                         $uniqueIds = [];
