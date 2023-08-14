@@ -43,6 +43,10 @@
             </thead>
             <tbody>
                 @foreach ($list_mk as $mk)
+                    @php
+                        $isTrueArray = []; // Buat array untuk menyimpan status isTrue untuk setiap $cpmk
+                    @endphp
+
                     <tr>
                         <th scope="row">
                             {{ $loop->iteration }}</th>
@@ -50,7 +54,7 @@
                             {{ $mk->kodeMK }}</th>
                         <th scope="row" class="text-start">
                             {{ $mk->namaMK }}</th>
-                            @foreach ($list_cpl as $cpl)
+                        @foreach ($list_cpl as $cpl)
                             @php
                                 $isTrue = false;
                                 foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
@@ -59,18 +63,12 @@
                                         break;
                                     }
                                 }
+                                $isTrueArray[$cpl->kodeCPL] = $isTrue; // Simpan status isTrue ke dalam array
                             @endphp
-                                <td>
-                                    <input type="checkbox" id="{{ $mk->kodeMK }}_{{ $cpmk->kodeCPMK }}" disabled @if ($isTrue) checked @endif>
-                                </td>
+                            <td>
+                                <input type="checkbox" id="{{ $mk->kodeMK }}_{{ $cpl->kodeCPL }}" disabled @if ($isTrue) checked @endif>
+                            </td>
                         @endforeach
-                        {{-- @foreach ($list_cpl as $cpl)
-                            @foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk)
-                                <td>
-                                    <input type="checkbox" disabled @if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) checked @endif>
-                                </td>
-                            @endforeach
-                        @endforeach --}}
                     </tr>
                 @endforeach
             </tbody>
