@@ -41,7 +41,7 @@ class CRUDCPMKController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'kodeCPMK' => 'required|unique:cpmk,kodeCPMK|regex:/^CPMK\d{3}$/',
+            'kodeCPMK' => 'required|unique:cpmk,kodeCPMK',
             'deskripsi' => 'required',
             'kodeCPL' => 'required'
         ]);
