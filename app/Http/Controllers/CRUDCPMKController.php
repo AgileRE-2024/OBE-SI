@@ -90,7 +90,7 @@ class CRUDCPMKController extends Controller
             ]);
         } else {
             $validator = Validator::make($request->all(), [
-                'kodeCPMK' => 'required|unique:cpmk,kodeCPMK|regex:/^CPMK\d{3}$/',
+                'kodeCPMK' => 'required|unique:cpmk,kodeCPMK',
                 'deskripsi' => 'required',
                 'kodeCPL' => 'required'
             ]);
