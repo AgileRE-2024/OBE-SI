@@ -196,7 +196,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'D:\\Project\\OBE-SI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -368,8 +368,8 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\fonts',
+      'font_dir' => 'D:\\Project\\OBE-SI\\storage\\fonts',
+      'font_cache' => 'D:\\Project\\OBE-SI\\storage\\fonts',
       'temp_dir' => 'C:\\Users\\hp\\AppData\\Local\\Temp',
       'chroot' => 'D:\\Project\\OBE-SI',
       'allowed_protocols' => 
@@ -416,13 +416,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\app',
+        'root' => 'D:\\Project\\OBE-SI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\app/public',
+        'root' => 'D:\\Project\\OBE-SI\\storage\\app/public',
         'url' => 'http://localhost//storage',
         'visibility' => 'public',
         'throw' => false,
@@ -442,7 +442,7 @@
     ),
     'links' => 
     array (
-      'C:\\xampp\\ppltask\\OBE-SI\\public\\storage' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\app/public',
+      'D:\\Project\\OBE-SI\\public\\storage' => 'D:\\Project\\OBE-SI\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -481,13 +481,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\Project\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\Project\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -539,7 +539,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\Project\\OBE-SI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -605,7 +605,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\ppltask\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'D:\\Project\\OBE-SI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -712,7 +712,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'D:\\Project\\OBE-SI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -732,9 +732,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\ppltask\\OBE-SI\\resources\\views',
+      0 => 'D:\\Project\\OBE-SI\\resources\\views',
     ),
-    'compiled' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'D:\\Project\\OBE-SI\\storage\\framework\\views',
   ),
   'excel' => 
   array (
@@ -843,7 +843,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'C:\\xampp\\ppltask\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'D:\\Project\\OBE-SI\\storage\\framework/cache/laravel-excel',
       'local_permissions' => 
       array (
       ),
