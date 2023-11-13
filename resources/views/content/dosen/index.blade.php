@@ -20,7 +20,6 @@
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">NIP</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Nama Dosen</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,9 +35,6 @@
                     <td scope="row">
                         <a class="btn btn-primary">Edit</a>
                     </td>
-                    <td scope="row">
-                        <a name="delete" class="btn btn-danger">Delete</a>
-                    </td>
                 </tr>
                 <tr>
                     <td scope="row">2</td>
@@ -51,9 +47,6 @@
                     </td>
                     <td scope="row">
                         <a class="btn btn-primary">Edit</a>
-                    </td>
-                    <td scope="row">
-                        <a name="delete" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <tr>
@@ -68,9 +61,6 @@
                     <td scope="row">
                         <a class="btn btn-primary">Edit</a>
                     </td>
-                    <td scope="row">
-                        <a name="delete" class="btn btn-danger">Delete</a>
-                    </td>
                 </tr>
                 <tr>
                     <td scope="row">4</td>
@@ -84,9 +74,6 @@
                     <td scope="row">
                         <a class="btn btn-primary">Edit</a>
                     </td>
-                    <td scope="row">
-                        <a name="delete" class="btn btn-danger">Delete</a>
-                    </td>
                 </tr>
                 <tr>
                     <td scope="row">5</td>
@@ -99,9 +86,6 @@
                     </td>
                     <td scope="row">
                         <a class="btn btn-primary">Edit</a>
-                    </td>
-                    <td scope="row">
-                        <a name="delete" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             </tbody>
