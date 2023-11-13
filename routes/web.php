@@ -254,6 +254,10 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum'], function () {
     Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
     
     Route::get('/generate-pdf', 'PDFController@generatePDF');
+
+
+    //NEW ROUTE NEWEST RPS
+    Route::get('/dashboard/list_rps', [RPSController::class,'filterNewestYearSemester', 'title'=>'RPS'])->name('rps');
 });
 
 
