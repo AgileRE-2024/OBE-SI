@@ -14,17 +14,20 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Mata_Kuliah', function (Blueprint $table) {
-            $table->char('kodeMK', 10)->unique();
+            $table->char('kodeMK', 4)->unique();
+            $table->foreign('namaProdi')->references('namaProdi')->on('Prodi')->onDelete('restrict');
+            $table->foreign('nip')->references('nip')->on('User')->onDelete('restrict');
             $table->string('namaMK', 100);
-            $table->boolean('jenisMK');
+            $table->integer('jenisMK');
             $table->integer('sks');
-            $table->char('semester', 1)->nullable();
-            $table->boolean('kategoriMK');
+            $table->integer('semester');
+            $table->integer('kategoriMK');
             $table->string('deskripsiMK', 100);
-            $table->text('prasyaratTambahan')->nullable();
-            $table->char('mat_kodeMK', 10)->index()->nullable();
-            $table->primary('kodeMK');
-            $table->foreign('mat_kodeMK')->references('kodeMK')->on('Mata_Kuliah');
+            $table->date('deleted_at');
+            $table->date('created_at');
+            $table->date('updated_at');
+            $table->text('penanggung_jawab')->nullable();
+            $table->text('pengampu')->nullable();
             $table->timestamps();
         });
     }
