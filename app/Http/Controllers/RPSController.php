@@ -194,4 +194,5 @@ class RPSController extends Controller
         return redirect()->route('content.rps', ['title' => 'List RPS', 'rps' => $rps]);
     }
     
+    
 }
