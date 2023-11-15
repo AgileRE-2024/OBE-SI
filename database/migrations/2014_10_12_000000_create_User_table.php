@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('User', function (Blueprint $table) {
             $table->char('nip', 18)->primary('nip')->nullable();
             $table->foreign('namaProdi')->references('namaProdi')->on('Prodi')->onDelete('restrict');
             $table->string('jabatanDosen', 20)->nullable();
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('User');
     }
 };

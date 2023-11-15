@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('CPMK', function (Blueprint $table) {
-            $table->char('kodeCPMK', 10)->primary('kodeCPMK');
-            $table->text('deskripsiCPMK');
-            $table->char('kodeCPL', 10);
+            $table->char('kodeCPMK', 7)->primary('kodeCPMK');
             $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
+            $table->text('deskripsiCPMK');
+            $table->date('deleted_at');
+            $table->date('created_at');
             $table->timestamps();
         });
     }

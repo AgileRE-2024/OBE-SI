@@ -14,13 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('CPL_SN_Dikti', function (Blueprint $table) {
-            $table->char('kodeCPLSN', 10);
-            $table->text("deskripsiSN");
-            $table->char("sumberSN", 8);
-            $table->boolean("kategoriSN");
-            $table->string("jenisSN", 20);
+            $table->char('kodeCPLSN', 7)->primary('kodeCPLSN');
+            $table->text('deskripsiSN');
+            $table->char('sumberSN', 8);
+            $table->boolean('kategoriSN');
+            $table->string('jenisSN', 20);
+            $table->date('deleted_at');
+            $table->date('created_at');
             $table->timestamps();
-            $table->primary('kodeCPLSN');
         });
     }
 

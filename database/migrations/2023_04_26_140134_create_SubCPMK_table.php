@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('SubCPMK', function (Blueprint $table) {
             $table->char('kodeSubCPMK', 12)->primary('kodeSubCPMK');
-            $table->text('deskripsiSubCPMK');
-            $table->char('kodeCPMK', 10);
             $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
+            $table->text('deskripsiSubCPMK');
+            $table->date('deleted_at');
+            $table->date('created_at');
+            $table->date('updateted_at');
             $table->timestamps();
         });
     }

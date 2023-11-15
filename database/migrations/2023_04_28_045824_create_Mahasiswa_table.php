@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Mahasiswa', function (Blueprint $table) {
-            $table->char('nim',12)->primary('nim');
-            $table->string('namaMahasiswa',100);
+            $table->char('NIM',12)->primary('NIM');
+            $table->string('namaMahasiswa', 100);
             $table->year('tahunMasuk');
+            $table->date('deleted_at');
             $table->timestamps();
         });
     }

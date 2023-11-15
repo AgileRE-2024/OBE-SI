@@ -14,10 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Bahan_Kajian', function (Blueprint $table) {
-            $table->char('kodeBK', 10)->primary('kodeBK');
-            $table->string("namaBK", 100);
-            $table->boolean("kategoriBK");
-            $table->string("referensiBK", 100);
+            $table->char('kodeBK', 4)->primary('kodeBK');
+            $table->string('namaBK', 100);
+            $table->boolean('kategoriBK');
+            $table->date('deleted_at');
+            $table->date('created_at');
+            $table->string('referensiBK', 100);
             $table->timestamps();
         });
     }
