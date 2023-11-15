@@ -34,7 +34,7 @@
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i
                                 class="fa fa-fw fa-plus-circle"></i>
-                            Tambah PL</button>/
+                            Tambah PL</button>
                     </div>
                 </form>
             </div>

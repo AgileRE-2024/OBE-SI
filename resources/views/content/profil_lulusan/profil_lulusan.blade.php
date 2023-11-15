@@ -47,7 +47,9 @@
                                 {{ $loop->iteration }}</td>
                             <td scope="row">
                                 {{ $pl->kodePL }}</td>
-                            <td scope="row">
+                            <td scope="row"
+                                style="word-break: break-word;
+                            max-width: 150px;">
                                 {{ $pl->deskripsiPL }}</td>
                             <td scope="row">
                                 @if (auth()->user()->role == 1)
