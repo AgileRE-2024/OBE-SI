@@ -27,7 +27,7 @@
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="namaMK" class="form-control" placeholder="Nama Mata Kuliah"
-                            value="{{ old('namaMK') ? old('namaMK') : $mk->namaMK }}">
+                            value="{{ old('namaMK') ? old('namaMK') : $mk->namaMK }}" pattern="[A-Za-z0-9]+">
                     </div>
 
                     <div class="form-group">
@@ -87,7 +87,7 @@
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah"
-                            value="{{ old('sks') ? old('sks') : $mk->sks }}">
+                            value="{{ old('sks') ? old('sks') : $mk->sks }}" min="0" max="4">
                     </div>
 
                     <div class="form-group">
