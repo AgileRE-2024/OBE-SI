@@ -11,8 +11,10 @@
         </div>
             <div class="d-flex justify-content-start pt-2">
                 <div>
+                    @if (auth()->user()->role == 2)
                     <a class="btn btn-dark" href="{{ route('manajemen.add_prodi') }}"><i class="bi bi-plus-square">
                         </i>Tambah</a>
+                    @endif
                 </div>
             </div>
         <div class="d-flex justify-content-end pt-2">
@@ -40,7 +42,9 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Visi</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Misi</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Tujuan</th>
+                        @if (auth()->user()->role == 2)
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -66,11 +70,11 @@
                                 {{ $pd->misi }}</td>
                             <td scope="row">
                                 {{ $pd->tujuan }}</td>
-                            <td scope="row">
-                                @if (auth()->user()->role == 1)
-                                    <a class="btn btn-primary"
-                                        href="{{ route('#', $pl->kodePL) }}">Edit</a>
-                                @endif
+                             @if (auth()->user()->role == 2)
+                            <td scope="row">    
+                                <a class="btn btn-primary"
+                                    href="{{-- route('#',$pl->kodePL) --}}">Edit</a>
+                            @endif
                             </td>
                         </tr>
                     @endforeach
