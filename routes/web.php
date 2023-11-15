@@ -334,3 +334,11 @@ Route::post('/reset-password', function (Request $request) {
         ? redirect()->route('login')->with('status', __($status))
         : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+Route::get('/manajemen/manajemen_prodi', function () {
+    return view('content.mnj_prodi.prodi', ["title" => "Manajemen Prodi"]);
+});
+
+Route::get('/manajemen/manajemen_prodi/add', function () {
+    return view('content.mnj_prodi.add_prodi', ["title" => "Add Manajemen Prodi"]);
+});
