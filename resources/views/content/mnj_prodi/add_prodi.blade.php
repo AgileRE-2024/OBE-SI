@@ -10,7 +10,7 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{-- {{ route('kurikulum.data.store_pl') }} --}}">
+                <form method="post" action="{{ route('manajemen.store_prodi') }}">
                     @csrf
                     <div class="form-group">
                         <label>Nama Prodi</label>

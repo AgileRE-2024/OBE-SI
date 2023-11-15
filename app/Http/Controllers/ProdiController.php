@@ -11,13 +11,12 @@ class prodiController extends Controller
     public function index()
     {
         $prodi = Prodi::all();
-
-        return view('#', ['title' => 'Program Studi', 'prodi' => $prodi]);
+        return view('content.mnj_prodi.prodi', ['title' => 'Manajemen Prodi', 'prodi' => $prodi]);
     }
 
     public function addProdi()
     {
-        return view('#', ['title' => 'Tambah Program Studi']);
+        return view('content.mnj_prodi.add_prodi', ['title' => 'Tambah Prodi']);
     }
 
     public function edit($pd)
@@ -29,25 +28,24 @@ class prodiController extends Controller
 
     public function storeProdi(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'namaProdi' => 'required|unique:prodi,namaProdi',
-            'fakultas',
-            'namaPT',
-            'akreditasi',
-            'jenjangPendidikan',
-            'gelarLulusan',
-            'visi',
-            'misi',
-            'tujuan'
+            'fakultas' => 'required',
+            'namaPT' => 'required',
+            'akreditasi' => 'required',
+            'jenjangPendidikan' => 'required',
+            'gelarLulusan' => 'required',
+            'visi' => 'required',
+            'misi' => 'required',
+            'tujuan' => 'required'
         ]);
 
-        if ($request->fails()) {
+        if ($validator->fails()) {
             // flash('error')->error();
-            return redirect()->back()->withErrors($request)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput();
         }
 
         Prodi::create([
-            'deskripsiPL' => $request->deskripsiPL,
             'namaProdi' => $request->namaProdi,
             'fakultas' => $request->fakultas,
             'namaPT' => $request->namaPT,
@@ -59,10 +57,10 @@ class prodiController extends Controller
             'tujuan' => $request->tujuan,
         ]);
 
-        return redirect()->route('#')->with('success', 'Program Studi berhasil ditambahkan');
+        return redirect()->route('manajemen.prodi')->with('success', 'Program Studi berhasil ditambahkan');
     }
 
-    public function updateBahanKajian(Request $request, $pd)
+    public function updateProdi(Request $request, $pd)
     {
         if ($request->namaProdi != $pd) {
             $request->validate([

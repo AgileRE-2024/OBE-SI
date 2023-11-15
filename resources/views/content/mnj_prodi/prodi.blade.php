@@ -11,7 +11,7 @@
         </div>
             <div class="d-flex justify-content-start pt-2">
                 <div>
-                    <a class="btn btn-dark" href="/manajemen/manajemen_prodi/add"><i class="bi bi-plus-square">
+                    <a class="btn btn-dark" href="{{ route('manajemen.add_prodi') }}"><i class="bi bi-plus-square">
                         </i>Tambah</a>
                 </div>
             </div>
@@ -44,28 +44,36 @@
                     </tr>
                 </thead>
                 <tbody>
-{{--                     @foreach ($pls as $pl)
+                    @foreach ($prodi as $pd)
                         <tr>
                             <td scope="row">
                                 {{ $loop->iteration }}</td>
                             <td scope="row">
-                                {{ $pl->kodePL }}</td>
+                                {{ $pd->namaProdi }}</td>
                             <td scope="row">
-                                {{ $pl->deskripsiPL }}</td>
+                                {{ $pd->fakultas }}</td>
+                            <td scope="row">
+                                {{ $pd->namaPT }}</td>
+                            <td scope="row">
+                                {{ $pd->akreditasi }}</td>
+                            <td scope="row">
+                                {{ $pd->jenjangPendidikan }}</td>
+                            <td scope="row">
+                                {{ $pd->gelarLulusan }}</td>
+                            <td scope="row">
+                                {{ $pd->visi }}</td>
+                            <td scope="row">
+                                {{ $pd->misi }}</td>
+                            <td scope="row">
+                                {{ $pd->tujuan }}</td>
                             <td scope="row">
                                 @if (auth()->user()->role == 1)
                                     <a class="btn btn-primary"
-                                        href="{{ route('kurikulum.data.edit_pl', $pl->kodePL) }}">Edit</a>
-                                @endif
-                            </td>
-                            <td scope="row">
-                                @if (auth()->user()->role == 1)
-                                    <a class="btn btn-danger"
-                                        href="{{ route('kurikulum.data.delete_pl', $pl->kodePL) }}">Delete</a>
+                                        href="{{ route('#', $pl->kodePL) }}">Edit</a>
                                 @endif
                             </td>
                         </tr>
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
         </div>
