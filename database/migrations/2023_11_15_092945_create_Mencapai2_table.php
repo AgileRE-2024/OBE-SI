@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Profil_Lulusan', function (Blueprint $table) {
-            $table->char('kodePL', 4)->primary('kodePL');
-            $table->text('deskripsiPL');
-            $table->date('deleted_at')->nullable();
-            $table->char('namaPL', 100);
+        Schema::create('Mencapai2', function (Blueprint $table) {
+            $table->char('kodeCPMK', 7);
+            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK');
+            $table->char('kodeMK', 4);
+            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Profil_Lulusan');
+        Schema::dropIfExists('Mencapai2');
     }
 };

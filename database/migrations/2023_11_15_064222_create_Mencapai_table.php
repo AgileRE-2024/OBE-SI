@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Mencapai', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('kodeCPL');
+            $table->char('kodeCPL', 5);
             $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi');
-            $table->unsignedBigInteger('kodeMK');
+            $table->char('kodeMK', 4);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah');
             $table->timestamps();
         });

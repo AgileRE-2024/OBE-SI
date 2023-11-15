@@ -17,7 +17,7 @@ return new class extends Migration
             $table->char('NIM',12)->primary('NIM');
             $table->string('namaMahasiswa', 100);
             $table->year('tahunMasuk');
-            $table->date('deleted_at');
+            $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
     }

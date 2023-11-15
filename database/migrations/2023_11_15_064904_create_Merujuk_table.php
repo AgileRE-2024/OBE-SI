@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Merujuk', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('kodePL');
-            $table->foreign('kodePL')->references('kodepPL')->on('Prodi_Lulusan');
-            $table->unsignedBigInteger('kodeCPL');
+            $table->char('kodePL', 4);
+            $table->foreign('kodePL')->references('kodePL')->on('Profil_Lulusan');
+            $table->char('kodeCPL', 5);
             $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi');
             $table->timestamps();
         });

@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Prasyarat', function (Blueprint $table) {
-            $table->id();
+            $table->char('Mat_kodeMK', 4);
             $table->foreign('Mat_kodeMK')->references('kodeMK')->on('Mata_Kuliah');
-            $table->unsignedBigInteger('kodeMK');
+            $table->char('kodeMK', 4);
             $table->foreign('kodeMK')->references('kodeMK')->on('Kelas');
             $table->timestamps();
         });

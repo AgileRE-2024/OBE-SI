@@ -14,11 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_Kelas', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('NIM');
+            $table->char('NIM',12)->nullable();
             $table->foreign('NIM')->references('NIM')->on('Mahasiswa');
-            $table->unsignedBigInteger('kodeKelas');
-            $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas');
+            $table->char('kodeKelas',6)->nullable();
+            $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas')->onDelete('restrict');
             $table->integer('semesterAmbil');
             $table->integer('nilaiAkhir');
             $table->timestamps();

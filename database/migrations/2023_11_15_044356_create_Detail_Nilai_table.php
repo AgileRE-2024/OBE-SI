@@ -14,14 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_Nilai', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_rps');
-            $table->foreign('id_rps')->references('id_rps')->on('Detail_Penilaian_RPS');
-            $table->unsignedBigInteger('kodePenilaian');
-            $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Detail_Penilaian_RPS');
-            $table->unsignedBigInteger('NIM');
+            $table->char('id_rps',7);
+            $table->foreign('id_rps')->references('id_rps')->on('RPS');
+            $table->char('kodePenilaian', 2);
+            $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian');
+            $table->char('NIM',12);
             $table->foreign('NIM')->references('NIM')->on('Mahasiswa');
-            $table->integer('RPSPerTeknik');
+            $table->integer('NilaiPerTeknik');
             $table->timestamps();
         });
     }

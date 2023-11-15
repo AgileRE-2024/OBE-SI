@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Mengacu', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('kodeCPLSN');
+            $table->char('kodeCPLSN', 7);
             $table->foreign('kodeCPLSN')->references('kodeCPLSN')->on('CPL_SN_Dikti');
-            $table->unsignedBigInteger('kodeCPL');
+            $table->char('kodeCPL', 5);
             $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi');
             $table->timestamps();
         });

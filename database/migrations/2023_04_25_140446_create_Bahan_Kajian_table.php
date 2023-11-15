@@ -17,8 +17,7 @@ return new class extends Migration
             $table->char('kodeBK', 4)->primary('kodeBK');
             $table->string('namaBK', 100);
             $table->boolean('kategoriBK');
-            $table->date('deleted_at');
-            $table->date('created_at');
+            $table->date('deleted_at')->nullable();
             $table->string('referensiBK', 100);
             $table->timestamps();
         });

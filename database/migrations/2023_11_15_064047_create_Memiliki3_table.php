@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Memiliki3', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('kodeMingguRPS');
+            $table->char('id_media', 4);
+            $table->foreign('id_media')->references('id_media')->on('Media');
+            $table->char('kodeMingguRPS', 4);
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS');
             $table->timestamps();
         });

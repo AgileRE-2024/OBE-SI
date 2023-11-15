@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('CPMK', function (Blueprint $table) {
             $table->char('kodeCPMK', 7)->primary('kodeCPMK');
+            $table->char('kodeCPL', 5);
             $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
             $table->text('deskripsiCPMK');
-            $table->date('deleted_at');
-            $table->date('created_at');
+            $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
     }

@@ -17,8 +17,7 @@ return new class extends Migration
             $table->char('kodeCPL', 5)->primary('kodeCPL');
             $table->text('deskripsiCPL');
             $table->string('referensiCPL', 100);
-            $table->date('deleted_at');
-            $table->date('created_at');
+            $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
     }

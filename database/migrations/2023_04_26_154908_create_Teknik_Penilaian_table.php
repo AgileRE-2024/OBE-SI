@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('kriteriaPenilaian', 20);
             $table->string('tahapPenilaian', 50);
             $table->string('instrumenPenilaian', 50);
-            $table->date('deleted_at');
+            $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
     }

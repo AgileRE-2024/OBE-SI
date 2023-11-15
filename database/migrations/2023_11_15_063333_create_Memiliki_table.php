@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Memiliki', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_metode');
+            $table->integer('id_metode');
             $table->foreign('id_metode')->references('id_metode')->on('Metode');
-            $table->unsignedBigInteger('kodeMingguRPS');
+            $table->char('kodeMingguRPS', 4);
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS');
             $table->timestamps();
         });

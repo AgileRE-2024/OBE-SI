@@ -14,14 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('User', function (Blueprint $table) {
-            $table->char('nip', 18)->primary('nip')->nullable();
+            $table->char('nip', 18)->primary('nip');
+            $table->String('namaProdi',25);
             $table->foreign('namaProdi')->references('namaProdi')->on('Prodi')->onDelete('restrict');
             $table->string('jabatanDosen', 20)->nullable();
             $table->string('namaDosen', 50)->nullable();
             $table->integer('role')->nullable();
             $table->string('email', 50)->nullable();
             $table->string('status', 20)->nullable();
-            $table->date('deleted_at');
+            $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
     }

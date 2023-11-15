@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Berdasarkan', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_pustaka');
+            $table->integer('id_pustaka');
             $table->foreign('id_pustaka')->references('id_pustaka')->on('Pustaka');
-            $table->unsignedBigInteger('kodeMingguRPS');
+            $table->char('kodeMingguRPS', 4);
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS');
             $table->text('detail_pustaka');
             $table->timestamps();

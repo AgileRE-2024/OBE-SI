@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_Penilaian_RPS', function (Blueprint $table) {
-            $table->id();
+            $table->char('id_rps',7);
             $table->foreign('id_rps')->references('id_rps')->on('RPS');
-            $table->unsignedBigInteger('kodePenilaian');
+            $table->char('kodePenilaian', 2);
             $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian');
             $table->timestamps();
         });

@@ -19,8 +19,7 @@ return new class extends Migration
             $table->char('sumberSN', 8);
             $table->boolean('kategoriSN');
             $table->string('jenisSN', 20);
-            $table->date('deleted_at');
-            $table->date('created_at');
+            $table->date('deleted_at')->nullable();
             $table->timestamps();
         });
     }

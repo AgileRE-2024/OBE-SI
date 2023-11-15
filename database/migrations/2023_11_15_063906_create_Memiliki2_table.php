@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Memiliki2', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_bentuk');
+            $table->char('id_bentuk', 3);
             $table->foreign('id_bentuk')->references('id_bentuk')->on('Bentuk');
-            $table->unsignedBigInteger('kodeMingguRPS');
+            $table->char('kodeMingguRPS', 4);
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS');
             $table->timestamps();
         });
