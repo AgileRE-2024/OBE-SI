@@ -253,6 +253,35 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item {{-- @if (Request::is('*penilaian*')) menu-open @endif --}}">
+                        <a id="manajemen" href="#" class="nav-link"
+                            {{-- @if (Request::is('*penilaian*')) style="background-color: #F6D743; color: black;" @endif --}}>
+                            <p>
+                                <i class="bi bi-book"></i>
+                                Manajemen
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview pl-3">
+                            <li class="nav-item">
+                                <a href="/manajemen/manajemen_prodi" class="nav-link"
+                                    {{-- @if (URL::current() === route('penilaian.tp_cpmk')) style="background-color: #ffffff; color: black;" @endif --}}>
+                                    <p style="font-size: 14px">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        Manajemen Prodi
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{-- {{ route('penilaian.tahap_penilaian.index') }} --}}" class="nav-link"
+                                    {{-- @if (URL::current() === route('penilaian.tahap_penilaian.index')) style="background-color: #ffffff; color: black;" @endif --}}>
+                                    <p style="font-size: 14px">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        Manajemen User
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
