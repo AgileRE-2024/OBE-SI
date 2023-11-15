@@ -336,23 +336,9 @@ Route::post('/reset-password', function (Request $request) {
         : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
 
-// Route::get('/manajemen/manajemen_prodi', function () {
-//     return view('content.mnj_prodi.prodi', ["title" => "Manajemen Prodi"]);
-// });
-// Route::group(['middleware' => 'role:admin'], function () {
-//     Route::prefix('/dashboard/manajemen')->name('manajemen.')->group(function () {
-//         Route::get('/manajemen_prodi', [ProdiController::class,'index'])->name('prodi');
-//         Route::get('/manajemen_prodi/add', [ProdiController::class, 'addProdi'])->name('add_prodi');
-//         Route::post('/manajemen_prodi/add', [ProdiController::class, 'storeProdi'])->name('store_prodi');
-//     });
-// });
-
 Route::prefix('/dashboard/manajemen')->name('manajemen.')->group(function () {
     Route::get('/manajemen_prodi', [ProdiController::class,'index'])->name('prodi')->middleware('role:admin,dosen,kurikulum');
-    Route::get('/manajemen_prodi/add', [ProdiController::class, 'addProdi'])->name('add_prodi')->middleware('role:admin');
-    Route::post('/manajemen_prodi/add', [ProdiController::class, 'storeProdi'])->name('store_prodi')->middleware('role:admin');
+    Route::get('/edit_prodi/{namaProdi}', [ProdiController::class, 'editprodi'])->name('edit_prodi')->middleware('role:admin');
+    // Route::get('/manajemen_prodi/add', [ProdiController::class, 'addProdi'])->name('add_prodi')->middleware('role:admin');
+    // Route::post('/manajemen_prodi/add', [ProdiController::class, 'storeProdi'])->name('store_prodi')->middleware('role:admin');
 });
-
-// Route::get('/manajemen/manajemen_prodi/add', function () {
-//     return view('content.mnj_prodi.add_prodi', ["title" => "Add Manajemen Prodi"]);
-// });

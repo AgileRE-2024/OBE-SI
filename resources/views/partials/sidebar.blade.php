@@ -264,7 +264,7 @@
                         <ul class="nav nav-treeview pl-3">
                             <li class="nav-item">
                                 <a href="{{ route('manajemen.prodi') }}" class="nav-link"
-                                    @if (URL::current() === route('manajemen.prodi')) style="background-color: #ffffff; color: black;" @endif>
+                                    @if (URL::current() === route('manajemen.prodi')) style="background-color: #ffffff; color: black;"@endif>
                                     <p style="font-size: 14px">
                                         <i class="bi bi-caret-right-fill"></i>
                                         Manajemen Prodi
