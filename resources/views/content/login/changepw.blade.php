@@ -16,6 +16,15 @@
                             {{ session()->get('error') }}
                         </div>
                     @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <h4 style="color:white">Ubah Kata Sandi Pengguna</h4>
                     <br>
                     <form action="/updateprofile/{{ $data->nip }}" method="POST" enctype="multipart/form-data"
