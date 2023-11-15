@@ -254,6 +254,10 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum'], function () {
     Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
     
     Route::get('/generate-pdf', 'PDFController@generatePDF');
+
+
+    //NEW ROUTE NEWEST RPS
+    Route::get('/dashboard/list_rps', [RPSController::class,'filterNewestYearSemester', 'title'=>'RPS'])->name('rps');
 });
 
 
@@ -282,6 +286,10 @@ Route::group(['middleware' => 'role:dosen'], function () {
         Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
         
         Route::get('/rps/{kodeRPS}', [RPSController::class, 'show'])->name('rps_show');
+
+        Route::get('/mata_kuliah/{kodeRPS}', function () {
+            return view('rps_mata_kuliah', ['title' => 'Mata Kuliah', 'kodeRPS' => 'AGB10112023']);
+        })->name('mata_kuliah');
     });
     Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
     Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');

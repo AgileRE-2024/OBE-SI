@@ -11,6 +11,13 @@
                     style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
         </div>
     </div>
+    <div class="d-flex justify-content-start pt-2">
+        <div>
+            <a class="btn btn-primary" href="{{ route('edit_rps.add_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}"><i
+                    class="bi bi-pencil-square">
+                </i>Edit</a>
+        </div>
+    </div>
     <div class="d-flex mt-3">
         <table class="table table-bordered" style="text-align: center">
             <thead class="table" style="background-color: lightgray">
@@ -19,7 +26,6 @@
                     <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Detail Peran</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">NIP</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Nama Dosen</th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,9 +38,6 @@
                     <td scope="row">
                         nama dosen
                     </td>
-                    <td scope="row">
-                        <a class="btn btn-primary">Edit</a>
-                    </td>
                 </tr>
                 <tr>
                     <td scope="row">2</td>
@@ -44,9 +47,6 @@
                     </td>
                     <td scope="row">
                         nama dosen
-                    </td>
-                    <td scope="row">
-                        <a class="btn btn-primary">Edit</a>
                     </td>
                 </tr>
                 <tr>
@@ -58,9 +58,6 @@
                     <td scope="row">
                         nama dosen
                     </td>
-                    <td scope="row">
-                        <a class="btn btn-primary">Edit</a>
-                    </td>
                 </tr>
                 <tr>
                     <td scope="row">4</td>
@@ -71,9 +68,6 @@
                     <td scope="row">
                         nama dosen
                     </td>
-                    <td scope="row">
-                        <a class="btn btn-primary">Edit</a>
-                    </td>
                 </tr>
                 <tr>
                     <td scope="row">5</td>
@@ -83,9 +77,6 @@
                     </td>
                     <td scope="row">
                         nama dosen
-                    </td>
-                    <td scope="row">
-                        <a class="btn btn-primary">Edit</a>
                     </td>
                 </tr>
             </tbody>

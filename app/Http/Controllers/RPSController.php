@@ -191,8 +191,21 @@ class RPSController extends Controller
         $newestYear = RPS::max('tahunAjaran');
         $newestSemester = RPS::where('tahunAjaran',$newestYear)->max('semester');
         $rps = RPS::where('tahunAjaran',$newestYear)->where('semester',$newestSemester)->get();
-        return redirect()->route('content.rps', ['title' => 'List RPS', 'rps' => $rps]);
+
+        return view('content.cari_rps', [
+            'title' => 'RPS',
+            'rps' => $rps,
+            'rps_list'=> RPS::all(),
+            'teknik_penilaian_list'=> Teknik_Penilaian::all(),
+            'detail_rps_list'=> Detail_RPS::all(),
+            'dosen_list'=> User::all(),
+            'mk_list' => Mata_Kuliah::all(),
+            'minggu_rps_list' => Minggu_RPS::all(),
+            'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
+            'subcpmk_list'=>SubCPMK::all(),
+            'teknik_penilaian_list'=>Teknik_Penilaian::all(),
+        ]);
     }
-    
+
     
 }
