@@ -95,7 +95,7 @@ class CRUDCPMKController extends Controller
                 'kodeCPL' => 'required'
             ]);
         }
-        
+
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
