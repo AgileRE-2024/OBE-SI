@@ -57,7 +57,7 @@ class ProfilLulusanController extends Controller
     public function storeProfilLulusan(Request $request)
     {
         $request->validate([
-            'kodePL' => 'required|unique:profil_lulusan,kodePL',
+            'kodePL' => 'required|unique:profil_lulusan,kodePL|max:10',
             'deskripsiPL' => 'required',
         ]);
 

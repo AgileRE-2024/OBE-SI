@@ -17,7 +17,10 @@
                         @error('kodePL')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodePL" class="form-control" placeholder="Kode Profil Lulusan">
+                        <input type="text" name="kodePL" class="form-control" placeholder="Kode Profil Lulusan"
+                            pattern="[A-Z0-9]+" maxlength="10" minlength="4"
+                            title="Harap masukkan huruf besar dan angka saja"
+                            oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^A-Z0-9]/g, '')">
                     </div>
 
                     <div class="form-group">
