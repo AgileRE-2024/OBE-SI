@@ -18,7 +18,7 @@
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah"
-                            value="{{ old('kodeMK') ? old('kodeMK') : $mk->kodeMK }}">
+                            value="{{ old('kodeMK') ? old('kodeMK') : $mk->kodeMK }}" pattern="[A-Za-z0-9]+" maxlength="4">
                     </div>
 
                     <div class="form-group">

@@ -16,7 +16,7 @@
                         @error('kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah">
+                        <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah" pattern="[A-Za-z0-9]+" maxlength="4">
                     </div>
 
                     <div class="form-group">
@@ -24,7 +24,7 @@
                         @error('namaMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="namaMK" class="form-control" placeholder="Nama Mata Kuliah">
+                        <input type="text" name="namaMK" class="form-control" placeholder="Nama Mata Kuliah" pattern="[A-Za-z0-9]+>
                     </div>
 
                     <div class="form-group">
@@ -82,7 +82,7 @@
                         @error('sks')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah">
+                        <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah" min="0" max="4">
                     </div>
 
                     <div class="form-group">
