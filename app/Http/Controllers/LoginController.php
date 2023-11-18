@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 
 
 class LoginController extends Controller
@@ -14,45 +15,66 @@ class LoginController extends Controller
         return view ('content.login.login', [
             "title" => "Login"]);
     }
-    public function proseslogin (Request $request){
-       if(Auth::attempt($request->only('nip','password'))){
-            if (auth()->user()->role==1){
-                return redirect('/dashboard/kurikulum'); 
-            }
-            elseif (auth()->user()->role==2){
+
+    public function proseslogin(Request $request)
+    {
+        $request->validate([
+            'nip' => 'required',
+            'password' => 'required|string|min:8'
+        ], [
+            'nip.required' => 'NIP wajib diisi.',
+            'password.required' => 'Kata sandi wajib diisi.',
+            'password.string' => 'Kata sandi harus berupa teks.',
+            'password.min' => 'Panjang kata sandi minimal 8 karakter.'
+        ]);
+
+        $credentials = $request->only('nip', 'password');
+
+        if (Auth::attempt($credentials)) {
+            $user = auth()->user();
+
+            if ($user->role == 1) {
+                return redirect('/dashboard/kurikulum');
+            } elseif ($user->role == 2) {
                 return redirect('/dashboard/admin');
             }
+
             return redirect('/dashboard/dosen');
         }
-        return view ('content.login.loginfailed', [
-            "title" => "Login"]);
+
+        return back()->with('error', 'NIP atau kata sandi salah! Silakan Login Ulang!');
     }
+
+
+
     public function logout(Request $request){
         Auth::logout();
- 
+
         request()->session()->invalidate();
-     
+
         request()->session()->regenerateToken();
-     
+
         return redirect('/login');
 
     }
+
     public function myprofile (){
         $data = User::where('nip',auth()->user()->nip)->first();
         if(auth()->user()->role==1){
             return view('content.login.homekurikulum',compact ('data'), [
                 "title" => "My Profile"
-            ]); 
+            ]);
         }
         elseif(auth()->user()->role==2){
             return view('content.login.homeadmin',compact ('data'), [
                 "title" => "My Profile"
-            ]); 
+            ]);
         }
         return view('content.login.homedosen',compact ('data'), [
             "title" => "My Profile"
-        ]); 
+        ]);
     }
+
     public function ubahpw(Request $request, $nip){
         $data = User::find($nip);
         //dd($data);
@@ -60,35 +82,39 @@ class LoginController extends Controller
             "title" => "Ubah Kata Sandi"
         ]);
     }
-    public function updateprofile(Request $request, $nip){
-        //cek old password
-        if(!Hash::check($request->old_password, auth()->user()->password)){
-            return back()->with('error','kata sandi lama tidak sesuai');
-        }
 
-        //cek password baru sama confirmnya
-        if($request->new_password != $request->new_password_confirmation){
-            return back()->with('error','kata sandi baru dan konfirmasi kata sandi baru tidak sama');           
-        }
+    public function updateprofile(Request $request, $nip)
+{
+    // Validasi input
+    $request->validate([
+        'old_password' => 'required',
+        'new_password' => 'required|min:8|confirmed',
+    ]);
 
-        $user=User::find(auth()->user()->nip);
-        if(auth()->user()->role==2){
-            $user->update([
-                'password'=> Hash::make($request->new_password)
-            ]);
-            return redirect('/dashboard/admin')->with('status','Kata sandi berhasil diubah');
-        }
-        elseif(auth()->user()->role==1){
-            $user->update([
-                'password'=> Hash::make($request->new_password)
-            ]);
-            return redirect('/dashboard/kurikulum')->with('status','Kata sandi berhasil diubah');
-        }
-        elseif(auth()->user()->role==0){
-            $user->update([
-                'password'=> Hash::make($request->new_password)
-            ]);
-            return redirect('/dashboard/dosen')->with('status','Kata sandi berhasil diubah');
-        }
+    // Cek kecocokan password lama
+    if (!Hash::check($request->old_password, auth()->user()->password)) {
+        return back()->with('error', 'Kata sandi lama tidak sesuai');
     }
+
+    // Update password baru
+    $user = User::find(auth()->user()->nip);
+    $user->update([
+        'password' => Hash::make($request->new_password),
+    ]);
+
+    // Redirect sesuai peran pengguna
+    $redirectPath = '/dashboard/';
+    switch (auth()->user()->role) {
+        case 2:
+            $redirectPath .= 'admin';
+            break;
+        case 1:
+            $redirectPath .= 'kurikulum';
+            break;
+        default:
+            $redirectPath .= 'dosen';
+    }
+
+    return redirect($redirectPath)->with('status', 'Kata sandi berhasil diubah');
+}
 }
