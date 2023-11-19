@@ -22,6 +22,13 @@
                             maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
                             oninput="updateInput(this);" value="PL">
                     </div>
+                    <div class="form-group">
+                        <label>Nama Profil Lulusan</label>
+                        @error('namaPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <input type="text" name="namaPL" class="form-control" placeholder="Nama Profil Lulusan">
+                    </div>
 
                     <div class="form-group">
                         <label>Deskripsi Profil Lulusan</label>

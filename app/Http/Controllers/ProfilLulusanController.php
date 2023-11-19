@@ -57,15 +57,16 @@ class ProfilLulusanController extends Controller
 
     public function storeProfilLulusan(Request $request)
     {
-        $request->validate([
+        // dd($request->all());
+        $data = $request->validate([
             'kodePL' => 'required|unique:profil_lulusan,kodePL|max:10',
             'deskripsiPL' => 'required',
+            'namaPL' => 'required',
         ]);
 
-        Profil_Lulusan::create([
-            'kodePL' => $request->kodePL,
-            'deskripsiPL' => $request->deskripsiPL,
-        ]);
+        // dd($data);
+
+        Profil_Lulusan::create($data);
 
         return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil ditambahkan');
     }
