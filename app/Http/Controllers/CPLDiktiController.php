@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\CPLDiktiExport;
 use Dompdf\Dompdf;
 use App\Models\CPL_SN_Dikti;
+use App\Models\Detail_SN_CPLProdi;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
@@ -119,9 +120,11 @@ class CPLDiktiController extends Controller
 
     public function delete($cpl)
     {
-        $cpl = CPL_SN_Dikti::where('kodeCPLSN', $cpl)->first();
-        $cpl->delete();
-
-        return redirect()->route('kurikulum.data.cpl_sndikti')->with('success', 'CPL SN Dikti berhasil dihapus');
+        if (Detail_SN_CPLProdi::where('kodeCPLSN', $cpl)->exists()) {
+            return redirect()->route('kurikulum.data.cpl_sndikti')->with('error', 'CPL SN Dikti masih berelasi dengan CPL.');
+        }else{
+            $cpl = CPL_SN_Dikti::where('kodeCPLSN', $cpl)->first()->delete();
+            return redirect()->route('kurikulum.data.cpl_sndikti')->with('success', 'CPL SN Dikti berhasil dihapus');
+        }
     }
 }
