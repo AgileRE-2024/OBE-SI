@@ -13,16 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Kelas', function (Blueprint $table) {
-            $table->char('kodeKelas',9)->primary('kodeKelas');
-            $table->char('id_rps',7)->nullable('id_rps');
-            $table->foreign('id_rps')->references('id_rps')->on('RPS')->onDelete('restrict');
-            $table->string('namaKelas',100);
-            $table->text('jadwal');
-            $table->integer('kuota');
-            $table->char('kodeMK',7);
+        Schema::create('Prasyarat', function (Blueprint $table) {
+            $table->char('kodeMK', 10);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-            $table->timestamp('deleted_at');
+            $table->char('mat_kodeMK', 10)->nullable();
+            $table->foreign('mat_kodeMK', 10)->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Kelas');
+        Schema::dropIfExists('Prasyarat');
     }
 };

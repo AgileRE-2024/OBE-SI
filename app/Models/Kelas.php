@@ -15,7 +15,7 @@ class Kelas extends Model
 
     public function Mahasiswa()
     {
-        return $this->belongsToMany(Mahasiswa::class, 'Nilai_Mahasiswa', 'kodeKelas', 'nim');
+        return $this->belongsToMany(Mahasiswa::class, 'detail_kelas', 'kodeKelas', 'nim');
     }
     public function Mata_Kuliah()
     {

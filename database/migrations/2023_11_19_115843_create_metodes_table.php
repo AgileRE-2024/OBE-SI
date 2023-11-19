@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Bahan_Kajian', function (Blueprint $table) {
-            $table->char('kodeBK', 10)->primary('kodeBK');
-            $table->string("namaBK", 100);
-            $table->boolean("kategoriBK");
-            $table->string("referensiBK", 100);
-            $table->timestamp('deleted_at');
+        Schema::create('metodes', function (Blueprint $table) {
+            $table->char('id_metode',2)->primary();
+            $table->string('nama_metode',30)->nullable();
+            $table->string('deskripsi_metode',100)->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Bahan_Kajian');
+        Schema::dropIfExists('metodes');
     }
 };

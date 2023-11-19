@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->char('nip', 18)->primary('nip')->nullable();
+            $table->String('namaProdi',25)->nullable('namaProdi');
+            $table->foreign('namaProdi')->references('namaProdi')->on('prodi')->onDelete('restrict');
             $table->string('jabatanDosen', 20)->nullable();
             $table->string('namaDosen', 50)->nullable();
             $table->string('password', 1406)->nullable();

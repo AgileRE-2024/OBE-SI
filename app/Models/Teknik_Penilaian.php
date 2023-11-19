@@ -22,4 +22,9 @@ class Teknik_Penilaian extends Model
     {
         return $this->hasMany(Detail_Nilai_Mahasiswa::class, 'kodePenilaian', 'kodePenilaian');
     }
+
+    public function RPS(){
+        return $this->belongsToMany(Teknik_Penilaian::class, 'detail_penilaian_rps','kodePenilaian', 'id_RPS' );
+
+    }
 }

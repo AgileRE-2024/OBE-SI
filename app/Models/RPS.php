@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class RPS extends Model
 {
-    protected $primaryKey = 'kodeRPS';
+    protected $primaryKey = 'id_RPS';
     public $incrementing = false;
     protected $table = 'RPS';
     protected $fillable = [
-        'kodeRPS', 'tahunAjaran','pustaka', 'kodeMK', 'kps'
+        'kodeRPS', 'tahunAjaran','pustaka', 'kodeMK'
     ];
 
     public function Mata_Kuliah()
@@ -25,16 +25,21 @@ class RPS extends Model
 
     public function User1()
     {
-        return $this->belongsToMany(User::class, 'Detail_Peran_Dosen', 'kodeRPS', 'nip');
+        return $this->belongsToMany(User::class, 'Detail_Peran_Dosen', 'id_RPS', 'nip');
     }
     
     public function Minggu_RPS()
     {
-        return $this->belongsToMany(Minggu_RPS::class, 'Detail_RPS', 'kodeRPS', 'kodeMingguRPS');
+        return $this->belongsToMany(Minggu_RPS::class, 'Detail_RPS', 'id_RPS', 'kodeMingguRPS');
     }
 
-    public function Nilai_Mahasiwa()
+    public function Nilai_Mahasiswa()
     {
-        return $this->hasMany(Nilai_Mahasiwa::class,'kodeRPS', 'kodeRPS');
+        return $this->hasMany(Nilai_Mahasiswa::class,'id_RPS', 'id_RPS');
+    }
+
+    public function Teknik_Penilaian()
+    {
+        return $this->belongsToMany(Teknik_Penilaian::class, 'detail_penilaian_rps', 'id_RPS', 'kodePenilaian');
     }
 }

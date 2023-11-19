@@ -15,4 +15,8 @@ class Mahasiswa extends Model
     {
         return $this->hasMany(Nilai_Mahasiswa::class,'nim', 'nim');
     }
+
+    public function kelas(){
+        return $this->belongsToMany(Mahasiswa::class, 'detail_kelas','nim','kodeKelas');
+    }
 }

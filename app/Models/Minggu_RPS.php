@@ -23,4 +23,18 @@ class Minggu_RPS extends Model
         return $this->belongsToMany(RPS::class, 'Detail_RPS', 'kodeMingguRPS', 'kodeRPS');
     }
 
+    public function metode()
+    {
+        return $this->belongsToMany(Metode::class, 'detail_metode_mingguRPS', 'kodeMingguRPS', 'id_metode');
+    }
+
+    public function media()
+    {
+        return $this->belongsToMany(Metode::class, 'detail_metode_mingguRPS', 'kodeMingguRPS', 'id_media');
+    }
+
+    public function bentuk()
+    {
+        return $this->belongsToMany(Metode::class, 'detail_metode_mingguRPS', 'kodeMingguRPS', 'id_bentuk');
+    }
 }

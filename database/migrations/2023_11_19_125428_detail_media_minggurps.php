@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Bahan_Kajian', function (Blueprint $table) {
-            $table->char('kodeBK', 10)->primary('kodeBK');
-            $table->string("namaBK", 100);
-            $table->boolean("kategoriBK");
-            $table->string("referensiBK", 100);
-            $table->timestamp('deleted_at');
+        Schema::create('detail_media_mingguRPS', function (Blueprint $table) {
+            $table->char('id_media',2);
+            $table->char('kodeMingguRPS', 4);
+            $table->foreign('id_media')->references('id_media')->on('Media')->onDelete('restrict');
+            $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Bahan_Kajian');
+        Schema::dropIfExists('detail_media_mingguRPS');
     }
 };

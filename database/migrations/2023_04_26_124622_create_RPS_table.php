@@ -14,13 +14,23 @@ return new class extends Migration
     public function up()
     {
         Schema::create('RPS', function (Blueprint $table) {
-            $table->char('kodeRPS',16)->primary('kodeRPS');
-            $table->year('tahunAjaran');
-            $table->string('pustaka', 1000);
-            $table->char('kodeMK',10);
-            $table->char('kps',18);
+            $table->char('id_rps',7)->primary('id_rps');
+            $table->char('nip', 18);
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
+            $table->char('kodeMK', 4);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-            $table->foreign('kps')->references('nip')->on('users')->onDelete('restrict');
+            $table->char('kodeRPS', 6);
+            $table->date('tahunAjaran');
+            $table->integer('semester');
+            $table->String('diperiksa_oleh', 18);
+            $table->String('disiapkan_oleh', 18);
+            $table->String('disetujui_oleh', 18);
+            $table->String('dibuat_oleh', 18);
+            $table->integer('versi');
+            $table->char('penanggungJawab', 18);
+            $table->char('dosenPengampu', 100);
+            $table->text('detail_penilaian');
+            $table->timestamp('deleted_at');
             $table->timestamps();
         });
     }
