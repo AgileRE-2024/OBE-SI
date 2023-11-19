@@ -10,7 +10,7 @@ class Minggu_RPS extends Model
     public $incrementing = false;
     protected $table = 'Minggu_RPS';
     protected $fillable = [
-        'kodeMingguRPS', 'kodeSubCPMK', 'mingguKe', 'bentukPembelajaran', 'indikatorMingguRPS', 'kriteriaMingguRPS', 'deskripsiPembelajaran', 'materiPembelajaran'
+        'kodeMingguRPS', 'id_rps', 'id_kriteria_penilaians', 'kodePenilaian', 'kodeSubCPMK', 'mingguKe','deleted_at', 'luring', 'penugasan','waktuPembelajaran','pengalaman_belajar','bahan_kajian'
     ];
 
     public function SubCPMK()

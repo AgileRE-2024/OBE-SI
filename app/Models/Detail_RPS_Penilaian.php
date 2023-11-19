@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_RPS extends Model
 {
-    protected $table = 'Detail_RPS';
-    protected $fillable = ['kodeRPS', 'kodeMingguRPS', 'kodePenilaian'];
+    protected $table = 'Detail_RPS_Penilaian';
+    protected $fillable = ['id_rps', 'kodePenilaian'];
 
     public function Teknik_Penilaian()
     {

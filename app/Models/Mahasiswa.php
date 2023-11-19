@@ -9,7 +9,7 @@ class Mahasiswa extends Model
     protected $primaryKey = 'nim';
     public $incrementing = false;
     protected $table = 'Mahasiswa';
-    protected $fillable = ['nim', 'namaMahasiswa', 'tahunMasuk'];
+    protected $fillable = ['nim', 'namaMahasiswa', 'tahunMasuk','deleted_at'];
 
     public function Nilai_Mahasiswa()
     {

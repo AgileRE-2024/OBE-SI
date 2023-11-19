@@ -10,7 +10,7 @@ class CPMK extends Model
     public $incrementing = false;
     protected $table = 'CPMK';
     protected $fillable = [
-        'kodeCPMK', 'deskripsiCPMK','kodeCPL'
+        'kodeCPMK', 'deskripsiCPMK','kodeCPL','deleted_at'
     ];
 
     public function CPL()

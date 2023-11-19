@@ -16,7 +16,7 @@ class User extends Authenticatable
     protected $primaryKey = 'nip';
     public $incrementing = false;
     protected $table = 'users';
-    protected $fillable = ['nip', 'jabatanDosen', 'namaDosen', 'password', 'email', 'role'];
+    protected $fillable = ['nip', 'namaProdi', 'jabatanDosen', 'namaDosen', 'password', 'email','role','status'];
     protected $hidden = ['remember_token'];
     protected $casts = [
         'email_verified_at' => 'datetime',
