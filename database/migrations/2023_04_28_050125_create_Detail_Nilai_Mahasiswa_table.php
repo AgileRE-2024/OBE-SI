@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Detail_Nilai_Mahasiswa', function (Blueprint $table) {
-            $table->char('id_rps',16);
+            $table->char('id_rps',16)->nullable();
             $table->foreign('id_rps')->references('id_rps')->on('RPS')->onDelete('restrict');
             $table->char('nilaiPerTeknik',2);
             $table->string('kodePenilaian',10)->nullable('kodePenilaian');
             $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('cascade');
-            $table->char('nim',12);
+            $table->char('nim',12)->nullable();
             $table->foreign('nim')->references('nim')->on('Mahasiswa')->onDelete('cascade');
             $table->timestamps();
         });

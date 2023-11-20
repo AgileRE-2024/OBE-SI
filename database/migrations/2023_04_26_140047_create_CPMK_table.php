@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('deskripsiCPMK');
             $table->char('kodeCPL', 10);
             $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
-            $table->timestamp('deleted_at');
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

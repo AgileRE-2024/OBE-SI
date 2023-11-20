@@ -8,15 +8,17 @@ use App\Models\CPL_Prodi;
 use App\Models\CPL_SN_Dikti;
 use App\Models\Detail_SN_CPLProdi;
 use App\Models\Detail_PL_CPLProdi;
-use App\Models\Detail_Peran_Dosen;
 use App\Models\Detail_CPLProdi_BK;
 use App\Models\Detail_BK_MK;
 use App\Models\Detail_MK_CPMK;
-use App\Models\Detail_RPS;
+use App\Models\Detail_RPS_Penilaian;
+use App\Models\Detail_Pustaka_Minggurps;
 use App\Models\Profil_Lulusan;
 use App\Models\Bahan_Kajian;
 use App\Models\Mata_Kuliah;
 use App\Models\RPS;
+use App\Models\Pustaka;
+use App\Models\kriteria_penilaian;
 use App\Models\Prodi;
 use App\Models\CPMK;
 use App\Models\Mahasiswa;
@@ -24,7 +26,6 @@ use App\Models\Minggu_RPS;
 use App\Models\SubCPMK;
 use App\Models\Kelas;
 use App\Models\Page;
-use App\Models\Nilai_Mahasiswa;
 use App\Models\Detail_Nilai_Mahasiswa;
 use App\Models\Teknik_Penilaian;
 use App\Models\User;
@@ -137,13 +138,37 @@ class DatabaseSeeder extends Seeder
             'status' => "Aktif Bekerja"
         ]);
 
+        kriteria_penilaian::create([
+            'nama_kriteria_penilaians' => 'Kriteria 1',
+            'indikatorPenilaian' => 'Indikator 1A',
+            'deskripsi_kriteria_penilaians' => 'Deskripsi Kriteria 1A',
+        ]);
+
         RPS::create([
-            'kodeRPS' => 'RPS001',
-            'tahunAjaran' => 2022,
-            'pustaka' => 'Johnson and Wichern, 2002. Applied Multivariate Statistical Analysis, Prentice Hall.',
+            'id_rps' => '1032301',
+            'nip' => '197102111997021001',
             'kodeMK' => 'SII103',
-            'kps' => '197102111997021001'
+            'kodeRPS' => 'RPS001',
+            'tahunAjaran' => 2023,
+            'semester' => 1,
+            'diperiksa_oleh' => 'Rimuljo Hendradi',
+            'disiapkan_oleh' => 'Rimuljo Hendradi',
+            'disetujui_oleh' => 'Rimuljo Hendradi',
+            'dibuat_oleh' => 'Rimuljo Hendradi',
+            'versi' => 1,
+            'penanggungJawab' => 'Rimuljo Hendradi',
+            'dosenPengampu' => 'Rimuljo Hendradi',
+            'detail_penilaian' => 'Penilainnya begini',
+        ]);
+
+        Pustaka::create([
+            'id_pustaka' => '1',
+            'nama_penulis' => 'Johnson and Wichern',
+            'tahun' => 2002,
+            'judul' => 'Applied Multivariate Statistical Analysis',
+            'penerbit' => 'Prentice Hall'
         ],);
+
 
         CPMK::create([
             'kodeCPMK' => 'CPMK011',
@@ -180,7 +205,6 @@ class DatabaseSeeder extends Seeder
             'kriteriaPenilaian' => 'Isi kriteria penilaian',
             'tahapPenilaian' => 'Awal Tengah Semester',
             'instrumenPenilaian' => 'Rubrik holistik',
-            'kodeRPS' => 'RPS001',
         ]);
 
         Teknik_Penilaian::create([
@@ -190,29 +214,37 @@ class DatabaseSeeder extends Seeder
             'kriteriaPenilaian' => 'Isi kriteria penilaian',
             'tahapPenilaian' => 'Tengah Semester',
             'instrumenPenilaian' => 'Rubrik holistik',
-            'kodeRPS' => 'RPS001',
+        ]);
+
+        Detail_RPS_Penilaian::create([
+            'id_rps' => '1032301',
+            'kodePenilaian' => '0001',
+        ]);
+
+        Detail_RPS_Penilaian::create([
+            'id_rps' => '1032301',
+            'kodePenilaian' => '0002',
         ]);
 
         Minggu_RPS::create([
+            'id_rps' => '1032301',
             'kodeMingguRPS' => '2',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'mingguKe' => '1',
-            'bentukPembelajaran' => true,
-            'indikatorMingguRPS' => 'Mahasiswa dapat mengimplementasikan visualisasi data dan grafik pada tools yang ditentukan',
-            'kriteriaMingguRPS' => 'Ketepatan dan penguasaan',
-            'deskripsiPembelajaran' => 'Visualisasi data dengan membuat dan menginterpretasikan grafik',
-            'materiPembelajaran' => 'Pengenalan R Studio',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => 'Tugas 1',
+            'waktuPembelajaran' => '2 jam',
+            'pengalaman_belajar' => 'Pembelajaran 1',
+            'bahan_kajian' => 'Bahan 1',
         ]);
-        Minggu_RPS::create([
-            'kodeMingguRPS' => '3',
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'mingguKe' => '2',
-            'bentukPembelajaran' => false,
-            'indikatorMingguRPS' => 'Mahasiswa dapat menghitung standar deviasi pada tools yang ditentukan',
-            'kriteriaMingguRPS' => 'Ketepatan dan sistematika',
-            'deskripsiPembelajaran' => 'Mengukur penyebaran data menggunakan rentang dan deviasi standar serta mengidentifikasi outlier dalam data set menggunakan konsep rentang interkuartil',
-            'materiPembelajaran' => 'Standar Deviasi pada R Studio',
-        ]);
+
+        Detail_Pustaka_Minggurps::create([
+            'id_pustaka' => '1',
+            'kodeMingguRPS' => '2',
+        ],);
 
         Mahasiswa::create([
             'nim' => '082011633100',
@@ -586,22 +618,6 @@ class DatabaseSeeder extends Seeder
 
         Detail_BK_MK::insert($bkmkData);
 
-        Detail_Peran_Dosen::create([
-            'kodeRPS' => 'RPS001',
-            'nip' => '198206062007101001',
-            'peranDosen' => 'Dosen Pengembang RPS',
-        ]);
-        Detail_Peran_Dosen::create([
-            'kodeRPS' => 'RPS001',
-            'nip' => '197101042008121001',
-            'peranDosen' => 'Koordinator BK',
-        ]);
-        Detail_Peran_Dosen::create([
-            'kodeRPS' => 'RPS001',
-            'nip' => '197101042008121001',
-            'peranDosen' => 'Dosen Pengampu',
-        ]);
-
         Detail_MK_CPMK::create([
             'kodeMK' => 'SII103',
             'kodeCPMK' => 'CPMK011',
@@ -619,28 +635,17 @@ class DatabaseSeeder extends Seeder
             'kodeCPMK' => 'CPMK013',
         ]);
 
-        Detail_RPS::create([
-            'kodeRPS' => 'RPS001',
-            'kodeMingguRPS' => '2',
+        Detail_RPS_Penilaian::create([
+            'id_rps' => '1032301',
             'kodePenilaian' => '0001',
         ]);
 
-        Nilai_Mahasiswa::create([
-            'kodeNilai' => 1,
-            'nim' => '082011633100',
-            'kodeKelas' => 'ABCDLITS6',
-            'kodeRPS' => 'RPS001',
-            'semesterAmbil' => '01',
-        ]);
-
         Detail_Nilai_Mahasiswa::create([
-            'kodeNilai' => '1',
             'kodePenilaian' => '0001',
             'nilaiPerTeknik' => '60',
         ]);
 
         Detail_Nilai_Mahasiswa::create([
-            'kodeNilai' => '1',
             'kodePenilaian' => '0002',
             'nilaiPerTeknik' => '40',
         ]);

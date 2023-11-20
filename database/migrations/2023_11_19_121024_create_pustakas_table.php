@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('tahun');
             $table->string('judul', 100);
             $table->string('penerbit', 100);
-            $table->text('referensi');
-            $table->timestamp('deleted_at');
+            $table->text('referensi')->nullable();
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

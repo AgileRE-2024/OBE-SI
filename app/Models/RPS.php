@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class RPS extends Model
 {
     protected $primaryKey = 'id_RPS';
-    public $incrementing = false;
+    public $incrementing = TRUE;
     protected $table = 'RPS';
     protected $fillable = [
         'id_rps', 'nip','kodeMK', 'kodeRPS', 'tahunAjaran', 'semester', 'diperiksa_oleh','disiapkan_oleh','disetujui_oleh', 'dibuat_oleh','versi', 'penanggungJawab','dosenPengampu','detail_penilaian','deleted_at'

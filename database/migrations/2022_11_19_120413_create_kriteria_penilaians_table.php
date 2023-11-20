@@ -14,8 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kriteria_penilaians', function (Blueprint $table) {
-            $table->char('id_kriteria_penilaians',2)->primary();
+            // $table->char('id_kriteria_penilaians',7)->autoIncrement()->primary();
+            $table->id('id_kriteria_penilaians');
             $table->string('nama_kriteria_penilaians',30)->nullable();
+            $table->string('indikatorPenilaian',50)->nullable();
             $table->string('deskripsi_kriteria_penilaians',100)->nullable();
             $table->timestamps();
         });

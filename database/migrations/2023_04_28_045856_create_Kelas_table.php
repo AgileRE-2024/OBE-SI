@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('kuota');
             $table->char('kodeMK',7);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-            $table->timestamp('deleted_at');
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }
