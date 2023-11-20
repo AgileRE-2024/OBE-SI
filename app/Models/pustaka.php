@@ -7,10 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class pustaka extends Model
 {
-    public function Minggu_RPS()
-    {
-        return $this->belongsToMany(Minggu_RPS::class, 'detail_pustaka_minggurps', 'id_pustaka', 'kodeMingguRPS');
-    }
     protected $primaryKey = 'id_pustaka';
     public $incrementing = false;
     protected $table = 'pustakas';
