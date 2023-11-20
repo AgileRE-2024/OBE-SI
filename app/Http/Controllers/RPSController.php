@@ -21,6 +21,12 @@ use Illuminate\Validation\Rule;
 
 class RPSController extends Controller
 {
+    
+    public function getDataMasterRPS(){
+        $rps = RPS::all();
+        return response()->json($rps);
+    }
+
     public function index()
     {
         return view('content.cari_rps', [
