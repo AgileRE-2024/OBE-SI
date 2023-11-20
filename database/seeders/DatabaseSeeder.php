@@ -145,7 +145,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         RPS::create([
-            'id_rps' => '1032301',
+            'id_rps' => 'SII1032301',
             'nip' => '197102111997021001',
             'kodeMK' => 'SII103',
             'kodeRPS' => 'RPS001',
@@ -217,17 +217,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Detail_RPS_Penilaian::create([
-            'id_rps' => '1032301',
+            'id_rps' => 'SII1032301',
             'kodePenilaian' => '0001',
         ]);
 
         Detail_RPS_Penilaian::create([
-            'id_rps' => '1032301',
+            'id_rps' => 'SII1032301',
             'kodePenilaian' => '0002',
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => '1032301',
+            'id_rps' => 'SII1032301',
             'kodeMingguRPS' => '2',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -636,7 +636,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Detail_RPS_Penilaian::create([
-            'id_rps' => '1032301',
+            'id_rps' => 'SII1032301',
             'kodePenilaian' => '0001',
         ]);
 

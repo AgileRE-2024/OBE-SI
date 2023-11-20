@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('RPS', function (Blueprint $table) {
-            $table->char('id_rps',7)->autoIncrement()->primary();
+            $table->char('id_rps',10)->primary();
             $table->char('kodeRPS', 6)->nullable();
             $table->char('nip', 18)->nullable();
             $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');

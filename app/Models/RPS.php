@@ -13,6 +13,25 @@ class RPS extends Model
         'id_rps', 'nip','kodeMK', 'kodeRPS', 'tahunAjaran', 'semester', 'diperiksa_oleh','disiapkan_oleh','disetujui_oleh', 'dibuat_oleh','versi', 'penanggungJawab','dosenPengampu','detail_penilaian','deleted_at'
     ];
 
+    protected static function booted()
+    {
+        static::creating(function ($rps) {
+            // Ambil 6 karakter pertama dari kodeMK
+            $kodeMK_part = substr($rps->kodeMK, 0, 6);
+
+            // Ambil 2 digit terakhir tahunAjaran
+            $tahunAjaran_part = substr($rps->tahunAjaran, -2);
+
+            // Ambil 2 digit semester
+            $semester_part = str_pad($rps->semester, 2, '0', STR_PAD_LEFT);
+
+            // Gabungkan semua bagian untuk membuat id_rps
+            $rps->id_rps = $kodeMK_part . $tahunAjaran_part . $semester_part;
+        });
+    }
+
+
+
     public function Mata_Kuliah()
     {
         return $this->belongsTo(Mata_Kuliah::class, 'kodeMK', 'kodeMK');

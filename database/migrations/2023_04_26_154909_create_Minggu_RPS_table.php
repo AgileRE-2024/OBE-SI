@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('Minggu_RPS', function (Blueprint $table) {
             $table->char('kodeMingguRPS', 4)->primary('kodeMingguRPS');
-            $table->char('id_rps', 7)->nullable();
+            $table->char('id_rps', 10)->nullable();
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
             $table->unsignedBigInteger('id_kriteria_penilaians')->nullable();
             $table->foreign('id_kriteria_penilaians')->references('id_kriteria_penilaians')->on('kriteria_penilaians')->onDelete('restrict');
