@@ -17,10 +17,17 @@ class Kelas extends Model
     {
         return $this->belongsToMany(Mahasiswa::class, 'detail_kelas', 'kodeKelas', 'nim');
     }
+
     public function Mata_Kuliah()
     {
         return $this->belongsTo(Mata_Kuliah::class,'kodeMK', 'kodeMK');
     }
+
+    public function RPS()
+    {
+        return $this->hasMany(RPS::class,'kodeKelas', 'kodeKelas');
+    }
+
     // public function Nilai_Mahasiswa()
     // {
     //     return $this->hasMany(Nilai_Mahasiswa::class,'kodeKelas', 'kodeKelas');

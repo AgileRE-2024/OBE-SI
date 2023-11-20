@@ -14,13 +14,11 @@ class Detail_Nilai_Mahasiswa extends Model
         'kodeNilai','kodePenilaian','nilaiPerTeknik'
     ];
 
-    public function Teknik_Penilaian()
-    {
-        return $this->belongsTo(Teknik_Penilaian::class,'kodePenilaian', 'kodePenilaian');
+    public function RPS(){
+        return $this->belongsTo(RPS::class, 'kodeRPS', 'kodeRPS');
     }
 
-    public function Nilai_Mahasiswa()
-    {
-        return $this->belongsTo(Nilai_Mahasiswa::class,'kodeNilai', 'kodeNilai');
+    public function Teknik_Penilaian(){
+        return $this->belongsTo(Teknik_Penilaian::class, 'kodePenilaian', 'kodePenilaian');
     }
 }

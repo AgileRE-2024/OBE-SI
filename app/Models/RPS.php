@@ -18,16 +18,16 @@ class RPS extends Model
         return $this->belongsTo(Mata_Kuliah::class, 'kodeMK', 'kodeMK');
     }
 
-    public function User()
-    {
-        return $this->belongsTo(User::class, 'kps', 'nip');
-    }
+    // public function User()
+    // {
+    //     return $this->belongsTo(User::class, 'kps', 'nip');
+    // }
 
-    public function User1()
-    {
-        return $this->belongsToMany(User::class, 'Detail_Peran_Dosen', 'id_RPS', 'nip');
-    }
-    
+    // public function User1()
+    // {
+    //     return $this->belongsToMany(User::class, 'Detail_Peran_Dosen', 'id_RPS', 'nip');
+    // }
+
     public function Minggu_RPS()
     {
         return $this->belongsToMany(Minggu_RPS::class, 'Detail_RPS', 'id_RPS', 'kodeMingguRPS');
@@ -40,6 +40,16 @@ class RPS extends Model
 
     public function Teknik_Penilaian()
     {
-        return $this->belongsToMany(Teknik_Penilaian::class, 'detail_penilaian_rps', 'id_RPS', 'kodePenilaian');
+        return $this->belongsToMany(Teknik_Penilaian::class, 'Detail_RPS', 'id_RPS', 'kodePenilaian');
     }
+
+    public function User(){
+        return $this->belongsTo(User::class, 'nip','nip');
+    }
+
+    public function Kelas(){
+        return $this->belongsTo(Kelas::class, 'kodeKelas','kodeKelas');
+    }
+
+
 }

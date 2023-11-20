@@ -25,6 +25,10 @@ class Teknik_Penilaian extends Model
 
     public function RPS(){
         return $this->belongsToMany(Teknik_Penilaian::class, 'detail_penilaian_rps','kodePenilaian', 'id_RPS' );
+    }
 
+    public function Minggu_RPS(){
+        //relasi one to many
+        return $this->hasMany(Minggu_RPS::class, 'kodePenilaian', 'kodePenilaian');
     }
 }

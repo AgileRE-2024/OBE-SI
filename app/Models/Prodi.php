@@ -12,4 +12,12 @@ class Prodi extends Model
     protected $fillable = [
         'namaProdi', 'fakultas','namaPT', 'akreditasi', 'jenjangPendidikan','gelarLulusan','visi', 'misi','tujuan'
     ];
+
+    public function Mata_Kuliah(){
+        return $this->hasMany(Mata_Kuliah::class,'namaProdi', 'namaProdi');
+    }
+
+    public function User(){
+        return $this->hasMany(User::class,'namaProdi', 'namaProdi');
+    }
 }

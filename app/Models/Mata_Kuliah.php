@@ -38,4 +38,14 @@ class Mata_Kuliah extends Model
     {
         return $this->hasMany(Kelas::class, 'kodeMK', 'kodeMK');
     }
+
+    public function Prasyarat()
+    {
+        return $this->belongsToMany(Mata_Kuliah::class, 'Prasyarat', 'kodeMK', 'mat_kodeMK');
+    }
+
+    public function User(){
+        return $this->belongsTo(User::class, 'nip','nip');
+    }
+
 }

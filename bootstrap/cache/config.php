@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:ZmYYkyYMdxM+YcthPLC5PB9MClcVR6Xa3WrmqPZst4I=',
+    'key' => 'base64:6bnucXU2B28feIt35m+m15g6JDfLRbPCIf2TKTQbJjI=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
     array (
@@ -195,7 +195,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\framework/cache/data',
+        'path' => 'D:\\MBOH PPL\\OBE-SI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -278,7 +278,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'obesi',
+        'database' => 'laravel',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -288,7 +288,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obesi',
+        'database' => 'laravel',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -308,7 +308,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obesi',
+        'database' => 'laravel',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -323,7 +323,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'obesi',
+        'database' => 'laravel',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -367,10 +367,10 @@
     'convert_entities' => true,
     'options' => 
     array (
-      'font_dir' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\fonts',
-      'font_cache' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\fonts',
-      'temp_dir' => 'C:\\Users\\user\\AppData\\Local\\Temp',
-      'chroot' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI',
+      'font_dir' => 'D:\\MBOH PPL\\OBE-SI\\storage\\fonts',
+      'font_cache' => 'D:\\MBOH PPL\\OBE-SI\\storage\\fonts',
+      'temp_dir' => 'C:\\Users\\pierre\\AppData\\Local\\Temp',
+      'chroot' => 'D:\\MBOH PPL\\OBE-SI',
       'allowed_protocols' => 
       array (
         'file://' => 
@@ -415,13 +415,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\app',
+        'root' => 'D:\\MBOH PPL\\OBE-SI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\app/public',
+        'root' => 'D:\\MBOH PPL\\OBE-SI\\storage\\app/public',
         'url' => 'http://localhost//storage',
         'visibility' => 'public',
         'throw' => false,
@@ -441,7 +441,7 @@
     ),
     'links' => 
     array (
-      'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\public\\storage' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\app/public',
+      'D:\\MBOH PPL\\OBE-SI\\public\\storage' => 'D:\\MBOH PPL\\OBE-SI\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -480,13 +480,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\MBOH PPL\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\MBOH PPL\\OBE-SI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -538,7 +538,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\logs/laravel.log',
+        'path' => 'D:\\MBOH PPL\\OBE-SI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -604,7 +604,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\resources\\views/vendor/mail',
+        0 => 'D:\\MBOH PPL\\OBE-SI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -711,7 +711,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\framework/sessions',
+    'files' => 'D:\\MBOH PPL\\OBE-SI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -731,9 +731,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\resources\\views',
+      0 => 'D:\\MBOH PPL\\OBE-SI\\resources\\views',
     ),
-    'compiled' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\framework\\views',
+    'compiled' => 'D:\\MBOH PPL\\OBE-SI\\storage\\framework\\views',
   ),
   'excel' => 
   array (
@@ -842,7 +842,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI\\storage\\framework/cache/laravel-excel',
+      'local_path' => 'D:\\MBOH PPL\\OBE-SI\\storage\\framework/cache/laravel-excel',
       'local_permissions' => 
       array (
       ),
@@ -924,7 +924,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\unair\\Bangkit\\konversi ppl\\obesi\\OBE-SI',
+    'remote_sites_path' => 'D:\\MBOH PPL\\OBE-SI',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
