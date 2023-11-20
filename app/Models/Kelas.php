@@ -10,7 +10,7 @@ class Kelas extends Model
     public $incrementing = false;
     protected $table = 'Kelas';
     protected $fillable = [
-        'kodeKelas', 'namaKelas', 'jadwal', 'kuota', 'kodeMK'
+        'kodeKelas', 'id_rps', 'namaKelas', 'jadwal', 'kuota','kodeMK','deleted_at'
     ];
 
     public function Mahasiswa()

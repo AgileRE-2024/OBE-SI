@@ -10,7 +10,7 @@ class Prodi extends Model
     public $incrementing = false;
     protected $table = 'Prodi';
     protected $fillable = [
-        'namaProdi', 'fakultas','namaPT', 'akreditasi', 'jenjangPendidikan','gelarLulusan','visi', 'misi','tujuan'
+        'namaProdi', 'fakultas','namaPT', 'akreditasi', 'jenjangPendidikan','gelarLulusan','visi', 'misi','tujuan', 'deleted_at'
     ];
 
     public function Mata_Kuliah(){

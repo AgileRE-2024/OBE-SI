@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('Profil_Lulusan', function (Blueprint $table) {
             $table->char('kodePL', 10)->primary('kodePL');
             $table->text("deskripsiPL");
+            $table->string("namaPL",100);
             $table->timestamps();
         });
     }

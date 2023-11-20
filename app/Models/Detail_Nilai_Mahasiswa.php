@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Detail_Nilai_Mahasiswa extends Model
 {
     protected $table = 'Detail_Nilai_Mahasiswa';
-    protected $primaryKey = 'KodeDetailNilai';
     public $incrementing = false;
     protected $fillable = [
-        'kodeNilai','kodePenilaian','nilaiPerTeknik'
+        'id_rps','nilaiPerTeknik','kodePenilaian','nim'
     ];
 
     public function RPS(){

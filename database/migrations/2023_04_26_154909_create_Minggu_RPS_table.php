@@ -24,7 +24,7 @@ return new class extends Migration
             $table->char('kodeSubCPMK', 12);
             $table->foreign('kodeSubCPMK')->references('kodeSubCPMK')->on('SubCPMK')->onDelete('restrict');
             $table->string('mingguKe', 2);
-            $table->date('deleted_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
             $table->boolean('luring');
             $table->string('penugasan', 100);
             $table->text('waktuPembelajaran');
