@@ -18,7 +18,7 @@ return new class extends Migration
             $table->String('namaProdi',25);
             $table->foreign('namaProdi')->references('namaProdi')->on('Prodi')->onDelete('restrict');
             $table->char('nip', 18);
-            $table->foreign('nip')->references('nip')->on('User')->onDelete('restrict');
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
             $table->string('namaMK', 100);
             $table->integer('jenisMK');
             $table->integer('sks');

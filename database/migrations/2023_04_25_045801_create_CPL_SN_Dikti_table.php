@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('CPL_SN_Dikti', function (Blueprint $table) {
-            $table->char('kodeCPLSN', 7)->primary('kodeCPLSN');
+            $table->char('kodeCPLSN', 20)->primary('kodeCPLSN');
             $table->text('deskripsiSN');
             $table->char('sumberSN', 8);
             $table->boolean('kategoriSN');

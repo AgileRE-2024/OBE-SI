@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('RPS', function (Blueprint $table) {
             $table->char('id_rps',7)->primary('id_rps');
             $table->char('nip', 18);
-            $table->foreign('nip')->references('nip')->on('User')->onDelete('restrict');
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
             $table->char('kodeMK', 4);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
             $table->char('kodeRPS', 6);
