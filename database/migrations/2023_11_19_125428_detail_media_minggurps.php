@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('SubCPMK', function (Blueprint $table) {
-            $table->char('kodeSubCPMK', 12)->primary('kodeSubCPMK');
-            $table->text('deskripsiSubCPMK');
-            $table->char('kodeCPMK', 10);
-            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
-            $table->timestamp('deleted_at')->nullable();
+        Schema::create('detail_media_mingguRPS', function (Blueprint $table) {
+            $table->char('id_media',2);
+            $table->char('kodeMingguRPS', 4);
+            $table->foreign('id_media')->references('id_media')->on('Media')->onDelete('restrict');
+            $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('SubCPMK');
+        Schema::dropIfExists('detail_media_mingguRPS');
     }
 };

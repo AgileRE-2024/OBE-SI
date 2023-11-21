@@ -16,7 +16,7 @@ class User extends Authenticatable
     protected $primaryKey = 'nip';
     public $incrementing = false;
     protected $table = 'users';
-    protected $fillable = ['nip', 'jabatanDosen', 'namaDosen', 'password', 'email', 'role'];
+    protected $fillable = ['nip', 'namaProdi', 'jabatanDosen', 'namaDosen', 'password', 'email','role','status'];
     protected $hidden = ['remember_token'];
     protected $casts = [
         'email_verified_at' => 'datetime',
@@ -31,14 +31,30 @@ class User extends Authenticatable
         return $this->nip;
     }
 
-    public function RPS()
+    public function RPS_KPS()
     {
         return $this->hasMany(RPS::class, 'nip', 'kps');
     }
-    public function RPS1()
+
+    public function RPS()
     {
-        return $this->belongsToMany(RPS::class, 'Detail_Peran_Dosen', 'nip', 'kodeRPS');
+        return $this->hasMany(Rps::class);
     }
+
+    public function Prodi(){
+        return $this->belongsTo(Prodi::class,'namaProdi', 'namaProdi');
+    }
+
+    public function Mata_Kuliah(){
+        return $this->hasMany(Mata_Kuliah::class,'nip', 'nip');
+    }
+
+
+
+    // public function RPS1()
+    // {
+    //     return $this->belongsToMany(RPS::class, 'Detail_Peran_Dosen', 'nip', 'kodeRPS');
+    // }
     public function hasRole($role)
     {
         $mapRoles = [

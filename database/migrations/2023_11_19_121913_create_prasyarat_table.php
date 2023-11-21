@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('SubCPMK', function (Blueprint $table) {
-            $table->char('kodeSubCPMK', 12)->primary('kodeSubCPMK');
-            $table->text('deskripsiSubCPMK');
-            $table->char('kodeCPMK', 10);
-            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
-            $table->timestamp('deleted_at')->nullable();
+        Schema::create('Prasyarat', function (Blueprint $table) {
+            $table->char('kodeMK', 10);
+            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->char('mat_kodeMK', 10)->nullable();
+            $table->foreign('mat_kodeMK', 10)->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('SubCPMK');
+        Schema::dropIfExists('Prasyarat');
     }
 };

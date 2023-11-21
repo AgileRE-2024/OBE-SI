@@ -8,19 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Detail_Nilai_Mahasiswa extends Model
 {
     protected $table = 'Detail_Nilai_Mahasiswa';
-    protected $primaryKey = 'KodeDetailNilai';
     public $incrementing = false;
     protected $fillable = [
-        'kodeNilai','kodePenilaian','nilaiPerTeknik'
+        'id_rps','nilaiPerTeknik','kodePenilaian','nim'
     ];
 
-    public function Teknik_Penilaian()
-    {
-        return $this->belongsTo(Teknik_Penilaian::class,'kodePenilaian', 'kodePenilaian');
+    public function RPS(){
+        return $this->belongsTo(RPS::class, 'kodeRPS', 'kodeRPS');
     }
 
-    public function Nilai_Mahasiswa()
-    {
-        return $this->belongsTo(Nilai_Mahasiswa::class,'kodeNilai', 'kodeNilai');
+    public function Teknik_Penilaian(){
+        return $this->belongsTo(Teknik_Penilaian::class, 'kodePenilaian', 'kodePenilaian');
     }
 }

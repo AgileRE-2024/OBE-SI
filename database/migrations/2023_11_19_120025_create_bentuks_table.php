@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Detail_Peran_Dosen', function (Blueprint $table) {
-            $table->char('nip',18);
-            $table->char('kodeRPS',16);
-            $table->String('peranDosen',100);
+        Schema::create('bentuks', function (Blueprint $table) {
+            $table->char('id_bentuk',2)->primary();
+            $table->string('nama_bentuk',30)->nullable();
+            $table->string('deskripsi_bentuk',100)->nullable();
             $table->timestamps();
-            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
-            $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict');
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Detail_Peran_Dosen');
+        Schema::dropIfExists('bentuks');
     }
 };

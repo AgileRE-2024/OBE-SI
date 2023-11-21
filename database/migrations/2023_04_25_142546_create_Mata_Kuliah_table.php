@@ -14,20 +14,22 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Mata_Kuliah', function (Blueprint $table) {
-            $table->char('kodeMK', 4)->unique();
-            $table->foreign('namaProdi')->references('namaProdi')->on('Prodi')->onDelete('restrict');
-            $table->foreign('nip')->references('nip')->on('User')->onDelete('restrict');
+            $table->char('kodeMK', 10)->primary();
+            $table->String('namaProdi', 25)->nullable();
+            $table->foreign('namaProdi')->references('namaProdi')->on('prodi')->onDelete('restrict');
+            $table->char('nip', 18)->nullable();
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
             $table->string('namaMK', 100);
-            $table->integer('jenisMK');
+            $table->smallInteger('jenisMK');
             $table->integer('sks');
-            $table->integer('semester');
-            $table->integer('kategoriMK');
+            $table->char('mat_kodeMK', 10)->nullable();
+            $table->smallInteger('semester')->nullable();
+            $table->smallInteger('kategoriMK');
             $table->string('deskripsiMK', 100);
-            $table->date('deleted_at');
-            $table->date('created_at');
-            $table->date('updated_at');
-            $table->text('penanggung_jawab')->nullable();
-            $table->text('pengampu')->nullable();
+            $table->text('prasyaratTambahan')->nullable();
+            $table->string('penanggung_jawab', 100)->nullable();
+            $table->string('pengampu', 100)->nullable();
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

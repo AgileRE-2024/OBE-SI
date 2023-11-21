@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('SubCPMK', function (Blueprint $table) {
-            $table->char('kodeSubCPMK', 12)->primary('kodeSubCPMK');
-            $table->text('deskripsiSubCPMK');
-            $table->char('kodeCPMK', 10);
-            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
+        Schema::create('pustakas', function (Blueprint $table) {
+            $table->integer('id_pustaka')->primary('id_pustaka');
+            $table->string('nama_penulis', 100);
+            $table->integer('tahun');
+            $table->string('judul', 100);
+            $table->string('penerbit', 100);
+            $table->text('referensi')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('SubCPMK');
+        Schema::dropIfExists('pustakas');
     }
 };

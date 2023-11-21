@@ -10,7 +10,7 @@ class SubCPMK extends Model
     public $incrementing = false;
     protected $table = 'SubCPMK';
     protected $fillable = [
-        'kodeSubCPMK', 'deskripsiSubCPMK','kodeCPMK'
+        'kodeSubCPMK', 'deskripsiSubCPMK','kodeCPMK','deleted_at'
     ];
 
     public function CPMK()
