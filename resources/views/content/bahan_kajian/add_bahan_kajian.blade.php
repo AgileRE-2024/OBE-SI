@@ -16,7 +16,10 @@
                         @error('kodeBK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodeBK" class="form-control" placeholder="Kode Bahan Kajian">
+                        <input type="text" name="kodeBK" class="form-control"
+                            placeholder="Kode Bahan Kajian (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
+                            maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
+                            oninput="updateInput(this);" value="BK">
                     </div>
 
                     <div class="form-group">
