@@ -9,14 +9,6 @@
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
-            {{-- <div class="d-flex justify-content-start pt-2">
-                <div>
-                    @if (auth()->user()->role == 2)
-                    <a class="btn btn-dark" href="{{ route('manajemen.add_prodi') }}"><i class="bi bi-plus-square">
-                        </i>Tambah</a>
-                    @endif
-                </div>
-            </div> --}}
         <div class="d-flex justify-content-end pt-2">
             {{-- <div class="pr-3">
                 <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_pl', ['pdf']) }}"><i
@@ -70,12 +62,12 @@
                                 {{ $pd->misi }}</td>
                             <td scope="row">
                                 {{ $pd->tujuan }}</td>
-                             @if (auth()->user()->role == 2)
+                            @if (auth()->user()->role == 2)
                             <td scope="row">    
                                 <a class="btn btn-primary"
-                                    href="{{-- route('#',$pl->kodePL) --}}">Edit</a>
-                            @endif
+                                    href="{{ route('manajemen.edit_prodi') }}">Edit</a>
                             </td>
+                            @endif
                         </tr>
                     @endforeach
                 </tbody>
