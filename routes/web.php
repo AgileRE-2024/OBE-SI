@@ -48,6 +48,7 @@ use App\Http\Controllers\PemetaanCplDiktiCplProdiController;
 use App\Http\Controllers\TahapPenilaianController;
 use App\Http\Controllers\TeknikPenilaianCPMKController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\ManagementUser;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,9 @@ Route::get('/login', function () {
 });
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/register', [ManagementUser::class, 'create'])->name('register');
+Route::get('/managementuser/edit', [ManagementUser::class, 'edit'])->name('edituser');
+Route::get('/managementuser/list', [ManagementUser::class, 'index'])->name('listuser');
 Route::post('/proseslogin', [LoginController::class, 'proseslogin'])->name('proseslogin');
 Route::get('/loginfailed', [LoginController::class, 'loginfailed'])->name('loginfailed');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout1');
