@@ -61,3 +61,18 @@
         </div>
     </div>
 @endsection
+
+<script>
+    function updateInput(input) {
+        var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+
+        // Terapkan validasi minlength secara manual jika diperlukan
+        if (uppercaseValue.length >= 4) {
+            input.setCustomValidity('');
+        } else {
+            input.setCustomValidity('Panjang minimal adalah 4 karakter');
+        }
+
+        input.value = uppercaseValue;
+    }
+</script>
