@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class RPS extends Model
 {
-    protected $primaryKey = 'kodeRPS';
+    protected $primaryKey = 'id_rps';
     public $incrementing = false;
     protected $table = 'RPS';
     protected $fillable = [
-        'kodeRPS', 'tahunAjaran','pustaka', 'kodeMK', 'kps'
+        'id_rps', 'tahunAjaran','semester', 'kodeMK', 'kps'
     ];
 
     public function Mata_Kuliah()

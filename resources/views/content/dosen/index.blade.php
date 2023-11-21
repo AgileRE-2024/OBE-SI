@@ -33,50 +33,50 @@
                     <td scope="row">1</td>
                     <td scope="row">Pembuat RPS</td>
                     <td scope="row">
-                        nip
+                        {{$pembuat->nip}}
                     </td>
                     <td scope="row">
-                        nama dosen
+                        {{$pembuat->namaDosen}}
                     </td>
                 </tr>
                 <tr>
                     <td scope="row">2</td>
                     <td scope="row">Pemeriksa RPS</td>
                     <td scope="row">
-                        nip
+                        {{$pemeriksa->nip}}
                     </td>
                     <td scope="row">
-                        nama dosen
+                        {{$pemeriksa->namaDosen}}
                     </td>
                 </tr>
                 <tr>
                     <td scope="row">3</td>
                     <td scope="row">Persetujuan RPS</td>
                     <td scope="row">
-                        nip
+                        {{$persetujuan->nip}}
                     </td>
                     <td scope="row">
-                        nama dosen
+                        {{$persetujuan->namaDosen}}
                     </td>
                 </tr>
                 <tr>
                     <td scope="row">4</td>
                     <td scope="row">Pengampu MK</td>
                     <td scope="row">
-                        nip
+                        {{$pengampu->nip}}
                     </td>
                     <td scope="row">
-                        nama dosen
+                        {{$pengampu->namaDosen}}
                     </td>
                 </tr>
                 <tr>
                     <td scope="row">5</td>
                     <td scope="row">Penanggung jawab MK</td>
                     <td scope="row">
-                        nip
+                        {{$penanggung_jawab->nip}}
                     </td>
                     <td scope="row">
-                        nama dosen
+                        {{$penanggung_jawab->namaDosen}}
                     </td>
                 </tr>
             </tbody>

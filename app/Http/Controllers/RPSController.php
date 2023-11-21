@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\CPL_Prodi;
+use App\Models\Prasyarat;
 use App\Models\CPMK;
 use App\Models\Detail_MK_CPMK;
 use App\Models\Detail_Peran_Dosen;
 use App\Models\Detail_RPS;
 use App\Models\Mata_Kuliah;
+use App\Models\MataKuliah;
 use App\Models\Minggu_RPS;
 use App\Models\RPS;
 use App\Models\SubCPMK;
@@ -136,8 +138,6 @@ class RPSController extends Controller
         return view('content.create_rps', [
             'title'=>'Buat RPS',
             'mk_list'=>Mata_Kuliah::all(),
-            'dosen_list'=>User::all(),
-            'kodeRPS'=>$kodeRPS,
         ]);
     }
 
@@ -147,42 +147,28 @@ class RPSController extends Controller
     {
         // Validasi Input
         $request->validate([
-
             'kodeMK' => 'required',
-            'kps' => 'required',
             'tahunAjaran' => 'required',
-            'pustaka'=>'required',
             'semester' => 'required',
-            'penanggungJawab' => 'required',
-            'dosenPengampu' => 'required',
-            'detail_penilaian' => 'required'
+            'dibuat_oleh' => 'required'
         ]);
         // Menggabungkan kodeMK, semester, dan tahun menjadi kodeRPS
-        $kodeRPS = $request->kodeMK . $request->semester . $request->tahunAjaran;
+        $id_rps = $request->kodeMK . substr($request->tahunAjaran, -2) . str_pad($request->semester, 2, '0', STR_PAD_LEFT);
         // Check apakah kodeRPS sudah ada
-        $rps = RPS::where('kodeRPS', $kodeRPS)->first();
+        $rps = RPS::where('id_rps', $id_rps)->first();
         if ($rps) {
             return redirect()->back()->withErrors(['kodeRPS' => 'Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.'])->withInput();
         }
         // Menyimpan RPS baru 
         RPS::create([ 
-            'tahunAjaran' => $request->tahunAjaran, 
-            'kodeMK' => $request->kodeMK, 
-            'kodeRPS' => $kodeRPS, 
+            'tahunAjaran' => $request->tahunAjaran,
+            'kodeMK' => $request->kodeMK,
             'semester' => $request->semester, 
-            'created_at' => $request->created_at, 
-            'diperiksa_oleh' => $request->diperiksa_oleh, 
-            'disiapkan_oleh' => $request->disiapkan_oleh, 
-            'disetujui_oleh' => $request->disetujui_oleh, 
-            'dibuat_oleh' => $request->dibuat_oleh, 
-            'versi' => $request->versi, 
-            'penanggungJawab' => $request->penanggungJawab, 
-            'dosenPengampu' => $request->dosenPengampu, 
-            'updated_at' => $request->updated_at, 
-            'detail_penilaian' => $request->detail_penilaian, 
+            'id_rps' => $id_rps,
+            'dibuat_oleh' => $request->dibuat_oleh
         ]);
     
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
+        return redirect()->route('edit_rps.mata_kuliah', ['kodeRPS' => $id_rps ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$id_rps]);
     }
     
     //NEW FUNCTION 2
@@ -207,5 +193,26 @@ class RPSController extends Controller
         ]);
     }
 
+    // NEW FUNCTION 3
+    public function detail($kodeRPS){
+        $kodeMK = substr($kodeRPS, 0, 6);
+        $cpmk_mk = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK);
+        $kodeCPMKList = $cpmk_mk->pluck('kodeCPMK')->toArray();
+        $cpmk = CPMK::whereIn('kodeCPMK', $kodeCPMKList)->get();
+        $kodeCPLList = $cpmk->pluck('kodeCPL')->toArray();
+        $semuaCPL = CPL_Prodi::whereIn('kodeCPL', $kodeCPLList)->distinct()->get();
+        $prasyarat = Prasyarat::all()->where('kodeMK', $kodeMK);
+        $kodePrasyaratList = $prasyarat->pluck('mat_kodeMK')->toArray();
+        $prasyarat = Mata_Kuliah::whereIn('kodeMK', $kodePrasyaratList)->distinct()->get();
+
+        return view('rps_mata_kuliah', [
+            'title' => 'RPS Mata Kuliah',
+            'kodeRPS'=>$kodeRPS,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
+            'list_cpl' => $semuaCPL,
+            'list_cpmk' => $cpmk,
+            'list_prasyarat' => $prasyarat
+        ]);
+    }
     
 }

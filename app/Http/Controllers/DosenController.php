@@ -17,11 +17,24 @@ class DosenController extends Controller
      */
     public function index($kodeRPS)
 {
-    //$details = Detail_Peran_Dosen::all();
-    $details = Detail_Peran_Dosen::with('users')->where('kodeRPS', $kodeRPS)->get();
+    $rps = RPS::where('id_rps', $kodeRPS)->first();
+    // dd($kodeRPS);
+    $pembuat = User::where('nip', $rps->dibuat_oleh)->first();
+    $pemeriksa = User::where('nip', $rps->disiapkan_oleh)->first();
+    $persetujuan = User::where('nip', $rps->disetujui_oleh)->first();
+    $pengampu = User::where('nip', $rps->dosenPengampu)->first();
+    $penanggung_jawab = User::where('nip', $rps->penanggungJawab)->first();
     $title = 'Detail Peran Dosen';
     $kodeRPS=$kodeRPS;
-    return view('content.dosen.index', ['title'  => $title, 'details' => $details, 'kodeRPS' => $kodeRPS]);
+    return view('content.dosen.index', [
+        'title'  => $title, 
+        'pembuat' => $pembuat,
+        'pemeriksa' => $pemeriksa,
+        'persetujuan' => $persetujuan,
+        'pengampu' => $pengampu,
+        'penanggung_jawab' => $penanggung_jawab,
+        'kodeRPS' => $kodeRPS
+    ]);
 }
 
 
