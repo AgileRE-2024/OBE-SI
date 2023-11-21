@@ -24,7 +24,7 @@ class prodiController extends Controller
     public function updateProdi(Request $request, $pd)
     {
         if ($request->namaProdi != $pd) {
-            $request->validate([
+            $validator = Validator::make($request->all(), [
                 'namaProdi' => 'required|unique:prodi,namaProdi',
                 'fakultas' => 'required',
                 'namaPT' => 'required',
@@ -36,7 +36,7 @@ class prodiController extends Controller
                 'tujuan' => 'required'
             ]);
         } else {
-            $request->validate([
+            $validator = Validator::make($request->all(), [
                 'namaProdi' => 'required',
                 'fakultas' => 'required',
                 'namaPT' => 'required',
@@ -48,9 +48,9 @@ class prodiController extends Controller
                 'tujuan' => 'required'
             ]);
         }
-        if ($request->fails()) {
+        if ($validator->fails()) {
             // flash('error')->error();
-            return redirect()->back()->withErrors($request)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput();
         }
 
         if (Prodi::where('namaProdi', $request->namaProdi)->exists() && $request->namaProdi != $pd) {
@@ -70,8 +70,8 @@ class prodiController extends Controller
             'tujuan' => $request->tujuan
         ]);
         $pd->save();
-
-        return redirect()->route('#')->with('success', 'Program Studi berhasil ditambahkan');
+        
+        return redirect()->route('manajemen.prodi')->with('success', 'Program Studi berhasil diedit');
     }
 
     // public function addProdi()

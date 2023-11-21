@@ -8,14 +8,16 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('manajemen.edit_prodi', $pd->id) }}">
+                <form method="post" action="{{ route('manajemen.update_prodi', $pd->namaProdi) }}">
                     @csrf
+                    @method('put')
                     <div class="form-group">
                         <label>Nama Prodi</label>
                         @error('namaProdi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="namaProdi" class="form-control" placeholder="Nama Prodi" value="{{ old('namaProdi') ?? $pd->namaProdi }}">
+                        <input type="text" name="namaProdi" class="form-control" placeholder="Nama Prodi"
+                            value="{{ old('namaProdi') ?? $pd->namaProdi }}">
                     </div>
 
                     <div class="form-group">

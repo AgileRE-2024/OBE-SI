@@ -338,7 +338,8 @@ Route::post('/reset-password', function (Request $request) {
 
 Route::prefix('/dashboard/manajemen')->name('manajemen.')->group(function () {
     Route::get('/manajemen_prodi', [ProdiController::class,'index'])->name('prodi')->middleware('role:admin,dosen,kurikulum');
-    Route::get('/edit_prodi/{namaProdi}', [ProdiController::class, 'editprodi'])->name('edit_prodi')->middleware('role:admin');
+    Route::get('/edit_prodi/{pd}', [ProdiController::class, 'editProdi'])->name('edit_prodi')->middleware('role:admin');
+    Route::put('/edit_prodi/{pd}', [ProdiController::class, 'updateProdi'])->name('update_prodi')->middleware('role:admin');
     // Route::get('/manajemen_prodi/add', [ProdiController::class, 'addProdi'])->name('add_prodi')->middleware('role:admin');
     // Route::post('/manajemen_prodi/add', [ProdiController::class, 'storeProdi'])->name('store_prodi')->middleware('role:admin');
 });

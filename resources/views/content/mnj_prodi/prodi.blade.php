@@ -65,7 +65,7 @@
                             @if (auth()->user()->role == 2)
                             <td scope="row">    
                                 <a class="btn btn-primary"
-                                    href="{{ route('manajemen.edit_prodi') }}">Edit</a>
+                                    href="{{ route('manajemen.edit_prodi', $pd->namaProdi) }}">Edit</a>
                             </td>
                             @endif
                         </tr>

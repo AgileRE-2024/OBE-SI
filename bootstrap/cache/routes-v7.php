@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::vbq2xPzFPBDhrrm0',
+            '_route' => 'generated::4V4DySlRfeABhsmV',
           ),
           1 => NULL,
           2 => 
@@ -122,7 +122,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::U2vcZaypnCiXr2EG',
+            '_route' => 'generated::YOqd2SAUZKugIPZi',
           ),
           1 => NULL,
           2 => 
@@ -237,7 +237,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::DRNCNlpp9J2FLtGm',
+            '_route' => 'generated::8B0E4JU7gSJdWyyW',
           ),
           1 => NULL,
           2 => 
@@ -1519,7 +1519,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::wX19Q1duGDEvbQtD',
+            '_route' => 'generated::bMwarRTb7vqBY4tG',
           ),
           1 => NULL,
           2 => 
@@ -1647,46 +1647,10 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/dashboard/manajemen/manajemen_prodi/add' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'manajemen.add_prodi',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'manajemen.store_prodi',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/(?|cpl\\-(?|sndikti\\-cpl\\-prodi/export/([^/]++)(*:188)|pl/export/([^/]++)(*:214)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:251)|edit_cpmk/([^/]++)(?|(*:280))))|mk\\-cpmk\\-subcpmk/export/([^/]++)(*:324))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:373))|CP(?|L(?|Dikti/([^/]++)(?|(*:408))|Prodi/([^/]++)(?|(*:434)))|MK/([^/]++)(?|(*:458)))|BahanKajian/([^/]++)(?|(*:491))|MataKuliah/([^/]++)(?|(*:522))|SubCPMK/([^/]++)(?|(*:550)))|delete(?|ProfilLulusan/([^/]++)(*:591)|CP(?|L(?|Dikti/([^/]++)(*:622)|Prodi/([^/]++)(*:644))|MK/([^/]++)(*:664))|BahanKajian/([^/]++)(*:693)|MataKuliah/([^/]++)(*:720)|SubCPMK/([^/]++)(*:744))|profilLulusan/export/([^/]++)(*:782)|cp(?|l_(?|dikti/export/([^/]++)(*:821)|prodi/export/([^/]++)(*:850))|mk/export/([^/]++)(*:877))|bahan_kajian/export/([^/]++)(*:914)|mata_kuliah/export/([^/]++)(*:949)|sub_cpmk/export/([^/]++)(*:981)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:1032)|export/([^/]++)/([^/]++)(*:1065))|([^/]++)(*:1083)|export/([^/]++)/([^/]++)(*:1116))|rps/e(?|xport/([^/]++)/([^/]++)(*:1157)|dit/(?|teknik_p(?|enilaian/([^/]++)(*:1201)|df/export/([^/]++)(*:1228))|add(?|TeknikPenilaian/([^/]++)(?|(*:1271))|_(?|minggu_rps/([^/]++)(?|(*:1307))|peran_dosen/([^/]++)(?|(*:1340))))|edit(?|TeknikPenilaian/([^/]++)(?|(*:1386))|_(?|minggu_rps/([^/]++)/([^/]++)(?|(*:1431))|peran_dosen/([^/]++)/([^/]++)/([^/]++)(?|(*:1482))))|delete(?|TeknikPenilaian/([^/]++)(*:1527)|_(?|minggu_rps/([^/]++)/([^/]++)(*:1568)|peran_dosen/([^/]++)/([^/]++)/([^/]++)(*:1615)))|minggu_rps/([^/]++)(*:1645)|peran_dosen/([^/]++)(*:1674)|rps/([^/]++)(*:1695))))|/u(?|bahpw/([^/]++)(*:1726)|pdateprofile/([^/]++)(*:1756))|/reset\\-password/([^/]++)(*:1791))/?$}sDu',
+      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/dashboard/(?|kurikulum/(?|pemetaan/(?|cpl\\-(?|sndikti\\-cpl\\-prodi/export/([^/]++)(*:188)|pl/export/([^/]++)(*:214)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:251)|edit_cpmk/([^/]++)(?|(*:280))))|mk\\-cpmk\\-subcpmk/export/([^/]++)(*:324))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:373))|CP(?|L(?|Dikti/([^/]++)(?|(*:408))|Prodi/([^/]++)(?|(*:434)))|MK/([^/]++)(?|(*:458)))|BahanKajian/([^/]++)(?|(*:491))|MataKuliah/([^/]++)(?|(*:522))|SubCPMK/([^/]++)(?|(*:550)))|delete(?|ProfilLulusan/([^/]++)(*:591)|CP(?|L(?|Dikti/([^/]++)(*:622)|Prodi/([^/]++)(*:644))|MK/([^/]++)(*:664))|BahanKajian/([^/]++)(*:693)|MataKuliah/([^/]++)(*:720)|SubCPMK/([^/]++)(*:744))|profilLulusan/export/([^/]++)(*:782)|cp(?|l_(?|dikti/export/([^/]++)(*:821)|prodi/export/([^/]++)(*:850))|mk/export/([^/]++)(*:877))|bahan_kajian/export/([^/]++)(*:914)|mata_kuliah/export/([^/]++)(*:949)|sub_cpmk/export/([^/]++)(*:981)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:1032)|export/([^/]++)/([^/]++)(*:1065))|([^/]++)(*:1083)|export/([^/]++)/([^/]++)(*:1116))|rps/e(?|xport/([^/]++)/([^/]++)(*:1157)|dit/(?|teknik_p(?|enilaian/([^/]++)(*:1201)|df/export/([^/]++)(*:1228))|add(?|TeknikPenilaian/([^/]++)(?|(*:1271))|_(?|minggu_rps/([^/]++)(?|(*:1307))|peran_dosen/([^/]++)(?|(*:1340))))|edit(?|TeknikPenilaian/([^/]++)(?|(*:1386))|_(?|minggu_rps/([^/]++)/([^/]++)(?|(*:1431))|peran_dosen/([^/]++)/([^/]++)/([^/]++)(?|(*:1482))))|delete(?|TeknikPenilaian/([^/]++)(*:1527)|_(?|minggu_rps/([^/]++)/([^/]++)(*:1568)|peran_dosen/([^/]++)/([^/]++)/([^/]++)(*:1615)))|minggu_rps/([^/]++)(*:1645)|peran_dosen/([^/]++)(*:1674)|rps/([^/]++)(*:1695)))|manajemen/edit_prodi/([^/]++)(?|(*:1738)))|/u(?|bahpw/([^/]++)(*:1768)|pdateprofile/([^/]++)(*:1798))|/reset\\-password/([^/]++)(*:1833))/?$}sDu',
     ),
     3 => 
     array (
@@ -3076,7 +3040,49 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1726 => 
+      1738 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'manajemen.edit_prodi',
+          ),
+          1 => 
+          array (
+            0 => 'pd',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'manajemen.update_prodi',
+          ),
+          1 => 
+          array (
+            0 => 'pd',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1768 => 
       array (
         0 => 
         array (
@@ -3099,7 +3105,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1756 => 
+      1798 => 
       array (
         0 => 
         array (
@@ -3121,7 +3127,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1791 => 
+      1833 => 
       array (
         0 => 
         array (
@@ -3407,7 +3413,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::vbq2xPzFPBDhrrm0' => 
+    'generated::4V4DySlRfeABhsmV' => 
     array (
       'methods' => 
       array (
@@ -3430,7 +3436,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::vbq2xPzFPBDhrrm0',
+        'as' => 'generated::4V4DySlRfeABhsmV',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3446,7 +3452,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::U2vcZaypnCiXr2EG' => 
+    'generated::YOqd2SAUZKugIPZi' => 
     array (
       'methods' => 
       array (
@@ -3468,7 +3474,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::U2vcZaypnCiXr2EG',
+        'as' => 'generated::YOqd2SAUZKugIPZi',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3667,7 +3673,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::DRNCNlpp9J2FLtGm' => 
+    'generated::8B0E4JU7gSJdWyyW' => 
     array (
       'methods' => 
       array (
@@ -3705,7 +3711,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::DRNCNlpp9J2FLtGm',
+        'as' => 'generated::8B0E4JU7gSJdWyyW',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7650,7 +7656,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::wX19Q1duGDEvbQtD' => 
+    'generated::bMwarRTb7vqBY4tG' => 
     array (
       'methods' => 
       array (
@@ -7672,7 +7678,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::wX19Q1duGDEvbQtD',
+        'as' => 'generated::bMwarRTb7vqBY4tG',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8811,14 +8817,14 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'manajemen.add_prodi' => 
+    'manajemen.edit_prodi' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'dashboard/manajemen/manajemen_prodi/add',
+      'uri' => 'dashboard/manajemen/edit_prodi/{pd}',
       'action' => 
       array (
         'middleware' => 
@@ -8826,9 +8832,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'role:admin',
         ),
-        'uses' => 'App\\Http\\Controllers\\ProdiController@addProdi',
-        'controller' => 'App\\Http\\Controllers\\ProdiController@addProdi',
-        'as' => 'manajemen.add_prodi',
+        'uses' => 'App\\Http\\Controllers\\ProdiController@editProdi',
+        'controller' => 'App\\Http\\Controllers\\ProdiController@editProdi',
+        'as' => 'manajemen.edit_prodi',
         'namespace' => NULL,
         'prefix' => '/dashboard/manajemen',
         'where' => 
@@ -8849,13 +8855,13 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'manajemen.store_prodi' => 
+    'manajemen.update_prodi' => 
     array (
       'methods' => 
       array (
-        0 => 'POST',
+        0 => 'PUT',
       ),
-      'uri' => 'dashboard/manajemen/manajemen_prodi/add',
+      'uri' => 'dashboard/manajemen/edit_prodi/{pd}',
       'action' => 
       array (
         'middleware' => 
@@ -8863,9 +8869,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'role:admin',
         ),
-        'uses' => 'App\\Http\\Controllers\\ProdiController@storeProdi',
-        'controller' => 'App\\Http\\Controllers\\ProdiController@storeProdi',
-        'as' => 'manajemen.store_prodi',
+        'uses' => 'App\\Http\\Controllers\\ProdiController@updateProdi',
+        'controller' => 'App\\Http\\Controllers\\ProdiController@updateProdi',
+        'as' => 'manajemen.update_prodi',
         'namespace' => NULL,
         'prefix' => '/dashboard/manajemen',
         'where' => 
