@@ -45,38 +45,42 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- {{-- @foreach ($cpls as $cpl) --}}
+                    @foreach ($users as $user) 
                     <tr>
                         <td scope="row">
                             1. </td>
                         <td scope="row">
-                            197101042008121001</td>
+                            {{ $user->nip }}</td>
                         <td scope="row">
-                            Taufik</td>
+                            {{ $user->namaDosen }}</td>
                         <td scope="row">
-                            Dosen
+                            {{ $user->jabatanDosen }}
                         </td>
                         <td scope="row">
-                            0
+                            {{ $user->role }}
                         </td>
                         <td scope="row">
-                            taufik@fst.unair.ac.id
+                            {{ $user->email }}
                         </td>
                         <td scope="row">
-                            Aktif
+                            {{ $user->status }}
                         </td>
                         <td scope="row">
                             {{-- @if (auth()->user()->role == 1) --}}
-                            <a class="btn btn-primary" href="/manajemenuser/edituser">Edit</a>
+                            <a class="btn btn-primary" href="{{ Route('editUser',['nip' => $user->nip]) }}">Edit</a>
                             {{-- @endif --}}
                         </td>
                         <td scope="row">
                             {{-- @if (auth()->user()->role == 1) --}}
-                            <a class="btn btn-danger" href="">Delete</a>
+                            <form action="{{ Route('deleteUser',['nip' => $user->nip]) }}" method="POST">
+                                <button class="btn btn-danger" href="">Delete</button>
+                                @method('delete')
+                                @csrf
+                            </form>
                             {{-- @endif --}}
                         </td>
                     </tr>
-
+                    @endforeach
                 </tbody>
             </table>
         </div>

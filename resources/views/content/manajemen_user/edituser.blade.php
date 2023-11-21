@@ -9,7 +9,7 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form action="" method="POST">
+                <form action="{{ route('updateUser',['nip' => $user->nip]) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="form-group">

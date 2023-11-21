@@ -15,7 +15,7 @@
                     <h3 class="card-title" style="text-align: left; margin:10px 0 0 0;"><b>Selamat Datang</b></h3>
                     <h6 class="card-subtitle" style="text-align: left; margin:10px 0 0 0"> Silahkan mengisi form dibawah ini
                         untuk membuat akun</h6>
-                    <form action="/prosesregister" method = "POST" class="card-text" style="text-align: left"> <br>
+                    <form action="{{route('storeUser')}}" method = "POST" class="card-text" style="text-align: left"> <br>
                         @csrf
                         <div class="la" style="text-align: left; margin:10px 0 0 0;">
                             <label for="exampleInputNip1" class="form-label">NIP</label>

@@ -11,7 +11,8 @@ class ManagementUser extends Controller
     public function index()
     {
         $users = User::all();
-        return view('content.manajemen_user.listuser', compact('users'));
+        $title = 'listuser';
+        return view('content.manajemen_user.listuser', compact('users','title'));
     }
 
     public function create()
@@ -26,7 +27,7 @@ class ManagementUser extends Controller
             'jabatanDosen' => 'required|string',
             'namaDosen' => 'required|string',
             'email' => 'required|email|unique:users,email',
-            'password1' => 'required|min:6',
+            'password1' => 'required',
             'confirm_password' => 'required|same:password1',
         ]);
     
@@ -38,11 +39,11 @@ class ManagementUser extends Controller
             'namaDosen' => $request->namaDosen,
             'email' => $request->email,
             'password' => bcrypt($request->password1),
-            'role' => array_search($request->role, ['dosen', 'kurikulum', 'admin']), // Ubah role menjadi angka sesuai dengan yang diinginkan
+            'role' => 0,
             'status' => $request->status,
         ]);
     
-        return redirect()->route('users.index')->with('status', 'Pengguna berhasil ditambahkan!');
+        return redirect()->route('login')->with('status', 'Pengguna berhasil ditambahkan!');
     }
 
     public function show($nip)
@@ -54,43 +55,42 @@ class ManagementUser extends Controller
     public function edit($nip)
     {
         $user = User::find($nip);
-        return view('content.manajemen_user.edituser', compact('user'));
+        $title = 'edituser';
+        return view('content.manajemen_user.edituser', compact('user','title'));
     }
 
     public function update(Request $request, $nip)
     {
+        $user = User::find($nip);
+        
         $request->validate([
             'nip' => 'required|string|unique:users,nip,' . $nip,
             'namaProdi' => 'required|string',
             'jabatanDosen' => 'required|string',
             'namaDosen' => 'required|string',
             'email' => 'required|email|unique:users,email,' . $nip,
-            'role' => 'required|in:dosen,kurikulum,admin', // Sesuaikan dengan role yang diperbolehkan
+            'role' => 'required|in:0,1,2,3',
             'status' => 'required|string',
         ]);
-    
-        // Ambil pengguna dari database
-        $user = User::find($nip);
-    
-        // Update data dalam tabel
+        
         $user->update([
             'nip' => $request->nip,
             'namaProdi' => $request->namaProdi,
             'jabatanDosen' => $request->jabatanDosen,
             'namaDosen' => $request->namaDosen,
             'email' => $request->email,
-            'role' => array_search($request->role, ['dosen', 'kurikulum', 'admin']), // Ubah role menjadi angka sesuai dengan yang diinginkan
+            'role' => array_search($request->role, ['0','1','2','3']),
             'status' => $request->status,
         ]);
     
-        return redirect()->route('users.index')->with('status', 'Pengguna berhasil diperbarui!');
+        return redirect()->route('listuser')->with('status', 'Pengguna berhasil diperbarui!');
     }
 
     public function destroy($nip)
     {
         User::destroy($nip);
 
-    return redirect()->route('users.index')->with('status', 'Pengguna berhasil dihapus!');
+    return redirect()->route('listuser')->with('status', 'Pengguna berhasil dihapus!');
     }
 }
 
