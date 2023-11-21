@@ -56,58 +56,6 @@
             </thead>
 
             <tbody>
-                <!-- @php
-                        $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
-                        $mk = $mk_list->where('kodeMK', $rps->kodeMK)->first();
-                        $list_cpmk = collect();
-                        $uniqueIds = [];
-                        
-                        foreach ($mk->CPMK as $cpmk) {
-                            $kodeCPMK = $cpmk->kodeCPMK;
-                            $deskripsiCPMK = $cpmk->deskripsiCPMK;
-                        
-                            if (!in_array($kodeCPMK, $uniqueIds)) {
-                                $uniqueIds[] = $kodeCPMK;
-                                $list_cpmk->push([
-                                    'kodeCPMK' => $kodeCPMK,
-                                    'deskripsiCPMK' => $deskripsiCPMK,
-                                ]);
-                            }
-                        }
-                        $list_kodeCPMK = $list_cpmk->pluck('kodeCPMK');
-                    @endphp
-            @foreach ($minggu_rps_list as $minggu_rps)
-                <tr>
-                    <td scope="row">{{ $minggu_rps->kodeSubCPMK }}</td>
-                    <td scope="row">{{ $minggu_rps->mingguKe }}</td>
-                    @if ($minggu_rps->bentukPembelajaran == '1')
-                        <td scope="row">{{ 'Luring' }}</td>
-                    @else
-                        <td scope="row">{{ 'Daring' }} </td>
-                    @endif
-                    <td scope="row">{{ $minggu_rps->indikatorMingguRPS }}</td>
-                    <td scope="row">{{ $minggu_rps->kriteriaMingguRPS }}</td>
-                    <td scope="row">{{ $minggu_rps->deskripsiPembelajaran }}</td>
-                    <td scope="row">{{ $minggu_rps->materiPembelajaran }}</td>
-                    <td scope="row">
-                        {{ $a =$detail_rps_list->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first()->kodePenilaian ?? '-' }}
-                        <br>
-                        {{ $teknik_penilaian_list->where('kodePenilaian', $a)->first()->teknikPenilaian ?? '-' }}
-
-                        {{-- {{ $teknik_penilaian['teknikPenilaian'] ?? '-' }} --}}
-                    </td>
-                    <td scope="row">
-                        <a id="edit" class="btn btn-primary"
-                            href="{{ route('edit_rps.edit_minggu_rps',['kodeMingguRPS' => $minggu_rps->kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">Edit</a>
-                    </td>
-                    <td scope="row">
-                        <a id="delete" class="btn btn-danger"
-                            href="{{ route('edit_rps.delete_minggu_rps',['kodeMingguRPS' => $minggu_rps->kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">Delete</a>
-                    
-                        {{-- <a class="btn btn-danger" href="{{ route('delete_minggu_rps', $minggu_rps->kodeMingguRPS) }}">Delete</a> --}}
-                    </td>
-                </tr>
-            @endforeach -->
 
                 @for($i=1;$i<=14;$i++) <tr>
                     <td scope="row">{{ $i }}</td>
