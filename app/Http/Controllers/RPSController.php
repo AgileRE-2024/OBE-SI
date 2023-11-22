@@ -173,7 +173,7 @@ class RPSController extends Controller
         for ($i = 0; $i < 14; $i++) {
             // Create a new RPS Minggu with the start date
             Minggu_RPS::create([
-                'kodeRPS' => $id_rps,
+                'id_rps' => $id_rps,
                 'kodeMingguRPS' => $id_rps.$i,
             ]);
 

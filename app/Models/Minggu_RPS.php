@@ -10,7 +10,7 @@ class Minggu_RPS extends Model
     public $incrementing = false;
     protected $table = 'Minggu_RPS';
     protected $fillable = [
-        'kodeMingguRPS', 'kodeSubCPMK', 'mingguKe', 'bentukPembelajaran', 'indikatorMingguRPS', 'kriteriaMingguRPS', 'deskripsiPembelajaran', 'materiPembelajaran'
+        'id_rps','kodeMingguRPS', 'kodeSubCPMK', 'mingguKe', 'bentukPembelajaran', 'indikatorMingguRPS', 'kriteriaMingguRPS', 'deskripsiPembelajaran', 'materiPembelajaran'
     ];
 
     public function SubCPMK()
@@ -20,7 +20,7 @@ class Minggu_RPS extends Model
     
     public function RPS()
     {
-        return $this->belongsTo(RPS::class, 'kodeRPS', 'kodeRPS');
+        return $this->belongsTo(RPS::class, 'id_rps', 'id_rps');
     }
 
 }
