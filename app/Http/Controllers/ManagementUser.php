@@ -41,7 +41,7 @@ class ManagementUser extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password1),
             'role' => 0,
-            'status' => 'Aktif',
+            'status' => 'Aktif Bekerja',
         ]);
 
         return redirect()->route('login')->with('status', 'Pengguna berhasil ditambahkan!');
