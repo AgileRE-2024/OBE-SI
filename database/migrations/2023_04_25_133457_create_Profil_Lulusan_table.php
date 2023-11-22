@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Profil_Lulusan', function (Blueprint $table) {
-            $table->char('kodePL', 10)->primary('kodePL');
+            $table->char('kodePL', 10)->primary('kodePL')->onDelete('restrict')->onUpdate('cascade');
             $table->text("deskripsiPL");
             $table->text("namaPL");
             $table->timestamps();
