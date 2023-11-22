@@ -169,6 +169,15 @@ class RPSController extends Controller
             'id_rps' => $id_rps,
             'dibuat_oleh' => $request->dibuat_oleh
         ]);
+        // create minggu rps
+        for ($i = 0; $i < 14; $i++) {
+            // Create a new RPS Minggu with the start date
+            Minggu_RPS::create([
+                'id_rps' => $id_rps,
+                'kodeMingguRPS' => $id_rps.$i,
+            ]);
+
+        }
     
         return redirect()->route('edit_rps.mata_kuliah', ['kodeRPS' => $id_rps ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$id_rps]);
     }
