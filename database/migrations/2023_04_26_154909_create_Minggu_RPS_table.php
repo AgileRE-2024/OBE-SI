@@ -30,6 +30,7 @@ return new class extends Migration
             $table->text('waktuPembelajaran')->nullable();
             $table->text('pengalaman_belajar')->nullable();
             $table->text('bahan_kajian')->nullable();
+            $table->string('bobot_nilai', 100)->nullable();
             $table->timestamps();
         });
     }
