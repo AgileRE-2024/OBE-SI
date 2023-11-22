@@ -12,13 +12,6 @@
                         class="bi bi-quote"></i></b></h6>
         </div>
     </div>
-    <!-- <div class="d-flex justify-content-start pt-2">
-        <div>
-            <a id="tambah" class="btn btn-success"
-                href="{{ route('edit_rps.add_minggu_rps',['kodeRPS' => $kodeRPS]) }}"><i class="bi bi-plus-square">
-                </i>Tambah</a>
-        </div>
-    </div> -->
 
     <br>
     @if (session('warning'))
@@ -59,17 +52,34 @@
             @foreach($minggu_rps_list as $key => $minggurps)
             <tr>
                     <td scope="row">{{ $key + 1 }}</td>
-                    <td scope="row">{{ $minggurps->pertemuan }}</td>
-                    <td scope="row">{{ $minggurps->pembelajaran }}</td>
-                    <td scope="row">{{ $minggurps->teknik }}</td>
-                    <td scope="row">{{ $minggurps->bobot }}</td>
-                    <td scope="row">{{ $minggurps->alatukur }}</td>
-                    <td scope="row">{{ $minggurps->bahasan }}</td>
-                    <td scope="row">{{ $minggurps->penutup }}</td>
-                    <td scope="row">{{ $minggurps->tipe }}</td>
-                    <td scope="row">{{ $minggurps->sifat }}</td>
+                    @if($minggurps->SubCPMK)
+                    <td scope="row">{{ $minggurps->kodeSubCPMK }} {{ $minggurps->SubCPMK->deskripsiSubCPMK }}</td>
+                    @else
+                    <td scope="row"></td>
+                    @endif
+                    <td scope="row">{{ $minggurps->bahan_kajian }}</td>
                     <td scope="row">
-                        <a id="edit" class="btn btn-primary" href="#">Edit</a>
+                        <div class="col">
+                            <p>Bentuk: </p>
+                            <p>Metode: </p>
+                            <p>Penugasan: {{ $minggurps->penugasan }}</p>
+                            @if($minggurps->luring == 1)
+                            <p>Luring</p>
+                            @elseif($minggurps->luring == 0)
+                            <p>Daring</p>
+                            @else
+                            <p></p>
+                            @endif
+                        </div>
+                    </td>
+                    <td scope="row">media</td>
+                    <td scope="row">{{ $minggurps->waktuPembelajaran }}</td>
+                    <td scope="row">{{ $minggurps->pengalaman_belajar }}</td>
+                    <td scope="row">{{ $minggurps->id_kriteria_penilaians }}</td>
+                    <td scope="row">{{ $minggurps->kodePenilaian }}</td>
+                    <td scope="row">referensi</td>
+                    <td scope="row">
+                        <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.edit_minggu_rps', ['kodeMingguRPS' => $minggurps->kodeMingguRPS, 'kodeRPS' => $kodeRPS ]) }}">Edit</a>
                     </td>
                 </tr>
             @endforeach

@@ -3,15 +3,22 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+// use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
+
 
 class RPS extends Model
 {
+    // use HasRichText;
+
     protected $primaryKey = 'id_rps';
     public $incrementing = false;
     protected $table = 'RPS';
     protected $fillable = [
         'id_rps', 'tahunAjaran','semester', 'kodeMK', 'kps', 'dibuat_oleh', 'diperiksa_oleh', 'disetujui_oleh', 'penanggungJawab', 'dosenPengampu'
     ];
+    // protected $richTextFields = [
+    //     'detail_penilaian',
+    // ];
 
     public function Mata_Kuliah()
     {
