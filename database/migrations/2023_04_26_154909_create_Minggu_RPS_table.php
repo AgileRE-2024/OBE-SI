@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Minggu_RPS', function (Blueprint $table) {
-            $table->char('kodeMingguRPS', 4)->primary('kodeMingguRPS');
+            $table->char('kodeMingguRPS', 12)->primary('kodeMingguRPS');
             $table->char('id_rps', 10)->nullable();
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
             $table->unsignedBigInteger('id_kriteria_penilaians')->nullable();
