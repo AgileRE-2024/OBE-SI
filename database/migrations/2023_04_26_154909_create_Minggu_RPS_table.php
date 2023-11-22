@@ -31,6 +31,11 @@ return new class extends Migration
             $table->text('pengalaman_belajar')->nullable();
             $table->text('bahan_kajian')->nullable();
             $table->string('bobot_nilai', 100)->nullable();
+            $table->string('temp_bentuk', 1000)->nullable();
+            $table->string('temp_metode', 1000)->nullable();
+            $table->string('temp_media', 1000)->nullable();
+            $table->string('temp_kriteria_penilaian', 1000)->nullable();
+            $table->string('temp_referensi', 1000)->nullable();
             $table->timestamps();
         });
     }

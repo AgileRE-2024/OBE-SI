@@ -32,11 +32,6 @@ return new class extends Migration
             $table->text('detail_penilaian')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
-            $table->char('temp_bentuk', 255)->nullable();
-            $table->char('temp_metode', 255)->nullable();
-            $table->char('temp_media', 255)->nullable();
-            $table->char('temp_kriteria_penilaian', 255)->nullable();
-            $table->char('temp_referensi', 255)->nullable();
         });
     }
 
