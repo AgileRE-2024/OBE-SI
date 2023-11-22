@@ -29,7 +29,9 @@
             <div class="form-group row my-4">
                 <label for="kodeCPL" class="col-sm-2 col-form-label">Capaian Pembelajaran</label>
                 <div class="col-sm-10">
-                    <span type="text" readonly class="form-control-plaintext" name="kodeCPL" id="kodeCPL">
+                    <span type="text" readonly class="form-control-plaintext" name="kodeCPL" id="kodeCPL"
+                        style="word-break: break-word;
+                    max-width: 700px;">
                         {{ $cpmk->CPL->kodeCPL }} - {{ $cpmk->CPL->deskripsiCPL }}
                     </span>
                 </div>
