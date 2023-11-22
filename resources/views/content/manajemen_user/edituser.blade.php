@@ -31,8 +31,8 @@
 
                     <div class="form-group">
                         <label>Jabatan</label>
-                        <input type="text" name="jabatan" class="form-control" placeholder="Jabatan" value="{{ old('Jabatan') ? old('Jabatan') : $user->jabatanDosen }}">
-                        @error('jabatan')
+                        <input type="text" name="jabatanDosen" class="form-control" placeholder="Jabatan" value="{{ old('Jabatan') ? old('Jabatan') : $user->jabatanDosen }}">
+                        @error('jabatanDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                    </div>

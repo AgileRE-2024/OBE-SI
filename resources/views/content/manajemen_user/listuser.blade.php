@@ -9,6 +9,16 @@
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
+        @if (session('warning'))
+            <div class="alert alert-danger">
+                {{ session('warning') }}
+            </div>
+        @endif
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         {{-- @if (auth()->user()->role == 1)
             <div class="d-flex justify-content-start pt-2">
                 <div>

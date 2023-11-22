@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ManagementUser extends Controller
 {
@@ -61,37 +62,43 @@ class ManagementUser extends Controller
 
     public function update(Request $request, $nip)
     {
-        $user = User::find($nip);
-
-        $request->validate([
+        if ($request->nip == $nip) {
+        $validator = Validator::make($request->all(), [
+            'nip' => 'required',
+            'jabatanDosen' => 'required|string',
+            'namaDosen' => 'required|string',
+            'email' => 'required|email',
+            'role' => 'required|in:0,1,2,3',
+            'status' => 'required|string',
+        ]);
+    } else {
+        $validator = Validator::make($request->all(), [
             'nip' => 'required|string|unique:users,nip,' . $nip,
-            'namaProdi' => 'required|string',
             'jabatanDosen' => 'required|string',
             'namaDosen' => 'required|string',
             'email' => 'required|email|unique:users,email,' . $nip,
             'role' => 'required|in:0,1,2,3',
             'status' => 'required|string',
         ]);
+    }
 
-        $user->update([
-            'nip' => $request->nip,
-            'namaProdi' => $request->namaProdi,
-            'jabatanDosen' => $request->jabatanDosen,
-            'namaDosen' => $request->namaDosen,
-            'email' => $request->email,
-            'role' => $request->role,
-            'status' => $request->status,
-        ]);
-        $user = User::where('nip', $nip)->first();
-        User::where('nip', $nip)->update($request);
-        return redirect()->route('listuser')->with('status', 'Pengguna berhasil diperbarui!');
+    $user = User::where('nip', $nip)->first();
+    $user->update([
+        'nip' => $request->nip,
+        'jabatanDosen' => $request->jabatanDosen,
+        'namaDosen' => $request->namaDosen,
+        'email' => $request->email,
+        'role' => $request->role,
+        'status' => $request->status,
+    ]);
+    return redirect()->route('listuser')->with('success', 'Pengguna berhasil diperbarui!');
     }
 
     public function destroy($nip)
     {
         User::destroy($nip);
 
-    return redirect()->route('listuser')->with('status', 'Pengguna berhasil dihapus!');
+    return redirect()->route('listuser')->with('warning', 'Pengguna berhasil dihapus!');
     }
 }
 
