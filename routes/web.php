@@ -249,8 +249,8 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum'], function () {
     });
     
     Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
-    Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
-    Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
+    Route::get('/dashboard/cari_rps', [RPSController::class, 'filterNewestYearSemester'])->name('index');
+    Route::post('/dashboard/cari_rps', [RPSController::class, 'processData'])->name('processForm');
     Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
     
     Route::get('/generate-pdf', 'PDFController@generatePDF');
@@ -270,7 +270,6 @@ Route::group(['middleware' => 'role:dosen'], function () {
         Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
         // Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
         // Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
-
         Route::get('/minggu_rps/{kodeRPS}', [MingguRPSController::class, 'index'])->name('minggu_rps');
         // Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
         // Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
