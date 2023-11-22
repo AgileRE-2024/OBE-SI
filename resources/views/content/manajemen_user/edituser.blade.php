@@ -14,56 +14,61 @@
                     @method('PUT')
                     <div class="form-group">
                         <label>NIP</label>
-                        {{-- @error('nip')
+                        <input type="text" name="nip" class="form-control" placeholder="NIP" value="{{ old('nip') ? old('nip') : $user->nip }}" >
+                        @error('nip')
                             <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror --}}
-                        <input type="text" name="nip" class="form-control" placeholder="NIP" value="">
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label>Nama Lengkap</label>
-                        {{-- @error('name')
+
+                        <input type="text" name="namaDosen" class="form-control" placeholder="Nama Lengkap" value="{{ old('namaDosen') ? old('namaDosen') : $user->namaDosen }}">
+                        @error('namaDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror --}}
-                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" value="">
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label>Jabatan</label>
-                        {{-- @error('jabatan')
+                        <input type="text" name="jabatanDosen" class="form-control" placeholder="Jabatan" value="{{ old('Jabatan') ? old('Jabatan') : $user->jabatanDosen }}">
+                        @error('jabatanDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror --}}
-                        <input type="text" name="jabatan" class="form-control" placeholder="Jabatan" value="">
-                    </div>
+                        @enderror
+                   </div>
 
                     <div class="form-group">
                         <label>Role</label>
+                        <select name="role" id='role' class="form-select">
+                            <option value="" disabled>-- Role --</option>
+                            <option value="0" @if(old('role', $user->role) == "0") selected @endif>Dosen</option>
+                            <option value="1" @if(old('role', $user->role) == "1") selected @endif>Kurikulum</option>
+                            <option value="2" @if(old('role', $user->role) == "2") selected @endif>Dosen dan Kurikulum</option>
+                            <option value="3" @if(old('role', $user->role) == "3") selected @endif>Admin</option>
+                        </select>
                         @error('role')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <select name="jabatan" id='jabatan' class="form-select">
-                            <option value="" selected disabled>-- Role --
-                            </option>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
                     </div>
 
                     <div class="form-group">
                         <label>Email</label>
-                        {{-- @error('email')
+                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') ? old('email') : $user->email }}">
+                        @error('email')
                             <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror --}}
-                        <input type="text" name="email" class="form-control" placeholder="Email" value="">
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Status</label>
-                        {{-- @error('status')
+                        <select name="status" id='status' class="form-select">
+                            <option value="" disabled>-- Status --</option>
+                            <option value="Aktif Bekerja" @if(old('status', $user->status) == "Aktif Bekerja") selected @endif>Aktif Bekerja</option>
+                            <option value="Aktif Mengajar" @if(old('status', $user->status) == "Aktif Mengajar") selected @endif>Aktif Mengajar</option>
+                            <option value="Tidak Aktif" @if(old('status', $user->status) == "Tidak Aktif") selected @endif>Tidak Aktif</option>
+                        </select>
+                        @error('status')
                             <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror --}}
-                        <input type="text" name="status" class="form-control" placeholder="Status" value="">
+                        @enderror
                     </div>
 
 

@@ -38,7 +38,7 @@ class User extends Authenticatable
 
     public function RPS()
     {
-        return $this->hasMany(Rps::class);
+        return $this->hasMany(RPS::class,'nip','nip');
     }
 
     public function Prodi(){
@@ -60,7 +60,8 @@ class User extends Authenticatable
         $mapRoles = [
             0 => 'dosen',
             1 => 'kurikulum',
-            2 => 'admin'
+            2 => 'dosen_kurikulum',
+            3 => 'admin'
         ];
         $userRoleName = $mapRoles[$this->role];
         return $userRoleName === $role;

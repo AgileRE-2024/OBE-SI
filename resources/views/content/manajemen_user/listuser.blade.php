@@ -9,6 +9,16 @@
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
+        @if (session('warning'))
+            <div class="alert alert-danger">
+                {{ session('warning') }}
+            </div>
+        @endif
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         {{-- @if (auth()->user()->role == 1)
             <div class="d-flex justify-content-start pt-2">
                 <div>
@@ -45,10 +55,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user) 
+                    @foreach ($users as $user)
                     <tr>
                         <td scope="row">
-                            1. </td>
+                            {{ $loop->iteration }} </td>
                         <td scope="row">
                             {{ $user->nip }}</td>
                         <td scope="row">
