@@ -21,18 +21,27 @@
                             <label for="exampleInputNip1" class="form-label">NIP</label>
                             <input type="string" class="form-control" name="nip"
                                 placeholder="Masukkan NIP dengan benar">
+                            @error('nip')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                            @enderror
                             {{-- <div id="emailHelp" class="form-text">Pastikan email yang Anda masukkan benar.</div> --}}
                         </div>
                         <div class="la" style="text-align: left; margin:10px 0 0 0;">
                             <label for="exampleInputname" class="form-label">Nama Lengkap</label>
                             <input type="string" class="form-control" name="namaDosen"
                                 placeholder="Masukkan nama lengkap dengan benar">
+                            @error('namaDosen')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                            @enderror
                             {{-- <div id="emailHelp" class="form-text">Pastikan email yang Anda masukkan benar.</div> --}}
                         </div>
                         <div class="la" style="text-align: left; margin:10px 0 0 0;">
                             <label for="exampleInputjabatan" class="form-label">Jabatan</label>
                             <input type="string" class="form-control" name="jabatanDosen"
                                 placeholder="Masukkan jabatan dengan benar">
+                            @error('jabatanDosen')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                            @enderror
                             {{-- <div id="emailHelp" class="form-text">Pastikan email yang Anda masukkan benar.</div> --}}
                         </div>
                         {{-- <div class="la" style="text-align: left; margin:10px 0 0 0;">
@@ -50,18 +59,26 @@
                             <label for="exampleInputemail" class="form-label">Email</label>
                             <input type="string" class="form-control" name="email"
                                 placeholder="Masukkan email dengan benar">
+                            @error('email')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                            @enderror
                             {{-- <div id="emailHelp" class="form-text">Pastikan email yang Anda masukkan benar.</div> --}}
                         </div>
                         <div class="la" style="text-align: left; margin:10px 0 0 0;">
                             <label for="exampleInputPassword1" class="form-label">Kata Sandi</label>
                             <input type="password" name="password1" class="form-control" id="password"
                                 placeholder="Masukkan kata sandi dengan benar">
+                            @error('password1')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="la" style="text-align: left; margin:10px 0 10px 0;">
                             <label for="exampleInputPassword2" class="form-label">Ulang Kata Sandi</label>
                             <input type="password" name="confirm_password" class="form-control mb-2" id="confirm_password"
                                 placeholder="Masukkan ulang kata sandi dengan benar">
-                            <span id='message'></span>
+                            @error('confirm_password')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                            @enderror
                         </div><br>
                         {{-- <div id="emailHelp" class="form-text">Pastikan password yang Anda masukkan benar.</div> --}}
                         {{-- <div class="mb-1 form-check">

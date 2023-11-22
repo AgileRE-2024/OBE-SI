@@ -72,7 +72,7 @@ Route::get('/login', function () {
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/managementuser/list', [ManagementUser::class, 'index'])->name('listuser');
 Route::get('/register', [ManagementUser::class, 'create'])->name('register');
-Route::post('/managementuser', [ManagementUser::class, 'store'])->name('storeUser');
+Route::post('/storeUser', [ManagementUser::class, 'store'])->name('storeUser');
 Route::get('/management/edit/{nip}', [ManagementUser::class, 'edit'])->name('editUser');
 Route::put('/management/edit/{nip}', [ManagementUser::class, 'update'])->name('updateUser');
 Route::delete('/management/delete/{nip}', [ManagementUser::class,'destroy'])->name('deleteUser');
@@ -219,10 +219,10 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::get('/deleteSubCPMK/{scpmk}', [SubCPMKController::class, 'deleteSubCPMK'])->name('delete_sub_cpmk');
         });
 
-        Route::get('/profilLulusan', [ProfilLulusanController::class, 'index'])->name('profil_lulusan')->middleware('role:admin,dosen,kurikulum');       
+        Route::get('/profilLulusan', [ProfilLulusanController::class, 'index'])->name('profil_lulusan')->middleware('role:admin,dosen,kurikulum');
         Route::get('/profilLulusan/export/{type}', [ProfilLulusanController::class, 'export'])->name('export_pl')->middleware('role:admin,dosen,kurikulum');
 
-        Route::get('/cpl_dikti', [CPLDiktiController::class, 'index'])->name('cpl_sndikti')->middleware('role:admin,dosen,kurikulum');       
+        Route::get('/cpl_dikti', [CPLDiktiController::class, 'index'])->name('cpl_sndikti')->middleware('role:admin,dosen,kurikulum');
         Route::get('/cpl_dikti/export/{type}', [CPLDiktiController::class, 'export'])->name('export_cpl_dikti')->middleware('role:admin,dosen,kurikulum');
 
         Route::get('/cpl_prodi', [CPLProdiController::class, 'index'])->name('cpl_prodi')->middleware('role:admin,dosen,kurikulum');
@@ -249,17 +249,17 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum'], function () {
             Route::get('/{tahun_ajaran}',[TahapPenilaianController::class, 'table'])->name('data_penilaian');
             Route::get('/export/{tahun_ajaran}/{type}', [TahapPenilaianController::class, 'exportFile'])->name('export');
         });
-    
+
         Route::get('/penilaiancpmk', [TeknikPenilaianCPMKController::class, 'index'])->name('tp_cpmk');
         Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
         Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
     });
-    
+
     Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
     Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
     Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
-    Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
-    
+    Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');
+
     Route::get('/generate-pdf', 'PDFController@generatePDF');
 });
 
@@ -287,7 +287,7 @@ Route::group(['middleware' => 'role:dosen'], function () {
         Route::get('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
         Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
         Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
-        
+
         Route::get('/rps/{kodeRPS}', [RPSController::class, 'show'])->name('rps_show');
     });
     Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');

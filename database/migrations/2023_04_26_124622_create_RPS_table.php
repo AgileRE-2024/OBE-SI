@@ -17,7 +17,7 @@ return new class extends Migration
             $table->char('id_rps',10)->primary();
             $table->char('kodeRPS', 6)->nullable();
             $table->char('nip', 18)->nullable();
-            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict')->onUpdate('cascade');
             $table->char('kodeMK', 10)->nullable();
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
             $table->year('tahunAjaran')->nullable();

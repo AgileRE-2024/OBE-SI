@@ -30,7 +30,7 @@ class ManagementUser extends Controller
             'password1' => 'required',
             'confirm_password' => 'required|same:password1',
         ]);
-    
+
         // Simpan data ke dalam tabel
         $user = User::create([
             'nip' => $request->nip,
@@ -40,9 +40,9 @@ class ManagementUser extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password1),
             'role' => 0,
-            'status' => $request->status,
+            'status' => 'Aktif',
         ]);
-    
+
         return redirect()->route('login')->with('status', 'Pengguna berhasil ditambahkan!');
     }
 
@@ -62,7 +62,7 @@ class ManagementUser extends Controller
     public function update(Request $request, $nip)
     {
         $user = User::find($nip);
-        
+
         $request->validate([
             'nip' => 'required|string|unique:users,nip,' . $nip,
             'namaProdi' => 'required|string',
@@ -72,17 +72,18 @@ class ManagementUser extends Controller
             'role' => 'required|in:0,1,2,3',
             'status' => 'required|string',
         ]);
-        
+
         $user->update([
             'nip' => $request->nip,
             'namaProdi' => $request->namaProdi,
             'jabatanDosen' => $request->jabatanDosen,
             'namaDosen' => $request->namaDosen,
             'email' => $request->email,
-            'role' => array_search($request->role, ['0','1','2','3']),
+            'role' => $request->role,
             'status' => $request->status,
         ]);
-    
+        $user = User::where('nip', $nip)->first();
+        User::where('nip', $nip)->update($request);
         return redirect()->route('listuser')->with('status', 'Pengguna berhasil diperbarui!');
     }
 
