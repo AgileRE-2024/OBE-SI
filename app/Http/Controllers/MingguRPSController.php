@@ -20,31 +20,12 @@ class MingguRPSController extends Controller
      */
     public function index($kodeRPS)
     {
-        $minggu_rps = Minggu_RPS::where('id_rps',$kodeRPS)->get();
-        $sorted_minggu_rps = $minggu_rps->sortBy('kodeMingguRPS');
-        
+        $minggu_rps = Minggu_RPS::where('id_rps',$kodeRPS)->orderBy('kodeMingguRPS')->get();
         return view('content.minggu_rps.minggu_rps', [
             'title' => 'Tambah Minggu RPS',
-            'minggu_rps_list' => $sorted_minggu_rps,
+            'minggu_rps_list' => $minggu_rps,
         
         ]);
-        // $detail_rps = Detail_RPS::all()
-        //     ->where('kodeRPS', $kodeRPS)
-        //     ->pluck('kodeMingguRPS');
-        // $minggu_rps = Minggu_RPS::all()->whereIn('kodeMingguRPS', $detail_rps);
-        // $mk = Mata_Kuliah::all();
-        // $rps = RPS::all();
-        // $subcpmk = SubCPMK::all();
-        // return view('content.minggu_rps.minggu_rps', [
-        //     'title' => 'Tambah Minggu RPS',
-        //     'kodeRPS' => $kodeRPS,
-        //     'minggu_rps_list' => $minggu_rps,
-        //     'scpmk' => $subcpmk,
-        //     'mk_list' => $mk,
-        //     'rps_list' => $rps,
-        //     'teknik_penilaian_list' => Teknik_Penilaian::all()->where('kodeRPS', $kodeRPS),
-        //     'detail_rps_list' => Detail_RPS::all()->where('kodeRPS', $kodeRPS),
-        // ]);
     }
     /**
      * Show the form for creating a new resource.

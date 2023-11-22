@@ -56,23 +56,23 @@
             </thead>
 
             <tbody>
-
-                @for($i=1;$i<=14;$i++) <tr>
-                    <td scope="row">{{ $i }}</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
-                    <td scope="row">belum ada data</td>
+            @foreach($minggu_rps_list as $key => $minggurps)
+            <tr>
+                    <td scope="row">{{ $key + 1 }}</td>
+                    <td scope="row">{{ $minggurps->pertemuan }}</td>
+                    <td scope="row">{{ $minggurps->pembelajaran }}</td>
+                    <td scope="row">{{ $minggurps->teknik }}</td>
+                    <td scope="row">{{ $minggurps->bobot }}</td>
+                    <td scope="row">{{ $minggurps->alatukur }}</td>
+                    <td scope="row">{{ $minggurps->bahasan }}</td>
+                    <td scope="row">{{ $minggurps->penutup }}</td>
+                    <td scope="row">{{ $minggurps->tipe }}</td>
+                    <td scope="row">{{ $minggurps->sifat }}</td>
                     <td scope="row">
                         <a id="edit" class="btn btn-primary" href="#">Edit</a>
                     </td>
-                    </tr>
-                    @endfor
+                </tr>
+            @endforeach
             </tbody>
         </table>
     </div>

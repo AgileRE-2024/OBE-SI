@@ -271,10 +271,10 @@ Route::group(['middleware' => 'role:dosen'], function () {
         Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
         Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
 
-        // Route::get('/minggu_rps/{kodeRPS}', [MingguRPSController::class, 'index'])->name('minggu_rps');
-        Route::get('/minggu_rps/{kodeRPS}', function () {
-            return view('content.minggu_rps.minggu_rps', ['title' => 'Minggu RPS', 'kodeRPS' => 'AGB10112023']);
-        })->name('minggu_rps');
+        Route::get('/minggu_rps/{kodeRPS}', [MingguRPSController::class, 'index'])->name('minggu_rps');
+        // Route::get('/minggu_rps/{kodeRPS}', function () {
+        //     return view('content.minggu_rps.minggu_rps', ['title' => 'Minggu RPS', 'kodeRPS' => 'AGB10112023']);
+        // })->name('minggu_rps');
         Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
         Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
         Route::get('/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
