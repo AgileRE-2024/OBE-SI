@@ -45,10 +45,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user) 
+                    @foreach ($users as $user)
                     <tr>
                         <td scope="row">
-                            1. </td>
+                            {{ $loop->iteration }} </td>
                         <td scope="row">
                             {{ $user->nip }}</td>
                         <td scope="row">

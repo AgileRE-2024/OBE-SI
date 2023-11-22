@@ -40,12 +40,11 @@
                     <div class="form-group">
                         <label>Role</label>
                         <select name="role" id='role' class="form-select">
-                            <option value="{{ old('role') ? old('role') : $user->role }}" selected disabled>-- Role --
-                            </option>
-                            <option value="0">Dosen</option>
-                            <option value="1">Kurikulum</option>
-                            <option value="2">Dosen dan Kurikulum</option>
-                            <option value="3">Admin</option>
+                            <option value="" disabled>-- Role --</option>
+                            <option value="0" @if(old('role', $user->role) == "0") selected @endif>Dosen</option>
+                            <option value="1" @if(old('role', $user->role) == "1") selected @endif>Kurikulum</option>
+                            <option value="2" @if(old('role', $user->role) == "2") selected @endif>Dosen dan Kurikulum</option>
+                            <option value="3" @if(old('role', $user->role) == "3") selected @endif>Admin</option>
                         </select>
                         @error('role')
                             <p style="color: #BF2C45">{{ $message }}</p>
@@ -61,7 +60,12 @@
                     </div>
                     <div class="form-group">
                         <label>Status</label>
-                        <input type="text" name="status" class="form-control" placeholder="Status" value="{{ old('status') ? old('status') : $user->status }}">
+                        <select name="status" id='status' class="form-select">
+                            <option value="" disabled>-- Status --</option>
+                            <option value="Aktif Bekerja" @if(old('status', $user->status) == "Aktif Bekerja") selected @endif>Aktif Bekerja</option>
+                            <option value="Aktif Mengajar" @if(old('status', $user->status) == "Aktif Mengajar") selected @endif>Aktif Mengajar</option>
+                            <option value="Tidak Aktif" @if(old('status', $user->status) == "Tidak Aktif") selected @endif>Tidak Aktif</option>
+                        </select>
                         @error('status')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
