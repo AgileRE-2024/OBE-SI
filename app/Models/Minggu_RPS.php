@@ -20,7 +20,7 @@ class Minggu_RPS extends Model
     
     public function RPS()
     {
-        return $this->belongsToMany(RPS::class, 'Detail_RPS', 'kodeMingguRPS', 'kodeRPS');
+        return $this->belongsTo(RPS::class, 'kodeRPS', 'kodeRPS');
     }
 
 }
