@@ -21,7 +21,7 @@
                         <form method="post" action="{{ route('edit_rps.update_minggu_rps', ['kodeMingguRPS' => $kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">
                             @csrf
                             @method('put')
-                            @php
+                            {{-- @php
                                 $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                                 $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
                                 $list_cpmk = collect();
@@ -40,18 +40,20 @@
                                     }
                                 }
                                 $list_kodeCPMK = $list_cpmk->pluck('kodeCPMK');
-                            @endphp
+                            @endphp --}}
 
                             <div class="form-group">
                                 <label>Kode Minggu RPS</label>
                                 @error('kodeMingguRPS')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <input type="hidden" name="kodeMingguRPS" class="form-control"
-                                    placeholder="Kode Minggu RPS" value="{{ old('kodeMingguRPS') ? old('kodeMingguRPS') : $minggu_rps->kodeMingguRPS }}">
+                                {{-- <input type="hidden" name="kodeMingguRPS" class="form-control"
+                                    placeholder="Kode Minggu RPS" value="{{ old('kodeMingguRPS') ? old('kodeMingguRPS') : $minggu_rps->kodeMingguRPS }}"> --}}
+                                    <input type="hidden" name="kodeMingguRPS" class="form-control"
+                                    placeholder="Kode Minggu RPS" value="{{ $kodeMingguRPS }}">
                             </div>
 
-                            @php
+                            {{-- @php
                                 $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                                 $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
                                 $list_cpmk = collect();
@@ -73,7 +75,7 @@
                                 $options=$scpmk->whereIn('kodeCPMK', $list_kodeCPMK)->pluck('kodeSubCPMK');
                                 $subcpmk=$scpmk->whereIn('kodeCPMK', $list_kodeCPMK);
                                 $detail=$detail_rps_list->where('kodeRPS', $rps->kodeRPS)->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first();
-                            @endphp
+                            @endphp --}}
 
                             <div class="form-group">
                                 <label>Sub CPMK</label>
@@ -82,10 +84,9 @@
                                 @enderror
                                 <select name="kodeSubCPMK" id='kodeSubCPMK' class="form-select">
                                     <option value="">-- Pilih Sub CMPK --</option>
-                                    @foreach ($options as $item)
-                                        {{-- @foreach ($subcpmk as $sc) --}}
+                                    @foreach ($scpmk as $item)
+                                        {{-- <option value="{{ $item }}" {{ $item ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>{{ $item }} - {{ $subcpmk[$loop->index]->deskripsiSubCPMK }}</option> --}}
                                         <option value="{{ $item }}" {{ $item ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>{{ $item }} - {{ $subcpmk[$loop->index]->deskripsiSubCPMK }}</option>
-                                        {{-- @endforeach --}}
                                     @endforeach
                                 </select>
                             </div>

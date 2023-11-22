@@ -13,7 +13,7 @@
     </div>
     <div class="d-flex justify-content-start pt-2">
         <div>
-            <a class="btn btn-primary" href="{{ route('edit_rps.add_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}"><i
+            <a class="btn btn-primary" href="{{ route('edit_rps.edit_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}"><i
                     class="bi bi-pencil-square">
                 </i>Edit</a>
         </div>
@@ -31,9 +31,11 @@
 @endif --}}
 <div class="card border" style="background-color: white">
     <div class="card-body" style="font-weight:600;">
-        <h5 style="font-weight: 400;">Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Maxime explicabo neque possimus quibusdam temporibus, a velit officiis magni expedita.
-            Nobis, facere odio veritatis nesciunt recusandae hic cumque provident adipisci voluptas.</h5>
+    @if($rps->detail_penilaian)
+        <h5 style="font-weight: 400;">{{ $rps->detail_penilaian }}</h5>
+    @else
+        <h5 style="font-weight: 400;">Belum ada data</h5>
+        @endif
     </div>
 </div>
 @endsection

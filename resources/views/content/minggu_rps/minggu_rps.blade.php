@@ -69,7 +69,7 @@
                     <td scope="row">belum ada data</td>
                     <td scope="row">belum ada data</td>
                     <td scope="row">
-                        <a id="edit" class="btn btn-primary" href="#">Edit</a>
+                        <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.edit_minggu_rps', ['kodeMingguRPS => 123', 'kodeRPS' => $kodeRPS ]) }}">Edit</a>
                     </td>
                     </tr>
                     @endfor

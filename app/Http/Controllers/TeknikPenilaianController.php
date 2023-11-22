@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Dompdf\Dompdf;
 use App\Models\Teknik_Penilaian;
 use App\Models\Detail_RPS;
+use App\Models\RPS;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -17,9 +18,8 @@ class TeknikPenilaianController extends Controller
      */
     public function index($kodeRPS)
     {
-        $kodeRPS = $kodeRPS;
-        $tps = Teknik_Penilaian::all()->where('kodeRPS',$kodeRPS);
-        return view('content.teknik_penilaian.teknik_penilaian', ['title' => 'Teknik Penilaian', 'tps' => $tps, 'kodeRPS' => $kodeRPS]);
+        $rps = RPS::where('id_rps', $kodeRPS)->first();
+        return view('content.teknik_penilaian.teknik_penilaian', ['title' => 'Teknik Penilaian', 'rps' => $rps, 'kodeRPS' => $kodeRPS]);
     }
 
     public function export($type)
@@ -52,10 +52,29 @@ class TeknikPenilaianController extends Controller
         }
     }
 
-    public function editTeknikPenilaian($tp)
+    public function editTeknikPenilaian($kodeRPS)
     {
-        $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        return view('content.teknik_penilaian.edit_penilaian', ['title' => 'Teknik Penilaian', 'tp' => $tp]);
+        $rps = RPS::where('id_rps', $kodeRPS)->first();
+        return view('content.teknik_penilaian.edit_penilaian', ['title' => 'Teknik Penilaian','kodeRPS'=>$kodeRPS, 'rps' => $rps]);
+    }
+
+    public function updateTeknikPenilaian(Request $request, $kodeRPS)
+    {
+        
+        $request->validate([
+            'detail_penilaian' => 'required',
+        ]);
+
+        // Update data rps
+        $data = [
+            'detail_penilaian' => $request->input('detail_penilaian'),
+        ];
+
+        // dd($kodeRPS);
+
+        RPS::where('id_rps', $kodeRPS)->update($data);
+
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS'=>$kodeRPS])->with('success', 'Data teknik penilaian berhasil diperbarui');
     }
 
     public function addTeknikPenilaian($kodeRPS)
@@ -102,41 +121,41 @@ class TeknikPenilaianController extends Controller
         return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with('success', 'Teknik Penilaian berhasil ditambahkan');
     }
 
-    public function updateTeknikPenilaian(Request $request, $tp)
-    {
-        $validator = Validator::make($request->all(), [
-            // 'kodePenilaian' => 'required',
-            'teknikPenilaian' => 'required',
-            'bobotPenilaian' => 'required',
-            'kriteriaPenilaian' => 'required',
-            'tahapPenilaian' => 'required',
-            'instrumenPenilaian' => 'required',
-            'kodeRPS' => 'required',
-        ]);
+    // public function updateTeknikPenilaian(Request $request, $tp)
+    // {
+    //     $validator = Validator::make($request->all(), [
+    //         // 'kodePenilaian' => 'required',
+    //         'teknikPenilaian' => 'required',
+    //         'bobotPenilaian' => 'required',
+    //         'kriteriaPenilaian' => 'required',
+    //         'tahapPenilaian' => 'required',
+    //         'instrumenPenilaian' => 'required',
+    //         'kodeRPS' => 'required',
+    //     ]);
 
-        if ($validator->fails()) {
-            // flash('error')->error();
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
+    //     if ($validator->fails()) {
+    //         // flash('error')->error();
+    //         return redirect()->back()->withErrors($validator)->withInput();
+    //     }
 
-        if (Teknik_Penilaian::where('kodePenilaian', $request->kodePenilaian)->exists() && $request->kodePenilaian != $tp) {
-            return redirect()->back()->with('error', 'Teknik Penilaian sudah ada');
-        }
+    //     if (Teknik_Penilaian::where('kodePenilaian', $request->kodePenilaian)->exists() && $request->kodePenilaian != $tp) {
+    //         return redirect()->back()->with('error', 'Teknik Penilaian sudah ada');
+    //     }
 
-        $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        $tp->update([
-            'kodePenilaian' => $tp->kodePenilaian,
-            'teknikPenilaian' => $request->teknikPenilaian,
-            'bobotPenilaian' => $request->bobotPenilaian,
-            'kriteriaPenilaian' => $request->kriteriaPenilaian,
-            'tahapPenilaian' => $request->tahapPenilaian,
-            'instrumenPenilaian' => $request->instrumenPenilaian,
-            'kodeRPS' => $request->kodeRPS,
-        ]);
-        $tp->save();
+    //     $tp = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
+    //     $tp->update([
+    //         'kodePenilaian' => $tp->kodePenilaian,
+    //         'teknikPenilaian' => $request->teknikPenilaian,
+    //         'bobotPenilaian' => $request->bobotPenilaian,
+    //         'kriteriaPenilaian' => $request->kriteriaPenilaian,
+    //         'tahapPenilaian' => $request->tahapPenilaian,
+    //         'instrumenPenilaian' => $request->instrumenPenilaian,
+    //         'kodeRPS' => $request->kodeRPS,
+    //     ]);
+    //     $tp->save();
 
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $request->kodeRPS ])->with('success', 'Teknik Penilaian berhasil diupdate');
-    }
+    //     return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $request->kodeRPS ])->with('success', 'Teknik Penilaian berhasil diupdate');
+    // }
 
     public function deleteTeknikPenilaian(String $tp)
     {

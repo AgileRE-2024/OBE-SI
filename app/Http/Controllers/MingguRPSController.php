@@ -20,22 +20,22 @@ class MingguRPSController extends Controller
      */
     public function index($kodeRPS)
     {
-        $detail_rps = Detail_RPS::all()
-            ->where('kodeRPS', $kodeRPS)
-            ->pluck('kodeMingguRPS');
-        $minggu_rps = Minggu_RPS::all()->whereIn('kodeMingguRPS', $detail_rps);
-        $mk = Mata_Kuliah::all();
-        $rps = RPS::all();
-        $subcpmk = SubCPMK::all();
+        // $detail_rps = Detail_RPS::all()
+        //     ->where('kodeRPS', $kodeRPS)
+        //     ->pluck('kodeMingguRPS');
+        // $minggu_rps = Minggu_RPS::all()->whereIn('kodeMingguRPS', $detail_rps);
+        // $mk = Mata_Kuliah::all();
+        // $rps = RPS::all();
+        // $subcpmk = SubCPMK::all();
         return view('content.minggu_rps.minggu_rps', [
-            'title' => 'Tambah Minggu RPS',
+            'title' => 'Minggu RPS',
             'kodeRPS' => $kodeRPS,
-            'minggu_rps_list' => $minggu_rps,
-            'scpmk' => $subcpmk,
-            'mk_list' => $mk,
-            'rps_list' => $rps,
-            'teknik_penilaian_list' => Teknik_Penilaian::all()->where('kodeRPS', $kodeRPS),
-            'detail_rps_list' => Detail_RPS::all()->where('kodeRPS', $kodeRPS),
+            // 'minggu_rps_list' => $minggu_rps,
+            // 'scpmk' => $subcpmk,
+            // 'mk_list' => $mk,
+            // 'rps_list' => $rps,
+            // 'teknik_penilaian_list' => Teknik_Penilaian::all()->where('kodeRPS', $kodeRPS),
+            // 'detail_rps_list' => Detail_RPS::all()->where('kodeRPS', $kodeRPS),
         ]);
     }
     /**
@@ -69,29 +69,29 @@ class MingguRPSController extends Controller
      */
     public function editMingguRPS($kodeMingguRPS, $kodeRPS)
     {
-        $detail_rps = Detail_RPS::all()
-            ->where('kodeRPS', $kodeRPS)
-            ->pluck('kodeMingguRPS');
-        $minggu_rps = Minggu_RPS::all()
-            ->whereIn('kodeMingguRPS', $detail_rps)
-            ->where('kodeMingguRPS', $kodeMingguRPS)
-            ->first();
+        // $detail_rps = Detail_RPS::all()
+        //     ->where('kodeRPS', $kodeRPS)
+        //     ->pluck('kodeMingguRPS');
+        // $minggu_rps = Minggu_RPS::all()
+        //     ->whereIn('kodeMingguRPS', $detail_rps)
+        //     ->where('kodeMingguRPS', $kodeMingguRPS)
+        //     ->first();
         $mk = Mata_Kuliah::all();
-        $rps = RPS::all();
+        // $rps = RPS::all();
         $subcpmk = SubCPMK::all();
         // $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
 
         return view('content.minggu_rps.edit_minggu_rps', [
             'title' => 'Edit Minggu RPS',
-            'minggu_rps_list' => $minggu_rps,
+            // 'minggu_rps_list' => $minggu_rps,
             'kodeMingguRPS' => $kodeMingguRPS,
             'kodeRPS' => $kodeRPS,
             'scpmk' => $subcpmk,
             'mk_list' => $mk,
-            'rps_list' => $rps,
+            // 'rps_list' => $rps,
             'teknik_penilaian_list' => Teknik_Penilaian::all(),
-            'detail_rps_list' => Detail_RPS::all(),
-            'minggu_rps' => $minggu_rps,
+            // 'detail_rps_list' => Detail_RPS::all(),
+            // 'minggu_rps' => $minggu_rps,
         ]);
     }
 
