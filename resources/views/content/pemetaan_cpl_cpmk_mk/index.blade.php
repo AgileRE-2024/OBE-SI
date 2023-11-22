@@ -67,8 +67,10 @@
                                         {{-- normal. cpmk dan mk sudah terisi --}}
                                         <tr>
                                             @if ($i == 0 && $j == 0)
-                                                <td scope="row" rowspan="{{ $x }}" style="cursor: pointer" @if(auth()->user()->role==1)  
-                                                    onclick= "location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'" @endif
+                                                <td scope="row" rowspan="{{ $x }}"
+                                                    style="cursor: pointer; word-break: break-word;
+                                                max-width: 150px;"
+                                                    @if (auth()->user()->role == 1) onclick= "location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'" @endif
                                                     data-toggle="tooltip" title="Tekan untuk menambahkan CPMK baru">
                                                     <span style="font-weight:600;">[{{ $cpl->kodeCPL }}]</span>
                                                     {{ $cpl->deskripsiCPL }}
@@ -76,8 +78,8 @@
                                             @endif
                                             @if ($j == 0)
                                                 <td rowspan="{{ sizeof($cpl->Cpmk[$i]->Mata_Kuliah) }}"
-                                                    style="cursor: pointer" @if(auth()->user()->role==1)  
-                                                    onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk', $cpl->Cpmk[$i]) }}'" @endif
+                                                    style="cursor: pointer"
+                                                    @if (auth()->user()->role == 1) onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk', $cpl->Cpmk[$i]) }}'" @endif
                                                     data-toggle="tooltip"
                                                     title="Tekan untuk mengubah CPMK atau memetakan dengan MK">
                                                     <span style="font-weight:600;">[{{ $cpl->Cpmk[$i]->kodeCPMK }}]</span>
@@ -94,15 +96,15 @@
                                     {{-- agak normal. cpmk udah terisi, belum dipetakan dengan mk --}}
                                     <tr>
                                         @if ($i == 0)
-                                            <td scope="row" rowspan="{{ sizeof($cpl->Cpmk) }}" style="cursor: pointer" @if(auth()->user()->role==1)  
-                                                onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'" @endif
+                                            <td scope="row" rowspan="{{ sizeof($cpl->Cpmk) }}" style="cursor: pointer"
+                                                @if (auth()->user()->role == 1) onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'" @endif
                                                 data-toggle="tooltip" title="Tekan untuk menambahkan CPMK baru">
                                                 <span style="font-weight:600;">[{{ $cpl->kodeCPL }}]</span>
                                                 {{ $cpl->deskripsiCPL }}
                                             </td>
                                         @endif
-                                        <td style="cursor: pointer" @if(auth()->user()->role==1)  
-                                            onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk', $cpl->Cpmk[$i]) }}'" @endif
+                                        <td style="cursor: pointer"
+                                            @if (auth()->user()->role == 1) onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk', $cpl->Cpmk[$i]) }}'" @endif
                                             data-toggle="tooltip"
                                             title="Tekan untuk mengubah CPMK atau memetakan dengan MK">
                                             <span style="font-weight:600;">[{{ $cpl->Cpmk[$i]->kodeCPMK }}]</span>
@@ -115,8 +117,8 @@
                         @else
                             {{-- gk normal blas. cpmk gada, mk gada --}}
                             <tr>
-                                <td scope="row" style="cursor: pointer" @if(auth()->user()->role==1)  
-                                    onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'" @endif
+                                <td scope="row" style="cursor: pointer"
+                                    @if (auth()->user()->role == 1) onclick="location.href='{{ route('kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk', $cpl->kodeCPL) }}'" @endif
                                     data-toggle="tooltip" title="Tekan untuk menambahkan CPMK baru">
                                     <span style="font-weight:600;">[{{ $cpl->kodeCPL }}]</span>
                                     {{ $cpl->deskripsiCPL }}

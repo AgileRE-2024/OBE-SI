@@ -37,7 +37,8 @@
             <div class="row">
                 <div class="form-group col-2">
                     <label for="kode">Kode CPMK</label>
-                    <input type="text" class="form-control" name="kodeCPMK" id="kode" value="{{ $cpmk->kodeCPMK }}">
+                    <input type="text" class="form-control" name="kodeCPMK" id="kode" value="{{ $cpmk->kodeCPMK }}"
+                        disabled>
                 </div>
                 <div class="form-group col-10">
                     <label for="deskripsi">Deskripsi CPMK</label>
