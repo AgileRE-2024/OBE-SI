@@ -251,39 +251,46 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum'], function () {
     });
     
     Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
-    Route::get('/dashboard/cari_rps', [RpsController::class, 'index'])->name('index');
-    Route::post('/dashboard/cari_rps', [RpsController::class, 'processData'])->name('processForm');
+    Route::get('/dashboard/cari_rps', [RPSController::class, 'filterNewestYearSemester'])->name('index');
+    Route::post('/dashboard/cari_rps', [RPSController::class, 'processData'])->name('processForm');
     Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
     
     Route::get('/generate-pdf', 'PDFController@generatePDF');
+
+
+    //NEW ROUTE NEWEST RPS
+    // Route::get('/dashboard/list_rps', [RPSController::class,'filterNewestYearSemester', 'title'=>'RPS'])->name('rps');
 });
 
 
 Route::group(['middleware' => 'role:dosen'], function () {
     Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
         Route::get('/teknik_penilaian/{kodeRPS}', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
-        Route::get('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
-        Route::post('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
-        Route::get('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
+        // Route::get('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
+        // Route::post('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
+        Route::get('/editTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
         Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
-        Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
-        Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
-
+        // Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
+        // Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
         Route::get('/minggu_rps/{kodeRPS}', [MingguRPSController::class, 'index'])->name('minggu_rps');
-        Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
-        Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
-        Route::get('/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
-        Route::put('/edit_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
-        Route::get('/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
+        // Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
+        // Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
+        Route::get('/edit_minggu_rps/{kodeMingguRPS}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
+        Route::put('/edit_minggu_rps/{kodeMingguRPS}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
+        // Route::get('/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
 
         Route::get('/peran_dosen/{kodeRPS}', [DosenController::class, 'index'])->name('peran_dosen');
-        Route::get('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'addPeranDosen'])->name('add_peran_dosen');
-        Route::post('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'storePeranDosen'])->name('store_peran_dosen');
-        Route::get('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
-        Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
-        Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
+        Route::get('/edit_peran_dosen/{kodeRPS}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
+        Route::put('/edit_peran_dosen/{kodeRPS}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
+        // Route::get('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'addPeranDosen'])->name('add_peran_dosen');
+        // Route::post('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'storePeranDosen'])->name('store_peran_dosen');
+        // Route::get('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
+        // Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
+        // Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
         
         Route::get('/rps/{kodeRPS}', [RPSController::class, 'show'])->name('rps_show');
+
+        Route::get('/mata_kuliah/{kodeRPS}', [RPSController::class, 'detail'])->name('mata_kuliah');
     });
     Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
     Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');
