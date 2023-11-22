@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('tahapPenilaian',50);
             $table->string('instrumenPenilaian',50);
             $table->char('kodeRPS',16);
-            $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict');
+            $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
         });
     }

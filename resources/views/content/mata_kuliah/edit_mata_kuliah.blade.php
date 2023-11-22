@@ -17,17 +17,21 @@
                         @error('kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah"
-                            value="{{ old('kodeMK') ? old('kodeMK') : $mk->kodeMK }}" pattern="[A-Za-z0-9]+" maxlength="4">
+                        {{-- <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah"
+                            value="{{ old('kodeMK') ? old('kodeMK') : $mk->kodeMK }}"> --}}
+                        <input type="text" name="kodeMK" class="form-control"
+                            placeholder="Kode Mata Kuliah (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
+                            maxlength="10" minlength="2" title="Harap masukkan huruf besar dan angka saja"
+                            oninput="updateInput(this)" value="{{ old('kodeMK') ? old('kodeMK') : $mk->kodeMK }}">
                     </div>
 
                     <div class="form-group">
                         <label>Mata Kuliah</label>
-                        @error('namaBK')
+                        @error('namaMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="namaMK" class="form-control" placeholder="Nama Mata Kuliah"
-                            value="{{ old('namaMK') ? old('namaMK') : $mk->namaMK }}" pattern="[A-Za-z0-9]+">
+                            value="{{ old('namaMK') ? old('namaMK') : $mk->namaMK }}">
                     </div>
 
                     <div class="form-group">

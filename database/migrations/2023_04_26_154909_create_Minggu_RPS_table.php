@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('kriteriaMingguRPS',100);
             $table->text('deskripsiPembelajaran');
             $table->string('materiPembelajaran',100);
-            $table->foreign('kodeSubCPMK')->references('kodeSubCPMK')->on('SubCPMK')->onDelete('restrict');
+            $table->foreign('kodeSubCPMK')->references('kodeSubCPMK')->on('SubCPMK')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('jadwal');
             $table->integer('kuota');
             $table->char('kodeMK',7);
-            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
         });
     }

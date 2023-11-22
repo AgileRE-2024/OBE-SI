@@ -132,6 +132,5 @@ class CPLProdiController extends Controller
             $cpl = CPL_Prodi::where('kodeCPL', $cpl)->first()->delete();
             return redirect()->route('kurikulum.data.cpl_prodi')->with('success', 'CPL Prodi berhasil dihapus');
         }
-
     }
 }

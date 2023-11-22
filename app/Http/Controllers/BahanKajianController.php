@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Exports\BahanKajianExport;
 use Dompdf\Dompdf;
 use App\Models\Bahan_Kajian;
+use App\Models\Detail_BK_MK;
+use App\Models\Detail_CPLProdi_BK;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
@@ -123,8 +125,15 @@ class BahanKajianController extends Controller
 
     public function deleteBahanKajian($bk)
     {
-        $bk = Bahan_Kajian::where('kodeBK', $bk)->first();
-        $bk->delete();
-        return redirect()->route('kurikulum.data.bahan_kajian')->with('success', 'Bahan Kuliah berhasil dihapus');
+        if (Detail_CPLProdi_BK::where('kodeBK', $bk)->exists()) {
+            return redirect()->route('kurikulum.data.bahan_kajian')->with('error', 'Bahan Kajian masih berelasi dengan CPL.');
+        } elseif(Detail_BK_MK::where('kodeBK', $bk)->exists()){
+            return redirect()->route('kurikulum.data.bahan_kajian')->with('error', 'Bahan Kajian masih berelasi dengan Mata Kuliah.');
+        }else{
+            $bk = Bahan_Kajian::where('kodeBK', $bk)->first()->delete();
+            return redirect()->route('kurikulum.data.bahan_kajian')->with('success', 'Bahan Kuliah berhasil dihapus');
+        }
+
+
     }
 }

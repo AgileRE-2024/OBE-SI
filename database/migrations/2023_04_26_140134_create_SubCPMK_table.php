@@ -17,7 +17,7 @@ return new class extends Migration
             $table->char('kodeSubCPMK', 12)->primary('kodeSubCPMK');
             $table->text('deskripsiSubCPMK');
             $table->char('kodeCPMK', 10);
-            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
+            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
         });
     }

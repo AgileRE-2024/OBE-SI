@@ -21,9 +21,9 @@ return new class extends Migration
             $table->char('semesterAmbil',2);
             $table->integer('nilaiAkhir')->nullable();
             $table->timestamps();
-            $table->foreign('nim')->references('nim')->on('Mahasiswa')->onDelete('restrict');
-            $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas')->onDelete('restrict');
-            $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict');
+            $table->foreign('nim')->references('nim')->on('Mahasiswa')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
