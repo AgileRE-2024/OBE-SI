@@ -20,6 +20,9 @@ class MingguRPSController extends Controller
      */
     public function index($kodeRPS)
     {
+        // $kode_bentuk = Detail_RPS::all()
+        //     ->where('kodeRPS', $kodeRPS)
+        //     ->pluck('kodeMingguRPS');
         $minggu_rps = Minggu_RPS::where('id_rps',$kodeRPS)->orderBy('kodeMingguRPS')->get();
         return view('content.minggu_rps.minggu_rps', [
             'title' => 'Tambah Minggu RPS',
