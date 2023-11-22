@@ -24,7 +24,7 @@ class MingguRPSController extends Controller
         return view('content.minggu_rps.minggu_rps', [
             'title' => 'Tambah Minggu RPS',
             'minggu_rps_list' => $minggu_rps,
-        
+            'kodeRPS' => $kodeRPS,     
         ]);
     }
     /**
