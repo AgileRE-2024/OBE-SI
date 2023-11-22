@@ -59,8 +59,10 @@ class MingguRPSController extends Controller
      * @param  \App\Models\Minggu_RPS  $minggu_RPS
      * @return \Illuminate\Http\Response
      */
-    public function editMingguRPS($kodeMingguRPS, $kodeRPS)
+    public function editMingguRPS($kodeMingguRPS)
     {
+        $kodeRPS = substr($kodeMingguRPS, 0, 10);
+        $minggu_rps = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
         // $detail_rps = Detail_RPS::all()
         //     ->where('kodeRPS', $kodeRPS)
         //     ->pluck('kodeMingguRPS');
@@ -68,22 +70,17 @@ class MingguRPSController extends Controller
         //     ->whereIn('kodeMingguRPS', $detail_rps)
         //     ->where('kodeMingguRPS', $kodeMingguRPS)
         //     ->first();
-        $mk = Mata_Kuliah::all();
         // $rps = RPS::all();
         $subcpmk = SubCPMK::all();
         // $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
 
         return view('content.minggu_rps.edit_minggu_rps', [
             'title' => 'Edit Minggu RPS',
-            // 'minggu_rps_list' => $minggu_rps,
-            'kodeMingguRPS' => $kodeMingguRPS,
+            'minggu_rps' => $minggu_rps,
             'kodeRPS' => $kodeRPS,
             'scpmk' => $subcpmk,
-            'mk_list' => $mk,
-            // 'rps_list' => $rps,
-            'teknik_penilaian_list' => Teknik_Penilaian::all(),
-            // 'detail_rps_list' => Detail_RPS::all(),
-            // 'minggu_rps' => $minggu_rps,
+            // 'mk_list' => $mk,
+            // 'teknik_penilaian_list' => Teknik_Penilaian::all()
         ]);
     }
 
@@ -165,67 +162,54 @@ class MingguRPSController extends Controller
      * @param  \App\Models\Minggu_RPS  $minggu_RPS
      * @return \Illuminate\Http\Response
      */
-    public function updateMingguRPS(Request $request, $kodeMingguRPS, $kodeRPS)
+    public function updateMingguRPS(Request $request, $kodeMingguRPS)
     {
-        $validator = Validator::make($request->all(), [
-            'kodeMingguRPS' => 'required',
+        
+        $kodeRPS = substr($kodeMingguRPS, 0, 10);
+        // dd($request);
+
+        $request->validate([
             'kodeSubCPMK' => 'required',
-            'kodePenilaian' => 'nullable',
-            'mingguKe' => 'required',
-            'bentukPembelajaran' => 'required',
-            'indikatorMingguRPS' => 'required',
-            'kriteriaMingguRPS' => 'required',
-            'deskripsiPembelajaran' => 'required',
-            'materiPembelajaran' => 'required',
+            'bahan_kajian' => 'required',
+            'temp_bentuk' => 'required',
+            'temp_metode' => 'required',
+            'penugasan' => 'required',
+            'luring' => 'required',
+            'temp_media' => 'required',
+            'waktuPembelajaran' => 'required',
+            'pengalaman_belajar' => 'required',
+            'temp_kriteria_penilaian' => 'required',
+            'bobot_nilai' => 'required',
+            'temp_referensi' => 'required',
         ]);
 
-        if ($validator->fails()) {
-            return redirect()
-                ->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
+        // dd($request);
 
-        $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
-
-        if (!$minggu_RPS) {
-            return redirect()
-                ->back()
-                ->with('error', 'Minggu RPS tidak ditemukan');
-        }
-
-        Detail_RPS::where('kodeMingguRPS', $kodeMingguRPS)
-            ->where('kodeRPS', $request->kodeRPS)
-            ->delete();
-
-        $minggu_RPS->update([
-            'kodeMingguRPS' => $kodeMingguRPS,
-            'kodeSubCPMK' => $request->kodeSubCPMK,
-            // 'kodePenilaian' => $request->,
-            'mingguKe' => $request->mingguKe,
-            'bentukPembelajaran' => (int) $request->bentukPembelajaran,
-            'indikatorMingguRPS' => $request->indikatorMingguRPS,
-            'kriteriaMingguRPS' => $request->kriteriaMingguRPS,
-            'deskripsiPembelajaran' => $request->deskripsiPembelajaran,
-            'materiPembelajaran' => $request->materiPembelajaran,
-        ]);
-        // $detail_rps->kodePenilaian = $request->input('kodePenilaian');
-        // $detail_rps->save();
-
-        $detail_rps = [];
-        $detail_rps[] = [
-            'kodeRPS' => $kodeRPS,
-            'kodeMingguRPS' => $kodeMingguRPS,
-            'kodePenilaian' => $request->kodePenilaian,
-            // atribut tambahan lainnya di tabel pivot C
+        // Update data rps
+        $data = [
+            'kodeSubCPMK' => $request->input('kodeSubCPMK'),
+            'bahan_kajian' => $request->input('bahan_kajian'),
+            'temp_bentuk' => $request->input('temp_bentuk'),
+            'temp_metode' => $request->input('temp_metode'),
+            'penugasan' => $request->input('penugasan'),
+            'luring' => $request->input('luring'),
+            'temp_media' => $request->input('temp_media'),
+            'waktuPembelajaran' => $request->input('waktuPembelajaran'),
+            'pengalaman_belajar' => $request->input('pengalaman_belajar'),
+            'temp_kriteria_penilaian' => $request->input('temp_kriteria_penilaian'),
+            'bobot_nilai' => $request->input('bobot_nilai'),
+            'temp_referensi' => $request->input('temp_referensi'),
         ];
 
-        Detail_RPS::insert($detail_rps);
+        // dd($data);
+
+        Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->update($data);
 
         return redirect()
             ->route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS])
-            ->with('success', 'Minggu RPS berhasil diedit' . $request->kodePenilaian);
+            ->with('success', 'Minggu RPS berhasil diedit');
     }
+    
     /**
      * Remove the specified resource from storage.
      *

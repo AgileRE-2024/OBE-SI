@@ -4,78 +4,15 @@
 
     <div class="content px-4">
         <div class="content px-4">
-            <div class="card border" style="background-color: white">
-                <div class="card-body" style="font-weight:600;">
-                    <h3>Minggu Rencana Pembelajaran Semester (RPS)</h3>
-                    <h6 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Minggu RPS merupakan detail pembelajaran
-                        untuk setiap minggu dalam mata kuliah.<b style="display:inline-block;transform: scaleX(-1)"><i
-                                class="bi bi-quote"></i></b></h6>
-                </div>
-            </div>
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Edit Minggu RPS</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Edit Minggu RPS {{$minggu_rps->kodeMingguRPS}}</h6>
                 </div>
                 <div class="card-body" style="width: auto">
                     <div class="col-sm-8">
-                        <form method="post" action="{{ route('edit_rps.update_minggu_rps', ['kodeMingguRPS' => $kodeMingguRPS, 'kodeRPS'=>$kodeRPS]) }}">
+                        <form method="post" action="{{ route('edit_rps.update_minggu_rps', ['kodeMingguRPS' => $minggu_rps->kodeMingguRPS]) }}">
                             @csrf
                             @method('put')
-                            {{-- @php
-                                $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
-                                $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
-                                $list_cpmk = collect();
-                                $uniqueIds = [];
-                                
-                                foreach ($mk->CPMK as $cpmk) {
-                                    $kodeCPMK = $cpmk->kodeCPMK;
-                                    $deskripsiCPMK = $cpmk->deskripsiCPMK;
-                                
-                                    if (!in_array($kodeCPMK, $uniqueIds)) {
-                                        $uniqueIds[] = $kodeCPMK;
-                                        $list_cpmk->push([
-                                            'kodeCPMK' => $kodeCPMK,
-                                            'deskripsiCPMK' => $deskripsiCPMK,
-                                        ]);
-                                    }
-                                }
-                                $list_kodeCPMK = $list_cpmk->pluck('kodeCPMK');
-                            @endphp --}}
-
-                            <div class="form-group">
-                                <label>Kode Minggu RPS</label>
-                                @error('kodeMingguRPS')
-                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
-                                @enderror
-                                {{-- <input type="hidden" name="kodeMingguRPS" class="form-control"
-                                    placeholder="Kode Minggu RPS" value="{{ old('kodeMingguRPS') ? old('kodeMingguRPS') : $minggu_rps->kodeMingguRPS }}"> --}}
-                                    <input type="hidden" name="kodeMingguRPS" class="form-control"
-                                    placeholder="Kode Minggu RPS" value="{{ $kodeMingguRPS }}">
-                            </div>
-
-                            {{-- @php
-                                $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
-                                $mk = $mk_list->where('kodeMK',$rps->kodeMK)->first();
-                                $list_cpmk = collect();
-                                $uniqueIds = [];
-                                
-                                foreach ($mk->CPMK as $cpmk) {
-                                    $kodeCPMK = $cpmk->kodeCPMK;
-                                    $deskripsiCPMK = $cpmk->deskripsiCPMK;
-                                
-                                    if (!in_array($kodeCPMK, $uniqueIds)) {
-                                        $uniqueIds[] = $kodeCPMK;
-                                        $list_cpmk->push([
-                                            'kodeCPMK' => $kodeCPMK,
-                                            'deskripsiCPMK' => $deskripsiCPMK,
-                                        ]);
-                                    }
-                                }
-                                $list_kodeCPMK = $list_cpmk->pluck('kodeCPMK');
-                                $options=$scpmk->whereIn('kodeCPMK', $list_kodeCPMK)->pluck('kodeSubCPMK');
-                                $subcpmk=$scpmk->whereIn('kodeCPMK', $list_kodeCPMK);
-                                $detail=$detail_rps_list->where('kodeRPS', $rps->kodeRPS)->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first();
-                            @endphp --}}
 
                             <div class="form-group">
                                 <label>Sub CPMK</label>
@@ -85,18 +22,18 @@
                                 <select name="kodeSubCPMK" id='kodeSubCPMK' class="form-select">
                                     <option value="">-- Pilih Sub CMPK --</option>
                                     @foreach ($scpmk as $item)
-                                        {{-- <option value="{{ $item }}" {{ $item ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>{{ $item }} - {{ $subcpmk[$loop->index]->deskripsiSubCPMK }}</option> --}}
-                                        <option value="{{ $item }}" {{ $item ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>{{ $item }} - {{ $subcpmk[$loop->index]->deskripsiSubCPMK }}</option>
+                                        <option value="{{ $item->kodeSubCPMK }}" {{ $item ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>{{ $scpmk[$loop->index]->kodeSubCPMK }} {{ $scpmk[$loop->index]->deskripsiSubCPMK }}</option>
                                     @endforeach
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label>Minggu RPS (Contoh. 1)</label>
-                                @error('mingguKe')
+                                <label>Bahan Kajian</label>
+                                @error('bahan_kajian')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <input type="text" name="mingguKe" class="form-control" placeholder="Minggu RPS" value="{{ $minggu_rps->mingguKe }}">
+                                <textarea  rows="3" name="bahan_kajian" class="form-control"
+                                    placeholder="Bahan Kajian" value="{{ $minggu_rps->bahan_kajian }}"></textarea>
                             </div>
 
                             <div class="form-group">
@@ -104,73 +41,124 @@
                                 @error('bentukPembelajaran')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <select name="bentukPembelajaran" id='bentukPembelajaran' class="form-select">
+                                <select name="temp_bentuk" id='bentukPembelajaran' class="form-select">
                                     <option value="" selected disabled>-- Pilih Bentuk Pembelajaran --</option>
                                     @php
-                                        $options=['1','0'];
-                                        $opsi=['Luring','Daring']
+                                        $options=['Kuliah, responsi, tutorial', 'Praktikum', 'Seminar']
                                     @endphp
                                     @foreach ($options as $item)
-                                        {{-- @foreach ($opsi as $sc) --}}
-                                        <option value="{{ $item }}" {{ $item ==  $minggu_rps->bentukPembelajaran ? 'selected' : ''}}>{{ $opsi[$loop->index] }}</option>
-                                        {{-- @endforeach --}}
+                                        <option value="{{ $item }}" {{ $item ==  $minggu_rps->bentukPembelajaran ? 'selected' : ''}}>{{ $options[$loop->index] }}</option>
                                     @endforeach
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Indikator Minggu RPS</label>
-                                @error('indikatorMingguRPS')
-                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
-                                @enderror
-                                <textarea  rows="3" name="indikatorMingguRPS" class="form-control" 
-                                placeholder="Indikator Minggu RPS" value="{{ $minggu_rps->indikatorMingguRPS }}">{{ old('indikatorPembelajaran') ? old('indikatorPembelajaran') : $minggu_rps->indikatorMingguRPS }}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Kriteria Minggu RPS</label>
-                                @error('kriteriaMingguRPS')
-                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
-                                @enderror
-                                <input type="text" name="kriteriaMingguRPS" class="form-control"
-                                    placeholder="Kriteria Minggu RPS" value="{{ $minggu_rps->kriteriaMingguRPS }}">
-                            </div>
-                            <div class="form-group">
-                                <label>Deskripsi Pembelajaran</label>
-                                @error('deskripsiPembelajaran')
-                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
-                                @enderror
-                                <textarea  rows="3"  name="deskripsiPembelajaran" class="form-control"
-                                    placeholder="Deskripsi Pembelajaran" value="{{ $minggu_rps->deskripsiPembelajaran }}">{{ old('deskripsiPembelajaran') ? old('deskripsiPembelajaran') : $minggu_rps->deskripsiPembelajaran }}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Materi Pembelajaran</label>
-                                @error('materiPembelajaran')
-                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
-                                @enderror
-                                <input type="text" name="materiPembelajaran" class="form-control"
-                                    placeholder="Materi Pembelajaran" value="{{ $minggu_rps->materiPembelajaran }}">
                             </div>
 
                             <div class="form-group">
-                                <label>Teknik Penilaian (Jika ada)</label>
-                                <select name="kodePenilaian" id='kodePenilaian' class="form-select">
-                                    <option value=''>-- Pilih Teknik Penilaian --</option>
-                                    {{-- @if ($detail->kodePenilaian)
-                                    <option value='null'>AKU</option>
-                                        
-                                    @endif --}}
-                                    @foreach ($teknik_penilaian_list->whereIn('kodeRPS', $rps->kodeRPS) as $item)
-                                        {{-- @foreach ($subcpmk as $sc) --}}
-                                        <option value="{{ $item->kodePenilaian }}" {{ $item->kodePenilaian ==  ($detail->kodePenilaian ?? '-') ? 'selected' : ''}}>{{ $item->kodePenilaian }} - {{ $item->teknikPenilaian }}</option>
-                                        {{-- @endforeach --}}
+                                <label>Metode Pembelajaran</label>
+                                @error('bentukPembelajaran')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <select name="temp_metode" id='bentukPembelajaran' class="form-select">
+                                    <option value="" selected disabled>-- Pilih Metode Pembelajaran --</option>
+                                    @php
+                                        $options=['Problem Based Learning', 'Project Based Learning', 'Case Based Learning']
+                                    @endphp
+                                    @foreach ($options as $item)
+                                        <option value="{{ $item }}" {{ $item ==  $minggu_rps->bentukPembelajaran ? 'selected' : ''}}>{{ $options[$loop->index] }}</option>
                                     @endforeach
-                                    {{-- @foreach ($teknik_penilaian_list->whereIn('kodeRPS', $rps->kodeRPS) as $item)
-                                        @if ($item->kodePenilaian === $minggu_rps->kodePenilaian)
-                                            <option value="{{ $item->kodePenilaian }}" {{ $item ==  $minggu_rps->kodePenilaian ? 'selected' : ''}}>{{ $item->kodePenilaian }} - {{ $item->teknikPenilaian }}</option>
-                                        @else
-                                            <option value="{{ $item->kodePenilaian }}">{{ $item->kodePenilaian }} - {{ $item->teknikPenilaian }}</option>
-                                        @endif
-                                    @endforeach --}}
                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Penugasan</label>
+                                @error('penugasan')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <textarea  rows="3" name="penugasan" class="form-control"
+                                    placeholder="Penugasan" value="{{ $minggu_rps->penugasan }}"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Cara Pembelajaran</label>
+                                @error('luring')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <select name="luring" id='luring' class="form-select">
+                                    <option value="" selected disabled>-- Pilih Cara Pembelajaran --</option>
+                                    @php
+                                        $options=[1, 0];
+                                        $opsi=['Luring','Daring']
+                                    @endphp
+                                    @foreach ($options as $item)
+                                        <option value="{{ $item }}" {{ $item ==  $minggu_rps->luring ? 'selected' : ''}}>{{ $opsi[$loop->index] }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Media Pembelajaran</label>
+                                @error('temp_media')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <select name="temp_media" id='temp_media' class="form-select">
+                                    <option value="" selected disabled>-- Pilih Media Pembelajaran --</option>
+                                    @php
+                                        $options=['LMS', 'PPT', 'Studi Kasus']
+                                    @endphp
+                                    @foreach ($options as $item)
+                                        <option value="{{ $item }}" {{ $item ==  $minggu_rps->temp_media ? 'selected' : ''}}>{{ $options[$loop->index] }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Waktu Pembelajaran</label>
+                                @error('waktuPembelajaran')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <textarea  rows="3" name="waktuPembelajaran" class="form-control" 
+                                placeholder="Waktu Pembelajaran" value="{{ $minggu_rps->waktuPembelajaran }}">{{ old('indikatorPembelajaran') ? old('indikatorPembelajaran') : $minggu_rps->waktuPembelajaran }}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Pengalaman Belajar</label>
+                                @error('pengalaman_belajar')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <textarea  rows="3" name="pengalaman_belajar" class="form-control" 
+                                placeholder="Pengalaman Belajar" value="{{ $minggu_rps->pengalaman_belajar }}">{{ old('indikatorPembelajaran') ? old('indikatorPembelajaran') : $minggu_rps->pengalaman_belajar }}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Kriteria Penilaian</label>
+                                @error('temp_kriteria_penilaian')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <select name="temp_kriteria_penilaian" id='temp_kriteria_penilaian' class="form-select">
+                                    <option value="" selected disabled>-- Pilih Kriteria Penilaian --</option>
+                                    @php
+                                        $options=['Rubrik Holistik', 'Rubrik Analitik', 'Rubrik Skala Persepsi', 'CBT (Computer Based Test)']
+                                    @endphp
+                                    @foreach ($options as $item)
+                                        <option value="{{ $item }}" {{ $item ==  $minggu_rps->temp_kriteria_penilaian ? 'selected' : ''}}>{{ $options[$loop->index] }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Bobot Nilai</label>
+                                @error('bobot_nilai')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <input type="text" name="bobot_nilai" class="form-control"
+                                    placeholder="Bobot Nilai" value="{{ $minggu_rps->bobot_nilai }}">
+                            </div>
+                            <div class="form-group">
+                                <label>Referensi</label>
+                                @error('temp_referensi')
+                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                @enderror
+                                <textarea  rows="3"  name="temp_referensi" class="form-control"
+                                    placeholder="Referensi" value="{{ $minggu_rps->temp_referensi }}">{{ old('temp_referensi') ? old('temp_referensi') : $minggu_rps->temp_referensi }}</textarea>
                             </div>
 
                             <div class="form-group pt-4">
