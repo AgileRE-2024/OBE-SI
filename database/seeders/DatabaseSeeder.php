@@ -137,6 +137,15 @@ class DatabaseSeeder extends Seeder
             'role' => 1,
             'status' => "Aktif Bekerja"
         ]);
+        User::create([
+            'nip' => '123',
+            'jabatanDosen' => 'Admin',
+            'namaDosen' => 'Dimas',
+            'password' => '123',
+            'email' => 'dimasadmin@gmail.com',
+            'role' => 2,
+            'status' => "Aktif Bekerja"
+        ]);
 
         kriteria_penilaian::create([
             'nama_kriteria_penilaians' => 'Kriteria 1',

@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::il3Y5PlPVmAUm5hZ',
+            '_route' => 'generated::tOlyl0pFKSlhyG97',
           ),
           1 => NULL,
           2 => 
@@ -122,7 +122,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::AXQ37bW86M6XVSiM',
+            '_route' => 'generated::iYZoWwNimhNGuDsc',
           ),
           1 => NULL,
           2 => 
@@ -149,65 +149,6 @@ app('router')->setCompiledRoutes(
           array (
             'GET' => 0,
             'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/managementuser/list' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'listuser',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/register' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'register',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/storeUser' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'storeUser',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
           ),
           3 => NULL,
           4 => false,
@@ -296,13 +237,72 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::VBmJaEK7lV5gYPve',
+            '_route' => 'generated::W0O73hUNeDPMInfv',
           ),
           1 => NULL,
           2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/managementuser/list' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'listuser',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/register' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'register',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/storeUser' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'storeUser',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
           ),
           3 => NULL,
           4 => false,
@@ -357,6 +357,26 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'profiladmin',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/dashboard/dosen_kurikulum' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'profildosen_admin',
           ),
           1 => NULL,
           2 => 
@@ -1578,7 +1598,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::VtTht5vML2hpmOeG',
+            '_route' => 'generated::VlF1WRHVlsfvIbZf',
           ),
           1 => NULL,
           2 => 
@@ -1689,7 +1709,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/management/(?|edit/([^/]++)(?|(*:137))|delete/([^/]++)(*:161))|/dashboard/(?|kurikulum/(?|pemetaan/(?|cpl\\-(?|sndikti\\-cpl\\-prodi/export/([^/]++)(*:252)|pl/export/([^/]++)(*:278)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:315)|edit_cpmk/([^/]++)(?|(*:344))))|mk\\-cpmk\\-subcpmk/export/([^/]++)(*:388))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:437))|CP(?|L(?|Dikti/([^/]++)(?|(*:472))|Prodi/([^/]++)(?|(*:498)))|MK/([^/]++)(?|(*:522)))|BahanKajian/([^/]++)(?|(*:555))|MataKuliah/([^/]++)(?|(*:586))|SubCPMK/([^/]++)(?|(*:614)))|delete(?|ProfilLulusan/([^/]++)(*:655)|CP(?|L(?|Dikti/([^/]++)(*:686)|Prodi/([^/]++)(*:708))|MK/([^/]++)(*:728))|BahanKajian/([^/]++)(*:757)|MataKuliah/([^/]++)(*:784)|SubCPMK/([^/]++)(*:808))|profilLulusan/export/([^/]++)(*:846)|cp(?|l_(?|dikti/export/([^/]++)(*:885)|prodi/export/([^/]++)(*:914))|mk/export/([^/]++)(*:941))|bahan_kajian/export/([^/]++)(*:978)|mata_kuliah/export/([^/]++)(*:1013)|sub_cpmk/export/([^/]++)(*:1046)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:1098)|export/([^/]++)/([^/]++)(*:1131))|([^/]++)(*:1149)|export/([^/]++)/([^/]++)(*:1182))|rps/e(?|xport/([^/]++)/([^/]++)(*:1223)|dit/(?|teknik_p(?|enilaian/([^/]++)(*:1267)|df/export/([^/]++)(*:1294))|add(?|TeknikPenilaian/([^/]++)(?|(*:1337))|_(?|minggu_rps/([^/]++)(?|(*:1373))|peran_dosen/([^/]++)(?|(*:1406))))|edit(?|TeknikPenilaian/([^/]++)(?|(*:1452))|_(?|minggu_rps/([^/]++)/([^/]++)(?|(*:1497))|peran_dosen/([^/]++)/([^/]++)/([^/]++)(?|(*:1548))))|delete(?|TeknikPenilaian/([^/]++)(*:1593)|_(?|minggu_rps/([^/]++)/([^/]++)(*:1634)|peran_dosen/([^/]++)/([^/]++)/([^/]++)(*:1681)))|minggu_rps/([^/]++)(*:1711)|peran_dosen/([^/]++)(*:1740)|rps/([^/]++)(*:1761))))|/u(?|bahpw/([^/]++)(*:1792)|pdateprofile/([^/]++)(*:1822))|/reset\\-password/([^/]++)(*:1857))/?$}sDu',
+      0 => '{^(?|/_dusk/(?|log(?|in/([^/]++)(?:/([^/]++))?(*:48)|out(?:/([^/]++))?(*:72))|user(?:/([^/]++))?(*:98))|/management/(?|edit/([^/]++)(?|(*:137))|delete/([^/]++)(*:161))|/dashboard/(?|kurikulum/(?|pemetaan/(?|cpl\\-(?|sndikti\\-cpl\\-prodi/export/([^/]++)(*:252)|pl/export/([^/]++)(*:278)|cpmk\\-mk/(?|add_cpmk/([^/]++)(*:315)|edit_cpmk/([^/]++)(?|(*:344))))|mk\\-cpmk\\-subcpmk/export/([^/]++)(*:388))|data/(?|edit(?|ProfilLulusan/([^/]++)(?|(*:437))|CP(?|L(?|Dikti/([^/]++)(?|(*:472))|Prodi/([^/]++)(?|(*:498)))|MK/([^/]++)(?|(*:522)))|BahanKajian/([^/]++)(?|(*:555))|MataKuliah/([^/]++)(?|(*:586))|SubCPMK/([^/]++)(?|(*:614)))|delete(?|ProfilLulusan/([^/]++)(*:655)|CP(?|L(?|Dikti/([^/]++)(*:686)|Prodi/([^/]++)(*:708))|MK/([^/]++)(*:728))|BahanKajian/([^/]++)(*:757)|MataKuliah/([^/]++)(*:784)|SubCPMK/([^/]++)(*:808))|profilLulusan/export/([^/]++)(*:846)|cp(?|l_(?|dikti/export/([^/]++)(*:885)|prodi/export/([^/]++)(*:914))|mk/export/([^/]++)(*:941))|bahan_kajian/export/([^/]++)(*:978)|mata_kuliah/export/([^/]++)(*:1013)|sub_cpmk/export/([^/]++)(*:1046)))|penilaian/(?|tahap\\-penilaian/(?|([^/]++)(*:1098)|export/([^/]++)/([^/]++)(*:1131))|([^/]++)(*:1149)|export/([^/]++)/([^/]++)(*:1182))|rps/e(?|xport/([^/]++)/([^/]++)(*:1223)|dit/(?|teknik_p(?|enilaian/([^/]++)(*:1267)|df/export/([^/]++)(*:1294))|add(?|TeknikPenilaian/([^/]++)(?|(*:1337))|_(?|minggu_rps/([^/]++)(?|(*:1373))|peran_dosen/([^/]++)(?|(*:1406))))|edit(?|TeknikPenilaian/([^/]++)(?|(*:1452))|_(?|minggu_rps/([^/]++)/([^/]++)(?|(*:1497))|peran_dosen/([^/]++)/([^/]++)/([^/]++)(?|(*:1548))))|delete(?|TeknikPenilaian/([^/]++)(*:1593)|_(?|minggu_rps/([^/]++)/([^/]++)(*:1634)|peran_dosen/([^/]++)/([^/]++)/([^/]++)(*:1681)))|m(?|inggu_rps/([^/]++)(*:1714)|ata_kuliah/([^/]++)(*:1742))|peran_dosen/([^/]++)(*:1772)|rps/([^/]++)(*:1793))))|/u(?|bahpw/([^/]++)(*:1824)|pdateprofile/([^/]++)(*:1854))|/reset\\-password/([^/]++)(*:1889))/?$}sDu',
     ),
     3 => 
     array (
@@ -3074,7 +3094,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1711 => 
+      1714 => 
       array (
         0 => 
         array (
@@ -3097,7 +3117,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1740 => 
+      1742 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'edit_rps.mata_kuliah',
+          ),
+          1 => 
+          array (
+            0 => 'kodeRPS',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1772 => 
       array (
         0 => 
         array (
@@ -3120,7 +3163,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1761 => 
+      1793 => 
       array (
         0 => 
         array (
@@ -3143,7 +3186,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1792 => 
+      1824 => 
       array (
         0 => 
         array (
@@ -3166,7 +3209,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1822 => 
+      1854 => 
       array (
         0 => 
         array (
@@ -3188,7 +3231,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1857 => 
+      1889 => 
       array (
         0 => 
         array (
@@ -3474,7 +3517,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::il3Y5PlPVmAUm5hZ' => 
+    'generated::tOlyl0pFKSlhyG97' => 
     array (
       'methods' => 
       array (
@@ -3491,13 +3534,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:297:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001289d73f000000003f6db06c";}";s:4:"hash";s:44:"R0PgilEvC12lAhOKvii8pyxksUI9zTwhdAdOIOztVAE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47c4000000000576c6001";}";s:4:"hash";s:44:"9k03dEC8whU4CvOkkL9bQX1dzcWTbL9tProWqDRd60c=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::il3Y5PlPVmAUm5hZ',
+        'as' => 'generated::tOlyl0pFKSlhyG97',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3513,7 +3556,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::AXQ37bW86M6XVSiM' => 
+    'generated::iYZoWwNimhNGuDsc' => 
     array (
       'methods' => 
       array (
@@ -3527,15 +3570,15 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:301:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:83:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:303:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:85:"function () {
     return \\view(\'content.login.login\', ["tittle" => "Login OBE"]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001289d721000000003f6db06c";}";s:4:"hash";s:44:"LB62gzKKKh61HRCoBi3+Arqva0Y1Z0Yh/B2ckGjT7e4=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47c4200000000576c6001";}";s:4:"hash";s:44:"oNVYvd+VqTMMrmY58Ku1Xi4PD4Aa/KCzivwCQQO3NmE=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::AXQ37bW86M6XVSiM',
+        'as' => 'generated::iYZoWwNimhNGuDsc',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3573,225 +3616,6 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'login',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'listuser' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'managementuser/list',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\ManagementUser@index',
-        'controller' => 'App\\Http\\Controllers\\ManagementUser@index',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'listuser',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'register' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'register',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\ManagementUser@create',
-        'controller' => 'App\\Http\\Controllers\\ManagementUser@create',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'register',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'storeUser' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'storeUser',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\ManagementUser@store',
-        'controller' => 'App\\Http\\Controllers\\ManagementUser@store',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'storeUser',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'editUser' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'management/edit/{nip}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\ManagementUser@edit',
-        'controller' => 'App\\Http\\Controllers\\ManagementUser@edit',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'editUser',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'updateUser' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'PUT',
-      ),
-      'uri' => 'management/edit/{nip}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\ManagementUser@update',
-        'controller' => 'App\\Http\\Controllers\\ManagementUser@update',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'updateUser',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'deleteUser' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'DELETE',
-      ),
-      'uri' => 'management/delete/{nip}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\ManagementUser@destroy',
-        'controller' => 'App\\Http\\Controllers\\ManagementUser@destroy',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'deleteUser',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3953,7 +3777,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::VBmJaEK7lV5gYPve' => 
+    'generated::W0O73hUNeDPMInfv' => 
     array (
       'methods' => 
       array (
@@ -3967,7 +3791,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1110:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:891:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1000:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:781:"function () {
     // $anggota = CPL_SN_Dikti::first();
     return \\view(\'test\', [
         \'CPL_SN_Dikti\' => \\App\\Models\\CPL_SN_Dikti::first(),
@@ -3975,23 +3799,246 @@ app('router')->setCompiledRoutes(
         \'Bahan_Kajian\' => \\App\\Models\\Bahan_Kajian::first(),
         \'Mata_Kuliah\' => \\App\\Models\\Mata_Kuliah::first(),
         \'RPS\' => \\App\\Models\\RPS::first(),
-        \'Detail_Peran_Dosen\' => \\App\\Models\\Detail_Peran_Dosen::all(),
         \'CPMK\' => \\App\\Models\\CPMK::first(),
         \'SubCPMK\' => \\App\\Models\\SubCPMK::first(),
         \'Minggu_RPS\' => \\App\\Models\\Minggu_RPS::first(),
-        \'Detail_RPS\' => \\App\\Models\\Detail_RPS::all(),
         \'Mahasiswa\' => \\App\\Models\\Mahasiswa::first(),
         \'Kelas\' => \\App\\Models\\Kelas::first(),
         \'Semua_Kelas\' => \\App\\Models\\Kelas::all(),
         \'Detail_Nilai_Mahasiswa\' => \\App\\Models\\Detail_Nilai_Mahasiswa::all(),
     ]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001289d72c000000003f6db06c";}";s:4:"hash";s:44:"8vN2UyUu5RMHw+tPuTmL+wmgK2rlY6gDjU61D2tElf4=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47cb900000000576c6001";}";s:4:"hash";s:44:"NCOx3e8yLAC28QkDjfUCqmYcDGRsoVhI9MxY/RoOmis=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::VBmJaEK7lV5gYPve',
+        'as' => 'generated::W0O73hUNeDPMInfv',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'listuser' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'managementuser/list',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ManagementUser@index',
+        'controller' => 'App\\Http\\Controllers\\ManagementUser@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'listuser',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'register' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'register',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ManagementUser@create',
+        'controller' => 'App\\Http\\Controllers\\ManagementUser@create',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'register',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'storeUser' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'storeUser',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ManagementUser@store',
+        'controller' => 'App\\Http\\Controllers\\ManagementUser@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'storeUser',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'editUser' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'management/edit/{nip}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ManagementUser@edit',
+        'controller' => 'App\\Http\\Controllers\\ManagementUser@edit',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'editUser',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'updateUser' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'management/edit/{nip}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ManagementUser@update',
+        'controller' => 'App\\Http\\Controllers\\ManagementUser@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'updateUser',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'deleteUser' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'management/delete/{nip}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:admin',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ManagementUser@destroy',
+        'controller' => 'App\\Http\\Controllers\\ManagementUser@destroy',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'deleteUser',
       ),
       'fallback' => false,
       'defaults' => 
@@ -4121,6 +4168,44 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'profildosen_admin' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/dosen_kurikulum',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen_kurikulum',
+        ),
+        'uses' => 'App\\Http\\Controllers\\LoginController@myprofile',
+        'controller' => 'App\\Http\\Controllers\\LoginController@myprofile',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'profildosen_admin',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'kurikulum.pemetaan.update_pemetaan_bk_mk' => 
     array (
       'methods' => 
@@ -4133,7 +4218,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BKMKController@update',
         'controller' => 'App\\Http\\Controllers\\BKMKController@update',
@@ -4170,7 +4255,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLBKController@update',
         'controller' => 'App\\Http\\Controllers\\CPLBKController@update',
@@ -4207,7 +4292,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SusunanMKController@update',
         'controller' => 'App\\Http\\Controllers\\SusunanMKController@update',
@@ -4244,7 +4329,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@update',
         'controller' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@update',
@@ -4281,7 +4366,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanPlCplController@update',
         'controller' => 'App\\Http\\Controllers\\PemetaanPlCplController@update',
@@ -4319,7 +4404,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BKMKController@index',
         'controller' => 'App\\Http\\Controllers\\BKMKController@index',
@@ -4357,7 +4442,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BKMKController@exportExcel',
         'controller' => 'App\\Http\\Controllers\\BKMKController@exportExcel',
@@ -4395,7 +4480,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BKMKController@exportPdf',
         'controller' => 'App\\Http\\Controllers\\BKMKController@exportPdf',
@@ -4433,7 +4518,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLBKController@index',
         'controller' => 'App\\Http\\Controllers\\CPLBKController@index',
@@ -4471,7 +4556,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanPDF',
         'controller' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanPDF',
@@ -4509,7 +4594,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanExcel',
         'controller' => 'App\\Http\\Controllers\\CPLBKController@cetakLaporanExcel',
@@ -4547,7 +4632,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@index',
         'controller' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@index',
@@ -4585,7 +4670,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportPdf',
         'controller' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportPdf',
@@ -4623,7 +4708,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportExcel',
         'controller' => 'App\\Http\\Controllers\\PemetaanCPLBKMK@exportExcel',
@@ -4661,7 +4746,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SusunanMKController@index',
         'controller' => 'App\\Http\\Controllers\\SusunanMKController@index',
@@ -4699,7 +4784,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SusunanMKController@exportToPDF',
         'controller' => 'App\\Http\\Controllers\\SusunanMKController@exportToPDF',
@@ -4737,7 +4822,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SusunanMKController@exportToExcel',
         'controller' => 'App\\Http\\Controllers\\SusunanMKController@exportToExcel',
@@ -4775,7 +4860,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\OrganisasiMKController@index',
         'controller' => 'App\\Http\\Controllers\\OrganisasiMKController@index',
@@ -4813,7 +4898,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToPDF',
         'controller' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToPDF',
@@ -4851,7 +4936,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToExcel',
         'controller' => 'App\\Http\\Controllers\\OrganisasiMKController@exportToExcel',
@@ -4889,7 +4974,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@index',
         'controller' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@index',
@@ -4927,7 +5012,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@cetak_pdf',
         'controller' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@cetak_pdf',
@@ -4965,7 +5050,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@table',
         'controller' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@table',
@@ -5003,7 +5088,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@export',
         'controller' => 'App\\Http\\Controllers\\PemetaanCplDiktiCplProdiController@export',
@@ -5041,7 +5126,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLMKController@index',
         'controller' => 'App\\Http\\Controllers\\CPLMKController@index',
@@ -5079,7 +5164,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanPDF',
         'controller' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanPDF',
@@ -5117,7 +5202,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanExcel',
         'controller' => 'App\\Http\\Controllers\\CPLMKController@cetakLaporanExcel',
@@ -5155,7 +5240,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanPlCplController@index',
         'controller' => 'App\\Http\\Controllers\\PemetaanPlCplController@index',
@@ -5193,7 +5278,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanPlCplController@export',
         'controller' => 'App\\Http\\Controllers\\PemetaanPlCplController@export',
@@ -5231,7 +5316,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.add_cpmk',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@create',
@@ -5268,7 +5353,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.store',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@store',
@@ -5306,7 +5391,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.edit_cpmk',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@edit',
@@ -5343,7 +5428,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.cpmk.update',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@update',
@@ -5381,7 +5466,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.index',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@index',
@@ -5419,7 +5504,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.export',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@cetakpdf',
@@ -5457,7 +5542,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.export-excel',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@exportExcel',
@@ -5495,7 +5580,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.matrix',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@matrix',
@@ -5533,7 +5618,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.exportmatrixpdf',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@matrixcetakpdf',
@@ -5571,7 +5656,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'as' => 'kurikulum.pemetaan.cpl_cpmk_mk.export-excelmatrix',
         'uses' => '\\App\\Http\\Controllers\\CPMKController@exportExcelmatrix',
@@ -5609,7 +5694,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanMkCpmkSubcpmk@index',
         'controller' => 'App\\Http\\Controllers\\PemetaanMkCpmkSubcpmk@index',
@@ -5647,7 +5732,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\PemetaanMkCpmkSubcpmk@export',
         'controller' => 'App\\Http\\Controllers\\PemetaanMkCpmkSubcpmk@export',
@@ -5722,7 +5807,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\ProfilLulusanController@addProfilLulusan',
         'controller' => 'App\\Http\\Controllers\\ProfilLulusanController@addProfilLulusan',
@@ -5759,7 +5844,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\ProfilLulusanController@storeProfilLulusan',
         'controller' => 'App\\Http\\Controllers\\ProfilLulusanController@storeProfilLulusan',
@@ -5797,7 +5882,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\ProfilLulusanController@edit',
         'controller' => 'App\\Http\\Controllers\\ProfilLulusanController@edit',
@@ -5834,7 +5919,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\ProfilLulusanController@update',
         'controller' => 'App\\Http\\Controllers\\ProfilLulusanController@update',
@@ -5872,7 +5957,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\ProfilLulusanController@delete',
         'controller' => 'App\\Http\\Controllers\\ProfilLulusanController@delete',
@@ -5910,7 +5995,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLDiktiController@addCPLDikti',
         'controller' => 'App\\Http\\Controllers\\CPLDiktiController@addCPLDikti',
@@ -5947,7 +6032,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLDiktiController@storeCPLDikti',
         'controller' => 'App\\Http\\Controllers\\CPLDiktiController@storeCPLDikti',
@@ -5985,7 +6070,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLDiktiController@edit',
         'controller' => 'App\\Http\\Controllers\\CPLDiktiController@edit',
@@ -6022,7 +6107,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLDiktiController@update',
         'controller' => 'App\\Http\\Controllers\\CPLDiktiController@update',
@@ -6060,7 +6145,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLDiktiController@delete',
         'controller' => 'App\\Http\\Controllers\\CPLDiktiController@delete',
@@ -6098,7 +6183,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLProdiController@addCPLProdi',
         'controller' => 'App\\Http\\Controllers\\CPLProdiController@addCPLProdi',
@@ -6135,7 +6220,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLProdiController@storeCPLProdi',
         'controller' => 'App\\Http\\Controllers\\CPLProdiController@storeCPLProdi',
@@ -6173,7 +6258,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLProdiController@edit',
         'controller' => 'App\\Http\\Controllers\\CPLProdiController@edit',
@@ -6210,7 +6295,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLProdiController@updateCPLProdi',
         'controller' => 'App\\Http\\Controllers\\CPLProdiController@updateCPLProdi',
@@ -6248,7 +6333,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLProdiController@deleteCPLProdi',
         'controller' => 'App\\Http\\Controllers\\CPLProdiController@deleteCPLProdi',
@@ -6286,7 +6371,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BahanKajianController@addBahanKajian',
         'controller' => 'App\\Http\\Controllers\\BahanKajianController@addBahanKajian',
@@ -6323,7 +6408,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BahanKajianController@storeBahanKajian',
         'controller' => 'App\\Http\\Controllers\\BahanKajianController@storeBahanKajian',
@@ -6361,7 +6446,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BahanKajianController@editBahanKajian',
         'controller' => 'App\\Http\\Controllers\\BahanKajianController@editBahanKajian',
@@ -6398,7 +6483,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BahanKajianController@updateBahanKajian',
         'controller' => 'App\\Http\\Controllers\\BahanKajianController@updateBahanKajian',
@@ -6436,7 +6521,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BahanKajianController@deleteBahanKajian',
         'controller' => 'App\\Http\\Controllers\\BahanKajianController@deleteBahanKajian',
@@ -6474,7 +6559,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MataKuliahController@addMataKuliah',
         'controller' => 'App\\Http\\Controllers\\MataKuliahController@addMataKuliah',
@@ -6511,7 +6596,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MataKuliahController@storeMataKuliah',
         'controller' => 'App\\Http\\Controllers\\MataKuliahController@storeMataKuliah',
@@ -6549,7 +6634,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MataKuliahController@editMataKuliah',
         'controller' => 'App\\Http\\Controllers\\MataKuliahController@editMataKuliah',
@@ -6586,7 +6671,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MataKuliahController@updateMataKuliah',
         'controller' => 'App\\Http\\Controllers\\MataKuliahController@updateMataKuliah',
@@ -6624,7 +6709,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MataKuliahController@deleteMataKuliah',
         'controller' => 'App\\Http\\Controllers\\MataKuliahController@deleteMataKuliah',
@@ -6662,7 +6747,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@create',
         'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@create',
@@ -6699,7 +6784,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@store',
         'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@store',
@@ -6737,7 +6822,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@edit',
         'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@edit',
@@ -6774,7 +6859,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@update',
         'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@update',
@@ -6812,7 +6897,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@destroy',
         'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@destroy',
@@ -6850,7 +6935,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SubCPMKController@addSubCPMK',
         'controller' => 'App\\Http\\Controllers\\SubCPMKController@addSubCPMK',
@@ -6887,7 +6972,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SubCPMKController@storeSubCPMK',
         'controller' => 'App\\Http\\Controllers\\SubCPMKController@storeSubCPMK',
@@ -6925,7 +7010,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SubCPMKController@editSubCPMK',
         'controller' => 'App\\Http\\Controllers\\SubCPMKController@editSubCPMK',
@@ -6962,7 +7047,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SubCPMKController@updateSubCPMK',
         'controller' => 'App\\Http\\Controllers\\SubCPMKController@updateSubCPMK',
@@ -7000,7 +7085,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:kurikulum',
+          1 => 'role:kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SubCPMKController@deleteSubCPMK',
         'controller' => 'App\\Http\\Controllers\\SubCPMKController@deleteSubCPMK',
@@ -7038,7 +7123,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\ProfilLulusanController@index',
         'controller' => 'App\\Http\\Controllers\\ProfilLulusanController@index',
@@ -7076,7 +7161,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\ProfilLulusanController@export',
         'controller' => 'App\\Http\\Controllers\\ProfilLulusanController@export',
@@ -7114,7 +7199,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLDiktiController@index',
         'controller' => 'App\\Http\\Controllers\\CPLDiktiController@index',
@@ -7152,7 +7237,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLDiktiController@export',
         'controller' => 'App\\Http\\Controllers\\CPLDiktiController@export',
@@ -7190,7 +7275,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLProdiController@index',
         'controller' => 'App\\Http\\Controllers\\CPLProdiController@index',
@@ -7228,7 +7313,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CPLProdiController@export',
         'controller' => 'App\\Http\\Controllers\\CPLProdiController@export',
@@ -7266,7 +7351,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BahanKajianController@index',
         'controller' => 'App\\Http\\Controllers\\BahanKajianController@index',
@@ -7304,7 +7389,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\BahanKajianController@export',
         'controller' => 'App\\Http\\Controllers\\BahanKajianController@export',
@@ -7342,7 +7427,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MataKuliahController@index',
         'controller' => 'App\\Http\\Controllers\\MataKuliahController@index',
@@ -7380,7 +7465,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MataKuliahController@export',
         'controller' => 'App\\Http\\Controllers\\MataKuliahController@export',
@@ -7418,7 +7503,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@index',
         'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@index',
@@ -7456,7 +7541,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\CRUDCPMKController@export',
         'controller' => 'App\\Http\\Controllers\\CRUDCPMKController@export',
@@ -7494,7 +7579,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SubCPMKController@index',
         'controller' => 'App\\Http\\Controllers\\SubCPMKController@index',
@@ -7532,7 +7617,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:admin,dosen,kurikulum',
+          1 => 'role:admin,dosen,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\SubCPMKController@export',
         'controller' => 'App\\Http\\Controllers\\SubCPMKController@export',
@@ -7570,7 +7655,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TahapPenilaianController@index',
         'controller' => 'App\\Http\\Controllers\\TahapPenilaianController@index',
@@ -7608,7 +7693,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TahapPenilaianController@table',
         'controller' => 'App\\Http\\Controllers\\TahapPenilaianController@table',
@@ -7646,7 +7731,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TahapPenilaianController@exportFile',
         'controller' => 'App\\Http\\Controllers\\TahapPenilaianController@exportFile',
@@ -7684,7 +7769,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@index',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@index',
@@ -7722,7 +7807,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@table',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@table',
@@ -7760,7 +7845,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@exportFile',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianCPMKController@exportFile',
@@ -7798,7 +7883,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@index',
         'controller' => 'App\\Http\\Controllers\\RpsController@index',
@@ -7836,7 +7921,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@index',
         'controller' => 'App\\Http\\Controllers\\RpsController@index',
@@ -7873,7 +7958,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@processData',
         'controller' => 'App\\Http\\Controllers\\RpsController@processData',
@@ -7911,7 +7996,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@export',
         'controller' => 'App\\Http\\Controllers\\RpsController@export',
@@ -7936,7 +8021,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::VtTht5vML2hpmOeG' => 
+    'generated::VlF1WRHVlsfvIbZf' => 
     array (
       'methods' => 
       array (
@@ -7949,7 +8034,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen,admin,kurikulum',
+          1 => 'role:dosen,admin,kurikulum,dosen_kurikulum',
         ),
         'uses' => 'PDFController@generatePDF',
         'controller' => 'PDFController@generatePDF',
@@ -7958,7 +8043,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::VtTht5vML2hpmOeG',
+        'as' => 'generated::VlF1WRHVlsfvIbZf',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7987,7 +8072,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianController@index',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianController@index',
@@ -8025,7 +8110,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianController@addTeknikPenilaian',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianController@addTeknikPenilaian',
@@ -8062,7 +8147,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianController@storeTeknikPenilaian',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianController@storeTeknikPenilaian',
@@ -8100,7 +8185,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianController@editTeknikPenilaian',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianController@editTeknikPenilaian',
@@ -8137,7 +8222,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianController@updateTeknikPenilaian',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianController@updateTeknikPenilaian',
@@ -8175,7 +8260,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianController@deleteTeknikPenilaian',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianController@deleteTeknikPenilaian',
@@ -8213,7 +8298,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\TeknikPenilaianController@export',
         'controller' => 'App\\Http\\Controllers\\TeknikPenilaianController@export',
@@ -8251,7 +8336,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MingguRPSController@index',
         'controller' => 'App\\Http\\Controllers\\MingguRPSController@index',
@@ -8289,7 +8374,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MingguRPSController@addMingguRPS',
         'controller' => 'App\\Http\\Controllers\\MingguRPSController@addMingguRPS',
@@ -8326,7 +8411,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MingguRPSController@storeMingguRPS',
         'controller' => 'App\\Http\\Controllers\\MingguRPSController@storeMingguRPS',
@@ -8364,7 +8449,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MingguRPSController@editMingguRPS',
         'controller' => 'App\\Http\\Controllers\\MingguRPSController@editMingguRPS',
@@ -8401,7 +8486,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MingguRPSController@updateMingguRPS',
         'controller' => 'App\\Http\\Controllers\\MingguRPSController@updateMingguRPS',
@@ -8439,7 +8524,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\MingguRPSController@deleteMingguRPS',
         'controller' => 'App\\Http\\Controllers\\MingguRPSController@deleteMingguRPS',
@@ -8477,7 +8562,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\DosenController@index',
         'controller' => 'App\\Http\\Controllers\\DosenController@index',
@@ -8515,7 +8600,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\DosenController@addPeranDosen',
         'controller' => 'App\\Http\\Controllers\\DosenController@addPeranDosen',
@@ -8552,7 +8637,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\DosenController@storePeranDosen',
         'controller' => 'App\\Http\\Controllers\\DosenController@storePeranDosen',
@@ -8590,7 +8675,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\DosenController@editPeranDosen',
         'controller' => 'App\\Http\\Controllers\\DosenController@editPeranDosen',
@@ -8627,7 +8712,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\DosenController@updatePeranDosen',
         'controller' => 'App\\Http\\Controllers\\DosenController@updatePeranDosen',
@@ -8665,7 +8750,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\DosenController@deletePeranDosen',
         'controller' => 'App\\Http\\Controllers\\DosenController@deletePeranDosen',
@@ -8703,11 +8788,50 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@show',
         'controller' => 'App\\Http\\Controllers\\RpsController@show',
         'as' => 'edit_rps.rps_show',
+        'namespace' => NULL,
+        'prefix' => '/dashboard/rps/edit',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'edit_rps.mata_kuliah' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/rps/edit/mata_kuliah/{kodeRPS}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'role:dosen,dosen_kurikulum',
+        ),
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:345:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:126:"function () {
+            return \\view(\'rps_mata_kuliah\', [\'title\' => \'Mata Kuliah\', \'kodeRPS\' => \'AGB10112023\']);
+        }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47d3200000000576c6001";}";s:4:"hash";s:44:"idniY73YN/HZzjHtAL7+j+xIaARAVCUb2rS8r9a9E30=";}}',
+        'as' => 'edit_rps.mata_kuliah',
         'namespace' => NULL,
         'prefix' => '/dashboard/rps/edit',
         'where' => 
@@ -8741,7 +8865,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@create',
         'controller' => 'App\\Http\\Controllers\\RpsController@create',
@@ -8778,7 +8902,7 @@ app('router')->setCompiledRoutes(
         'middleware' => 
         array (
           0 => 'web',
-          1 => 'role:dosen',
+          1 => 'role:dosen,dosen_kurikulum',
         ),
         'uses' => 'App\\Http\\Controllers\\RpsController@store',
         'controller' => 'App\\Http\\Controllers\\RpsController@store',
@@ -8891,9 +9015,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:289:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:71:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:291:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:73:"function () {
     return \\view(\'content.login.auth.forgot-password\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001289d7d1000000003f6db06c";}";s:4:"hash";s:44:"Gkap1i5ERkc42PEPyHRu4OzvX26bfZU+qKs1WJGP5Mw=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47d3500000000576c6001";}";s:4:"hash";s:44:"rZuiZU9r1px7MEJ8ShyV7dM3FG64MIrRCMSBB1qU6J0=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -8929,7 +9053,7 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:617:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:398:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:627:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:408:"function (\\Illuminate\\Http\\Request $request) {
     $request->validate([\'email\' => \'required|email\']);
 
     $status = \\Illuminate\\Support\\Facades\\Password::sendResetLink(
@@ -8939,7 +9063,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::RESET_LINK_SENT
         ? \\back()->with([\'status\' => \\__($status)])
         : \\back()->withErrors([\'email\' => \\__($status)]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001289d7d3000000003f6db06c";}";s:4:"hash";s:44:"9VFgRImRBWBYyVTdIYEXX1djzC8a+tHh+zqFj8Z6+4k=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47d3700000000576c6001";}";s:4:"hash";s:44:"U00GqX44UAcUEV4gN8S4mNG6Qpw4PeqpucGG15KM3dI=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -8976,9 +9100,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:315:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:97:"function ($token) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:317:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:99:"function ($token) {
     return \\view(\'content.login.auth.reset-password\', [\'token\' => $token]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001289d7d5000000003f6db06c";}";s:4:"hash";s:44:"9SDBbLXqHoU3VbvjPT7sPV3kpKGXnGKlCHVRln7O/bc=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47d2900000000576c6001";}";s:4:"hash";s:44:"wujbWlUR73v42F607Iz4XRdp41xWmOKs9rHQp5TtH6E=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -9014,7 +9138,7 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'guest',
         ),
-        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1098:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:879:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:1121:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:902:"function (\\Illuminate\\Http\\Request $request) {
     $request->validate([
         \'token\' => \'required\',
         \'email\' => \'required|email\',
@@ -9037,7 +9161,7 @@ app('router')->setCompiledRoutes(
     return $status === \\Illuminate\\Support\\Facades\\Password::PASSWORD_RESET
         ? \\redirect()->route(\'login\')->with(\'status\', \\__($status))
         : \\back()->withErrors([\'email\' => [\\__($status)]]);
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001289d7d7000000003f6db06c";}";s:4:"hash";s:44:"Q+um5Lhl/POWAP+uO1fkfA7ByKOePBhWOfLqZjEo7Hc=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000044b47d2b00000000576c6001";}";s:4:"hash";s:44:"r3P/lqVy7w5ky0wNbkE4C7ZeFGZVmw1fHSeiC2FtGCg=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 

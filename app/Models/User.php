@@ -60,8 +60,8 @@ class User extends Authenticatable
         $mapRoles = [
             0 => 'dosen',
             1 => 'kurikulum',
-            2 => 'dosen_kurikulum',
-            3 => 'admin'
+            2 => 'admin',
+            3 => 'dosen_kurikulum'
         ];
         $userRoleName = $mapRoles[$this->role];
         return $userRoleName === $role;

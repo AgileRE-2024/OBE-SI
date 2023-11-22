@@ -43,8 +43,8 @@
                             <option value="" disabled>-- Role --</option>
                             <option value="0" @if(old('role', $user->role) == "0") selected @endif>Dosen</option>
                             <option value="1" @if(old('role', $user->role) == "1") selected @endif>Kurikulum</option>
-                            <option value="2" @if(old('role', $user->role) == "2") selected @endif>Dosen dan Kurikulum</option>
-                            <option value="3" @if(old('role', $user->role) == "3") selected @endif>Admin</option>
+                            <option value="2" @if(old('role', $user->role) == "2") selected @endif>Admin</option>
+                            <option value="3" @if(old('role', $user->role) == "3") selected @endif>Dosen dan Kurikulum</option>
                         </select>
                         @error('role')
                             <p style="color: #BF2C45">{{ $message }}</p>
