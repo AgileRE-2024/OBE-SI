@@ -60,26 +60,38 @@
                     <td scope="row">{{ $minggurps->bahan_kajian }}</td>
                     <td scope="row">
                         <div class="col">
-                            <p>Bentuk: </p>
-                            <p>Metode: </p>
+                            @if($minggurps->temp_bentuk)
+                            <p>Bentuk: {{ $minggurps->temp_bentuk }}</p>
+                            @else
+                            <p></p>
+                            @endif
+                            @if($minggurps->temp_metode)
+                            <p>Metode: {{ $minggurps->temp_metode }}</p>
+                            else
+                            <p></p>
+                            @endif
+                            @if($minggurps->penugasan)
                             <p>Penugasan: {{ $minggurps->penugasan }}</p>
-                            @if($minggurps->luring == 1)
+                            @else
+                            <p></p>
+                            @endif
+                            @if($minggurps->luring === 1)
                             <p>Luring</p>
-                            @elseif($minggurps->luring == 0)
+                            @elseif($minggurps->luring === 0)
                             <p>Daring</p>
                             @else
                             <p></p>
                             @endif
                         </div>
                     </td>
-                    <td scope="row">media</td>
+                    <td scope="row">{{ $minggurps->temp_media }}</td>
                     <td scope="row">{{ $minggurps->waktuPembelajaran }}</td>
                     <td scope="row">{{ $minggurps->pengalaman_belajar }}</td>
-                    <td scope="row">{{ $minggurps->id_kriteria_penilaians }}</td>
-                    <td scope="row">{{ $minggurps->kodePenilaian }}</td>
-                    <td scope="row">referensi</td>
+                    <td scope="row">{{ $minggurps->temp_kriteria_penilaian }}</td>
+                    <td scope="row">{{ $minggurps->bobot_nilai }}</td>
+                    <td scope="row">{{ $minggurps->temp_referensi }}</td>
                     <td scope="row">
-                        <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.edit_minggu_rps', ['kodeMingguRPS' => $minggurps->kodeMingguRPS, 'kodeRPS' => $kodeRPS ]) }}">Edit</a>
+                        <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.edit_minggu_rps', ['kodeMingguRPS' => $minggurps->kodeMingguRPS]) }}">Edit</a>
                     </td>
                 </tr>
             @endforeach
