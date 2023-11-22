@@ -282,17 +282,16 @@ Route::group(['middleware' => 'role:dosen'], function () {
         Route::get('/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
 
         Route::get('/peran_dosen/{kodeRPS}', [DosenController::class, 'index'])->name('peran_dosen');
-        Route::get('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'addPeranDosen'])->name('add_peran_dosen');
-        Route::post('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'storePeranDosen'])->name('store_peran_dosen');
-        Route::get('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
-        Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
-        Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
+        Route::get('/edit_peran_dosen/{kodeRPS}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
+        Route::put('/edit_peran_dosen/{kodeRPS}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
+        // Route::get('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'addPeranDosen'])->name('add_peran_dosen');
+        // Route::post('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'storePeranDosen'])->name('store_peran_dosen');
+        // Route::get('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
+        // Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
+        // Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
         
         Route::get('/rps/{kodeRPS}', [RPSController::class, 'show'])->name('rps_show');
 
-        // Route::get('/mata_kuliah/{kodeRPS}', function () {
-        //     return view('rps_mata_kuliah', ['title' => 'Mata Kuliah', 'kodeRPS' => 'AGB10112023']);
-        // })->name('mata_kuliah');
         Route::get('/mata_kuliah/{kodeRPS}', [RPSController::class, 'detail'])->name('mata_kuliah');
     });
     Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');

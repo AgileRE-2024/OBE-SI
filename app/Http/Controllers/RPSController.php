@@ -152,6 +152,8 @@ class RPSController extends Controller
             'semester' => 'required',
             'dibuat_oleh' => 'required'
         ]);
+
+        // dd($request);
         // Menggabungkan kodeMK, semester, dan tahun menjadi kodeRPS
         $id_rps = $request->kodeMK . substr($request->tahunAjaran, -2) . str_pad($request->semester, 2, '0', STR_PAD_LEFT);
         // Check apakah kodeRPS sudah ada

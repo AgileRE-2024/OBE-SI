@@ -13,7 +13,7 @@
     </div>
     <div class="d-flex justify-content-start pt-2">
         <div>
-            <a class="btn btn-primary" href="{{ route('edit_rps.add_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}"><i
+            <a class="btn btn-primary" href="{{ route('edit_rps.edit_peran_dosen', ['kodeRPS' => $kodeRPS ]) }}"><i
                     class="bi bi-pencil-square">
                 </i>Edit</a>
         </div>
@@ -32,52 +32,97 @@
                 <tr>
                     <td scope="row">1</td>
                     <td scope="row">Pembuat RPS</td>
+                    @if($pembuat)
                     <td scope="row">
                         {{$pembuat->nip}}
                     </td>
                     <td scope="row">
                         {{$pembuat->namaDosen}}
                     </td>
+                    @else
+                    <td scope="row">
+                        -
+                    </td>
+                    <td scope="row">
+                        -
+                    </td>
+                    @endif
                 </tr>
                 <tr>
                     <td scope="row">2</td>
                     <td scope="row">Pemeriksa RPS</td>
+                    @if($pemeriksa)
                     <td scope="row">
                         {{$pemeriksa->nip}}
                     </td>
                     <td scope="row">
                         {{$pemeriksa->namaDosen}}
                     </td>
+                    @else
+                    <td scope="row">
+                        -
+                    </td>
+                    <td scope="row">
+                        -
+                    </td>
+                    @endif
                 </tr>
                 <tr>
                     <td scope="row">3</td>
                     <td scope="row">Persetujuan RPS</td>
+                    @if($persetujuan)
                     <td scope="row">
                         {{$persetujuan->nip}}
                     </td>
                     <td scope="row">
                         {{$persetujuan->namaDosen}}
                     </td>
+                    @else
+                    <td scope="row">
+                        -
+                    </td>
+                    <td scope="row">
+                        -
+                    </td>
+                    @endif
                 </tr>
                 <tr>
                     <td scope="row">4</td>
                     <td scope="row">Pengampu MK</td>
+                    @if($pengampu)
                     <td scope="row">
                         {{$pengampu->nip}}
                     </td>
                     <td scope="row">
                         {{$pengampu->namaDosen}}
                     </td>
+                    @else
+                    <td scope="row">
+                        -
+                    </td>
+                    <td scope="row">
+                        -
+                    </td>
+                    @endif
                 </tr>
                 <tr>
                     <td scope="row">5</td>
                     <td scope="row">Penanggung jawab MK</td>
+                    @if($penanggung_jawab)
                     <td scope="row">
                         {{$penanggung_jawab->nip}}
                     </td>
                     <td scope="row">
                         {{$penanggung_jawab->namaDosen}}
                     </td>
+                    @else
+                    <td scope="row">
+                        -
+                    </td>
+                    <td scope="row">
+                        -
+                    </td>
+                    @endif
                 </tr>
             </tbody>
         </table>
