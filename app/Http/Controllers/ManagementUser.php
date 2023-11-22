@@ -81,7 +81,12 @@ class ManagementUser extends Controller
             'status' => 'required|string',
         ]);
     }
-
+    if (User::where('nip', $request->nip)->exists() && $request->nip != $nip) {
+                return redirect()->back()->with('error', 'NIP sudah terpakai');
+    }
+    if (User::where('email', $request->email)->exists()) {
+                return redirect()->back()->with('error', 'Email sudah terpakai');
+    }
     $user = User::where('nip', $nip)->first();
     $user->update([
         'nip' => $request->nip,

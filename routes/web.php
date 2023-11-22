@@ -92,14 +92,14 @@ Route::get('/test', function () {
     ]);
 });
 
+Route::get('/register', [ManagementUser::class, 'create'])->name('register');
+Route::post('/storeUser', [ManagementUser::class, 'store'])->name('storeUser');
+
 Route::group(['middleware' => 'role:admin'], function () {
     Route::get('/managementuser/list', [ManagementUser::class, 'index'])->name('listuser');
-    Route::get('/register', [ManagementUser::class, 'create'])->name('register');
-    Route::post('/storeUser', [ManagementUser::class, 'store'])->name('storeUser');
     Route::get('/management/edit/{nip}', [ManagementUser::class, 'edit'])->name('editUser');
     Route::put('/management/edit/{nip}', [ManagementUser::class, 'update'])->name('updateUser');
     Route::delete('/management/delete/{nip}', [ManagementUser::class,'destroy'])->name('deleteUser');
-    
     });
 
 Route::get('/dashboard/kurikulum', [LoginController::class, 'myprofile'])->name('profil kurikulum')->middleware('role:kurikulum');

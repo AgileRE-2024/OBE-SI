@@ -250,6 +250,7 @@
                         </p>
                     </a>
                 </li>
+                @if (auth()->user()->role == 2)
                 <li class="nav-item @if (request()->routeIs('listuser', 'editUser')) menu-open @endif">
                     <a href="{{ route('listuser') }}" class="nav-link"
                         @if (request()->routeIs('listuser', 'editUser')) style="background-color: #F6D743; color: black;" @endif>
@@ -259,6 +260,7 @@
                         </p>
                     </a>
                 </li>
+                @endif
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

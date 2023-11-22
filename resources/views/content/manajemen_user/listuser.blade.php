@@ -67,7 +67,17 @@
                             {{ $user->jabatanDosen }}
                         </td>
                         <td scope="row">
-                            {{ $user->role }}
+                            @if($user->role == 0)
+                                Dosen
+                            @elseif($user->role == 1)
+                                Kurikulum
+                            @elseif($user->role == 2)
+                                Admin
+                            @elseif($user->role == 3)
+                                Dosen dan Admin
+                            @else
+                                Unknown Role
+                            @endif
                         </td>
                         <td scope="row">
                             {{ $user->email }}
