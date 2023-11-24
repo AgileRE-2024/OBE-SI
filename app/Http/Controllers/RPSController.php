@@ -23,6 +23,10 @@ use Illuminate\Validation\Rule;
 
 class RPSController extends Controller
 {
+    public function getDataMaster(){
+        $rps = RPS::all();
+        return response()->json($rps);
+    }
 
     public function index()
     {

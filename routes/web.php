@@ -60,6 +60,8 @@ use App\Http\Controllers\DosenController;
 |
 */
 
+Route::get('/get-master-data/rps', [RPSController::class, 'getDataMaster']);
+
 Route::get('/', function () {
     return view('content.login.login', ["tittle" => "Login OBE"]);
 });
