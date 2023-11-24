@@ -38,10 +38,14 @@ class RPSController extends Controller
         //     'subcpmk_list'=>SubCPMK::all(),
         //     'teknik_penilaian_list'=>Teknik_Penilaian::all(),
         // ]);
+        
+        $newestYear = RPS::max('tahunAjaran');
+        $rps = RPS::where('tahunAjaran',$newestYear)->get();
+
 
         return view('cari_rps', [
             'title' => 'RPS',
-            'rps_list'=> RPS::all(),
+            'rps_list'=> $rps,
             // 'teknik_penilaian_list'=> Teknik_Penilaian::all(),
             // 'detail_rps_list'=> Detail_RPS::all(),
             // 'dosen_list'=> User::all(),
