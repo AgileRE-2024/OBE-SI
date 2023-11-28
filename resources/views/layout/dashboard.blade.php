@@ -34,6 +34,9 @@
 
     {{-- SweetAlert2 JS --}}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    {{-- CKEDITOR5 --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
 </head>
 
 <body>

@@ -315,6 +315,10 @@ Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
     });
     Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
     Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');
+
+    //ROUTE BARU SEGAF
+    Route::post('/uploadImgTeknikPenilaian',[TeknikPenilaianController::class, 'uploadTeknikPenilaian'])->name('ckeditor.upload');
+
 });
 
 Route::get('/ubahpw/{nip}', [LoginController::class, 'ubahpw'])->name('tampilprofile');

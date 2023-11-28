@@ -60,7 +60,7 @@ class TeknikPenilaianController extends Controller
 
     public function updateTeknikPenilaian(Request $request, $kodeRPS)
     {
-        
+        dd($request->all());
         $request->validate([
             'detail_penilaian' => 'required',
         ]);
@@ -168,5 +168,18 @@ class TeknikPenilaianController extends Controller
         }
         $d->delete();
         return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with('success', 'Teknik Penilaian berhasil dihapus');
+    }
+
+    //NEW FUNCTION RICH TEXT
+    public function uploadTeknikPenilaian(Request $request){
+        if($request->hasFile('detail_penilaian')){
+            $originName = $request->file('detail_penilaian')->getClientOriginalName();
+            $fileName = pathinfo($originName, PATHINFO_FILENAME);
+            $extension = $request->file('detail_penilaian')-> getClientOriginalExtension();
+            $fileName = $filename.'_'.time().'.'.$extension;
+            $request-> file('detail_penilaian')->move(public_path('media'),$fileName);
+            $url = asset('media/'.$fileName);
+            return response()->json(['fileName'=> $fileName,'uploaded'=>1,'url'=>$url]);
+        }
     }
 }

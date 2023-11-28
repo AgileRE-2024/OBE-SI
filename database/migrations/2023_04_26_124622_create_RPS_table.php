@@ -29,7 +29,7 @@ return new class extends Migration
             $table->integer('versi')->nullable();
             $table->char('penanggungJawab', 18)->nullable();
             $table->char('dosenPengampu', 100)->nullable();
-            $table->text('detail_penilaian')->nullable();
+            $table->longText('detail_penilaian')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
