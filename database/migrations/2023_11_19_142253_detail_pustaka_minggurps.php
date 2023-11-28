@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detail_pustaka_minggurps', function (Blueprint $table) {
-            $table->integer('id_pustaka');
+            $table->unsignedInteger('id_pustaka');
             $table->char('kodeMingguRPS', 4);
             $table->foreign('id_pustaka')->references('id_pustaka')->on('pustakas')->onDelete('restrict');
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
+            $table->text('referensi')->nullable();
             $table->timestamps();
         });
     }

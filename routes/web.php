@@ -246,7 +246,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/sub_cpmk', [SubCPMKController::class, 'index'])->name('sub_cpmk')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
         Route::get('/sub_cpmk/export/{type}', [SubCPMKController::class, 'export'])->name('export_sub_cpmk')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
 
-        Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
+        Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka');
+        Route::get('/addPustaka', [PustakaController::class, 'addPustaka'])->name('add_pustaka');
+        Route::post('/addPustaka', [PustakaController::class, 'storePustaka'])->name('store_pustaka');
     });
 });
 

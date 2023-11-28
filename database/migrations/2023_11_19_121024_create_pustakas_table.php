@@ -14,12 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pustakas', function (Blueprint $table) {
-            $table->integer('id_pustaka')->primary('id_pustaka');
+            $table->increments('id_pustaka');
             $table->string('nama_penulis', 100);
             $table->integer('tahun');
             $table->string('judul', 100);
             $table->string('penerbit', 100);
-            $table->text('referensi')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

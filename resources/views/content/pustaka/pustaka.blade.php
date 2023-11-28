@@ -9,13 +9,13 @@
                     style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
         </div>
     </div>
-    {{--<div class="d-flex justify-content-start pt-2">
+    <div class="d-flex justify-content-start pt-2">
         <div>
             <a class="btn btn-dark" href="{{ route('kurikulum.data.add_pustaka') }}"><i class="bi bi-plus-square">
                 </i>Tambah</a>
         </div>
     </div>
-    <div class="d-flex justify-content-end pt-2">
+    {{--<div class="d-flex justify-content-end pt-2">
         <div class="pr-3">
             <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_pl', ['pdf']) }}"><i
                     class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>

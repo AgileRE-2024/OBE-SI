@@ -15,24 +15,28 @@ class PustakaController extends Controller
         return view('content.pustaka.pustaka', ['title' => 'Pustaka', 'pustaka' => $pustaka]);
     }
 
-    public function addProfilLulusan()
+    public function addPustaka()
     {
-        return view('content.profil_lulusan.add_pl', ['title' => 'Tambah Profil Lulusan']);
+        return view('content.pustaka.add_pustaka', ['title' => 'Tambah Pustaka']);
     }
 
-    public function storeProfilLulusan(Request $request)
+    public function storePustaka(Request $request)
     {
         $request->validate([
-            'kodePL' => 'required|unique:profil_lulusan,kodePL',
-            'deskripsiPL' => 'required',
+            'judul' => 'required',
+            'nama_penulis' => 'required',
+            'tahun' => 'required',
+            'penerbit' => 'required',
         ]);
 
         pustaka::create([
-            'kodePL' => $request->kodePL,
-            'deskripsiPL' => $request->deskripsiPL,
+            'judul' => $request->judul,
+            'nama_penulis' => $request->nama_penulis,
+            'tahun' => $request->tahun,
+            'penerbit' => $request->penerbit,
         ]);
 
-        return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil ditambahkan');
+        return redirect()->route('kurikulum.data.pustaka')->with('success', 'Pustaka berhasil ditambahkan');
     }
 
     public function edit($pl)
