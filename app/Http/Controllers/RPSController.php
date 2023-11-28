@@ -21,6 +21,7 @@ use Illuminate\Validation\Rule;
 
 class RPSController extends Controller
 {
+
     public function index()
     {
         return view('content.cari_rps', [
@@ -141,42 +142,70 @@ class RPSController extends Controller
     }
 
     
-
+    //NEW FUNCTION 1
     public function store(Request $request)
     {
+        // Validasi Input
         $request->validate([
-            // 'kodeRPS' => [
-            //     'required',
-            //     Rule::unique('rps', 'kodeRPS')->where(function ($query) use ($request) {
-            //         return $query->where('kodeMK', $request->kodeMK)
-            //             ->where('tahunAjaran', $request->tahunAjaran);
-            //     }),
-            // ],
+
             'kodeMK' => 'required',
             'kps' => 'required',
-            'tahunAjaran' => [
-                'required',
-                Rule::unique('rps')->where(function ($query) use ($request) {
-                    return $query->where('kodeMK', $request->kodeMK);
-                }),
-            ],
+            'tahunAjaran' => 'required',
             'pustaka'=>'required',
-        ], [
-            'kodeRPS.unique' => 'Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.',
-            'tahunAjaran.unique' => 'Tahun ajaran sudah digunakan untuk kodeMK yang sama.',
+            'semester' => 'required',
+            'penanggungJawab' => 'required',
+            'dosenPengampu' => 'required',
+            'detail_penilaian' => 'required'
         ]);
         // Menggabungkan kodeMK, semester, dan tahun menjadi kodeRPS
-        $mk=Mata_Kuliah::where('kodeMK', $request->kodeMK)->first();
-        $kodeRPS = $request->kodeMK . $mk->semester . $request->tahunAjaran;
-
-        RPS::create([
-            'kodeRPS' => $kodeRPS,
-            'tahunAjaran' => $request->tahunAjaran,
-            'pustaka'=> $request->pustaka,
-            'kodeMK' => $request->kodeMK,
-            'kps' => $request->kps,
+        $kodeRPS = $request->kodeMK . $request->semester . $request->tahunAjaran;
+        // Check apakah kodeRPS sudah ada
+        $rps = RPS::where('kodeRPS', $kodeRPS)->first();
+        if ($rps) {
+            return redirect()->back()->withErrors(['kodeRPS' => 'Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.'])->withInput();
+        }
+        // Menyimpan RPS baru 
+        RPS::create([ 
+            'tahunAjaran' => $request->tahunAjaran, 
+            'kodeMK' => $request->kodeMK, 
+            'kodeRPS' => $kodeRPS, 
+            'semester' => $request->semester, 
+            'created_at' => $request->created_at, 
+            'diperiksa_oleh' => $request->diperiksa_oleh, 
+            'disiapkan_oleh' => $request->disiapkan_oleh, 
+            'disetujui_oleh' => $request->disetujui_oleh, 
+            'dibuat_oleh' => $request->dibuat_oleh, 
+            'versi' => $request->versi, 
+            'penanggungJawab' => $request->penanggungJawab, 
+            'dosenPengampu' => $request->dosenPengampu, 
+            'updated_at' => $request->updated_at, 
+            'detail_penilaian' => $request->detail_penilaian, 
         ]);
     
         return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$request->kodeRPS]);
     }
+    
+    //NEW FUNCTION 2
+    public function filterNewestYearSemester(){
+
+        $newestYear = RPS::max('tahunAjaran');
+        $newestSemester = RPS::where('tahunAjaran',$newestYear)->max('semester');
+        $rps = RPS::where('tahunAjaran',$newestYear)->where('semester',$newestSemester)->get();
+
+        return view('content.cari_rps', [
+            'title' => 'RPS',
+            'rps' => $rps,
+            'rps_list'=> RPS::all(),
+            'teknik_penilaian_list'=> Teknik_Penilaian::all(),
+            'detail_rps_list'=> Detail_RPS::all(),
+            'dosen_list'=> User::all(),
+            'mk_list' => Mata_Kuliah::all(),
+            'minggu_rps_list' => Minggu_RPS::all(),
+            'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
+            'subcpmk_list'=>SubCPMK::all(),
+            'teknik_penilaian_list'=>Teknik_Penilaian::all(),
+        ]);
+    }
+
+    
 }

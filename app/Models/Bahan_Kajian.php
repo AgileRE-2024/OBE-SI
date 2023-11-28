@@ -9,7 +9,7 @@ class Bahan_Kajian extends Model
     protected $primaryKey = 'kodeBK';
     public $incrementing = false;
     protected $table = 'Bahan_Kajian';
-    protected $fillable = ['kodeBK', "namaBK", "kategoriBK", "referensiBK"];
+    protected $fillable = ['kodeBK', "namaBK", "kategoriBK", "referensiBK", 'deleted_at'];
 
     public function CPL_Prodi()
     {

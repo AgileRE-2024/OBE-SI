@@ -10,17 +10,24 @@ class Kelas extends Model
     public $incrementing = false;
     protected $table = 'Kelas';
     protected $fillable = [
-        'kodeKelas', 'namaKelas', 'jadwal', 'kuota', 'kodeMK'
+        'kodeKelas', 'id_rps', 'namaKelas', 'jadwal', 'kuota','kodeMK','deleted_at'
     ];
 
     public function Mahasiswa()
     {
-        return $this->belongsToMany(Mahasiswa::class, 'Nilai_Mahasiswa', 'kodeKelas', 'nim');
+        return $this->belongsToMany(Mahasiswa::class, 'detail_kelas', 'kodeKelas', 'nim');
     }
+
     public function Mata_Kuliah()
     {
         return $this->belongsTo(Mata_Kuliah::class,'kodeMK', 'kodeMK');
     }
+
+    public function RPS()
+    {
+        return $this->hasMany(RPS::class,'kodeKelas', 'kodeKelas');
+    }
+
     // public function Nilai_Mahasiswa()
     // {
     //     return $this->hasMany(Nilai_Mahasiswa::class,'kodeKelas', 'kodeKelas');

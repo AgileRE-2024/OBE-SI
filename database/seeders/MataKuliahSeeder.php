@@ -96,6 +96,7 @@ class MataKuliahSeeder extends Seeder
             ['PNT499', 'Skripsi', 6, 8, 1, 1, 'PNT497', 'Sudah/sedang mengambil 12 sks mata kuliah pilihan bidang minat', '-'],
         ];
 
+
         foreach ($matkul as $m) {
             Mata_Kuliah::insert([
                 'kodeMK' => $m[0],
