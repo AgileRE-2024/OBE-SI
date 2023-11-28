@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('visi');
             $table->text('misi');
             $table->text('tujuan');
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

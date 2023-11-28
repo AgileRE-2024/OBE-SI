@@ -92,12 +92,12 @@
             });
         });
     </script>
-    
+
     <script>
         // Mendapatkan nilai NIP saat dropdown dipilih
         $('#nip').change(function() {
             var nip = $(this).val();
-    
+
             // Mengirim permintaan AJAX ke endpoint untuk mendapatkan Nama Dosen
             $.ajax({
                 url: '/get-nama-dosen/' + nip,

@@ -11,7 +11,7 @@ class CPL_SN_Dikti extends Model
     public $incrementing = false;
     protected $table = 'CPL_SN_Dikti';
     protected $fillable = [
-        'kodeCPLSN', 'deskripsiSN', 'sumberSN', "kategoriSN", "jenisSN"
+        'kodeCPLSN', 'deskripsiSN', 'sumberSN', "kategoriSN", "jenisSN", 'deleted_at'
     ];
 
     public function CPL_Prodi()

@@ -10,7 +10,7 @@ class Teknik_Penilaian extends Model
     public $incrementing = false;
     protected $table = 'Teknik_Penilaian';
     protected $fillable = [
-        'kodePenilaian', 'teknikPenilaian', 'bobotPenilaian', 'kriteriaPenilaian', 'tahapPenilaian', 'instrumenPenilaian', 'kodeRPS',
+        'kodePenilaian', 'teknikPenilaian', 'bobotPenilaian', 'kriteriaPenilaian', 'tahapPenilaian', 'instrumenPenilaian'
     ];
 
     public function Detail_RPS()
@@ -21,5 +21,14 @@ class Teknik_Penilaian extends Model
     public function Detail_Nilai_Mahasiswa()
     {
         return $this->hasMany(Detail_Nilai_Mahasiswa::class, 'kodePenilaian', 'kodePenilaian');
+    }
+
+    public function RPS(){
+        return $this->belongsToMany(Teknik_Penilaian::class, 'detail_penilaian_rps','kodePenilaian', 'id_RPS' );
+    }
+
+    public function Minggu_RPS(){
+        //relasi one to many
+        return $this->hasMany(Minggu_RPS::class, 'kodePenilaian', 'kodePenilaian');
     }
 }

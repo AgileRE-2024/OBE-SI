@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("namaBK", 100);
             $table->boolean("kategoriBK");
             $table->string("referensiBK", 100);
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

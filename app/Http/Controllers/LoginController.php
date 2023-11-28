@@ -16,13 +16,16 @@ class LoginController extends Controller
     }
     public function proseslogin (Request $request){
        if(Auth::attempt($request->only('nip','password'))){
-            if (auth()->user()->role==1){
-                return redirect('/dashboard/kurikulum'); 
+            if (auth()->user()->role==0){
+                return redirect('/dashboard/dosen'); 
+            }
+            elseif (auth()->user()->role==1){
+                return redirect('/dashboard/kurikulum');
             }
             elseif (auth()->user()->role==2){
                 return redirect('/dashboard/admin');
             }
-            return redirect('/dashboard/dosen');
+            return redirect('/dashboard/dosen_kurikulum');
         }
         return view ('content.login.loginfailed', [
             "title" => "Login"]);
@@ -39,7 +42,12 @@ class LoginController extends Controller
     }
     public function myprofile (){
         $data = User::where('nip',auth()->user()->nip)->first();
-        if(auth()->user()->role==1){
+        if(auth()->user()->role==0){
+            return view('content.login.homedosen',compact ('data'), [
+                "title" => "My Profile"
+            ]); 
+        }
+        elseif(auth()->user()->role==1){
             return view('content.login.homekurikulum',compact ('data'), [
                 "title" => "My Profile"
             ]); 
@@ -49,7 +57,7 @@ class LoginController extends Controller
                 "title" => "My Profile"
             ]); 
         }
-        return view('content.login.homedosen',compact ('data'), [
+        return view('content.login.homedosen_kurikulum',compact ('data'), [
             "title" => "My Profile"
         ]); 
     }

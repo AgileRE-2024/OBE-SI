@@ -16,3 +16,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/bootstrap/cache/config.php
+/bootstrap/cache/routes-v7.php
+composer.lock
