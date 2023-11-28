@@ -5,7 +5,19 @@
                 {{ getdate(date("U"))["weekday"] }}, {{getdate(date("U"))["mday"] }} {{ getdate(date("U"))["month"] }} {{ getdate(date("U"))["year"] }} <i class="bi bi-calendar3"></i>
             </div>
             <div class="col" style="padding-right: 20px; text-align:end;">
-                Tim {{ auth()->user()->jabatanDosen }}
+                Tim
+                    @if(auth()->user()->roles == 0)
+                        Dosen
+                    @elseif(auth()->user()->roles == 1)
+                        Kurikulum
+                    @elseif(auth()->user()->roles == 2)
+                        Admin
+                    @elseif(auth()->user()->roles == 3)
+                        Dosen dan Kurikulum
+                    @else
+                        Role Tidak Dikenal
+                    @endif
+
                 <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="rounded-circle" alt="..." width="60px">
             </div>
         </div>
@@ -18,7 +30,7 @@
             </nav>
         </div>
     </div><!-- /.container-fluid -->
-    {{-- @if (Request::is('*kurikulum*'))
+    @if (Request::is('*kurikulum*'))
         @if (Request::is('*/pemetaan/*'))
             <nav class="nav nav-pills flex-column flex-sm-row border-bottom">
                 <a class="flex-sm-fill text-sm-center nav-link @if (URL::current() === route('kurikulum.pemetaan.bk_mk')) active @endif"
@@ -43,5 +55,5 @@
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">Mata Kuliah</a>
             </nav>
         @endif
-    @endif --}}
+    @endif
 </section>
