@@ -68,11 +68,11 @@ class PustakaController extends Controller
         return redirect()->route('kurikulum.data.pustaka')->with('success', 'Pustaka berhasil diubah');
     }
 
-    public function delete($pl)
+    public function delete($pustaka)
     {
-        $pl = pustaka::where('kodePL', $pl)->first();
-        $pl->delete();
+        $pustaka = pustaka::where('id_pustaka', $pustaka)->first();
+        $pustaka->delete();
 
-        return redirect()->route('kurikulum.data.pustaka')->with('success', 'Profil Lulusan berhasil dihapus');
+        return redirect()->route('kurikulum.data.pustaka')->with('success', 'Pustaka berhasil dihapus');
     }
 }
