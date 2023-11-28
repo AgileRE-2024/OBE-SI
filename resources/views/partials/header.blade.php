@@ -30,7 +30,7 @@
             </nav>
         </div>
     </div><!-- /.container-fluid -->
-    @if (Request::is('*kurikulum*'))
+    <!-- @if (Request::is('*kurikulum*'))
         @if (Request::is('*/pemetaan/*'))
             <nav class="nav nav-pills flex-column flex-sm-row border-bottom">
                 <a class="flex-sm-fill text-sm-center nav-link @if (URL::current() === route('kurikulum.pemetaan.bk_mk')) active @endif"
@@ -55,5 +55,5 @@
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">Mata Kuliah</a>
             </nav>
         @endif
-    @endif
+    @endif -->
 </section>

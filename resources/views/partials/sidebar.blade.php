@@ -106,6 +106,15 @@
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('kurikulum.data.pustaka') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.data.pustaka')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            Pustaka
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li id="pemetaan" class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">
