@@ -39,7 +39,7 @@ class Minggu_RPS extends Model
     }
 
     public function Pustaka(){
-        return $this->belongsToMany(Pustaka::class, 'detail_pustaka_minggurps', 'kodeMingguRPS', 'id_pustaka');
+        return $this->belongsToMany(pustaka::class, 'detail_pustaka_minggurps', 'kodeMingguRPS', 'id_pustaka');
     }
 
     public function Teknik_Penilaian(){
