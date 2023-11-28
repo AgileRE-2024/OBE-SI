@@ -159,36 +159,22 @@
                 <tr>
                     <td class="align-middle" colspan="2" style="width: 20%"><br><br>TTD<br>
                         @php
-                            $dosen = $dosen_list
+                            $dosen = $rps_list
                                 ->where(
-                                    'nip',
-                                    optional(
-                                        $detail_peran_dosen_list
-                                            ->where('kodeRPS', $rps->kodeRPS)
-                                            ->where('peranDosen', 'Dosen Pengembang RPS')
-                                            ->first(),
-                                    )->nip,
-                                )
-                                ->first();
+                                    'nip', $rps->nip
+                                )->first();
                         @endphp
                         @if ($dosen)
                             {{ $dosen->namaDosen }}
                         @else
                             Tambahkan Dosen Pengembang RPS
                         @endif
-                        {{-- {{ $dosen_list->where('nip', $detail_peran_dosen_list->where('kodeRPS', '=', $rps->kodeRPS)->where('peranDosen', '=', 'Dosen Pengembang RPS')->first()->nip)->first()->namaDosen ?? '-'}} --}}
                     </td>
                     <td class="align-middle" colspan="1" style="width: 30%"><br><br>TTD<br>
                         @php
-                            $dosen = $dosen_list
-                                ->where(
-                                    'nip',
-                                    optional(
-                                        $detail_peran_dosen_list
-                                            ->where('kodeRPS', $rps->kodeRPS)
-                                            ->where('peranDosen', 'Koordinator BK')
-                                            ->first(),
-                                    )->nip,
+                                $dosen = $rps_list
+                                    ->where(
+                                        'nip', $rps->nip
                                 )
                                 ->first();
                         @endphp
@@ -237,7 +223,6 @@
                             ]);
                         }
                     }
-                    $list_dosen_pengampu = $detail_peran_dosen_list->where('peranDosen', 'Dosen Pengampu')->pluck('nip');
                     $list_minggu_rps = collect();
                     $uniqueIds = [];
                     foreach ($detail_rps_list->where('kodeRPS', '=', $rps->kodeRPS) as $dr) {
@@ -347,17 +332,7 @@
                 <tr>
                     <th style="text-align: left;" rowspan="1" colspan="1">Dosen Pengampu</th>
                     <td style="text-align: left;" rowspan="1" colspan="7">
-                        @if (!$dosen_list)
-                            <div class="alert alert-warning"><span>
-
-                                    Tambahkan Dosen Pengampu
-                                </span>
-                            </div>
-                        @else
-                            @foreach ($dosen_list->whereIn('nip', $list_dosen_pengampu) as $dosen)
-                                <span>{{ $dosen->namaDosen }}, </span>
-                            @endforeach
-                        @endif
+                      
                     </td>
                 </tr>
 

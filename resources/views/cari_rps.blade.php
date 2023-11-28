@@ -18,14 +18,22 @@
                 {{ session('success') }}
 </div>
 @endif --}}
-<div class="d-flex justify-content-start pt-2">
-        <div>
+<div class="d-flex justify-content-start">
+        <div class="pr-3">
             <a class="btn btn-success" href="{{ route('rps_create') }}"><i
                     class="bi bi-plus-square mr-2">
                 </i>Buat RPS</a>
         </div>
+        <div class="pr-3">
+            <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/"><i
+                class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+        </div>
+        <div>
+            <a class="btn btn-success" href="/dashboard/rps/export/excel/"><i
+                class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+        </div>
     </div>
-<div class="d-flex mt-3">
+    <div class="d-flex mt-3">
 <table class="table table-bordered" style="text-align: center">
                 <thead style="background-color: lightgray">
                     <tr>
@@ -33,7 +41,7 @@
                         <th class="align-middle" rowspan="2" style="width: 15%">Mata Kuliah</th>
                         <th class="align-middle" rowspan="2" style="width: 10%">Tahun</th>
                         <th class="align-middle" rowspan="2" style="width: 10%">Semester</th>
-                        <th class="align-middle" rowspan="2" style="width: 10%">Edit</th>
+                        <th class="align-middle" rowspan="2" style="width: 10%">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,8 +52,16 @@
                         <td scope="row">{{ $rps->tahunAjaran }}</td>
                         <td scope="row">{{ $rps->semester }}</td>
                         <td scope="row">
-                        <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.mata_kuliah', ['kodeRPS' => $rps->id_rps]) }}">Edit</a>
-                    </td>
+                            <div class="d-flex justify-content-start">
+                                <div class="pr-3">
+                                    <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.mata_kuliah', ['kodeRPS' => $rps->id_rps]) }}">Edit</a>
+                                </div>
+                                <div>
+                                    <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/{{ $rps->kodeRPS }}"><i
+                                        class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

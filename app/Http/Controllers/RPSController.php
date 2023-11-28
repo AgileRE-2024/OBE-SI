@@ -7,7 +7,7 @@ use App\Models\Prasyarat;
 use App\Models\CPMK;
 use App\Models\Detail_MK_CPMK;
 use App\Models\Detail_Peran_Dosen;
-use App\Models\Detail_RPS;
+use App\Models\Detail_RPS_Penilaian;
 use App\Models\Mata_Kuliah;
 use App\Models\MataKuliah;
 use App\Models\Minggu_RPS;
@@ -79,17 +79,16 @@ class RPSController extends Controller
     public function export($type, $kodeRPS)
     {
         date_default_timezone_set('Asia/Jakarta');
-
         $view = view('content.tableToRPSEkspor', [
             'title' => 'RPS',
             'rps_list'=> RPS::all(),
             'kodeRPS' => $kodeRPS,
             'teknik_penilaian_list'=> Teknik_Penilaian::all(),
-            'detail_rps_list'=> Detail_RPS::all(),
+            'detail_rps_list'=> Detail_RPS_Penilaian::all(),
             'dosen_list'=> User::all(),
             'mk_list' => Mata_Kuliah::all(),
             'minggu_rps_list' => Minggu_RPS::all(),
-            'detail_peran_dosen_list' => Detail_Peran_Dosen::all()->where('kodeRPS',$kodeRPS),
+            // 'detail_peran_dosen_list' => Detail_Peran_Dosen::all()->where('kodeRPS',$kodeRPS),
             'subcpmk_list'=>SubCPMK::all(),
             'teknik_penilaian_list'=>Teknik_Penilaian::all(),
         ]);
