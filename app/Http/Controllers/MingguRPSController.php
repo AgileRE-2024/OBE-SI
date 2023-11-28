@@ -49,7 +49,6 @@ class MingguRPSController extends Controller
             'mk_list' => $mk,
             'rps_list' => $rps,
             'teknik_penilaian_list' => Teknik_Penilaian::all(),
-            'detail_rps_list' => Detail_RPS::all(),
         ]);
     }
 
@@ -137,8 +136,6 @@ class MingguRPSController extends Controller
             // atribut tambahan lainnya di tabel pivot C
         ];
 
-        Detail_RPS::insert($detail_rps);
-
         return redirect()
             ->route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS])
             ->with('success', 'Minggu RPS berhasil ditambahkan');
@@ -180,7 +177,6 @@ class MingguRPSController extends Controller
             'pengalaman_belajar' => 'required',
             'temp_kriteria_penilaian' => 'required',
             'bobot_nilai' => 'required',
-            'temp_referensi' => 'required',
         ]);
 
         // dd($request);
@@ -218,11 +214,6 @@ class MingguRPSController extends Controller
      */
     public function deleteMingguRPS(Request $request, $kodeMingguRPS, $kodeRPS)
     {
-        // Hapus detail RPS yang berelasi dengan minggu RPS
-        Detail_RPS::where('kodeMingguRPS', $kodeMingguRPS)
-            ->where('kodeRPS', $request->kodeRPS)
-            ->delete();
-
         // Hapus minggu RPS
         $minggu_RPS = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
         $minggu_RPS->delete();
