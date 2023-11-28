@@ -249,6 +249,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka');
         Route::get('/addPustaka', [PustakaController::class, 'addPustaka'])->name('add_pustaka');
         Route::post('/addPustaka', [PustakaController::class, 'storePustaka'])->name('store_pustaka');
+        Route::get('/editPustaka/{pustaka}', [PustakaController::class, 'edit'])->name('edit_pustaka');
+            Route::put('/editPustaka/{pustaka}', [PustakaController::class, 'update'])->name('update_pustaka');
+            Route::get('/deletePustaka/{pustaka}', [PustakaController::class, 'delete'])->name('delete_pustaka');
     });
 });
 

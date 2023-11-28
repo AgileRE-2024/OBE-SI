@@ -39,44 +39,33 @@ class PustakaController extends Controller
         return redirect()->route('kurikulum.data.pustaka')->with('success', 'Pustaka berhasil ditambahkan');
     }
 
-    public function edit($pl)
+    public function edit($pustaka)
     {
-        $pl = pustaka::where('kodePL', $pl)->first();
+        $pustaka = pustaka::where('id_pustaka', $pustaka)->first();
 
-        return view('content.profil_lulusan.edit_pl', ['title' => 'Edit Profil Lulusan', 'pl' => $pl]);
+        return view('content.pustaka.edit_pustaka', ['title' => 'Edit Pustaka', 'pustaka' => $pustaka]);
     }
 
-    public function update($pl, Request $request)
+    public function update($pustaka, Request $request)
     {
-        if ($request->kodePL == $pl) {
-            $validator = Validator::make($request->all(), [
-                'kodePL' => 'required',
-                'deskripsiPL' => 'required',
-            ]);
-        } else {
-            $validator = Validator::make($request->all(), [
-                'kodePL' => 'required|unique:profil_lulusan,kodePL',
-                'deskripsiPL' => 'required',
-            ]);
-        }
-        if ($validator->fails()) {
-            // flash('error')->error();
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
-
-        if (pustaka::where('kodePL', $request->kodePL)->exists() && $request->kodePL != $pl) {
-            return redirect()->back()->with('error', 'Kode Profil Lulusan sudah ada');
-        }
-
-        $pl = pustaka::where('kodePL', $pl)->first();
-        $pl->update([
-            'kodePL' => $request->kodePL,
-            'deskripsiPL' => $request->deskripsiPL,
+        $request->validate([
+            'judul' => 'required',
+            'nama_penulis' => 'required',
+            'tahun' => 'required',
+            'penerbit' => 'required',
         ]);
 
-        $pl->save();
+        $pustaka = pustaka::where('id_pustaka', $pustaka)->first();
+        $pustaka->update([
+            'judul' => $request->judul,
+            'nama_penulis' => $request->nama_penulis,
+            'tahun' => $request->tahun,
+            'penerbit' => $request->penerbit,
+        ]);
 
-        return redirect()->route('kurikulum.data.pustaka')->with('success', 'Profil Lulusan berhasil diubah');
+        $pustaka->save();
+
+        return redirect()->route('kurikulum.data.pustaka')->with('success', 'Pustaka berhasil diubah');
     }
 
     public function delete($pl)
