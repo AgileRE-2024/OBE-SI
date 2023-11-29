@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Mata_Kuliah', function (Blueprint $table) {
-            $table->char('kodeMK', 10)->unique();
+            $table->char('kodeMK', 10)->unique()->onDelete('restrict')->onUpdate('cascade');
             $table->string('namaMK', 100);
             $table->boolean('jenisMK');
             $table->integer('sks');

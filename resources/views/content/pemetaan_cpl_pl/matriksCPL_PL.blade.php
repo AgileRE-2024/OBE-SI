@@ -14,12 +14,14 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a id="exportPDF" class="btn btn-outline-danger" href="{{ route('kurikulum.pemetaan.export_cpl_pl', ['pdf']) }}"><i
-                        class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+                <a id="exportPDF" class="btn btn-outline-danger"
+                    href="{{ route('kurikulum.pemetaan.export_cpl_pl', ['pdf']) }}"><i class="bi bi-file-earmark-pdf-fill">
+                    </i>Export PDF</a>
             </div>
             <div>
-                <a id="exportExcel" class="btn btn-success" href="{{ route('kurikulum.pemetaan.export_cpl_pl', ['excel']) }}"><i
-                        class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+                <a id="exportExcel" class="btn btn-success"
+                    href="{{ route('kurikulum.pemetaan.export_cpl_pl', ['excel']) }}"><i class="bi bi-file-earmark-excel">
+                    </i>Export Excel</a>
             </div>
         </div>
         <br>
@@ -52,7 +54,8 @@
                             <th scope="row" @if ($pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0) style="background-color: yellow;" @endif>
                                 {{ $cpl->kodeCPL }}</th>
                             <th scope="row" class="text-start"
-                                @if ($pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0) style="background-color: yellow;" @endif>
+                                style="word-break: break-word;
+                            max-width: 75px; @if ($pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0) background-color: yellow; @endif ">
                                 {{ $cpl->deskripsiCPL }}</th>
                             @foreach ($pl_list as $pl)
                                 <td @if (
@@ -63,19 +66,20 @@
                                         onclick="updateTable('{{ $cpl->kodeCPL }}-{{ $pl->kodePL }}')"
                                         name="checkbox_{{ $cpl->kodeCPL }}-{{ $pl->kodePL }}"
                                         value="{{ $cpl->kodeCPL }}&{{ $pl->kodePL }}"
-                                        @if ($pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->where('kodePL', '===', $pl->kodePL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
+                                        @if ($pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->where('kodePL', '===', $pl->kodePL)->count()) checked @endif
+                                        @if (auth()->user()->role != 1) disabled @endif>
                                 </td>
                             @endforeach
                         </tr>
                     @endforeach
                 </tbody>
             </table>
-            @if(auth()->user()->role==1)
-            <div class="d-flex justify-content-end">
-                <button id="submitbutton" class="btn btn-success">
-                    Simpan
-                </button>
-            </div>
+            @if (auth()->user()->role == 1)
+                <div class="d-flex justify-content-end">
+                    <button id="submitbutton" class="btn btn-success">
+                        Simpan
+                    </button>
+                </div>
             @endif
 
     </div>

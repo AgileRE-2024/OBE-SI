@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('kodeNilai',10);
             $table->string('kodePenilaian',4);
             $table->char('nilaiPerTeknik',2);
-            $table->foreign('kodeNilai')->references('kodeNilai')->on('Nilai_Mahasiswa')->onDelete('restrict');
+            $table->foreign('kodeNilai')->references('kodeNilai')->on('Nilai_Mahasiswa')->onDelete('restrict')->onUpdate('cascade');
             // $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('restrict');
             $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('cascade');
             $table->timestamps();

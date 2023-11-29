@@ -34,7 +34,8 @@
                     <tr>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode Profil Lulusan</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Profil Lulusan
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 20%">Nama Profil Lulusan</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 30%">Deskripsi Profil Lulusan
                         </th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
@@ -48,6 +49,10 @@
                             <td scope="row">
                                 {{ $pl->kodePL }}</td>
                             <td scope="row">
+                                {{ $pl->namaPL }}</td>
+                            <td scope="row"
+                                style="word-break: break-word;
+                            max-width: 150px;">
                                 {{ $pl->deskripsiPL }}</td>
                             <td scope="row">
                                 @if (auth()->user()->role == 1)

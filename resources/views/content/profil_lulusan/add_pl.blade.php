@@ -17,7 +17,17 @@
                         @error('kodePL')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodePL" class="form-control" placeholder="Kode Profil Lulusan">
+                        <input type="text" name="kodePL" class="form-control"
+                            placeholder="Kode Profil Lulusan (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
+                            maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
+                            oninput="updateInput(this);" value="PL">
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Profil Lulusan</label>
+                        @error('namaPL')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <input type="text" name="namaPL" class="form-control" placeholder="Nama Profil Lulusan">
                     </div>
 
                     <div class="form-group">
@@ -38,3 +48,18 @@
         </div>
     </div>
 @endsection
+
+<script>
+    function updateInput(input) {
+        var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+
+        // Terapkan validasi minlength secara manual jika diperlukan
+        if (uppercaseValue.length >= 4) {
+            input.setCustomValidity('');
+        } else {
+            input.setCustomValidity('Panjang minimal adalah 4 karakter');
+        }
+
+        input.value = uppercaseValue;
+    }
+</script>

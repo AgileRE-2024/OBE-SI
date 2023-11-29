@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('cpl_prodis', function (Blueprint $table) {
             // $table->id();
-            $table->String('kodeCPL',5)->unique()->primary();
+            $table->String('kodeCPL',5)->unique()->primary()->onDelete('restrict')->onUpdate('cascade');
             $table->String('deskripsiCPL');
             $table->timestamps();
         });

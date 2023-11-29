@@ -6,6 +6,7 @@ use App\Exports\ProfilLulusanExport;
 use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use App\Models\Profil_Lulusan;
+use App\Models\Detail_PL_CPLProdi;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
@@ -56,15 +57,16 @@ class ProfilLulusanController extends Controller
 
     public function storeProfilLulusan(Request $request)
     {
-        $request->validate([
-            'kodePL' => 'required|unique:profil_lulusan,kodePL',
+        // dd($request->all());
+        $data = $request->validate([
+            'kodePL' => 'required|unique:profil_lulusan,kodePL|max:10',
             'deskripsiPL' => 'required',
+            'namaPL' => 'required',
         ]);
 
-        Profil_Lulusan::create([
-            'kodePL' => $request->kodePL,
-            'deskripsiPL' => $request->deskripsiPL,
-        ]);
+        // dd($data);
+
+        Profil_Lulusan::create($data);
 
         return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil ditambahkan');
     }
@@ -111,9 +113,13 @@ class ProfilLulusanController extends Controller
 
     public function delete($pl)
     {
-        $pl = Profil_Lulusan::where('kodePL', $pl)->first();
-        $pl->delete();
+        if (Detail_PL_CPLProdi::where('kodePL', $pl)->exists()) {
+            return redirect()->route('kurikulum.data.profil_lulusan')->with('error', 'Profil Lulusan masih berelasi dengan CPL Prodi.');
+        }else{
+            $pl = Profil_Lulusan::where('kodePL', $pl)->first();
+            $pl->delete();
+            return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil dihapus');
+        }
 
-        return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil dihapus');
     }
 }

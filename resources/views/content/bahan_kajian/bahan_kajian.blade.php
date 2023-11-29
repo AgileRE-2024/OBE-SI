@@ -51,7 +51,8 @@
                             <td scope="row">
                                 {{ $bk->kodeBK }}
                             </td>
-                            <td scope="row">
+                            <td scope="row" style="word-break: break-word;
+                            max-width: 75px;">
                                 {{ $bk->namaBK }}
                             </td>
                             <td scope="row">
@@ -61,7 +62,8 @@
                                     {{ 'Pilihan' }}
                                 @endif
                             </td>
-                            <td scope="row">
+                            <td scope="row" style="word-break: break-word;
+                            max-width: 50px;">
                                 {{ $bk->referensiBK }}
                             </td>
                             <td scope="row">

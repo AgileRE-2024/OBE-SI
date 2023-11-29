@@ -17,8 +17,8 @@ return new class extends Migration
             $table->char('kodePL', 10);
             $table->char('kodeCPL', 10);
             $table->timestamps();
-            $table->foreign('kodePL')->references('kodePL')->on('Profil_Lulusan')->onDelete('restrict');
-            $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
+            $table->foreign('kodePL')->references('kodePL')->on('Profil_Lulusan')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
@@ -32,3 +32,4 @@ return new class extends Migration
         Schema::dropIfExists('Detail_PL_CPLProdi');
     }
 };
+

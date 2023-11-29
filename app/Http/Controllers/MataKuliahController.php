@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Exports\MataKuliahExport;
 use Dompdf\Dompdf;
 use App\Models\Mata_Kuliah;
+use App\Models\Detail_BK_MK;
+use App\Models\Detail_MK_CPMK;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -177,10 +179,13 @@ class MataKuliahController extends Controller
     {
         if (Mata_Kuliah::where('mat_kodeMK', $mk)->exists()) {
             return redirect()->route('kurikulum.data.mata_kuliah')->with('error', 'Bahan Kuliah gagal dihapus. Bahan Kuliah ini digunakan oleh bahan kuliah lain');
-        } else {
+        } elseif (Detail_BK_MK::where('kodeMK', $mk)->exists()) {
+            return redirect()->route('kurikulum.data.mata_kuliah')->with('error', 'Bahan Kuliah masih berelasi dengan Bahan Kajian.');
+        } elseif (Detail_MK_CPMK::where('kodeMK', $mk)->exists()) {
+            return redirect()->route('kurikulum.data.mata_kuliah')->with('error', 'Bahan Kuliah masih berelasi dengan CPL.');
+        }else {
             $mk = Mata_Kuliah::where('kodeMK', $mk)->first();
             $mk->delete();
-
             return redirect()->route('kurikulum.data.mata_kuliah')->with('success', 'Bahan Kuliah berhasil dihapus');
         }
     }

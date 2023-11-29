@@ -31,7 +31,14 @@
                         @error('kodeSubCPMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodeSubCPMK" class="form-control" placeholder="Kode Sub CPMK">
+                        {{-- <input type="text" name="kodeSubCPMK" class="form-control" placeholder="Kode Sub CPMK"
+                            pattern="[A-Z0-9]+" minlength="4" maxlength="10"> --}}
+                        <input type="text" name="kodeSubCPMK" class="form-control"
+                            placeholder="Kode Sub CPMK (Masukkan huruf besar, huruf kecil, dan angka saja)"
+                            pattern="[a-zA-Z0-9-]+" maxlength="12" minlength="4"
+                            title="Harap masukkan huruf besar, huruf kecil, dan angka saja" oninput="updateInput(this);"
+                            value="Sub-CPMK">
+
                     </div>
 
                     <div class="form-group">
@@ -52,3 +59,18 @@
         </div>
     </div>
 @endsection
+
+<script>
+    function updateInput(input) {
+        var newValue = input.value.replace(/[^a-zA-Z0-9-]/g, '');
+
+        // Terapkan validasi minlength secara manual jika diperlukan
+        if (newValue.length >= 4) {
+            input.setCustomValidity('');
+        } else {
+            input.setCustomValidity('Panjang minimal adalah 4 karakter');
+        }
+
+        input.value = newValue;
+    }
+</script>
