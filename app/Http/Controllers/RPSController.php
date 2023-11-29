@@ -20,6 +20,8 @@ use Dompdf\Dompdf;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Validation\Rule;
+use App\Exports\ExportListRps;
+
 
 class RPSController extends Controller
 {
@@ -30,36 +32,30 @@ class RPSController extends Controller
 
     public function index()
     {
-        // return view('content.cari_rps', [
-        //     'title' => 'RPS',
-        //     'rps_list'=> RPS::all(),
-        //     'teknik_penilaian_list'=> Teknik_Penilaian::all(),
-        //     'detail_rps_list'=> Detail_RPS::all(),
-        //     'dosen_list'=> User::all(),
-        //     'mk_list' => Mata_Kuliah::all(),
-        //     'minggu_rps_list' => Minggu_RPS::all(),
-        //     'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
-        //     'subcpmk_list'=>SubCPMK::all(),
-        //     'teknik_penilaian_list'=>Teknik_Penilaian::all(),
-        // ]);
-        
         $newestYear = RPS::max('tahunAjaran');
         $rps = RPS::where('tahunAjaran',$newestYear)->get();
-
+        $mk_list = Mata_Kuliah::all();
 
         return view('cari_rps', [
             'title' => 'RPS',
             'rps_list'=> $rps,
-            // 'teknik_penilaian_list'=> Teknik_Penilaian::all(),
-            // 'detail_rps_list'=> Detail_RPS::all(),
-            // 'dosen_list'=> User::all(),
-            // 'mk_list' => Mata_Kuliah::all(),
-            // 'minggu_rps_list' => Minggu_RPS::all(),
-            // 'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
-            // 'subcpmk_list'=>SubCPMK::all(),
-            // 'teknik_penilaian_list'=>Teknik_Penilaian::all(),
+            'mk_list' => $mk_list,
+            'newestYear' => $newestYear
         ]);
     }
+
+    public function filter_by_matkul($kodeMK)
+    {
+        $rps = RPS::where('kodeMK', $kodeMK)->get();
+        $mk = Mata_Kuliah::where('kodeMK', $kodeMK)->first();
+
+        return view('riwayat_rps', [
+            'title' => 'Riwayat RPS',
+            'rps_list'=> $rps,
+            'mk' => $mk,
+        ]);
+    }
+
     public function show($kodeRPS)
     {
         return view('content.rps', [
@@ -67,11 +63,9 @@ class RPSController extends Controller
             'kodeRPS'=>$kodeRPS,
             'rps_list'=> RPS::all(),
             'teknik_penilaian_list'=> Teknik_Penilaian::all(),
-            'detail_rps_list'=> Detail_RPS::all(),
             'dosen_list'=> User::all(),
             'mk_list' => Mata_Kuliah::all(),
             'minggu_rps_list' => Minggu_RPS::all(),
-            'detail_peran_dosen_list' => Detail_Peran_Dosen::all()->where('kodeRPS', $kodeRPS),
             'subcpmk_list'=>SubCPMK::all(),
             'teknik_penilaian_list'=>Teknik_Penilaian::all(),
         ]);
@@ -127,11 +121,9 @@ class RPSController extends Controller
                 'title' => 'RPS',
                 'rps_list'=> RPS::all(),
                 'teknik_penilaian_list'=> Teknik_Penilaian::all(),
-                'detail_rps_list'=> Detail_RPS::all(),
                 'dosen_list'=> User::all(),
                 'mk_list' => Mata_Kuliah::all(),
                 'minggu_rps_list' => Minggu_RPS::all(),
-                'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
                 'subcpmk_list'=>SubCPMK::all(),
                 'teknik_penilaian_list'=>Teknik_Penilaian::all(),
                 'kodeRPS'=>$rps->kodeRPS,
@@ -142,11 +134,9 @@ class RPSController extends Controller
                 'title' => 'RPS',
                 'rps_list'=> RPS::all(),
                 'teknik_penilaian_list'=> Teknik_Penilaian::all(),
-                'detail_rps_list'=> Detail_RPS::all(),
                 'dosen_list'=> User::all(),
                 'mk_list' => Mata_Kuliah::all(),
                 'minggu_rps_list' => Minggu_RPS::all(),
-                'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
                 'subcpmk_list'=>SubCPMK::all(),
                 'teknik_penilaian_list'=>Teknik_Penilaian::all(),
             ])->with('message', $message);
@@ -213,11 +203,9 @@ class RPSController extends Controller
             'title' => 'RPS',
             'rps_list'=> RPS::all(),
             'teknik_penilaian_list'=> Teknik_Penilaian::all(),
-            'detail_rps_list'=> Detail_RPS::all(),
             'dosen_list'=> User::all(),
             'mk_list' => Mata_Kuliah::all(),
             'minggu_rps_list' => Minggu_RPS::all(),
-            'detail_peran_dosen_list' => Detail_Peran_Dosen::all(),
             'subcpmk_list'=>SubCPMK::all(),
             'teknik_penilaian_list'=>Teknik_Penilaian::all(),
             'rps' => $rps,
@@ -245,6 +233,16 @@ class RPSController extends Controller
             'list_cpmk' => $cpmk,
             'list_prasyarat' => $prasyarat
         ]);
+    }
+
+    //NEW FUNCTION 4
+    public function export_excel(){
+        return Excel::download(new ExportListRps,'list_rps.xlsx');
+    }
+
+    //NEW FUNCTION 4
+    public function export_filtered_excel($kodeMK){
+        return Excel::download(new ExportListRps($kodeMK),'list_rps.xlsx');
     }
     
 }

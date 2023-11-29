@@ -32,7 +32,7 @@
 <div class="card border" style="background-color: white">
     <div class="card-body" style="font-weight:600;">
     @if($rps->detail_penilaian)
-        <h5 style="font-weight: 400;">{{ $rps->detail_penilaian }}</h5>
+        <h5 style="font-weight: 400;">{!! $rps->detail_penilaian !!}</h5>
     @else
         <h5 style="font-weight: 400;">Belum ada data</h5>
         @endif

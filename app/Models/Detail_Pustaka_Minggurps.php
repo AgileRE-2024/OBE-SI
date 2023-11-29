@@ -9,7 +9,11 @@ class Detail_Pustaka_Minggurps extends Model
 {
     protected $table = 'Detail_Pustaka_Minggurps';
     protected $fillable = [
-        'id_pustaka', 'kodeMingguRPS'
+        'id_pustaka', 'kodeMingguRPS', 'referensi'
     ];
-use HasFactory;
+
+    public function Pustaka()
+    {
+        return $this->belongsTo(pustaka::class, 'id_pustaka', 'id_pustaka');
+    }
 }

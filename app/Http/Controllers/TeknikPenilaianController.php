@@ -61,6 +61,7 @@ class TeknikPenilaianController extends Controller
     public function updateTeknikPenilaian(Request $request, $kodeRPS)
     {
         
+        
         $request->validate([
             'detail_penilaian' => 'required',
         ]);
@@ -157,16 +158,18 @@ class TeknikPenilaianController extends Controller
     //     return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $request->kodeRPS ])->with('success', 'Teknik Penilaian berhasil diupdate');
     // }
 
-    public function deleteTeknikPenilaian(String $tp)
-    {
-
-        $d = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        $kodeRPS=$d->kodeRPS;
-        $a= Detail_RPS::all()->where('kodePenilaian','=',  $d->kodePenilaian)->where('kodeRPS', '=',$d->kodeRPS)->count();
-        if ($a>0) {
-            return redirect()->back()->with('warning', 'Hapus relasi pada rencana pembelajaran');
+    //NEW FUNCTION RICH TEXT
+    public function uploadTeknikPenilaian(Request $request){
+        
+        if($request->hasFile('detail_penilaian')){
+            
+            $originName = $request->file('detail_penilaian')->getClientOriginalName();
+            $fileName = pathinfo($originName, PATHINFO_FILENAME);
+            $extension = $request->file('detail_penilaian')-> getClientOriginalExtension();
+            $fileName = $fileName.'_'.time().'.'.$extension;
+            $request-> file('detail_penilaian')->move(public_path('media'),$fileName);
+            $url = asset('media/'.$fileName);
+            return response()->json(['fileName'=> $fileName,'uploaded'=>1,'url'=>$url]);
         }
-        $d->delete();
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with('success', 'Teknik Penilaian berhasil dihapus');
     }
 }
