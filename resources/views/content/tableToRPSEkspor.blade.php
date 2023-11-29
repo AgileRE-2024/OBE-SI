@@ -49,30 +49,46 @@
 </head>
 
 <body>
-    <div style="text-align: center; padding: 20px 0px 5px 0px; font-size: 24px; font-weight: bold; margin:auto">
-        RPS
-    </div>
-
     {{-- <div style="text-align: center; margin:1cm;"> --}}
         <table class="table table-bordered" style="text-align: center;">
-            <tr style="background-color: lightgray; ">
-                <th class="align-middle" scope="col" style="width: 15%; background-color: lightgray;">
+            <tr>
+                <th class="align-middle" scope="col">
                     <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/unair.png'))) }}"
-                        width="75" height="75">
-                </th>
-                <th class="align-middle" scope="col" colspan="5" style="width: 70%; background-color: lightgray;">
+                        width="75" height="75"><br>Universitas Airlangga</th>
+                    <th class="align-middle" rowspan="1">RENCANA PEMBELAJARAN SEMESTER</th>
+                    <th class="align-middle" rowspan="1">Disiapkan oleh</th>
+                    <th class="align-middle" rowspan="1">Diperiksa oleh</th>
+                    <th class="align-middle" rowspan="1" colspan="1">Disetujui oleh</th>
+                    <th class="align-middle" rowspan="1" >Nomor Register Dokumen</th>     
+                    <!-- <td class="align-middle" scope="col" colspan="7" style="width: 25%">RENCANA PEMBELAJARAN
+                        SEMESTER
+                    </td>
+                    <td class="align-middle" scope="col" colspan="7" style="width: 25%">Disiapkan oleh
+                    </td> -->
+                <!-- </th> -->
+                
+                <!-- <th style="border-right: 1px solid black;">
+                    
+                </th> -->
+                <!-- <th class="align-middle" scope="col" colspan="5" style="width: 70%; background-color: lightgray;">
                     <div style="text-align: center;">
                         UNIVERSITAS AIRLANGGA<br>
                         FAKULTAS SAINS DAN TEKNOLOGI<br>
                         PRODI SISTEM INFORMASI
                     </div>
-                </th>
-                <th class="align-middle" scope="col"
+                </th> -->
+                <!-- <th class="align-middle" scope="col"
                     style="width: 15%; background-color: lightgray; border-right: 1px solid black;">{{ $kodeRPS }}
-                </th>
+                </th> -->
             </tr>
-
-            <tbody>
+            
+            <tr>
+                <td style="border:none" colspan="4">
+                    <div style="text-align: left; padding: 10px 0px 5px 0px; font-size: 20px; font-weight: bold">
+                    A. IDENTITAS MATA KULIAH
+                    </div>
+                </td>
+            </tr>
                 @php
                     $rps = $rps_list->where('kodeRPS', $kodeRPS)->first();
                     // print($rps);
@@ -80,22 +96,85 @@
                     // print($mk);
                     $bk_list = $mk->Bahan_Kajian;
                     $counterBk = $mk->Bahan_Kajian->count();
-                @endphp
-
-                <tr style="border-right: 1px solid black;">
-                    <th class="align-middle" scope="col" colspan="7" style="width: 100%">RENCANA PEMBELAJARAN
-                        SEMESTER</th>
-                </tr>
-
+                @endphp                
                 <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">1. Nama Mata Kuliah</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->namaMK }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">2. Kode Mata Kuliah</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->kodeMK }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">3. Beban Studi (sks)</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->sks }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">4. Semester</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->semester }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">5. Jurusan/Prodi</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->namaProdi }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">6. Capaian Pembelajaran Lulusan (CPL)</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->deskripsiMK }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">7. Capaian Pembelajaran Mata Kuliah (CPMK)</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->deskripsiMK }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">8. Deskripsi Mata Kuliah</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->deskripsiMK }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">9. Prasyarat (bila ada)</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->deskripsiMK }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">10. Penanggung Jawab</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->penanggungJawab }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;" rowspan="1" colspan="3">11. Dosen Pengampu</th>
+                    <td style="text-align: left;" rowspan="1" colspan="7">{{ $mk->dosenPengampu }}</td>
+                </tr>
+        
+        <tr>
+            <td style="border:none" colspan="4">
+            <div style="text-align: left; padding: 10px 0px 5px 0px; font-size: 20px; font-weight: bold">
+                B. PROGRAM PEMBELAJARAN
+                </div>
+        </td>
+        </tr>
+                <tr>
+                    <th style="text-align: center;" rowspan="2" colspan="2">Minggu ke-</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">
+                    Kemampuan Akhir yang diharapkan di setiap tahapan pembelajaran 
+                    (Sub-Capaian Mata Kuliah) 
+                    (C, A, P)</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">Bahan Kajian</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">Bentuk dan Metode Pembelajaran</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">Media</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">Waktu</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">Pengalaman belajar mahasiswa</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">Kriteria Penilaian dan Indikator (hard dan soft skills)</th>
+                    <th style="text-align: center;" rowspan="2" colspan="3">Bobot Nilai</th>
+                    <th style="text-align: center;" rowspan="" colspan="3">Ref. (nomor)</th>
+                </tr>
+        </table>
+        
+                <!-- <tr>
                     <th class="align-middle" rowspan="1" colspan="2" style="width: 25%">MATA KULIAH (MK)</th>
                     <th class="align-middle" rowspan="1" style="width: 10%">KODE</th>
                     <th class="align-middle" rowspan="1" style="width: 25%">Bahan Kajian (BK)</th>
                     <th class="align-middle" rowspan="1" colspan="1" style="width: 15%">BOBOT (sks)</th>
                     <th class="align-middle" rowspan="1" style="width: 10%">SEMESTER</th>
                     <th class="align-middle" rowspan="1" style="width: 15%">Tanggal Penyusunan</th>
-                </tr>
-                @if ($counterBk == 1)
+                </tr> -->
+                <!-- @if ($counterBk == 1)
                     <tr>
                         <td class="align-middle" rowspan={{ $counterBk }} colspan="2" style="width: 25%">
                             {{ $mk->namaMK }}
@@ -142,9 +221,9 @@
                             </tr>
                         @endif
                     @endfor
-                @endif
+                @endif -->
 
-                {{-- ini dosen --}}
+                <!-- {{-- ini dosen --}}
                 @php
                     
                     // print($bk_list);
@@ -247,8 +326,8 @@
                     // print_r($list_minggu_rps);
                     $rowspanCP = 6;
                     $rowspanCP = $rowspanCP + $list_cpl->count() + $list_cpmk->count() + $list_subcpmk->count();
-                @endphp
-                <tr>
+                @endphp -->
+                <!-- <tr>
                     <th style="vertical-align: top;" rowspan={{ $rowspanCP }} colspan="1">Capaian Pembelajaran
                     </th>
                 </tr>
@@ -275,8 +354,8 @@
                         <td style="text-align: left;" rowspan="1" colspan="6">{{ $cpmk['deskripsiCPMK'] }}
                         </td>
                     </tr>
-                @endforeach
-                <tr>
+                @endforeach -->
+                <!-- <tr>
                     <th style="text-align: left;" rowspan="1" colspan="3">Kemampuan akhir tiap tahapan belajar
                         (Sub-CPMK)</th>
                     <th style="text-align: left;" rowspan="1" colspan="5"></th>
@@ -369,8 +448,8 @@
                     <th>Daring (6)</th>
                     <th>(7)</th>
                     <th>(8)</th>
-                </tr>
-
+                </tr> -->
+<!-- 
             <tbody>
                 @foreach ($minggu_rps_list->whereIn('kodeMingguRPS', $list_kode_minggu_rps) as $minggu_rps)
                     <tr>
@@ -399,6 +478,7 @@
                 </tr>
                 @endforeach
             </tbody>
-        </table>
+        </table> -->
+            
 </body>
 </html>
