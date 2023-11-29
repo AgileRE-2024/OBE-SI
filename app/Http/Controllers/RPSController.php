@@ -239,5 +239,10 @@ class RPSController extends Controller
     public function export_excel(){
         return Excel::download(new ExportListRps,'list_rps.xlsx');
     }
+
+    //NEW FUNCTION 4
+    public function export_filtered_excel($kodeMK){
+        return Excel::download(new ExportListRps($kodeMK),'list_rps.xlsx');
+    }
     
 }

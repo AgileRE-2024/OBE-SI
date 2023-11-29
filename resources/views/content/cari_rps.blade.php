@@ -73,7 +73,7 @@
                                 class="bi bi-file-earmark-pdf-fill"></i> Export PDF</a>
                     </div>
                     {{-- <div>
-                        <a id="excel" class="btn btn-success" href="/dashboard/rps/exportExcel"><i
+                        <a id="excel" class="btn btn-success" href="{{ route('export_excel_rps')}}"><i
                                 class="bi bi-file-earmark-excel"></i> Export Excel</a>
                     </div> --}}
                 </div>
@@ -450,7 +450,7 @@
                                 class="bi bi-file-earmark-pdf-fill"></i> Export PDF</a>
                     </div>
                     {{-- <div>
-                        <a id="excel" class="btn btn-success" href="/dashboard/rps/exportExcelRps"><i
+                        <a id="excel" class="btn btn-success" href="{{ route('export_excel_rps')}}"><i
                                 class="bi bi-file-earmark-excel"></i> Export Excel</a>
                     </div> --}}
                 </div>
