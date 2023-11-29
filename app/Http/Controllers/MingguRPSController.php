@@ -99,7 +99,7 @@ class MingguRPSController extends Controller
         $pustaka->delete();
         
         foreach ($request->pustaka as $value) {
-            dd($value);
+            // dd($value);
             if($value['judul']) {
                 $data = [
                     'id_pustaka' => $value['judul'],
