@@ -316,7 +316,7 @@ Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
 
         // Route::get('/pustaka/{kodeRPS}', [PustakaController::class, 'detail'])->name('pustaka');
     });
-    Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
+    Route::get('/dashboard/create', [RPSController::class, 'create'])->name('rps_create');
     Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');
 
     //ROUTE BARU SEGAF
