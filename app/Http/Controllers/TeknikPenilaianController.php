@@ -60,7 +60,7 @@ class TeknikPenilaianController extends Controller
 
     public function updateTeknikPenilaian(Request $request, $kodeRPS)
     {
-        dd($request->all());
+        // dd($request->all());
         $request->validate([
             'detail_penilaian' => 'required',
         ]);
