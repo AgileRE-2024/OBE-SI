@@ -269,6 +269,7 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], fun
     });
 
     Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
+    Route::get('/dashboard/rps/{kodeMK}', [RPSController::class,'filter_by_matkul', 'title'=>'RPS'])->name('rps.matkul');
     Route::get('/dashboard/cari_rps', [RPSController::class, 'filterNewestYearSemester'])->name('index');
     Route::post('/dashboard/cari_rps', [RPSController::class, 'processData'])->name('processForm');
     Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       

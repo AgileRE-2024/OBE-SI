@@ -157,19 +157,6 @@ class TeknikPenilaianController extends Controller
     //     return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $request->kodeRPS ])->with('success', 'Teknik Penilaian berhasil diupdate');
     // }
 
-    public function deleteTeknikPenilaian(String $tp)
-    {
-
-        $d = Teknik_Penilaian::where('kodePenilaian', $tp)->first();
-        $kodeRPS=$d->kodeRPS;
-        $a= Detail_RPS::all()->where('kodePenilaian','=',  $d->kodePenilaian)->where('kodeRPS', '=',$d->kodeRPS)->count();
-        if ($a>0) {
-            return redirect()->back()->with('warning', 'Hapus relasi pada rencana pembelajaran');
-        }
-        $d->delete();
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with('success', 'Teknik Penilaian berhasil dihapus');
-    }
-
     //NEW FUNCTION RICH TEXT
     public function uploadTeknikPenilaian(Request $request){
         dd($request);
