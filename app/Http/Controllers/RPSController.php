@@ -21,6 +21,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Validation\Rule;
 use App\Exports\ExportListRps;
+use App\Exports\ExportListFilteredRps;
 
 
 class RPSController extends Controller
@@ -242,7 +243,7 @@ class RPSController extends Controller
 
     //NEW FUNCTION 4
     public function export_filtered_excel($kodeMK){
-        return Excel::download(new ExportListRps($kodeMK),'list_rps.xlsx');
+        return Excel::download(new ExportListFilteredRps($kodeMK),'list_rps.xlsx');
     }
     
 }

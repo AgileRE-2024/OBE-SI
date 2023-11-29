@@ -267,17 +267,22 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], fun
         Route::get('/{tahun_ajaran}',[TeknikPenilaianCPMKController::class, 'table'])->name('data_penilaian');
         Route::get('/export/{tahun_ajaran}/{type}', [TeknikPenilaianCPMKController::class, 'exportFile'])->name('export');
     });
+    //CREATE AND STORE RPS
+    Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
+    Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');
 
+    
     Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
-    Route::get('/dashboard/rps/{kodeMK}', [RPSController::class,'filter_by_matkul', 'title'=>'RPS'])->name('rps.matkul');
+    Route::get('/dashboard/rps/{kodeMK}', [RPSController::class,'filter_by_matkul'])->name('rps.matkul');
     Route::get('/dashboard/cari_rps', [RPSController::class, 'filterNewestYearSemester'])->name('index');
     Route::post('/dashboard/cari_rps', [RPSController::class, 'processData'])->name('processForm');
+
+    //Export PDF
     Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');  
     Route::get('/generate-pdf', 'PDFController@generatePDF');
     //Export Excel     
-    Route::get('/dashboard/rps/exportExcelRps', [RPSController::class,'export_excel'])->name('export_excel_rps');
-    
-    Route::get('/dashboard/rps/exportExcelFilteredRps', [RPSController::class,'export_filtered_excel'])->name('export_filtered_excel_rps');
+    Route::get('/exportExcelRps', [RPSController::class,'export_excel'])->name('export_excel_rps');
+    Route::get('/dashboard/rps/exportExcelFilteredRps/{kodeMK}', [RPSController::class,'export_filtered_excel'])->name('export_filtered_excel_rps');
     
     //NEW ROUTE NEWEST RPS
     // Route::get('/dashboard/list_rps', [RPSController::class,'filterNewestYearSemester', 'title'=>'RPS'])->name('rps');
@@ -316,8 +321,7 @@ Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
 
         // Route::get('/pustaka/{kodeRPS}', [PustakaController::class, 'detail'])->name('pustaka');
     });
-    Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
-    Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');
+
 
     //ROUTE BARU SEGAF
     Route::post('/uploadImgTeknikPenilaian',[TeknikPenilaianController::class, 'uploadTeknikPenilaian'])->name('ckeditor.upload');

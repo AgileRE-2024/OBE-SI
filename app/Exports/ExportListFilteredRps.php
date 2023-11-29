@@ -6,12 +6,19 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 
 class ExportListFilteredRps implements FromCollection
 {
+    protected $kodeMK;
+
+    public function __construct($kodeMK)
+    {
+        $this->kodeMK = $kodeMK;
+    }
+
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection($kodeMK)
+    public function collection()
     {
-        $rps = RPS::where('kodeMK', $kodeMK)->get();
+        $rps = RPS::where('kodeMK', $this->kodeMK)->get();
         return $rps;
     }
 }
