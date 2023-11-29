@@ -277,7 +277,8 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], fun
     //Export Excel     
     Route::get('/dashboard/rps/exportExcelRps', [RPSController::class,'export_excel'])->name('export_excel_rps');
     
-
+    Route::get('/dashboard/rps/exportExcelFilteredRps', [RPSController::class,'export_filtered_excel'])->name('export_filtered_excel_rps');
+    
     //NEW ROUTE NEWEST RPS
     // Route::get('/dashboard/list_rps', [RPSController::class,'filterNewestYearSemester', 'title'=>'RPS'])->name('rps');
 });
