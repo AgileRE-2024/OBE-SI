@@ -84,9 +84,9 @@
                     <!-- <td scope="row">{{ $minggurps->temp_referensi }}</td> -->
                     <td scope="row">
                         @if($minggurps->Pustaka)
-                        @foreach($minggurps->Pustaka as $pustakaItem)
-                        <p style="font-style:italic;">{{ $pustakaItem->judul }}</p>
-                        <p>{{ $pustakaItem->referensi }}</p>
+                        @foreach($minggurps->PustakaMingguRPS as $pmItem)
+                        <p style="font-style:italic;" class="mb-0 pb-0">{{ $pmItem->Pustaka->judul }}</p>
+                        <p class="mt-0 pt-0">{{ $pmItem->referensi }}</p>
                         @endforeach
                         @endif
                     </td>

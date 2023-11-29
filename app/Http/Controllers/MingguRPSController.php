@@ -7,6 +7,7 @@ use App\Models\RPS;
 use Illuminate\Http\Request;
 use App\Models\Detail_RPS;
 use App\Models\pustaka;
+use App\Models\Detail_Pustaka_Minggurps;
 use App\Models\Mata_Kuliah;
 use App\Models\SubCPMK;
 use App\Models\Teknik_Penilaian;
@@ -75,7 +76,7 @@ class MingguRPSController extends Controller
             'pengalaman_belajar' => 'required',
             'temp_kriteria_penilaian' => 'required',
             'bobot_nilai' => 'required',
-            'judul_pustaka' => 'required',
+            // 'judul_pustaka' => 'required',
         ]);
 
         $data = [
@@ -93,7 +94,20 @@ class MingguRPSController extends Controller
         ];
 
         Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->update($data);
+
+        $pustaka = Detail_Pustaka_Minggurps::where('kodeMingguRPS', $kodeMingguRPS);
+        $pustaka->delete();
         
+        foreach ($request->pustaka as $value) {
+            if($value['judul']) {
+                $data = [
+                    'id_pustaka' => $value['judul'],
+                    'kodeMingguRPS' => $kodeMingguRPS,
+                    'referensi' => $value['referensi'],
+                ];
+                Detail_Pustaka_Minggurps::create($data);
+            }
+        }
 
         return redirect()
             ->route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS])

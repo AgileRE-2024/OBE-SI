@@ -24,7 +24,7 @@
                                 <option value="">-- Pilih Sub CMPK --</option>
                                 @foreach ($scpmk as $item)
                                 <option value="{{ $item->kodeSubCPMK }}"
-                                    {{ $item ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>
+                                    {{ $item->kodeSubCPMK ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>
                                     {{ $scpmk[$loop->index]->kodeSubCPMK }} {{ $scpmk[$loop->index]->deskripsiSubCPMK }}
                                 </option>
                                 @endforeach
@@ -37,7 +37,7 @@
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
                             <textarea rows="3" name="bahan_kajian" class="form-control" placeholder="Bahan Kajian"
-                                value="{{ $minggu_rps->bahan_kajian }}"></textarea>
+                                value="{{ $minggu_rps->bahan_kajian }}">{{ old('bahan_kajian') ? old('bahan_kajian') : $minggu_rps->bahan_kajian }}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -52,7 +52,7 @@
                                 @endphp
                                 @foreach ($options as $item)
                                 <option value="{{ $item }}"
-                                    {{ $item ==  $minggu_rps->bentukPembelajaran ? 'selected' : ''}}>
+                                    {{ $item ==  $minggu_rps->temp_bentuk ? 'selected' : ''}}>
                                     {{ $options[$loop->index] }}</option>
                                 @endforeach
                             </select>
@@ -70,7 +70,7 @@
                                 @endphp
                                 @foreach ($options as $item)
                                 <option value="{{ $item }}"
-                                    {{ $item ==  $minggu_rps->bentukPembelajaran ? 'selected' : ''}}>
+                                    {{ $item ==  $minggu_rps->temp_metode ? 'selected' : ''}}>
                                     {{ $options[$loop->index] }}</option>
                                 @endforeach
                             </select>
@@ -82,7 +82,7 @@
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
                             <textarea rows="3" name="penugasan" class="form-control" placeholder="Penugasan"
-                                value="{{ $minggu_rps->penugasan }}"></textarea>
+                                value="{{ $minggu_rps->penugasan }}">{{ old('penugasan') ? old('penugasan') : $minggu_rps->penugasan }}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -97,7 +97,7 @@
                                 $opsi=['Luring','Daring']
                                 @endphp
                                 @foreach ($options as $item)
-                                <option value="{{ $item }}">{{ $opsi[$loop->index] }}</option>
+                                <option value="{{ $item }}"{{ $item ==  $minggu_rps->luring ? 'selected' : ''}}>{{ $opsi[$loop->index] }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -136,7 +136,7 @@
                             @enderror
                             <textarea rows="3" name="pengalaman_belajar" class="form-control"
                                 placeholder="Pengalaman Belajar"
-                                value="{{ $minggu_rps->pengalaman_belajar }}">{{ old('indikatorPembelajaran') ? old('indikatorPembelajaran') : $minggu_rps->pengalaman_belajar }}</textarea>
+                                value="{{ $minggu_rps->pengalaman_belajar }}">{{ old('pengalaman_belajar') ? old('pengalaman_belajar') : $minggu_rps->pengalaman_belajar }}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -176,16 +176,16 @@
                                 @error('judul_pustaka')
                                 <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <select name="pustaka[0][judul]" id='judul_pustaka' class="form-select mb-1">
+                                <select name="pustaka[0][judul]" id="judul_pustaka" class="form-select mb-1">
                                     <option value="" selected disabled>-- Pilih Pustaka --</option>
                                     @foreach ($pustaka as $item)
-                                    <option value="{{ $item->judul }} {{ $item->judul ==  $minggu_rps->temp_kriteria_penilaian ? 'selected' : ''}}">{{ $pustaka[$loop->index]->judul }}</option>
+                                    <option value="{{ $item->id_pustaka }}">{{ $item->judul }}</option>
                                     @endforeach
                                 </select>
                                 @error('referensi_pustaka')
                                 <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <textarea rows="3" name="pustaka[0][referensi]" class="form-control"
+                                <textarea rows="3" name="pustaka[0][referensi]" id="referensi_pustaka" class="form-control"
                                     placeholder="Keterangan Pustaka" value=""></textarea>
                             </div>
                         </div>
@@ -201,7 +201,7 @@
                             $("#dynamic-ar").click(function () {
                                 ++i;
                                 $("#dynamicAddRemove").append(
-                                    '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="pustaka[' + i + '][judul]" id="judul_pustaka" class="form-select mb-1"><option value="{{ $item->judul }}" selected disabled>-- Pilih Pustaka --</option>@foreach ($pustaka as $item)<option value="{{ $item->judul }}">{{ $pustaka[$loop->index]->judul }}</option>@endforeach</select></td><td><textarea rows="3" name="pustaka[' + i + '][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value=""></textarea></td></div>'
+                                    '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="pustaka[' + i + '][judul]" id="judul_pustaka" class="form-select mb-1"><option value="" selected disabled>-- Pilih Pustaka --</option>@foreach ($pustaka as $item)<option value="{{ $item->id_pustaka }}">{{ $pustaka[$loop->index]->judul }}</option>@endforeach</select></td><td><textarea rows="3" name="pustaka[' + i + '][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value=""></textarea></td></div>'
                                 );
                             });
                             $(document).on('click', '.remove-input-field', function () {
