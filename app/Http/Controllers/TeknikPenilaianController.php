@@ -172,11 +172,12 @@ class TeknikPenilaianController extends Controller
 
     //NEW FUNCTION RICH TEXT
     public function uploadTeknikPenilaian(Request $request){
+        dd($request);
         if($request->hasFile('detail_penilaian')){
             $originName = $request->file('detail_penilaian')->getClientOriginalName();
             $fileName = pathinfo($originName, PATHINFO_FILENAME);
             $extension = $request->file('detail_penilaian')-> getClientOriginalExtension();
-            $fileName = $filename.'_'.time().'.'.$extension;
+            $fileName = $fileName.'_'.time().'.'.$extension;
             $request-> file('detail_penilaian')->move(public_path('media'),$fileName);
             $url = asset('media/'.$fileName);
             return response()->json(['fileName'=> $fileName,'uploaded'=>1,'url'=>$url]);

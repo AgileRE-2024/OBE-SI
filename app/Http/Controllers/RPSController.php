@@ -45,11 +45,12 @@ class RPSController extends Controller
         
         $newestYear = RPS::max('tahunAjaran');
         $rps = RPS::where('tahunAjaran',$newestYear)->get();
-
+        $mk_list = Mata_Kuliah::all();
 
         return view('cari_rps', [
             'title' => 'RPS',
             'rps_list'=> $rps,
+            'mk_list' => $mk_list,
             // 'teknik_penilaian_list'=> Teknik_Penilaian::all(),
             // 'detail_rps_list'=> Detail_RPS::all(),
             // 'dosen_list'=> User::all(),

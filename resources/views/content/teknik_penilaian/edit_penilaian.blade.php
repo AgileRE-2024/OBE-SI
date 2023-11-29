@@ -16,7 +16,7 @@
                         @error('detail_penilaian')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <textarea name="detail_penilaian" id="ckeditor" class="form-control" placeholder="Teknik Penilaian"
+                        <textarea name="detail_penilaian" id="editor" class="form-control" placeholder="Teknik Penilaian"
                             value="{{ old('detail_penilaian') ? old('detail_penilaian') : $rps->detail_penilaian }}"></textarea>
                     </div>
                     <div class="form-group pt-4">
@@ -30,10 +30,10 @@
     </div>
     <script>
         ClassicEditor
-            .create( document.querySelector( '#ckeditor' ),
+            .create( document.querySelector( '#editor' ),
             {
                 ckfinder:{
-                    uploadUrl:"{{ route('ckeditor.upload').'?_token='.csrf_token() }}",
+                    uploadUrl:"{{ route('ckeditor.upload') }}",
                 }
             }
             
