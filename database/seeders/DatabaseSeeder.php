@@ -76,17 +76,29 @@ class DatabaseSeeder extends Seeder
             'nip' => '197102111997021001',
             'jabatanDosen' => 'kps',
             'namaDosen' => 'Rimuljo',
-            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'password' => bcrypt('coba1234'), //password coba123
             'email' => 'rimuljo@gmail.com',
             'role' => true,
             'status' => "Aktif Mengajar"
         ]);
 
+        // ------------------------------------ Buat testing aja
+        User::create([
+            'nip' => '082011633029',
+            'jabatanDosen' => 'kps',
+            'namaDosen' => 'Daffa Hafiizh Permadi',
+            'password' => bcrypt('12345678'), //password 12345678
+            'email' => 'daffagt123@gmail.com',
+            'role' => true,
+            'status' => "Aktif Mengajar"
+        ]);
+        // ------------------------------------
+
         User::create([
             'nip' => '197101042008121001',
             'jabatanDosen' => 'Dosen',
             'namaDosen' => 'Taufik',
-            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'password' => bcrypt('coba1234'), //password coba123
             'email' => 'taufik@gmail.com',
             'role' => 0,
             'status' => "Aktif Mengajar"
@@ -96,16 +108,17 @@ class DatabaseSeeder extends Seeder
             'nip' => '32525252523',
             'jabatanDosen' => 'Admin',
             'namaDosen' => 'Admin',
-            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'password' => bcrypt('coba1234'), //password coba123
             'email' => 'admin@gmail.com',
             'role' => 2,
             'status' => "Aktif Bekerja"
         ]);
+
         User::create([
             'nip' => '198410272010122005',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Ira Puspitasari',
-            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'password' => bcrypt('coba1234'), //password coba123
             'email' => 'Guntur@gmail.com',
             'role' => 0,
             'status' => "Aktif Bekerja"
@@ -114,7 +127,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '198206062007101001',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Faried Effendy',
-            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'password' => bcrypt('coba1234'), //password coba123
             'email' => 'Petir@gmail.com',
             'role' => 0,
             'status' => "Aktif Bekerja"
@@ -123,7 +136,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '198110282006041003',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Indra Kharisma R, S.Kom., M.T.',
-            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'password' => bcrypt('coba1234'), //password coba123
             'email' => 'indra.kharisma@fst.unair.ac.id',
             'role' => 0,
             'status' => "Aktif Bekerja"
@@ -132,7 +145,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '197801262006041001',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Badrus Zaman, S.Kom., M.Cs.',
-            'password' => '$2a$12$.08Y4L4sR1PQCrxZjv7J5e2L/kDYNkHEiyqLOcRd3ro2PkhCyo7wm', //password coba123
+            'password' => bcrypt('coba1234'), //password coba123
             'email' => 'badruszaman@fst.unair.ac.id',
             'role' => 1,
             'status' => "Aktif Bekerja"

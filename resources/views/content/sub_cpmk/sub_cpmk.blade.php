@@ -52,7 +52,9 @@
                             <td scope="row">
                                 {{ $subcpmk->kodeSubCPMK }}
                             </td>
-                            <td scope="row">
+                            <td scope="row"
+                                style="word-break: break-word;
+                            max-width: 150px;">
                                 {{ $subcpmk->deskripsiSubCPMK }}
                             </td>
                             <td scope="row">

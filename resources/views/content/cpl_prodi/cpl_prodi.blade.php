@@ -51,10 +51,13 @@
                                 {{ $loop->iteration }}</td>
                             <td scope="row">
                                 {{ $cpl->kodeCPL }}</td>
-                            <td scope="row">
+                            <td scope="row" style="word-break: break-word;
+                            max-width: 75px;">
                                 {{ $cpl->referensiCPL }}
                             </td>
-                            <td scope="row">
+                            <td scope="row"
+                                style="word-break: break-word;
+                            max-width: 150px;">
                                 {{ $cpl->deskripsiCPL }}
                             </td>
                             <td scope="row">

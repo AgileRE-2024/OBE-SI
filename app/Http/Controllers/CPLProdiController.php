@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Exports\CPLProdiExport;
 use Dompdf\Dompdf;
 use App\Models\CPL_Prodi;
+use App\Models\Detail_CPLProdi_BK;
+use App\Models\Detail_PL_CPLProdi;
+use App\Models\Detail_SN_CPLProdi;
+use App\Models\CPMK;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
@@ -115,9 +119,18 @@ class CPLProdiController extends Controller
 
     public function deleteCPLProdi($cpl)
     {
-        $cpl = CPL_Prodi::where('kodeCPL', $cpl)->first();
-        $cpl->delete();
-
-        return redirect()->route('kurikulum.data.cpl_prodi')->with('success', 'CPL Prodi berhasil dihapus');
+        if (CPMK::where('kodeCPL', $cpl)->exists()) {
+            return redirect()->route('kurikulum.data.cpl_prodi')->with('error', 'CPL masih berelasi dengan CPMK.');
+        } elseif (Detail_PL_CPLProdi::where('kodeCPL', $cpl)->exists()) {
+            return redirect()->route('kurikulum.data.cpl_prodi')->with('error', 'CPL masih berelasi dengan Profil Lulusan.');
+        }elseif (Detail_SN_CPLProdi::where('kodeCPL', $cpl)->exists()) {
+            return redirect()->route('kurikulum.data.cpl_prodi')->with('error', 'CPL masih berelasi dengan SN.');
+        }elseif (Detail_CPLProdi_BK::where('kodeCPL', $cpl)->exists()) {
+            return redirect()->route('kurikulum.data.cpl_prodi')->with('error', 'CPL masih berelasi dengan BK.');
+        }
+        else {
+            $cpl = CPL_Prodi::where('kodeCPL', $cpl)->first()->delete();
+            return redirect()->route('kurikulum.data.cpl_prodi')->with('success', 'CPL Prodi berhasil dihapus');
+        }
     }
 }

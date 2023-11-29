@@ -115,13 +115,13 @@
                                                 {{ $p->namaMK }}</p>
                                             <div class="form-group">
                                                 <label for="sks">SKS</label>
-                                                <input type="number" min="1" max="6" class="form-control"
+                                                <input type="number" min="1" max="8" class="form-control"
                                                     id="sks" name="sks" value="{{ old('sks', $p->sks) }}"
                                                     required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="semester">Semester</label>
-                                                <input type="number" min="1" max="6" class="form-control"
+                                                <input type="number" min="1" max="8" class="form-control"
                                                     id="semester" name="semester"
                                                     value="{{ old('semester', $p->semester) }}" required>
                                             </div>

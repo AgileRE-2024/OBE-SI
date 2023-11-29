@@ -29,7 +29,9 @@
             <div class="form-group row my-4">
                 <label for="kodeCPL" class="col-sm-2 col-form-label">Capaian Pembelajaran</label>
                 <div class="col-sm-10">
-                    <span type="text" readonly class="form-control-plaintext" name="kodeCPL" id="kodeCPL">
+                    <span type="text" readonly class="form-control-plaintext" name="kodeCPL" id="kodeCPL"
+                        style="word-break: break-word;
+                    max-width: 700px;">
                         {{ $cpmk->CPL->kodeCPL }} - {{ $cpmk->CPL->deskripsiCPL }}
                     </span>
                 </div>
@@ -37,7 +39,8 @@
             <div class="row">
                 <div class="form-group col-2">
                     <label for="kode">Kode CPMK</label>
-                    <input type="text" class="form-control" name="kodeCPMK" id="kode" value="{{ $cpmk->kodeCPMK }}">
+                    <input type="text" class="form-control" name="kodeCPMK" id="kode" value="{{ $cpmk->kodeCPMK }}"
+                        disabled>
                 </div>
                 <div class="form-group col-10">
                     <label for="deskripsi">Deskripsi CPMK</label>

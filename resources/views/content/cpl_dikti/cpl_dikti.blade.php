@@ -51,7 +51,9 @@
                             <td scope="row">
                                 {{ $cpl->kodeCPLSN }}
                             </td>
-                            <td scope="row">
+                            <td scope="row"
+                                style="word-break: break-word;
+                            max-width: 125px;">
                                 {{ $cpl->deskripsiSN }}
                             </td>
                             <td scope="row">

@@ -51,7 +51,9 @@
                             <td scope="row">
                                 {{ $list_cpmk->kodeCPMK }}
                             </td>
-                            <td scope="row">
+                            <td scope="row"
+                                style="word-break: break-word;
+                            max-width: 150px;">
                                 {{ $list_cpmk->deskripsiCPMK }}
                             </td>
                             <td scope="row" style="width:10%">

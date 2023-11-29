@@ -49,6 +49,7 @@ use App\Http\Controllers\PemetaanCplDiktiCplProdiController;
 use App\Http\Controllers\TahapPenilaianController;
 use App\Http\Controllers\TeknikPenilaianCPMKController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\ManagementUser;
 
 /*
@@ -369,3 +370,11 @@ Route::post('/reset-password', function (Request $request) {
         ? redirect()->route('login')->with('status', __($status))
         : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+Route::prefix('/dashboard/manajemen')->name('manajemen.')->group(function () {
+    Route::get('/manajemen_prodi', [ProdiController::class,'index'])->name('prodi')->middleware('role:admin,dosen,kurikulum');
+    Route::get('/edit_prodi/{pd}', [ProdiController::class, 'editProdi'])->name('edit_prodi')->middleware('role:admin');
+    Route::put('/edit_prodi/{pd}', [ProdiController::class, 'updateProdi'])->name('update_prodi')->middleware('role:admin');
+    // Route::get('/manajemen_prodi/add', [ProdiController::class, 'addProdi'])->name('add_prodi')->middleware('role:admin');
+    // Route::post('/manajemen_prodi/add', [ProdiController::class, 'storeProdi'])->name('store_prodi')->middleware('role:admin');
+});

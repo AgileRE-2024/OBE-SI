@@ -10,7 +10,7 @@ class Profil_Lulusan extends Model
     public $incrementing = false;
     protected $table = 'Profil_Lulusan';
     protected $fillable = [
-        'kodePL', 'deskripsiPL','namaPL'
+        'kodePL', 'deskripsiPL', 'namaPL'
     ];
 
     public function CPL_Prodi()

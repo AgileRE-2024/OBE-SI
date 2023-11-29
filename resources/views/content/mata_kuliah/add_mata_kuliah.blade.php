@@ -16,7 +16,12 @@
                         @error('kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah">
+                        {{-- <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah"
+                            pattern="[A-Za-z0-9]+" maxlength="4"> --}}
+                        <input type="text" name="kodeMK" class="form-control"
+                            placeholder="Kode Mata Kuliah (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
+                            maxlength="10" minlength="2" title="Harap masukkan huruf besar dan angka saja"
+                            oninput="updateInput(this);">
                     </div>
 
                     <div class="form-group">
@@ -24,7 +29,8 @@
                         @error('namaMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="namaMK" class="form-control" placeholder="Nama Mata Kuliah">
+                        <input maxlength="100" type="text" name="namaMK" class="form-control"
+                            placeholder="Nama Mata Kuliah">
                     </div>
 
                     <div class="form-group">
@@ -32,9 +38,8 @@
                         @error('deskripsi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea name="deskripsi" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
+                        <textarea maxlength="100" name="deskripsi" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
                     </div>
-
 
                     <div class="form-group">
                         <label>Kategori Mata Kuliah</label>
@@ -82,7 +87,8 @@
                         @error('sks')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah">
+                        <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah"
+                            min="0" max="4">
                     </div>
 
                     <div class="form-group">
@@ -118,3 +124,18 @@
         </div>
     </div>
 @endsection
+
+<script>
+    function updateInput(input) {
+        var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+
+        // Terapkan validasi minlength secara manual jika diperlukan
+        if (uppercaseValue.length >= 2) {
+            input.setCustomValidity('');
+        } else {
+            input.setCustomValidity('Panjang minimal adalah 2 karakter');
+        }
+
+        input.value = uppercaseValue;
+    }
+</script>

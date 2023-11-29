@@ -17,8 +17,8 @@ return new class extends Migration
             $table->char('kodeCPLSN', 10);
             $table->char('kodeCPL', 10);
             $table->timestamps();
-            $table->foreign('kodeCPLSN')->references('kodeCPLSN')->on('CPL_SN_Dikti')->onDelete('restrict');
-            $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
+            $table->foreign('kodeCPLSN')->references('kodeCPLSN')->on('CPL_SN_Dikti')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
