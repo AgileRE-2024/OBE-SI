@@ -322,7 +322,6 @@ Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
         // Route::get('/pustaka/{kodeRPS}', [PustakaController::class, 'detail'])->name('pustaka');
     });
 
-
     //ROUTE BARU SEGAF
     Route::post('/uploadImgTeknikPenilaian',[TeknikPenilaianController::class, 'uploadTeknikPenilaian'])->name('ckeditor.upload');
 
@@ -375,3 +374,8 @@ Route::post('/reset-password', function (Request $request) {
         ? redirect()->route('login')->with('status', __($status))
         : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
+
+//tes only 
+Route::get('/export/rps', function(){
+    return view('content.eksporRPS');
+});
