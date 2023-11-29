@@ -20,6 +20,8 @@ use Dompdf\Dompdf;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Validation\Rule;
+use App\Exports\ExportListRps;
+
 
 class RPSController extends Controller
 {
@@ -246,6 +248,11 @@ class RPSController extends Controller
             'list_cpmk' => $cpmk,
             'list_prasyarat' => $prasyarat
         ]);
+    }
+
+    //NEW FUNCTION 4
+    public function export_excel(){
+        return Excel::download(new ExportListRps,'list_rps.xlsx');
     }
     
 }

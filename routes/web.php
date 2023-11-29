@@ -271,10 +271,11 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], fun
     Route::get('/dashboard/rps', [RPSController::class,'index', 'title'=>'RPS'])->name('rps');
     Route::get('/dashboard/cari_rps', [RPSController::class, 'filterNewestYearSemester'])->name('index');
     Route::post('/dashboard/cari_rps', [RPSController::class, 'processData'])->name('processForm');
-    Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');       
-    
+    Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');  
     Route::get('/generate-pdf', 'PDFController@generatePDF');
-
+    //Export Excel     
+    Route::get('/dashboard/rps/exportExcelRps', [RPSController::class,'export_excel'])->name('export_excel_rps');
+    
 
     //NEW ROUTE NEWEST RPS
     // Route::get('/dashboard/list_rps', [RPSController::class,'filterNewestYearSemester', 'title'=>'RPS'])->name('rps');

@@ -60,7 +60,7 @@ class TeknikPenilaianController extends Controller
 
     public function updateTeknikPenilaian(Request $request, $kodeRPS)
     {
-        dd($request->all());
+        
         $request->validate([
             'detail_penilaian' => 'required',
         ]);
@@ -172,8 +172,9 @@ class TeknikPenilaianController extends Controller
 
     //NEW FUNCTION RICH TEXT
     public function uploadTeknikPenilaian(Request $request){
-        dd($request);
+        
         if($request->hasFile('detail_penilaian')){
+            
             $originName = $request->file('detail_penilaian')->getClientOriginalName();
             $fileName = pathinfo($originName, PATHINFO_FILENAME);
             $extension = $request->file('detail_penilaian')-> getClientOriginalExtension();

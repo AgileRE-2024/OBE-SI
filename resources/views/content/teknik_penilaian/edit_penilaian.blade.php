@@ -17,7 +17,7 @@
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
                         <textarea name="detail_penilaian" id="editor" class="form-control" placeholder="Teknik Penilaian"
-                            value="{{ old('detail_penilaian') ? old('detail_penilaian') : $rps->detail_penilaian }}"></textarea>
+                            value="{{ old('detail_penilaian') ? old('detail_penilaian') : $rps->detail_penilaian }}">{{ old('detail_penilaian') ? old('detail_penilaian') : $rps->detail_penilaian }}</textarea>
                     </div>
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i
@@ -33,7 +33,7 @@
             .create( document.querySelector( '#editor' ),
             {
                 ckfinder:{
-                    uploadUrl:"{{ route('ckeditor.upload') }}",
+                    uploadUrl:"{{ route('ckeditor.upload',['_token'=>csrf_token()]) }}",
                 }
             }
             
