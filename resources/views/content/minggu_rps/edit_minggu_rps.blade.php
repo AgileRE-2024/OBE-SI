@@ -97,7 +97,7 @@
                                 $opsi=['Luring','Daring']
                                 @endphp
                                 @foreach ($options as $item)
-                                <option value="{{ $item }}"{{ $item ==  $minggu_rps->luring ? 'selected' : ''}}>{{ $opsi[$loop->index] }}</option>
+                                <option value="{{ $item }}"{{ ($minggu_rps->luring ?? 1) == $item ? 'selected' : '' }}>{{ $opsi[$loop->index] }}</option>
                                 @endforeach
                             </select>
                         </div>
