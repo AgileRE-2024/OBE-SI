@@ -181,7 +181,7 @@ class RPSController extends Controller
             'dibuat_oleh' => $request->dibuat_oleh
         ]);
         // create minggu rps
-        for ($i = 0; $i < 14; $i++) {
+        for ($i = 0; $i < 16; $i++) {
             // Create a new RPS Minggu with the start date
             Minggu_RPS::create([
                 'id_rps' => $id_rps,
