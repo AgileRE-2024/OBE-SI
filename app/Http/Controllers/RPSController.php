@@ -20,6 +20,9 @@ use Dompdf\Dompdf;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Validation\Rule;
+use App\Exports\ExportListRps;
+use App\Exports\ExportListFilteredRps;
+
 
 class RPSController extends Controller
 {
@@ -214,13 +217,11 @@ class RPSController extends Controller
     // NEW FUNCTION 3
     public function detail($kodeRPS){
         $kodeMK = substr($kodeRPS, 0, 6);
-        $cpmk_mk = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK);
-        $kodeCPMKList = $cpmk_mk->pluck('kodeCPMK')->toArray();
+        $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
         $cpmk = CPMK::whereIn('kodeCPMK', $kodeCPMKList)->get();
         $kodeCPLList = $cpmk->pluck('kodeCPL')->toArray();
         $semuaCPL = CPL_Prodi::whereIn('kodeCPL', $kodeCPLList)->distinct()->get();
-        $prasyarat = Prasyarat::all()->where('kodeMK', $kodeMK);
-        $kodePrasyaratList = $prasyarat->pluck('mat_kodeMK')->toArray();
+        $kodePrasyaratList = Prasyarat::all()->where('kodeMK', $kodeMK)->pluck('mat_kodeMK')->toArray();
         $prasyarat = Mata_Kuliah::whereIn('kodeMK', $kodePrasyaratList)->distinct()->get();
 
         return view('rps_mata_kuliah', [
@@ -231,6 +232,16 @@ class RPSController extends Controller
             'list_cpmk' => $cpmk,
             'list_prasyarat' => $prasyarat
         ]);
+    }
+
+    //NEW FUNCTION 4
+    public function export_excel(){
+        return Excel::download(new ExportListRps,'list_rps.xlsx');
+    }
+
+    //NEW FUNCTION 4
+    public function export_filtered_excel($kodeMK){
+        return Excel::download(new ExportListFilteredRps($kodeMK),'list_rps.xlsx');
     }
     
 }

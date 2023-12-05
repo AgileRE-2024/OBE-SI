@@ -26,7 +26,7 @@
             </i>Export PDF</a>
     </div>
     <div>
-        <a class="btn btn-success" href="/dashboard/rps/export/excel/"><i class="bi bi-file-earmark-excel"> </i>Export
+        <a class="btn btn-success" href="/dashboard/rps/exportExcelFilteredRps/{{$mk->kodeMK}}"><i class="bi bi-file-earmark-excel"> </i>Export
             Excel</a>
     </div>
 </div>
