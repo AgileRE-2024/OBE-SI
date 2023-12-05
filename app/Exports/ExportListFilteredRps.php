@@ -3,8 +3,9 @@
 namespace App\Exports;
 use App\Models\RPS;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class ExportListFilteredRps implements FromCollection
+class ExportListFilteredRps implements FromCollection, WithHeadingRow
 {
     protected $kodeMK;
 
@@ -18,7 +19,10 @@ class ExportListFilteredRps implements FromCollection
     */
     public function collection()
     {
-        $rps = RPS::where('kodeMK', $this->kodeMK)->get();
+        
+        $rps = RPS::where('kodeMK', $this->kodeMK)
+        ->with('Mata_Kuliah')
+        ->select('id_rps','namaMK','tahunAjaran','semester')->get();
         return $rps;
     }
 }
