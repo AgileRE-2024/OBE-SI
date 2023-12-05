@@ -71,18 +71,25 @@ class RPSController extends Controller
             'teknik_penilaian_list'=>Teknik_Penilaian::all(),
         ]);
     }
-    public function export($type, $kodeRPS)
+    public function export($type, $idRPS, $kodeMK)
     {
         date_default_timezone_set('Asia/Jakarta');
-        $view = view('content.tableToRPSEkspor', [
+        $rps = RPS::where('id_rps', $idRPS)->first();
+        $dosen = User::where('nip', $rps->nip)->first();
+        // dd($dosen);
+        
+        
+        $view = view('content.eksporRPS', [
             'title' => 'RPS',
-            'rps_list'=> RPS::all(),
-            'kodeRPS' => $kodeRPS,
-            'teknik_penilaian_list'=> Teknik_Penilaian::all(),
+            'rps_list'=> RPS::where("id_rps", $idRPS),
+            'rps' => RPS::where('id_rps', $idRPS)->first(),
+            'dosen' => $dosen,
+            'minggu_rps_list' => Minggu_RPS::where("id_rps", $idRPS)->get(),
+            'mk' => Mata_Kuliah::where("kodeMK", $kodeMK)->first(),
+            'kodeRPS' => $idRPS,
+            'teknik_penilaian_list'=> Teknik_Penilaian::where("id_rps", $idRPS),
             'detail_rps_list'=> Detail_RPS_Penilaian::all(),
             'dosen_list'=> User::all(),
-            'mk_list' => Mata_Kuliah::all(),
-            'minggu_rps_list' => Minggu_RPS::all(),
             // 'detail_peran_dosen_list' => Detail_Peran_Dosen::all()->where('kodeRPS',$kodeRPS),
             'subcpmk_list'=>SubCPMK::all(),
             'teknik_penilaian_list'=>Teknik_Penilaian::all(),
@@ -109,6 +116,72 @@ class RPSController extends Controller
             //     Detail_MK_CPMK::all(), Mata_Kuliah::all(), SubCPMK::all(),CPMK::all()), $filename);
         }
     }
+
+    public function exportRiwayatRps($type, $kodeMK)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $date_time = date('Y_m_d_H_i_s');
+        $date = date('d-m-Y');
+        $view =  view('content.eksporRiwayatRps', [
+            'title' => 'DAFTAR RIWAYAT RPS',
+            'mk' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
+            'rps_list'=> RPS::where('kodeMK', $kodeMK)->get(),
+            'date_time' => $date,
+        ]);
+
+        if ($type === 'pdf') {
+            $dompdf = new Dompdf();
+            $dompdf->loadHtml($view);
+            $dompdf->setPaper('A4', 'landscape');
+
+            $dompdf->render();
+
+            $filename = "RPS_" . $date_time . ".pdf";
+
+            return Response::make($dompdf->output(), 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename=' . $filename
+            ]);
+        } else {
+            // $filename = "RPS_" . $date_time . '.xlsx';
+            // return Excel::download(new ExportPemetaanMKCpmkSubcpmk(
+            //     Detail_MK_CPMK::all(), Mata_Kuliah::all(), SubCPMK::all(),CPMK::all()), $filename);
+        }
+    }
+
+    public function exportList($type)
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $date_time = date('Y_m_d_H_i_s');
+        $date = date('d-m-Y');
+        $view =  view('content.eksporRPSList', [
+            'title' => 'DAFTAR RPS',
+            'rps_list'=> RPS::all(),
+            'date_time' => $date,
+        ]);
+
+
+        if ($type === 'pdf') {
+            $dompdf = new Dompdf();
+            $dompdf->loadHtml($view);
+            $dompdf->setPaper('A4', 'landscape');
+
+            $dompdf->render();
+
+            $filename = "DAFTAR_RPS_" . $date_time . ".pdf";
+
+            return Response::make($dompdf->output(), 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename=' . $filename
+            ]);
+        } else {
+            // $filename = "RPS_" . $date_time . '.xlsx';
+            // return Excel::download(new ExportPemetaanMKCpmkSubcpmk(
+            //     Detail_MK_CPMK::all(), Mata_Kuliah::all(), SubCPMK::all(),CPMK::all()), $filename);
+        }
+
+    }
+
     public function processData(Request $request)
     {
         $kodeMK = $request->input('kodeMK');

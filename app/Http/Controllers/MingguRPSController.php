@@ -106,7 +106,7 @@ class MingguRPSController extends Controller
                     'kodeMingguRPS' => $kodeMingguRPS,
                     'referensi' => $value['referensi'],
                 ];
-                Detail_Pustaka_Minggurps::create($data);
+                // Detail_Pustaka_Minggurps::create($data);
             }
         }
 
