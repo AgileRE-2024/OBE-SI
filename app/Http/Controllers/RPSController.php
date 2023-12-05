@@ -254,7 +254,7 @@ class RPSController extends Controller
             'dibuat_oleh' => $request->dibuat_oleh
         ]);
         // create minggu rps
-        for ($i = 0; $i < 14; $i++) {
+        for ($i = 0; $i < 16; $i++) {
             // Create a new RPS Minggu with the start date
             Minggu_RPS::create([
                 'id_rps' => $id_rps,
@@ -290,13 +290,11 @@ class RPSController extends Controller
     // NEW FUNCTION 3
     public function detail($kodeRPS){
         $kodeMK = substr($kodeRPS, 0, 6);
-        $cpmk_mk = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK);
-        $kodeCPMKList = $cpmk_mk->pluck('kodeCPMK')->toArray();
+        $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
         $cpmk = CPMK::whereIn('kodeCPMK', $kodeCPMKList)->get();
         $kodeCPLList = $cpmk->pluck('kodeCPL')->toArray();
         $semuaCPL = CPL_Prodi::whereIn('kodeCPL', $kodeCPLList)->distinct()->get();
-        $prasyarat = Prasyarat::all()->where('kodeMK', $kodeMK);
-        $kodePrasyaratList = $prasyarat->pluck('mat_kodeMK')->toArray();
+        $kodePrasyaratList = Prasyarat::all()->where('kodeMK', $kodeMK)->pluck('mat_kodeMK')->toArray();
         $prasyarat = Mata_Kuliah::whereIn('kodeMK', $kodePrasyaratList)->distinct()->get();
 
         return view('rps_mata_kuliah', [
