@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Minggu_RPS;
+use App\Models\Detail_MK_CPMK;
 use App\Models\RPS;
 use Illuminate\Http\Request;
 use App\Models\Detail_RPS;
@@ -39,8 +40,10 @@ class MingguRPSController extends Controller
     public function editMingguRPS($kodeMingguRPS)
     {
         $kodeRPS = substr($kodeMingguRPS, 0, 10);
+        $kodeMK = substr($kodeMingguRPS, 0, 6);
         $minggu_rps = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
-        $subcpmk = SubCPMK::all();
+        $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
+        $subcpmk = SubCPMK::whereIn('kodeCPMK', $kodeCPMKList)->distinct()->get();
         $pustaka = pustaka::all();
 
         return view('content.minggu_rps.edit_minggu_rps', [
@@ -99,14 +102,14 @@ class MingguRPSController extends Controller
         $pustaka->delete();
         
         foreach ($request->pustaka as $value) {
-            dd($value);
+            // dd($value);
             if($value['judul']) {
                 $data = [
                     'id_pustaka' => $value['judul'],
                     'kodeMingguRPS' => $kodeMingguRPS,
                     'referensi' => $value['referensi'],
                 ];
-                Detail_Pustaka_Minggurps::create($data);
+                // Detail_Pustaka_Minggurps::create($data);
             }
         }
 

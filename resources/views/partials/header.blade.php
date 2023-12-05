@@ -4,7 +4,21 @@
             <div class="col pt-3">
                 {{ getdate(date("U"))["weekday"] }}, {{getdate(date("U"))["mday"] }} {{ getdate(date("U"))["month"] }} {{ getdate(date("U"))["year"] }} <i class="bi bi-calendar3"></i>
             </div>
-            <div class="col" style="padding-right: 20px; text-align:end;">
+            <div class="col" style="text-align:end;">
+            <table style="width :100%; margin-top: 5px;">
+                <tr>
+                <td>    
+                <b>{{ auth()->user()->namaDosen }}</b>
+                <br>
+                {{ auth()->user()->jabatanDosen }}
+                </td>
+                <td>
+                    <a href="/dashboard/dosen">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" style="margin-left:-25px;"class="rounded-circle" alt="..." width="50px">
+                </a></td>
+                </tr>
+            </table>
+                <div class="popup">
                 Tim
                     @if(auth()->user()->roles == 0)
                         Dosen
@@ -17,8 +31,9 @@
                     @else
                         Role Tidak Dikenal
                     @endif
-
-                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="rounded-circle" alt="..." width="60px">
+                    <br>
+                    {{ auth()->user()->jabatanDosen }}
+                </div>
             </div>
         </div>
         <div class="pb-3">
@@ -57,3 +72,19 @@
         @endif
     @endif -->
 </section>
+<script>
+    // Membuat variabel untuk merujuk ke elemen dengan id "myCol"
+    var myCol = document.getElementById("myCol");
+
+    // Menambahkan event listener untuk menampilkan popup saat elemen di-hover
+    myCol.addEventListener("mouseenter", function() {
+        var popup = this.querySelector(".popup");
+        popup.style.display = "block";
+    });
+
+    // Menambahkan event listener untuk menyembunyikan popup saat mouse keluar dari elemen
+    myCol.addEventListener("mouseleave", function() {
+        var popup = this.querySelector(".popup");
+        popup.style.display = "none";
+    });
+</script>
