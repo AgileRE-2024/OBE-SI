@@ -102,13 +102,14 @@ class MingguRPSController extends Controller
         $pustaka->delete();
         
         foreach ($request->pustaka as $value) {
+            // dd($value['judul']);
             if($value['judul']) {
                 $data = [
                     'id_pustaka' => $value['judul'],
                     'kodeMingguRPS' => $kodeMingguRPS,
                     'referensi' => $value['referensi'],
                 ];
-                // Detail_Pustaka_Minggurps::create($data);
+                Detail_Pustaka_Minggurps::create($data);
             }
         }
 
