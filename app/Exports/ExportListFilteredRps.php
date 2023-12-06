@@ -21,14 +21,28 @@ class ExportListFilteredRps implements FromCollection, WithHeadings
     {
         
         $rps = RPS::where('kodeMK', $this->kodeMK)
-        ->with('Mata_Kuliah')
-        ->select('id_rps','tahunAjaran','semester')->get();
+        ->with('Mata_Kuliah')->get();
+        $newCollection = $rps->map(function ($item) {
+            $item->namaBaru = $item->Mata_Kuliah->namaMK;
+            return $item;
+        });
+        $newRPS = $newCollection->map(function ($item) {
+            return [
+                'id_rps' => $item->id_rps,
+                'namaBaru' => $item->namaBaru,
+                'tahunAjaran' => $item->tahunAjaran,
+                'semester' => $item->semester,
+
+                // Add other columns from $item if needed
+            ];
+        })->sortBy('semester');
         return $rps;
     }
     public function headings(): array
     {
         return [
             'Kode RPS',
+            'Mata Kuliah',
             'Tahun Ajaran',
             'Semester'
         ];
