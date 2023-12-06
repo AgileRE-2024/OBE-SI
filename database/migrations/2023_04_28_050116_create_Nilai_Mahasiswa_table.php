@@ -17,13 +17,13 @@ return new class extends Migration
             $table->String('kodeNilai',10)->primary('kodeNilai');
             $table->char('nim',12);
             $table->char('kodeKelas',9);
-            $table->char('kodeRPS',6);
+            $table->char('kodeRPS',10);
             $table->char('semesterAmbil',2);
             $table->integer('nilaiAkhir')->nullable();
             $table->timestamps();
             $table->foreign('nim')->references('nim')->on('Mahasiswa')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('kodeRPS')->references('kodeRPS')->on('RPS')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeRPS')->references('id_rps')->on('RPS')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
