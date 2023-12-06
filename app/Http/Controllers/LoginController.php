@@ -107,6 +107,9 @@ class LoginController extends Controller
     // Redirect sesuai peran pengguna
     $redirectPath = '/dashboard/';
     switch (auth()->user()->role) {
+        case 3:
+            $redirectPath .= 'dosen_kurikulum';
+            break;
         case 2:
             $redirectPath .= 'admin';
             break;
