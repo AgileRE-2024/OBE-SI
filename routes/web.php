@@ -288,7 +288,7 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], fun
 Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
     
     //CREATE AND STORE RPS
-    Route::get('/dashboard/rps/create', [RPSController::class, 'create'])->name('rps_create');
+    Route::get('/dashboard/create_rps', [RPSController::class, 'create'])->name('rps_create');
     Route::post('/dashboard/rps/store', [RPSController::class, 'store'])->name('rps_store');
 
     Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
