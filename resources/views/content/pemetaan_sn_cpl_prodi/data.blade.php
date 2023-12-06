@@ -71,7 +71,7 @@
                                             id="checkbox_{{$cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"]  }}-{{ $cplprod->kodeCPL }}"
                                             name="checkbox_{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"]  }}-{{ $cplprod->kodeCPL }}"
                                             value="{{ $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"]  }}&{{ $cplprod->kodeCPL }}" style="width:26px;height:26px;"
-                                            @if ($pemetaan->where('kodeCPLSN', '===', $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] )->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif> 
+                                            @if ($pemetaan->where('kodeCPLSN', '===', $cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] )->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif> 
                                             {{-- <span id="{{$cpldikti_list->where('kodeCPLSN','===',$item)->first()["kodeCPLSN"] }}_{{ $cplprod->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @endforeach
@@ -94,7 +94,7 @@
                                         id="checkbox_{{ $cplsn->kodeCPLSN }}-{{ $cplprod->kodeCPL }}"
                                         name="checkbox_{{ $cplsn->kodeCPLSN }}-{{ $cplprod->kodeCPL }}"
                                         value="{{ $cplsn->kodeCPLSN }}&{{ $cplprod->kodeCPL }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeCPLSN', '===', $cplsn->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
+                                        @if ($pemetaan->where('kodeCPLSN', '===', $cplsn->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif>
                                         {{-- <span id="{{$cplsn->kodeCPLSN}}_{{ $cplprod->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @else
@@ -102,7 +102,7 @@
                                         id="checkbox_{{ $cplsn->kodeCPLSN }}-{{ $cplprod->kodeCPL }}"
                                         name="checkbox_{{ $cplsn->kodeCPLSN }}-{{ $cplprod->kodeCPL }}"
                                         value="{{ $cplsn->kodeCPLSN }}&{{ $cplprod->kodeCPL }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeCPLSN', '===', $cplsn->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
+                                        @if ($pemetaan->where('kodeCPLSN', '===', $cplsn->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif>
                                         {{-- <span id="{{$cplsn->kodeCPLSN}}_{{ $cplprod->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @endif
@@ -118,7 +118,7 @@
                         
                     </tbody>
                 </table>  
-                @if (auth()->user()->role == 1)
+                @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                 <button type="submit" class="btn btn-success" style="float: right">
                     Simpan
                 </button>

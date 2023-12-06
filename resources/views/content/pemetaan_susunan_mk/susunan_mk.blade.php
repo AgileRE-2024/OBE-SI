@@ -38,7 +38,9 @@
                         <th class="align-middle" width="90px">7</th>
                         <th class="align-middle" width="90px">8</th>
                         <th class="align-middle" width="180px">Keterangan</th>
+                        @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                         <th class="align-middle" width="90px">Action</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -86,7 +88,7 @@
                                 @endif
                             </td>
                             <td>
-                                @if (auth()->user()->role == 1)
+                                @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#edit{{ $p->kodeMK }}">
                                         <i class="fa-solid fa-pen">Edit</i>

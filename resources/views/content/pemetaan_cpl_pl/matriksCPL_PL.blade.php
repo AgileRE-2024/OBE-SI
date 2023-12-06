@@ -74,7 +74,7 @@
                     @endforeach
                 </tbody>
             </table>
-            @if (auth()->user()->role == 1)
+            @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                 <div class="d-flex justify-content-end">
                     <button id="submitbutton" class="btn btn-success">
                         Simpan

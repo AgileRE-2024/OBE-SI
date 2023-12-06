@@ -73,7 +73,7 @@
                                             id="checkbox_{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
                                             name="checkbox_{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
                                             value="{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}&{{ $bk->kodeBK }}" 
-                                            @if ($pemetaan->where('kodeMK', '===', $mk_list->where('kodeMK','===',$item)->first()["kodeMK"] )->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif style="width:26px;height:26px; @if(auth()->user()->role!=1) width:26px;height:26px;background-color: blue !important; @endif">
+                                            @if ($pemetaan->where('kodeMK', '===', $mk_list->where('kodeMK','===',$item)->first()["kodeMK"] )->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif style="width:26px;height:26px; @if (auth()->user()->role == 0 || auth()->user()->role == 2) width:26px;height:26px;background-color: blue !important; @endif">
                                             {{-- <span id="{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"] }}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @endforeach
@@ -96,7 +96,7 @@
                                         id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" 
-                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif style="width:26px;height:26px; @if(auth()->user()->role!=1) width:26px;height:26px;background-color: blue !important; @endif">
+                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif style="width:26px;height:26px; @if (auth()->user()->role == 0 || auth()->user()->role == 2) width:26px;height:26px;background-color: blue !important; @endif">
                                         {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @else
@@ -104,7 +104,7 @@
                                         id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" 
-                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if(auth()->user()->role!=1)  disabled @endif style="width:26px;height:26px; @if(auth()->user()->role!=1) width:26px;height:26px;background-color: blue !important; @endif">
+                                        @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2)  disabled @endif style="width:26px;height:26px; @if (auth()->user()->role == 0 || auth()->user()->role == 2) width:26px;height:26px;background-color: blue !important; @endif">
                                         {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
                                 @endif
@@ -120,7 +120,7 @@
                         
                     </tbody>
                 </table>
-                @if(auth()->user()->role==1)
+                @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                 <div class="d-flex justify-content-end">
                     <!-- Button trigger modal -->
                     {{-- <button type="button" id="buttonsimpan" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">

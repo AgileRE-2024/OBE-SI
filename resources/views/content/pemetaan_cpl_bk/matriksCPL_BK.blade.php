@@ -73,7 +73,7 @@
                                             id="checkbox_{{$bk_list->where('kodeBK','===',$item)->first()["kodeBK"]  }}-{{ $cpl->kodeCPL }}"
                                             name="checkbox_{{ $bk_list->where('kodeBK','===',$item)->first()["kodeBK"]  }}-{{ $cpl->kodeCPL }}"
                                             value="{{ $bk_list->where('kodeBK','===',$item)->first()["kodeBK"]  }}&{{ $cpl->kodeCPL }}" style="width:26px;height:26px;"
-                                            @if ($pemetaan->where('kodeBK', '===', $bk_list->where('kodeBK','===',$item)->first()["kodeBK"] )->where('kodeCPL', '===', $cpl->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
+                                            @if ($pemetaan->where('kodeBK', '===', $bk_list->where('kodeBK','===',$item)->first()["kodeBK"] )->where('kodeCPL', '===', $cpl->kodeCPL)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif>
                                             {{-- <span id="{{$bk_list->where('kodeBK','===',$item)->first()["kodeBK"] }}_{{ $cpl->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @endforeach
@@ -96,7 +96,7 @@
                                         id="checkbox_{{ $bk->kodeBK }}-{{ $cpl->kodeCPL }}"
                                         name="checkbox_{{ $bk->kodeBK }}-{{ $cpl->kodeCPL }}"
                                         value="{{ $bk->kodeBK }}&{{ $cpl->kodeCPL }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeBK', '===', $bk->kodeBK)->where('kodeCPL', '===', $cpl->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
+                                        @if ($pemetaan->where('kodeBK', '===', $bk->kodeBK)->where('kodeCPL', '===', $cpl->kodeCPL)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif>
                                         {{-- <span id="{{$bk->kodeBK}}_{{ $cpl->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @else
@@ -104,7 +104,7 @@
                                         id="checkbox_{{ $bk->kodeBK }}-{{ $cpl->kodeCPL }}"
                                         name="checkbox_{{ $bk->kodeBK }}-{{ $cpl->kodeCPL }}"
                                         value="{{ $bk->kodeBK }}&{{ $cpl->kodeCPL }}" style="width:26px;height:26px;"
-                                        @if ($pemetaan->where('kodeBK', '===', $bk->kodeBK)->where('kodeCPL', '===', $cpl->kodeCPL)->count()) checked @endif @if(auth()->user()->role!=1) disabled @endif>
+                                        @if ($pemetaan->where('kodeBK', '===', $bk->kodeBK)->where('kodeCPL', '===', $cpl->kodeCPL)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif>
                                         {{-- <span id="{{$bk->kodeBK}}_{{ $cpl->kodeCPL }}" class="checkmark"></span> --}}
                                     </td>
                                 @endif
@@ -120,7 +120,7 @@
                         
                     </tbody>
                 </table>
-                @if(auth()->user()->role==1)
+                @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                 <div class="d-flex justify-content-end">
                     <!-- Button trigger modal -->
                     {{-- <button type="button" id="buttonsimpan" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
