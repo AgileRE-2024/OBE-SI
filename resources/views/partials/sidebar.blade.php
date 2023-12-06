@@ -242,6 +242,8 @@
                         </p>
                     </a>
                 </li>
+
+                @if(auth()->user()->role == 2)
                 <li class="nav-item @if (Request::is('*manajemen*')) menu-open @endif">
                     <a href="#" class="nav-link" @if (Request::is('*manajemen*')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
@@ -268,6 +270,7 @@
                         </li>
                     </ul>
                 </li>
+                @endif
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
