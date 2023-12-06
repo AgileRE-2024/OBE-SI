@@ -84,7 +84,8 @@ class ManagementUser extends Controller
     if (User::where('nip', $request->nip)->exists() && $request->nip != $nip) {
                 return redirect()->back()->with('error', 'NIP sudah terpakai');
     }
-    if (User::where('email', $request->email)->exists()) {
+    $user = User::find($nip);
+    if (User::where('email', $request->email)->exists() && $request->email != $user->email) {
                 return redirect()->back()->with('error', 'Email sudah terpakai');
     }
     $user = User::where('nip', $nip)->first();
