@@ -49,6 +49,10 @@ class User extends Authenticatable
         return $this->hasMany(Mata_Kuliah::class,'nip', 'nip');
     }
 
+    public function Pengampu()
+    {
+        return $this->belongsTo(Pengampu::class, 'nip');
+    }
 
 
     // public function RPS1()

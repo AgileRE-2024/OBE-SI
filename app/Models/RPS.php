@@ -74,9 +74,4 @@ class RPS extends Model
         return $this->belongsTo(Kelas::class, 'kodeKelas','kodeKelas');
     }
 
-    public function dosenPengampu(){
-        return $this->hasMany(Pengampu::class, 'nip', 'nip');
-    }
-
-
 }

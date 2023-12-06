@@ -86,34 +86,34 @@
                     </td>
                     @endif
                 </tr>
+                @if($pengampu)
                 <tr>
-                    <td scope="row">4</td>
-                    <td scope="row">Pengampu MK</td>
-                    @if($pengampu)
-                    <td scope="row">
-                        {{$pengampu->nip}}
-                    </td>
-                    <td scope="row">
-                        {{$pengampu->namaDosen}}
-                    </td>
-                    {{-- @elseif($pengampu>1)
-                        @foreach ($pengampu as $dosen)
+                    <td rowspan="{{ count($pengampu)+1 }}" scope="row" style="vertical-align : middle">4</td>
+                    <td rowspan="{{ count($pengampu)+1 }}" scope="row" style="vertical-align : middle">Pengampu MK</td>
+                </tr>
+                @foreach ($pengampu as $dosen)
+                    <tr>
+                        {{-- <td scope="row">Pengampu MK</td> --}}
                         <td scope="row">
                             {{$dosen->nip}}
                         </td>
                         <td scope="row">
-                            {{$dosen->namaDosen}}
+                            {{ $dosen->User->namaDosen }}
                         </td>
-                        @endforeach --}}
-                    @else
+                    </tr>
+                @endforeach
+                @else
+                <tr>
+                    <td scope="row">4</td>
+                    <td scope="row">Pengampu MK</td>
                     <td scope="row">
                         -
                     </td>
                     <td scope="row">
                         -
                     </td>
-                    @endif
                 </tr>
+                @endif
                 <tr>
                     <td scope="row">5</td>
                     <td scope="row">Penanggung jawab MK</td>
