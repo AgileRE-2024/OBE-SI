@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Detail_Peran_Dosen;
+use App\Models\Pengampu;
 use App\Models\User;
 use App\Models\RPS;
 use Illuminate\Support\Facades\Validator;
@@ -138,9 +139,26 @@ class DosenController extends Controller
             'penanggungJawab' => $request->input('penanggungJawab'),
         ];
 
+        $pengampu = [
+            'nip' => $request->input('dosenPengampu'),
+        ];
+
         // dd($data);
 
         RPS::where('id_rps', $kodeRPS)->update($data);
+        // if(count($pengampu) > 1){
+        //     for($i=1; $i<=count($pengampu);){
+        //         Pengampu::create([
+        //             'id_rps' => $request->id_rps,
+        //             'kodeMK' => $request->kodeMK,
+        //         ]);
+        //         Pengampu::where('id', $i)->update($pengampu[$i]);
+        //     }
+        // }
+        // else{
+        //     Pengampu::where('id_rps', $kodeRPS)->update($pengampu);
+        // }
+        Pengampu::where('id_rps', $kodeRPS)->update($pengampu);
 
         return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS])->with('success', 'Data Dosen berhasil diperbarui');
     }

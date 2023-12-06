@@ -18,7 +18,7 @@
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
                         <select name="diperiksa_oleh" id='diperiksa_oleh' class="form-select">
-                            <option value="{{ $rps->diperiksa_oleh }}">-- Pilih Dosen --</option>
+                            <option value="{{ $rps->diperiksa_oleh }}" disabled selected>-- Pilih Dosen --</option>
                             @foreach ($dosen as $item)
                                 <option value="{{ $item->nip }}"{{ $item->nip ==  $rps->diperiksa_oleh ? 'selected' : ''}}>{{ $item->nip }} -
                                     {{ $item->namaDosen }}</option>
@@ -31,7 +31,7 @@
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
                         <select name="disetujui_oleh" id='disetujui_oleh' class="form-select">
-                            <option value="">-- Pilih Dosen --</option>
+                            <option value="" disabled selected>-- Pilih Dosen --</option>
                             @foreach ($dosen as $item)
                                 <option value="{{ $item->nip }}"{{ $item->nip ==  $rps->disetujui_oleh ? 'selected' : ''}}>{{ $item->nip }} -
                                     {{ $item->namaDosen }}</option>
@@ -43,11 +43,14 @@
                         @error('dosenPengampu')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
-                        <select name="dosenPengampu" id='dosenPengampu' class="form-select">
-                            <option value="">-- Pilih Dosen --</option>
+                        <select name="dosenPengampu" id='dosenPengampu' class="form-select dosenPengampu" multiple="multiple">
+                            {{-- <option value="" disabled selected>-- Pilih Dosen --</option> --}}
                             @foreach ($dosen as $item)
                                 <option value="{{ $item->nip }}"{{ $item->nip ==  $rps->dosenPengampu ? 'selected' : ''}}>{{ $item->nip }} -
-                                    {{ $item->namaDosen }}</option>
+                                   {{ $item->namaDosen }}</option>
+                                {{-- <option value="{{ $item->nip }}" @if (in_array($item->nip, old('dosenPengampu',[]))) selected="selected" @endif>
+                                    {{ $item->nip }} - {{ $item->namaDosen }} --}}
+                                </option>
                             @endforeach
                         </select>
                     </div>
@@ -57,7 +60,7 @@
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
                         <select name="penanggungJawab" id='penanggungJawab' class="form-select">
-                            <option value="">-- Pilih Dosen --</option>
+                            <option value="" disabled selected>-- Pilih Dosen --</option>
                             @foreach ($dosen as $item)
                                 <option value="{{ $item->nip }}"{{ $item->nip ==  $rps->penanggungJawab ? 'selected' : ''}}>{{ $item->nip }} -
                                     {{ $item->namaDosen }}</option>
@@ -75,8 +78,39 @@
         </div>
     </div>
 
-   
-    
-    
+    <script>
+        $('#dosenPengampu').select2({
+            placeholder: "-- Pilih Dosen --",
+            allowClear: true,
+            multiple: true
+        });
+    </script>
+
+    {{-- <script>
+        $(document).ready(function() {
+            // Select2 Multiple
+            $('.dosenPengampu').select2({
+                placeholder: "-- Pilih Dosen --",
+                allowClear: true
+            });
+
+            $('#dosenPengampu').select2({
+                ajax: {
+                    url:"{{ route('get-dosenPengampu') }}",
+                    processResults: function({
+                        data
+                    }) {
+                        return{
+                            results: $.map(data, function(item){
+                                return{
+                                    nip: item.nip
+                                }
+                            })
+                        }
+                    }
+                }
+            });
+        });
+    </script> --}}
     
 @endsection

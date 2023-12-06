@@ -96,6 +96,15 @@
                     <td scope="row">
                         {{$pengampu->namaDosen}}
                     </td>
+                    {{-- @elseif($pengampu>1)
+                        @foreach ($pengampu as $dosen)
+                        <td scope="row">
+                            {{$dosen->nip}}
+                        </td>
+                        <td scope="row">
+                            {{$dosen->namaDosen}}
+                        </td>
+                        @endforeach --}}
                     @else
                     <td scope="row">
                         -
