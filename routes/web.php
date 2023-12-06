@@ -278,7 +278,9 @@ Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], fun
     Route::post('/dashboard/cari_rps', [RPSController::class, 'processData'])->name('processForm');
 
     //Export PDF
-    Route::get('/dashboard/rps/export/{type}/{kodeRPS}', [RPSController::class, 'export'])->name('export_rps');
+    Route::get('/dashboard/rps/export/{type}/{kodeRPS}/{kodeMK}', [RPSController::class, 'export'])->name('export_rps'); 
+    Route::get('/dashboard/rps/export/{pdf}/all', [RPSController::class, 'exportList'])->name('export_list_rps');
+    Route::get('/dashboard/rps/export/{type}/{kodeMK}', [RPSController::class, 'exportRiwayatRps'])->name('export_riwayat_rps'); 
     Route::get('/generate-pdf', 'PDFController@generatePDF');
     //Export Excel     
     Route::get('/exportExcelRps', [RPSController::class, 'export_excel'])->name('export_excel_rps');

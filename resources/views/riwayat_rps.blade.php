@@ -22,7 +22,7 @@
 @endif --}}
 <div class="d-flex justify-content-start">
     <div class="pr-3">
-        <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/"><i class="bi bi-file-earmark-pdf-fill">
+        <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/{{ $mk->kodeMK }}"><i class="bi bi-file-earmark-pdf-fill">
             </i>Export PDF</a>
     </div>
     <div>
