@@ -309,6 +309,11 @@ class RPSController extends Controller
 
     //NEW FUNCTION 4
     public function export_excel(){
+        // $rps = RPS::where('tahunAjaran',2023)
+        // ->with('Mata_Kuliah')->get();
+        // $attributeNames = array_keys($rps->toArray()[0]);
+
+        // dd($rps);
         return Excel::download(new ExportListRps,'list_rps.xlsx');
     }
 
