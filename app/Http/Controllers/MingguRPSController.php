@@ -43,9 +43,9 @@ class MingguRPSController extends Controller
         $kodeMK = substr($kodeMingguRPS, 0, 6);
         $minggu_rps = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
         $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
-        $subcpmk = SubCPMK::whereIn('kodeCPMK', $kodeCPMKList)->distinct()->get();
+        // $subcpmk = SubCPMK::whereIn('kodeCPMK', $kodeCPMKList)->distinct()->get();
         $pustaka = pustaka::all();
-
+        $subcpmk = SubCPMK::all();
         return view('content.minggu_rps.edit_minggu_rps', [
             'title' => 'Edit Minggu RPS',
             'minggu_rps' => $minggu_rps,
@@ -102,7 +102,6 @@ class MingguRPSController extends Controller
         $pustaka->delete();
         
         foreach ($request->pustaka as $value) {
-            // dd($value);
             if($value['judul']) {
                 $data = [
                     'id_pustaka' => $value['judul'],

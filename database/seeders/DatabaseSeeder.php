@@ -74,6 +74,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'nip' => '197102111997021001',
+            'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'kps',
             'namaDosen' => 'Rimuljo',
             'password' => bcrypt('coba1234'), //password coba123
@@ -86,6 +87,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'nip' => '082011633029',
             'jabatanDosen' => 'kps',
+            'namaProdi' => 'S1 Sistem Informasi',
             'namaDosen' => 'Daffa Hafiizh Permadi',
             'password' => bcrypt('12345678'), //password 12345678
             'email' => 'daffagt123@gmail.com',
@@ -96,6 +98,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'nip' => '197101042008121001',
+            'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'Dosen',
             'namaDosen' => 'Taufik',
             'password' => bcrypt('coba1234'), //password coba123
@@ -106,6 +109,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'nip' => '32525252523',
+            'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'Admin',
             'namaDosen' => 'Admin',
             'password' => bcrypt('coba1234'), //password coba123
@@ -116,6 +120,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'nip' => '198410272010122005',
+            'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Ira Puspitasari',
             'password' => bcrypt('coba1234'), //password coba123
@@ -125,6 +130,7 @@ class DatabaseSeeder extends Seeder
         ]);
         User::create([
             'nip' => '198206062007101001',
+            'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Faried Effendy',
             'password' => bcrypt('coba1234'), //password coba123
@@ -134,6 +140,7 @@ class DatabaseSeeder extends Seeder
         ]);
         User::create([
             'nip' => '198110282006041003',
+            'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'lektor',
             'namaDosen' => 'Indra Kharisma R, S.Kom., M.T.',
             'password' => bcrypt('coba1234'), //password coba123
@@ -144,6 +151,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'nip' => '197801262006041001',
             'jabatanDosen' => 'lektor',
+            'namaProdi' => 'S1 Sistem Informasi',
             'namaDosen' => 'Badrus Zaman, S.Kom., M.Cs.',
             'password' => bcrypt('coba1234'), //password coba123
             'email' => 'badruszaman@fst.unair.ac.id',

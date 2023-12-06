@@ -243,6 +243,9 @@
             <?php 
              $i += 1
             ?>
+            @if($i == 14)
+            @break
+            @endif
             @endforeach
         </table>
        

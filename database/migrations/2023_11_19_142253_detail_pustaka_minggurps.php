@@ -18,7 +18,7 @@ return new class extends Migration
             $table->char('kodeMingguRPS', 12);
             $table->foreign('id_pustaka')->references('id_pustaka')->on('pustakas')->onDelete('restrict');
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
-            $table->text('referensi')->nullable();
+            $table->text('detail_pustaka')->nullable();
             $table->timestamps();
         });
     }

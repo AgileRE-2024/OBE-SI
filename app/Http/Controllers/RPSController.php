@@ -75,9 +75,9 @@ class RPSController extends Controller
     {
         date_default_timezone_set('Asia/Jakarta');
         $rps = RPS::where('id_rps', $idRPS)->first();
+
         $dosen = User::where('nip', $rps->nip)->first();
-        // dd($dosen);
-        
+        // dd($rps);
         
         $view = view('content.eksporRPS', [
             'title' => 'RPS',
