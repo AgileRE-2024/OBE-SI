@@ -21,4 +21,3 @@ yarn-error.log
 composer.lock
 bootstrap/cache/routes-v7.php
 bootstrap/cache/config.php
-resources/views/content/EksporRPS.blade.php

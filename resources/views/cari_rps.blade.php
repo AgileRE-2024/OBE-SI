@@ -26,7 +26,7 @@
             </i>Buat RPS</a>
     </div>
     <div class="pr-3">
-        <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/"><i class="bi bi-file-earmark-pdf-fill">
+        <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/all"><i class="bi bi-file-earmark-pdf-fill">
             </i>Export PDF</a>
     </div>
     <div>
@@ -59,7 +59,7 @@
                                 href="{{ route('edit_rps.mata_kuliah', ['kodeRPS' => $rps->id_rps]) }}">Edit</a>
                         </div>
                         <div class="pr-3">
-                            <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/{{ $rps->kodeRPS }}"><i
+                            <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/{{ $rps->id_rps }}/{{ $rps->kodeMK }}"><i
                                     class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
                         </div>
                         <div>
