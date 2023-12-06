@@ -5,8 +5,9 @@ use App\Models\RPS;
 use App\Models\Mata_Kuliah;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithColumnWidths;
 
-class ExportListRps implements FromCollection, WithHeadings
+class ExportListRps implements FromCollection, WithHeadings, WithColumnWidths
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -44,4 +45,15 @@ class ExportListRps implements FromCollection, WithHeadings
             'Semester'
         ];
     }
+    public function columnWidths(): array
+    {
+        return [
+            'A' => 25,
+            'B' => 45,    
+            'C' => 25,    
+            'D' => 15,            
+        ];
+    }
+
+    
 }
