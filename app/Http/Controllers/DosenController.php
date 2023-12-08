@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Detail_Peran_Dosen;
+use App\Models\Mata_Kuliah;
+use App\Models\MataKuliah;
+use App\Models\Pengampu;
 use App\Models\User;
 use App\Models\RPS;
 use Illuminate\Support\Facades\Validator;
@@ -18,11 +21,13 @@ class DosenController extends Controller
     public function index($kodeRPS)
 {
     $rps = RPS::where('id_rps', $kodeRPS)->first();
+    // $dosen = Pengampu::where('id_rps', $kodeRPS)->get();
     // dd($kodeRPS);
     $pembuat = User::where('nip', $rps->dibuat_oleh)->first();
     $pemeriksa = User::where('nip', $rps->diperiksa_oleh)->first();
     $persetujuan = User::where('nip', $rps->disetujui_oleh)->first();
-    $pengampu = User::where('nip', $rps->dosenPengampu)->first();
+    $pengampu = Pengampu::where('id_rps', $kodeRPS)->get();
+    // $pengampu = User::where('nip', $dosen->nip)->first();
     $penanggung_jawab = User::where('nip', $rps->penanggungJawab)->first();
     $title = 'Detail Peran Dosen';
     $kodeRPS=$kodeRPS;
@@ -37,6 +42,9 @@ class DosenController extends Controller
     ]);
 }
 
+    public function Pengampu(){
+        return $this->belongsToMany(Pengampu::class, 'id_rps', 'kodeMK', 'nip');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -138,9 +146,25 @@ class DosenController extends Controller
             'penanggungJawab' => $request->input('penanggungJawab'),
         ];
 
+        $dosen = [
+            'nip' => $request->input('dosenPengampu'),
+        ];
+
         // dd($data);
 
         RPS::where('id_rps', $kodeRPS)->update($data);
+        
+        $pengampu = Pengampu::where('id_rps', $kodeRPS);
+        $pengampu->delete();
+        
+        $kodeMK = substr($kodeRPS, 0, 6);
+        foreach ($request->input('dosenPengampu') as $value) {
+            Pengampu::create([
+                'id_rps' => $kodeRPS,
+                'kodeMK' => $kodeMK,
+                'nip' => $value
+            ]);
+        }
 
         return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS])->with('success', 'Data Dosen berhasil diperbarui');
     }
