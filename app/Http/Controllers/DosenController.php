@@ -145,11 +145,6 @@ class DosenController extends Controller
             'dosenPengampu' => $request->input('dosenPengampu'),
             'penanggungJawab' => $request->input('penanggungJawab'),
         ];
-
-        $dosen = [
-            'nip' => $request->input('dosenPengampu'),
-        ];
-
         // dd($data);
 
         RPS::where('id_rps', $kodeRPS)->update($data);

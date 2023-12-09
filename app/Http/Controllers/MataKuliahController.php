@@ -7,6 +7,8 @@ use Dompdf\Dompdf;
 use App\Models\Mata_Kuliah;
 use App\Models\Detail_BK_MK;
 use App\Models\Detail_MK_CPMK;
+use App\Models\MataKuliah;
+use App\Models\Prasyarat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -150,6 +152,18 @@ class MataKuliahController extends Controller
             $mat_kodeMK = null;
         } else {
             $mat_kodeMK = $request->mat_kodeMK;
+
+            $mat_kodeMK = Prasyarat::where('kodeMK', $mk);
+            $mat_kodeMK->delete();
+            // $prasyarat = array();
+        
+            foreach ($request->mat_kodeMK as $value) {
+                // $prasyarat[] = $value;
+                Prasyarat::create([
+                    'kodeMK' => $mk,
+                    'mat_kodeMK' => $value
+                ]);
+            }
         }
 
         if ($request->prasyarat_tambahan == null) {
@@ -159,9 +173,12 @@ class MataKuliahController extends Controller
         }
 
         $mk = Mata_Kuliah::where('kodeMK', $mk)->first();
+        // $mat_kodeMK = Prasyarat::where('kodeMK', $mk);
+        // $mat_kodeMK = $mk->Prasyarat->mat_kodeMK;
+
         $mk->update([
             'kodeMK' => $request->kodeMK,
-            'mat_kodeMK' => $mat_kodeMK,
+            'mat_kodeMK' => $request->mat_kodeMK,
             'namaMK' => $request->namaMK,
             'jenisMK' => (int)$request->jenisMK,
             'kategoriMK' => (int)$request->kategoriMK,
@@ -170,6 +187,7 @@ class MataKuliahController extends Controller
             'deskripsiMK' => $request->deskripsi,
             'prasyaratTambahan' => $prasyarat_tambahan,
         ]);
+
         $mk->save();
 
         return redirect()->route('kurikulum.data.mata_kuliah')->with('success', 'Bahan Kuliah berhasil diubah');

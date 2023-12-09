@@ -65,7 +65,15 @@
                             </td>
                             <td scope="row" style="width:10%">
                                 @if ($mk->mat_kodeMK)
-                                    {{ $mk->mat_kodeMK }}
+                                    {{-- @foreach ($mk as $prasyarat) --}}
+                                    @if($mk->mat_kodeMK == '[null]')
+                                        {{ '-' }}
+                                    @else
+                                        {{ $mk->mat_kodeMK }}
+                                        {{-- Jika Sudah dimigrasi di tabel prasyarat, gunakan kode di bawah --}}
+                                        {{-- {{ $mk->Prasyarat->mat_kodeMK }} --}}
+                                    @endif
+                                    {{-- @endforeach --}}
                                 @else
                                     {{ '-' }}
                                 @endif

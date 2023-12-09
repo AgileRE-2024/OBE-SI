@@ -86,34 +86,52 @@
                     </td>
                     @endif
                 </tr>
+
                 @if($pengampu)
-                <tr>
-                    <td rowspan="{{ count($pengampu)+1 }}" scope="row" style="vertical-align : middle">4</td>
-                    <td rowspan="{{ count($pengampu)+1 }}" scope="row" style="vertical-align : middle">Pengampu MK</td>
-                </tr>
-                @foreach ($pengampu as $dosen)
+                    @if(count($pengampu)==1)
                     <tr>
-                        {{-- <td scope="row">Pengampu MK</td> --}}
-                        <td scope="row">
-                            {{$dosen->nip}}
-                        </td>
-                        <td scope="row">
-                            {{ $dosen->User->namaDosen }}
-                        </td>
+                        <td scope="row">4</td>
+                        <td scope="row">Pengampu MK</td>
+                        @if($pengampu[0]->nip == null)
+                            <td scope="row"> - </td>
+                            <td scope="row"> - </td>
+                        @else
+                            <td scope="row">
+                                {{ $pengampu[0]->nip }}
+                            </td>
+                            <td scope="row">
+                                {{ $pengampu[0]->User->namaDosen}}
+                            </td>
+                        @endif
                     </tr>
-                @endforeach
+    
+                    @else
+                    <tr>
+                        <td rowspan="{{ count($pengampu)+1 }}" scope="row" style="vertical-align : middle">4</td>
+                        <td rowspan="{{ count($pengampu)+1 }}" scope="row" style="vertical-align : middle">Pengampu MK</td>
+                   </tr>
+                    @foreach ($pengampu as $dosen)
+                        <tr>
+                            <td scope="row">
+                                {{$dosen->nip}}
+                            </td>
+                            <td scope="row">
+                                {{ $dosen->User->namaDosen }}
+                            </td>
+                        </tr>
+                    @endforeach
+                    @endif
+
                 @else
+                {{-- Jika data sudah fix tanpa menggunakan migrasi awal, bagian di bawah tidak perlu --}}
                 <tr>
                     <td scope="row">4</td>
                     <td scope="row">Pengampu MK</td>
-                    <td scope="row">
-                        -
-                    </td>
-                    <td scope="row">
-                        -
-                    </td>
+                    <td scope="row"> - </td>
+                    <td scope="row"> - </td>
                 </tr>
                 @endif
+
                 <tr>
                     <td scope="row">5</td>
                     <td scope="row">Penanggung jawab MK</td>

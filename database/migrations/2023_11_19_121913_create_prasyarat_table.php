@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('Prasyarat', function (Blueprint $table) {
+            $table->increments('id_mat_kodeMK');
             $table->char('kodeMK', 10);
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
             $table->char('mat_kodeMK', 10)->nullable();
