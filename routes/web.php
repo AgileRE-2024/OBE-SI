@@ -223,7 +223,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::get('/editSubCPMK/{scpmk}', [SubCPMKController::class, 'editSubCPMK'])->name('edit_sub_cpmk');
             Route::put('/editSubCPMK/{scpmk}', [SubCPMKController::class, 'updateSubCPMK'])->name('update_sub_cpmk');
             Route::get('/deleteSubCPMK/{scpmk}', [SubCPMKController::class, 'deleteSubCPMK'])->name('delete_sub_cpmk');
-            
+        });
+
+        Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
             Route::get('/addPustaka', [PustakaController::class, 'addPustaka'])->name('add_pustaka');
             Route::post('/addPustaka', [PustakaController::class, 'storePustaka'])->name('store_pustaka');
             Route::get('/editPustaka/{pustaka}', [PustakaController::class, 'edit'])->name('edit_pustaka');
