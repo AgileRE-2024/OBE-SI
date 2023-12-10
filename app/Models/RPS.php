@@ -74,5 +74,4 @@ class RPS extends Model
         return $this->belongsTo(Kelas::class, 'kodeKelas','kodeKelas');
     }
 
-
 }
