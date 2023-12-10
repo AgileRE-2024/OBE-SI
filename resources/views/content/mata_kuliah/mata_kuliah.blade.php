@@ -43,7 +43,7 @@
                         </th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Jenis Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kategori Mata Kuliah</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">SKS Mata Kuliah</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Beban Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Semester Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Mata Kuliah</th>
                         @if (auth()->user()->role == 1 || auth()->user()->role == 3)
@@ -100,7 +100,7 @@
                                 @endif
                             </td>
                             <td scope="row">
-                                {{ $mk->sks }}
+                                @if($mk->sks) {{ $mk->sks }} SKS @endif @if($mk->ects)/ {{ $mk->ects }} ECTS @endif
                             </td>
                             <td scope="row">
                                 {{ $mk->semester }}

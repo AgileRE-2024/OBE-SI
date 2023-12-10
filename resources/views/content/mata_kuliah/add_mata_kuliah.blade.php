@@ -92,6 +92,15 @@
                     </div>
 
                     <div class="form-group">
+                        <label>ECTS</label>
+                        @error('ects')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <input type="text" name="ects" class="form-control" placeholder="ECTS Mata Kuliah"
+                            pattern="[0-9]+(\.[0-9]+)?">
+                    </div>
+
+                    <div class="form-group">
                         <label>Prasyarat Mata Kuliah</label>
                         @error('mat_kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>

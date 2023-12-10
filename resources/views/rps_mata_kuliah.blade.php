@@ -7,8 +7,7 @@
     <div class="card border" style="background-color: white">
         <div class="card-body" style="font-weight:600;">
             <h3>Mata Kuliah</h3>
-            <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Identitas mata kuliah RPS<b
-                    style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
+            <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Identitas mata kuliah RPS<b style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
         </div>
     </div>
     <br>
@@ -49,10 +48,10 @@
             </tr>
             <tr>
                 <td scope="row">
-                    Beban Studi (SKS)
+                    Beban Studi
                 </td>
                 <td scope="row">
-                    {{ $mata_kuliah->sks }}
+                    @if($mata_kuliah->sks) {{ $mata_kuliah->sks }} SKS @endif @if($mata_kuliah->ects)/ {{ $mata_kuliah->ects }} ECTS @endif
                 </td>
             </tr>
             <tr>
@@ -108,7 +107,7 @@
                     Prasyarat (bila ada)
                 </td>
                 <td scope="row">
-                @foreach($list_prasyarat as $prasyarat)
+                    @foreach($list_prasyarat as $prasyarat)
                     <div class="col">
                         {{ $prasyarat->kodeMK }} {{$prasyarat->namaMK}}
                     </div>

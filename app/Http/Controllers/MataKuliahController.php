@@ -104,11 +104,11 @@ class MataKuliahController extends Controller
             'jenisMK' => (int)$request->jenisMK,
             'kategoriMK' => (int)$request->kategoriMK,
             'sks' => (int)$request->sks,
+            'ects' => (float)$request->ects,
             'semester' => (int)$request->semester,
             'deskripsiMK' => $request->deskripsi,
             'prasyaratTambahan' => $prasyarat_tambahan,
         ]);
-
 
         return redirect()->route('kurikulum.data.mata_kuliah')->with('success', 'Bahan Kuliah berhasil ditambahkan');
     }
@@ -183,6 +183,7 @@ class MataKuliahController extends Controller
             'jenisMK' => (int)$request->jenisMK,
             'kategoriMK' => (int)$request->kategoriMK,
             'sks' => (int)$request->sks,
+            'ects' => (float)$request->ects,
             'semester' => (int)$request->semester,
             'deskripsiMK' => $request->deskripsi,
             'prasyaratTambahan' => $prasyarat_tambahan,
