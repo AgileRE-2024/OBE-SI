@@ -107,7 +107,7 @@ class MingguRPSController extends Controller
                 $data = [
                     'id_pustaka' => $value['judul'],
                     'kodeMingguRPS' => $kodeMingguRPS,
-                    // 'detail_pustaka' => $value['referensi'],
+                    'detail_pustaka' => $value['referensi'],
                 ];
                 Detail_Pustaka_Minggurps::create($data);
             }
