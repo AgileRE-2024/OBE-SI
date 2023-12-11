@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Validation\Rule;
 use App\Exports\ExportListRps;
 use App\Exports\ExportListFilteredRps;
-
+use App\Models\Pengampu;
 
 class RPSController extends Controller
 {
@@ -260,14 +260,18 @@ class RPSController extends Controller
             'dibuat_oleh' => $request->dibuat_oleh
         ]);
         // create minggu rps
-        for ($i = 0; $i < 16; $i++) {
+        for ($i = 0; $i < 14; $i++) {
             // Create a new RPS Minggu with the start date
             Minggu_RPS::create([
                 'id_rps' => $id_rps,
                 'kodeMingguRPS' => $id_rps.$i,
             ]);
-
         }
+
+        Pengampu::create([
+            'id_rps' => $id_rps,
+            'kodeMK' => $request->kodeMK,
+        ]);
     
         return redirect()->route('edit_rps.mata_kuliah', ['kodeRPS' => $id_rps ])->with(['success' => 'Data RPS berhasil ditambahkan.', 'kodeRPS'=>$id_rps]);
     }

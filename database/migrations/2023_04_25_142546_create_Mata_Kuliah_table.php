@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('namaMK', 100);
             $table->smallInteger('jenisMK');
             $table->integer('sks');
-            $table->char('mat_kodeMK', 10)->nullable();
+            $table->char('mat_kodeMK', 40)->nullable();
             $table->smallInteger('semester')->nullable();
             $table->smallInteger('kategoriMK');
             $table->string('deskripsiMK', 100);

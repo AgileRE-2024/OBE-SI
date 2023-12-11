@@ -12,6 +12,20 @@
                 <form action="{{ route('kurikulum.data.store_mata_kuliah') }}" method="POST">
                     @csrf
                     <div class="form-group">
+                        <label>Program Studi</label>
+                        @error('namaProdi')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <select name="namaProdi" id='namaProdi' class="form-select">
+                            <option value="" selected disabled>-- Pilih Program Studi --</option>
+                            @foreach($prodiList as $namaProdi)
+                                <option value="{{ $namaProdi }}">{{ $namaProdi }}</option>
+                            @endforeach
+                            </option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
                         <label>Kode Mata Kuliah</label>
                         @error('kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
@@ -89,6 +103,15 @@
                         @enderror
                         <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah"
                             min="0" max="4">
+                    </div>
+
+                    <div class="form-group">
+                        <label>ECTS</label>
+                        @error('ects')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <input type="text" name="ects" class="form-control" placeholder="ECTS Mata Kuliah"
+                            pattern="[0-9]+(\.[0-9]+)?">
                     </div>
 
                     <div class="form-group">

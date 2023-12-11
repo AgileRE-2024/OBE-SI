@@ -13,13 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Prasyarat', function (Blueprint $table) {
-            $table->increments('id_mat_kodeMK');
+        Schema::create('pengampu', function (Blueprint $table) {
+            $table->increments('id_pengampu');
+            $table->char('id_rps',10);
             $table->char('kodeMK', 10);
+            $table->char('nip', 18)->nullable();
+            // $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->foreign('id_rps')->references('id_rps')->on('RPS')->onDelete('restrict');
             $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-            $table->char('mat_kodeMK', 10)->nullable();
-            $table->foreign('mat_kodeMK', 10)->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
-            $table->timestamps();
+            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
         });
     }
 
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Prasyarat');
+        Schema::dropIfExists('pengampu');
     }
 };

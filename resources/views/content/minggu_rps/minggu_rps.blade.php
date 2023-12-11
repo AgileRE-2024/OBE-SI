@@ -8,8 +8,7 @@
         <div class="card-body" style="font-weight:600;">
             <h3>Minggu Rencana Pembelajaran Semester (RPS)</h3>
             <h6 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Minggu RPS merupakan detail pembelajaran
-                untuk setiap minggu dalam mata kuliah.<b style="display:inline-block;transform: scaleX(-1)"><i
-                        class="bi bi-quote"></i></b></h6>
+                untuk setiap minggu dalam mata kuliah.<b style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h6>
         </div>
     </div>
 
@@ -49,9 +48,13 @@
             </thead>
 
             <tbody>
-            @foreach($minggu_rps_list as $key => $minggurps)
-            <tr>
+                @foreach($minggu_rps_list as $key => $minggurps)
+                <tr>
+                    @if($key < 7)
                     <td scope="row">{{ $key + 1 }}</td>
+                    @else
+                    <td scope="row">{{ $key + 2 }}</td>
+                    @endif
                     @if($minggurps->SubCPMK)
                     <td scope="row">{{ $minggurps->kodeSubCPMK }} {{ $minggurps->SubCPMK->deskripsiSubCPMK }}</td>
                     @else
@@ -94,7 +97,13 @@
                         <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.edit_minggu_rps', ['kodeMingguRPS' => $minggurps->kodeMingguRPS]) }}">Edit</a>
                     </td>
                 </tr>
-            @endforeach
+                @if($key == 6)
+                <td scope="row">{{ $key + 2 }}</td>
+                <td colspan="12" class="text-center">UTS</td>
+                @endif
+                @endforeach
+                <td scope="row">16</td>
+                <td colspan="12" class="text-center">UAS</td>
             </tbody>
         </table>
     </div>

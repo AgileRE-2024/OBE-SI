@@ -39,11 +39,12 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Nama Mata Kuliah</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Prodi</th>
                         <th class="align-middle" scope="col" rowspan="2" colspan="2" style="width: 20%">Prasyarat
                         </th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Jenis Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kategori Mata Kuliah</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">SKS Mata Kuliah</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Beban Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Semester Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Mata Kuliah</th>
                         @if (auth()->user()->role == 1 || auth()->user()->role == 3)
@@ -56,16 +57,28 @@
                     @foreach ($mks as $mk)
                         <tr>
                             <td scope="row">
-                                {{ $loop->iteration }}</td>
+                                {{ $loop->iteration }}
+                            </td>
                             <td scope="row">
                                 {{ $mk->kodeMK }}
                             </td>
                             <td scope="row">
                                 {{ $mk->namaMK }}
                             </td>
+                            <td scope="row">
+                                {{ $mk->namaProdi }}
+                            </td>
                             <td scope="row" style="width:10%">
                                 @if ($mk->mat_kodeMK)
-                                    {{ $mk->mat_kodeMK }}
+                                    {{-- @foreach ($mk as $prasyarat) --}}
+                                    @if($mk->mat_kodeMK == '[null]')
+                                        {{ '-' }}
+                                    @else
+                                        {{ $mk->mat_kodeMK }}
+                                        {{-- Jika Sudah dimigrasi di tabel prasyarat, gunakan kode di bawah --}}
+                                        {{-- {{ $mk->Prasyarat->mat_kodeMK }} --}}
+                                    @endif
+                                    {{-- @endforeach --}}
                                 @else
                                     {{ '-' }}
                                 @endif
@@ -92,7 +105,7 @@
                                 @endif
                             </td>
                             <td scope="row">
-                                {{ $mk->sks }}
+                                @if($mk->sks) {{ $mk->sks }} SKS @endif @if($mk->ects)/ {{ $mk->ects }} ECTS @endif
                             </td>
                             <td scope="row">
                                 {{ $mk->semester }}
