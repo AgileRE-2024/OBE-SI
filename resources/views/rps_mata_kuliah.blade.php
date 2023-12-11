@@ -23,13 +23,13 @@
 </div>
 @endif --}}
 <div class="d-flex mt-3">
-    <table class="table table-bordered" style="text-align: center">
-        <thead class="table" style="background-color: lightgray">
+    <table class="table table-bordered" style="text-align: left">
+        {{-- <thead class="table" style="background-color: lightgray">
             <tr>
                 <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Identitas</th>
                 <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Value</th>
             </tr>
-        </thead>
+        </thead> --}}
         <tbody>
             <tr>
                 <td scope="row">
