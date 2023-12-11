@@ -11,7 +11,7 @@ class Mata_Kuliah extends Model
     public $incrementing = false;
     protected $table = 'Mata_Kuliah';
     protected $fillable = [
-        'kodeMK', 'namaProdi', 'nip', 'namaMK', 'jenisMK', 'sks', 'mat_kodeMK', 'semester', 'kategoriMK', 'deskripsiMK', 'prasyaratTambahan', 'penanggung_jawab', 'pengampu', 'deleted_at'
+        'kodeMK', 'namaProdi', 'nip', 'namaMK', 'jenisMK', 'sks', 'ects', 'mat_kodeMK', 'semester', 'kategoriMK', 'deskripsiMK', 'prasyaratTambahan', 'penanggung_jawab', 'pengampu', 'deleted_at'
     ];
 
     public function Bahan_Kajian()
