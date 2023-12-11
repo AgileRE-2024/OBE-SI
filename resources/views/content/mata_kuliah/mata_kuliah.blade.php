@@ -39,6 +39,7 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Nama Mata Kuliah</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Prodi</th>
                         <th class="align-middle" scope="col" rowspan="2" colspan="2" style="width: 20%">Prasyarat
                         </th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Jenis Mata Kuliah</th>
@@ -56,12 +57,16 @@
                     @foreach ($mks as $mk)
                         <tr>
                             <td scope="row">
-                                {{ $loop->iteration }}</td>
+                                {{ $loop->iteration }}
+                            </td>
                             <td scope="row">
                                 {{ $mk->kodeMK }}
                             </td>
                             <td scope="row">
                                 {{ $mk->namaMK }}
+                            </td>
+                            <td scope="row">
+                                {{ $mk->namaProdi }}
                             </td>
                             <td scope="row" style="width:10%">
                                 @if ($mk->mat_kodeMK)
