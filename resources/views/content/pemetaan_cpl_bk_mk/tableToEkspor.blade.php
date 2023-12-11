@@ -28,7 +28,7 @@
     </div>
     <div style="text-align: center; padding: 20px 0px 20px 90px;">
         <div class="container">
-            <div id="table1" class="table-container">
+            <div id="table1" class="table-responsive">
                 <table style="text-align: center; border: 1px inherit black solid">
                     <thead style="background-color: black; color: white">
                         <tr>
@@ -57,7 +57,7 @@
                 </table>
             </div>
             <br><br><br>
-            <div id="table2" class="table-container">
+            <div id="table2" class="table-responsive">
                 <table style="text-align: center; border: 1px inherit black solid">
                     <thead style="background-color: black; color: white">
                         <tr>
