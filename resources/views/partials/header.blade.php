@@ -2,25 +2,39 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col pt-3">
-                {{ getdate(date("U"))["weekday"] }}, {{getdate(date("U"))["mday"] }} {{ getdate(date("U"))["month"] }} {{ getdate(date("U"))["year"] }} <i class="bi bi-calendar3"></i>
+                {{ getdate(date('U'))['weekday'] }}, {{ getdate(date('U'))['mday'] }} {{ getdate(date('U'))['month'] }}
+                {{ getdate(date('U'))['year'] }} <i class="bi bi-calendar3"></i>
             </div>
             <div class="col" style="text-align:end;">
-            <table style="width :100%; margin-top: 5px;">
-                <tr>
-                <td>    
-                <b>{{ auth()->user()->namaDosen }}</b>
-                <br>
-                {{ auth()->user()->jabatanDosen }}
-                </td>
-                <td>
-                    <a href="/dashboard/dosen">
-                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" style="margin-left:-25px;"class="rounded-circle" alt="..." width="50px">
-                </a></td>
-                </tr>
-            </table>
+                <table style="width :100%; margin-top: 5px;">
+                    <tr>
+                        <td>
+                            <b>{{ auth()->user()->namaDosen }}</b>
+                            <br>
+                            {{-- {{ auth()->user()->jabatanDosen }} --}}
+                            @if (auth()->user()->role == 0)
+                                Dosen
+                            @elseif(auth()->user()->role == 1)
+                                Kurikulum
+                            @elseif(auth()->user()->role == 2)
+                                Admin
+                            @elseif(auth()->user() == 3)
+                                Dosen dan Admin
+                            @else
+                                Unknown Role
+                            @endif
+                        </td>
+                        <td style="width: 10%">
+                            <a href="/dashboard/dosen">
+                                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                                    style="margin-left:-25px;"class="rounded-circle" alt="..." width="50px">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
                 <div class="popup">
-                Tim
-                    @if(auth()->user()->roles == 0)
+                    Tim
+                    @if (auth()->user()->roles == 0)
                         Dosen
                     @elseif(auth()->user()->roles == 1)
                         Kurikulum
@@ -46,8 +60,8 @@
         </div>
     </div><!-- /.container-fluid -->
     <!-- @if (Request::is('*kurikulum*'))
-        @if (Request::is('*/pemetaan/*'))
-            <nav class="nav nav-pills flex-column flex-sm-row border-bottom">
+@if (Request::is('*/pemetaan/*'))
+<nav class="nav nav-pills flex-column flex-sm-row border-bottom">
                 <a class="flex-sm-fill text-sm-center nav-link @if (URL::current() === route('kurikulum.pemetaan.bk_mk')) active @endif"
                     href="{{ route('kurikulum.pemetaan.bk_mk') }}">BK-MK</a>
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">CPL-BK</a>
@@ -60,8 +74,8 @@
                     href="{{ route('kurikulum.pemetaan.cpl_pl') }}">CPL-PL</a>
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">CPL-CPMK-MK</a>
             </nav>
-        @else
-            <nav class="nav nav-pills flex-column flex-sm-row border-bottom">
+@else
+<nav class="nav nav-pills flex-column flex-sm-row border-bottom">
                 <a class="flex-sm-fill text-sm-center nav-link @if (URL::current() === route('kurikulum.data.profil_lulusan')) active @endif"
                     href="{{ route('kurikulum.data.profil_lulusan') }}">Profil Lulusan</a>
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">CPL SNDikti</a>
@@ -69,8 +83,8 @@
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">Bahan Kajian</a>
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">Mata Kuliah</a>
             </nav>
-        @endif
-    @endif -->
+@endif
+@endif -->
 </section>
 <script>
     // Membuat variabel untuk merujuk ke elemen dengan id "myCol"
