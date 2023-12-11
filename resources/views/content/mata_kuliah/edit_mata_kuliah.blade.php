@@ -13,6 +13,20 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
+                        <label>Program Studi</label>
+                        @error('namaProdi')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <select name="namaProdi" id='namaProdi' class="form-select">
+                            <option value="" selected disabled>-- Pilih Program Studi --</option>
+                            @foreach($prodiList as $namaProdi)
+                                <option value="{{ $namaProdi }}" {{ $mk->namaProdi == $namaProdi ? 'selected' : '' }}>{{ $namaProdi }}</option>
+                            @endforeach
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label>Kode Mata Kuliah</label>
                         @error('kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>

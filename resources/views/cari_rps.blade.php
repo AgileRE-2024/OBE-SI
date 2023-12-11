@@ -56,7 +56,7 @@
                     <div class="d-flex justify-content-start">
                         <div class="pr-3">
                             <a id="edit" class="btn btn-primary"
-                                href="{{ route('edit_rps.mata_kuliah', ['kodeRPS' => $rps->id_rps]) }}">Edit</a>
+                                href="{{ route('edit_rps.mata_kuliah', ['kodeRPS' => $rps->id_rps]) }}">Detail</a>
                         </div>
                         <div class="pr-3">
                             <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/{{ $rps->id_rps }}/{{ $rps->kodeMK }}"><i

@@ -36,7 +36,7 @@
                     </label>
                 </div>
                 <div class="container">
-                    <div id="table1" class="table-container">
+                    <div id="table1" class="table-responsive">
                         <table class="table table-hover rounded table-bordered mb-0">
                             <thead class="table-secondary">
                                 <tr class="text-center">
@@ -87,7 +87,7 @@
                         </table>
                     </div>
 
-                    <div id="table2" class="d-flex">
+                    <div id="table2" class="table-responsive">
                         <table class="table table-bordered" style="text-align: center">
                             <thead style="background-color: lightgray">
                                 <tr>

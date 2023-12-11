@@ -8,6 +8,7 @@ use App\Models\CPMK;
 use App\Models\Detail_MK_CPMK;
 use App\Models\Detail_Peran_Dosen;
 use App\Models\Detail_RPS_Penilaian;
+use App\Models\Detail_Pustaka_Minggurps;
 use App\Models\Mata_Kuliah;
 use App\Models\MataKuliah;
 use App\Models\Minggu_RPS;
@@ -86,13 +87,18 @@ class RPSController extends Controller
             'dosen' => $dosen,
             'minggu_rps_list' => Minggu_RPS::where("id_rps", $idRPS)->get(),
             'mk' => Mata_Kuliah::where("kodeMK", $kodeMK)->first(),
+            'all_cpmk' => CPMK::all(),
+            'mk_cpmk' => Detail_MK_CPMK::where('kodeMK', $kodeMK)->get(),
+            'cpl' => CPL_Prodi::all(),
             'kodeRPS' => $idRPS,
             'teknik_penilaian_list'=> Teknik_Penilaian::where("id_rps", $idRPS),
             'detail_rps_list'=> Detail_RPS_Penilaian::all(),
-            'dosen_list'=> User::all(),
-            // 'detail_peran_dosen_list' => Detail_Peran_Dosen::all()->where('kodeRPS',$kodeRPS),
-            'subcpmk_list'=>SubCPMK::all(),
-            'teknik_penilaian_list'=>Teknik_Penilaian::all(),
+
+            'minggu_pustaka' => Detail_Pustaka_Minggurps::all()
+            // 'dosen_list'=> User::all(),
+            // // 'detail_peran_dosen_list' => Detail_Peran_Dosen::all()->where('kodeRPS',$kodeRPS),
+            // 'subcpmk_list'=>SubCPMK::all(),
+            // 'teknik_penilaian_list'=>Teknik_Penilaian::all(),
         ]);
 
         $date_time = date('Y_m_d_H_i_s');

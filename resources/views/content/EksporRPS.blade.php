@@ -156,31 +156,63 @@
                 </tr>
                 <tr>
                     <th style="text-align:left;">5. Jurusan/Prodi</th>
-                    <td>{{ $mk->namaProdi }}</td>
+                    <td>{{ $mk->namaProdi ?? "-" }}</td>
                 </tr>
                 <tr>
+                <?php
+                    $counter = 1
+                ?>
                     <th style="text-align:left;">6. Capaian Pembelajaran Lulusan (CPL)</th>
-                    <td></td>
+                    <td>
+                    CPL {{ $mk->namaMK }}:
+                        <div style="margin-left:15px">
+                        @foreach($all_cpmk->unique('kodeCPL') as $cpmk)
+                            <br> 
+                            @foreach($mk_cpmk as $mk_cpmk_item)
+                                @if($mk_cpmk_item->kodeCPMK == $cpmk->kodeCPMK)
+                                    {{ $counter }}. {{ $cpmk->cpl->deskripsiCPL }}
+                                @endif
+                            @endforeach
+                            <?php
+                                $counter += 1
+                            ?>
+                        @endforeach
+                        <div>
+                    </td>
                 </tr>
+                <?php
+                    $counter = 1
+                ?>
                 <tr>
                     <th style="text-align:left;">7. Capaian Pembelajaran Mata Kuliah (CPMK)</th>
-                    <td></td>
+                    <td>
+                        Capaian pembelajaran mata kuliah {{ $mk->namaMK }}:
+                        <div style="margin-left:15px">
+                        @foreach($mk_cpmk as $cpmk)
+                            <br> 
+                            {{ $counter }}.  {{ $all_cpmk->where('kodeCPMK', $cpmk->kodeCPMK)->first()->deskripsiCPMK }}
+                            <?php
+                                $counter += 1
+                            ?>
+                        @endforeach
+                        <div>
+                    </td>
                 </tr>
                 <tr>
                     <th style="text-align:left;">8. Deskripsi Mata Kuliah</th>
-                    <td> {{ $mk->deskripsiMK }}</td>
+                    <td> {{ $mk->deskripsiMK ?? "-"}}</td>
                 </tr>
                 <tr>
                     <th style="text-align:left;">9. Prasyarat (bila ada)</th>
-                    <td>{{ $mk->prasyaratTambahan }}</td>
+                    <td>{{ $mk->prasyaratTambahan ?? "-"}}</td>
                 </tr>
                 <tr>
                     <th style="text-align:left;">10. Penanggung Jawab</th>
-                    <td>{{ $mk->penanggung_jawab }}</td>
+                    <td>{{ $mk->penanggung_jawab ?? "-" }}</td>
                 </tr>
                 <tr>
                     <th style="text-align:left;">11. Dosen Pengampu</th>
-                    <td>{{ $mk->pengampu }}</td>
+                    <td>{{ $mk->pengampu ?? "-"}}</td>
                 </tr>
         </table>
         <h4>
@@ -228,14 +260,17 @@
                 <td>{{ $minggu_rps->pengalaman_belajar }}</td>
                 <td>{{ $minggu_rps->temp_kriteria_penilaian }}</td>
                 <td>{{ $minggu_rps->bobot_nilai }}</td>
-                <td>{{ $minggu_rps->temp_referensi }}</td>
+                <td>{{ $minggu_pustaka->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first()->id_pustaka ?? "-"}}</td>
             </tr>
             @if($i == 6)
             <tr>
                 <td colspan="10"> UTS </td>
             </tr>
+            <?php
+                $i += 1
+            ?>
             @endif
-            @if($i == 13)
+            @if($i == 14)
             <tr>
                 <td colspan="10"> UAS </td>
             </tr>
@@ -243,7 +278,7 @@
             <?php 
              $i += 1
             ?>
-            @if($i == 14)
+            @if($i == 15)
             @break
             @endif
             @endforeach
@@ -254,5 +289,16 @@
         <h7>
             C. DAFTAR REFERENSI   
         </h7>
+        <div style="margin-left:40px;margin-top:20px;">
+        <?php
+            $no = 1;
+        ?>
+        @foreach($minggu_pustaka->unique('id_pustaka') as $pustaka)
+            {{ $no }}. {{ $pustaka->pustaka->judul }}
+        <?php
+            $no += 1;
+        ?>
+        @endforeach
+        </div>
     </body>
 </html>
