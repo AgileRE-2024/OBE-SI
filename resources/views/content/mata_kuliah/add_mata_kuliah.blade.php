@@ -52,7 +52,8 @@
                         @error('deskripsi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea maxlength="100" name="deskripsi" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
+                        <textarea maxlength="100" name="deskripsi" id="editor_mk" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
+                    
                     </div>
 
                     <div class="form-group">
@@ -146,6 +147,15 @@
             </div>
         </div>
     </div>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor_mk' )
+            
+            )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection
 
 <script>
@@ -162,3 +172,4 @@
         input.value = uppercaseValue;
     }
 </script>
+
