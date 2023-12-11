@@ -53,7 +53,8 @@
                         @error('deskripsi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea name="deskripsi" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah">{{ old('deskripsi') ? old('deskripsi') : $mk->deskripsiMK }}</textarea>
+                        <textarea name="deskripsi" id="editor" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"
+                            value="{{ old('deskripsi') ? old('deskripsi') : $mk->deskripsiMK }}">{{ old('deskripsi') ? old('deskripsi') : $mk->deskripsiMK }}</textarea>
                     </div>
 
 
@@ -192,4 +193,18 @@
             </div>
         </div>
     </div>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ),
+            {
+                ckfinder:{
+                    uploadUrl:"{{ route('ckeditor.upload',['_token'=>csrf_token()]) }}",
+                }
+            }
+            
+            )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection

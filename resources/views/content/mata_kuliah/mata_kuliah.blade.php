@@ -111,7 +111,7 @@
                                 {{ $mk->semester }}
                             </td>
                             <td scope="row">
-                                {{ $mk->deskripsiMK }}
+                                {!! $mk->deskripsiMK !!}
                             </td>
                             @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                             <td scope="row">

@@ -27,7 +27,7 @@
             <form id ="myForm"method="POST" action="{{ route('kurikulum.pemetaan.update_pemetaan_bk_mk') }}">
                 @csrf
                 @method('put')
-                <table class="table table-bordered" style="text-align: center">
+                <table class="table table-bordered table-responsive" style="text-align: center">
                     <thead style="background-color: lightgray">
                             <tr>
                                 <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
@@ -54,10 +54,10 @@
                                     </th>
                                 </div>
                                 @endif
-                                    
+
                                 @endforeach
                             </tr>
-    
+
                     </thead>
                     <tbody>
                     @php
@@ -72,7 +72,7 @@
                                     <td style="background-color: yellow;" ><input type="checkbox"
                                             id="checkbox_{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
                                             name="checkbox_{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}-{{ $bk->kodeBK }}"
-                                            value="{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}&{{ $bk->kodeBK }}" 
+                                            value="{{ $mk_list->where('kodeMK','===',$item)->first()["kodeMK"]  }}&{{ $bk->kodeBK }}"
                                             @if ($pemetaan->where('kodeMK', '===', $mk_list->where('kodeMK','===',$item)->first()["kodeMK"] )->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif style="width:26px;height:26px; @if (auth()->user()->role == 0 || auth()->user()->role == 2) width:26px;height:26px;background-color: blue !important; @endif">
                                             {{-- <span id="{{$mk_list->where('kodeMK','===',$item)->first()["kodeMK"] }}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
@@ -81,9 +81,9 @@
                                     $iter = $iter+1;
                                 @endphp
                             </tr>
-                            
+
                         @endforeach
-    
+
                         @foreach ($mk_list as $mk)
                         @if (!(in_array($mk->kodeMK, $empty)))
                         <tr>
@@ -95,7 +95,7 @@
                                     <td style="background-color: yellow"><input type="checkbox"
                                         id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
-                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" 
+                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}"
                                         @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif style="width:26px;height:26px; @if (auth()->user()->role == 0 || auth()->user()->role == 2) width:26px;height:26px;background-color: blue !important; @endif">
                                         {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
@@ -103,7 +103,7 @@
                                     <td ><input type="checkbox"
                                         id="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
                                         name="checkbox_{{ $mk->kodeMK }}-{{ $bk->kodeBK }}"
-                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}" 
+                                        value="{{ $mk->kodeMK }}&{{ $bk->kodeBK }}"
                                         @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif @if (auth()->user()->role == 0 || auth()->user()->role == 2)  disabled @endif style="width:26px;height:26px; @if (auth()->user()->role == 0 || auth()->user()->role == 2) width:26px;height:26px;background-color: blue !important; @endif">
                                         {{-- <span id="{{$mk->kodeMK}}_{{ $bk->kodeBK }}" class="checkmark"></span> --}}
                                     </td>
@@ -113,11 +113,11 @@
                         @php
                             $iter = $iter+1;
                         @endphp
-                        
-                            
+
+
                         @endif
                         @endforeach
-                        
+
                     </tbody>
                 </table>
                 @if (auth()->user()->role == 1 || auth()->user()->role == 3)
@@ -173,7 +173,7 @@
         </div>
     </div>
     <style>
-    
+
         /* Style the tooltip */
         span[itemid] {
             position: relative;
@@ -217,14 +217,14 @@
             bottom: calc(100% + 10px);
             /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
         }
-    
+
     </style>
-    
+
     <script>
-    
+
     document.getElementById("myForm").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the default form submission behavior
-    
+
       Swal.fire({
         title: 'Peringatan',
         text: "Apakah Anda ingin menyimpan perubahan ?",
@@ -237,7 +237,7 @@
         if (result.isConfirmed) {
           // If the user confirms, submit the form
           this.submit();
-    
+
           // Display a success message after the form is submitted
           Swal.fire(
             'Success!',
@@ -247,8 +247,8 @@
         }
       })
     });
-    
-    
+
+
     </script>
-    
+
 @endsection
