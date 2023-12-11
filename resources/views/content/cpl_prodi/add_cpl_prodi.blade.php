@@ -24,7 +24,7 @@
                         <input type="text" name="kodeCPL" class="form-control"
                             placeholder="Kode CPL Prodi (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
                             maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
-                            oninput="updateInput(this);" value="CPL-">
+                            oninput="updateInput(this);" value="LO-">
                     </div>
 
                     <div class="form-group">

@@ -20,7 +20,7 @@
                         <input type="text" name="kodePL" class="form-control"
                             placeholder="Kode Profil Lulusan (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
                             maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
-                            oninput="updateInput(this);" value="PL">
+                            oninput="updateInput(this);" value="GP">
                     </div>
                     <div class="form-group">
                         <label>Nama Profil Lulusan</label>
