@@ -232,6 +232,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::put('/editPustaka/{pustaka}', [PustakaController::class, 'update'])->name('update_pustaka');
             Route::get('/deletePustaka/{pustaka}', [PustakaController::class, 'delete'])->name('delete_pustaka');
         });
+        
 
         Route::get('/profilLulusan', [ProfilLulusanController::class, 'index'])->name('profil_lulusan')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
         Route::get('/profilLulusan/export/{type}', [ProfilLulusanController::class, 'export'])->name('export_pl')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
@@ -255,8 +256,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/sub_cpmk/export/{type}', [SubCPMKController::class, 'export'])->name('export_sub_cpmk')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
 
         Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka');
-    });
-});
+    }); 
+}); Route::get('/exportExcelPustaka', [PustakaController::class,'export_excel'])->name('export_excel_pustaka');
 
 Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], function () {
     Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {

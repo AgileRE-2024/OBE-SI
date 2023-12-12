@@ -1,9 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Dompdf\Dompdf;
+use App\Models\Minggu_RPS;
+use Illuminate\Support\Facades\Response;
+use App\Exports\ExportListPustaka;
+use App\Exports\Eksporpustakabackup;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Models\pustaka;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Validator;
 
 class PustakaController extends Controller
@@ -74,5 +80,14 @@ class PustakaController extends Controller
         $pustaka->delete();
 
         return redirect()->route('kurikulum.data.pustaka')->with('success', 'Pustaka berhasil dihapus');
+    }
+
+    public function export_excel(){
+        // $rps = RPS::where('tahunAjaran',2023)
+        // ->with('Mata_Kuliah')->get();
+        // $attributeNames = array_keys($rps->toArray()[0]);
+
+        // dd($rps);
+        return Excel::download(new ExportListPustaka,'list_pustaka.xlsx');
     }
 }
