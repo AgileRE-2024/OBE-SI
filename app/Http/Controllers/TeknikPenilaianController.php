@@ -5,6 +5,7 @@ use Dompdf\Dompdf;
 use App\Models\Teknik_Penilaian;
 use App\Models\Detail_RPS;
 use App\Models\RPS;
+use App\Models\Mata_Kuliah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -16,10 +17,15 @@ class TeknikPenilaianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($kodeRPS)
+    public function index($kodeRPS, $kodeMK)
     {
         $rps = RPS::where('id_rps', $kodeRPS)->first();
-        return view('content.teknik_penilaian.teknik_penilaian', ['title' => 'Teknik Penilaian', 'rps' => $rps, 'kodeRPS' => $kodeRPS]);
+        return view('content.teknik_penilaian.teknik_penilaian', [
+            'title' => 'Teknik Penilaian',
+            'rps' => $rps,
+            'kodeRPS' => $kodeRPS,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
+        ]);
     }
 
     public function export($type)
