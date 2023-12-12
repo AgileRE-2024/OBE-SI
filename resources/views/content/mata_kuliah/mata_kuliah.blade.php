@@ -70,15 +70,21 @@
                             </td>
                             <td scope="row" style="width:10%">
                                 @if ($mk->mat_kodeMK)
-                                    {{-- @foreach ($mk as $prasyarat) --}}
                                     @if($mk->mat_kodeMK == '[null]')
                                         {{ '-' }}
                                     @else
-                                        {{ $mk->mat_kodeMK }}
-                                        {{-- Jika Sudah dimigrasi di tabel prasyarat, gunakan kode di bawah --}}
-                                        {{-- {{ $mk->Prasyarat->mat_kodeMK }} --}}
+                                        @if ($mk->Prasyarat == null)
+                                            {{ $mk->mat_kodeMK }}
+                                        @else
+                                            {{-- Jika Sudah dimigrasi di tabel prasyarat, gunakan kode di bawah --}}
+                                            {{-- {{ $mk->Prasyarat->mat_kodeMK }} --}}
+                                            @for ($kode=2; $kode<=strlen($mk->mat_kodeMK); $kode+=9)
+                                                {{-- {{ $kode }} --}}
+                                                {{ substr($mk->mat_kodeMK, $kode, 6) }}
+                                            @endfor
+                                            
+                                        @endif
                                     @endif
-                                    {{-- @endforeach --}}
                                 @else
                                     {{ '-' }}
                                 @endif
