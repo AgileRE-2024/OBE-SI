@@ -123,6 +123,28 @@ class RPSController extends Controller
         }
     }
 
+    public function tampilRPS($idRPS,$kodeMK)
+    {
+        $rps = RPS::where('id_rps', $idRPS)->first();
+        $dosen = User::where('nip', $rps->nip)->first();
+
+        return view('tampilRPS', [
+            'kodeMK'=>$kodeMK,
+            'title' => 'RPS',
+            'rps' => RPS::where('id_rps', $idRPS)->first(),
+            'dosen' => $dosen,
+            'minggu_rps_list' => Minggu_RPS::where("id_rps", $idRPS)->get(),
+            'mk' => Mata_Kuliah::where("kodeMK", $kodeMK)->first(),
+            'all_cpmk' => CPMK::all(),
+            'mk_cpmk' => Detail_MK_CPMK::where('kodeMK', $kodeMK)->get(),
+            'cpl' => CPL_Prodi::all(),
+            'kodeRPS' => $idRPS,
+            'teknik_penilaian_list'=> Teknik_Penilaian::where("id_rps", $idRPS),
+            'detail_rps_list'=> Detail_RPS_Penilaian::all(),
+            'minggu_pustaka' => Detail_Pustaka_Minggurps::all()
+        ]);
+    }
+
     public function exportRiwayatRps($type, $kodeMK)
     {
         date_default_timezone_set('Asia/Jakarta');

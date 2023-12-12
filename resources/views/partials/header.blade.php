@@ -18,8 +18,8 @@
                                 Kurikulum
                             @elseif(auth()->user()->role == 2)
                                 Admin
-                            @elseif(auth()->user() == 3)
-                                Dosen dan Admin
+                            @elseif(auth()->user()->role == 3)
+                                Dosen dan Kurikulum
                             @else
                                 Unknown Role
                             @endif
