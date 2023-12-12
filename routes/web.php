@@ -258,6 +258,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka');
     }); 
 }); Route::get('/exportExcelPustaka', [PustakaController::class,'export_excel'])->name('export_excel_pustaka');
+    Route::get('/exportPDFPustaka', [PustakaController::class,'export_pdf'])->name('export_PDF_pustaka');
 
 Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], function () {
     Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {

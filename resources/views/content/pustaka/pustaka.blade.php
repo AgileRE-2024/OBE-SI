@@ -15,7 +15,7 @@
                 </i>Tambah</a>
         </div>
         <div class="pr-3">
-            <a class="btn btn-outline-danger"><i class="bi bi-file-earmark-pdf-fill">
+            <a class="btn btn-outline-danger" href="{{ route('export_PDF_pustaka') }}"><i class="bi bi-file-earmark-pdf-fill">
                 </i>Export PDF</a>
         </div>
         <div>
