@@ -10,11 +10,11 @@
         </div>
     </div>
     <div class="d-flex justify-content-start pt-2">
-        <div>
+        <div class="pr-3">
             <a class="btn btn-dark" href="{{ route('kurikulum.data.add_pustaka') }}"><i class="bi bi-plus-square">
                 </i>Tambah</a>
         </div>
-        <div>
+        <div class="pr-3">
             <a class="btn btn-outline-danger"><i class="bi bi-file-earmark-pdf-fill">
                 </i>Export PDF</a>
         </div>
