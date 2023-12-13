@@ -333,10 +333,12 @@
         $no = 1;
         ?>
         @foreach($minggu_pustaka->unique('id_pustaka') as $pustaka)
-        {{ $no }}. {{ $pustaka->pustaka->judul }}
+        <div class="col">
+            {!! $no !!}. {!! $pustaka->pustaka->judul !!}
         <?php
         $no += 1;
         ?>
+        </div>
         @endforeach
     </div>
 </body>
