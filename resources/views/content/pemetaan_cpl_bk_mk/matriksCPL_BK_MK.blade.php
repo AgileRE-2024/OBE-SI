@@ -64,25 +64,6 @@
                                     @endforeach
                                 </tr>
                                 @endforeach
-
-                                </thead>
-                            <tbody>
-                                @foreach ($cpl_list as $cpl)
-                                <tr class="text-center">
-                                    <th scope="row" data-toggle="tooltip" data-placement="top"
-                                        title="{{ $cpl->deskripsiCPL}}">{{ $cpl->kodeCPL }}</th>
-                                    @foreach ($bk_list as $bk)
-                                    <td>
-                                        @if ($pemetaan2->where('kodeBK', $bk->kodeBK)->where('kodeCPL',
-                                        $cpl->kodeCPL)->count() != 0)
-                                        @foreach ($pemetaan1->where('kodeBK', $bk->kodeBK) as $pemetaanbkmk)
-                                        {{ $pemetaanbkmk->kodeMK }}
-                                        @endforeach
-                                        @endif
-                                    </td>
-                                    @endforeach
-                                </tr>
-                                @endforeach
                             </tbody>
                         </table>
                     </div>
