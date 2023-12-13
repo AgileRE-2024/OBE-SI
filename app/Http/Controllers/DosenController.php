@@ -162,7 +162,7 @@ class DosenController extends Controller
             ]);
         }
 
-        return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS])->with('success', 'Data Dosen berhasil diperbarui');
+        return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS, 'kodeMK'=>$kodeMK])->with('success', 'Data Dosen berhasil diperbarui');
     }
 // $detail = Detail_Peran_Dosen::findOrFail($nip);
         // $detail->nip = $request->input('nip');

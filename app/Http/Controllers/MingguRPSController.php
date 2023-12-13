@@ -67,6 +67,7 @@ class MingguRPSController extends Controller
     {
         // dd($request);
         $kodeRPS = substr($kodeMingguRPS, 0, 10);
+        $kodeMK = substr($kodeRPS, 0, 6);
 
         $request->validate([
             'kodeSubCPMK' => 'required',
@@ -115,7 +116,7 @@ class MingguRPSController extends Controller
         }
 
         return redirect()
-            ->route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS])
+            ->route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS, 'kodeMK'=>$kodeMK])
             ->with('success', 'Minggu RPS berhasil diedit');
     }
 }
