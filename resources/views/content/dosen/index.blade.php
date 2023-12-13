@@ -11,6 +11,7 @@
                     style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
         </div>
     </div>
+    @if (auth()->user()->role == 0 || auth()->user()->role == 3)
     <div class="d-flex justify-content-start pt-2">
         <div>
             <a class="btn btn-primary" href="{{ route('edit_rps.edit_peran_dosen', ['kodeRPS' => $kodeRPS ]) }}"><i
@@ -18,6 +19,7 @@
                 </i>Edit</a>
         </div>
     </div>
+    @endif
     <div class="d-flex mt-3">
         <table class="table table-bordered" style="text-align: center">
             <thead class="table" style="background-color: lightgray">

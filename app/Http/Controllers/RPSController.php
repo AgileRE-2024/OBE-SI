@@ -130,6 +130,7 @@ class RPSController extends Controller
 
         return view('tampilRPS', [
             'kodeMK'=>$kodeMK,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
             'title' => 'RPS',
             'rps' => RPS::where('id_rps', $idRPS)->first(),
             'dosen' => $dosen,
