@@ -102,13 +102,13 @@
                 -
             </td>
             <td class="td-rps" rowspan="2">
-                {{ $rps->disiapkan_oleh }}
+            {{ $penanggung_jawab->namaDosen ?? "-" }}
             </td>
             <td class="td-rps" rowspan="2">
-                {{ $rps->diperiksa_oleh }}
+            {{ $pemeriksa->namaDosen ?? "-" }}
             </td rowspan="2">
             <td class="td-rps" rowspan="2">
-                {{ $rps->disetujui_oleh }}
+            {{ $persetujuan->namaDosen ?? "-" }}
             </td>
         </tr>
 
@@ -218,19 +218,31 @@
         </tr>
         <tr>
             <th class="table-header" style="text-align:left;">8. Deskripsi Mata Kuliah</th>
-            <td class="td-rps"> {{ $mk->deskripsiMK ?? "-"}}</td>
+            <td class="td-rps"> {!! $mk->deskripsiMK ?? "-" !!}</td>
         </tr>
         <tr>
             <th class="table-header" style="text-align:left;">9. Prasyarat (bila ada)</th>
-            <td class="td-rps">{{ $mk->prasyaratTambahan ?? "-"}}</td>
+            <td class="td-rps">
+                @foreach($list_prasyarat as $prasyarat)
+                <div class="col">
+                    {{ $prasyarat->kodeMK }} {{$prasyarat->namaMK}}
+                </div>
+                @endforeach
+            </td>
         </tr>
         <tr>
             <th class="table-header" style="text-align:left;">10. Penanggung Jawab</th>
-            <td class="td-rps">{{ $mk->penanggung_jawab ?? "-" }}</td>
+            <td class="td-rps">{{ $penanggung_jawab->namaDosen ?? "-" }}</td>
         </tr>
         <tr>
             <th class="table-header" style="text-align:left;">11. Dosen Pengampu</th>
-            <td class="td-rps">{{ $mk->pengampu ?? "-"}}</td>
+            <td class="td-rps">
+                @foreach($dosen_pengampu as $pengampu)
+                <div class="col">
+                    {{ $pengampu->namaDosen }}
+                </div>
+                @endforeach
+            </td>
         </tr>
     </table>
     <h4>
@@ -305,7 +317,16 @@
     <p>
     </p>
     <h7>
-        C. DAFTAR REFERENSI
+        C. KRITERIA DAN DESKRIPSI PENILAIAN
+    </h7>
+    <div style="margin-left:40px;margin-top:20px;">
+        {!! $rps->detail_penilaian !!}
+    </div>
+
+    <p>
+    </p>
+    <h7>
+        D. DAFTAR REFERENSI
     </h7>
     <div style="margin-left:40px;margin-top:20px;">
         <?php
