@@ -99,7 +99,7 @@
                     Deskripsi Mata Kuliah
                 </td>
                 <td scope="row">
-                    {{ $mata_kuliah->deskripsiMK }}
+                    {!! $mata_kuliah->deskripsiMK !!}
                 </td>
             </tr>
             <tr>
