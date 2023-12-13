@@ -115,6 +115,15 @@ class MataKuliahController extends Controller
             'prasyaratTambahan' => $prasyarat_tambahan,
         ]);
 
+        if ($mat_kodeMK != null){
+            foreach ($request->mat_kodeMK as $value) {
+                // $prasyarat[] = $value;
+                Prasyarat::create([
+                    'kodeMK' => $request->kodeMK,
+                    'mat_kodeMK' => $value
+                ]);
+            }
+        }
 
         return redirect()->route('kurikulum.data.mata_kuliah')->with('success', 'Mata Kuliah berhasil ditambahkan');
     }

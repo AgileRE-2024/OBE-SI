@@ -11,6 +11,8 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Models\pustaka;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Validator;
+//use Barryvdh\DomPDF\Facade as PDF;
+use PDF;
 
 class PustakaController extends Controller
 {
@@ -90,4 +92,19 @@ class PustakaController extends Controller
         // dd($rps);
         return Excel::download(new ExportListPustaka,'list_pustaka.xlsx');
     }
+
+    public function export_pdf(){
+        // Assuming you have a model named ExportListPustaka that retrieves the data
+        // you want to export to the PDF. Replace it with your actual model and logic.
+        // For example:
+        // $data = YourModel::all();
+    
+        $pustaka = Pustaka::all();
+    
+        $pdf = PDF::loadView('content.pustaka.tabeleksporpustaka', compact('pustaka'));
+    
+        // Adjust the file name as needed
+        return $pdf->download('list_pustaka.pdf');
+    }
+    
 }
