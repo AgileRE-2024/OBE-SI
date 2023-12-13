@@ -23,8 +23,8 @@
                             oninput="this.value = this.value.toUpperCase(); this.value = this.value.replace(/[^A-Z0-9]/g, '')"> --}}
                         <input type="text" name="kodeCPL" class="form-control"
                             placeholder="Kode CPL Prodi (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
-                            maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
-                            oninput="updateInput(this);" value="CPL-">
+                            maxlength="10" title="Harap masukkan huruf besar dan angka saja"
+                            oninput="updateInput(this);" value="LO-">
                     </div>
 
                     <div class="form-group">
@@ -52,19 +52,18 @@
             </div>
         </div>
     </div>
-@endsection
+    <script>
+        function updateInput(input) {
+            var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
 
-<script>
-    function updateInput(input) {
-        var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+            // Terapkan validasi minlength secara manual jika diperlukan
+            if (uppercaseValue.length >= 4) {
+                input.setCustomValidity('');
+            } else {
+                input.setCustomValidity('Panjang minimal adalah 4 karakter');
+            }
 
-        // Terapkan validasi minlength secara manual jika diperlukan
-        if (uppercaseValue.length >= 4) {
-            input.setCustomValidity('');
-        } else {
-            input.setCustomValidity('Panjang minimal adalah 4 karakter');
+            input.value = uppercaseValue;
         }
-
-        input.value = uppercaseValue;
-    }
-</script>
+    </script>
+@endsection

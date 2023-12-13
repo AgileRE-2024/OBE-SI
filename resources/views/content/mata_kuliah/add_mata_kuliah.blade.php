@@ -18,13 +18,13 @@
                         @enderror
                         <select name="namaProdi" id='namaProdi' class="form-select">
                             <option value="" selected disabled>-- Pilih Program Studi --</option>
-                            @foreach($prodiList as $namaProdi)
+                            @foreach ($prodiList as $namaProdi)
                                 <option value="{{ $namaProdi }}">{{ $namaProdi }}</option>
                             @endforeach
                             </option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Kode Mata Kuliah</label>
                         @error('kodeMK')
@@ -52,7 +52,9 @@
                         @error('deskripsi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea maxlength="100" name="deskripsi" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
+                        <textarea maxlength="100" name="deskripsi" id="editor_mk" row="3" class="form-control"
+                            placeholder="Deskripsi Mata Kuliah"></textarea>
+
                     </div>
 
                     <div class="form-group">
@@ -114,7 +116,7 @@
                             pattern="[0-9]+(\.[0-9]+)?">
                     </div>
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label>Prasyarat Mata Kuliah</label>
                         @error('mat_kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
@@ -127,7 +129,48 @@
                             @endforeach
                             <option value="">Tidak ada Prasyarat</option>
                         </select>
+                    </div> --}}
+
+                    <div id="dynamicAddRemove">
+                        <div class="d-flex justify-content-between mb-2">
+                            <label>Prasyarat Mata Kuliah</label>
+                            <button type="button" name="add" id="dynamic-ar" class="btn btn-success btn-sm"><i
+                                    class="bi bi-plus-square"></i> Tambah</button>
+                        </div>
+                        <div class="form-group">
+                            @error('mat_kodeMK')
+                            <h6 style="color: #BF2C45">{{ $message }}</h6>
+                            @enderror
+                            <select name="mat_kodeMK[]" id="mat_kodeMK" class="form-select mb-1">
+                                {{-- <option value="" @if (!$mk->mat_kodeMK) selected @endif disabled>-- Pilih MK Prasyarat --</option> --}}
+                                <option value="" disabled selected>-- Pilih MK Prasyarat --</option>
+                                    @foreach ($mks as $mk)
+                                    <option value="{{ $mk->kodeMK }}">
+                                        {{ $mk->namaMK }}</option>
+                                    @endforeach
+                            </select>
+                        </div>
                     </div>
+
+
+                    <!-- JavaScript -->
+                    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                    <script
+                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js">
+                    </script>
+                    <script type="text/javascript">
+                        var i = 0;
+                        $("#dynamic-ar").click(function () {
+                            ++i;
+                            $("#dynamicAddRemove").append(
+                                '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="mat_kodeMK[' + i + ']" id="judul_pustaka" class="form-select mb-1"><option value="" @if (!$mk->mat_kodeMK) selected @endif disabled>-- Pilih MKPrasyarat --</option>@foreach ($mks as $item)<option value="{{ $item->kodeMK }}" @if ($mk->mat_kodeMK == $item->kodeMK) selected @endif>{{ $item->namaMK }}</option>@endforeach</select></td></div>'
+                            );
+                        });
+                        $(document).on('click', '.remove-input-field', function () {
+                            $(this).parents('.dynamic').remove();
+                        });
+
+                    </script>
 
                     <div class="form-group">
                         <label>Prasyarat Tambahan</label>
@@ -146,19 +189,27 @@
             </div>
         </div>
     </div>
-@endsection
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor_mk')
 
-<script>
-    function updateInput(input) {
-        var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+            )
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+        function updateInput(input) {
+            var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
 
-        // Terapkan validasi minlength secara manual jika diperlukan
-        if (uppercaseValue.length >= 2) {
-            input.setCustomValidity('');
-        } else {
-            input.setCustomValidity('Panjang minimal adalah 2 karakter');
+            // Terapkan validasi minlength secara manual jika diperlukan
+            if (uppercaseValue.length >= 2) {
+                input.setCustomValidity('');
+            } else {
+                input.setCustomValidity('Panjang minimal adalah 2 karakter');
+            }
+
+            input.value = uppercaseValue;
         }
-
-        input.value = uppercaseValue;
-    }
-</script>
+    </script>
+@endsection

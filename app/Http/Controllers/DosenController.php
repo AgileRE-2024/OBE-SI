@@ -18,29 +18,30 @@ class DosenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($kodeRPS)
-{
-    $rps = RPS::where('id_rps', $kodeRPS)->first();
-    // $dosen = Pengampu::where('id_rps', $kodeRPS)->get();
-    // dd($kodeRPS);
-    $pembuat = User::where('nip', $rps->dibuat_oleh)->first();
-    $pemeriksa = User::where('nip', $rps->diperiksa_oleh)->first();
-    $persetujuan = User::where('nip', $rps->disetujui_oleh)->first();
-    $pengampu = Pengampu::where('id_rps', $kodeRPS)->get();
-    // $pengampu = User::where('nip', $dosen->nip)->first();
-    $penanggung_jawab = User::where('nip', $rps->penanggungJawab)->first();
-    $title = 'Detail Peran Dosen';
-    $kodeRPS=$kodeRPS;
-    return view('content.dosen.index', [
-        'title'  => $title, 
-        'pembuat' => $pembuat,
-        'pemeriksa' => $pemeriksa,
-        'persetujuan' => $persetujuan,
-        'pengampu' => $pengampu,
-        'penanggung_jawab' => $penanggung_jawab,
-        'kodeRPS' => $kodeRPS
-    ]);
-}
+    public function index($kodeRPS, $kodeMK)
+    {
+        $rps = RPS::where('id_rps', $kodeRPS)->first();
+        // $dosen = Pengampu::where('id_rps', $kodeRPS)->get();
+        // dd($kodeRPS);
+        $pembuat = User::where('nip', $rps->dibuat_oleh)->first();
+        $pemeriksa = User::where('nip', $rps->diperiksa_oleh)->first();
+        $persetujuan = User::where('nip', $rps->disetujui_oleh)->first();
+        $pengampu = Pengampu::where('id_rps', $kodeRPS)->get();
+        // $pengampu = User::where('nip', $dosen->nip)->first();
+        $penanggung_jawab = User::where('nip', $rps->penanggungJawab)->first();
+        $title = 'Detail Peran Dosen';
+        $kodeRPS=$kodeRPS;
+        return view('content.dosen.index', [
+            'title'  => $title,
+            'pembuat' => $pembuat,
+            'pemeriksa' => $pemeriksa,
+            'persetujuan' => $persetujuan,
+            'pengampu' => $pengampu,
+            'penanggung_jawab' => $penanggung_jawab,
+            'kodeRPS' => $kodeRPS,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
+        ]);
+    }
 
     public function Pengampu(){
         return $this->belongsToMany(Pengampu::class, 'id_rps', 'kodeMK', 'nip');
@@ -161,7 +162,7 @@ class DosenController extends Controller
             ]);
         }
 
-        return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS])->with('success', 'Data Dosen berhasil diperbarui');
+        return redirect()->route('edit_rps.peran_dosen', ['kodeRPS'=>$kodeRPS, 'kodeMK'=>$kodeMK])->with('success', 'Data Dosen berhasil diperbarui');
     }
 // $detail = Detail_Peran_Dosen::findOrFail($nip);
         // $detail->nip = $request->input('nip');

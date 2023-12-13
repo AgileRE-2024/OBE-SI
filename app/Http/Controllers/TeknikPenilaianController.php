@@ -5,6 +5,7 @@ use Dompdf\Dompdf;
 use App\Models\Teknik_Penilaian;
 use App\Models\Detail_RPS;
 use App\Models\RPS;
+use App\Models\Mata_Kuliah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Response;
@@ -16,10 +17,15 @@ class TeknikPenilaianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($kodeRPS)
+    public function index($kodeRPS, $kodeMK)
     {
         $rps = RPS::where('id_rps', $kodeRPS)->first();
-        return view('content.teknik_penilaian.teknik_penilaian', ['title' => 'Teknik Penilaian', 'rps' => $rps, 'kodeRPS' => $kodeRPS]);
+        return view('content.teknik_penilaian.teknik_penilaian', [
+            'title' => 'Teknik Penilaian',
+            'rps' => $rps,
+            'kodeRPS' => $kodeRPS,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
+        ]);
     }
 
     public function export($type)
@@ -60,7 +66,7 @@ class TeknikPenilaianController extends Controller
 
     public function updateTeknikPenilaian(Request $request, $kodeRPS)
     {
-        
+        $kodeMK = substr($kodeRPS, 0, 6);
         
         $request->validate([
             'detail_penilaian' => 'required',
@@ -75,7 +81,7 @@ class TeknikPenilaianController extends Controller
 
         RPS::where('id_rps', $kodeRPS)->update($data);
 
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS'=>$kodeRPS])->with('success', 'Data teknik penilaian berhasil diperbarui');
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS'=>$kodeRPS, 'kodeMK'=>$kodeMK])->with('success', 'Data teknik penilaian berhasil diperbarui');
     }
 
     public function addTeknikPenilaian($kodeRPS)
@@ -85,6 +91,8 @@ class TeknikPenilaianController extends Controller
 
     public function storeTeknikPenilaian(Request $request, $kodeRPS)
     {
+        $kodeMK = substr($kodeRPS, 0, 6);
+
         if (Teknik_Penilaian::all()->count() == null) {
             $kodePenilaian=1;
         }else{
@@ -119,7 +127,7 @@ class TeknikPenilaianController extends Controller
             'kodeRPS' => $request->kodeRPS,
         ]);
 
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS ])->with('success', 'Teknik Penilaian berhasil ditambahkan');
+        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS, 'kodeMK' => $kodeMK])->with('success', 'Teknik Penilaian berhasil ditambahkan');
     }
 
     // public function updateTeknikPenilaian(Request $request, $tp)

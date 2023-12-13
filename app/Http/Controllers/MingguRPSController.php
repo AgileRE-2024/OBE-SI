@@ -21,13 +21,14 @@ class MingguRPSController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($kodeRPS)
+    public function index($kodeRPS,$kodeMK)
     {
         $minggu_rps = Minggu_RPS::where('id_rps',$kodeRPS)->orderBy('kodeMingguRPS')->get();
         return view('content.minggu_rps.minggu_rps', [
             'title' => 'Tambah Minggu RPS',
             'minggu_rps_list' => $minggu_rps,
-            'kodeRPS' => $kodeRPS,     
+            'kodeRPS' => $kodeRPS,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
         ]);
     }
 
@@ -66,6 +67,7 @@ class MingguRPSController extends Controller
     {
         // dd($request);
         $kodeRPS = substr($kodeMingguRPS, 0, 10);
+        $kodeMK = substr($kodeRPS, 0, 6);
 
         $request->validate([
             'kodeSubCPMK' => 'required',
@@ -114,7 +116,7 @@ class MingguRPSController extends Controller
         }
 
         return redirect()
-            ->route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS])
+            ->route('edit_rps.minggu_rps', ['kodeRPS' => $kodeRPS, 'kodeMK'=>$kodeMK])
             ->with('success', 'Minggu RPS berhasil diedit');
     }
 }
