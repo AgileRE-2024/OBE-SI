@@ -67,38 +67,6 @@
                             </tbody>
                         </table>
                     </div>
-
-                    <div id="table2" class="table-responsive">
-                        <table class="table table-bordered" style="text-align: center">
-                            <thead style="background-color: lightgray">
-                                <tr>
-                                    <th scope="col"></th>
-                                    @foreach ($cpl_list as $cpl)
-                                    <th scope="col" data-toggle="tooltip" data-placement="top"
-                                        title="{{ $cpl->deskripsiCPL}}">{{ $cpl->kodeCPL }}</th>
-                                    @endforeach
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($bk_list as $bk)
-                                <tr class="text-center">
-                                    <th scope="row" data-toggle="tooltip" data-placement="top"
-                                        title="{{ $bk->namaBK }}">{{ $bk->kodeBK }}</th>
-                                    @foreach ($cpl_list as $cpl)
-                                    <td>
-                                        @if ($pemetaan2->where('kodeBK', $bk->kodeBK)->where('kodeCPL',
-                                        $cpl->kodeCPL)->count() != 0)
-                                        @foreach ($pemetaan1->where('kodeBK', $bk->kodeBK) as $pemetaanbkmk)
-                                        {{ $pemetaanbkmk->kodeMK }}
-                                        @endforeach
-                                        @endif
-                                    </td>
-                                    @endforeach
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
                 <style>
                     /* Style the tooltip */

@@ -46,7 +46,7 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kategori Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Beban Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Semester Mata Kuliah</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Mata Kuliah</th>
+                        <!-- <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Mata Kuliah</th> -->
                         @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
@@ -116,9 +116,9 @@
                             <td scope="row">
                                 {{ $mk->semester }}
                             </td>
-                            <td scope="row">
+                            <!-- <td scope="row">
                                 {!! $mk->deskripsiMK !!}
-                            </td>
+                            </td> -->
                             @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                             <td scope="row">
                                     <a class="btn btn-primary"

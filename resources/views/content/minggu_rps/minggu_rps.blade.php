@@ -43,7 +43,9 @@
                     </th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Referensi
                     </th>
+                    @if (auth()->user()->role == 0 || auth()->user()->role == 3)
                     <th id="edit" class="align-middle" scope="col" rowspan="2" style="width: 15%">Edit</th>
+                    @endif
                 </tr>
             </thead>
 
@@ -93,9 +95,11 @@
                         @endforeach
                         @endif
                     </td>
+                    @if (auth()->user()->role == 0 || auth()->user()->role == 3)
                     <td scope="row">
                         <a id="edit" class="btn btn-primary" href="{{ route('edit_rps.edit_minggu_rps', ['kodeMingguRPS' => $minggurps->kodeMingguRPS]) }}">Edit</a>
                     </td>
+                    @endif
                 </tr>
                 @if($key == 6)
                 <td scope="row">{{ $key + 2 }}</td>
