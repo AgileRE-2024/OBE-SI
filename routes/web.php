@@ -232,6 +232,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::put('/editPustaka/{pustaka}', [PustakaController::class, 'update'])->name('update_pustaka');
             Route::get('/deletePustaka/{pustaka}', [PustakaController::class, 'delete'])->name('delete_pustaka');
         });
+        
 
         Route::get('/profilLulusan', [ProfilLulusanController::class, 'index'])->name('profil_lulusan')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
         Route::get('/profilLulusan/export/{type}', [ProfilLulusanController::class, 'export'])->name('export_pl')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
@@ -255,8 +256,9 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/sub_cpmk/export/{type}', [SubCPMKController::class, 'export'])->name('export_sub_cpmk')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
 
         Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka');
-    });
-});
+    }); 
+}); Route::get('/exportExcelPustaka', [PustakaController::class,'export_excel'])->name('export_excel_pustaka');
+    Route::get('/exportPDFPustaka', [PustakaController::class,'export_pdf'])->name('export_PDF_pustaka');
 
 Route::group(['middleware' => 'role:dosen,admin,kurikulum,dosen_kurikulum'], function () {
     Route::prefix('/dashboard/penilaian')->name('penilaian.')->group(function () {
@@ -295,8 +297,9 @@ Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
 
     Route::prefix('/dashboard/rps/edit')->name('edit_rps.')->group(function () {
         Route::get('/rps/{kodeRPS}', [RPSController::class, 'show'])->name('rps_show');
+        Route::get('/rps/tampilRPS/{kodeRPS}/{kodeMK}', [RPSController::class, 'tampilRPS'])->name('tampilRPS');
 
-        Route::get('/teknik_penilaian/{kodeRPS}', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
+        Route::get('/teknik_penilaian/{kodeRPS}/{kodeMK}', [TeknikPenilaianController::class, 'index'])->name('teknik_penilaian');
         Route::get('/editTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'editTeknikPenilaian'])->name('edit_teknik_penilaian');
         Route::put('/editTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'updateTeknikPenilaian'])->name('update_teknik_penilaian');
         // Route::get('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'addTeknikPenilaian'])->name('add_teknik_penilaian');
@@ -304,14 +307,14 @@ Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
         // Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
         // Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
 
-        Route::get('/minggu_rps/{kodeRPS}', [MingguRPSController::class, 'index'])->name('minggu_rps');
+        Route::get('/minggu_rps/{kodeRPS}/{kodeMK}', [MingguRPSController::class, 'index'])->name('minggu_rps');
         Route::get('/edit_minggu_rps/{kodeMingguRPS}', [MingguRPSController::class, 'editMingguRPS'])->name('edit_minggu_rps');
         Route::put('/edit_minggu_rps/{kodeMingguRPS}', [MingguRPSController::class, 'updateMingguRPS'])->name('update_minggu_rps');
         // Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
         // Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
         // Route::get('/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
 
-        Route::get('/peran_dosen/{kodeRPS}', [DosenController::class, 'index'])->name('peran_dosen');
+        Route::get('/peran_dosen/{kodeRPS}/{kodeMK}', [DosenController::class, 'index'])->name('peran_dosen');
         Route::get('/edit_peran_dosen/{kodeRPS}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
         Route::put('/edit_peran_dosen/{kodeRPS}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
         // Route::get('/add_peran_dosen/{kodeRPS}', [DosenController::class, 'addPeranDosen'])->name('add_peran_dosen');

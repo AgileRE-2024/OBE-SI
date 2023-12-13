@@ -21,13 +21,14 @@ class MingguRPSController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($kodeRPS)
+    public function index($kodeRPS,$kodeMK)
     {
         $minggu_rps = Minggu_RPS::where('id_rps',$kodeRPS)->orderBy('kodeMingguRPS')->get();
         return view('content.minggu_rps.minggu_rps', [
             'title' => 'Tambah Minggu RPS',
             'minggu_rps_list' => $minggu_rps,
-            'kodeRPS' => $kodeRPS,     
+            'kodeRPS' => $kodeRPS,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
         ]);
     }
 

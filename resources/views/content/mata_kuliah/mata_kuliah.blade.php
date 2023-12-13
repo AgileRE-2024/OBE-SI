@@ -46,7 +46,7 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kategori Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Beban Mata Kuliah</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Semester Mata Kuliah</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Mata Kuliah</th>
+                        <!-- <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Mata Kuliah</th> -->
                         @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
@@ -70,15 +70,21 @@
                             </td>
                             <td scope="row" style="width:10%">
                                 @if ($mk->mat_kodeMK)
-                                    {{-- @foreach ($mk as $prasyarat) --}}
                                     @if($mk->mat_kodeMK == '[null]')
                                         {{ '-' }}
                                     @else
-                                        {{ $mk->mat_kodeMK }}
-                                        {{-- Jika Sudah dimigrasi di tabel prasyarat, gunakan kode di bawah --}}
-                                        {{-- {{ $mk->Prasyarat->mat_kodeMK }} --}}
+                                        @if ($mk->Prasyarat == null)
+                                            {{ $mk->mat_kodeMK }}
+                                        @else
+                                            {{-- Jika Sudah dimigrasi di tabel prasyarat, gunakan kode di bawah --}}
+                                            {{-- {{ $mk->Prasyarat->mat_kodeMK }} --}}
+                                            @for ($kode=2; $kode<=strlen($mk->mat_kodeMK); $kode+=9)
+                                                {{-- {{ $kode }} --}}
+                                                {{ substr($mk->mat_kodeMK, $kode, 6) }}
+                                            @endfor
+                                            
+                                        @endif
                                     @endif
-                                    {{-- @endforeach --}}
                                 @else
                                     {{ '-' }}
                                 @endif
@@ -110,9 +116,9 @@
                             <td scope="row">
                                 {{ $mk->semester }}
                             </td>
-                            <td scope="row">
+                            <!-- <td scope="row">
                                 {!! $mk->deskripsiMK !!}
-                            </td>
+                            </td> -->
                             @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                             <td scope="row">
                                     <a class="btn btn-primary"
