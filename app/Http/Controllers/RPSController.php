@@ -78,9 +78,11 @@ class RPSController extends Controller
         $rps = RPS::where('id_rps', $idRPS)->first();
 
         $dosen = User::where('nip', $rps->nip)->first();
-        // dd($rps);
-        
-        $view = view('content.eksporRPS', [
+
+        $detail_penilaian = Detail_RPS_Penilaian::where('id_rps', $idRPS)->get()->unique('kodePenilaian');
+        // dd($detail_penilaian);
+
+        $view= view('content.eksporRPS', [
             'title' => 'RPS',
             'rps_list'=> RPS::where("id_rps", $idRPS),
             'rps' => RPS::where('id_rps', $idRPS)->first(),
@@ -91,7 +93,9 @@ class RPSController extends Controller
             'mk_cpmk' => Detail_MK_CPMK::where('kodeMK', $kodeMK)->get(),
             'cpl' => CPL_Prodi::all(),
             'kodeRPS' => $idRPS,
-            'teknik_penilaian_list'=> Teknik_Penilaian::where("id_rps", $idRPS),
+            'teknik_penilaian_list'=> Teknik_Penilaian::all(),
+            'detail_penilaian_rps' => $detail_penilaian,
+            
             'detail_rps_list'=> Detail_RPS_Penilaian::all(),
 
             'minggu_pustaka' => Detail_Pustaka_Minggurps::all()

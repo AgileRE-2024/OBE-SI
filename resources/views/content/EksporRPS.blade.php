@@ -283,11 +283,31 @@
             @endif
             @endforeach
         </table>
-       
         <p>
         </p>
         <h7>
-            C. DAFTAR REFERENSI   
+            C. TEKNIK PENILAIAN
+        </h7>
+        <div style="margin-left:40px;margin-top:20px;">
+            <?php
+                $no = 1;
+            ?>
+            <b>
+                Teknik penilaian
+        </b> <br>
+            @foreach($detail_penilaian_rps as $item)
+            {{ $no }} . {{ $teknik_penilaian_list->where('kodePenilaian', $item->kodePenilaian)->first()->teknikPenilaian }}
+                <br>
+            <?php
+                $no += 1;
+            ?>
+            @endforeach
+        </div>
+
+        <p>
+        </p>
+        <h7>
+            D. DAFTAR REFERENSI   
         </h7>
         <div style="margin-left:40px;margin-top:20px;">
         <?php
