@@ -18,13 +18,13 @@
                         @enderror
                         <select name="namaProdi" id='namaProdi' class="form-select">
                             <option value="" selected disabled>-- Pilih Program Studi --</option>
-                            @foreach($prodiList as $namaProdi)
+                            @foreach ($prodiList as $namaProdi)
                                 <option value="{{ $namaProdi }}">{{ $namaProdi }}</option>
                             @endforeach
                             </option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Kode Mata Kuliah</label>
                         @error('kodeMK')
@@ -52,8 +52,9 @@
                         @error('deskripsi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea maxlength="100" name="deskripsi" id="editor_mk" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"></textarea>
-                    
+                        <textarea maxlength="100" name="deskripsi" id="editor_mk" row="3" class="form-control"
+                            placeholder="Deskripsi Mata Kuliah"></textarea>
+
                     </div>
 
                     <div class="form-group">
@@ -149,27 +150,25 @@
     </div>
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor_mk' )
-            
+            .create(document.querySelector('#editor_mk')
+
             )
-            .catch( error => {
-                console.error( error );
-            } );
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+        function updateInput(input) {
+            var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+
+            // Terapkan validasi minlength secara manual jika diperlukan
+            if (uppercaseValue.length >= 2) {
+                input.setCustomValidity('');
+            } else {
+                input.setCustomValidity('Panjang minimal adalah 2 karakter');
+            }
+
+            input.value = uppercaseValue;
+        }
     </script>
 @endsection
-
-<script>
-    function updateInput(input) {
-        var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
-
-        // Terapkan validasi minlength secara manual jika diperlukan
-        if (uppercaseValue.length >= 2) {
-            input.setCustomValidity('');
-        } else {
-            input.setCustomValidity('Panjang minimal adalah 2 karakter');
-        }
-
-        input.value = uppercaseValue;
-    }
-</script>
-

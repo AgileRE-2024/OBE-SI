@@ -60,19 +60,18 @@
             </div>
         </div>
     </div>
-@endsection
+    <script>
+        function updateInput(input) {
+            var newValue = input.value.replace(/[^a-zA-Z0-9-]/g, '');
 
-<script>
-    function updateInput(input) {
-        var newValue = input.value.replace(/[^a-zA-Z0-9-]/g, '');
+            // Terapkan validasi minlength secara manual jika diperlukan
+            if (newValue.length >= 4) {
+                input.setCustomValidity('');
+            } else {
+                input.setCustomValidity('Panjang minimal adalah 4 karakter');
+            }
 
-        // Terapkan validasi minlength secara manual jika diperlukan
-        if (newValue.length >= 4) {
-            input.setCustomValidity('');
-        } else {
-            input.setCustomValidity('Panjang minimal adalah 4 karakter');
+            input.value = newValue;
         }
-
-        input.value = newValue;
-    }
-</script>
+    </script>
+@endsection
