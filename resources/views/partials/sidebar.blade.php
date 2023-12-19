@@ -128,6 +128,24 @@
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('kurikulum.data.metode') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.data.metode')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            Metode
+                                        </p>
+                                    </a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a href="{{ route('kurikulum.data.kriteria') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.data.kriteria')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            Kriteria Penilaian
+                                        </p>
+                                    </a>
+                                </li> -->
                             </ul>
                         </li>
                         <li id="pemetaan" class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">

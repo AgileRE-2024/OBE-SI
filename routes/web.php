@@ -44,6 +44,10 @@ use App\Http\Controllers\BahanKajianController;
 use App\Http\Controllers\OrganisasiMKController;
 use App\Http\Controllers\ProfilLulusanController;
 use App\Http\Controllers\PustakaController;
+use App\Http\Controllers\BentukController;
+use App\Http\Controllers\MediaController;
+use App\Http\Controllers\MetodeController;
+use App\Http\Controllers\KriteriaController;
 use App\Http\Controllers\TeknikPenilaianController;
 use App\Http\Controllers\PemetaanCplDiktiCplProdiController;
 use App\Http\Controllers\TahapPenilaianController;
@@ -178,7 +182,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/mk-cpmk-subcpmk/export/{type}', [PemetaanMkCpmkSubcpmk::class, 'export'])->name('export_mk-cpmk-subcpmk')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
     });
 
-    Route::name('generatepdf')->get('/generate', [PDFController::class, 'generatePDF']);
+    // Route::name('generatepdf')->get('/generate', [PDFController::class, 'generatePDF']);
     Route::prefix('/data')->name('data.')->group(function () {
 
         Route::group(['middleware' => 'role:kurikulum,dosen_kurikulum'], function () {
@@ -231,6 +235,30 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::get('/editPustaka/{pustaka}', [PustakaController::class, 'edit'])->name('edit_pustaka');
             Route::put('/editPustaka/{pustaka}', [PustakaController::class, 'update'])->name('update_pustaka');
             Route::get('/deletePustaka/{pustaka}', [PustakaController::class, 'delete'])->name('delete_pustaka');
+
+            Route::get('/addBentuk', [BentukController::class, 'addBentuk'])->name('add_bentuk');
+            Route::post('/addBentuk', [BentukController::class, 'storeBentuk'])->name('store_bentuk');
+            Route::get('/editBentuk/{bentuk}', [BentukController::class, 'edit'])->name('edit_bentuk');
+            Route::put('/editBentuk/{bentuk}', [BentukController::class, 'update'])->name('update_bentuk');
+            Route::get('/deleteBentuk/{bentuk}', [BentukController::class, 'delete'])->name('delete_bentuk');
+
+            Route::get('/addMetode', [MetodeController::class, 'addMetode'])->name('add_metode');
+            Route::post('/addMetode', [MetodeController::class, 'storeMetode'])->name('store_metode');
+            Route::get('/editMetode/{Metode}', [MetodeController::class, 'edit'])->name('edit_metode');
+            Route::put('/editMetode/{Metode}', [MetodeController::class, 'update'])->name('update_metode');
+            Route::get('/deleteMetode/{Metode}', [MetodeController::class, 'delete'])->name('delete_metode');
+
+            Route::get('/addMedia', [MediaController::class, 'addMedia'])->name('add_media');
+            Route::post('/addMedia', [MediaController::class, 'storeMedia'])->name('store_media');
+            Route::get('/editMedia/{media}', [MediaController::class, 'edit'])->name('edit_media');
+            Route::put('/editMedia/{media}', [MediaController::class, 'update'])->name('update_media');
+            Route::get('/deleteMedia/{media}', [MediaController::class, 'delete'])->name('delete_media');
+
+            Route::get('/addKriteria', [KriteriaController::class, 'addKriteria'])->name('add_kriteria');
+            Route::post('/addKriteria', [KriteriaController::class, 'storeKriteria'])->name('store_kriteria');
+            Route::get('/editKriteria/{kriteria}', [KriteriaController::class, 'edit'])->name('edit_kriteria');
+            Route::put('/editKriteria/{kriteria}', [KriteriaController::class, 'update'])->name('update_kriteria');
+            Route::get('/deleteKriteria/{kriteria}', [KriteriaController::class, 'delete'])->name('delete_kriteria');
         });
         
 
@@ -256,6 +284,8 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
         Route::get('/sub_cpmk/export/{type}', [SubCPMKController::class, 'export'])->name('export_sub_cpmk')->middleware('role:admin,dosen,kurikulum,dosen_kurikulum');
 
         Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka');
+        Route::get('/metode', [MetodeController::class, 'index'])->name('metode');
+        Route::get('/kriteria', [KriteriaController::class, 'index'])->name('kriteria');
     }); 
 }); Route::get('/exportExcelPustaka', [PustakaController::class,'export_excel'])->name('export_excel_pustaka');
     Route::get('/exportPDFPustaka', [PustakaController::class,'export_pdf'])->name('export_PDF_pustaka');

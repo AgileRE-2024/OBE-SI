@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detail_media_mingguRPS', function (Blueprint $table) {
-            $table->char('id_media',2);
+            $table->unsignedInteger('id_media');
             $table->char('kodeMingguRPS', 4);
             $table->foreign('id_media')->references('id_media')->on('Media')->onDelete('restrict');
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');

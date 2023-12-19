@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('detail_metode_mingguRPS', function (Blueprint $table) {
             $table->id();
-            $table->char('id_metode',2);
+            $table->unsignedInteger('id_metode');
             $table->char('kodeMingguRPS', 4);
             $table->foreign('id_metode')->references('id_metode')->on('metodes')->onDelete('restrict');
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');

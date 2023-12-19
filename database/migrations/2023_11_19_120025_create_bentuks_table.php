@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bentuks', function (Blueprint $table) {
-            $table->char('id_bentuk',2)->primary();
+            $table->increments('id_bentuk');
             $table->string('nama_bentuk',30)->nullable();
             $table->string('deskripsi_bentuk',100)->nullable();
             $table->timestamps();
