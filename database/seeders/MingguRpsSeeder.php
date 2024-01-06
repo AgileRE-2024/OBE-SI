@@ -44,7 +44,7 @@ class MingguRpsSeeder extends Seeder
 
         //Statistika Inferensi
         Minggu_RPS::create([
-            'id_rps' => 'MAS2342303',
+            'id_rps' => 'MAS2342103',
             'kodeMingguRPS' => '21',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -57,7 +57,7 @@ class MingguRpsSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'MAS2342303',
+            'id_rps' => 'MAS2342103',
             'kodeMingguRPS' => '22',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -71,7 +71,7 @@ class MingguRpsSeeder extends Seeder
 
         //Statistika Deskriptif
         Minggu_RPS::create([
-            'id_rps' => 'MAS1182302',
+            'id_rps' => 'MAS1182102',
             'kodeMingguRPS' => '31',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -84,7 +84,7 @@ class MingguRpsSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'MAS1182302',
+            'id_rps' => 'MAS1182102',
             'kodeMingguRPS' => '32',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -98,7 +98,7 @@ class MingguRpsSeeder extends Seeder
 
         //Matriks dan Transformasi Linier
         Minggu_RPS::create([
-            'id_rps' => 'MAL1032302',
+            'id_rps' => 'MAL1032102',
             'kodeMingguRPS' => '41',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -111,7 +111,7 @@ class MingguRpsSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'MAL1032302',
+            'id_rps' => 'MAL1032102',
             'kodeMingguRPS' => '42',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -122,5 +122,458 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Dapat melakukan intalasi R dan R studio dan melakukan operasi dasar di R',
             'bahan_kajian' => 'Matriks 7. Operasi Matriks 8. Kesamaan 2 Matriks',
         ]);
+
+        //Sistem Berbasis Pengetahuan
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121070',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121071',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121072',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121073',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121074',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121075',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121076',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121077',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121078',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC40121079',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC401210710',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC401210711',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC401210712',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SIC4012107',
+        //     'kodeMingguRPS' => 'SIC401210713',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
+        //Audit Sistem Informasi
+
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421070',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421071',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421072',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421073',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421074',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421075',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421076',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421077',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421078',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII40421079',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII404210710',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII404210711',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII404210712',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+        
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII4042107',
+        //     'kodeMingguRPS' => 'SII404210713',
+        //     'id_kriteria_penilaians' => ,
+        //     'kodePenilaian' => '',
+        //     'id_bentuk' => ,
+        //     'id_media' => ,
+        //     'id_metode' => ,
+        //     'kodeSubCPMK' => '',
+        //     'luring' => true,
+        //     'penugasan' => '',
+        //     'waktuPembelajaran' => '',
+        //     'pengalaman_belajar' => '',
+        //     'bahan_kajian' => '',
+        // ]);
+
     }
 }

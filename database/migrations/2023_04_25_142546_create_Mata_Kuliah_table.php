@@ -29,7 +29,7 @@ return new class extends Migration
             $table->char('mat_kodeMK', 40)->nullable();
             $table->smallInteger('semester')->nullable();
             $table->smallInteger('kategoriMK');
-            $table->longText('deskripsiMK', 100);
+            $table->longText('deskripsiMK', 100)->nullable();
             $table->text('prasyaratTambahan')->nullable();
             // $table->string('penanggung_jawab', 100)->nullable();
             // $table->string('pengampu', 100)->nullable();

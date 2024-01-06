@@ -30,41 +30,61 @@ class PengampuSeeder extends Seeder
 
         //Statistika Inferensi
         Pengampu::create([
-            'id_rps' => 'MAS2342303',
+            'id_rps' => 'MAS2342103',
             'kodeMK' => 'MAS234',
             'nip' => '197102111997021001'
         ]);
 
         Pengampu::create([
-            'id_rps' => 'MAS2342303',
+            'id_rps' => 'MAS2342103',
             'kodeMK' => 'MAS234',
             'nip' => '197206021998022001'
         ]);
 
         //Statistika Deskriptif
         Pengampu::create([
-            'id_rps' => 'MAS1182302',
+            'id_rps' => 'MAS1182102',
             'kodeMK' => 'MAS118',
             'nip' => '197102111997021001'
         ]);
 
         Pengampu::create([
-            'id_rps' => 'MAS1182302',
+            'id_rps' => 'MAS1182102',
             'kodeMK' => 'MAS118',
             'nip' => '197206021998022001'
         ]);
 
         //Matriks dan Transformasi Linier
         Pengampu::create([
-            'id_rps' => 'MAL1032302',
+            'id_rps' => 'MAL1032102',
             'kodeMK' => 'MAL103',
             'nip' => '197102111997021001'
         ]);
 
         Pengampu::create([
-            'id_rps' => 'MAL1032302',
+            'id_rps' => 'MAL1032102',
             'kodeMK' => 'MAL103',
             'nip' => '196609051991022001'
+        ]);
+
+        //Sistem Berbasis Pengetahuan
+        Pengampu::create([
+            'id_rps' => 'SIC4012107',
+            'kodeMK' => 'SIC401',
+            'nip' => '198002172005012001'
+        ]);
+
+        //Audit Sistem Informasi
+        Pengampu::create([
+            'id_rps' => 'SII4042107',
+            'kodeMK' => 'SII404',
+            'nip' => '198206062007101001'
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'SII4042107',
+            'kodeMK' => 'SII404',
+            'nip' => '198105082005012001'
         ]);
     }
 }

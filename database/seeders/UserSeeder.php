@@ -16,13 +16,13 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'nip' => '123456',
-            'jabatanDosen' => 'Dosen',
+            'nip' => '196901091993031000',
+            'jabatanDosen' => 'Wakil Dekan I',
             'namaProdi' => 'S1 Sistem Informasi',
-            'namaDosen' => 'DOSEN',
+            'namaDosen' => 'Dr. Eridani, M.Si',
             'password' => bcrypt('coba1234'), //password coba1234
-            'email' => 'dosen@gmail.com',
-            'role' => 3,
+            'email' => 'eridani@fst.unair.ac.id',
+            'role' => 1,
             'status' => "Aktif Mengajar"
         ]);
 
@@ -45,6 +45,17 @@ class UserSeeder extends Seeder
             'password' => bcrypt('coba1234'), //password coba1234
             'email' => 'eto-w@fst.unair.ac.id',
             'role' => 0,
+            'status' => "Aktif Mengajar"
+        ]);
+
+        User::create([
+            'nip' => '198105082005012001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Eva Hariyanti, S.Si., M.T.',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'eva.hariyanti@fst.unair.ac.id',
+            'role' => 3,
             'status' => "Aktif Mengajar"
         ]);
 

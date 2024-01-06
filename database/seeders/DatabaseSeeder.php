@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProfilLulusanSeeder::class);
         $this->call(CPLProdiSeeder::class);
         $this->call(MataKuliahSeeder::class);
+        $this->call(PrasyaratSeeder::class);
         $this->call(CPMKSeeder::class);
         $this->call(SubCpmkSeeder::class);
         $this->call(KriteriaPenilaianSeeder::class);
