@@ -19,14 +19,14 @@ return new class extends Migration
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
             $table->unsignedBigInteger('id_kriteria_penilaians')->nullable();
             $table->foreign('id_kriteria_penilaians')->references('id_kriteria_penilaians')->on('kriteria_penilaians')->onDelete('restrict');
-            // $table->string('kodePenilaian',10)->nullable();
+            $table->string('kodePenilaian',10)->nullable();
             $table->unsignedBigInteger('id_bentuk')->nullable();
             $table->foreign('id_bentuk')->references('id_bentuk')->on('bentuks')->onDelete('restrict');
             $table->unsignedBigInteger('id_media')->nullable();
             $table->foreign('id_media')->references('id_media')->on('media')->onDelete('restrict');
             $table->unsignedBigInteger('id_metode')->nullable();
             $table->foreign('id_metode')->references('id_metode')->on('metodes')->onDelete('restrict');
-            // $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('restrict');
+            $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('restrict');
             $table->char('kodeSubCPMK', 12)->nullable();
             $table->foreign('kodeSubCPMK')->references('kodeSubCPMK')->on('SubCPMK')->onDelete('restrict');
             // $table->string('mingguKe', 2)->nullable();
