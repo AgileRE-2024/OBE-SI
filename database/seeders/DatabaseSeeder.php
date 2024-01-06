@@ -29,6 +29,7 @@ use App\Models\Page;
 use App\Models\Detail_Nilai_Mahasiswa;
 use App\Models\Teknik_Penilaian;
 use App\Models\User;
+use App\Models\Pengampu;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -76,9 +77,9 @@ class DatabaseSeeder extends Seeder
             'nip' => '197102111997021001',
             'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'kps',
-            'namaDosen' => 'Rimuljo',
+            'namaDosen' => 'Dr. Rimuljo Hendradi, S.Si.,M.Si.',
             'password' => bcrypt('coba1234'), //password coba123
-            'email' => 'rimuljo@gmail.com',
+            'email' => 'rimuljohendradi@fst.unair.ac.id',
             'role' => true,
             'status' => "Aktif Mengajar"
         ]);
@@ -128,6 +129,18 @@ class DatabaseSeeder extends Seeder
             'role' => 0,
             'status' => "Aktif Bekerja"
         ]);
+
+        User::create([
+            'nip' => '198002172005012001',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'jabatanDosen' => 'Dosen',
+            'namaDosen' => 'Indah Werdiningsih, S.Si., M.Kom.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'indah-w@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
         User::create([
             'nip' => '198206062007101001',
             'namaProdi' => 'S1 Sistem Informasi',
@@ -568,7 +581,7 @@ class DatabaseSeeder extends Seeder
             ['kodeMK' => 'SII103', 'kodeBK' => 'BK01'],
             ['kodeMK' => 'FID112', 'kodeBK' => 'BK19'],
             ['kodeMK' => 'PHP103', 'kodeBK' => 'BK13'],
-            ['kodeMK' => 'MAL102', 'kodeBK' => 'BK11'],
+            ['kodeMK' => 'MAL103', 'kodeBK' => 'BK11'],
             ['kodeMK' => 'MAT101', 'kodeBK' => 'BK07'],
             ['kodeMK' => 'MAT102', 'kodeBK' => 'BK07'],
             ['kodeMK' => 'MNM107', 'kodeBK' => 'BK13'],
@@ -675,5 +688,290 @@ class DatabaseSeeder extends Seeder
         // // $SN_Prodi = CPL_Prodi::where('kodeCPL', '=', 'CPL-01')->update()->CPL_SN_Dikti()->attach('CPL-S01');
         // // $SN_Prodi = CPL_Prodi::where('kodeCPL', 'CPL-01')->get();
         // // $SN_Dikti->CPL_Prodi()->attach('CPL-01');
+
+        User::create([
+            'nip' => '123456',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'DOSEN',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'dosen@gmail.com',
+            'role' => 3,
+            'status' => "Aktif Mengajar"
+        ]);
+
+        //FPB Praktikum
+        RPS::create([
+            'id_rps' => 'SIA2052303',
+            'nip' => '198206062007101001',
+            'kodeMK' => 'SIA205',
+            'kodeRPS' => 'RPS001',
+            'tahunAjaran' => 2023,
+            'semester' => 3,
+            'diperiksa_oleh' => '197102111997021001',
+            'disiapkan_oleh' => '198206062007101001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '198206062007101001',
+            'versi' => 1,
+            'penanggungJawab' => '198206062007101001',
+            'dosenPengampu' => '["198206062007101001","198002172005012001"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (30%), SoftSkill (10%)',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIA2052303',
+            'kodeMingguRPS' => '11',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '1',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => 'Mahasiswa memahami fungsi dan proses bisnis beserta komponen bisnis. Mahasiswa mampu menjelaskan komponen-komponen bisnis :● Proses Operasi ● Proses Informasi Proses Manajamen',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIA2052303',
+            'kodeMingguRPS' => '12',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '2',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => 'Mahasiswa memahami fungsi dan proses bisnis beserta komponen bisnis. Mahasiswa mampu menjelaskan komponen-komponen bisnis :● Proses Operasi ● Proses Informasi Proses Manajamen',
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'SIA2052303',
+            'kodeMK' => 'SIA205',
+            'nip' => '198206062007101001'
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'SIA2052303',
+            'kodeMK' => 'SIA205',
+            'nip' => '198002172005012001'
+        ]);
+
+        User::create([
+            'nip' => '197206021998022001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Nur Chamidah, S.Si., M.Si.',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'nur-c@fst.unair.ac.id',
+            'role' => true,
+            'status' => "Aktif Mengajar"
+        ]);
+
+        //Statistika Inferensi
+        RPS::create([
+            'id_rps' => 'MAS2342303',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'MAS234',
+            'kodeRPS' => 'RPS001',
+            'tahunAjaran' => 2023,
+            'semester' => 3,
+            'diperiksa_oleh' => '197102111997021001',
+            'disiapkan_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '197102111997021001',
+            'versi' => 1,
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001","197206021998022001"]',
+            'detail_penilaian' => 'NA = UAS (30%), UTS (30%), Tugas (20%), Quiz (15%), soft skills (5%)',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS2342303',
+            'kodeMingguRPS' => '21',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '1',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1.Alasan Penggunaan Sampling 2.Metode Sampling Acak & Non Acak 3.Distribusi Sampling dari Mean Sampel 4.Teorema Limit Sentral 5.Estimasi Titik & Interval Kepercayaan 6.Besar sampel 7.Estimasi Parameter rerata 8.Estimasi Parameter selisih 2 rerata',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS2342303',
+            'kodeMingguRPS' => '22',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '2',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1.Estimasi Parameter Varians 2.Estimasi Parameter rasio 2 varians 3.Estimasi Parameter Proporsi 4.Estimasi Parameter selisih 2 proporsi',
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MAS2342303',
+            'kodeMK' => 'MAS234',
+            'nip' => '197102111997021001'
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MAS2342303',
+            'kodeMK' => 'MAS234',
+            'nip' => '197206021998022001'
+        ]);
+
+        User::create([
+            'nip' => '196609281991021001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Drs. Eto Wuryanto, DEA.',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'eto-w@fst.unair.ac.id',
+            'role' => true,
+            'status' => "Aktif Mengajar"
+        ]);
+
+        //Statistika Deskriptif
+        RPS::create([
+            'id_rps' => 'MAS1182302',
+            'nip' => '196609281991021001',
+            'kodeMK' => 'MAS118',
+            'kodeRPS' => 'RPS001',
+            'tahunAjaran' => 2023,
+            'semester' => 2,
+            'diperiksa_oleh' => '197102111997021001',
+            'disiapkan_oleh' => '196609281991021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '196609281991021001',
+            'versi' => 1,
+            'penanggungJawab' => '196609281991021001',
+            'dosenPengampu' => '["196609281991021001","197206021998022001"]',
+            'detail_penilaian' => 'NA = UAS (40%), UTS (40%), Tugas (20%)',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS1182302',
+            'kodeMingguRPS' => '31',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '1',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "2x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'a. Jenis data di Statistika b. skala pengukuran data : nominal, ordinal, interval dan rasio c. populasi dan sampel : parameter dan estimator d. Univariate, bivariate dan multivariate e. intro R : R sebagai functional programming, R Studio, perintah dasar R',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS1182302',
+            'kodeMingguRPS' => '32',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '1',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "1x50'",
+            'pengalaman_belajar' => 'Dapat melakukan intalasi R dan R studio dan melakukan operasi dasar di R',
+            'bahan_kajian' => 'praktek operasi dasar di R : a. intalasi R dan R Studio b. gunakan R notebook untuk mencoba operasi dasar yang ada di R',
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MAS1182302',
+            'kodeMK' => 'MAS118',
+            'nip' => '197102111997021001'
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MAS1182302',
+            'kodeMK' => 'MAS118',
+            'nip' => '197206021998022001'
+        ]);
+
+        User::create([
+            'nip' => '196609051991022001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Inna Kuswandari,M.Si.',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'inna-k@fst.unair.ac.id',
+            'role' => true,
+            'status' => "Aktif Mengajar"
+        ]);
+
+        //Matriks dan Transformasi Linier
+        RPS::create([
+            'id_rps' => 'MAL1032302',
+            'nip' => '196609281991021001',
+            'kodeMK' => 'MAL103',
+            'kodeRPS' => 'RPS001',
+            'tahunAjaran' => 2023,
+            'semester' => 2,
+            'diperiksa_oleh' => '197102111997021001',
+            'disiapkan_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '197102111997021001',
+            'versi' => 1,
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001","196609051991022001"]',
+            'detail_penilaian' => 'NA = Tugas (20%), Kuis (15%), UTS (30%), UAS (30%), Soft Skill (5%)',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAL1032302',
+            'kodeMingguRPS' => '41',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '1',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "2x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Penjelasan Tentang Persamaan Linier, Aljabar Linier',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAL1032302',
+            'kodeMingguRPS' => '42',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'mingguKe' => '2',
+            'deleted_at' => null,
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "2x50'",
+            'pengalaman_belajar' => 'Dapat melakukan intalasi R dan R studio dan melakukan operasi dasar di R',
+            'bahan_kajian' => 'Matriks 7. Operasi Matriks 8. Kesamaan 2 Matriks',
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MAL1032302',
+            'kodeMK' => 'MAL103',
+            'nip' => '197102111997021001'
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MAL1032302',
+            'kodeMK' => 'MAL103',
+            'nip' => '196609051991022001'
+        ]);
+
     }
 }

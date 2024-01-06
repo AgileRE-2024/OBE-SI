@@ -61,6 +61,7 @@
                             @error('dosenPengampu')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
+                            {{-- {{ floor(strlen($rps->dosenPengampu)/20) }} --}}
                             <select name="dosenPengampu[]" id="dosenPengampu" class="form-select mb-1">
                                 <option value="" disabled selected>-- Pilih Dosen --</option>
                                 @foreach ($dosen as $item)

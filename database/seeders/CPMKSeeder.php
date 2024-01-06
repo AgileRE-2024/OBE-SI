@@ -4,6 +4,8 @@ namespace Database\Seeders;
  
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\CPMK;
+use App\Models\Detail_MK_CPMK;
  
 class CPMKSeeder extends Seeder
 {
