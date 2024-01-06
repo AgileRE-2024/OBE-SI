@@ -17,8 +17,12 @@ return new class extends Migration
             $table->char('kodeMK', 10)->primary();
             $table->String('namaProdi', 25)->nullable();
             $table->foreign('namaProdi')->references('namaProdi')->on('prodi')->onDelete('restrict');
-            $table->char('nip', 18)->nullable();
-            $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
+            // $table->char('nip', 18)->nullable();
+            // $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
+            $table->char('penanggung_jawab', 18)->nullable();
+            $table->foreign('penanggung_jawab')->references('nip')->on('users')->onDelete('restrict');
+            $table->char('pengampu', 18)->nullable();
+            $table->foreign('pengampu')->references('nip')->on('users')->onDelete('restrict');
             $table->string('namaMK', 100);
             $table->smallInteger('jenisMK');
             $table->integer('sks');
@@ -27,8 +31,8 @@ return new class extends Migration
             $table->smallInteger('kategoriMK');
             $table->longText('deskripsiMK', 100);
             $table->text('prasyaratTambahan')->nullable();
-            $table->string('penanggung_jawab', 100)->nullable();
-            $table->string('pengampu', 100)->nullable();
+            // $table->string('penanggung_jawab', 100)->nullable();
+            // $table->string('pengampu', 100)->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

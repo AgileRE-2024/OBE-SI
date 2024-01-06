@@ -11,7 +11,19 @@
                 <form method="POST" action="{{ route('edit_rps.update_peran_dosen', ['kodeRPS'=>$kodeRPS]) }}">
                     @csrf
                     @method('put')
-                    <input type="hidden" name="dibuat_oleh" value="{{ $rps->dibuat_oleh }}">
+                    <div class="form-group">
+                        <label>Pembuat RPS</label>
+                        @error('dibuat_oleh')
+                            <h6 style="color: #BF2C45">{{ $message }}</h6>
+                        @enderror
+                        <select name="dibuat_oleh" id='dibuat_oleh' class="form-select">
+                            <option value="{{ $rps->dibuat_oleh }}" disabled selected>-- Pilih Dosen --</option>
+                            @foreach ($dosen as $item)
+                                <option value="{{ $item->nip }}"{{ $item->nip ==  $rps->dibuat_oleh ? 'selected' : ''}}>{{ $item->nip }} -
+                                    {{ $item->namaDosen }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label>Pemeriksa RPS</label>
                         @error('diperiksa_oleh')

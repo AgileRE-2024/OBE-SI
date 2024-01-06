@@ -29,17 +29,17 @@ class Minggu_RPS extends Model
 
     public function Metode()
     {
-        return $this->belongsToMany(Metode::class, 'detail_metode_mingguRPS', 'kodeMingguRPS', 'id_metode');
+        return $this->belongsTo(Metode::class, 'id_metode', 'id_metode');
     }
 
     public function Media()
     {
-        return $this->belongsToMany(Metode::class, 'detail_metode_mingguRPS', 'kodeMingguRPS', 'id_media');
+        return $this->belongsTo(Media::class, 'id_media', 'id_media');
     }
 
     public function Bentuk()
     {
-        return $this->belongsToMany(Metode::class, 'detail_metode_mingguRPS', 'kodeMingguRPS', 'id_bentuk');
+        return $this->belongsTo(Bentuk::class, 'id_bentuk', 'id_bentuk');
     }
 
     public function Pustaka(){
@@ -53,6 +53,6 @@ class Minggu_RPS extends Model
 
     public function Kriteria_Penilaian(){
         //relasi many to one
-        return $this->belongsTo(Kriteria_Penilaian::class, 'kodePenilaian', 'kodePenilaian');
+        return $this->belongsTo(Kriteria_Penilaian::class, 'id_kriteria_penilaians', 'id_kriteria_penilaians');
     }
 }

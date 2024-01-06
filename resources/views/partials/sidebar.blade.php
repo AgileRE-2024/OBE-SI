@@ -137,7 +137,7 @@
                                         </p>
                                     </a>
                                 </li>
-                                <!-- <li class="nav-item">
+                                <li class="nav-item">
                                     <a href="{{ route('kurikulum.data.kriteria') }}" class="nav-link"
                                         @if (URL::current() === route('kurikulum.data.kriteria')) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
@@ -145,7 +145,7 @@
                                             Kriteria Penilaian
                                         </p>
                                     </a>
-                                </li> -->
+                                </li>
                             </ul>
                         </li>
                         <li id="pemetaan" class="nav-item @if (Request::is('*pemetaan*')) menu-open @endif">

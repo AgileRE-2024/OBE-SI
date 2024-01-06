@@ -11,6 +11,10 @@ use App\Models\pustaka;
 use App\Models\Detail_Pustaka_Minggurps;
 use App\Models\Mata_Kuliah;
 use App\Models\SubCPMK;
+use App\Models\Metode;
+use App\Models\Bentuk;
+use App\Models\kriteria_penilaian;
+use App\Models\Media;
 use App\Models\Teknik_Penilaian;
 use Illuminate\Support\Facades\Validator;
 
@@ -44,15 +48,23 @@ class MingguRPSController extends Controller
         $kodeMK = substr($kodeMingguRPS, 0, 6);
         $minggu_rps = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
         $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
-        // $subcpmk = SubCPMK::whereIn('kodeCPMK', $kodeCPMKList)->distinct()->get();
+        $subcpmk = SubCPMK::whereIn('kodeCPMK', $kodeCPMKList)->distinct()->get();
         $pustaka = pustaka::all();
-        $subcpmk = SubCPMK::all();
+        $metode = Metode::all();
+        $bentuk = Bentuk::all();
+        $media = Media::all();
+        $kriteria = kriteria_penilaian::all();
+        
         return view('content.minggu_rps.edit_minggu_rps', [
             'title' => 'Edit Minggu RPS',
             'minggu_rps' => $minggu_rps,
             'kodeRPS' => $kodeRPS,
             'scpmk' => $subcpmk,
-            'pustaka' => $pustaka
+            'pustaka' => $pustaka,
+            'metode' => $metode,
+            'bentuk' => $bentuk,
+            'media' => $media,
+            'kriteria' => $kriteria
         ]);
     }
 
@@ -65,36 +77,36 @@ class MingguRPSController extends Controller
      */
     public function updateMingguRPS(Request $request, $kodeMingguRPS)
     {
-        // dd($request);
         $kodeRPS = substr($kodeMingguRPS, 0, 10);
         $kodeMK = substr($kodeRPS, 0, 6);
+
+        // dd($request);
 
         $request->validate([
             'kodeSubCPMK' => 'required',
             'bahan_kajian' => 'required',
-            'temp_bentuk' => 'required',
-            'temp_metode' => 'required',
+            'id_bentuk' => 'required',
+            'id_metode' => 'required',
             'penugasan' => 'required',
             'luring' => 'required',
-            'temp_media' => 'required',
+            'id_media' => 'required',
             'waktuPembelajaran' => 'required',
             'pengalaman_belajar' => 'required',
-            'temp_kriteria_penilaian' => 'required',
+            'id_kriteria_penilaians' => 'required',
             'bobot_nilai' => 'required',
-            // 'judul_pustaka' => 'required',
         ]);
 
         $data = [
             'kodeSubCPMK' => $request->input('kodeSubCPMK'),
             'bahan_kajian' => $request->input('bahan_kajian'),
-            'temp_bentuk' => $request->input('temp_bentuk'),
-            'temp_metode' => $request->input('temp_metode'),
+            'id_bentuk' => $request->input('id_bentuk'),
+            'id_metode' => $request->input('id_metode'),
             'penugasan' => $request->input('penugasan'),
             'luring' => $request->input('luring'),
-            'temp_media' => $request->input('temp_media'),
+            'id_media' => $request->input('id_media'),
             'waktuPembelajaran' => $request->input('waktuPembelajaran'),
             'pengalaman_belajar' => $request->input('pengalaman_belajar'),
-            'temp_kriteria_penilaian' => $request->input('temp_kriteria_penilaian'),
+            'id_kriteria_penilaians' => $request->input('id_kriteria_penilaians'),
             'bobot_nilai' => $request->input('bobot_nilai'),
         ];
 

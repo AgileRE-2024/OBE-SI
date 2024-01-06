@@ -45,15 +45,12 @@
                             @error('bentukPembelajaran')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
-                            <select name="temp_bentuk" id='bentukPembelajaran' class="form-select">
-                                <option value="" selected disabled>-- Pilih Bentuk Pembelajaran --</option>
-                                @php
-                                $options=['Kuliah, responsi, tutorial', 'Praktikum', 'Seminar']
-                                @endphp
-                                @foreach ($options as $item)
-                                <option value="{{ $item }}"
-                                    {{ $item ==  $minggu_rps->temp_bentuk ? 'selected' : ''}}>
-                                    {{ $options[$loop->index] }}</option>
+                            <select name="id_bentuk" id='bentukPembelajaran' class="form-select">
+                            <option value="" selected disabled>-- Pilih Bentuk Pembelajaran --</option>
+                                @foreach ($bentuk as $item)
+                                <option value="{{ $item->id_bentuk }}"
+                                    {{ $item->id_bentuk ==  $minggu_rps->id_bentuk ? 'selected' : ''}}>
+                                    {{ $item->nama_bentuk }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -63,15 +60,12 @@
                             @error('bentukPembelajaran')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
-                            <select name="temp_metode" id='bentukPembelajaran' class="form-select">
+                            <select name="id_metode" id='bentukPembelajaran' class="form-select">
                                 <option value="" selected disabled>-- Pilih Metode Pembelajaran --</option>
-                                @php
-                                $options=['Problem Based Learning', 'Project Based Learning', 'Case Based Learning']
-                                @endphp
-                                @foreach ($options as $item)
-                                <option value="{{ $item }}"
-                                    {{ $item ==  $minggu_rps->temp_metode ? 'selected' : ''}}>
-                                    {{ $options[$loop->index] }}</option>
+                                @foreach ($metode as $item)
+                                <option value="{{ $item->id_metode }}"
+                                    {{ $item->id_metode ==  $minggu_rps->id_metode ? 'selected' : ''}}>
+                                    {{ $item->nama_metode }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -104,17 +98,14 @@
 
                         <div class="form-group">
                             <label>Media Pembelajaran</label>
-                            @error('temp_media')
+                            @error('id_media')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
-                            <select name="temp_media" id='temp_media' class="form-select">
+                            <select name="id_media" id='id_media' class="form-select">
                                 <option value="" selected disabled>-- Pilih Media Pembelajaran --</option>
-                                @php
-                                $options=['LMS', 'PPT', 'Studi Kasus']
-                                @endphp
-                                @foreach ($options as $item)
-                                <option value="{{ $item }}" {{ $item ==  $minggu_rps->temp_media ? 'selected' : ''}}>
-                                    {{ $options[$loop->index] }}</option>
+                                @foreach ($media as $item)
+                                <option value="{{ $item->id_media }}" {{ $item->id_media ==  $minggu_rps->id_media ? 'selected' : ''}}>
+                                    {{ $item->nama_media }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -141,19 +132,15 @@
 
                         <div class="form-group">
                             <label>Kriteria Penilaian</label>
-                            @error('temp_kriteria_penilaian')
+                            @error('id_kriteria_penilaians')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
-                            <select name="temp_kriteria_penilaian" id='temp_kriteria_penilaian' class="form-select">
+                            <select name="id_kriteria_penilaians" id='id_kriteria_penilaians' class="form-select">
                                 <option value="" selected disabled>-- Pilih Kriteria Penilaian --</option>
-                                @php
-                                $options=['Rubrik Holistik', 'Rubrik Analitik', 'Rubrik Skala Persepsi', 'CBT (Computer
-                                Based Test)']
-                                @endphp
-                                @foreach ($options as $item)
-                                <option value="{{ $item }}"
-                                    {{ $item ==  $minggu_rps->temp_kriteria_penilaian ? 'selected' : ''}}>
-                                    {{ $options[$loop->index] }}</option>
+                                @foreach ($kriteria as $item)
+                                <option value="{{ $item->id_kriteria_penilaians }}"
+                                    {{ $item->id_kriteria_penilaians ==  $minggu_rps->id_kriteria_penilaians ? 'selected' : ''}}>
+                                    {{ $item->nama_kriteria_penilaians }}</option>
                                 @endforeach
                             </select>
                         </div>

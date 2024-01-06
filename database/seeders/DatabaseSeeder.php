@@ -91,7 +91,7 @@ class DatabaseSeeder extends Seeder
             'namaDosen' => 'Daffa Hafiizh Permadi',
             'password' => bcrypt('12345678'), //password 12345678
             'email' => 'daffagt123@gmail.com',
-            'role' => true,
+            'role' => 3,
             'status' => "Aktif Mengajar"
         ]);
         // ------------------------------------
@@ -165,22 +165,22 @@ class DatabaseSeeder extends Seeder
             'deskripsi_kriteria_penilaians' => 'Deskripsi Kriteria 1A',
         ]);
 
-        RPS::create([
-            'id_rps' => 'SII1032301',
-            'nip' => '197102111997021001',
-            'kodeMK' => 'SII103',
-            'kodeRPS' => 'RPS001',
-            'tahunAjaran' => 2023,
-            'semester' => 1,
-            'diperiksa_oleh' => 'Rimuljo Hendradi',
-            'disiapkan_oleh' => 'Rimuljo Hendradi',
-            'disetujui_oleh' => 'Rimuljo Hendradi',
-            'dibuat_oleh' => 'Rimuljo Hendradi',
-            'versi' => 1,
-            'penanggungJawab' => 'Rimuljo Hendradi',
-            'dosenPengampu' => 'Rimuljo Hendradi',
-            'detail_penilaian' => 'Penilainnya begini',
-        ]);
+        // RPS::create([
+        //     'id_rps' => 'SII1032301',
+        //     'nip' => '197102111997021001',
+        //     'kodeMK' => 'SII103',
+        //     'kodeRPS' => 'RPS001',
+        //     'tahunAjaran' => 2023,
+        //     'semester' => 1,
+        //     'diperiksa_oleh' => 'Rimuljo Hendradi',
+        //     'disiapkan_oleh' => 'Rimuljo Hendradi',
+        //     'disetujui_oleh' => 'Rimuljo Hendradi',
+        //     'dibuat_oleh' => 'Rimuljo Hendradi',
+        //     'versi' => 1,
+        //     'penanggungJawab' => 'Rimuljo Hendradi',
+        //     'dosenPengampu' => 'Rimuljo Hendradi',
+        //     'detail_penilaian' => 'Penilainnya begini',
+        // ]);
 
         Pustaka::create([
             'id_pustaka' => '1',
@@ -237,35 +237,35 @@ class DatabaseSeeder extends Seeder
             'instrumenPenilaian' => 'Rubrik holistik',
         ]);
 
-        Detail_RPS_Penilaian::create([
-            'id_rps' => 'SII1032301',
-            'kodePenilaian' => '0001',
-        ]);
+        // Detail_RPS_Penilaian::create([
+        //     'id_rps' => 'SII1032301',
+        //     'kodePenilaian' => '0001',
+        // ]);
 
-        Detail_RPS_Penilaian::create([
-            'id_rps' => 'SII1032301',
-            'kodePenilaian' => '0002',
-        ]);
+        // Detail_RPS_Penilaian::create([
+        //     'id_rps' => 'SII1032301',
+        //     'kodePenilaian' => '0002',
+        // ]);
 
-        Minggu_RPS::create([
-            'id_rps' => 'SII1032301',
-            'kodeMingguRPS' => '2',
-            'id_kriteria_penilaians' => '1',
-            'kodePenilaian' => '0001',
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'mingguKe' => '1',
-            'deleted_at' => null,
-            'luring' => true,
-            'penugasan' => 'Tugas 1',
-            'waktuPembelajaran' => '2 jam',
-            'pengalaman_belajar' => 'Pembelajaran 1',
-            'bahan_kajian' => 'Bahan 1',
-        ]);
+        // Minggu_RPS::create([
+        //     'id_rps' => 'SII1032301',
+        //     'kodeMingguRPS' => '2',
+        //     'id_kriteria_penilaians' => '1',
+        //     'kodePenilaian' => '0001',
+        //     'kodeSubCPMK' => 'Sub-CPMK0111',
+        //     'mingguKe' => '1',
+        //     'deleted_at' => null,
+        //     'luring' => true,
+        //     'penugasan' => 'Tugas 1',
+        //     'waktuPembelajaran' => '2 jam',
+        //     'pengalaman_belajar' => 'Pembelajaran 1',
+        //     'bahan_kajian' => 'Bahan 1',
+        // ]);
 
-        Detail_Pustaka_Minggurps::create([
-            'id_pustaka' => '1',
-            'kodeMingguRPS' => '2',
-        ],);
+        // Detail_Pustaka_Minggurps::create([
+        //     'id_pustaka' => '1',
+        //     'kodeMingguRPS' => '2',
+        // ],);
 
         Mahasiswa::create([
             'nim' => '082011633100',
@@ -656,10 +656,10 @@ class DatabaseSeeder extends Seeder
             'kodeCPMK' => 'CPMK013',
         ]);
 
-        Detail_RPS_Penilaian::create([
-            'id_rps' => 'SII1032301',
-            'kodePenilaian' => '0001',
-        ]);
+        // Detail_RPS_Penilaian::create([
+        //     'id_rps' => 'SII1032301',
+        //     'kodePenilaian' => '0001',
+        // ]);
 
         Detail_Nilai_Mahasiswa::create([
             'kodePenilaian' => '0001',
