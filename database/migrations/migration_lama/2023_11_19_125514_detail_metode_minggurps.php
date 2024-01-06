@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('detail_bentuk_mingguRPS', function (Blueprint $table) {
+        Schema::create('detail_metode_mingguRPS', function (Blueprint $table) {
             $table->id();
-            $table->char('id_bentuk',2);
+            $table->unsignedInteger('id_metode');
             $table->char('kodeMingguRPS', 4);
-            $table->foreign('id_bentuk')->references('id_bentuk')->on('bentuks')->onDelete('restrict');
+            $table->foreign('id_metode')->references('id_metode')->on('metodes')->onDelete('restrict');
             $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_bentuk_mingguRPS');
+        Schema::dropIfExists('detail_metode_mingguRPS');
     }
 };

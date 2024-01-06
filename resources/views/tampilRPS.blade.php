@@ -245,9 +245,9 @@
             </td>
         </tr>
     </table>
-    <h4>
+    <h3>
         B. PROGRAM PEMBELAJARAN
-    </h4>
+    </h3>
     <table class="table table-bordered" style="text-align: center;">
         <tr style="height : 65px; background-color: lightblue">
             <th class="table-header">Minggu ke-</th>
@@ -316,18 +316,18 @@
 
     <p>
     </p>
-    <h7>
+    <h3>
         C. KRITERIA DAN DESKRIPSI PENILAIAN
-    </h7>
+    </h3>
     <div style="margin-left:40px;margin-top:20px;">
         {!! $rps->detail_penilaian !!}
     </div>
 
     <p>
     </p>
-    <h7>
+    <h3>
         D. DAFTAR REFERENSI
-    </h7>
+    </h3>
     <div style="margin-left:40px;margin-top:20px;">
         <?php
         $no = 1;

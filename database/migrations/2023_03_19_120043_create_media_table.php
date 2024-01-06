@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bentuks', function (Blueprint $table) {
-            $table->char('id_bentuk',2)->primary();
-            $table->string('nama_bentuk',30)->nullable();
-            $table->string('deskripsi_bentuk',100)->nullable();
+        Schema::create('media', function (Blueprint $table) {
+            $table->id('id_media');
+            $table->string('nama_media',30)->nullable();
+            $table->string('deskripsi_media',100)->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bentuks');
+        Schema::dropIfExists('media');
     }
 };

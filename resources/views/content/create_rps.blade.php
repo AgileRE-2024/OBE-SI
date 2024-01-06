@@ -47,7 +47,7 @@
                     <input type="text" name="semester" class="form-control" placeholder="Semester">
                 </div>
 
-                <input type="hidden" name="dibuat_oleh" value="{{ auth()->user()->nip }}">
+                <input type="hidden" name="nip" value="{{ auth()->user()->nip }}">
 
                 <div class="form-group pt-4">
                     <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i
