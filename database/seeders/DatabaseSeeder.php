@@ -77,7 +77,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '197102111997021001',
             'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'kps',
-            'namaDosen' => 'Dr. Rimuljo Hendradi, S.Si.,M.Si.',
+            'namaDosen' => 'Dr. Rimuljo Hendradi, S.Si., M.Si.',
             'password' => bcrypt('coba1234'), //password coba123
             'email' => 'rimuljohendradi@fst.unair.ac.id',
             'role' => true,
@@ -145,9 +145,9 @@ class DatabaseSeeder extends Seeder
             'nip' => '198206062007101001',
             'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'lektor',
-            'namaDosen' => 'Faried Effendy',
+            'namaDosen' => 'Faried Effendy,S.Si., M.Kom.',
             'password' => bcrypt('coba1234'), //password coba123
-            'email' => 'Petir@gmail.com',
+            'email' => 'faried-e@fst.unair.ac.id',
             'role' => 0,
             'status' => "Aktif Bekerja"
         ]);
@@ -155,7 +155,7 @@ class DatabaseSeeder extends Seeder
             'nip' => '198110282006041003',
             'namaProdi' => 'S1 Sistem Informasi',
             'jabatanDosen' => 'lektor',
-            'namaDosen' => 'Indra Kharisma R, S.Kom., M.T.',
+            'namaDosen' => 'Dr. Indra Kharisma R, S.Kom., M.T.',
             'password' => bcrypt('coba1234'), //password coba123
             'email' => 'indra.kharisma@fst.unair.ac.id',
             'role' => 0,
@@ -767,7 +767,7 @@ class DatabaseSeeder extends Seeder
             'namaDosen' => 'Dr. Nur Chamidah, S.Si., M.Si.',
             'password' => bcrypt('coba1234'), //password coba1234
             'email' => 'nur-c@fst.unair.ac.id',
-            'role' => true,
+            'role' => 0,
             'status' => "Aktif Mengajar"
         ]);
 
@@ -838,7 +838,7 @@ class DatabaseSeeder extends Seeder
             'namaDosen' => 'Drs. Eto Wuryanto, DEA.',
             'password' => bcrypt('coba1234'), //password coba1234
             'email' => 'eto-w@fst.unair.ac.id',
-            'role' => true,
+            'role' => 0,
             'status' => "Aktif Mengajar"
         ]);
 
@@ -906,10 +906,10 @@ class DatabaseSeeder extends Seeder
             'nip' => '196609051991022001',
             'jabatanDosen' => 'Dosen',
             'namaProdi' => 'S1 Sistem Informasi',
-            'namaDosen' => 'Dr. Inna Kuswandari,M.Si.',
+            'namaDosen' => 'Dr. Inna Kuswandari, M.Si.',
             'password' => bcrypt('coba1234'), //password coba1234
             'email' => 'inna-k@fst.unair.ac.id',
-            'role' => true,
+            'role' => 0,
             'status' => "Aktif Mengajar"
         ]);
 
