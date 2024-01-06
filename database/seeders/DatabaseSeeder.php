@@ -702,7 +702,7 @@ class DatabaseSeeder extends Seeder
 
         //FPB Praktikum
         RPS::create([
-            'id_rps' => 'SIA2052303',
+            'id_rps' => 'SIA2052103',
             'nip' => '198206062007101001',
             'kodeMK' => 'SIA205',
             // 'kodeRPS' => 'RPS001',
@@ -719,8 +719,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'SIA2052303',
-            'kodeMingguRPS' => 'SIA205230311',
+            'id_rps' => 'SIA2052103',
+            'kodeMingguRPS' => '11',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
             'kodeSubCPMK' => 'Sub-CPMK0111',
@@ -734,7 +734,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'SIA2052303',
+            'id_rps' => 'SIA2052103',
             'kodeMingguRPS' => '12',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
@@ -749,13 +749,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Pengampu::create([
-            'id_rps' => 'SIA2052303',
+            'id_rps' => 'SIA2052103',
             'kodeMK' => 'SIA205',
             'nip' => '198206062007101001'
         ]);
 
         Pengampu::create([
-            'id_rps' => 'SIA2052303',
+            'id_rps' => 'SIA2052103',
             'kodeMK' => 'SIA205',
             'nip' => '198002172005012001'
         ]);
@@ -780,9 +780,9 @@ class DatabaseSeeder extends Seeder
             'tahunAjaran' => 2023,
             'semester' => 3,
             'diperiksa_oleh' => '197102111997021001',
-            'disiapkan_oleh' => '197102111997021001',
+            // 'disiapkan_oleh' => '197102111997021001',
             'disetujui_oleh' => '',
-            // 'dibuat_oleh' => '197102111997021001',
+            'dibuat_oleh' => '197102111997021001',
             // 'versi' => 1,
             'penanggungJawab' => '197102111997021001',
             'dosenPengampu' => '["197102111997021001","197206021998022001"]',
@@ -851,7 +851,7 @@ class DatabaseSeeder extends Seeder
             'tahunAjaran' => 2023,
             'semester' => 2,
             'diperiksa_oleh' => '197102111997021001',
-            'disiapkan_oleh' => '196609281991021001',
+            // 'disiapkan_oleh' => '196609281991021001',
             'disetujui_oleh' => '',
             'dibuat_oleh' => '196609281991021001',
             // 'versi' => 1,
@@ -922,9 +922,9 @@ class DatabaseSeeder extends Seeder
             'tahunAjaran' => 2023,
             'semester' => 2,
             'diperiksa_oleh' => '197102111997021001',
-            'disiapkan_oleh' => '197102111997021001',
+            // 'disiapkan_oleh' => '197102111997021001',
             'disetujui_oleh' => '',
-            // 'dibuat_oleh' => '197102111997021001',
+            'dibuat_oleh' => '197102111997021001',
             // 'versi' => 1,
             'penanggungJawab' => '197102111997021001',
             'dosenPengampu' => '["197102111997021001","196609051991022001"]',
