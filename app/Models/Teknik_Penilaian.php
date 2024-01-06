@@ -13,11 +13,6 @@ class Teknik_Penilaian extends Model
         'kodePenilaian', 'teknikPenilaian', 'bobotPenilaian', 'kriteriaPenilaian', 'tahapPenilaian', 'instrumenPenilaian'
     ];
 
-    public function Detail_RPS()
-    {
-        return $this->hasMany(Detail_RPS::class, 'kodePenilaian', 'kodePenilaian');
-    }
-
     public function Detail_Nilai_Mahasiswa()
     {
         return $this->hasMany(Detail_Nilai_Mahasiswa::class, 'kodePenilaian', 'kodePenilaian');
