@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('pustakas', function (Blueprint $table) {
             $table->increments('id_pustaka');
-            $table->string('nama_penulis', 100);
-            $table->integer('tahun');
-            $table->string('judul', 100);
-            $table->string('penerbit', 100);
+            $table->string('nama_penulis', 100)->nullable();
+            $table->integer('tahun')->nullable();
+            $table->string('judul', 150);
+            $table->string('penerbit', 100)->nullable();
             $table->string('referensi', 200)->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();

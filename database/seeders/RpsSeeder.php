@@ -23,11 +23,11 @@ class RpsSeeder extends Seeder
             'tahunAjaran' => 2021,
             'semester' => 3,
             'diperiksa_oleh' => '197102111997021001',
-            'disetujui_oleh' => '',
+            'disetujui_oleh' => '196901091993031000',
             'dibuat_oleh' => '198206062007101001',
             'penanggungJawab' => '198206062007101001',
             'dosenPengampu' => '["198206062007101001","198002172005012001"]',
-            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (30%), SoftSkill (10%)',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (30%), <em>SoftSkill</em> (10%)',
         ]);
 
         //Statistika Inferensi
@@ -38,11 +38,11 @@ class RpsSeeder extends Seeder
             'tahunAjaran' => 2021,
             'semester' => 3,
             'diperiksa_oleh' => '197102111997021001',
-            'disetujui_oleh' => '',
+            'disetujui_oleh' => '196901091993031000',
             'dibuat_oleh' => '197102111997021001',
             'penanggungJawab' => '197102111997021001',
             'dosenPengampu' => '["197102111997021001","197206021998022001"]',
-            'detail_penilaian' => 'NA = UAS (30%), UTS (30%), Tugas (20%), Quiz (15%), soft skills (5%)',
+            'detail_penilaian' => 'NA = UAS (30%), UTS (30%), Tugas (20%), <em>Quiz</em> (15%), <em>soft skills</em> (5%)',
         ]);
 
         //Statistika Deskriptif
@@ -53,7 +53,7 @@ class RpsSeeder extends Seeder
             'tahunAjaran' => 2021,
             'semester' => 2,
             'diperiksa_oleh' => '197102111997021001',
-            'disetujui_oleh' => '',
+            'disetujui_oleh' => '196901091993031000',
             'dibuat_oleh' => '196609281991021001',
             'penanggungJawab' => '196609281991021001',
             'dosenPengampu' => '["196609281991021001","197206021998022001"]',
@@ -63,16 +63,46 @@ class RpsSeeder extends Seeder
         //Matriks dan Transformasi Linier
         RPS::create([
             'id_rps' => 'MAL1032102',
-            'nip' => '196609281991021001',
+            'nip' => '197102111997021001',
             'kodeMK' => 'MAL103',
             'tahunAjaran' => 2021,
             'semester' => 2,
             'diperiksa_oleh' => '197102111997021001',
-            'disetujui_oleh' => '',
+            'disetujui_oleh' => '196901091993031000',
             'dibuat_oleh' => '197102111997021001',
             'penanggungJawab' => '197102111997021001',
             'dosenPengampu' => '["197102111997021001","196609051991022001"]',
-            'detail_penilaian' => 'NA = Tugas (20%), Kuis (15%), UTS (30%), UAS (30%), Soft Skill (5%)',
+            'detail_penilaian' => 'NA = Tugas (20%), Kuis (15%), UTS (30%), UAS (30%), <em>Soft Skill</em> (5%)',
+        ]);
+
+        //Komunikasi dan Pengembangan Diri
+        RPS::create([
+            'id_rps' => 'MNM1062102',
+            'nip' => '196902031994031001',
+            'kodeMK' => 'MNM106',
+            'tahunAjaran' => 2021,
+            'semester' => 2,
+            'diperiksa_oleh' => '',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '196902031994031001',
+            'penanggungJawab' => '196902031994031001',
+            'dosenPengampu' => '["196902031994031001",""]',
+            'detail_penilaian' => '<p>Struktur Makalah:</br>Bab I&ensp;&emsp;: Pendahuluan: latar belakang, tujuan umum dan tujuan khusus</br>Bab II&ensp;&emsp;: Tinjauan pustaka</br>Bab III &emsp;: Studi Kasus (pengembangan kelompok)</br>Bab IV&emsp;: Pembahasan</br>Bab V &emsp;: Penutup: Kesimpulan dan Saran</p><p>Pengumpulan tugas (makalah) adalah maksimal 3 hari sebelum presentasi ke dosen pengampu. Bagi kelompok yang terlambat mengumpulkan 1 hari mendapat nilai hanya 75%nya, lebih dari satu hari mendapat nilai 50%.</br>Makalah dipresentasikan sesuai dengan jadwal yang telah ditentukan dan disepakati bersama.</br>Revisi Makalah yang sudah dipresentasikan dikumpulkan maksimal 1 minggu setelah presentasi.</p><p>Dalam menentukan nilai akhir , akan dilakukan pembobotan sebagai berikut:&nbsp;</p><figure class="table"><table boder="5"><tr><th>No</th><th>Aspek</th><th>Persentase</th></tr><tr><td>1.</td><td>Ujian Tengah Semester</td><td>30%</td></tr><tr><td>2.</td><td>Ujian Akhir Semester</td><td>30%</td></tr><tr><td>3.</td><td>Penugasan makalah SGD/Roleplay</td><td>20%</td></tr><tr><td>4.</td><td>Penugasan SDL</td><td>15%</td></tr><tr><td>5.</td><td>Kehadiran</td><td>5%</td></tr></table></figure>&nbsp;<p>Penilaian kegiatan seminar/diskusi/Role Play</p><figure class="table"><table boder="1"><tr><th>No</th><th>Item yang Dinilai</th><th>Nilai</th></tr><tr><td>1.</td><td><b>Diskusi ( nilai 1-10)</b></td><td></td></tr><tr><td></td><td>a. Persiapan kelompok</td><td></td></tr><tr><td></td><td>b. Penyampaian tujuan</td><td></td></tr><tr><td></td><td>c. Kelengkapan data kasus</td><td></td></tr><tr><td></td><td>d. Analisis masalah</td><td></td></tr><tr><td></td><td>e. Ketepatan intervensi</td><td></td></tr><tr><td></td><td>f. Kemampuan merespon jawaban</td><td></td></tr><tr><td></td><td>g. Kemampuan menerima masukan</td><td></td></tr><tr><td></td><td>h. Kemampuan presentasi/penyajian</td><td></td></tr><tr><td>2.</td><td><b>Role Play ( 1-5)</b></td><td></td></tr><tr><td></td><td>a. Persiapan kelompok</td><td></td></tr><tr><td></td><td>b. Pemerataan pembagian peran</td><td></td></tr><tr><td></td><td>c. Kekompakan kelompok</td><td></td></tr><tr><td></td><td><b>TOTAL (maximal 100)</b></td><td></td></tr></table></figure>&nbsp;<p>Penilaian kegiatan SDL</p><figure class="table"><table boder="1"><tr><th>No</th><th>Item yang Dinilai</th><th>Nilai</th></tr><tr><td>1.</td><td>Kreatifitas</td><td></td></tr><tr><td>2.</td><td>Kemampuan menyampaikan ide</td><td></td></tr><tr><td>3.</td><td>Kemampuan appraisal jurnal/internet</td><td></td></tr><tr><td>4.</td><td>Kemampuan pemetaan konsep</td><td></td></tr><tr><td>5.</td><td>Berfikir kritis</td><td></td></tr></table></figure><p>Catt: SDL melakukan appraisal jurnal jurnal penelitian</p>&nbsp;<p><b>Skoring Atribut Soft Skill :</b></p><figure class="table"><table boder="1"><tr><th>Atrbut</th><th>Definisi</th><th>Indikator</th><th>Skoring</th></tr><tr><td>Disiplin (datang tepat waktu)</td><td>Hadir dalam kegiatan pembelajaran sesuai kontrak waktu</td><td>Kehadiran</td><td>1 = Tidak hadir<br/>2 = Hadir terlambat > 15 menit<br/>3 = Hadir terlambat 10-15 menit<br/>4 = Hadir terlambat < 10 menit<br/>5 = Hadir tepat waktu</td></tr><tr><td>Disiplin (pengumpulan tugas)</td><td>Tugas yang diberikan dosen dikumpulkan sesuai kontrak waktu</td><td>Tugas terkumpul</td><td>1 = Tugas terlambat 4 hari (-80%)</br>2 = Tugas terlambat 3 hari (-60%)</br>3 = Tugas terlambat 2 hari (- 40%)</br>4 = Tugas terlambat 1 hari (- 20%)</br>5 = Tugas dikumpulkan tepat waktu (100%)</td></tr><tr><td>Etika</td><td>Berperilaku sesuai norma yang ditetapkan dalam pembelajaran</td><td>Pembicaraan/Obrolan yang tidak jelas tujuannya</td><td>1 = Menghargai sesama</br>2 = Santun dalam bahasa dan sikap</br>3 = Menghormati norma yang berlaku yang ditetapkan dalam pembelajaran</td></tr><tr><td>Keaktifan</td><td>Keikutsertaan aktif dalam kegiatan pembelajaran</td><td>Partisipasi dlm (bertanya, menjawab, mengemukakan pendapat)</td><td>1 = Tidak bertanya dan tidak menjawab</br>2 = Aktif bertanya</br>3 = Aktif menjawab</br>4 = Aktif bertanya, menjawab dan menyampaikan pendapat</td></tr><tr><td>Kerjasama</td><td>Kemampuan berinteraksi dan dengan kelompok</td><td>Kontribusi secara aktif, bekerja secara produktif, menunjukkan fleksibilitas, tanggungjawab dan sikap menghargai</td><td>1 = Tidak berkomunikasi dan bekerjasama dengan tim</br>2 = Berkomunikasi dengan aktif</br>3 = Kerjasama secara produktif dengan tim</br>4 = Aktif berkomunikasi, bekerjasama tim, menunjukkan fleksibiltas, tanggungjawab dan menghargai</td></tr></table></figure>',
+        ]);
+
+        //Pengantar Kolaborasi Keilmuan
+        RPS::create([
+            'id_rps' => 'MNM1072102',
+            'nip' => '197606162014092006',
+            'kodeMK' => 'MNM107',
+            'tahunAjaran' => 2021,
+            'semester' => 2,
+            'diperiksa_oleh' => '',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '197606162014092006',
+            'penanggungJawab' => '197606162014092006',
+            'dosenPengampu' => '["197606162014092006","197502222009122001"]',
+            'detail_penilaian' => '<p><b>TUGAS KELOMPOK</b><ol><li>SGD konsep dasar leadership dan pengambilan keputusan (Kelompok 1 dan Kelompok 2)</li><li>SGD komunikasi dan kerjasama tim (Kelompok 3 dan Kelompok 4)</li><li>SGD komunikasi kolaborasi (Kelompok 5 dan Kelompok 6)</li><li>SGD konsep dasar komunitas dan kolaborasi dalam komunitas (Kelompok 7 dan Kelompok 8)</li><li>PjBL merupakan project kelompok di kelas dengan mengangkat tema terkait dengan pilihan topik modul IPE. Topik PjBL didiskusikan dengan PJMK sejak awal jelang UTS. Pelaksanaan PjBL disepakati antara mahasiswa dan PJMK.</li><li>CPjBL merupakan project satu kelas dengan mengangkat tema terkait dengan pilihan topik modul IPE. Topik CPjBL didiskusikan dengan PJMK sejak awal jelang UTS. Pelaksanaan PjBL disepakati antara mahasiswa dan PJMK.</li><li>Seminar IPE adalah satu kelas aplikasi tema IPE yang disampaikan dalam seminar besar akhir perkuliahan IPE</li></ol></p><p>Struktur Makalah:</br>Bab I&ensp;&emsp;: Pendahuluan: latar belakang, tujuan umum dan tujuan khusus</br>Bab II&ensp;&emsp;: Tinjauan pustaka</br>Bab III &emsp;: Studi Kasus (pengembangan kelompok)</br>Bab IV&emsp;: Pembahasan</br>Bab V &emsp;: Penutup: Kesimpulan dan Saran</p><p>Pengumpulan tugas (makalah) adalah maksimal 3 hari sebelum presentasi ke dosen pengampu. Bagi kelompok yang terlambat mengumpulkan 1 hari mendapat nilai hanya 75%nya, lebih dari satu hari mendapat nilai 50%.</br>Makalah dipresentasikan sesuai dengan jadwal yang telah ditentukan dan disepakati bersama.</br>Revisi Makalah yang sudah dipresentasikan dikumpulkan maksimal 1 minggu setelah presentasi.</p><p>Dalam menentukan nilai akhir, akan dilakukan pembobotan sebagai berikut:&nbsp;</p><figure class="table"><table boder="5"><tr><th>No</th><th>Aspek</th><th>Persentase</th></tr><tr><td>1.</td><td>Ujian Tengah Semester</td><td>25%</td></tr><tr><td>2.</td><td>Ujian Akhir Semester</td><td>25%</td></tr><tr><td>3.</td><td>Penugasan makalah SGD/Roleplay</td><td>15%</td></tr><tr><td>4.</td><td>PjBL</td><td>15%</td></tr><tr><td>5.</td><td>CPjBL</td><td>15%</td></tr><tr><td>6.</td><td>Evaluasi Seminar</td><td>5%</td></tr></table></figure>&nbsp;<p>Penilaian kegiatan seminar/diskusi/Role Play</p><figure class="table"><table boder="1"><tr><th>No</th><th>Item yang Dinilai</th><th>Nilai</th></tr><tr><td>1.</td><td><b>Diskusi ( nilai 1-10)</b></td><td></td></tr><tr><td></td><td>a. Persiapan kelompok</td><td></td></tr><tr><td></td><td>b. Penyampaian tujuan</td><td></td></tr><tr><td></td><td>c. Kelengkapan data kasus</td><td></td></tr><tr><td></td><td>d. Analisis masalah</td><td></td></tr><tr><td></td><td>e. Ketepatan intervensi</td><td></td></tr><tr><td></td><td>f. Kemampuan merespon jawaban</td><td></td></tr><tr><td></td><td>g. Kemampuan menerima masukan</td><td></td></tr><tr><td></td><td>h. Kemampuan presentasi/penyajian</td><td></td></tr><tr><td>2.</td><td><b>Role Play ( 1-5)</b></td><td></td></tr><tr><td></td><td>a. Persiapan kelompok</td><td></td></tr><tr><td></td><td>b. Pemerataan pembagian peran</td><td></td></tr><tr><td></td><td>c. Kekompakan kelompok</td><td></td></tr><tr><td></td><td><b>TOTAL (maximal 100)</b></td><td></td></tr></table></figure>&nbsp;<p>Penilaian kegiatan SDL</p><figure class="table"><table boder="1"><tr><th>No</th><th>Item yang Dinilai</th><th>Nilai</th></tr><tr><td>1.</td><td>Kreatifitas</td><td></td></tr><tr><td>2.</td><td>Kekompakan</td><td></td></tr><tr><td>3.</td><td>Kebermanfaatan project</td><td></td></tr><tr><td>4.</td><td>Kemampuan menyampaikan ide</td><td></td></tr><tr><td>5.</td><td>Kolaborasi dan kerjasama tim</td><td></td></tr></table></figure><p>Catt: Item 3 kebermanfaatan project penilaian dilakukan bersama masyarakat</p>&nbsp;<p><b>Skoring Atribut Soft Skill :</b></p><figure class="table"><table boder="1"><tr><th>Atrbut</th><th>Definisi</th><th>Indikator</th><th>Skoring</th></tr><tr><td>Disiplin (datang tepat waktu)</td><td>Hadir dalam kegiatan pembelajaran sesuai kontrak waktu</td><td>Kehadiran</td><td>1 = Tidak hadir<br/>2 = Hadir terlambat > 15 menit<br/>3 = Hadir terlambat 10-15 menit<br/>4 = Hadir terlambat < 10 menit<br/>5 = Hadir tepat waktu</td></tr><tr><td>Disiplin (pengumpulan tugas)</td><td>Tugas yang diberikan dosen dikumpulkan sesuai kontrak waktu</td><td>Tugas terkumpul</td><td>1 = Tugas terlambat 4 hari (-80%)</br>2 = Tugas terlambat 3 hari (-60%)</br>3 = Tugas terlambat 2 hari (- 40%)</br>4 = Tugas terlambat 1 hari (- 20%)</br>5 = Tugas dikumpulkan tepat waktu (100%)</td></tr><tr><td>Etika</td><td>Berperilaku sesuai norma yang ditetapkan dalam pembelajaran</td><td>Pembicaraan/Obrolan yang tidak jelas tujuannya</td><td>1 = Menghargai sesama</br>2 = Santun dalam bahasa dan sikap</br>3 = Menghormati norma yang berlaku yang ditetapkan dalam pembelajaran</td></tr><tr><td>Keaktifan</td><td>Keikutsertaan aktif dalam kegiatan pembelajaran</td><td>Partisipasi dlm (bertanya, menjawab, mengemukakan pendapat)</td><td>1 = Tidak bertanya dan tidak menjawab</br>2 = Aktif bertanya</br>3 = Aktif menjawab</br>4 = Aktif bertanya, menjawab dan menyampaikan pendapat</td></tr><tr><td>Kolaborasi/Kerjasama</td><td>Kemampuan berinteraksi dan dengan kelompok</td><td>Kontribusi secara aktif, bekerja secara produktif, menunjukkan fleksibilitas, tanggungjawab dan sikap menghargai</td><td>1 = Tidak berkomunikasi dan bekerjasama dengan tim</br>2 = Berkomunikasi dengan aktif</br>3 = Kerjasama secara produktif dengan tim</br>4 = Aktif berkomunikasi, bekerjasama tim, menunjukkan fleksibiltas, tanggungjawab dan menghargai</td></tr></table></figure>',
         ]);
 
         //Sistem Berbasis Pengetahuan
