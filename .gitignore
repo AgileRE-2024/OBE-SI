@@ -21,3 +21,6 @@ yarn-error.log
 composer.lock
 bootstrap/cache/routes-v7.php
 bootstrap/cache/config.php
+bootstrap/cache/services.php
+composer.lock
+bootstrap/cache/packages.php

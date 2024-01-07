@@ -123,6 +123,19 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'Matriks 7. Operasi Matriks 8. Kesamaan 2 Matriks',
         ]);
 
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521041',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'kodeSubCPMK' => 'Sub-CPMK0111',
+            'luring' => true,
+            'penugasan' => '',
+            'waktuPembelajaran' => "2x50'",
+            'pengalaman_belajar' => 'Dapat melakukan intalasi R dan R studio dan melakukan operasi dasar di R',
+            'bahan_kajian' => 'Matriks 7. Operasi Matriks 8. Kesamaan 2 Matriks',
+        ]);
+
         //Sistem Berbasis Pengetahuan
 
         // Minggu_RPS::create([
@@ -366,7 +379,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421071',
@@ -382,7 +395,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421072',
@@ -398,7 +411,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421073',
@@ -414,7 +427,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421074',
@@ -430,7 +443,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421075',
@@ -446,7 +459,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421076',
@@ -462,7 +475,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421077',
@@ -478,7 +491,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421078',
@@ -494,7 +507,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII40421079',
@@ -510,7 +523,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII404210710',
@@ -526,7 +539,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII404210711',
@@ -542,7 +555,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII404210712',
@@ -558,7 +571,7 @@ class MingguRpsSeeder extends Seeder
         //     'pengalaman_belajar' => '',
         //     'bahan_kajian' => '',
         // ]);
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'SII4042107',
         //     'kodeMingguRPS' => 'SII404210713',

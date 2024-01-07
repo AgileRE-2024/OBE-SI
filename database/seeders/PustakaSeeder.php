@@ -79,5 +79,241 @@ class PustakaSeeder extends Seeder
             'judul' => ' CISA Review Manual',
             'penerbit' => 'ISACA'
         ],);
+
+        //FPB Praktikum
+        Pustaka::create([
+            'nama_penulis' => 'Mathias Weske',
+            'tahun' => '2007',
+            'judul' => 'Business Process Management: Concepts, Languages, Architectures',
+            'penerbit' => 'Springer'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'J.Jeston and J.Nelis',
+            'tahun' => '2006',
+            'judul' => 'Business Process Management, Practical Guidelines to Successful Implementation',
+            'penerbit' => 'Elsevier'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Mike Havey',
+            'tahun' => '2005',
+            'judul' => 'Essential Business Process Modeling',
+            'penerbit' => 'O’Reilly'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Tore Dyba et al',
+            'tahun' => '2004',
+            'judul' => 'Process Improvement in Practice',
+            'penerbit' => 'Kluwer Academic Publishers'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Margaret May',
+            'tahun' => '2003',
+            'judul' => 'Business Process Management: Integration to Web-Enabled Environment',
+            'penerbit' => 'Prentice Hall'
+        ]);
+
+        //Statistika Inferensi
+        Pustaka::create([
+            'nama_penulis' => 'Walpole, RE',
+            'tahun' => '1995',
+            'judul' => 'Pengantar Statistika, Edisi III',
+            'penerbit' => 'Gramedia, Jakarta'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Johnson and Wichern',
+            'tahun' => '2002',
+            'judul' => 'Applied Multivariate Statistical Analysis',
+            'penerbit' => 'Prentice Hall'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Sharma, Subash',
+            'tahun' => '1996',
+            'judul' => 'Applied Multivariate Technique',
+            'penerbit' => 'John Wiley & Sons, Inc. New York'
+        ]);
+
+        //Statistika Deskriptif
+        Pustaka::create([
+            'nama_penulis' => 'Johnson and Wichern',
+            'tahun' => '2002',
+            'judul' => 'Applied Multivariate Statistical Analysis',
+            'penerbit' => 'Prentice Hall'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Sharma, Subash',
+            'tahun' => '1996',
+            'judul' => 'Applied Multivariate Technique',
+            'penerbit' => 'John Wiley & Sons, Inc. New York'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Lebart, Morineau and Warwick',
+            'tahun' => '1984',
+            'judul' => 'Multivariate Descriptive Statistical Analysis, Correspondence Analysis and Related Techiniques for large matrices',
+            'penerbit' => 'Wiley'
+        ]);
+
+        //Matriks dan Transformasi Linier
+        Pustaka::create([
+            'nama_penulis' => 'Leon, S.J',
+            'tahun' => '2001',
+            'judul' => 'Aljabar Linear dan Aplikasinya, Edisi 5',
+            'penerbit' => 'Erlangga, Jakarta'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Anton, H., and Rorres, C.',
+            'tahun' => '2000',
+            'judul' => 'Aljabar Linear Elementer Versi Aplikasi, Edisi 8',
+            'penerbit' => 'Erlangga, Jakarta'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Anton, H.',
+            'tahun' => '1991',
+            'judul' => 'Aljabar Linear Elementer, Edisi Kelima',
+            'penerbit' => 'Erlangga, Jakarta'
+        ]);
+
+        // Pustaka::create([
+        //     'nama_penulis' => '',
+        //     'tahun' => '',
+        //     'judul' => 'Modul Tutorial Matlab',
+        //     'penerbit' => ''
+        // ]);
+
+        //Pengantar Kolaborasi Keilmuan
+        Pustaka::create([
+            'nama_penulis' => 'Hammick, M, Freeth, D, Koppel, I, Reeves, S & Barr, H',
+            'tahun' => '2007',
+            'judul' => 'A Best evidence systematic review of interproffesional education: BEME Guide no 9 Med Teach',
+            'penerbit' => ''
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Word Health Organization',
+            'tahun' => '2010',
+            'judul' => 'Framework for action on interprofesional Education & Collaborative Practice',
+            'penerbit' => ''
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Bosh, B, dan Mansell, H',
+            'tahun' => '2015',
+            'judul' => 'Interprofessional collaboration in health care Lesson to be leared from competitive sport',
+            'penerbit' => ''
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Interprofessional Education Collaborative Expert Panel',
+            'tahun' => '2011',
+            'judul' => 'Core Competencies for interprofessional collaborative practice : Report of an expert panel',
+            'penerbit' => 'Wangsington, DC: Interproffessiomal Eduvation Collaborative'
+        ]);
+
+        Pustaka::create([
+            'nama_penulis' => 'Thistlethwaite J., Moran M',
+            'tahun' => '2010',
+            'judul' => 'Learning Outcome for Interprofesional Care',
+            'penerbit' => ''
+        ]);
+
+        //Pemograman mobile prak dan teo
+        Pustaka::create([
+            'nama_penulis' => 'Kuldii Project',
+            'tahun' => 2021,
+            'judul' => 'Flutter Indonesia',
+            'penerbit' => 'Youtube'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Raharjo, Budi',
+            'tahun' => 2019,
+            'judul' => 'Pemrograman Android Dengan Flutter',
+            'penerbit' => 'Informatika'
+        ],);
+
+        //Pemograman Web
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://devdocs.io/html/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://devdocs.io/css/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://devdocs.io/javascript/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://www.php.net/docs.php',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://www.yiiframework.com/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://laravel.com/docs/9.x/installation',
+            'penerbit' => ''
+        ],);
+        //Sistem Enterprise
+        Pustaka::create([
+            'nama_penulis' => 'Ellen F Monk, Bret Wagner',
+            'tahun' => 2012,
+            'judul' => 'Concepts in Enterprise Resource Planning',
+            'penerbit' => 'Thompson Course Technology, USA'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'O’Leary, D.E',
+            'tahun' => 2000,
+            'judul' => 'Enterprise Resource Planning Systems: Systems, Life Cycle, Electronic Commerce and Risk',
+            'penerbit' => 'Cambridge University Press'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Dhewanto, Wawan dan Falahah',
+            'tahun' => 2007,
+            'judul' => 'Enterprise Resource Planning : Menyelaraskan Teknologi Informasi dengan Strategi Bisnis',
+            'penerbit' => 'Penerbit Informatika, Bandung'
+        ],);
+
+        //APS Prak
+        Pustaka::create([
+            'nama_penulis' => 'K. E. Kendall, J. E Kendall',
+            'tahun' => 2019,
+            'judul' => 'System Analysis and Design Global ED',
+            'penerbit' => 'Pearson'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Scott Tilley',
+            'tahun' => 2019,
+            'judul' => 'Systems Analysis and Design, Cencage',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Phillip A. Laplante',
+            'tahun' => 2018,
+            'judul' => 'Requirements Engineering for Software and Systems 3rd Ed',
+            'penerbit' => 'CRC Press'
+        ],);
     }
 }
