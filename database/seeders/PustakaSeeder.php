@@ -315,5 +315,103 @@ class PustakaSeeder extends Seeder
             'judul' => 'Requirements Engineering for Software and Systems 3rd Ed',
             'penerbit' => 'CRC Press'
         ],);
+
+        // Agama Konghucu I
+        Pustaka::create([
+            'judul' => 'Kitab Zhong Yong. Tt'
+        ],);
+
+        //Agama Budha I
+        Pustaka::create([
+            'nama_penulis' => 'Tim Penulis Pendidikan Agama Hindu',
+            'tahun' => 2004, 
+            'judul' => 'Kuliah Agama Buddha Untuk Perguruan Tinggi',
+            'penerbit' => 'Dirjen Binbaga Budha, Kemenag, Jakarta'
+        ],);
+
+        //Agama Katolik I
+        Pustaka::create([
+            'nama_penulis' => 'Pandin, M.G.R.,',
+            'tahun' => 2013, 
+            'judul' => 'Hand Out Mata Kuliah Pendidikan Agama Katolik I',
+            'penerbit' => 'Universitas Airlangga'
+        ],);
+
+        Pustaka::create([
+            'judul' => 'Alkitab Deutrokanonika',
+            'penerbit' => 'Ende: Nusa Indah'
+        ],);
+
+        Pustaka::create([
+            'judul' => 'Cunningham: Introduction to Catholicsm',
+        ],);
+
+        Pustaka::create([
+            'judul' => 'Dokumen Ajaran sosial Gereja lainnya dari sumber Gereja Katolik.',
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Frans H.',
+            'judul' => 'Pengalaman Akan Allah',
+            'penerbit' => 'Yogyakarta: Kanisius'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'KWI',
+            'judul' => 'Iman Katolik: Buku Informasi dan referensi',
+            'penerbit' => 'Yogyakarta: Kanisius'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Nico Syukur',
+            'judul' => 'Kristologi sebuah Sketsa',
+            'penerbit' => 'Penerbit Kanisius'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Universitas Airlangga',
+            'judul' => 'Character Universitas Airlangga: Bahan PPKMB 2013'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Wijngaards',
+            'judul' => 'Yesus Sang Pembebas',
+            'penerbit' => 'Penerbit Kanisius'
+        ],);
+
+        //Agama Protestan I
+        Pustaka::create([
+            'nama_penulis' => 'J. Verkuyl',
+            'tahun' => 2003, 
+            'judul' => 'Etika Kristen Bagian Umum',
+            'penerbit' => 'Gunung Mulia'
+        ],);
+
+        //Agama Hindu
+        Pustaka::create([
+            'tahun' => 2014, 
+            'judul' => 'Kuliah Agama Hindu Untuk Perguruan Tinggi',
+            'penerbit' => 'Dirjen Binbaga Hindu, Kemenag'
+        ],);
+
+        //Agama Islam
+        Pustaka::create([
+            'judul' => 'Al-Quran',
+            'penerbit' => 'Departemen Agama'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Udji Asiyah',
+            'tahun' => 2014, 
+            'judul' => 'Sunan Fanani, Muadib Aminan,.',
+            'penerbit' => 'Surabaya: AUP,.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Udji Asiyah',
+            'tahun' => 2002, 
+            'judul' => 'Diktat Alam Semesta dan Alam Kehidupan',
+            'penerbit' => 'Surabaya: AUP,.'
+        ],);
     }
 }
