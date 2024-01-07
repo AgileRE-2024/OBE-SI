@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Bentuk;
 use App\Models\Detail_SN_CPLProdi;
 use App\Models\Detail_PL_CPLProdi;
 use App\Models\Detail_CPLProdi_BK;
@@ -15,6 +16,8 @@ use App\Models\Minggu_RPS;
 use App\Models\Kelas;
 use App\Models\Page;
 use App\Models\Detail_Nilai_Mahasiswa;
+use App\Models\Media;
+use App\Models\Metode;
 use App\Models\Teknik_Penilaian;
 use App\Models\Pengampu;
 use Illuminate\Database\Seeder;
@@ -40,6 +43,9 @@ class DatabaseSeeder extends Seeder
         $this->call(SubCpmkSeeder::class);
         $this->call(KriteriaPenilaianSeeder::class);
         $this->call(PustakaSeeder::class);
+        $this->call(BentukSeeder::class);
+        $this->call(MetodeSeeder::class);
+        $this->call(MediaSeeder::class);
         $this->call(TeknikPenilaianSeeder::class);
         $this->call(PageSeeder::class);
         $this->call(MahasiswaSeeder::class);
@@ -53,5 +59,6 @@ class DatabaseSeeder extends Seeder
         $this->call(RpsSeeder::class);
         $this->call(MingguRpsSeeder::class);
         $this->call(PengampuSeeder::class);
+        $this->call(DetailPustakaMingguRpsSeeder::class);
     }
 }

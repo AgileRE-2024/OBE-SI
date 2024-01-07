@@ -15,10 +15,13 @@ class KriteriaPenilaianSeeder extends Seeder
      */
     public function run()
     {
+
+        // Sistem Berbasis Pengetahuan
         kriteria_penilaian::create([
-            'nama_kriteria_penilaians' => 'Kriteria 1',
-            'indikatorPenilaian' => 'Indikator 1A',
-            'deskripsi_kriteria_penilaians' => 'Deskripsi Kriteria 1A',
+            'id_kriteria_penilaians' => '1',
+            'nama_kriteria_penilaians' => 'Kriteria SBP',
+            'indikatorPenilaian' => 'Indikator SBP',
+            'deskripsi_kriteria_penilaians' => 'Pemahaman materi, kejelasan dalam memahami tugas, keaktifan dalam mengerjakan dan diskusi',
         ]);
     }
 }

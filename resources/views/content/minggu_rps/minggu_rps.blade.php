@@ -58,7 +58,7 @@
                     <td scope="row">{{ $key + 2 }}</td>
                     @endif
                     @if($minggurps->SubCPMK)
-                    <td scope="row">{{ $minggurps->kodeSubCPMK }} {{ $minggurps->SubCPMK->deskripsiSubCPMK }}</td>
+                    <td scope="row">{{ $minggurps->SubCPMK->deskripsiSubCPMK }}</td>
                     @else
                     <td scope="row"></td>
                     @endif
@@ -84,7 +84,7 @@
                     <td scope="row">{{ $minggurps->Media->nama_media ?? '' }}</td>
                     <td scope="row">{{ $minggurps->waktuPembelajaran }}</td>
                     <td scope="row">{{ $minggurps->pengalaman_belajar }}</td>
-                    <td scope="row">{{ $minggurps->Kriteria_Penilaian->nama_kriteria_penilaians ?? '' }}</td>
+                    <td scope="row">{{ $minggurps->Kriteria_Penilaian->deskripsi_kriteria_penilaians ?? '' }}</td>
                     <td scope="row">{{ $minggurps->bobot_nilai }}</td>
                     <td scope="row">
                         @if($minggurps->Pustaka)

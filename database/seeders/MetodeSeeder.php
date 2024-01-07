@@ -15,6 +15,7 @@ class MetodeSeeder extends Seeder
      */
     public function run()
     {
+        // Metode jangan ditambah, pilihannya cuma 3 ini
         Metode::create([
             'id_metode' => '1',
             'nama_metode' => 'Problem Based Learning',

@@ -29,5 +29,10 @@ class MediaSeeder extends Seeder
             'id_media' => '3',
             'nama_media' => 'Kasus',
         ],);
+
+        Media::create([
+            'id_media' => '4',
+            'nama_media' => 'LCD, demo komputer, white board',
+        ],);
     }
 }

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('media', function (Blueprint $table) {
             $table->id('id_media');
-            $table->string('nama_media',30)->nullable();
+            $table->string('nama_media',100)->nullable();
             $table->string('deskripsi_media',100)->nullable();
             $table->timestamps();
         });
