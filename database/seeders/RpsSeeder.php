@@ -398,5 +398,95 @@ class RpsSeeder extends Seeder
             'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
+
+        //Pancasila
+        RPS::create([
+            'id_rps' => 'AGK1012101',
+            'nip' => '197102111997021001', // pak hendra dulu
+            'kodeMK' => 'NOP103',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197609012003121001',
+            'disetujui_oleh' => '197603242002121001',
+            'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+            'penanggungJawab' => '196508061992031002', 
+            'dosenPengampu' => '["197102111997021001"]', // pak hendra dulu
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //PSI
+        RPS::create([
+            'id_rps' => 'SII1032101',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'SII103',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+            'penanggungJawab' => '197102111997021001', 
+            'dosenPengampu' => '["197102111997021001"]', 
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Alpro teo
+        RPS::create([
+            'id_rps' => 'MAT1012102',
+            'nip' => '196004211986011001',
+            'kodeMK' => 'MAT101',
+            'tahunAjaran' => 2021,
+            'semester' => 2,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '196004211986011001', // pak kartono dulu
+            'penanggungJawab' => '196004211986011001', 
+            'dosenPengampu' => '["196004211986011001"]', 
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Alpro prak
+        RPS::create([
+            'id_rps' => 'MAT1022102',
+            'nip' => '196004211986011001',
+            'kodeMK' => 'MAT102',
+            'tahunAjaran' => 2021,
+            'semester' => 2,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '196004211986011001', // pak kartono dulu
+            'penanggungJawab' => '196004211986011001', 
+            'dosenPengampu' => '["196004211986011001","198105082005012001","197101042008121001","198206062007101001","197812172005012001","197107122008122001","199203222019032018"]', 
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Bing 1
+        RPS::create([
+            'id_rps' => 'BAE1112102',
+            'nip' => '197102111997021001', // pak hendra dulu
+            'kodeMK' => 'BAE111',
+            'tahunAjaran' => 2021,
+            'semester' => 2,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+            'penanggungJawab' => '197102111997021001', // pak hendra dulu
+            'dosenPengampu' => '["197102111997021001"]', // pak hendra dulu
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Fisdas
+        RPS::create([
+            'id_rps' => 'FID1122102',
+            'nip' => '197102111997021001', // pak hendra dulu
+            'kodeMK' => 'FID112',
+            'tahunAjaran' => 2021,
+            'semester' => 2,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+            'penanggungJawab' => '197102111997021001', // pak hendra dulu
+            'dosenPengampu' => '["197102111997021001"]', // pak hendra dulu
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
     }
 }

@@ -50,23 +50,75 @@ class MataKuliahSeeder extends Seeder
             menjadi seorang Junzi (insan berbudi luhur) yang mengharmoniskan hubungan antara Tian (Tuhan), Di (Alam Semesta), dan Ren
             (Manusia); c). memuliakan Lima Hubungan Kemasyarakatan (Wu Lun), menerapkan prinsip ZhiRen Yong (Bijaksana, Cinta Kasih
             dan Berani) sebagai wujud nyata memuliakan Tian, d). menjunjung leluhur. E). nilai-nilai Kebajikan hakiki dalam kehidupan", "S1 Sistem Informasi"],
-            ['NOP103', 'Pancasila', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
+            ['NOP103', 'Pancasila', 2, 1, 1, 2, null, "Mata kuliah ini membahas:
+
+            1. Pancasila dalam kajian sejarah bangsa, Pancasila sebagai dasar negara,
+            2. Pancasila sebagai ideologi negara,
+            3. Pancasila sebagai sistem filsafat,
+            4. Pancasila sebagai sistem etika,
+            5. Nilai Pancasila sebagai dasar pengembangan ilmu,
+            6. Pemaknaan Sila-sila Pancasila, dan contoh penerapan dalam kehidupan berbangsa dan bermasyarakat", "S1 Sistem Informasi"],
             ['NOP101', 'Kewarganegaraan', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
             ['KID107', 'Kimia Dasar', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
             ['BID108', 'Biologi Dasar', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
             ['MAA101', 'Kalkulus', 3, 1, 1, 1, null, null, "S1 Sistem Informasi"],
             ['BAI101', 'Bahasa Indonesia', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
             ['SIP107', 'Data dan Pustaka', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['SII103', 'Pengantar Sistem Informasi', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['FID112', 'Fisika Dasar', 2, 2, 1, 1, null, null, "S1 Sistem Informasi"],
+            ['SII103', 'Pengantar Sistem Informasi', 2, 1, 1, 1, null, "a. Kegunaan, teknologi, manusia dan komponen sistem informasi;
+
+            b. Globalisasi dan peran sistem informasi;
+            c. Komponen perangkat keras dalam infrastruktur sistem Informasi;
+            d. Komponen perangkat lunak dalam infrastruktur sistem Informasi;
+            e. Manajemen sumber data pada infrastruktur sistem informasi
+            f. Telekomunikasi dan jaringan untuk mendukung infrastruktur sistem informasi;
+            g. Sistem bisnis elektronik pada sebuah arsitektur sistem informasi;
+            h. Bisnis di dalam perusahaan;
+            i. Sistem perdagangan elektronik;
+            j. Business Intelligence untuk pengambilan keputusan dalam organisasi;
+            k. Strategi Bisnis/IT untuk pengembangan sistem informasi
+            l. Implementasi solusi bisnis/IT pada sebuah arsitektur sistem informasi;
+            m. Tantangan keamanan dan etika dalam sistem informasi;
+            n. Teknologi informasi dalam perusahaan dan manajemen global", "S1 Sistem Informasi"],
+            ['FID112', 'Fisika Dasar', 2, 2, 1, 1, null, "Besaran dan Satuan dalam fisika, Vektor,
+            Kinematika dan Dinamika gerak benda,
+            Usaha dan Energi, Sistem Partikel dan Momentum, Mekanika Fluida, Kesetimbangan Statik Benda Tegar, Rotasi, Gravitasi, Osilasi,
+            Gelombang dan Bunyi, Temperatur dan Termodinamika.", "S1 Sistem Informasi"],
             ['PHP103', 'Logika dan Pemikiran Kritis', 2, 2, 1, 1, null, null, "S1 Sistem Informasi"],
             ['MAL103', 'Matriks dan Transformasi Linier', 2, 2, 1, 1, null, '<p>Mata kuliah ini menjelaskan tentang:&nbsp;</p><ol><li>Persamaan Linier, Aljabar Linier&nbsp;</li><li>Matriks: Sifat-sifat matriks, Determinan Matriks, Inverse matriks, Operasi Baris Elementer</li><li>Analisis varians satu arah (Anova sederhana) dan Analisis varians dua arah</li><li>Sistem Persamaan Linier</li><li>Vektor</li><li>Eigen Value, Eigen Vektor</li><li>Transformasi Linier</li>', "S1 Sistem Informasi"],
-            ['MAT101', 'Algoritma dan Pemrograman', 3, 2, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['MAT102', 'Algoritma dan Pemrograman (Praktikum)', 2, 2, 2, 1, null, null, "S1 Sistem Informasi"],
+            ['MAT101', 'Algoritma dan Pemrograman', 3, 2, 1, 1, null, "Mahasiswa mendapatkan materi mengenai:
+
+            a. Pengantar Algoritma dan Pemrograman dan Flowchart
+            
+            b. Variabel dan Operator
+            c. Conditional IF
+            d. Looping FOR
+            e. Looping While
+            f. Function
+            g. Recursive Function
+            h. Implementasi Java dari Variabel, Conditional IF, Loop FOR
+            i. Implementasi Java dari Recursive Function
+            j. Implementasi Phyton dari Looping FOR dan WHILE
+            k. Implementasi Phyton dari Function", "S1 Sistem Informasi"],
+            ['MAT102', 'Algoritma dan Pemrograman (Praktikum)', 2, 2, 2, 1, null, "Mahasiswa mendapatkan materi mengenai:
+
+            a. Pengantar Algoritma dan Pemrograman dan Flowchart
+            
+            b. Variabel dan Operator
+            c. Conditional IF
+            d. Looping FOR
+            e. Looping While
+            f. Function
+            g. Recursive Function
+            h. Implementasi Java dari Variabel, Conditional IF, Loop FOR
+            i. Implementasi Java dari Recursive Function
+            j. Implementasi Phyton dari Looping FOR dan WHILE
+            k. Implementasi Phyton dari Function", "S1 Sistem Informasi"],
             ['MNM107', 'Pengantar Kolaborasi Keilmuan', 2, 2, 1, 1, null, 'Mata kuliah ini membahas tentang dasar pelaksanaan kolaborasi dan kerjasama tim dan topik terkait mata kuliah meliputi konsep dasar Interprofesional education (IPE), leadership dan manajerial dan konsep pengambilan keputusan dalam persoalan yang terjadi di masyarakat baik berupa masalah kesehatan, sosial, humaniora, langkah-langkah pengambilan keputusan, penerapan pengambilan keputusan pada beberapa setting pelayanan di masyarakat dengan saling berkolaborasi interprofesi berdasarkan etik, praktis, teori, dan organisasi.', "S1 Sistem Informasi"],
             ['MNM106', 'Komunikasi dan Pengembangan Diri', 2, 2, 1, 1, null, 'Mata kuliah ini memberikan wawasan dan kesempatan bagi mahasiswa untuk dapat menggali potensi diri agar mampu mengembangkan serta meningkatkan kapasitas diri melalui sinergi dengan aktivitas pembinaan di Unit Kegiatan Mahasiswa dan kegiatan organisasi kemahaiswaan lainnya', "S1 Sistem Informasi"],
             ['MAS118', 'Statistika Deskriptif', 3, 2, 1, 1, null, '<p>Mata kuliah ini menjelaskan tentang:&nbsp;</p><ol><li>Visualisasi data dengan membuat dan menginterpretasikan grafik&nbsp;</li><li>Central Tendency: menghitung dan menginterpretasi-kan ukuran pemusatan data&nbsp;</li><li>Variability: mengukur penyebaran data menggunakan rentang dan deviasi standar serta mengidentifikasi outlier dalam data set menggunakan konsep rentang interkuartil&nbsp;</li><li>Kemiringan dan Keruncingan&nbsp;</li><li>Variabel random dan distribusi probabilitas : distribusi diskrit dan kontinu&nbsp;</li><li>Sampling Distribusi : menerapkan konsep probabilitas dan normalisasi untuk set data sampel</li><li>Deskripsi data untuk data data multivariate</li><ol type="a"><li>Vilsualisasi data dengan grafik</li><li>Principal Komponent Analysis</li><li>Cluster Analysis</li><li>Analisis Korespondensi</li>', "S1 Sistem Informasi"],
-            ['BAE111', 'Bahasa Inggris I', 2, 2, 1, 2, null, null, "S1 Sistem Informasi"],
+            ['BAE111', 'Bahasa Inggris I', 2, 2, 1, 2, null, "Wacana-wacana bahasa inggris yang berkaiatan dengan sains dan teknologi. Wacana-wacana yang berkaiatan dengan penggunaan
+
+            gramatika bahasa.", "S1 Sistem Informasi"],
             ['SIA204', 'Fungsi dan Proses Bisnis', 2, 3, 1, 1, 'SII103', null, "S1 Sistem Informasi"],
             ['SIA205', 'Fungsi dan Proses Bisnis (Praktikum)', 2, 3, 2, 1, 'SII103', "<p>Mata kuliah ini menjelaskan tentang:&nbsp;</p><ol><li>Pengenalan tools untuk analisis dan pemodelan proses bisnis&nbsp;</li><li>Teknik pemodelan proses bisnis umum dalam organisasi (Human Resource, Produksi, Marketing, dan Keuangan)&nbsp;</li><li>Identifikasi proses bisnis dalam perusahaan (pendidikan, manufaktur, kesehatan, pemerintahan, jasa, dan lain-lain)&nbsp;</li><li>Analisis proses bisnis&nbsp;</li><li>Pemodelan proses bisnis&nbsp;</li><li>Desain dan rekayasa ulang proses bisnis</li>", "S1 Sistem Informasi"],
             ['SID201', 'Basis Data', 3, 3, 1, 1, null, null, "S1 Sistem Informasi"],

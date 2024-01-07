@@ -320,5 +320,50 @@ class UserSeeder extends Seeder
             'role' => 0,
             'status' => "Aktif Bekerja"
         ]);
+
+        //pancasila
+        User::create([
+            'nip' => '196508061992031002',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Ikhsan Rosyid MA, S.S., M.A.',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'ikhsan-r-m-a@fib.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '197609012003121001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Ilham Nur Alfian, S.Psi., M.Psi., Psikolog',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'ilham.nuralfian@psikologi.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '197603242002121001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Syahrur Marta Dwi Susilo, S.S.,M.A.,Ph.D.',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'syahrur-m-d-s@fib.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '196004211986011001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Drs. Kartono, M. Kom.',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => 'kartono@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
     }
 }

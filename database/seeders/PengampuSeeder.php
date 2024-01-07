@@ -206,5 +206,47 @@ class PengampuSeeder extends Seeder
             'kodeMK' => 'SII314',
             'nip' => '198002172005012001',
         ]);
+
+        //Pancasila
+        Pengampu::create([
+            'id_rps' => 'AGK1012101',
+            'kodeMK' => 'NOP103',
+            'nip' => '197102111997021001', // pak hendra dulu
+        ]);
+
+        //PSI
+        Pengampu::create([
+            'id_rps' => 'SII1032101',
+            'kodeMK' => 'SII103',
+            'nip' => '197102111997021001',
+        ]);
+
+        //alpro teo
+        Pengampu::create([
+            'id_rps' => 'MAT1012102',
+            'kodeMK' => 'MAT101',
+            'nip' => '196004211986011001',
+        ]);
+
+        //alpro prak
+        Pengampu::create([
+            'id_rps' => 'MAT1022102',
+            'kodeMK' => 'MAT102',
+            'nip' => '196004211986011001',
+        ]);
+
+        //Bing 1
+        Pengampu::create([
+            'id_rps' => 'BAE1112102',
+            'kodeMK' => 'BAE111',
+            'nip' => '197102111997021001', // pak hendra dulu
+        ]);
+
+        //Fisdas
+        Pengampu::create([
+            'id_rps' => 'FID1122102',
+            'kodeMK' => 'FID112',
+            'nip' => '197102111997021001', // pak hendra dulu
+        ]);
     }
 }

@@ -413,5 +413,94 @@ class PustakaSeeder extends Seeder
             'judul' => 'Diktat Alam Semesta dan Alam Kehidupan',
             'penerbit' => 'Surabaya: AUP,.'
         ],);
+
+        //pancasila
+        Pustaka::create([
+            'nama_penulis' => 'Yudi Latif',
+            'tahun' => 2009, 
+            'judul' => 'Negara Paripurna, Aktualitas dan Historisitas Pancasila',
+            'penerbit' => 'Jakarta: Gramedia'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Yudi Latif',
+            'tahun' => 2014, 
+            'judul' => 'Mata Air Keteladanan, Pancasila dalam Perbuatan',
+            'penerbit' => 'Bandung: Mizan'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Tim Dikti',
+            'tahun' => 2016, 
+            'judul' => 'Modul Pendidikan Pancasila untuk Perguruan Tinggi',
+            'penerbit' => 'Jakarta: Kemenristekdikti'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Tim MKWU',
+            'tahun' => 2016, 
+            'judul' => 'Modul Terintegrasi MKWU'
+        ],);
+
+        //PSI
+        Pustaka::create([
+            'nama_penulis' => 'Jr. McLeod',
+            'tahun' => 2001, 
+            'judul' => 'Management Information systems, 8th edition',
+            'penerbit' => 'Prentice-Hall International, Inc., New Jersey'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Shipsey',
+            'tahun' => 2010,
+            'judul' => 'Information Systems: Foundation for E-Business, Vol. 1',
+            'penerbit' => 'University of London'
+        ],);
+
+        //alpro teo dan prak
+        Pustaka::create([
+            'nama_penulis' => 'Kindersley',
+            'tahun' => 2019, 
+            'judul' => 'Help Your Kids with Computer Coding. Second Edition.',
+            'penerbit' => 'DK Publisher'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Liang',
+            'tahun' => 2020,
+            'judul' => 'Introduction to Java Programming and Data Structures, Comprehensive Version. Twelfth Edition',
+            'penerbit' => 'Pearson Education Inc'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Sweigart,',
+            'tahun' => 2020,
+            'judul' => '2020. Automate the Boring Stuff with Python, Second Edition: Practical Programming for Total Beginners.',
+            'penerbit' => 'No Starch Press, Inc'
+        ],);
+
+        //Bing 1
+        Pustaka::create([
+            'nama_penulis' => 'Azar',
+            'tahun' => 1993, 
+            'judul' => 'Understanding and Using English Grammar : Edisi Bahasa Inggris - Indonesia',
+            'penerbit' => 'Jakarta : Binarupa Aksara.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Alexander',
+            'tahun' => 1990,
+            'judul' => 'Practice and Progress',
+            'penerbit' => 'Yogyakarta : Kanisius.'
+        ],);
+        
+        //Fisdas
+        Pustaka::create([
+            'nama_penulis' => 'Tipler',
+            'tahun' => 1996, 
+            'judul' => 'Fisika Untuk Sains dan Teknik,Edisi ke tiga, jilid 1',
+            'penerbit' => 'Penerbit Erlangga'
+        ],);
+
     }
 }
