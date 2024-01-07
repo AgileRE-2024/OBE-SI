@@ -308,5 +308,80 @@ class RpsSeeder extends Seeder
             'dosenPengampu' => '["196609281991021001"]',
             'detail_penilaian' => 'NA = UAS (35%), UTS (30%), Tugas (20%), Quiz (15%)',
         ]);
+
+        //Agama Budha I
+        RPS::create([
+            'id_rps' => 'AGB1012101',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'AGB101',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Agama Hindu I
+        RPS::create([
+            'id_rps' => 'AGH1012101',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'AGH101',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Agama Islam I
+        RPS::create([
+            'id_rps' => 'AGI1012101',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'AGI101',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Agama Konghucu I
+        RPS::create([
+            'id_rps' => 'AGC1012101',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'AGC101',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Agama Hindu I
+        RPS::create([
+            'id_rps' => 'AGP1012101',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'AGP101',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
     }
 }
