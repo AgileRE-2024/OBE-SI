@@ -16,12 +16,40 @@ class MataKuliahSeeder extends Seeder
     public function run()
     {
         $matkul = [
-            ['AGI101', 'Agama I (Islam)', 2, 1, 1, 2, null, null, "S1 Sistem Informasi", "S1 Sistem Informasi"],
-            ['AGP101', 'Agama I (Protestan)', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
-            ['AGK101', 'Agama I (Katolik)', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
-            ['AGH101', 'Agama I (Hindu)', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
-            ['AGB101', 'Agama I (Budha)', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
-            ['AGC101', 'Agama I (Kong Hu Chu)', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
+            ['AGI101', 'Agama I (Islam)', 2, 1, 1, 2, null, "Mata kuliah Agama Islam I membahas tentang : a). Konsep ke Tuhanan dalam Islam, b).Keimanan, Ketakwaan dan Implementasinya
+            dalam Kehidupan, c). Hakikat Manusia Menurut Islam, d). Hukum, HAM dan Demokrasi dalam Islam, e). Hukum Islam dan
+            Kontribusi Umat Islam Indonesia, f). Etika, Moral dan Akhlak, g). IPTEK dalam Islam, h). Masyarakat Madani, i). Kerukunan Antar
+            Umat Beragama, j). Ekonomi Islam dan Kesejahteraan Umat, k). Kebudayaan dan Seni dalam Islam, serta l). Sistem Politik Islam.", "S1 Sistem Informasi"],
+            ['AGP101', 'Agama I (Protestan)', 2, 1, 1, 2, null, "Membahas tentang Protestan merupakan sebuah mata kuliah yang menjadikan agama sebagai sumber nilai dan pedoman dalam
+            pengembangan kepribadian Kristiani yang menjunjung tinggi harkat dan martabat manusia. Mata kuliah ini disajikan berdasarkan
+            komponen Kurikulum Berbasis Kompetensi (KBK), yang terdiri dari Kompetensi, Substansi Kajian, Sub Kajian dan seluruh proses
+            pembelajaran termasuk metodologi dan evaluasi. Substansi kajian merupakan topik yang telah ditetapkan oleh Ditjen Dikti melalui SK
+            No. 38/Dikti/Kep/2002.", "S1 Sistem Informasi"],
+            ['AGK101', 'Agama I (Katolik)', 2, 1, 1, 2, null, "1. Tuhan Yang Maha Esa
+            2. Manusia
+            3. Etika Moral
+            4.Dialog dan Kerukunan Umat Beragama
+            5. IPTEKS dan Iman Katolik
+            6.Budaya dan Iman Katolik
+            7. Iman dan Sosial Politik
+            8. Hukum, HAM dan Demokrasi", "S1 Sistem Informasi"],
+            ['AGH101', 'Agama I (Hindu)', 2, 1, 1, 2, null, "Mata kuliah ini membahas tentang a). Konsepsi Ketuhanan (Brahma Widya), b). Catur Marga Yoga, c). Hakekat Manusia Hindu I, d).
+            Hakekat Manusia Hindu II, d). Etika dan Moralitas I, e). Etika dan Moralitas II, f). Ilmu Pengetahuan Teknologi Dalam Perspektif
+            Hindu I, II, g). Kerukunan Hidup Umat Beragama, h). Masyarakat Kerja Jagadhita, i). Budaya Sebagai Pengalaman Ajaran Hindu, j).
+            Politik Menurut Perspektif Hindu, Hindu Dalam Kerangka Menegakkan Keadilan.", "S1 Sistem Informasi"],
+            ['AGB101', 'Agama I (Budha)', 2, 1, 1, 2, null, "1) Hakekat Tuhan Yang Maha Esa, didalam kitab suci UDANA VIII : 3 dilukiskan sebagai berikut : Yang Mutlak dan tidak
+            berkondisi dan tidak dilahirkan adalah Nibbana (orang yang telah mencapai kesucian) Arahat
+            2) Lahirnya P. Sidarta selama enam tahun dan pencapain penerangan sempurna (menjadi) Buddha, pembabaran Dharma di Taman
+            Isipatana terbentuknya Sangha
+            3) Sebelum seseorang menjadi Buddha harus menajdi seorang Bodisatva, mempunyai sifat Metta Karuna dan Mudita dan lebih
+            mementingkan orang lain daripada diri sensiri
+            4) Humum ke-Sunyataan yang berlaku di 31 alam kehidupan, alam Arupa Loka, Rupa Loka dan Karma Loka
+            5) Hukum karma perbuatan yang dilakukan oleh mano Vacci dan karma dan didorong oleh cetana, tanpa cetana tidak akan ada satu
+            karma. Karma adalah hasil dari perbuatan dan akan menerima, menerapkan serta melaksanakan", "S1 Sistem Informasi"],
+            ['AGC101', 'Agama I (Kong Hu Chu)', 2, 1, 1, 2, null, "Mata kuliah ini membahas tentang : a). pengetahuan, nilai-nilai dasar dan contoh-contoh penerapan agama Khonghucu, b) Mendorong
+            menjadi seorang Junzi (insan berbudi luhur) yang mengharmoniskan hubungan antara Tian (Tuhan), Di (Alam Semesta), dan Ren
+            (Manusia); c). memuliakan Lima Hubungan Kemasyarakatan (Wu Lun), menerapkan prinsip ZhiRen Yong (Bijaksana, Cinta Kasih
+            dan Berani) sebagai wujud nyata memuliakan Tian, d). menjunjung leluhur. E). nilai-nilai Kebajikan hakiki dalam kehidupan", "S1 Sistem Informasi"],
             ['NOP103', 'Pancasila', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
             ['NOP101', 'Kewarganegaraan', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
             ['KID107', 'Kimia Dasar', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
