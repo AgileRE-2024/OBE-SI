@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('detail_media_mingguRPS', function (Blueprint $table) {
-            $table->char('id_media',2);
-            $table->char('kodeMingguRPS', 4);
-            $table->foreign('id_media')->references('id_media')->on('Media')->onDelete('restrict');
-            $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
+        Schema::create('bentuks', function (Blueprint $table) {
+            $table->id('id_bentuk');
+            $table->string('nama_bentuk',30)->nullable();
+            $table->string('deskripsi_bentuk',100)->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_media_mingguRPS');
+        Schema::dropIfExists('bentuks');
     }
 };

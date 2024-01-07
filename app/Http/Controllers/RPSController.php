@@ -274,7 +274,7 @@ class RPSController extends Controller
             'kodeMK' => 'required',
             'tahunAjaran' => 'required',
             'semester' => 'required',
-            'dibuat_oleh' => 'required'
+            'nip' => 'required'
         ]);
 
         // dd($request);
@@ -291,7 +291,8 @@ class RPSController extends Controller
             'kodeMK' => $request->kodeMK,
             'semester' => $request->semester,
             'id_rps' => $id_rps,
-            'dibuat_oleh' => $request->dibuat_oleh
+            'nip' => $request->nip,
+            'dibuat_oleh' => $request->nip
         ]);
         // create minggu rps
         for ($i = 0; $i < 14; $i++) {

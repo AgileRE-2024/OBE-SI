@@ -65,11 +65,11 @@
                     <td scope="row">{{ $minggurps->bahan_kajian }}</td>
                     <td scope="row">
                         <div class="col">
-                            @if($minggurps->temp_bentuk)
-                            <p>Bentuk: {{ $minggurps->temp_bentuk }}</p>
+                            @if($minggurps->id_bentuk)
+                            <p>Bentuk: {{ $minggurps->Bentuk->nama_bentuk }}</p>
                             @endif
-                            @if($minggurps->temp_metode)
-                            <p>Metode: {{ $minggurps->temp_metode }}</p>
+                            @if($minggurps->id_metode)
+                            <p>Metode: {{ $minggurps->Metode->nama_metode }}</p>
                             @endif
                             @if($minggurps->penugasan)
                             <p>Penugasan: {{ $minggurps->penugasan }}</p>
@@ -81,12 +81,11 @@
                             @endif
                         </div>
                     </td>
-                    <td scope="row">{{ $minggurps->temp_media }}</td>
+                    <td scope="row">{{ $minggurps->Media->nama_media ?? '' }}</td>
                     <td scope="row">{{ $minggurps->waktuPembelajaran }}</td>
                     <td scope="row">{{ $minggurps->pengalaman_belajar }}</td>
-                    <td scope="row">{{ $minggurps->temp_kriteria_penilaian }}</td>
+                    <td scope="row">{{ $minggurps->Kriteria_Penilaian->nama_kriteria_penilaians ?? '' }}</td>
                     <td scope="row">{{ $minggurps->bobot_nilai }}</td>
-                    <!-- <td scope="row">{{ $minggurps->temp_referensi }}</td> -->
                     <td scope="row">
                         @if($minggurps->Pustaka)
                         @foreach($minggurps->PustakaMingguRPS as $pmItem)

@@ -14,7 +14,7 @@ class RPS extends Model
     public $incrementing = false;
     protected $table = 'RPS';
     protected $fillable = [
-        'id_rps', 'nip','kodeMK', 'kodeRPS', 'tahunAjaran', 'semester', 'diperiksa_oleh','disiapkan_oleh','disetujui_oleh', 'dibuat_oleh','versi', 'penanggungJawab','dosenPengampu','detail_penilaian','deleted_at'
+        'id_rps', 'nip','kodeMK', 'kodeRPS', 'tahunAjaran', 'semester', 'diperiksa_oleh', 'disetujui_oleh', 'dibuat_oleh', 'penanggungJawab','dosenPengampu','detail_penilaian'
     ];
 
     protected static function booted()

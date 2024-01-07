@@ -4,7 +4,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Tambah Profil Lulusan</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Tambah Pustaka</h6>
             {{-- <a href="/tambahpl" class="float-right btn btn-sm btn-dark"><i
             class="fa fa-fw fa-plus-circle"></i> Tambah PL</a> --}}
         </div>
