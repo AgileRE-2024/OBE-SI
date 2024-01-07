@@ -105,7 +105,7 @@ class PengampuSeeder extends Seeder
             'kodeMK' => 'MNM107',
             'nip' => '196605041996032001',
         ]);
-        
+
         Pengampu::create([
             'id_rps' => 'MNM1072102',
             'kodeMK' => 'MNM107',
@@ -123,6 +123,58 @@ class PengampuSeeder extends Seeder
             'id_rps' => 'MNM1062102',
             'kodeMK' => 'MNM106',
             'nip' => '196902031994031001',
+        ]);
+
+        // Pemograman mobile prak
+        Pengampu::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMK' => 'SIS305',
+            'nip' => '197101042008121001',
+        ]);
+
+        // Pemograman mobile teo
+        Pengampu::create([
+            'id_rps' => 'SIS3042104',
+            'kodeMK' => 'SIS304',
+            'nip' => '197101042008121001',
+        ]);
+
+        // Pemograman web prak
+        Pengampu::create([
+            'id_rps' => 'SIS2052104',
+            'kodeMK' => 'SIS205',
+            'nip' => '197101042008121001',
+        ]);
+
+        // Pemograman web teo
+        Pengampu::create([
+            'id_rps' => 'SIS2042104',
+            'kodeMK' => 'SIS204',
+            'nip' => '197101042008121001',
+        ]);
+
+        // Sistem Enterprise
+        Pengampu::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMK' => 'SIS202',
+            'nip' => '197812172005012001',
+        ]);
+        Pengampu::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMK' => 'SIS202',
+            'nip' => '198105082005012001',
+        ]);
+
+        //APS Prak
+        Pengampu::create([
+            'id_rps' => 'SII3142104',
+            'kodeMK' => 'SII314',
+            'nip' => '199203222019032018',
+        ]);
+        Pengampu::create([
+            'id_rps' => 'SII3142104',
+            'kodeMK' => 'SII314',
+            'nip' => '198002172005012001',
         ]);
     }
 }
