@@ -249,7 +249,55 @@ class UserSeeder extends Seeder
             'role' => 1,
             'status' => "Aktif Bekerja"
         ]);
-        
-        
+        User::create([
+            'nip' => '196906211997032001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. RR. Juni Triastuti, S.Pi., M.Si.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'juni.triastuti@fpk.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '198206182015041001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Andri Setiya Wahyudi, S,Kep.,Ns., M.Kep.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'andri.setiyawahyudi@fkp.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '139040676',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Nuzul Quraniati, S.Kep., Ns., M.Ng., PhD.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'nuzul-q-a@fkp.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '197703162005012001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Ninuk Dian Kurniawati, S.Kep., Ns., MANP',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'ninuk.dk@fkp.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '198604122015043101',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Diansanto Prayoga, S.KM., M.Kes.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'diansantoprayoga@fkm.unair.ac.id ',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
     }
 }

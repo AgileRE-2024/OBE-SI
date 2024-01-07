@@ -28,7 +28,7 @@ return new class extends Migration
             $table->String('dibuat_oleh', 18)->nullable();
             // $table->integer('versi')->nullable();
             $table->char('penanggungJawab', 18)->nullable();
-            $table->char('dosenPengampu', 100)->nullable();
+            $table->char('dosenPengampu', 200)->nullable();
             $table->longText('detail_penilaian')->nullable();
             // $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
