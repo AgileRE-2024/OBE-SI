@@ -224,5 +224,113 @@ class RpsSeeder extends Seeder
             'dosenPengampu' => '["199203222019032018", "198002172005012001"]',
             'detail_penilaian' => '<p>Komponen penilaian: </p><p> NA = Tugas (25%), UTS (30%), UAS (35%), Softskill (10%)</p>',
         ]);
+
+         //FPB Teori
+         RPS::create([
+            'id_rps' => 'SIA2042103',
+            'nip' => '198410272010122005',
+            'kodeMK' => 'SIA204',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '198410272010122005',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '198410272010122005',
+            'versi' => 1,
+            'penanggungJawab' => '198410272010122005',
+            'dosenPengampu' => '["198410272010122005","198002172005012001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), Quiz (10%), UTS (30%), UAS (30%), SoftSkill (5%)',
+        ]);
+
+        //Basis Data Praktikum
+        RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);
+
+        //Basis Data Teori
+        RPS::create([
+            'id_rps' => 'SID2012103',
+            'nip' => '198706252012122002',
+            'kodeMK' => 'SID201',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '198706252012122002',
+            'versi' => 1,
+            'penanggungJawab' => '198706252012122002',
+            'dosenPengampu' => '["198706252012122002","197101042008121001"]',
+            'detail_penilaian' => '55% Tugas + 20% UTS +20% UAS + 5% Softskill',
+        ]);
+
+        //Matematika Diskrit
+        RPS::create([
+            'id_rps' => 'MAL2042103',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'MAL204',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197102111997021001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001',
+            'versi' => 1,
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (20%), Quiz (20%), UTS (25%), UAS (30%), SoftSkill(5%)',
+        ]);
+
+         //PBO Praktikum
+         RPS::create([
+            'id_rps' => 'SIR2032103',
+            'nip' => '196609281991021001',
+            'kodeMK' => 'SIR203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '196609281991021001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '196609281991021001',
+            'versi' => 1,
+            'penanggungJawab' => '196609281991021001',
+            'dosenPengampu' => '["196609281991021001"]',
+            'detail_penilaian' => 'NA = UAS 20%, UTS 20%, CML (Diskusi dan presentasi) 60%',
+        ]);
+
+         //PBO Teori
+         RPS::create([
+            'id_rps' => 'SIR2012103',
+            'nip' => '196609281991021001',
+            'kodeMK' => 'SIR201',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '196609281991021001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '196609281991021001',
+            'versi' => 1,
+            'penanggungJawab' => '196609281991021001',
+            'dosenPengampu' => '["196609281991021001"]',
+            'detail_penilaian' => 'NA = UAS (35%), UTS (30%), Tugas (20%), Quiz (15%)',
+        ]);
     }
 }
