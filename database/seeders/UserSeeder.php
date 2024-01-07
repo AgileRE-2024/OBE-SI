@@ -70,7 +70,7 @@ class UserSeeder extends Seeder
             'status' => "Aktif Mengajar"
         ]);
 
-        
+
         User::create([
             'nip' => '197102111997021001',
             'namaProdi' => 'S1 Sistem Informasi',
@@ -139,6 +139,26 @@ class UserSeeder extends Seeder
             'status' => "Aktif Bekerja"
         ]);
 
+        User::create([
+            'nip' => '197812172005012001',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'jabatanDosen' => 'Dosen',
+            'namaDosen' => 'Endah Purwanti, S.Si., M.Kom.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'endahpurwanti@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '199203222019032018',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'jabatanDosen' => 'Dosen',
+            'namaDosen' => 'Nania Nuzulita, S.Kom., M.Kom.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'nania.nuzulita@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
         User::create([
             'nip' => '198206062007101001',
             'namaProdi' => 'S1 Sistem Informasi',
