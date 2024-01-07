@@ -369,11 +369,26 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
-        //Agama Hindu I
+        //Agama Protestan I
         RPS::create([
             'id_rps' => 'AGP1012101',
             'nip' => '197102111997021001',
             'kodeMK' => 'AGP101',
+            'tahunAjaran' => 2021,
+            'semester' => 1,
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
+        ]);
+
+        //Agama Katolik I
+        RPS::create([
+            'id_rps' => 'AGK1012101',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'AGK101',
             'tahunAjaran' => 2021,
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
