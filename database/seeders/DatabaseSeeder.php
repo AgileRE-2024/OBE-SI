@@ -171,6 +171,50 @@ class DatabaseSeeder extends Seeder
             'role' => 1,
             'status' => "Aktif Bekerja"
         ]);
+        
+        User::create([
+            'nip' => '197107122008122001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Purbandini, S.Si., M.Kom.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'purbandini@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '199203222019032018',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Nania Nuzulita, S.Kom., M.Kom.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'nania.nuzulita@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '198706252012122002',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Army Justitia, S.Kom, M.Kom.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'army-j@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+    
+        User::create([
+            'nip' => '196609281991021001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Drs. Eto Wuryanto, DEA.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'eto-w@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
 
         kriteria_penilaian::create([
             'nama_kriteria_penilaians' => 'Kriteria 1',
@@ -708,8 +752,8 @@ class DatabaseSeeder extends Seeder
             'kodeRPS' => 'RPS001',
             'tahunAjaran' => 2023,
             'semester' => 3,
-            'diperiksa_oleh' => '197102111997021001',
             'disiapkan_oleh' => '198206062007101001',
+            'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '',
             'dibuat_oleh' => '198206062007101001',
             'versi' => 1,
@@ -717,6 +761,115 @@ class DatabaseSeeder extends Seeder
             'dosenPengampu' => '["198206062007101001","198002172005012001"]',
             'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (30%), SoftSkill (10%)',
         ]);
+
+        //FPB Teori
+        RPS::create([
+            'id_rps' => 'SIA2042103',
+            'nip' => '198410272010122005',
+            'kodeMK' => 'SIA204',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '198410272010122005',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '198410272010122005',
+            'versi' => 1,
+            'penanggungJawab' => '198410272010122005',
+            'dosenPengampu' => '["198410272010122005","198002172005012001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), Quiz (10%), UTS (30%), UAS (30%), SoftSkill (5%)',
+        ]);
+
+        //Basis Data Praktikum
+        RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);
+
+        //Basis Data Teori
+        RPS::create([
+            'id_rps' => 'SID2012103',
+            'nip' => '198706252012122002',
+            'kodeMK' => 'SID201',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '198706252012122002',
+            'versi' => 1,
+            'penanggungJawab' => '198706252012122002',
+            'dosenPengampu' => '["198706252012122002","197101042008121001"]',
+            'detail_penilaian' => '55% Tugas + 20% UTS +20% UAS + 5% Softskill',
+        ]);
+
+        //Matematika Diskrit
+        RPS::create([
+            'id_rps' => 'MAL2042103',
+            'nip' => '197102111997021001',
+            'kodeMK' => 'MAL204',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197102111997021001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '197102111997021001',
+            'versi' => 1,
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (20%), Quiz (20%), UTS (25%), UAS (30%), SoftSkill(5%)',
+        ]);
+
+         //PBO Praktikum
+         RPS::create([
+            'id_rps' => 'SIR2032103',
+            'nip' => '196609281991021001',
+            'kodeMK' => 'SIR203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '196609281991021001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '196609281991021001',
+            'versi' => 1,
+            'penanggungJawab' => '196609281991021001',
+            'dosenPengampu' => '["196609281991021001"]',
+            'detail_penilaian' => 'NA = UAS 20%, UTS 20%, CML (Diskusi dan presentasi) 60%',
+        ]);
+
+         //PBO Teori
+         RPS::create([
+            'id_rps' => 'SIR2012103',
+            'nip' => '196609281991021001',
+            'kodeMK' => 'SIR201',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '196609281991021001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '',
+            'dibuat_oleh' => '196609281991021001',
+            'versi' => 1,
+            'penanggungJawab' => '196609281991021001',
+            'dosenPengampu' => '["196609281991021001"]',
+            'detail_penilaian' => 'NA = UAS (35%), UTS (30%), Tugas (20%), Quiz (15%)',
+        ]);
+
 
         Minggu_RPS::create([
             'id_rps' => 'SIA2052303',
@@ -831,16 +984,6 @@ class DatabaseSeeder extends Seeder
             'nip' => '197206021998022001'
         ]);
 
-        User::create([
-            'nip' => '196609281991021001',
-            'jabatanDosen' => 'Dosen',
-            'namaProdi' => 'S1 Sistem Informasi',
-            'namaDosen' => 'Drs. Eto Wuryanto, DEA.',
-            'password' => bcrypt('coba1234'), //password coba1234
-            'email' => 'eto-w@fst.unair.ac.id',
-            'role' => true,
-            'status' => "Aktif Mengajar"
-        ]);
 
         //Statistika Deskriptif
         RPS::create([
