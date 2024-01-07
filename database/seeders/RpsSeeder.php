@@ -202,13 +202,7 @@ class RpsSeeder extends Seeder
             'dibuat_oleh' => '197812172005012001',
             'penanggungJawab' => '197812172005012001',
             'dosenPengampu' => '["197812172005012001", "198105082005012001"]',
-            'detail_penilaian' => '<p>Penilaian yang diberikan berdasarkan kriteria berikut: </p><p> 1. Nilai Akhir diperoleh melalui rumus: </p> <p>Tugas (20%), UTS (25%), UAS (30%), Kuis (20%), SoftSkill (5%)
-                Tugas pada minggu ke 11-13 berkaitan dengan analisis, pemodelan, dan perbaikan model proses bisnis di dalam sebuah enterprise untuk suatu kasus tertentu.
-                Mahasiswa mengerjakan tugas tersebut secara berkelompok. Setiap kelompok mengerjakan tugas dengan studi kasus yang berbeda-beda. Perbedaan studi kasus
-                ditentukan dari lingkup proses bisnis yang dikerjakan. Setiap progress dari tugas tersebut dipresentasikan pada pertemuan yang telah ditentukan, yang hasilnya
-                digunakan sebagai dasar untuk menentukan nilai tugas sebesar 10%. Nilai Kuis 2 dengan bobot 10% diperoleh berdasarkan laporan akhir dari tugas di minggu
-                11-13. Sedangkan nilai UAS dengan bobot 30% diperoleh berdasarkan presentasi dan laporan akhir yang komprehensif, terkait tugas pada minggu 11-13.
-                Sehingga bobot nilai yang diperoleh dari pembelajaran partisipatif dan kolaboratif melalui studi kasus adalah 50%.</p>',
+            'detail_penilaian' => '<p>&nbsp;</p><p><strong>Penilaian yang diberikan berdasarkan kriteria berikut:</strong></p><p>1. Nilai Akhir diperoleh melalui rumus:</p><p>Tugas (20%), UTS (25%), UAS (30%), Kuis (20%), SoftSkill (5%)</p><p>Tugas pada minggu ke 11-13 berkaitan dengan analisis, pemodelan, dan perbaikan model proses bisnis di dalam sebuah enterprise untuk suatu kasus tertentu. Mahasiswa mengerjakan tugas tersebut secara berkelompok. Setiap kelompok mengerjakan tugas dengan studi kasus yang berbeda-beda. Perbedaan studi kasus ditentukan dari lingkup proses bisnis yang dikerjakan. Setiap progress dari tugas tersebut dipresentasikan pada pertemuan yang telah ditentukan, yang hasilnya digunakan sebagai dasar untuk menentukan nilai tugas sebesar 10%. Nilai Kuis 2 dengan bobot 10% diperoleh berdasarkan laporan akhir dari tugas di minggu 11-13. Sedangkan nilai UAS dengan bobot 30% diperoleh berdasarkan presentasi dan laporan akhir yang komprehensif, terkait tugas pada minggu 11-13. Sehingga bobot nilai yang diperoleh dari pembelajaran partisipatif dan kolaboratif melalui studi kasus adalah 50%.</p><p>2. Pengelompokan nilai adalah sebagai berikut:</p><figure class="table"><table><tbody><tr><td>Nilai</td><td>Point</td><td>Rentang Skor</td></tr><tr><td>4</td><td>A</td><td>75 - 100</td></tr><tr><td>3.5</td><td>AB</td><td>70 - 74,99</td></tr><tr><td>3</td><td>B</td><td>65 - 69,99</td></tr><tr><td>2.5</td><td>BC</td><td>60 - 64,99</td></tr><tr><td>2</td><td>C</td><td>55 - 59,99</td></tr><tr><td>1</td><td>D</td><td>40 - 54,99</td></tr><tr><td>0</td><td>E</td><td>0 - 39,99</td></tr></tbody></table></figure><p>Catatan:</p><ul><li>Pada perkuliahan minggu ke 11-13, sesi ceramah hanya dilakukan untuk menyampaikan agenda perkuliahan dan mereview materi sebelumnya sekitar 10 menit. Kemudian dilakukan presentasi dan diskusi 140 menit untuk membahas hasil dari tugas yang telah diberikan sebelumnya. Studi kasus dilakukan sebagai tugas terstruktur dan dikerjakan oleh</li></ul>',
         ]);
         //APS Prak
         RPS::create([
@@ -222,11 +216,11 @@ class RpsSeeder extends Seeder
             'dibuat_oleh' => '199203222019032018',
             'penanggungJawab' => '199203222019032018',
             'dosenPengampu' => '["199203222019032018", "198002172005012001"]',
-            'detail_penilaian' => '<p>Komponen penilaian: </p><p> NA = Tugas (25%), UTS (30%), UAS (35%), Softskill (10%)</p>',
+            'detail_penilaian' => '<p>Komponen Penilaian:</p><p>NA = Tugas (30%), UTS (30%), UAS (30%), SoftSkill (10%)</p><p>Keterangan:</p><p>Keseluruhan tugas yang diberi dalam mata kuliah ini diadopsi dari bentuk sederhana sistem informasi yang nyata terjadi dan digunakan oleh masyarakat</p>
+',
         ]);
-
-         //FPB Teori
-         RPS::create([
+        //FPB Teori
+        RPS::create([
             'id_rps' => 'SIA2042103',
             'nip' => '198410272010122005',
             'kodeMK' => 'SIA204',
@@ -297,8 +291,8 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = Tugas (20%), Quiz (20%), UTS (25%), UAS (30%), SoftSkill(5%)',
         ]);
 
-         //PBO Praktikum
-         RPS::create([
+        //PBO Praktikum
+        RPS::create([
             'id_rps' => 'SIR2032103',
             'nip' => '196609281991021001',
             'kodeMK' => 'SIR203',
@@ -315,8 +309,8 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = UAS 20%, UTS 20%, CML (Diskusi dan presentasi) 60%',
         ]);
 
-         //PBO Teori
-         RPS::create([
+        //PBO Teori
+        RPS::create([
             'id_rps' => 'SIR2012103',
             'nip' => '196609281991021001',
             'kodeMK' => 'SIR201',

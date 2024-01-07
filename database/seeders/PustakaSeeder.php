@@ -94,7 +94,7 @@ class PustakaSeeder extends Seeder
             'judul' => 'Business Process Management, Practical Guidelines to Successful Implementation',
             'penerbit' => 'Elsevier'
         ]);
-        
+
         Pustaka::create([
             'nama_penulis' => 'Mike Havey',
             'tahun' => '2005',
@@ -107,14 +107,14 @@ class PustakaSeeder extends Seeder
             'tahun' => '2004',
             'judul' => 'Process Improvement in Practice',
             'penerbit' => 'Kluwer Academic Publishers'
-        ]); 
-        
+        ]);
+
         Pustaka::create([
             'nama_penulis' => 'Margaret May',
             'tahun' => '2003',
             'judul' => 'Business Process Management: Integration to Web-Enabled Environment',
             'penerbit' => 'Prentice Hall'
-        ]); 
+        ]);
 
         //Statistika Inferensi
         Pustaka::create([
@@ -122,15 +122,15 @@ class PustakaSeeder extends Seeder
             'tahun' => '1995',
             'judul' => 'Pengantar Statistika, Edisi III',
             'penerbit' => 'Gramedia, Jakarta'
-        ]); 
+        ]);
 
         Pustaka::create([
             'nama_penulis' => 'Johnson and Wichern',
             'tahun' => '2002',
             'judul' => 'Applied Multivariate Statistical Analysis',
             'penerbit' => 'Prentice Hall'
-        ]); 
-        
+        ]);
+
         Pustaka::create([
             'nama_penulis' => 'Sharma, Subash',
             'tahun' => '1996',
@@ -145,7 +145,7 @@ class PustakaSeeder extends Seeder
             'judul' => 'Applied Multivariate Statistical Analysis',
             'penerbit' => 'Prentice Hall'
         ]);
-        
+
         Pustaka::create([
             'nama_penulis' => 'Sharma, Subash',
             'tahun' => '1996',
@@ -167,21 +167,21 @@ class PustakaSeeder extends Seeder
             'judul' => 'Aljabar Linear dan Aplikasinya, Edisi 5',
             'penerbit' => 'Erlangga, Jakarta'
         ]);
-        
+
         Pustaka::create([
             'nama_penulis' => 'Anton, H., and Rorres, C.',
             'tahun' => '2000',
             'judul' => 'Aljabar Linear Elementer Versi Aplikasi, Edisi 8',
             'penerbit' => 'Erlangga, Jakarta'
         ]);
-        
+
         Pustaka::create([
             'nama_penulis' => 'Anton, H.',
             'tahun' => '1991',
             'judul' => 'Aljabar Linear Elementer, Edisi Kelima',
             'penerbit' => 'Erlangga, Jakarta'
         ]);
-        
+
         // Pustaka::create([
         //     'nama_penulis' => '',
         //     'tahun' => '',
@@ -224,5 +224,96 @@ class PustakaSeeder extends Seeder
             'judul' => 'Learning Outcome for Interprofesional Care',
             'penerbit' => ''
         ]);
+
+        //Pemograman mobile prak dan teo
+        Pustaka::create([
+            'nama_penulis' => 'Kuldii Project',
+            'tahun' => 2021,
+            'judul' => 'Flutter Indonesia',
+            'penerbit' => 'Youtube'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Raharjo, Budi',
+            'tahun' => 2019,
+            'judul' => 'Pemrograman Android Dengan Flutter',
+            'penerbit' => 'Informatika'
+        ],);
+
+        //Pemograman Web
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://devdocs.io/html/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://devdocs.io/css/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://devdocs.io/javascript/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://www.php.net/docs.php',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://www.yiiframework.com/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://laravel.com/docs/9.x/installation',
+            'penerbit' => ''
+        ],);
+        //Sistem Enterprise
+        Pustaka::create([
+            'nama_penulis' => 'Ellen F Monk, Bret Wagner',
+            'tahun' => 2012,
+            'judul' => 'Concepts in Enterprise Resource Planning',
+            'penerbit' => 'Thompson Course Technology, USA'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'O’Leary, D.E',
+            'tahun' => 2000,
+            'judul' => 'Enterprise Resource Planning Systems: Systems, Life Cycle, Electronic Commerce and Risk',
+            'penerbit' => 'Cambridge University Press'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Dhewanto, Wawan dan Falahah',
+            'tahun' => 2007,
+            'judul' => 'Enterprise Resource Planning : Menyelaraskan Teknologi Informasi dengan Strategi Bisnis',
+            'penerbit' => 'Penerbit Informatika, Bandung'
+        ],);
+
+        //APS Prak
+        Pustaka::create([
+            'nama_penulis' => 'K. E. Kendall, J. E Kendall',
+            'tahun' => 2019,
+            'judul' => 'System Analysis and Design Global ED',
+            'penerbit' => 'Pearson'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Scott Tilley',
+            'tahun' => 2019,
+            'judul' => 'Systems Analysis and Design, Cencage',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Phillip A. Laplante',
+            'tahun' => 2018,
+            'judul' => 'Requirements Engineering for Software and Systems 3rd Ed',
+            'penerbit' => 'CRC Press'
+        ],);
     }
 }
