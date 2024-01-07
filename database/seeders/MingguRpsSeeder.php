@@ -119,7 +119,7 @@ class MingguRpsSeeder extends Seeder
             'luring' => true,
             'penugasan' => '',
             'waktuPembelajaran' => "2x50'",
-            'pengalaman_belajar' => 'Dapat melakukan intalasi R dan R studio dan melakukan operasi dasar di R',
+            'pengalaman_belajar' => '-',
             'bahan_kajian' => 'Matriks 7. Operasi Matriks 8. Kesamaan 2 Matriks',
         ]);
 

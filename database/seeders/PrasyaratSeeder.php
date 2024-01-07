@@ -31,5 +31,17 @@ class PrasyaratSeeder extends Seeder
             'kodeMK' => 'SII404',
             'mat_kodeMK' => 'SII323',
         ],);
+
+        //FPB Praktikum
+        Prasyarat::create([
+            'kodeMK' => 'SIA205',
+            'mat_kodeMK' => 'SII103',
+        ]);
+
+        //Statistika Inferensi
+        Prasyarat::create([
+            'kodeMK' => 'MAS234',
+            'mat_kodeMK' => 'MAS118',
+        ]);
     }
 }

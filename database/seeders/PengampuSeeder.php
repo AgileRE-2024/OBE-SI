@@ -45,7 +45,7 @@ class PengampuSeeder extends Seeder
         Pengampu::create([
             'id_rps' => 'MAS1182102',
             'kodeMK' => 'MAS118',
-            'nip' => '197102111997021001'
+            'nip' => '196609281991021001'
         ]);
 
         Pengampu::create([
@@ -85,6 +85,44 @@ class PengampuSeeder extends Seeder
             'id_rps' => 'SII4042107',
             'kodeMK' => 'SII404',
             'nip' => '198105082005012001'
+        ]);
+
+        //Pengantar Kolaborasi Keilmuan
+        Pengampu::create([
+            'id_rps' => 'MNM1072102',
+            'kodeMK' => 'MNM107',
+            'nip' => '197606162014092006',
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MNM1072102',
+            'kodeMK' => 'MNM107',
+            'nip' => '197502222009122001',
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MNM1072102',
+            'kodeMK' => 'MNM107',
+            'nip' => '196605041996032001',
+        ]);
+        
+        Pengampu::create([
+            'id_rps' => 'MNM1072102',
+            'kodeMK' => 'MNM107',
+            'nip' => '196908152000032005',
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'MNM1072102',
+            'kodeMK' => 'MNM107',
+            'nip' => '198012242005012002',
+        ]);
+
+        //Komunikasi dan Pengembangan Diri
+        Pengampu::create([
+            'id_rps' => 'MNM1062102',
+            'kodeMK' => 'MNM106',
+            'nip' => '196902031994031001',
         ]);
     }
 }

@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
             'nip' => '197206021998022001',
             'jabatanDosen' => 'Dosen',
             'namaProdi' => 'S1 Sistem Informasi',
-            'namaDosen' => 'Dr. Nur Chamidah, S.Si., M.Si.',
+            'namaDosen' => 'Dr. Nur Chamidah, S.Si., M.Si.', //sebenernya bukan dosen SI
             'password' => bcrypt('coba1234'), //password coba1234
             'email' => 'nur-c@fst.unair.ac.id',
             'role' => 0,
@@ -189,5 +189,67 @@ class UserSeeder extends Seeder
             'role' => 1,
             'status' => "Aktif Bekerja"
         ]);
+        User::create([
+            'nip' => '197606162014092006',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Hanik Endang Nihayati, S.Kep.Ns., M.Kep.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'hanik-e-n@fkp.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '197502222009122001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Prihartini Widiyanti, drg, M.Kes.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'pwidiyanti@fst.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '196902031994031001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Puji Karyanto, S.S., M.Hum.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'puji-k@fib.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '196605041996032001',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Gadis Meinar Sari, dr., M.Kes.',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'gadis-m-s@fk.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '196908152000032005',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Dr. Afif Nurul Hidayati, dr., Sp.KK',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'afif_nurulhidayati@fk.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        User::create([
+            'nip' => '198012242005012002',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Inge Dhamanti,SKM.,M.Kes.,M.PH.,Ph.D',
+            'password' => bcrypt('coba1234'), //password coba123
+            'email' => 'inge-d@fkm.unair.ac.id',
+            'role' => 1,
+            'status' => "Aktif Bekerja"
+        ]);
+        
+        
     }
 }
