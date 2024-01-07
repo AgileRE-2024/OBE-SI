@@ -43,5 +43,39 @@ class PrasyaratSeeder extends Seeder
             'kodeMK' => 'MAS234',
             'mat_kodeMK' => 'MAS118',
         ]);
+
+        //Pemograman mobile prak
+        Prasyarat::create([
+            'kodeMK' => 'SIS305',
+            'mat_kodeMK' => 'SIR201',
+        ]);
+
+        //Pemograman mobile teo
+        Prasyarat::create([
+            'kodeMK' => 'SIS304',
+            'mat_kodeMK' => 'SIR201',
+        ]);
+
+        //Pemograman web prak
+        Prasyarat::create([
+            'kodeMK' => 'SIS205',
+            'mat_kodeMK' => 'MAT101',
+        ]);
+
+        //Pemograman teo teo
+        Prasyarat::create([
+            'kodeMK' => 'SIS204',
+            'mat_kodeMK' => 'MAT101',
+        ]);
+        //APS Prak
+        Prasyarat::create([
+            'kodeMK' => 'SII314',
+            'mat_kodeMK' => 'MAT101',
+        ]);
+        //Sistem Enterprise
+        Prasyarat::create([
+            'kodeMK' => 'SIS202',
+            'mat_kodeMK' => 'SIA204',
+        ]);
     }
 }
