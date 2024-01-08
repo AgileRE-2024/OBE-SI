@@ -129,23 +129,112 @@ class MataKuliahSeeder extends Seeder
             ['SIJ201', 'Sistem Operasi', 2, 3, 1, 1, null, null, "S1 Sistem Informasi"],
             ['SIJ203', 'Sistem Operasi (Praktikum)', 1, 3, 2, 1, null, null, "S1 Sistem Informasi"],
             ['MAL204', 'Matematika Diskrit', 2, 3, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['SII301', 'Analisis dan Perancangan Sistem', 2, 4, 1, 1, 'MAT101', null, "S1 Sistem Informasi"],
+            ['SII301', 'Analisis dan Perancangan Sistem', 2, 4, 1, 1, 'MAT101', null, "Mata Kuliah ini menjelaskan tentang:
+
+            1)  Pengumpulan data untuk identifikasi kebutuhan bisnis
+            2)  Strukturisasi dan validasi kebutuhan bisnis
+            3)  Penyusunan kebutuhan solusi TI berdasarkan kebutuhan bisnis
+            4)  Penyelarasan kebutuhan TI berdasarkan kebutuhan bisnis
+            5)  Identifikasi spesifikasi komponen sistem
+            6)  Metode desain sistem
+            7)  Desain proses
+            8)  Desain database
+            9)  Desain berorientasi objek
+            10) Pembangunan prototype
+            11) Manajemen keberlanjutan perencanaan TI dan proyek pembangunan desain","S1 Sistem Informasi"],
             ['SII314', 'Analisis dan Perancangan Sistem (Praktikum)', 1, 4, 2, 1, 'MAT101', "<p>Mata kuliah ini membahas tentang:</p><ol><li>Definisi dan tahapan analisis sistem</li><li>Data Flow Diagram (DFD)/Diagram Alir Data (DAD)</li><li>BPMN</li><li>Use Case</li><li>Class Diagram</li><li>Sequence Diagram</li><li>ERD</li><li>Perancangan Antar Muka</li></ol>", "S1 Sistem Informasi"],
             ['SIC201', 'Pembelajaran Mesin', 2, 4, 1, 1, 'MAL103', 'Mata Kuliah MAS234', "S1 Sistem Informasi"],
             ['SIC202', 'Pembelajaran Mesin (praktikum)', 1, 4, 2, 1, 'MAL103', 'Mata Kuliah MAS234', "S1 Sistem Informasi"],
             ['SIJ202', 'Jaringan Komputer', 3, 4, 1, 1, 'SIJ201', null, "S1 Sistem Informasi"],
-            ['SIJ204', 'Jaringan Komputer(Praktikum)', 1, 4, 2, 1, 'SIJ201', null, "S1 Sistem Informasi"],
+            ['SIJ204', 'Jaringan Komputer(Praktikum)', 1, 4, 2, 1, 'SIJ201', null, "Materi yang dibahas dalam praktikum ini adalah:
+
+            1. Alat dan perangkat jaringan komputer (dasar jaringan komputer)
+            2. Perangkat lunak praktikum jaringan komputer (Packet Tracert/ GNS3)
+            3. Subnetting
+            4. Routing
+            5. DHCP
+            6. Samba Server
+            7. Web Server
+            8. FTP Server
+            9. Domain Name System
+            10. Monitoring ","S1 Sistem Informasi"],
             ['SIS202', 'Sistem Enterprise', 2, 4, 1, 1, 'SIA204', "<p>Mata kuliah disampaikan melalui ceramah, diskusi, dan pemberian tugas, membahas tentang: Software Enterprise Resource Planning (ERP); Modul Sistem Enterprise (manufacturing, supply chain management/SCM, finansial, proyek, human resource management, customer relationship management/CRM; Mengelola Informasi dalam Enterprise (Transaction processing systems, decision support system, executive information); Enterprise Modeling dan Business Process Re-engineering.</p>", "S1 Sistem Informasi"],
             ['MNM203', 'Kepemimpinan dan Manajemen Organisasi', 3, 4, 1, 1, null, null, "S1 Sistem Informasi"],
             ['SIS204', 'Pemrograman Web', 2, 4, 1, 1, 'MAT101', "<p>Materi yang dibahas dalam mata kuliah ini adalah:<ol><li>Konsep pemrograman web</li><li>Dasar HTML</li><li>Frontend Programming (CSS, Javascript)</li><li>Dasar-dasar PHP</li><li>OOP PHP</li><li>Backend Programming (Framework PHP)</li></ol></p>", "S1 Sistem Informasi"],
             ['SIS205', 'Pemrograman Web (Praktikum)', 1, 4, 2, 1, 'MAT101', "<p>Materi yang dibahas dalam mata kuliah ini adalah:<ol><li>Konsep pemrograman web</li><li>Dasar HTML</li><li>Frontend Programming (CSS, Javascript)</li><li>Dasar-dasar PHP</li><li>OOP PHP</li><li>Backend Programming (Framework PHP)</li></ol></p>", "S1 Sistem Informasi"],
             ['SIS304', 'Pemrograman Mobile', 2, 4, 1, 1, 'SIR201', "<p>Materi yang dibahas dalam mata kuliah ini adalah: <ol><li>Pengenalan Flutter</li><li>Dasar pemrograman Dart</li><li>Struktur Flutter</li><li>Mengembangkan UI dengan Flutter</li><li>Stateless dan Stateful Widget</li><li>Akses Database</li></ol></p>", "S1 Sistem Informasi"],
             ['SIS305', 'Pemrograman Mobile (Praktikum)', 2, 4, 2, 1, 'SIR201', "<p>Materi yang dibahas dalam mata kuliah ini adalah: <ol><li>Pengenalan Flutter</li><li>Dasar pemrograman Dart</li><li>Struktur Flutter</li><li>Mengembangkan UI dengan Flutter</li><li>Stateless dan Stateful Widget</li><li>Akses Database</li></ol></p>", "S1 Sistem Informasi"],
-            ['SII213', 'Inovasi Sistem Informasi dan Teknologi', 2, 5, 1, 1, 'SIS202', null, "S1 Sistem Informasi"],
+            ['SII213', 'Inovasi Sistem Informasi dan Teknologi', 2, 5, 1, 1, 'SIS202', null, "Mata kuliah ini membahas tentang:
+                1. Pengenalan pada inovasi
+                2. Disruptive innovation
+                3. Ekplorasi terhadap Inovasi Sistem Informasi dan Teknologi ( mengeksporasi teknologi seperti Digital Signature, Augmented
+                Reality, Wearable Computing, RFID, Big data, data analytic dll. Selain itu juga belajar dari studi kasus di dunia tentang
+                bagaimana perusahaan bisa mendobrak pasar dengan pemanfaatan teknologi)
+                4. Memformulasikan Inovasi yang terkait dengan sistem informasi.", "S1 Sistem Informasi"],
             ['BAE112', 'Bahasa Inggris II', 2, 5, 1, 2, 'BAE111', null, "S1 Sistem Informasi"],
-            ['SIS309', 'Keamanan Sistem Informasi', 3, 5, 1, 0, 'SIJ202', null, "S1 Sistem Informasi"],
-            ['MNW401', 'Kewirausahaan dan Bisnis Sistem Informasi', 2, 5, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['SII208', 'Desain Interaksi', 2, 5, 1, 1, 'SII301', null, "S1 Sistem Informasi"],
+            ['SIS309', 'Keamanan Sistem Informasi', 3, 5, 1, 0, 'SIJ202', null, "Mata kuliah ini membahas Cybersecurity Essentials (CE) dan CyberOps Associate, yang meliputi materi:
+
+                1. CE Cybersecurity: A World of Wizardry, Criminals, and Heroes
+                2. CE The Cybersecurity Sorcery Cube
+                3. CE Cybersecurity Threats, Vulnerabilities and Attacks
+                4. CE The Art of Protecting Secrets
+                5. CE The Art of Ensuring Integrity
+                6. CE The Realm of Five Nines
+                7. CE Fortifying the Kingdom
+                8. CE Joining the Order of Cyber Hero's
+                9. COA The Danger
+                10. COA Fighters in the War Against Cybercrime
+                11. COA The Windows Operating System
+                12. COA Linux Overview
+                13. COA Network Protocols
+                14. COA Ethernet and Internet Protocol (IP)
+                15. COA Principles of Network Security
+                16. COA Address Resolution Protocol
+                17. COA The Transport Layer
+                18. COA Network Services
+                19. COA Network Communication Devices
+                20. COA Network Security Infrastructure
+                21. COA Attackers and Their Tools
+                22. COA Common Threats and Attacks
+                23. COA Observing Network Operation
+                24. COA Attacking the Foundation
+                25. COA Attacking What We Do
+                26. COA Understanding Defense
+                27. COA Access Control
+                28. COA Threat Intelligence
+                29. COA Cryptography
+                30. COA Endpoint Protection
+                31. COA Endpoint Vulnerability Assessment
+                
+                32. COA Technologies and Protocols
+                33. COA Network Security Data
+                34. COA Evaluating Alerts
+                35. COA Working with Network Security Data
+                36. COA Digital Forensics and Incident Analysis and Response", "S1 Sistem Informasi"],
+            ['MNW401', 'Kewirausahaan dan Bisnis Sistem Informasi', 2, 5, 1, 1, null, "Mata kuliah ini membahas tentang:
+
+                a. Menjadi Wirausaha
+                b. Berpikir Perubahan dan Kreatif
+                c. Berorientasi pada Tindakan
+                d. Pengambilan Resiko dan Kepemimpinan
+                e. Etika Bisnis
+                f. Faktor “X”
+                g. Mencari Gagasan Usaha
+                h. Pemasaran
+                i. Manajemen Keuangan dan Pembiayaan Usaha
+                j. Memulai Sebuah Usaha Baru
+                k. Perencanaan Bisnis dan Contoh Rencana Bisnis", "S1 Sistem Informasi"],
+            ['SII208', 'Desain Interaksi', 2, 5, 1, 1, 'SII301', null, "Mata kuliah ini membahas tentang:
+            a. Pengantar desain interaksi
+            b. Konsep interaksi
+            c. Aspek Cognitive
+            d. Interaksi Sosial
+            e. Interaksi Emosional
+            f. Sistem Interaktif
+            g. Data Gathering, analysis, interpretation, and presentation
+            h. Analisa kebutuhan
+            i. Designing, prototyping, and construction
+            j. Evaluasi", "S1 Sistem Informasi"],
             ['SII209', 'Desain Interaksi (Praktikum)', 1, 5, 2, 1, 'SII301', null, "S1 Sistem Informasi"],
             ['SII318', 'Pembangunan Perangkat Lunak', 2, 5, 1, 1, 'SII301', null, "S1 Sistem Informasi"],
             ['SII319', 'Pembangunan Perangkat Lunak (Praktikum)', 1, 5, 2, 1, 'SII301', null, "S1 Sistem Informasi"],
