@@ -2176,7 +2176,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Hakikat Manusia Menurut Islam',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2193,7 +2193,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Hukum, HAM dan Demokrasi dalam Islam',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2210,7 +2210,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Hukum Islam dan Kontribusi Umat Islam Indonesia',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2227,7 +2227,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Etika, Moral dan Akhlak',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2244,7 +2244,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'IIPTEK dalam Islam,',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2261,7 +2261,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Masyarakat Madani',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2278,7 +2278,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Kerukunan Antar Umat Beragama',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2295,7 +2295,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Ekonomi Islam dan Kesejahteraan Umat',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -2312,7 +2312,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50’",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Kebudayaan dan Seni dalam Islam',
-        ]); 
+        ]);
 
         Minggu_RPS::create([
             'id_rps' => 'AGI1012101',
@@ -3022,7 +3022,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Recursive Function',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'MAT1022102',
             'kodeMingguRPS' => 'MAT10221028',
@@ -3618,6 +3618,409 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1 x 3 x 50",
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Temperatur dan Termodinamika',
+        ]);
+        //Sistem Enterprise
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221041',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0211',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Pengenalan Mata Kuliah, Aturan dan Kontrak Perkuliahan; 2. Review Fungsi Bisnis dan Bisnis Proses; 3. Pengenalan Konsep Sistem Informasi Enterprise',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221042',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0212',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Evolusi Sistem Informasi; 2. Perkembangan software ERP; 3. Keuntungan dari ERP',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221043',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0213',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Sistem Informasi Marketing; 2. Proses Penjualan',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221044',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0214',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Aktivitas Dasar CRM; 2. Software CRM; 3. Keuntungan CRM',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221045',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0215',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Pengantar Proses Produksi; 2. Proses Perencanaan Produksi',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221046',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0216',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Manajemen Rantai Pasok',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221047',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0217',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Aktivitas keuangan; 2. Analisis Keuntungan Produk',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221048',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0218',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Proses pengelolaan sumber daya manusia; 2. Pengelolaan sumber daya manusia dengan ERP',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS20221049',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0219',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Pemodelan Proses; 2. Diagram-diagram pemodelan; 3. Menganalisis dan membangun model proses bisnis berdasarkan kasus tertentu',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS202210410',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0220',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Business Process Improvement; 2. Business Process Redesign; 3. Business Process Re-Engeneering; 4. Menganalisis dan memperbaiki model proses bisnis berdasarkan kasus tertentu',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS2022104',
+            'kodeMingguRPS' => 'SIS202210411',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0221',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Business intelligence; 2. Business analytics',
+        ]);
+
+        //APS Prak
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421041',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0222',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '✔ Analisis sistem: mengidentifikasi masalah yang dihadapi bisnis / organisasi, analisis situasi (lingkungan), dan mendefinisikan kebutuhan sistem yang akan dikembangkan sebagai solusi. ✔ Identify, understand, analyze, report ✔ System analyst, business analyst',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421042',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0222',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '✔ Analisis sistem: mengidentifikasi masalah yang dihadapi bisnis / organisasi, analisis situasi (lingkungan), dan mendefinisikan kebutuhan sistem yang akan dikembangkan sebagai solusi. ✔ Identify, understand, analyze, report ✔ System analyst, business analyst',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421043',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0223',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '✔ Case Tools: Microsoft Visio dan Power Designer ✔ Data Flow Diagram (DFD): Komponen, Diagram, Diagram Konteks',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421044',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0223',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '✔ Case Tools: Microsoft Visio dan Power Designer ✔ Data Flow Diagram (DFD): Komponen, Diagram, Diagram Konteks, DFD Level 1',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421045',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0223',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '✔ Case Tools: Microsoft Visio dan Power Designer ✔ Data Flow Diagram (DFD): Komponen, Diagram, Diagram Konteks, DFD Level 1, DFD Level 2, dan seterusnya',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421046',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0224',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• Mengenalkan BPMN sebagai tool analisis proses bisnis. • Mahasiswa dapat menggunakan perangkat lunak CASE, seperti Microsoft Visio, Enterprise Architecture, Visual Paradigm untuk menggambar BPMN.',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421047',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0225',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• Mengenalkan use case sebagai tool analisis kebutuhan sistem. • Mahasiswa dapat menggunakan perangkat lunak CASE, seperti Microsoft Visio, Enterprise Architecture, Visual Paradigm, StarUML, Rational Rose untuk menggambar use case.',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421048',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0225',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• Mengenalkan use case sebagai tool analisis kebutuhan sistem. • Mahasiswa dapat menggunakan perangkat lunak CASE, seperti Microsoft Visio, Enterprise Architecture, Visual Paradigm, StarUML, Rational Rose untuk menggambar use case.',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII31421049',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0225',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• Mengenalkan use case sebagai tool analisis kebutuhan sistem. • Mahasiswa dapat menggunakan perangkat lunak CASE, seperti Microsoft Visio, Enterprise Architecture, Visual Paradigm, StarUML, Rational Rose untuk menggambar use case.',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII314210410',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0226',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• Mengenalkan use case dan diagram sequence analisis sebagai tool analisis kebutuhan sistem. • Mahasiswa dapat menggunakan perangkat lunak CASE, seperti Microsoft Visio, Enterprise Architecture, Visual Paradigm, StarUML, Rational Rose untuk menggambar use case.',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII314210411',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0227',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• Mengenalkan conceptual data model sebagai tool desain data sistem. • Mahasiswa dapat menggunakan perangkat lunak CASE, seperti Microsoft Visio, Enterprise Architecture, Visual Paradigm, StarUML, Rational Rose untuk merancang conceptual data model.',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII314210412',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0227',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• Mengenalkan conceptual data model sebagai tool desain data sistem. • Mahasiswa dapat menggunakan perangkat lunak CASE, seperti Microsoft Visio, Enterprise Architecture, Visual Paradigm, StarUML, Rational Rose untuk merancang conceptual data model.',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII314210413',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0228',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '• User Interface (UI) • User Experience (UX) • Hicks Law • Fitts Law • Miller’s Law • Jakob’s Law • Usability dan Kriterianya',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SII3142104',
+            'kodeMingguRPS' => 'SII314210414',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0229',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50’",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '-',
         ]);
     }
 }

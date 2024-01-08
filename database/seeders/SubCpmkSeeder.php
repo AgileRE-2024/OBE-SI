@@ -83,6 +83,16 @@ class SubCpmkSeeder extends Seeder
             ['kodeSubCPMK' => 'Sub-CPMK0219', 'deskripsiSubCPMK' => 'Mahasiswa mampu melakukan analisis dan membangun model proses dalam enterprise', 'kodeCPMK' => 'CPMK014'],
             ['kodeSubCPMK' => 'Sub-CPMK0220', 'deskripsiSubCPMK' => 'Mahasiswa mampu melakukan analisis dan perbaikan terhadap model proses bisnis', 'kodeCPMK' => 'CPMK014'],
             ['kodeSubCPMK' => 'Sub-CPMK0221', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan tentang pengelolaan informasi pada sistem enterprise', 'kodeCPMK' => 'CPMK014'],
+
+            //APS Prak
+            ['kodeSubCPMK' => 'Sub-CPMK0222', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan definisi analisis sistem dan menjelaskan tahapan analisis sistem.', 'kodeCPMK' => 'CPMK014'],
+            ['kodeSubCPMK' => 'Sub-CPMK0223', 'deskripsiSubCPMK' => 'Mahasiswa mampu melakukan analisis terhadap suatu sistem informasi', 'kodeCPMK' => 'CPMK014'],
+            ['kodeSubCPMK' => 'Sub-CPMK0224', 'deskripsiSubCPMK' => 'Mahasiswa mampu membuat pemodelan proses dengan menggunakan BPMN', 'kodeCPMK' => 'CPMK014'],
+            ['kodeSubCPMK' => 'Sub-CPMK0225', 'deskripsiSubCPMK' => 'Mahasiswa mampu membuat pemodelan proses dengan menggunakan Use Case dan Diagram Kelas', 'kodeCPMK' => 'CPMK014'],
+            ['kodeSubCPMK' => 'Sub-CPMK0226', 'deskripsiSubCPMK' => 'Mahasiswa mampu membuat pemodelan proses dengan menggunakan Diagram Sequence', 'kodeCPMK' => 'CPMK014'],
+            ['kodeSubCPMK' => 'Sub-CPMK0227', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan konsep dan pemodelan data pada suatu Sistem Informasi', 'kodeCPMK' => 'CPMK014'],
+            ['kodeSubCPMK' => 'Sub-CPMK0228', 'deskripsiSubCPMK' => 'Mahasiswa dapat merancang antarmuka sistem sesuai dengan hasil analisis kebutuhan.', 'kodeCPMK' => 'CPMK014'],
+            ['kodeSubCPMK' => 'Sub-CPMK0229', 'deskripsiSubCPMK' => 'Kompilasi', 'kodeCPMK' => 'CPMK014'],
         ];
 
         foreach ($subs as $sub) {
