@@ -93,6 +93,14 @@ class SubCpmkSeeder extends Seeder
             ['kodeSubCPMK' => 'Sub-CPMK0227', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan konsep dan pemodelan data pada suatu Sistem Informasi', 'kodeCPMK' => 'CPMK014'],
             ['kodeSubCPMK' => 'Sub-CPMK0228', 'deskripsiSubCPMK' => 'Mahasiswa dapat merancang antarmuka sistem sesuai dengan hasil analisis kebutuhan.', 'kodeCPMK' => 'CPMK014'],
             ['kodeSubCPMK' => 'Sub-CPMK0229', 'deskripsiSubCPMK' => 'Kompilasi', 'kodeCPMK' => 'CPMK014'],
+
+            //047
+            // 1. RPS Bahasa Indonesia 
+            // 1. RPS Biologi Dasar
+            // 1. RPS Data dan Pustaka
+            // 1. RPS Kalkulus
+            // 1. RPS Kewarganegaraan
+            // 1. RPS Kimia Dasar
         ];
 
         foreach ($subs as $sub) {

@@ -4272,5 +4272,15 @@ class MingguRpsSeeder extends Seeder
         */
 
 
+
+        //047
+        // 1. RPS Bahasa Indonesia 
+        // 1. RPS Biologi Dasar
+        // 1. RPS Data dan Pustaka
+        // 1. RPS Kalkulus
+        // 1. RPS Kewarganegaraan
+        // 1. RPS Kimia Dasar
+
+
     }
 }

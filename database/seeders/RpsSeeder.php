@@ -731,5 +731,94 @@ class RpsSeeder extends Seeder
             'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
             'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
         ]);*/
+    //047
+    // 1. RPS Bahasa Indonesia 
+    RPS::create([
+        'id_rps' => 'BAI1012101',
+        'nip' => '197102111997021001', // pak hendra dulu
+        'kodeMK' => 'BAI101',
+        'tahunAjaran' => 2021,
+        'semester' => 1,
+        'diperiksa_oleh' => '197102111997021001',
+        'disetujui_oleh' => '196901091993031000',
+        'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+        'penanggungJawab' => '197102111997021001', // pak hendra dulu
+        'dosenPengampu' => '["111111111111111"]', // pak hendra dulu
+        'detail_penilaian' => 'NA = 20% Tugas +10% softskill + 30% UTS + 30% UAS',
+    ]);
+    // 1. RPS Biologi Dasar
+    RPS::create([
+        'id_rps' => 'BID1082101',
+        'nip' => '197102111997021001', // pak hendra dulu
+        'kodeMK' => 'BID108',
+        'tahunAjaran' => 2021,
+        'semester' => 1,
+        'diperiksa_oleh' => '197102111997021001',
+        'disetujui_oleh' => '196901091993031000',
+        'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+        'penanggungJawab' => '197102111997021001', // pak hendra dulu
+        'dosenPengampu' => '["111111111111112"]', // pak hendra dulu
+        'detail_penilaian' => 'NA = Tugas(30%)+UTS(30%)+UAS(30%)+Soft Skill(10%)',
+    ]);
+    // 1. RPS Data dan Pustaka
+    RPS::create([
+        'id_rps' => 'SIP1072101',
+        'nip' => '197102111997021001', // pak hendra dulu
+        'kodeMK' => 'SIP107',
+        'tahunAjaran' => 2021,
+        'semester' => 1,
+        'diperiksa_oleh' => '197102111997021001',
+        'disetujui_oleh' => '196901091993031000',
+        'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+        'penanggungJawab' => '197102111997021001', // pak hendra dulu
+        'dosenPengampu' => '["111111111111113"]', // pak hendra dulu
+        'detail_penilaian' => '•Ujian Tengah Semester (Pilihan Ganda) : 35%
+        •Kuis (Pilihan Ganda) : 20%
+        •Ujian Akhir Semester (Pilihan Ganda) : 35%
+        •Mini Literature Review : 10%',
+    ]);
+    // 1. RPS Kalkulus'
+    RPS::create([
+        'id_rps' => 'MAA1012101',
+        'nip' => '197102111997021001', // pak hendra dulu
+        'kodeMK' => 'MAA101',
+        'tahunAjaran' => 2021,
+        'semester' => 1,
+        'diperiksa_oleh' => '197102111997021001',
+        'disetujui_oleh' => '196901091993031000',
+        'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+        'penanggungJawab' => '197102111997021001', // pak hendra dulu
+        'dosenPengampu' => '["111111111111114"]', // pak hendra dulu
+        'detail_penilaian' => 'PAP 90% , SoftSkills 10%',
+    ]);
+    // 1. RPS Kewarganegaraan
+    RPS::create([
+        'id_rps' => 'NOP1012101',
+        'nip' => '197102111997021001', // pak hendra dulu
+        'kodeMK' => 'NOP101',
+        'tahunAjaran' => 2021,
+        'semester' => 1,
+        'diperiksa_oleh' => '197102111997021001',
+        'disetujui_oleh' => '196901091993031000',
+        'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+        'penanggungJawab' => '197102111997021001', // pak hendra dulu
+        'dosenPengampu' => '["111111111111115"]', // pak hendra dulu
+        'detail_penilaian' => '-',
+    ]);
+    // 1. RPS Kimia Dasar
+    RPS::create([
+        'id_rps' => 'KID1072101',
+        'nip' => '197102111997021001', // pak hendra dulu
+        'kodeMK' => 'KID107',
+        'tahunAjaran' => 2021,
+        'semester' => 1,
+        'diperiksa_oleh' => '197102111997021001',
+        'disetujui_oleh' => '196901091993031000',
+        'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+        'penanggungJawab' => '197102111997021001', // pak hendra dulu
+        'dosenPengampu' => '["111111111111116"]', // pak hendra dulu
+        'detail_penilaian' => 'NA = UTS(35%),UAS(35%), Tugas (20%), soft skills (10%).',
+    ]);
     }
+
 }
