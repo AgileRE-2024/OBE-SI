@@ -128,5 +128,23 @@ class PrasyaratSeeder extends Seeder
             'mat_kodeMK' => 'SIC201',
         ]);
 
+        //Keamanan Sistem Informasi
+        Prasyarat::create([
+            'kodeMK' => 'SIS309',
+            'mat_kodeMK' => 'SIJ202',
+        ]);
+
+        //ISIT
+        Prasyarat::create([
+            'kodeMK' => 'SIi213',
+            'mat_kodeMK' => 'SIS202',
+        ]);
+
+        //Jaringan Komputer (Praktikum)
+        Prasyarat::create([
+            'kodeMK' => 'SIJ204',
+            'mat_kodeMK' => 'SIJ201',
+        ]);
+
     }
 }
