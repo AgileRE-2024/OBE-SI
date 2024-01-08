@@ -348,7 +348,7 @@ class UserSeeder extends Seeder
             'nip' => '197603242002121001',
             'jabatanDosen' => 'Dosen',
             'namaProdi' => 'S1 Sistem Informasi',
-            'namaDosen' => 'Syahrur Marta Dwi Susilo, S.S.,M.A.,Ph.D.',
+            'namaDosen' => 'Syahrur Marta Dwi Susilo, S.S., M.A., Ph.D.',
             'password' => bcrypt('coba1234'), //password coba1234
             'email' => 'syahrur-m-d-s@fib.unair.ac.id',
             'role' => 0,
