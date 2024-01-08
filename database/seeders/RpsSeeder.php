@@ -592,22 +592,19 @@ class RpsSeeder extends Seeder
         ]);*/
 
         //Bahasa Inggris II
-        /*RPS::create([
-            'id_rps' => 'SID2032103',
-            'nip' => '197107122008122001',
-            'kodeMK' => 'SID203',
-            'kodeRPS' => null,
+        RPS::create([
+            'id_rps' => 'BAE1122105',
+            'nip' => '197102111997021001', // pak hendra dulu
+            'kodeMK' => 'BAE112',
             'tahunAjaran' => 2021,
-            'semester' => 3,
-            'disiapkan_oleh' => '197107122008122001',
+            'semester' => 5,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '197107122008122001',
-            'versi' => 1,
-            'penanggungJawab' => '197107122008122001',
-            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
-            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
-        ]);*/
+            'dibuat_oleh' => '197102111997021001', // pak hendra dulu
+            'penanggungJawab' => '197102111997021001', // pak hendra dulu
+            'dosenPengampu' => '["197102111997021001"]', // pak hendra dulu
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (30%), SoftSkill (10%)',
+        ]);
 
         //Manajemen Proyek Teknologi Informai
         /*RPS::create([

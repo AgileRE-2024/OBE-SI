@@ -518,7 +518,7 @@ class PustakaSeeder extends Seeder
         ],);
 
  //Desain Interaksi Prakt
-        Pustaka::create([
+        /*Pustaka::create([
             'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale,',
             'tahun' => 2004, 
             'judul' => 'Human-Coumputer Interaction,',
@@ -530,7 +530,7 @@ class PustakaSeeder extends Seeder
             'tahun' => 2010, 
             'judul' => 'Designing The User Interface,',
             'penerbit' => 'Pearson '
-        ],);
+        ],);*/
 
     }
 }

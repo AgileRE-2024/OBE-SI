@@ -4054,11 +4054,11 @@ class MingguRpsSeeder extends Seeder
             'luring' => true,
             'penugasan' => '-',
             'waktuPembelajaran' => "1 x 3 x 50",
-            'pengalaman_belajar' => 'Mahasiswa mampu menggunakan komponen antarmuka',
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menguraikan jenis-jenis kalimat dalam bahasa inggris',
             'bahan_kajian' => 'Type of Sentence',
         ]); 
 
-        /*Minggu_RPS::create([
+        Minggu_RPS::create([
             'id_rps' => 'BAE1122105',
             'kodeMingguRPS' => 'BAE11221053',
             'id_kriteria_penilaians' => '1',
@@ -4066,13 +4066,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu menuliskan penempatan besar kecilnya huruf dengan benar',
+            'bahan_kajian' => 'Capitalization',
         ]);
 
         Minggu_RPS::create([
@@ -4083,13 +4083,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu menuliskan penempatan besar kecilnya huruf dengan benar',
+            'bahan_kajian' => 'Capitalization',
         ]);
 
         Minggu_RPS::create([
@@ -4100,13 +4100,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami jenis klausa pada bahasa inggris',
+            'bahan_kajian' => 'Noun clause, time clause, place clause, manner clause, disttance and frequency clause, purpose clause, contrast clause, relative clause',
         ]);
 
         Minggu_RPS::create([
@@ -4117,13 +4117,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami jenis klausa pada bahasa inggris',
+            'bahan_kajian' => 'Noun clause, time clause, place clause, manner clause, disttance and frequency clause, purpose clause, contrast clause, relative clause',
         ]);
 
         Minggu_RPS::create([
@@ -4134,13 +4134,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami kata ganti yang digunakan pada bahasa inggris',
+            'bahan_kajian' => 'Relative pronoun as subject, relative pronoun as object, possessive relative clause',
         ]);
 
         Minggu_RPS::create([
@@ -4151,13 +4151,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami kata ganti yang digunakan pada bahasa inggris',
+            'bahan_kajian' => 'Relative pronoun as subject, relative pronoun as object, possessive relative clause',
         ]);
 
         Minggu_RPS::create([
@@ -4168,13 +4168,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampumemahami penggunaan participle phrase pada bahasa inggris',
+            'bahan_kajian' => 'Participle phrase',
         ]);
 
         Minggu_RPS::create([
@@ -4185,13 +4185,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampumemahami penggunaan participle phrase pada bahasa inggris',
+            'bahan_kajian' => 'Participle phrase',
         ]);
 
         Minggu_RPS::create([
@@ -4202,13 +4202,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami pola yang digunakan untuk menulis esai dalam bahasa inggris',
+            'bahan_kajian' => 'Pattern of essay organization',
         ]);
 
         Minggu_RPS::create([
@@ -4219,13 +4219,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami pola yang digunakan untuk menulis esai dalam bahasa inggris',
+            'bahan_kajian' => 'Pattern of essay organization',
         ]);
 
         Minggu_RPS::create([
@@ -4236,13 +4236,13 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menuliskan abstrak berdasarkan aturan dalam bahasa inggris',
+            'bahan_kajian' => 'Abstract',
         ]);
 
         Minggu_RPS::create([
@@ -4253,15 +4253,15 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menuliskan abstrak berdasarkan aturan dalam bahasa inggris',
+            'bahan_kajian' => 'Abstract',
         ]);
-        */
+        
 
 
         //Desain Interaksi Praktikum

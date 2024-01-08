@@ -248,5 +248,12 @@ class PengampuSeeder extends Seeder
             'kodeMK' => 'FID112',
             'nip' => '197102111997021001', // pak hendra dulu
         ]);
+
+        //Bahasa Inggris 2
+        Pengampu::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMK' => 'BAE112',
+            'nip' => '197102111997021001', // pak hendra dulu
+        ]);
     }
 }
