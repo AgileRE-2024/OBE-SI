@@ -248,5 +248,43 @@ class PengampuSeeder extends Seeder
             'kodeMK' => 'FID112',
             'nip' => '197102111997021001', // pak hendra dulu
         ]);
+
+        //047
+        // 1. RPS Bahasa Indonesia 
+        Pengampu::create([
+            'id_rps' => 'BAI1012101',
+            'kodeMK' => 'BAI101',
+            'nip' => '111111111111111', 
+        ]);
+        // 1. RPS Biologi Dasar
+        Pengampu::create([
+            'id_rps' => 'BID1082101',
+            'kodeMK' => 'BID108',
+            'nip' => '111111111111112', 
+        ]);
+        // 1. RPS Data dan Pustaka
+        Pengampu::create([
+            'id_rps' => 'SIP1072101',
+            'kodeMK' => 'SIP107',
+            'nip' => '111111111111113', 
+        ]);
+        // 1. RPS Kalkulus
+        Pengampu::create([
+            'id_rps' => 'MAA1012101',
+            'kodeMK' => 'MAA101',
+            'nip' => '111111111111114', 
+        ]);
+        // 1. RPS Kewarganegaraan
+        Pengampu::create([
+            'id_rps' => 'NOP1012101',
+            'kodeMK' => 'NOP101',
+            'nip' => '111111111111115', 
+        ]);
+        // 1. RPS Kimia Dasar
+        Pengampu::create([
+            'id_rps' => 'KID1072101',
+            'kodeMK' => 'KID107',
+            'nip' => '111111111111116', 
+        ]);
     }
 }

@@ -58,12 +58,38 @@ class MataKuliahSeeder extends Seeder
             4. Pancasila sebagai sistem etika,
             5. Nilai Pancasila sebagai dasar pengembangan ilmu,
             6. Pemaknaan Sila-sila Pancasila, dan contoh penerapan dalam kehidupan berbangsa dan bermasyarakat", "S1 Sistem Informasi"],
-            ['NOP101', 'Kewarganegaraan', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
-            ['KID107', 'Kimia Dasar', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['BID108', 'Biologi Dasar', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['MAA101', 'Kalkulus', 3, 1, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['BAI101', 'Bahasa Indonesia', 2, 1, 1, 2, null, null, "S1 Sistem Informasi"],
-            ['SIP107', 'Data dan Pustaka', 2, 1, 1, 1, null, null, "S1 Sistem Informasi"],
+            ['NOP101', 'Kewarganegaraan', 2, 1, 1, 2, null, "Mata Kuliah ini membahas tentang: PKn sebagai orientasi penguatan (dan pemantapan) karakter Bangsa Indonesia,
+            identitas nasional, Negara dan Konstitusi, Hubungan Negara dengan Warga Negara, Demokrasi Indonesia dan Pendidikan
+            Demokrasi di Indonesia, Negara Hukum dan HAM, Geopolitik Indonesia (Wawasan Nusantara), Geostrategi Indonesia
+            (Ketanahan Nasional), Integrasi Nasional, Bela Negara, serta Pendidikan Antikorupsi yang mampu memberikan landasan
+            aksiologis bagi perilaku mahasiswa dalam kehidupan berkeluarga, bermasyarakat, berbangsa dan bernegara.", "S1 Sistem Informasi"],
+            ['KID107', 'Kimia Dasar', 2, 1, 1, 1, null, "Pembelajaran kimia dasar ini membahas tentang :Struktur atom dan sistem periodik ; ikatan kimia : Ikatan ionik, kovalen, koordinasi
+            Ikatan hidrogen; stoikhiometri ; redoks dan termokimia ; laju reaksi kesetimbangan reaksi, Larutan : jenis dan konsentrasi ; sifat
+            
+            koligatif larutan ; teori dan pH asam - basa ; Hidrokarbon alifatis dan aromatis; Alkil dan aril halida; Alkohol dan Eter; Aldehida dan
+            Keton; Asam karboksilat serta Amina.", "S1 Sistem Informasi"],
+            ['BID108', 'Biologi Dasar', 2, 1, 1, 1, null, "Hakekat biologi, Keanekaragaman organisme, Klasifikasi organisme, Organisme dengan lingkungannya (termasuk Adaptasi pada
+            kelangsungan hidup organisme & Perilaku organisme), Evolusi, Struktur bentuk & fungsi organisme (Tumbuhan, Hewan & Manusia),
+            Regulasi & homeostasis (dalam Biologi Hewan), Keterkaitan teknologi & Prospek biologi.", "S1 Sistem Informasi"],
+            ['MAA101', 'Kalkulus', 3, 1, 1, 1, null, "Persamaan dan pertidaksamaan (polinomial derajat sampai dengan tiga, rasional, dan mutlak), fungsi (polinomial kurang dari tiga, akar rasional, trigonometri, siklometri,
+            eksponen, logaritma, tangga, implisit, dan parametrik), operasi fungsi, komposisi fungsi dan balikan fungsi. Limit, kekontinuan dan terapannya, definisi dan sifat turunan,
+            turunan fungsi (fungsi khusus, aturan rantai, dan turunan kedua) dan penggunaannya (limit bentuk tak tentu, laju, aturan L’hospital, Maksimum-minimum dan
+            mengambar grafik), Integral tak tentu (integral tak tentu sebagai anti turunan, substitusi sederhana, integral parsial, pecah rasional sederhana), Pengantar
+            persamaan differensial (definisi, jenis PD: PD terpisah, PD dapat dipisahkan, PD Homogen, PD eksak), Integral tentu dan terapannya (Teorema
+            Fundamental Kalkulus, luasan, integral tak wajar).", "S1 Sistem Informasi"],
+            ['BAI101', 'Bahasa Indonesia', 2, 1, 1, 2, null, "Matakuliah ini merupakan salah satu mata kuliah wajib yang masuk kategori mata kuliah pengembangan kepribadian (SK Dirjen Dikti
+            No 43/DIKTI/Kep./2006). Mata kuliah ini tidak semata-mata berorientasi pragmatis, tetapi juga mengemban visi politis dan ideologis
+            untuk pembentukan character building. Dalam mata kuliah ini akan dibahas (1) sejarah, kedudukan, dan fungsi bahasa Indonesia; (2)
+            penggunaan bahasa Indonesia untuk mengungkapkan pikiran, gagasan, dan sikap ilmiah ke dalam berbagai bentuk karya ilmiah yang
+            berkualitas (memenuhi syarat objektivitas, koherensi, kohesi, efektivitas, efisiensi, dan komunikatif); (3) kemahiran berbahasa
+            Indonesia untuk mengembangkan soft skills mahasiswa sebagai INTELEKTUAL MUDA yang berwawasan entrepreneurship
+            (pembuatan surat-surat bisnis, company profile, presentasi business plan, dan sebagainya); dan jati diri bangsa", "S1 Sistem Informasi"],
+            ['SIP107', 'Data dan Pustaka', 2, 1, 1, 1, null, "Mata kuliah ini bertujuan untuk mendorong mahasiswa belajar untuk memahami cara menginterpretasi dan menggunakan data dengan baik dan bertanggung jawab, sehingga
+            mahasiswa dapat menyusun argumentasi yang kuat dan koheren, serta membekali mahasiswa dengan kemampuan untuk mengevaluasi kualitas argumentasi pihak/orang lain.
+            Tidak semua orang akan menjadi ilmuwan yang harus merencanakan desain penelitian, mengumpulkan data, menganalisisnya dan menarik kesimpulan, namun literasi data
+            akan membantu mahasiswa untuk mengambil keputusan-keputusan dalam kehidupan sehari-hari yang terpandu oleh data. Selain itu, mahasiswa didorong untuk berlatih
+            mencari, membaca, mengevaluasi, dan memilah klaim atau informasi yang dimuat dalam literatur ilmiah. Dalam mata kuliah ini, mahasiswa juga diberi kesempatan untuk berlatih
+            mengorganisasi referensi ilmiah dengan bantuan aplikasi pengelola referensi.", "S1 Sistem Informasi"],
             ['SII103', 'Pengantar Sistem Informasi', 2, 1, 1, 1, null, "a. Kegunaan, teknologi, manusia dan komponen sistem informasi;
 
             b. Globalisasi dan peran sistem informasi;

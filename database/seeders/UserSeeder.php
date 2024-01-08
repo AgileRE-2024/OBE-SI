@@ -365,5 +365,73 @@ class UserSeeder extends Seeder
             'role' => 0,
             'status' => "Aktif Bekerja"
         ]);
+        //047
+        User::create([
+            'nip' => '111111111111111',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Tim Pengajar Bahasa Indonesia',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => '111111111111111@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '111111111111112',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Tim Pengajar Biologi',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => '111111111111112@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '111111111111113',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Tim Pengampu',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => '111111111111113@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '111111111111114',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Tim Dosen Kalkulus',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => '111111111111114@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '111111111111115',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Tim Dosen Kewarganegaraan',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => '111111111111115@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+
+        User::create([
+            'nip' => '111111111111116',
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Tim Dosen Kimia',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => '111111111111116@fst.unair.ac.id',
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
+        
+
     }
 }

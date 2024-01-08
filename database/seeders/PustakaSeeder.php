@@ -532,5 +532,218 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'Pearson '
         ],);
 
+
+        //047
+        // 1. RPS Bahasa Indonesia 
+        Pustaka::create([
+            'nama_penulis' => 'Anggraini, A dkk.',
+            'tahun' => 2006, 
+            'judul' => 'Mengasah Menulis Keterampilan Ilmiah di Perguruan Tinggi.',
+            'penerbit' => 'Jakarta: Graha Ilmu'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Tim MPK Bahasa Indonesia TPB Universitas Airlangga.',
+            'tahun' => 2007,
+            'judul' => 'Buku Ajar Matakuliah Pengembangan Kepribadian (MPK) Bahasa Indonesia untuk Perguruan Tinggi.',
+            'penerbit' => 'Surabaya: TPB Universitas Airlangga'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Nasuha, Yakub dkk.',
+            'tahun' => 2009,
+            'judul' => 'Bahasa Indonesia untuk Penulisan Karya Tulis Ilmiah.',
+            'penerbit' => 'Yogyakarta: Media Perkasa'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Nur Tanjung, B dan Ardial.',
+            'tahun' => 2007,
+            'judul' => 'Pedoman Penulisan Karya Ilmiah.',
+            'penerbit' => 'Jakarta: Kencana'
+        ],);
+        // 1. RPS Biologi Dasar
+        Pustaka::create([
+            'nama_penulis' => 'Campbell Neil A., Mitchell and Reece',
+            'tahun' => 2010,
+            'judul' => 'Biologi, Jilid 1, Edisi Kedelapan',
+            'penerbit' => 'Jakarta: Erlangga'
+        ],);
+        // 1. RPS Data dan Pustaka
+        Pustaka::create([
+            'nama_penulis' => 'Bailey, J.',
+            'tahun' => 2008,
+            'judul' => 'First step in qualitative data analysis: transcribing',
+            'penerbit' => 'Family Practice, 25(2), 127-131. doi: https://doi.org/10.1093/fampra/cmn003'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Bowen, M. & Bartley, A.',
+            'tahun' => 2014,
+            'judul' => 'The Basics of Data Literacy',
+            'penerbit' => 'Arlington: NSTA Press'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Davidson, C.',
+            'tahun' => 2009,
+            'judul' => 'Transcription: Imperatives for qualitative research',
+            'penerbit' => 'International Journal of Qualitative Methods, 8(2), 35-52. doi: https://doi.org/10.1177/160940690900800206'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Durbin, C.G.',
+            'tahun' => 2009,
+            'judul' => 'How to read a scientific research paper',
+            'penerbit' => 'Respiratory Care, 54(10), 1366-1371'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Field, A.',
+            'tahun' => 2016,
+            'judul' => 'An Adventure in Statistics: The Reality Enigma',
+            'penerbit' => 'London: SAGE Publications'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Fosmire, A.',
+            'tahun' => 2013,
+            'judul' => 'How to read a scientific paper',
+            'penerbit' => 'Purdue University Library. Diakses dari https://www.lib.purdue.edu/sites/default/files/libraries/engr/Tutorials/Newest%20Scientific%20Paper.pdf'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Hazra, A.',
+            'tahun' => 2017,
+            'judul' => 'Using the confidence interval confidently',
+            'penerbit' => 'Journal of thoracic disease, 9(10), 4125. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5723800/'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Leonelli, S.',
+            'tahun' => 2020,
+            'judul' => 'Scientific Research and Big Data',
+            'penerbit' => 'The Stanford Encyclopedia of Philosophy. Diakses dari https://plato.stanford.edu/entries/science-big-data/'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Morrison, R.',
+            'tahun' => 2020,
+            'judul' => 'Don’t just “Google it”: 3 ways students can get the most from searching online',
+            'penerbit' => 'The Conversation. Diakses dari https://theconversation.com/dont-just-google-it-3-ways-students-can-get-the-most-from-searching-online-116519'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Pain, E.',
+            'tahun' => 2016,
+            'judul' => 'How to (seriously) read a scientific paper',
+            'penerbit' => 'Science Magazine. Diakses di https://www.sciencemag.org/careers/2016/03/how-seriously-read-scientific-paper'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Zein, R.A.',
+            'tahun' => 2021,
+            'judul' => 'Metode Penelitian Psikologi Politik',
+            'penerbit' => 'dalam W. Yustisia, M. A. Hakim, & R. Ardi (Ed.), Psikologi politik (pp. 33-74). Jakarta: Penerbit Buku Kompas. http://repository.unair.ac.id/104471/'
+        ]);
+        
+        // 1. RPS Kalkulus
+        Pustaka::create([
+            'nama_penulis' => 'Purcell',
+            'tahun' => 2008,
+            'judul' => 'Kalkulus I Jilid I, Edisi 8',
+            'penerbit' => 'Erlangga, Jakarta. (edisi Bahasa Inggris terbaru)'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Stewart, J.',
+            'tahun' => 2001,
+            'judul' => 'Kalkulus Jilid II',
+            'penerbit' => 'Erlangga, Jakarta. (edisi Bahasa Inggris terbaru)'
+        ]);
+        
+        // 1. RPS Kewarganegaraan
+        Pustaka::create([
+            'nama_penulis' => 'Adib, Mohammad, Listiyono Santoso, dan Ajar Triharso',
+            'tahun' => 2013,
+            'judul' => 'Pendidikan Pancasila dan Kewarganegaraan: Sebuah Pengantar Membangun Karakter Bangsa',
+            'penerbit' => 'Surabaya: Airlangga University Press'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Adib, Mohammad',
+            'tahun' => 2016,
+            'judul' => 'Bangunlah Jiwanya, Bangunlah Bangsanya: Penguatan Karakter Bangsa dalam Pembelajaran Pendidikan Kewarganegaraan',
+            'penerbit' => 'Surabaya: Saga dan Direktorat Pendidikan Universitas Airalanga. (Cet. Kedua)'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Kemenristek Dikti, Ditjen Pembelajaran dan Kemahasiswaan',
+            'tahun' => 2016,
+            'judul' => 'Pendidikan Kewarganegaraan untuk Perguruan Tinggi. (Cet. I)',
+            'penerbit' => 'Dirjen Dikti'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Kemendikbud, Dirjen Dikti',
+            'tahun' => 2010,
+            'judul' => 'Pendidikan Anti-Korupsi untuk Perguruan Tinggi',
+            'penerbit' => 'Jakarta: Kemendikbud'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Oommen, T',
+            'tahun' => 2009,
+            'judul' => 'Kewarganegaraan, Kebangsaan dan Etnisitas',
+            'penerbit' => 'Yogyakarta: Kreasi Wacana'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Srijanti, dkk',
+            'tahun' => 2009,
+            'judul' => 'Pendidikan Kewarganegaraan untuk Mahasiswa',
+            'penerbit' => 'Jakarta: Graha Ilmu'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Sutrisno, Slamet',
+            'tahun' => 2006,
+            'judul' => 'Filsafat dan Ideologi Pancasila',
+            'penerbit' => 'Yogyakarta: Penerbit Andi'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Tim ICCE UIN Jakarta',
+            'tahun' => 2003,
+            'judul' => 'Demokrasi, HAM dan Masyarakat Madani',
+            'penerbit' => 'Jakarta: Prenada Media'
+        ]);
+        Pustaka::create([
+            'nama_penulis' => 'Tim',
+            'tahun' => 1945,
+            'judul' => 'Undang-Undang Dasar Negara Republik Indonesia 1945 (Hasil Amandemen)',
+            'penerbit' => 'Indonesia'
+        ]);
+        
+        // 1. RPS Kimia Dasar
+        Pustaka::create([
+            'nama_penulis' => 'Brady, J.E.',
+            'tahun' => 1992,
+            'judul' => 'General Chemistry',
+            'penerbit' => 'John Wiley and Sons, New York'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Brown, W.H.',
+            'tahun' => 1982,
+            'judul' => 'Introduction to Organic Chemistry',
+            'penerbit' => 'Williard Grant Press, Boston'
+        ]);
+        
+        Pustaka::create([
+            'nama_penulis' => 'Wilbraham, A.C., Matta M.S.',
+            'tahun' => 1992,
+            'judul' => 'Pengantar Kimia Organik forensik dan Hayati',
+            'penerbit' => 'Penerbit ITB'
+        ]);
+        
+
     }
 }
