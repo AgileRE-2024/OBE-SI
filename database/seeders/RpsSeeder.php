@@ -572,5 +572,167 @@ class RpsSeeder extends Seeder
             'dosenPengampu' => '["197102111997021001"]', // pak hendra dulu
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
+
+        //DI Praktikum
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Bahasa Inggris II
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Manajemen Proyek Teknologi Informai
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '198105082005012001',
+            'kodeMK' => 'MNG310',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '198105082005012001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Metode Kuantitatif Bisnis
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Metodologi Penelitian
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Pembangunan Aplikasi Enterprise
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Tata Kelola Teknologi Informasi
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Temu Kembali Informasi
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
+
+        //Teori Sistem Informasi
+        /*RPS::create([
+            'id_rps' => 'SID2032103',
+            'nip' => '197107122008122001',
+            'kodeMK' => 'SID203',
+            'kodeRPS' => null,
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'disiapkan_oleh' => '197107122008122001',
+            'diperiksa_oleh' => '197102111997021001',
+            'disetujui_oleh' => '196901091993031000',
+            'dibuat_oleh' => '197107122008122001',
+            'versi' => 1,
+            'penanggungJawab' => '197107122008122001',
+            'dosenPengampu' => '["197107122008122001","197101042008121001", "199203222019032018"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
+        ]);*/
     }
 }

@@ -502,5 +502,35 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'Penerbit Erlangga'
         ],);
 
+        //Bing 2
+        Pustaka::create([
+            'nama_penulis' => 'Hogue',
+            'tahun' => 1996, 
+            'judul' => 'First Step In Academic Writing',
+            'penerbit' => 'New York; Longman'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Oshima',
+            'tahun' => 1999,
+            'judul' => 'Writing Academic English (the 3rd Edition)',
+            'penerbit' => 'New York; Longman'
+        ],);
+
+ //Desain Interaksi Prakt
+        Pustaka::create([
+            'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale,',
+            'tahun' => 2004, 
+            'judul' => 'Human-Coumputer Interaction,',
+            'penerbit' => 'Pearson Education'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale,',
+            'tahun' => 2010, 
+            'judul' => 'Designing The User Interface,',
+            'penerbit' => 'Pearson '
+        ],);
+
     }
 }

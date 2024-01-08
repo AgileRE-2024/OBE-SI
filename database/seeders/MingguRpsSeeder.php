@@ -4022,5 +4022,268 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => '-',
         ]);
+
+        //Bahasa Inggris 2
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221051',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221052',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu menggunakan komponen antarmuka',
+            'bahan_kajian' => 'Type of Sentence',
+        ]); 
+
+        /*Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221053',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221054',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221055',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221056',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221057',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221058',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221059',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210510',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210511',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210512',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210513',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210514',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+        */
+
+
+        //Desain Interaksi Praktikum
+        /*
+        Minggu_RPS::create([
+            'id_rps' => 'SII2092105',
+            'kodeMingguRPS' => 'SII209210514',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
+            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "150 menit",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Normal Sentences Pattern',
+        ]);
+        */
+
+
     }
 }
