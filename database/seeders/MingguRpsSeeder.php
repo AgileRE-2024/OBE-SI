@@ -375,5 +375,246 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan, dan mengaitkan materi yang diajarkan',
             'bahan_kajian' => 'Pengenalan CBR; Tahapan CBR',
         ]);
+
+        // Audit Sistem Informasi
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0160',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Pendahuluan Audit Sistem Informasi: Teknologi dan Audit; Batch and On-Line system; Fungsi Audit Sistem Informasi',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0161',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Resiko IS dan konsep dasar Audit: Resiko komputer dan paparannya; Efek dari resiko; Audit dan resiko; Bukti Audit; Kehandalan Bukti Audit; Prosedur Bukti Audit; Tanggung jawab untuk Deteksi dan Pencegahan Penipuan; Pembahasan topik literature review',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0162',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Standards and Guidelines for IS Auditing: IIA Standards; Code of Ethics; ISACA Standards; ISACA Code of Ethics; COSO: Internal Control Standards; Pembahasan topik literature review',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Pembahasan tugas literature review',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0163',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => 'Konsep dasar kontrol Internal: Kontrol Internal; Tipe kontrol internal; Sistem kontrol internal; Elemet kontrol internal; Kontrol Prosedur',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0164',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Manajamen Resiko dari Fungsi Sistem Informasi: Resiko Natural; Audit secara umum; Elemen dari Analisis Resiko; Definisi Audit Universe; Ancaman di Sistem Komputer; Manajemen Resiko; Pembahasan topik literature review',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0165',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan materi yang diajarkan, dan menyusun dokumen rencana audit',
+            'bahan_kajian' => 'Proses Perencanaan Audit: Tujuan dan konteks Audit plan; Struktur dari Rencana Audit; Penjadwalan Audit; Anggaran dan cakupan Audit; Tim Audit, Tugas dan Deadline; Penyusunan dokumen rencana audit berdasarkan kasus tertentu',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0166',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan materi yang diajarkan, dan menyusun dokumen audit',
+            'bahan_kajian' => 'Proses Audit: Preliminary Review; Rekayasa Prosedur
+            Audit; Kontrol Tes; Substantive Testing; Document Results; Tipe-tipe Audit Sistem Informasi; Penyusunan audit program atau kertas kerja audit berdasarkan kasus tertentu',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0167',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Tools dan Teknik yang digunakan saat Audit Sistem Informasia: Audit Productivity Tools; Teknik Dokumentasi Sistem; Penggunaan Flowchart; Ketepatan Penggunaan Teknik Flowchart; Penggunaan CAAT',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII40421079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0168',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan materi yang diajarkan, dan mengelola tim audit',
+            'bahan_kajian' => 'Audit Management: Organisasi dari Function; Integrated IS Auditot vs Integrated IS Audit; Auditee sebagai bagian dari tim Audit; Specialist Auditor; Penjaminan Mutu; Audit Sistem Informasi; Mengelola tim audit dan melakukan pembagian kerja sesuai kasus ruang',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII404210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Pembahasan dokumen rencana audit dan audit program',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII404210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0169',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan materi yang diajarkan, dan melakukan simulasi sebagai auditor TI',
+            'bahan_kajian' => 'Audit Evidence Process: Prosedur Audit Evidence; Kriteria untuk sukses; Statistical Sampling; Judgmental [Or Non Statistical] sampling; Sampling Risk; Calculating Sample Size; Quantitative Methods; Melakukansimulasi audit menggunakan dokumen perangkat audit yang telah dibuat',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII404210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0170',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan mengaitkan materi yang diajarkan, dan menyusun laporan audit',
+            'bahan_kajian' => 'Follow-up Laporan Audit: Audit Reporting; Interim Reporting; Closing ConferenceWritten Report; Executive Summary; Detailed Findings; Polishing the Report; Menyusun laporan audit berdasarkan proses audit yang telah dilakukan',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII4042107',
+            'kodeMingguRPS' => 'SII404210713',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => 'Sub-CPMK0171',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => 'Strategi dan Tata Kelola IT: Penyelarasan IT dengan proses bisnis; Fremawork Tata Kelola IT; Matriks Performa IT; Pembahasan topik literature review',
+        ]);
     }
 }

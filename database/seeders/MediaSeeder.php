@@ -34,5 +34,10 @@ class MediaSeeder extends Seeder
             'id_media' => '4',
             'nama_media' => 'LCD, demo komputer, white board',
         ],);
+
+        Media::create([
+            'id_media' => '5',
+            'nama_media' => 'Whiteboard, Perangkat LCD, Software, Komputer/Laptop, dan E-learning',
+        ],);
     }
 }
