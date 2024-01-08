@@ -195,6 +195,48 @@ class PengampuSeeder extends Seeder
             'nip' => '198105082005012001',
         ]);
 
+        //KWU
+        Pengampu::create([
+            'id_rps' => 'MNW4012104',
+            'kodeMK' => 'MNW401',
+            'nip' => '196004211986011001',
+        ]);
+
+        //KSI
+        Pengampu::create([
+            'id_rps' => 'SIS3092104',
+            'kodeMK' => 'SIS309',
+            'nip' => '197801262006041001',
+        ]);
+
+        //ISIT
+        Pengampu::create([
+            'id_rps' => 'SII2132104',
+            'kodeMK' => 'SII213',
+            'nip' => '198410272010122005',
+        ]);
+
+        //Desain Interaksi
+        Pengampu::create([
+            'id_rps' => 'SII2082104',
+            'kodeMK' => 'SII208',
+            'nip' => '197812172005012001',
+        ]);
+
+        //Jarkom Prak
+        Pengampu::create([
+            'id_rps' => 'SIJ2042104',
+            'kodeMK' => 'SIJ204',
+            'nip' => '197101042008121001',
+        ]);
+
+        //APS Teori
+        Pengampu::create([
+            'id_rps' => 'SII3012104',
+            'kodeMK' => 'SII301',
+            'nip' => '198410272010122005',
+        ]);
+
         //APS Prak
         Pengampu::create([
             'id_rps' => 'SII3142104',

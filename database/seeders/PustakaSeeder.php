@@ -295,7 +295,44 @@ class PustakaSeeder extends Seeder
             'judul' => 'Enterprise Resource Planning : Menyelaraskan Teknologi Informasi dengan Strategi Bisnis',
             'penerbit' => 'Penerbit Informatika, Bandung'
         ],);
-
+        //Jarkom Prak
+        Pustaka::create([
+            'nama_penulis' => 'A.Tanenbauml',
+            'tahun' => 2003,
+            'judul' => 'Computer Networks, Fourth Eds',
+            'penerbit' => 'Prentice Hall'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'CISCO Networking Academy Program: Routing Protocols and Concepts, CCNAExploration2, ver 4',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'CISCO Networking Academy Program: Network Fundamentals, CCNAExploration 1, ver 4,',
+            'penerbit' => ''
+        ],);
+        //APS Teori
+        Pustaka::create([
+            'nama_penulis' => 'K. E. Kendall, J. E Kendall',
+            'tahun' => 2006,
+            'judul' => 'System Analysis and Design',
+            'penerbit' => 'Pearson'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Jeffery, L. Whitten',
+            'tahun' => 2006,
+            'judul' => 'Systems Analysis and Design Method',
+            'penerbit' => 'Mc-Graw Hill'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Elizabeth Hull, Ken Jakcson and Jeremy Dick',
+            'tahun' => 2007,
+            'judul' => 'Requirements Engineering 2nd Ed',
+            'penerbit' => 'Springer'
+        ],);
         //APS Prak
         Pustaka::create([
             'nama_penulis' => 'K. E. Kendall, J. E Kendall',
@@ -589,6 +626,71 @@ class PustakaSeeder extends Seeder
             'tahun' => 1999,
             'judul' => 'Writing Academic English (the 3rd Edition)',
             'penerbit' => 'New York; Longman'
+        ],);
+
+        //KSI
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null, 
+            'judul' => 'Cybersecurity Essentials by Cisco Networking Academy',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null, 
+            'judul' => 'CyberOps Associate by Cisco Networking Academy',
+            'penerbit' => ''
+        ],);
+
+        //KWU
+        Pustaka::create([
+            'nama_penulis' => 'Suryana, Dr., M.Si.',
+            'tahun' => 2006, 
+            'judul' => 'Kewirausahaan: pedoman praktis, kiat dan proses menuju sukses',
+            'penerbit' => 'Salemba Empat, Jakarta'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Hisrich, Robert D., & Michael P. Peters',
+            'tahun' => 2002,
+            'judul' => 'Entrepreneurship – fifth edition.',
+            'penerbit' => 'McGraw-Hill Irwin. Boston.'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Lambing Peggy, Charles L, Kuehl.',
+            'tahun' => 2000,
+            'judul' => 'Entrepreneurship.',
+            'penerbit' => 'Prentice-Hall International, Inc. New Jersey.'
+        ],);
+        //Desain Interaksi
+        Pustaka::create([
+            'nama_penulis' => 'Rogers, Sharp, Preece',
+            'tahun' => null, 
+            'judul' => 'Interaction Design Beyond Human-Computer Interaction',
+            'penerbit' => 'Willey'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'Ben Shneiderman, Catherine Plaisant',
+            'tahun' => 2010,
+            'judul' => 'Designing The User Interface, 5th Edition',
+            'penerbit' => 'Pearson, USA'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale',
+            'tahun' => 2003,
+            'judul' => 'Human-Coumputer Interaction, Third Edition',
+            'penerbit' => 'Prentice Hall, USA'
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://www.usability.gov/',
+            'penerbit' => ''
+        ],);
+        Pustaka::create([
+            'nama_penulis' => '',
+            'tahun' => null,
+            'judul' => 'https://www.interaction-design.org/',
+            'penerbit' => ''
         ],);
 
  //Desain Interaksi Prakt
