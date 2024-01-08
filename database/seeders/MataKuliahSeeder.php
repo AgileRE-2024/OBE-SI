@@ -245,25 +245,135 @@ class MataKuliahSeeder extends Seeder
             ['SIA301', 'Perencanaan Arsitektur Perusahaan', 2, 5, 1, 1, 'SII301', null, "S1 Sistem Informasi"],
             ['SIA302', 'Perencanaan Arsitektur Perusahaan (Praktikum)', 1, 5, 2, 1, 'SII301', null, "S1 Sistem Informasi"],
             ['KNT401', 'Kuliah Kerja Nyata - Belajar Bersama Masyarakat', 3, 6, 3, 1, null, 'Sudah Lulus 95 SKS', "S1 Sistem Informasi"],
-            ['ETT301', 'Etika Profesi', 2, 6, 1, 1, null, null, "S1 Sistem Informasi"],
+            ['ETT301', 'Etika Profesi', 2, 6, 1, 1, null, "<p>Mata kuliah ini membahas tentang:</p>
+
+            <ol>
+                <li><b>Pengertian etika profesi dan tantangan etika dalam pemanfaatan teknologi informasi</b></li>
+                <li><b>Profesi dan sertifikasi di bidang teknologi informasi</b></li>
+                <li><b>Etika profesi di bidang teknologi informasi</b></li>
+                <li><b>Hukum telematika dan cyberlaw</b></li>
+                <li><b>Upaya pemerintah mendorong gerakan internet sehat dan aman</b></li>
+                <li><b>Penerapan etika profesi bidang teknologi informasi di bidang pemerintahan, pendidikan, kesehatan, dan bisnis</b></li>
+            </ol>
+            ", "S1 Sistem Informasi"],
             ['SII323', 'Tata Kelola Teknologi Informasi', 3, 6, 1, 1, 'SIA204', null, "S1 Sistem Informasi"],
             ['PNT497', 'Metodologi Penelitian', 2, 6, 1, 1, 'BAI101', null, "S1 Sistem Informasi"],
             ['KLT301', 'Praktek Kerja Lapangan', 6, 6, 3, 1, null, 'Sudah Lulus 100 SKS', "S1 Sistem Informasi"],
-            ['MNG206', 'Manajemen Layanan Teknologi Informasi', 3, 6, 1, 0, null, null, "S1 Sistem Informasi"],
+            ['MNG206', 'Manajemen Layanan Teknologi Informasi', 3, 6, 1, 0, null, "<p>Mata kuliah ini menjelaskan tentang:</p>
+
+            <ol>
+                <li><b>Penerapan manajemen layanan teknologi informasi</b></li>
+                <li><b>Siklus hidup layanan teknologi informasi</b></li>
+                <li><b>Konsep dan definisi umum manajemen layanan teknologi informasi</b></li>
+                <li><b>Prinsip utama dan pemodelan manajemen layanan teknologi informasi</b></li>
+            </ol>
+            ", "S1 Sistem Informasi"],
             ['MAS235', 'Metode Kuantitatif Bisnis', 3, 6, 1, 0, null, null, "S1 Sistem Informasi"],
             ['SII214', 'Teori Sistem Informasi', 3, 6, 1, 0, null, null, "S1 Sistem Informasi"],
             ['SII322', 'Temu Kembali Informasi', 3, 6, 1, 0, null, null, "S1 Sistem Informasi"],
             ['SIS308', 'Pembangunan Aplikasi Enterprise', 3, 6, 1, 0, null, null, "S1 Sistem Informasi"],
             ['MNG310', 'Manajemen Proyek Teknologi Informasi', 3, 6, 1, 0, null, null, "S1 Sistem Informasi"],
             ['SIC401', 'Sistem Berbasis Pengetahuan', 3, 7, 1, 0, null, "<p>Mata kuliah ini membahas tentang:&nbsp;</p><ol><li>Pengantar sistem berbasis pengetahuan&nbsp;</li><li>Representasi pengetahuan&nbsp;</li><li>Logika Predikat&nbsp;</li><li>Faktor ketidakpastian&nbsp;</li><li>Mesin Inferensi dan Reasoning&nbsp;</li><li>Sistem Pakar&nbsp;</li><li>Sistem fuzzy&nbsp;</li><li>Studi Kasus: Menggunakan metode rule based pada kasus tertentu</li></ol>", "S1 Sistem Informasi"],
-            ['SIC402', 'Data Mining', 3, 7, 1, 0, null, null, "S1 Sistem Informasi"],
-            ['SIR301', 'Informatika Biomedik', 3, 7, 1, 0, null, null, "S1 Sistem Informasi"],
-            ['MAS324', 'Analisis Data Bisnis', 3, 7, 1, 0, null, null, "S1 Sistem Informasi"],
+            ['SIC402', 'Data Mining', 3, 7, 1, 0, null, "<p>Mata kuliah ini membahas tentang:</p>
+
+            <ol>
+                <li><b>Penggalian Pengetahuan dan Data Mining</b></li>
+                <li><b>Pengertian Data</b></li>
+                <li><b>Exploring Data</b></li>
+                <li><b>Data Preprocessing</b></li>
+                <li><b>Klassifikasi</b></li>
+                <li><b>Clustering</b></li>
+                <li><b>Association Rules</b></li>
+                <li><b>Text dan Web Mining</b></li>
+                <li><b>Eksplorasi Data Mining di berbagai bidang (Analisa Data Finansial dan Industri Retail)</b></li>
+            </ol>
+            ", "S1 Sistem Informasi"],
+            ['SIR301', 'Informatika Biomedik', 3, 7, 1, 0, null, "<p>Mata kuliah ini membahas tentang:</p>
+
+            <ol>
+                <li><b>Pengantar biomedis</b></li>
+                <li><b>Deskripsi data biomedis (data numerik, data signal, data citra, dan data gen)</b></li>
+                <li><b>Analisis dan permodelan data biomedis melalui telaah artikel ilmiah pilihan</b></li>
+            </ol>
+            ", "S1 Sistem Informasi"],
+            ['MAS324', 'Analisis Data Bisnis', 3, 7, 1, 0, null, "<p>Materi mata ajaran ini disampaikan secara tatap muka dan diskusi yang membahas tentang:</p>
+
+            <ul>
+                <li><b>Konsep Data Perusahaan</b></li>
+                <li><b>Presentasi Data</b></li>
+                <li><b>Data Warehouse</b></li>
+                <li><b>Customer Analysis</b></li>
+                <li><b>Revenue Generation</b></li>
+                <li><b>Human Resource and Staff Utilization</b></li>
+                <li><b>Product Management</b></li>
+                <li><b>Productivity Analysis</b></li>
+                <li><b>Cost Management</b></li>
+                <li><b>Finance and Risk Management</b></li>
+                <li><b>Supply Chain Management</b></li>
+                <li><b>Sales Channel Analytics</b></li>
+                <li><b>Behavior Analysis</b></li>
+            </ul>
+            
+            <p>Studi kasus diberikan dalam penganalisaan data bisnis.</p>
+            ", "S1 Sistem Informasi"],
             ['SII404', 'Audit Sistem Informasi', 3, 7, 1, 0, null, "<p>Materi disajikan dalam bentuk ceramah, diskusi, dan studi kasus, yang meliputi:&nbsp;</p><ol><li>Pendahuluan Audit Sistem Informasi&nbsp;</li><li>Perencanaan Audit Sistem Informasi&nbsp;</li><li>Identifikasi Resiko dan Kendali&nbsp;</li><li>Pelaksanaan Audit: Evaluasi Kendali dan Pengumpulan Bukti (Evidence)&nbsp;</li><li>Dokumentasi dan penyusunan laporan hasil audit&nbsp;</li><li>Verifikasi kelayakan prosedur dan dokumentasi audit&nbsp;</li><li>Penyusunan rekomendasi hasil audit&nbsp;</li><li>Identifikasi tindak lanjut audit&nbsp;</li><li>Verifikasi kelayakan tindak lanjut audit&nbsp;</li></ol><p>Studi kasus dilakukan terkait penyusunan dokumen perangkat audit, yang harus dibuat oleh auditor dengan mengacu ke standar atau kerangka kerja tertentu, pada ruang lingkup tertentu, dan domain bisnis tertentu.</p>", "S1 Sistem Informasi"],
-            ['SIC404', 'Computer Vision', 3, 7, 1, 0, null, null, "S1 Sistem Informasi"],
-            ['SII408', 'Pengujian Perangkat Lunak', 3, 7, 1, 0, null, null, "S1 Sistem Informasi"],
-            ['MNG402', 'Manajemen Resiko Teknologi Informasi', 3, 7, 1, 0, null, null, "S1 Sistem Informasi"],
-            ['SII317', 'Perancangan Sistem Interaksi E-Health', 3, 7, 1, 0, null, null, "S1 Sistem Informasi"],
+            ['SIC404', 'Computer Vision', 3, 7, 1, 0, null, "<p>Mata kuliah ini membahas tentang:</p>
+
+            <ol>
+                <li><b>Pendahuluan Pemrosesan Citra</b></li>
+                <li><b>Image Enhancement</b></li>
+                <li><b>Edge dan Image Detection</b></li>
+                <li><b>Image Feature Extraction</b></li>
+                <li><b>Segmentation algorithms</b></li>
+                <li><b>Klasifikasi pada data gambar</b></li>
+                <li><b>Clustering pada data gambar</b></li>
+            </ol>
+            ", "S1 Sistem Informasi"],
+            ['SII408', 'Pengujian Perangkat Lunak', 3, 7, 1, 0, null, "<p>Materi disajikan dalam bentuk ceramah, diskusi, dan studi kasus, yang meliputi:</p>
+
+            <ol>
+                <li><b>Pendahuluan & Konsep Dasar Pengujian PL</b></li>
+                <li><b>Dasar Dasar Pengujian</b></li>
+                <li><b>Daur hidup</b></li>
+                <li><b>Teknik desain pengujian</b></li>
+                <li><b>Pengujian Static</b></li>
+                <li><b>Manajemen Pengujian</b></li>
+                <li><b>Alat pendukung pengujian</b></li>
+                <li><b>Implementasi Pengujian Sistem dan Kakas untuk pengujian PL</b></li>
+                <li><b>Perkembangan terkini terkait riset/praktik pengujian PL</b></li>
+            </ol>
+            
+            <p>Studi kasus (case method) dilakukan terkait pengujian perangkat lunak terutama untuk teknik black box dan white box testing, implementasi menggunakan kakas (misalnya melakukan unit testing, atau Behavior-driven development), dan juga menyusun dokumen pengujian untuk proyek perangkat lunak sebagai final project. Final proyek bisa juga berupa draft paper terkait pengujian perangkat lunak.</p>
+            ", "S1 Sistem Informasi"],
+            ['MNG402', 'Manajemen Resiko Teknologi Informasi', 3, 7, 1, 0, null, "<p>Materi disajikan dalam bentuk ceramah, diskusi, dan studi kasus, yang meliputi:</p>
+
+            <ol>
+                <li><b>Pendahuluan manajemen Risiko TI</b></li>
+                <li><b>Penentuan konteks Risiko</b></li>
+                <li><b>Penilaian Risiko (risk assessment)</b>
+                    <ul>
+                        <li>Penilaian Risiko secara kuantitatif</li>
+                        <li>Penilaian Risiko secara kualitatif</li>
+                    </ul>
+                </li>
+                <li><b>Identifikasi Risiko</b></li>
+            </ol>
+            ", "S1 Sistem Informasi"],
+            ['SII317', 'Perancangan Sistem Interaksi E-Health', 3, 7, 1, 0, null, "<p>Mata kuliah ini membahas tentang:</p>
+
+            <ol>
+                <li>Sistem interaksi</li>
+                <li>Konsep data, informasi, dan pengetahuan kesehatan</li>
+                <li>Standar data dan kode medis</li>
+                <li>Electronic Medical Record</li>
+                <li>Proses bisnis yang terkait dengan e-health</li>
+                <li>Tren dan perkembangan e-health</li>
+                <li>Consumer Health Informatics</li>
+                <li>Analisis kebutuhan e-health</li>
+                <li>Desain sistem e-health</li>
+                <li>Public Health Informatics</li>
+            </ol>
+            ", "S1 Sistem Informasi"],
             ['PNT499', 'Skripsi', 6, 8, 1, 1, 'Sudah/sedang mengambil 12 sks mata kuliah pilihan bidang minat', null, "S1 Sistem Informasi"],
         ];
 

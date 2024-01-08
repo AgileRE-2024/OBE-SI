@@ -573,6 +573,150 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        //etika profesi
+        RPS::create([
+            'id_rps' => 'ETT3012106',
+            'nip' => '198410272010122005', //bu ira
+            'kodeMK' => 'ETT301',
+            'tahunAjaran' => 2021,
+            'semester' => 6,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '198410272010122005',
+            'penanggungJawab' => '198410272010122005',
+            'dosenPengampu' => '["198410272010122005"]',
+            'detail_penilaian' => 'NA = Tugas (25%), Kuis (15%), UTS (25%), UAS (30%), SoftSkill (5%)',
+        ]);
+
+        //manajemen layanan ti
+        RPS::create([
+            'id_rps' => 'MNG2062106',
+            'nip' => '198110282006041003', //pak indra
+            'kodeMK' => 'MNG206',
+            'tahunAjaran' => 2021,
+            'semester' => 6,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '198410272010122005',
+            'penanggungJawab' => '198110282006041003',
+            'dosenPengampu' => '["198110282006041003","198105082005012001"]',
+            'detail_penilaian' => 'NA = Tugas (25%), Kuis (15%), UTS (25%), UAS (30%), SoftSkill (5%)',
+        ]);
+
+        //adb
+        RPS::create([
+            'id_rps' => 'MAS3242107',
+            'nip' => '197102111997021001', 
+            'kodeMK' => 'MAS324',
+            'tahunAjaran' => 2021,
+            'semester' => 7,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001","198002172005012001"]',
+            'detail_penilaian' => 'NA = Tugas (35%), UTS (30%), UAS (30%), Soft skills (5%)',
+        ]);
+
+
+         //computer vision
+         RPS::create([
+            'id_rps' => 'SIC4042107',
+            'nip' => '198002172005012001', // bu indah
+            'kodeMK' => 'SIC404',
+            'tahunAjaran' => 2021,
+            'semester' => 7,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '198002172005012001',
+            'penanggungJawab' => '198002172005012001',
+            'dosenPengampu' => '["198002172005012001"," 197107122008122001"]',
+            'detail_penilaian' => 'NA = UAS (35%), UTS (35%), Tugas (25%), Softskill (5%)',
+        ]);
+
+        //data mining
+        RPS::create([
+            'id_rps' => 'SIC4022107',
+            'nip' => '198002172005012001', // bu indah
+            'kodeMK' => '',
+            'tahunAjaran' => 2021,
+            'semester' => 7,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '198002172005012001',
+            'penanggungJawab' => '198002172005012001',
+            'dosenPengampu' => '["198002172005012001"]',
+            'detail_penilaian' => 'NA = UAS (35%), UTS (30%), Tugas (30%), Softskill (5%)',
+        ]);
+
+        //biomedik
+        RPS::create([
+            'id_rps' => 'SIR3012107',
+            'nip' => '197102111997021001', //
+            'kodeMK' => 'SIR301',
+            'tahunAjaran' => 2021,
+            'semester' => 7,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (20%), Kuis (15%), UTS (30%), UAS (30%), Soft skills (5%)',
+        ]);
+
+          //manajemen risiko 
+          RPS::create([
+            'id_rps' => 'MNG4022107',
+            'nip' => '198105082005012001', // bu eva
+            'kodeMK' => 'MNG402',
+            'tahunAjaran' => 2021,
+            'semester' => 7,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '198105082005012001',
+            'penanggungJawab' => '198105082005012001',
+            'dosenPengampu' => '["198105082005012001","198002172005012001"]',
+            'detail_penilaian' => 'Tugas (30%), UTS (30%), UAS (35%), SoftSkill (5%)',
+        ]);
+
+
+        //pengujian perangkat lunak
+        RPS::create([
+            'id_rps' => 'SII4082107',
+            'nip' => '198110282006041003', //
+            'kodeMK' => 'SII408',
+            'tahunAjaran' => 2021,
+            'semester' => 7,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '198110282006041003',
+            'penanggungJawab' => '198110282006041003',
+            'dosenPengampu' => '["198110282006041003"]',
+            'detail_penilaian' => '35% Tugas + 30% UTS +30% UAS + 5% Softskill',
+        ]);
+
+
+          //ehealth
+          RPS::create([
+            'id_rps' => 'SII3172107',
+            'nip' => '198410272010122005', //
+            'kodeMK' => 'SII317',
+            'tahunAjaran' => 2021,
+            'semester' => 7,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '198410272010122005',
+            'penanggungJawab' => '198410272010122005',
+            'dosenPengampu' => '["198410272010122005"]',
+            'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), SoftSkill (5%)',
+        ]); 
+
+=======
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
         //DI Praktikum
         /*RPS::create([
             'id_rps' => 'SID2032103',
@@ -819,6 +963,10 @@ class RpsSeeder extends Seeder
         'dosenPengampu' => '["111111111111116"]', // pak hendra dulu
         'detail_penilaian' => 'NA = UTS(35%),UAS(35%), Tugas (20%), soft skills (10%).',
     ]);
+<<<<<<< HEAD
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
     }
 
 }

@@ -502,6 +502,77 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'Penerbit Erlangga'
         ],);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        //etika profesi
+        Pustaka::create([
+            'nama_penulis' => 'Reynolds, George',
+            'tahun' => 2014, 
+            'judul' => 'Ethics in information technology',
+            'penerbit' => 'Cengage learning'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Kementerian Komunikasi dan Informatika.',
+            'tahun' => 2017, 
+            'judul' => 'Peta Okupasi Nasional dalam KKNI Pada Area Fungsi TIK',
+            'penerbit' => 'Versi 172/KOMINFO/BLSDM/KS.01.07/7/2017'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Hill, Joshua B., and Nancy E. Marion',
+            'tahun' => 2016, 
+            'judul' => 'Introduction to Cybercrime: Computer Crimes, Laws, and Policing in the 21st Century:
+            Computer Crimes, Laws, and Policing in the 21st Century.',
+            'penerbit' => 'ABC-CLIO'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Lynn, Theo, et al.',
+            'tahun' => 2021, 
+            'judul' => 'Data Privacy and Trust in Cloud Computing: Building trust in the cloud through assurance and accountability.',
+            'penerbit' => 'Springer Nature '
+        ],);
+
+        //manajemen layanan ti
+        Pustaka::create([
+            'nama_penulis' => 'Ernest Brewster, Richard Griffiths, Aidan Lawes, and John Sansbury',
+            'tahun' => 2012, 
+            'judul' => 'IT Service Management : A Guide for ITIL ® Foundation Exam Candidates',
+            'penerbit' => 'ITIL'
+        ],);
+
+        
+        Pustaka::create([
+            'nama_penulis' => 'Tony D. Susanto',
+            'tahun' => 2017, 
+            'judul' => 'Sukses Mengelola Layanan Teknologi Informasi dan Kiat Lulus Ujian Sertifikasi ITIL Foundation',
+            'penerbit' => 'AISINDO'
+        ],);
+
+
+        //adb
+        Pustaka::create([
+            'nama_penulis' => 'David Loshin',
+            'tahun' => 2013, 
+            'judul' => 'Business Intelligence, Second Edition',
+            'penerbit' => 'Elsevier, Inc'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'David Loshin',
+            'tahun' => 2013, 
+            'judul' => 'Business Intelligence, Second Edition',
+            'penerbit' => 'Elsevier, Inc'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Mike Biere',
+            'tahun' => 2003, 
+            'judul' => 'Business Intelligence for the Enterprise',
+=======
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
         //Bing 2
         Pustaka::create([
             'nama_penulis' => 'Hogue',
@@ -522,10 +593,141 @@ class PustakaSeeder extends Seeder
             'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale,',
             'tahun' => 2004, 
             'judul' => 'Human-Coumputer Interaction,',
+<<<<<<< HEAD
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
             'penerbit' => 'Pearson Education'
         ],);
 
         Pustaka::create([
+<<<<<<< HEAD
+<<<<<<< HEAD
+            'nama_penulis' => 'Monk, E.',
+            'tahun' => 2006, 
+            'judul' => 'Concepts in enterprise resource planning',
+            'penerbit' => 'Cengage Learning'
+        ],);
+
+        //computer vision
+
+        Pustaka::create([
+            'nama_penulis' => 'Gonzalez R. C, Richard E.Woods.',
+            'tahun' => 2002, 
+            'judul' => 'Digital Image Processing, second edition',
+            'penerbit' => 'Paerson education, Boston.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Gonzalez R. C, Richard E.Woods, Steven L.Eddins.',
+            'tahun' => 2004, 
+            'judul' => 'Digital Image Processing using Matlab,',
+            'penerbit' => 'Paerson education, Boston.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'William K.Pratt',
+            'tahun' => 2001, 
+            'judul' => 'Digital Image Processing',
+            'penerbit' => 'A Wiley-Interscience Publication.'
+        ],);
+
+        //data mining
+
+        Pustaka::create([
+            'nama_penulis' => 'Pan-Ning Tan, M. Steinbach, V. Kumar',
+            'tahun' => 2005, 
+            'judul' => 'Introduction to Data Mining',
+            'penerbit' => 'Pearson International Edition'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Jiawei Han and Micheline Kamber',
+            'tahun' => 2006, 
+            'judul' => 'Data Mining: Concept and Techniques',
+            'penerbit' => 'Morgan Kaufman Publisher'
+        ],);
+
+        //biomedik
+        Pustaka::create([
+            'nama_penulis' => 'Edward H. Shortliffe and James J. Cimino',
+            'tahun' => 2014, 
+            'judul' => 'Biomedical Informatics',
+            'penerbit' => 'Springer-Verlag London Publisher'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Martini. Nath and Bartholomew',
+            'tahun' => 2015, 
+            'judul' => 'Fundamentals of Anatomy & Physiology',
+            'penerbit' => 'Pearson Education, Inc.'
+        ],);
+
+        //manajemen risiko 
+        Pustaka::create([
+            'nama_penulis' => 'Jake Kouns, Daniel Minoli',
+            'tahun' => 2010, 
+            'judul' => 'Information Technology Risk Management in Enterprise Environments: A Review of Industry Practices and a Practical Guide to Risk
+            Management Teams',
+            'penerbit' => 'John Wiley & Sons, Inc.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'The Institute of Internal Audit (IIA)',
+            'tahun' => 2012, 
+            'judul' => 'Information Technology Risk and Controls, 2nd edition',
+            'penerbit' => 'Global Technology Audit Guide.'
+        ],);
+
+        //pengujian perangkat lunak
+        Pustaka::create([
+            'nama_penulis' => 'Naik, K., & Tripathy, P.',
+            'tahun' => 2011, 
+            'judul' => '(2011). Software testing and quality assurance: theory and practice.',
+            'penerbit' => 'John Wiley & Sons, Inc.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Hambling, B., Morgan, P., Samaroo, A., Thompson, G., & Williams, P.',
+            'tahun' => 2015, 
+            'judul' => 'Software Testing: An ISEB Foundation.',
+            'penerbit' => 'BCS, The Chartered Institute.'
+        ],);
+
+        //ehealth
+        Pustaka::create([
+            'nama_penulis' => 'Sharp, H., Rogers, Y., & Preece, J.',
+            'tahun' => 2019, 
+            'judul' => 'Interaction design: beyond human-computer interaction 5th ed.',
+            'penerbit' => 'Wiley'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Hoyt, R. E., & Yoshihashi, A. K.',
+            'tahun' => 2014, 
+            'judul' => 'Health informatics: practical guide for healthcare and information technology professionals.',
+            'penerbit' => 'Lulu. com'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Sardi, Lamyae, Ali Idri, and José Luis Fernández-Alemán',
+            'tahun' => 2017, 
+            'judul' => '"A systematic review of gamification in e-Health."',
+            'penerbit' => 'Journal of biomedical informatics 71 (2017): 31-48'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Ziefle, Martina, ed.',
+            'tahun' => 2010, 
+            'judul' => 'Human-centered design of e-health technologies: concepts, methods and applications: concepts, methods and
+            applications.',
+            'penerbit' => 'IGI Global'
+        ],);
+
+
+=======
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
             'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale,',
             'tahun' => 2010, 
             'judul' => 'Designing The User Interface,',
@@ -744,6 +946,10 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'Penerbit ITB'
         ]);
         
+<<<<<<< HEAD
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
 
     }
 }
