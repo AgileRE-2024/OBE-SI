@@ -123,18 +123,6 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'Matriks 7. Operasi Matriks 8. Kesamaan 2 Matriks',
         ]);
 
-        Minggu_RPS::create([
-            'id_rps' => 'SIS3052104',
-            'kodeMingguRPS' => 'SIS30521041',
-            'id_kriteria_penilaians' => '1',
-            'kodePenilaian' => '0001',
-            'kodeSubCPMK' => 'Sub-CPMK0111',
-            'luring' => true,
-            'penugasan' => '',
-            'waktuPembelajaran' => "2x50'",
-            'pengalaman_belajar' => 'Dapat melakukan intalasi R dan R studio dan melakukan operasi dasar di R',
-            'bahan_kajian' => 'Matriks 7. Operasi Matriks 8. Kesamaan 2 Matriks',
-        ]);
 
         //Sistem Berbasis Pengetahuan
 
@@ -394,7 +382,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Pendahuluan Audit Sistem Informasi: Teknologi dan Audit; Batch and On-Line system; Fungsi Audit Sistem Informasi',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421071',
@@ -411,7 +399,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Resiko IS dan konsep dasar Audit: Resiko komputer dan paparannya; Efek dari resiko; Audit dan resiko; Bukti Audit; Kehandalan Bukti Audit; Prosedur Bukti Audit; Tanggung jawab untuk Deteksi dan Pencegahan Penipuan; Pembahasan topik literature review',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421072',
@@ -428,7 +416,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Standards and Guidelines for IS Auditing: IIA Standards; Code of Ethics; ISACA Standards; ISACA Code of Ethics; COSO: Internal Control Standards; Pembahasan topik literature review',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421073',
@@ -445,7 +433,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Pembahasan tugas literature review',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421074',
@@ -462,7 +450,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan mengaitkan materi yang diajarkan',
             'bahan_kajian' => 'Konsep dasar kontrol Internal: Kontrol Internal; Tipe kontrol internal; Sistem kontrol internal; Elemet kontrol internal; Kontrol Prosedur',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421075',
@@ -479,7 +467,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Manajamen Resiko dari Fungsi Sistem Informasi: Resiko Natural; Audit secara umum; Elemen dari Analisis Resiko; Definisi Audit Universe; Ancaman di Sistem Komputer; Manajemen Resiko; Pembahasan topik literature review',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421076',
@@ -496,7 +484,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan materi yang diajarkan, dan menyusun dokumen rencana audit',
             'bahan_kajian' => 'Proses Perencanaan Audit: Tujuan dan konteks Audit plan; Struktur dari Rencana Audit; Penjadwalan Audit; Anggaran dan cakupan Audit; Tim Audit, Tugas dan Deadline; Penyusunan dokumen rencana audit berdasarkan kasus tertentu',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421077',
@@ -514,7 +502,7 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'Proses Audit: Preliminary Review; Rekayasa Prosedur
             Audit; Kontrol Tes; Substantive Testing; Document Results; Tipe-tipe Audit Sistem Informasi; Penyusunan audit program atau kertas kerja audit berdasarkan kasus tertentu',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421078',
@@ -531,7 +519,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Tools dan Teknik yang digunakan saat Audit Sistem Informasia: Audit Productivity Tools; Teknik Dokumentasi Sistem; Penggunaan Flowchart; Ketepatan Penggunaan Teknik Flowchart; Penggunaan CAAT',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII40421079',
@@ -548,7 +536,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan materi yang diajarkan, dan mengelola tim audit',
             'bahan_kajian' => 'Audit Management: Organisasi dari Function; Integrated IS Auditot vs Integrated IS Audit; Auditee sebagai bagian dari tim Audit; Specialist Auditor; Penjaminan Mutu; Audit Sistem Informasi; Mengelola tim audit dan melakukan pembagian kerja sesuai kasus ruang',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII404210710',
@@ -565,7 +553,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan materi yang diajarkan',
             'bahan_kajian' => 'Pembahasan dokumen rencana audit dan audit program',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII404210711',
@@ -582,7 +570,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan materi yang diajarkan, dan melakukan simulasi sebagai auditor TI',
             'bahan_kajian' => 'Audit Evidence Process: Prosedur Audit Evidence; Kriteria untuk sukses; Statistical Sampling; Judgmental [Or Non Statistical] sampling; Sampling Risk; Calculating Sample Size; Quantitative Methods; Melakukansimulasi audit menggunakan dokumen perangkat audit yang telah dibuat',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII404210712',
@@ -599,7 +587,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, meyimpulkan mengaitkan materi yang diajarkan, dan menyusun laporan audit',
             'bahan_kajian' => 'Follow-up Laporan Audit: Audit Reporting; Interim Reporting; Closing ConferenceWritten Report; Executive Summary; Detailed Findings; Polishing the Report; Menyusun laporan audit berdasarkan proses audit yang telah dilakukan',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII4042107',
             'kodeMingguRPS' => 'SII404210713',
@@ -615,6 +603,231 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50'",
             'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan mengaitkan materi yang diajarkan',
             'bahan_kajian' => 'Strategi dan Tata Kelola IT: Penyelarasan IT dengan proses bisnis; Fremawork Tata Kelola IT; Matriks Performa IT; Pembahasan topik literature review',
+        ]);
+        //Pemograman mobile prak
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521041',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Studi kasus: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0181',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 00 Kontrak; Flutter 01 Pengenalan Flutter; Flutter 02 Dart Basic, Extends, Mixin; Flutter 03 Stateless & Stateful; Flutter 04 Widget Dasar; Flutter 05 Text Widget; Flutter 06 Visible & Invisible Widget',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521042',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0182',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 07 List view; Flutter 08 List Title; Flutter 09 Image Widget; Flutter 10 Extract Widget; Flutter 11 Penggunaan stateful; Flutter 12 Mapping list; Flutter 13 Date Format',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521043',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0183',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 14 AppBar Widget; Flutter 15 TabBar Widget; Flutter 16 Fitur Text Field; Flutter 17 Dekorasi Text; Flutter 18 Penggunaan Text Field; Flutter 19 Grid View; Flutter 20 Dialog;',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521044',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0184',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 21 Dismissible; Flutter 22 Navigation; Flutter 23 Routes; Flutter 24 Drawer; Flutter 25 Switch; Flutter 26 Model;',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521045',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0185',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 27 Thema; Flutter 28 Responsive vs adaptive; Flutter 29 Media Query; Flutter 30 Flexible dan Expanded; Flutter 31 Fitted Box; Flutter 32 Layout Builder; Flutter 33 Cupertino;',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521046',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0186',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 34 Date Picker; Flutter 35 State Management Provider; Flutter 36 Nested Model + Provider; Flutter 37 Consumer + Provider;',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521047',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0187',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 38 Multi Provider; Flutter 39 State Management Provider - Review; Flutter 40 HTTP Request / Rest Api; Flutter 41 HTTP Request Post Method;',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521048',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0188',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 42 HTTP Request Get, Put, Patch Method; Flutter 43 HTTP Request Delete Method; Flutter 44 HTTP Request - Firebase Realtime Database; Flutter 45 HTTP Request Post Method - Firebase; Flutter 46 HTTP Request Delete Method - Firebase; Flutter 47 HTTP Request Update Method - Firebase;',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS30521049',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0188',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 48 HTTP Request Get Method - Firebase; Flutter 49 HTTP Request Error Handling - Firebase; Flutter 50 Widget Lifecycle',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS305210410',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0189',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 51 Application Lifecycle Flutter 52 Future Builder Flutter 53 Key Flutter 54 CheckBox Flutter 55 DropDown',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS305210411',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0190',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 56 Authentication; Flutter 57 Authentication - Login & Register; Flutter 58 Authentication - Error Handling; Flutter 59 Authentication - Token Handling; Flutter 60 Authentication - User ID Handling',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS305210412',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0190',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 61 Authentication - Logout; Flutter 62 Authentication - Login Otomatis; Flutter 63 Authentication - Null Safety Handling; Flutter 64 Shared Preferences; Flutter 65 State Management Bloc',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS305210413',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0191',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 66 Bloc Provider; Flutter 67 Bloc vs Cubit; Flutter 68 Multi Bloc Provider; Flutter 69 Bloc Listener;',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'SIS3052104',
+            'kodeMingguRPS' => 'SIS305210414',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => 'Proyek Semester: 60%, Tugas: 40%',
+            'kodeSubCPMK' => 'Sub-CPMK0192',
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "100 menit",
+            'pengalaman_belajar' => 'Mampu mengimplementasikan materi yang telah diajarkan',
+            'bahan_kajian' => 'Flutter 70 Bloc Consumer; Flutter Equatable',
         ]);
     }
 }
