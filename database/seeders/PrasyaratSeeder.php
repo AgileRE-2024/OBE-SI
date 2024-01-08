@@ -77,5 +77,65 @@ class PrasyaratSeeder extends Seeder
             'kodeMK' => 'SIS202',
             'mat_kodeMK' => 'SIA204',
         ]);
+
+          //Bahasa Inggris II
+        /*Prasyarat::create([
+            'kodeMK' => 'BAE112',
+            'mat_kodeMK' => 'BAE111',
+        ]);*/
+
+        //Desain Interaksi Teori
+        /*Prasyarat::create([
+            'kodeMK' => 'SII208',
+            'mat_kodeMK' => 'SII301',
+        ]);*/
+
+        //Desain Interaksi Praktikum
+        /*Prasyarat::create([
+            'kodeMK' => 'SII209',
+            'mat_kodeMK' => 'SII301',
+        ]);*/
+
+        //Manajemen Proyek Teknologi Informasi
+        /*Prasyarat::create([
+            'kodeMK' => 'MNG310',
+            'mat_kodeMK' => 'MNM203',
+        ]);*/
+
+        //Metode Kuantitatif Bisnis
+        /*Prasyarat::create([
+            'kodeMK' => 'MAS235',
+            'mat_kodeMK' => 'MAS234',
+        ]);*/
+
+        
+
+        //Pembangunan Aplikasi Enterprise
+        /*Prasyarat::create([
+            'kodeMK' => 'SIS308',
+            'mat_kodeMK' => 'SIR201',
+        ]);*/
+
+        //Tata Kelola Teknologi Informasi
+        /*Prasyarat::create([
+            'kodeMK' => 'SII323',
+            'mat_kodeMK' => 'SIA204',
+        ]);*/
+
+        //Bahasa Inggris II
+        /*Prasyarat::create([
+            'kodeMK' => 'SIS202',
+            'mat_kodeMK' => 'SIA204',
+        ]);*/
+
+        //Bahasa Inggris II
+        /*Prasyarat::create([
+            'kodeMK' => 'SIS202',
+            'mat_kodeMK' => 'SIA204',
+        ]);*/
+
+
+      
+
     }
 }
