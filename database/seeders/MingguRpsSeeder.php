@@ -604,6 +604,22 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan mengaitkan materi yang diajarkan',
             'bahan_kajian' => 'Strategi dan Tata Kelola IT: Penyelarasan IT dengan proses bisnis; Fremawork Tata Kelola IT; Matriks Performa IT; Pembahasan topik literature review',
         ]);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        //etika profesi
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121060',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+=======
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
         //Pemograman mobile prak
         Minggu_RPS::create([
             'id_rps' => 'SIS3052104',
@@ -4036,10 +4052,2543 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
+<<<<<<< HEAD
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
             'bobot_nilai' => '-',
             'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
+<<<<<<< HEAD
+<<<<<<< HEAD
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => '
+            1. Mempelajari referensi dan diskusi untuk mendefinisikan pengertian etika
+            2. Membedakan etika dan etiket,
+            3. Membedakan etika dan moralitas,
+            4. Menyebutkan pentingnya etika untuk bidang TI',
+            'bahan_kajian' => '
+            1. Pengantar Etika Profesi
+            2. Etika dan etiket
+            3. Etika dan moralitas
+            4. Pentingnya Etika
+            untuk segala Profesi',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121061',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '
+            1. Profesi bidang Sistem dan Teknologi Informasi,
+            2. Area Fungsi Teknologi Informasi dan Komunikasi pada Peta Okupasi Nasional dalam Kerangka Kualifikasi Nasional Indonesia (KKNI).',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121062',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '
+            1. Profesi bidang Sistem dan Teknologi Informasi,
+            2. Area Fungsi Teknologi Informasi dan Komunikasi pada Peta Okupasi Nasional dalam Kerangka Kualifikasi Nasional Indonesia (KKNI).',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121063',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '
+            1. Asosiasi bidang Teknologi Informasi dan Komunikasi global dan Indonesia
+            2. Sertifikasi bidang Teknologi Informasi dan Komunikasi',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '
+            1. Etika di dunia maya (internet)
+            2. Karakteristik dunia maya
+            3. Studi kasus penerapan etika pada pemanfataan Internet
+            4. Strategi dan kebijakan pemerintah di sejumlah negara terkait Internet sehat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121065',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '
+            1. Jenis cybercrime,
+            2. Modus-modus kejahatan di bidang IT
+            3. Contoh-contoh kasus cybercrime di Indonesia
+            4. Karakteristik dan trend cybercrime',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121066',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '
+            1. Jenis cybercrime,
+            2. Modus-modus kejahatan di bidang IT
+            3. Contoh-contoh kasus cybercrime di Indonesia
+            4. Karakteristik dan trend cybercrime',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121067',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan, dan Kemampuan menerapkan teori pada studi kasus yang sesuai',
+            'bahan_kajian' => '
+            1. UU Informasi dan Transaksi Elektronik
+            2. Aturan hukum yang berhubungan dengan etika pemanfaatan TIK
+            3. Undang-undang tentang Hak Kekayaan Intelektual
+            4. Aturan hukum terkait perlindungan data pribadi, keamanan data',
+        ]);
+
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121068',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan, dan Kemampuan menerapkan teori pada studi kasus yang sesuai',
+            'bahan_kajian' => '
+            1. UU Informasi dan Transaksi Elektronik
+            2. Aturan hukum yang berhubungan dengan etika pemanfaatan TIK
+            3. Undang-undang tentang Hak Kekayaan Intelektual
+            4. Aturan hukum terkait perlindungan data pribadi, keamanan data',
+        ]);
+
+
+
+        
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT30121069',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => ' Kemampuan untuk menjelaskan, meyimpulkan dan mengaitkan materi yang diajarkan, dan Kemampuan menerapkan teori pada studi kasus yang sesuai',
+            'bahan_kajian' => '
+            1. Jenis media sosial
+            2. Pemanfaatan media sosial dalam bidang pendidikan, bisnis, kesehatan, dan pemerintahan
+            3. Analisis studi kasus tentang pemanfaatan dan kontroversi di media sosial: info kesehatan publik, layanan pemerintah, analisis sentimen bisnis',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT301210610',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => 'Kemampuan analisis pada studi kasus yang sesuai Presentasi tugas final',
+            'bahan_kajian' => '
+            1. Definisi data analytics
+            2. Studi kasus data analytics di Internet
+            3. Etika pengumpuluan data masyarakat / user oleh bisnis dan pemerintah
+            4. Perlindungan hukum tentang privasi
+            
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT301210611',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => 'Kemampuan analisis pada studi kasus yang sesuai Presentasi tugas final',
+            'bahan_kajian' => '
+            Isu-isu etika pada penerapan Teknologi Infomasi dan Komunikasi yang tepat di bidang bisnis, kesehatan, dan pemerintahan
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT301210612',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => 'Kemampuan analisis pada studi kasus yang sesuai Presentasi tugas final',
+            'bahan_kajian' => '
+            Isu-isu etika pada penerapan Teknologi Infomasi dan Komunikasi yang tepat di bidang bisnis, kesehatan, dan pemerintahan
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMingguRPS' => 'ETT301210613',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => 'Kemampuan analisis pada studi kasus yang sesuai Presentasi tugas final',
+            'bahan_kajian' => '
+            Isu-isu etika pada penerapan Teknologi Infomasi dan Komunikasi yang tepat di bidang bisnis, kesehatan, dan pemerintahan
+            ',
+        ]);
+
+
+        //manajemen layanan ti
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621060',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Memahami tugas perkuliahan 1 semester kedepan',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621061',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Merencanakan layanan IT dalam organisasi',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621062',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Mendesain proses bisnis layanan dalam organisasi',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621063',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Mengidentifikasikan value creation untuk layanan TI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Merancang operasional layanan TI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621065',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Mempresentasikan rancangan layanan TI dalam organisasi',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621066',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Mempresentasikan rancangan layanan TI dalam organisasi',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621067',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Memahami konsep MLTI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621068',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Memahami konsep MLTI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG20621069',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Memahami konsep MLTI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG206210610',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Memahami konsep MLTI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG206210611',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Memahami konsep MLTI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG206210612',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Mengetahui perkembangan riset terkini terkait MLTI',
+            'bahan_kajian' => '-',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMingguRPS' => 'MNG206210613',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3x50'",
+            'pengalaman_belajar' => 'Mengetahui perkembangan riset terkini terkait MLTI',
+            'bahan_kajian' => '-',
+        ]);
+
+
+        //adb
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Konsep Data Perusahaan',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Presentasi Data',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data Warehouse',
+        ]);
+
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Customer analysis',
+        ]);
+
+       
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Revenue generation',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Revenue generation',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Human Resource and Staff Utilization',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Product Management, Productivity Analysis, and Cost Management',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Product Management, Productivity Analysis, and Cost Management',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS32421079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Finance and Risk Management',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS324210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Supply Chain Management',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS324210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Sales Channel Analytics',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS324210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Behavior Analysis',
+        ]);
+
+
+        
+        Minggu_RPS::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMingguRPS' => 'MAS324210713',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Behavior Analysis',
+        ]);
+
+        //computer vision
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Pendahuluan Pemrosesan Citra Digital
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Konsep Dasar Citra Digital
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Image Sampling and Reconstruction
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Image Enhancement in the Spatial Domain
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Image Enhancement in the Frequency Domain
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Image Restoration Models
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Edge Detection
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Image Feature Extraction
+            ',
+        ]);
+
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Image Segmentation
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC40421079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Image Detection and Registration
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC404210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Pemrosesan Citra Berwarna
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC404210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Klasifikasi citra
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMingguRPS' => 'SIC404210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Klasterisasi citra
+            ',
+        ]);
+
+        //data mining
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Pengenalan Data:
+            a. Mining
+            b. Definisi & Latar Belakang Data Mining
+            c. Tahapan-tahapan Proses Data Mining
+            
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data:
+            a. Jenis & Kualitas Data
+            b. Attributes & Objects
+            c. Types of Data
+            d. Data Quality
+            e. Data Preprocessing
+            
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Eksplorasi Data:
+            a. Statistik
+            Data & Visualisasi
+            Data
+            - Modus,
+            Persentil,
+            Frekuensi
+            b. Analisis data
+            multi dimensional
+            & OLAP
+            - Histigram
+            - Blox Plot
+            - Scater Plot
+            - Matrix Plot
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Teknik pengukuran data
+            - Feature Selection
+            - Reduksi Dimensi
+            - PCA
+            - Normalisasi
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Klasifikasi :
+                a. Konsep dasar
+                klasifikasi
+                b. Decision Tree &
+                Model Overfitting
+                c. Evaluasi Kinerja
+                pengklasifikasi
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Klasifikasi :
+                a. Metoda untuk
+                membandingkan
+                pengklasifikasi
+                b. Algoritma Nearest
+                neighbor, Bayesian
+                ensemble methods
+                c. Imbalance class
+                problem
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Klasifikasi :
+                a. Metoda untuk
+                membandingkan
+                pengklasifikasi
+                b. Algoritma SVM
+                c. Visualisasi SVM
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Klustering:
+            a. Definisi dan konsep
+            dasar clustering
+            b. Algoritma K-Means
+            & Hierarchical
+            Clustering
+            c. Algoritma FCM
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Klustering:
+            a. Evaluasi Clustering
+            b. Karakteristik data,
+            cluster dan algoritma
+            clustering
+            c. Prototype based &
+            Density based
+            clustering
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC40221079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Analisis Asosiasi:
+            a. Rule generation,
+            compact
+            representation of
+            frequent itemset
+            b. Menangani atribut
+            kategoris dan atribut
+            kontinu dalam
+            analisis asosiasi
+            c. Pola sequential,
+            subgraph dan
+            infrequent
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC402210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Analisis Asosiasi:
+            a. Algoritma Assosiasi
+            Rule
+            b. Frequent itemset
+            generation
+            c. Teknik evaluasi
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC402210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Analisis Asosiasi:
+            a. Algoritma FP-Tree
+            b. FP Growth
+            c. Teknik evaluasi
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC402210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'a. Information Retrivel
+            b. Techniques for Text
+            mining
+            c. Techniques for Web
+            usage mining
+            d. Similarity
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMingguRPS' => 'SIC402210713',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Aplikasi dan Trend
+            Data Mining :
+            a. Penerapan data
+            mining dalam bidang
+            financial, retail
+            industri,
+            telekomunikasi,
+            biologi, dan aplikasi
+            sains
+            b. Produk-produk
+            sistem data mining
+            dan prototype riset
+            ',
+        ]);
+
+        //biomedik
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Definisi dan
+            pengertian
+            informatika
+            biomedik
+            2. Ruang lingkup
+            informatika
+            biomedik
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Definisi dan
+            pengertian
+            informatika
+            biomedik
+            2. Ruang lingkup
+            informatika
+            biomedik
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data numerik
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data signal
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data citra
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data citra
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data gen
+            ',
+        ]);
+
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Data gen
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Analisis dan permodelan data biomedis melalui telaah artikel ilmiah pilihan.
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR30121079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => 'Analisis dan permodelan data biomedis melalui telaah artikel ilmiah pilihan.
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR301210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Proses
+            pembentukan
+            standar
+            2. Kategorisasi
+            standar dalam
+            informatika
+            biomedik
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR301210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Proses
+            pembentukan
+            standar
+            2. Kategorisasi
+            standar dalam
+            informatika
+            biomedik
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR301210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Ruang lingkup
+            informatika
+            pencitraan
+            medik
+            2. Karakteristik
+            citra digital
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMingguRPS' => 'SIR301210713',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
+            'bahan_kajian' => '1. Ruang lingkup
+            informatika
+            pencitraan
+            medik
+            2. Karakteristik
+            citra digital
+            ',
+        ]);
+
+        //manajemen risiko
+
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Pendahuluan manajemen Risiko TI:
+            1. Definisi Risiko IT
+            2. Definisi Risiko dan manajemen TI
+            3. Cakupan manajemen Risiko IT
+            4. Prinsip-prinsip dasar manajemen Risiko IT
+            5. Siklus aktivitas proses manajemen Risiko IT
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Penentuan konteks Risiko
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Penilaian Risiko (Risk Assessment)
+            - Penilaian Risiko secara kuantitatif
+            - Penilaian Risiko secara kualitatif
+            
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Identifikasi Risiko
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Analisis Risiko
+            ',
+        ]);
+        
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Evaluasi Risiko
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Perlakuan Risiko (Risk
+            Treatment)
+            1. Mitigasi Risiko (risk
+            mitigation)
+            2. Transfer Risiko (risk
+            transference)
+            3. Penerimaan Risiko
+            (risk acceptance)
+            4. Menghindari Risiko
+            (risk avoidance)
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Monitoring dan review Risiko
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Studi kasus penerapan metode tertentu (FMEA, OCTAVE, FAIR, NIST, dan sebagainya) untuk manajemen risiko TI
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG40221079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Studi kasus penerapan metode tertentu (FMEA, OCTAVE, FAIR, NIST, dan sebagainya) untuk manajemen risiko TI
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG402210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Pengembangan metode pengelolaan Risiko, untuk mengatasi permasalahan seperti ketidakpastian, dependensi antar risiko, dependensi antar aset
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG402210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Pengembangan metode pengelolaan Risiko, untuk mengatasi permasalahan seperti ketidakpastian, dependensi antar risiko, dependensi antar aset
+            
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMingguRPS' => 'MNG402210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Strategi pengelolaan Risiko
+            ',
+        ]);
+        
+        //pengujian perangkat lunak
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Membaca buku dan diskusi terkait isi materi buku.',
+            'bahan_kajian' => 'Pendahuluan & Konsep Dasar Pengujian PL
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Membaca buku dan diskusi terkait isi materi buku.',
+            'bahan_kajian' => 'Dasar Dasar Pengujian
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Membaca buku dan diskusi terkait isi materi buku.',
+            'bahan_kajian' => 'Daur hidup
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Membaca buku dan diskusi terkait isi materi buku.',
+            'bahan_kajian' => 'Teknik desain pengujian
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Pengujian Static
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Manajemen Pengujian
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Alat pendukung pengujian
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Implementasi Pengujian Sistem dan Kakas untuk pengujian PL
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Implementasi Pengujian Sistem dan Kakas untuk pengujian PL
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII40821079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Implementasi Pengujian Sistem dan Kakas untuk pengujian PL
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII408210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Implementasi Pengujian Sistem dan Kakas untuk pengujian PL
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII408210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Implementasi Pengujian Sistem dan Kakas untuk pengujian PL
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII408210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Perkembangan terkini terkait riset/praktik pengujian PL
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII4082107',
+            'kodeMingguRPS' => 'SII408210713',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => '-',
+            'bahan_kajian' => 'Perkembangan terkini terkait riset/praktik pengujian PL
+            ',
+        ]);
+
+        // ehealth
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721070',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. Kontrak kuliah
+            2. Definisi desain interaksi
+            3. Komponen desain interaksi
+            4. Penerapan desain interaksi pada sistem informasi/aplikasi e-health
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721071',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. Desain interaksi sosial
+            2. Desain interaksi
+            emotional
+            3. Penerapan desain
+            interaksi sosial pada
+            sistem
+            informasi/aplikasi e-
+            health
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721072',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. user-centered design
+            2. goal directed design
+            3. design thinking approach
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721073',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. Sistem e-health
+            2. Komponen sistem e-
+            health
+            3. Jenis-jenis e-health
+            4. Telemedicine
+            5. Consumer health
+            informatics
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721074',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. Sistem e-health
+            2. Komponen sistem e-
+            health
+            3. Jenis-jenis e-health
+            4. Telemedicine
+            5. Consumer health
+            informatics
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721075',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. Prinsip desain
+            interaksi pada sistem
+            e-health
+            2. Proses bisnis sistem
+            e-health
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721076',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. Review analisis
+            kebutuhan
+            2. Analisis kebutuhan
+            sistem e-health
+            3. Analisis user persona
+            untuk sistem e-health
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721077',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan dan Kemampuan menerapkan konsep pada studi kasus e-health yang sesuai',
+            'bahan_kajian' => '1. Studi kasus
+            penerapan desain
+            interaksi pada sistem
+            telemedicine
+            2. Studi kasus
+            penerapan desain
+            interaksi pada sistem
+            Consumer Health
+            Informatics
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721078',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan dan Kemampuan menerapkan konsep pada studi kasus e-health yang sesuai',
+            'bahan_kajian' => '1. Studi kasus
+            penerapan desain
+            interaksi pada sistem
+            telemedicine
+            2. Studi kasus
+            penerapan desain
+            interaksi pada sistem
+            Consumer Health
+            Informatics
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII31721079',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan',
+            'bahan_kajian' => '1. Eleactronic Health
+            Record
+            2. Perlindungan data
+            pasien
+            3. Regulasi dan aturan
+            yang mengatur data
+            kesehatan
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII317210710',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan dan Kemampuan menerapkan konsep pada studi kasus e-health yang sesuai',
+            'bahan_kajian' => '1. Konsep gamification
+            2. Tinjauan desain
+            interaksi untuk
+            gamification
+            3. Penerapan
+            gamification pada
+            sistem e-health
+            ',
+        ]);
+
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII317210711',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan untuk menjelaskan, menyimpulkan, dan mengaitkan materi yang diajarkan dan Kemampuan menerapkan konsep pada studi kasus e-health yang sesuai',
+            'bahan_kajian' => '1. Konsep gamification
+            2. Tinjauan desain
+            interaksi untuk
+            gamification
+            3. Penerapan
+            gamification pada
+            sistem e-health
+            ',
+        ]);
+
+        
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII317210712',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan menerapkan konsep pada studi kasus e-health yang sesuai',
+            'bahan_kajian' => '1. Studi kasus
+            permasalahan desain
+            interaksi pada sistem
+            e-health
+            2. Desain interaksi pada
+            sistem e-health
+            dengan virtual reality
+            ',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SII3172107',
+            'kodeMingguRPS' => 'SII317210713',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => null,
+            'id_media' => null,
+            'id_metode' => null,
+            'bobot_nilai' => '-',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1x3x50'",
+            'pengalaman_belajar' => 'Kemampuan menerapkan konsep pada studi kasus e-health yang sesuai',
+            'bahan_kajian' => '1. Studi kasus
+            permasalahan desain
+            interaksi pada sistem
+            e-health
+            2. Desain interaksi pada
+            sistem e-health
+            dengan virtual reality
+            ',
+        ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
             'waktuPembelajaran' => "1 x 3 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menguraikan jenis-jenis kalimat dalam bahasa inggris',
             'bahan_kajian' => 'Type of Sentence',
@@ -4280,6 +6829,10 @@ class MingguRpsSeeder extends Seeder
         // 1. RPS Kalkulus
         // 1. RPS Kewarganegaraan
         // 1. RPS Kimia Dasar
+<<<<<<< HEAD
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
 
 
     }

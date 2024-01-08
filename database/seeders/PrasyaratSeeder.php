@@ -146,5 +146,48 @@ class PrasyaratSeeder extends Seeder
             'mat_kodeMK' => 'SIJ201',
         ]);
 
+        //adb
+        Prasyarat::create([
+            'kodeMK' => 'MAS324',
+            'mat_kodeMK' => 'SID303',
+        ]);
+
+        //computer vision
+        Prasyarat::create([
+            'kodeMK' => 'SIC404',
+            'mat_kodeMK' => 'SIC201',
+        ]);
+
+         //data mining
+         Prasyarat::create([
+            'kodeMK' => 'SIC402',
+            'mat_kodeMK' => 'SIC201',
+        ]);
+
+
+          //biomedik
+          Prasyarat::create([
+            'kodeMK' => 'SIR301',
+            'mat_kodeMK' => 'SIC201',
+        ]);
+
+         //manajemen risiko
+         Prasyarat::create([
+            'kodeMK' => 'MNG402',
+            'mat_kodeMK' => 'SII323',
+        ]);
+
+        //Pengujian Perangkat Lunak
+        Prasyarat::create([
+            'kodeMK' => 'SII408',
+            'mat_kodeMK' => 'SII301',
+        ]);
+
+        //ehealth
+        Prasyarat::create([
+            'kodeMK' => 'SII317',
+            'mat_kodeMK' => 'SII208',
+        ]);
+
     }
 }

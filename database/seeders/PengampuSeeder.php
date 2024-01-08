@@ -291,6 +291,107 @@ class PengampuSeeder extends Seeder
             'nip' => '197102111997021001', // pak hendra dulu
         ]);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        //etika profesi
+        Pengampu::create([
+            'id_rps' => 'ETT3012106',
+            'kodeMK' => 'ETT301',
+            'nip' => '198410272010122005', 
+        ]);
+
+
+        //manajemen layanan ti
+        Pengampu::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMK' => 'MNG206',
+            'nip' => '198110282006041003', 
+        ]);
+
+        //manajemen layanan ti
+        Pengampu::create([
+            'id_rps' => 'MNG2062106',
+            'kodeMK' => 'MNG206',
+            'nip' => '198105082005012001', 
+        ]);
+
+        //adb
+        Pengampu::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMK' => 'MAS324',
+            'nip' => '197102111997021001', 
+        ]);
+
+         //adb
+         Pengampu::create([
+            'id_rps' => 'MAS3242107',
+            'kodeMK' => 'MAS324',
+            'nip' => '198002172005012001', 
+        ]);
+
+         //computer vision
+         Pengampu::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMK' => 'SIC404',
+            'nip' => '198002172005012001', 
+        ]);
+
+        //computer vision
+        Pengampu::create([
+            'id_rps' => 'SIC4042107',
+            'kodeMK' => 'SIC404',
+            'nip' => '197107122008122001', 
+        ]);
+
+          //data mining
+          Pengampu::create([
+            'id_rps' => 'SIC4022107',
+            'kodeMK' => 'SIC402',
+            'nip' => '198002172005012001', 
+        ]);
+
+         //biomedik
+         Pengampu::create([
+            'id_rps' => 'SIR3012107',
+            'kodeMK' => 'SIR301',
+            'nip' => '197102111997021001', 
+        ]);
+
+         //manajemen risiko 
+         Pengampu::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMK' => 'MNG402',
+            'nip' => '198105082005012001', 
+        ]);
+
+
+        //manajemen risiko 
+        Pengampu::create([
+            'id_rps' => 'MNG4022107',
+            'kodeMK' => 'MNG402',
+            'nip' => '198002172005012001', 
+        ]);
+
+
+        //pengujian perangkat lunak 
+        Pengampu::create([
+            'id_rps' => 'SII4082107',
+            'kodeMK' => 'SII408',
+            'nip' => '198110282006041003', 
+        ]);
+
+        
+        //ehealth 
+        Pengampu::create([
+            'id_rps' => 'SII3172107',
+            'kodeMK' => 'SII317',
+            'nip' => '198410272010122005', 
+        ]);
+
+
+=======
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
         //047
         // 1. RPS Bahasa Indonesia 
         Pengampu::create([
@@ -335,5 +436,9 @@ class PengampuSeeder extends Seeder
             'kodeMK' => 'BAE112',
             'nip' => '197102111997021001', // pak hendra dulu
         ]);
+<<<<<<< HEAD
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+=======
+>>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
     }
 }
