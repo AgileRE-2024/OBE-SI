@@ -502,8 +502,8 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'Penerbit Erlangga'
         ],);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+// <<<<<<< HEAD
+// // <<<<<<< HEAD
         //etika profesi
         Pustaka::create([
             'nama_penulis' => 'Reynolds, George',
@@ -570,9 +570,12 @@ class PustakaSeeder extends Seeder
             'nama_penulis' => 'Mike Biere',
             'tahun' => 2003, 
             'judul' => 'Business Intelligence for the Enterprise',
-=======
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+            'penerbit' => 'Elsevier, Inc'
+        ],);
+
+// =======
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
         //Bing 2
         Pustaka::create([
             'nama_penulis' => 'Hogue',
@@ -589,20 +592,20 @@ class PustakaSeeder extends Seeder
         ],);
 
  //Desain Interaksi Prakt
-        /*Pustaka::create([
+        Pustaka::create([
             'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale,',
             'tahun' => 2004, 
             'judul' => 'Human-Coumputer Interaction,',
-<<<<<<< HEAD
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// <<<<<<< HEAD
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
             'penerbit' => 'Pearson Education'
         ],);
 
         Pustaka::create([
-<<<<<<< HEAD
-<<<<<<< HEAD
+// <<<<<<< HEAD
+// <<<<<<< HEAD
             'nama_penulis' => 'Monk, E.',
             'tahun' => 2006, 
             'judul' => 'Concepts in enterprise resource planning',
@@ -725,14 +728,15 @@ class PustakaSeeder extends Seeder
         ],);
 
 
-=======
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// =======
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+        Pustaka::create([
             'nama_penulis' => 'A.J. Dix, J.E. Finlay, G.D. Abowd dan R.Beale,',
             'tahun' => 2010, 
             'judul' => 'Designing The User Interface,',
             'penerbit' => 'Pearson '
-        ],);*/
+        ],);
 
 
         //047
@@ -946,10 +950,10 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'Penerbit ITB'
         ]);
         
-<<<<<<< HEAD
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// <<<<<<< HEAD
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
 
     }
 }

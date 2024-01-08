@@ -604,8 +604,8 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Kemampuan untuk memahami, dan meyimpulkan mengaitkan materi yang diajarkan',
             'bahan_kajian' => 'Strategi dan Tata Kelola IT: Penyelarasan IT dengan proses bisnis; Fremawork Tata Kelola IT; Matriks Performa IT; Pembahasan topik literature review',
         ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
+// <<<<<<< HEAD
+// <<<<<<< HEAD
 
         //etika profesi
 
@@ -617,9 +617,23 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => null,
             'id_media' => null,
             'id_metode' => null,
-=======
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+            'waktuPembelajaran' => "1x2x50'",
+            'pengalaman_belajar' => '
+            1. Mempelajari referensi dan diskusi untuk mendefinisikan pengertian etika
+            2. Membedakan etika dan etiket,
+            3. Membedakan etika dan moralitas,
+            4. Menyebutkan pentingnya etika untuk bidang TI',
+            'bahan_kajian' => '
+            1. Pengantar Etika Profesi
+            2. Etika dan etiket
+            3. Etika dan moralitas
+            4. Pentingnya Etika
+            untuk segala Profesi',
+        ]);
+            
+// =======
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
         //Pemograman mobile prak
         Minggu_RPS::create([
             'id_rps' => 'SIS3052104',
@@ -4052,29 +4066,22 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-<<<<<<< HEAD
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+            
+// <<<<<<< HEAD
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
             'bobot_nilai' => '-',
             'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'waktuPembelajaran' => "1x2x50'",
-            'pengalaman_belajar' => '
-            1. Mempelajari referensi dan diskusi untuk mendefinisikan pengertian etika
-            2. Membedakan etika dan etiket,
-            3. Membedakan etika dan moralitas,
-            4. Menyebutkan pentingnya etika untuk bidang TI',
-            'bahan_kajian' => '
-            1. Pengantar Etika Profesi
-            2. Etika dan etiket
-            3. Etika dan moralitas
-            4. Pentingnya Etika
-            untuk segala Profesi',
-        ]);
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menguraikan jenis-jenis kalimat dalam bahasa inggris',
+            'bahan_kajian' => 'Type of Sentence',
+        ]); 
+// <<<<<<< HEAD
+// <<<<<<< HEAD
+            
         
         Minggu_RPS::create([
             'id_rps' => 'ETT3012106',
@@ -6548,51 +6555,10 @@ class MingguRpsSeeder extends Seeder
         ]);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-            'waktuPembelajaran' => "1 x 3 x 50",
-            'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menguraikan jenis-jenis kalimat dalam bahasa inggris',
-            'bahan_kajian' => 'Type of Sentence',
-        ]); 
+// =======
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+           
 
         Minggu_RPS::create([
             'id_rps' => 'BAE1122105',
@@ -6829,10 +6795,10 @@ class MingguRpsSeeder extends Seeder
         // 1. RPS Kalkulus
         // 1. RPS Kewarganegaraan
         // 1. RPS Kimia Dasar
-<<<<<<< HEAD
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// <<<<<<< HEAD
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+// =======
+// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
 
 
     }
