@@ -573,8 +573,7 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
         //etika profesi
         RPS::create([
@@ -714,9 +713,7 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), SoftSkill (5%)',
         ]); 
 
-=======
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+
         //DI Praktikum
         /*RPS::create([
             'id_rps' => 'SID2032103',
@@ -963,10 +960,7 @@ class RpsSeeder extends Seeder
         'dosenPengampu' => '["111111111111116"]', // pak hendra dulu
         'detail_penilaian' => 'NA = UTS(35%),UAS(35%), Tugas (20%), soft skills (10%).',
     ]);
-<<<<<<< HEAD
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-=======
->>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+
     }
 
 }
