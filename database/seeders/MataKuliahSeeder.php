@@ -121,16 +121,76 @@ class MataKuliahSeeder extends Seeder
             ['BAE111', 'Bahasa Inggris I', 2, 2, 1, 2, null, "Wacana-wacana bahasa inggris yang berkaiatan dengan sains dan teknologi. Wacana-wacana yang berkaiatan dengan penggunaan
 
             gramatika bahasa.", "S1 Sistem Informasi"],
-            ['SIA204', 'Fungsi dan Proses Bisnis', 2, 3, 1, 1, 'SII103', null, "S1 Sistem Informasi"],
+            ['SIA204', 'Fungsi dan Proses Bisnis', 2, 3, 1, 1, 'SII103', "<p>Mata kuliah ini menjelaskan tentang:</p> 
+            <ol>
+            <li>Pengenalan fungsi dan proses bisnis</li>
+            <li>Proses bisnis umum dalam organisasi (Human Resource, Produksi, Marketing, dan Keuangan)</li>
+            <li>Identifikasi proses bisnis dalam perusahaan (pendidikan, manufaktur, kesehatan, pemerintahan, jasa, dan lain-lain</li>
+            <li>Analisis proses bisnis</li>
+            <li>Pemodelan proses bisnis</li>
+            <li>Desain dan rekayasa ulang proses bisnis</li></ol>"
+            , "S1 Sistem Informasi"],
             ['SIA205', 'Fungsi dan Proses Bisnis (Praktikum)', 2, 3, 2, 1, 'SII103', "<p>Mata kuliah ini menjelaskan tentang:&nbsp;</p><ol><li>Pengenalan tools untuk analisis dan pemodelan proses bisnis&nbsp;</li><li>Teknik pemodelan proses bisnis umum dalam organisasi (Human Resource, Produksi, Marketing, dan Keuangan)&nbsp;</li><li>Identifikasi proses bisnis dalam perusahaan (pendidikan, manufaktur, kesehatan, pemerintahan, jasa, dan lain-lain)&nbsp;</li><li>Analisis proses bisnis&nbsp;</li><li>Pemodelan proses bisnis&nbsp;</li><li>Desain dan rekayasa ulang proses bisnis</li>", "S1 Sistem Informasi"],
-            ['SID201', 'Basis Data', 3, 3, 1, 1, null, null, "S1 Sistem Informasi"],
-            ['SID203', 'Basis Data (Praktikum)', 2, 3, 2, 1, null, null, "S1 Sistem Informasi"],
-            ['SIR201', 'Pemrograman Berorientasi Objek', 2, 3, 1, 1, 'MAT101', null, "S1 Sistem Informasi"],
-            ['SIR203', 'Pemrograman Berorientasi Objek (Praktikum)', 1, 3, 2, 1, 'MAT101', null, "S1 Sistem Informasi"],
+            ['SID201', 'Basis Data', 3, 3, 1, 1, null, "<p>Mata kuliah ini menjelaskan tentang:</p><ol>
+            <li>Pengantar basis data, meliputi pengertian basis data, latar belakang penggunaan basis data, keuntungan basis data
+            <li>Entitas, Instance, Atribut, Tipe Data
+            <li>Atribut Mandatory, Optional, Volatile, Non Volatile, Unique, dan Primary
+            <li>Relasi
+            <li>Inheritance dan recursive modeling
+            <li>ER-Diagram
+            <li>Conceptual dan Physical Data Model
+            <li>Changes dan historical modeling
+            <li>Dependensi / Ketergantungan dalam relasi
+            <li>Perbaikan skema dan normalisasi
+            <li>Aljabar Relational dan Kalkulus Relational
+            <li>SQL : Data Definition Language
+            <li>SQL : Data Manipulation Language
+            <li>SQL : Trigger
+            <li>Ruang penyimpanan dan pengindeksan data
+            <li>Studi Kasus: Merancang ER model (CDM) dan relational model (PDM), evaluasi dengan normalisasi,
+            implementasi di DBMS
+            ", "S1 Sistem Informasi"],
+            ['SID203', 'Basis Data (Praktikum)', 2, 3, 2, 1, null, "<p>Mata kuliah ini membahas tentang:</p><ol>
+            <li>Pengantar basis data, meliputi pengertian basis data, latar belakang penggunaan basis data, keuntungan basis data</li>
+            <li>Entitas, Instance, Atribut, Tipe Data</li>
+            <li>Atribut Mandatory, Optional, Volatile, Non Volatile, Unique, dan Primary</li>
+            <li>Relasi</li>
+            <li>Inheritance dan recursive modeling</li>
+            <li>ER-Diagram</li>
+            <li>Conceptual Data Modelling (CDM) dan Physical Data Model (PDM)</li>
+            <li>Changes dan historical modeling</li>
+            <li>Dependensi / Ketergantungan dalam relasi</li>
+            <li>Perbaikan skema dan normalisasi</li>
+            <li>Aljabar Relational dan Kalkulus Relational</li>
+            <li>SQL : Data Definition Language (DDL)</li>
+            <li>SQL : Data Manipulation Language (DML)</li></ol>", "S1 Sistem Informasi"],
+            ['SIR201', 'Pemrograman Berorientasi Objek', 2, 3, 1, 1, 'MAT101', "<p>Mata kuliah ini menjelaskan tentang:</p><ol>
+            <li>Pengantar Pemrograman Berorientasi Objek</li>
+            <li>Basic expression</li>
+            <li>Functions</li>
+            <li>Class dan Object</li>
+            <li>Constuctor dan Destructor</li>
+            <li>Operator overloading dan konversi tipe data</li>
+            <li>Inheritance</li>
+            <li>Abstract Clas dan Interface</li>
+            <li>Polymorphism</li>
+            <li> Exception Handling</li>
+            <li>Stream input output</li></ol>", "S1 Sistem Informasi"],
+            ['SIR203', 'Pemrograman Berorientasi Objek (Praktikum)', 1, 3, 2, 1, 'MAT101', "<p>Mata kuliah ini menjelaskan tentang:</p><ol>
+            <li>Ekpresi dasar</li>
+            <li>Fungsi</li>
+            <li>Class dan Object</li>
+            <li>Constuctor dan Destructor</li>
+            <li>Operator overloading dan konversi tipe data</li>
+            <li>Inheritance</li>
+            <li>Abstract Class dan Interface</li>
+            <li>Polymorphism</li>
+            <li>Exception Handling</li>
+            <li>Stream input output</li></ol>", "S1 Sistem Informasi"],
             ['MAS234', 'Statistika Inferensi', 3, 3, 1, 1, 'MAS118', '<p>Mata kuliah ini menjelaskan tentang:&nbsp;</p><ol><li>Estimasi parameter didasarkan atas 1 atau 2 sampel&nbsp;</li><li>Pengujian hipotesis didasarkan atas 1 atau 2 sampel&nbsp;</li><li>Categorical association (Chi-squared test for association, Chi-squared test for goodness of fit, Sidenotes and an alternative to the Chi-squared test)&nbsp;</li><li>Analisis variance (ANOVA sederhana, Factorial ANOVA and MANOVA)&nbsp;</li><li>Analisis korelasi dan regression&nbsp;</li><li>Non-parametric tests</li><li>Analisis Faktor</li><li>Analisis Deskriminan</li>', "S1 Sistem Informasi"],
             ['SIJ201', 'Sistem Operasi', 2, 3, 1, 1, null, null, "S1 Sistem Informasi"],
             ['SIJ203', 'Sistem Operasi (Praktikum)', 1, 3, 2, 1, null, null, "S1 Sistem Informasi"],
-            ['MAL204', 'Matematika Diskrit', 2, 3, 1, 1, null, null, "S1 Sistem Informasi"],
+            ['MAL204', 'Matematika Diskrit', 2, 3, 1, 1, null, "<p>Logika, Himpunan, Relasi dan Fungsi, Kombinatorial dan Peluang Diskrit, Graph dan Pohon</p>", "S1 Sistem Informasi"],
             ['SII301', 'Analisis dan Perancangan Sistem', 2, 4, 1, 1, 'MAT101', "<p>Mata Kuliah ini menjelaskan tentang:</p><ol><li>Pengumpulan data untuk identifikasi kebutuhan bisnis</li><li>Strukturisasi dan validasi kebutuhan bisnis;</li><li>Penyusunan kebutuhan solusi TI berdasarkan kebutuhan bisnis</li><li>Penyelarasan kebutuhan TI berdasarkan kebutuhan bisnis</li><li>Identifikasi spesifikasi komponen sistem</li><li>Metode desain sistem</li><li>Desain proses</li><li>Desain database</li><li>Desain berorientasi objek</li><li>Pembangunan prototype</li><li>Manajemen keberlanjutan perencanaan TI dan proyek pembangunan desain</li></ol>", "S1 Sistem Informasi"],
             ['SII314', 'Analisis dan Perancangan Sistem (Praktikum)', 1, 4, 2, 1, 'MAT101', "<p>Mata kuliah ini membahas tentang:</p><ol><li>Definisi dan tahapan analisis sistem</li><li>Data Flow Diagram (DFD)/Diagram Alir Data (DAD)</li><li>BPMN</li><li>Use Case</li><li>Class Diagram</li><li>Sequence Diagram</li><li>ERD</li><li>Perancangan Antar Muka</li></ol>", "S1 Sistem Informasi"],
             ['SIC201', 'Pembelajaran Mesin', 2, 4, 1, 1, 'MAL103', 'Mata Kuliah MAS234', "S1 Sistem Informasi"],

@@ -1051,6 +1051,123 @@ class PustakaSeeder extends Seeder
             'judul' => 'Pengantar Kimia Organik forensik dan Hayati',
             'penerbit' => 'Penerbit ITB'
         ]);
+
+        //Fungsi dan Proses Bisnis
+        Pustaka::create([
+            'nama_penulis' => 'Mathias Weske',
+            'tahun' => 2007, 
+            'judul' => 'Business Process Management: Concepts, Languages, Architectures',
+            'penerbit' => 'Springer'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'J.Jeston and J.Nelis',
+            'tahun' => 2006, 
+            'judul' => 'Business Process Management, Practical Guidelines to Successful Implementation',
+            'penerbit' => 'Elsevier'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Mike Havey',
+            'tahun' => 2005, 
+            'judul' => 'Essential Business Process Modeling',
+            'penerbit' => 'O’Reilly.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Tore Dyba et al',
+            'tahun' => 2004, 
+            'judul' => ' Process Improvement in Practice',
+            'penerbit' => 'Kluwer Academic Publishers'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Margaret May',
+            'tahun' => 2003, 
+            'judul' => 'Business Process Management: Integration to Web-Enabled Environment',
+            'penerbit' => 'Prentice Hall.'
+        ],);
+
+        //Basis Data Teori & Praktikum
+        Pustaka::create([
+            'nama_penulis' => 'Raghu Ramakrishnan and Johannes Gehrke',
+            'tahun' => 2003, 
+            'judul' => 'Database Management Systems, 3rd edition',
+            'penerbit' => 'McGraw-Hill'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Ramez Elmasri and Shamkant B. Navathe',
+            'tahun' => 2000, 
+            'judul' => 'Fundamentals of Database Systems, 5th edition',
+            'penerbit' => 'Addison-Wesley'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Thomas Connolly, Carolyn Begg and Anne Strachan',
+            'tahun' => 2002, 
+            'judul' => 'Database Systems: A Practical Approach to Design, Implementation, and Management, 3rd edition',
+            'penerbit' => 'Addison-Wesley'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => null,
+            'tahun' => 2016, 
+            'judul' => 'Oracle Design and Programming with SQL',
+            'penerbit' => 'http://ilearning.oracle.com'
+        ],);
+
+        //Pemrograman Berorientasi Objek Teori & Praktikum
+        Pustaka::create([
+            'nama_penulis' => 'Barry J. Holmes and Daniel T. Joyce',
+            'tahun' => 2001, 
+            'judul' => 'Object-Oriented Programming With Java, Second Edition',
+            'penerbit' => 'Jones and Bartlett Publishers'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Liang, Y. Daniel.',
+            'tahun' => 2007, 
+            'judul' => 'Introduction to Java programming: comprehensive version, 6th ed.',
+            'penerbit' => 'Pearson Prentice Hall, New Jersey'
+        ],);
+
+        //Matematika Diskrit
+        Pustaka::create([
+            'nama_penulis' => 'Liu, JC',
+            'tahun' => 1995, 
+            'judul' => 'Element of Discrete Mathematics',
+            'penerbit' => 'McGraw-Hill'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Trembly, JP & Monohar, R',
+            'tahun' => 1988, 
+            'judul' => 'Discrete Mathematical Structure with Applications to Computer Science',
+            'penerbit' => 'McGraw-Hill'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Epp, Susanna S',
+            'tahun' => 2020, 
+            'judul' => 'Discrete Mathematics With Applications, 5th ed.',
+            'penerbit' => 'Cengage Learning, Inc.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Rosen, H. Kenneth',
+            'tahun' => 2019, 
+            'judul' => 'Discrete Mathematics and Its Applications, 8th ed.',
+            'penerbit' => 'McGraw-Hill Higher Education.'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Munir, RinaldiInformatika.',
+            'tahun' => null, 
+            'judul' => 'Matematika Diskrit, Edisi Ketiga',
+            'penerbit' => 'Informatika'
+        ],);
+
         
 // <<<<<<< HEAD
 // >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
