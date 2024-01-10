@@ -218,10 +218,71 @@ class PengampuSeeder extends Seeder
 
         //Desain Interaksi
         Pengampu::create([
-            'id_rps' => 'SII2082104',
+            'id_rps' => 'SII2082105',
             'kodeMK' => 'SII208',
             'nip' => '197812172005012001',
         ]);
+
+        //Desain Interaksi praktikum
+        Pengampu::create([
+            'id_rps' => 'SII2092105',
+            'kodeMK' => 'SII209',
+            'nip' => '197812172005012001',
+        ]);
+
+        //Manpro
+        Pengampu::create([
+            'id_rps' => 'MNG3102106',
+            'kodeMK' => 'MNG310',
+            'nip' => '197812172005012001',
+        ]);
+
+        //PAE
+        Pengampu::create([
+            'id_rps' => 'SIS3082106',
+            'kodeMK' => 'SIS308',
+            'nip' => '197812172005012001',
+        ]);
+
+        //MKB
+        Pengampu::create([
+            'id_rps' => 'MAS2352106',
+            'kodeMK' => 'MAS235',
+            'nip' => '197812172005012001',
+        ]);
+
+        //TKTI
+        
+        Pengampu::create([
+            'id_rps' => 'SII3232106',
+            'kodeMK' => 'SII323',
+            'nip' => '197812172005012001',
+        ]);
+
+        //TKI
+        
+        Pengampu::create([
+            'id_rps' => 'SII3222106',
+            'kodeMK' => 'SII322',
+            'nip' => '197812172005012001',
+        ]);
+
+        //METPEN
+        Pengampu::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMK' => 'PNT497',
+            'nip' => '197812172005012001',
+        ]);
+
+         //TSI
+         Pengampu::create([
+            'id_rps' => 'SII2142106',
+            'kodeMK' => 'SII214',
+            'nip' => '197812172005012001',
+        ]);
+
+
+
 
         //Jarkom Prak
         Pengampu::create([
