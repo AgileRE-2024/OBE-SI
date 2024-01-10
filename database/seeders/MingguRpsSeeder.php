@@ -6766,23 +6766,214 @@ class MingguRpsSeeder extends Seeder
         
 
 
-        //Desain Interaksi Praktikum
-        /*
+        //Metodologi Penelitian
+        
         Minggu_RPS::create([
-            'id_rps' => 'SII2092105',
-            'kodeMingguRPS' => 'SII209210514',
+            'id_rps' => 'PNT4972105',
+            'kodeMingguRPS' => 'PNT49721051',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            'bobot_nilai' => 'Proyek Web Sederhana: 100%',
-            'kodeSubCPMK' => 'Sub-CPMK0129',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
             'luring' => true,
             'penugasan' => '-',
-            'waktuPembelajaran' => "150 menit",
-            'pengalaman_belajar' => 'Kemampuan untuk memahami dan meyimpulkan materi yang diajarkan',
-            'bahan_kajian' => 'Normal Sentences Pattern',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu menjelaskan tentang konsep metodologi penelitian',
+            'bahan_kajian' => 'kontrak kuliah metodologi penelitian dan pengantar metodologi penelitian',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972105',
+            'kodeMingguRPS' => 'PNT49721052',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu menjelaskan tentang penelitian di bidang sistem informasi ',
+            'bahan_kajian' => 'a. Topik Penelitian bidang rekayasa sistem informasi 
+                                b. Topik penelitian bidang Business Intelligence',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972105',
+            'kodeMingguRPS' => 'PNT49721053',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu menjelaskan tentang penelitian di bidang sistem informasi ',
+            'bahan_kajian' => 'a. Topik Penelitian bidang rekayasa sistem informasi 
+                                b. Topik penelitian bidang Business Intelligence',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972105',
+            'kodeMingguRPS' => 'PNT49721054',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+        /*
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221057',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami kata ganti yang digunakan pada bahasa inggris',
+            'bahan_kajian' => 'Relative pronoun as subject, relative pronoun as object, possessive relative clause',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221058',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami kata ganti yang digunakan pada bahasa inggris',
+            'bahan_kajian' => 'Relative pronoun as subject, relative pronoun as object, possessive relative clause',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE11221059',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampumemahami penggunaan participle phrase pada bahasa inggris',
+            'bahan_kajian' => 'Participle phrase',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210510',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampumemahami penggunaan participle phrase pada bahasa inggris',
+            'bahan_kajian' => 'Participle phrase',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210511',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami pola yang digunakan untuk menulis esai dalam bahasa inggris',
+            'bahan_kajian' => 'Pattern of essay organization',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210512',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami pola yang digunakan untuk menulis esai dalam bahasa inggris',
+            'bahan_kajian' => 'Pattern of essay organization',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210513',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menuliskan abstrak berdasarkan aturan dalam bahasa inggris',
+            'bahan_kajian' => 'Abstract',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'BAE1122105',
+            'kodeMingguRPS' => 'BAE112210514',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menuliskan abstrak berdasarkan aturan dalam bahasa inggris',
+            'bahan_kajian' => 'Abstract',
         ]);
         */
 
