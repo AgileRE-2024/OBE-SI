@@ -6839,8 +6839,241 @@ class MingguRpsSeeder extends Seeder
                                 b. pengutipan yang tepat',
         ]);
 
-         /*manpro
+         //MKB
+         Minggu_RPS::create([
+            'id_rps' => 'MAS2352106',
+            'kodeMingguRPS' => 'MAS23521061',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Mampu mengidentifikasi ruang lingkup metode kuantitatif bisnis',
+            'bahan_kajian' => 'Pengantar Quantitative Method for Bisnis (QMB)',
+        ]);
+
         Minggu_RPS::create([
+            'id_rps' => 'MAS2352106',
+            'kodeMingguRPS' => 'MAS23521062',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Menghubungkan permasalah bisnis dengan persamaan matematis dan grafis',
+            'bahan_kajian' => '1. Linear Programming: solusi grafis 2. Linear Programming: simplex maximasi 3. Linear Programming: simplex minimasi',
+        ]);
+        Minggu_RPS::create([
+            'id_rps' => 'MAS2352106',
+            'kodeMingguRPS' => 'MAS23521063',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Menghubungkan permasalah bisnis dengan persamaan matematis dan grafis',
+            'bahan_kajian' => '1. Linear Programming: solusi grafis 2. Linear Programming: simplex maximasi 3. Linear Programming: simplex minimasi',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MAS2352106',
+            'kodeMingguRPS' => 'MAS23521064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "1 x 3 x 50",
+            'pengalaman_belajar' => 'Menghubungkan permasalah bisnis dengan persamaan matematis dan grafis',
+            'bahan_kajian' => '1. Linear Programming: solusi grafis 2. Linear Programming: simplex maximasi 3. Linear Programming: simplex minimasi',
+        ]);
+        /*
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "2 x 2 x 50",
+            'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
+            'bahan_kajian' => 'a. jenis jenis jurnal 
+                                b. pengutipan yang tepat',
+        ]);
+
+         */
+
+
+        /*Minggu_RPS::create([
             'id_rps' => 'MNG3102106',
             'kodeMingguRPS' => 'MNG31021061',
             'id_kriteria_penilaians' => '1',
