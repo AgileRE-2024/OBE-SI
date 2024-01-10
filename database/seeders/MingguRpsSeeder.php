@@ -6769,8 +6769,8 @@ class MingguRpsSeeder extends Seeder
         //Metodologi Penelitian
         
         Minggu_RPS::create([
-            'id_rps' => 'PNT4972105',
-            'kodeMingguRPS' => 'PNT49721051',
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721061',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
             'id_bentuk' => '1',
@@ -6786,8 +6786,8 @@ class MingguRpsSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'PNT4972105',
-            'kodeMingguRPS' => 'PNT49721052',
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721062',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
             'id_bentuk' => '1',
@@ -6804,8 +6804,8 @@ class MingguRpsSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'PNT4972105',
-            'kodeMingguRPS' => 'PNT49721053',
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721063',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
             'id_bentuk' => '1',
@@ -6822,8 +6822,8 @@ class MingguRpsSeeder extends Seeder
         ]);
 
         Minggu_RPS::create([
-            'id_rps' => 'PNT4972105',
-            'kodeMingguRPS' => 'PNT49721054',
+            'id_rps' => 'PNT4972106',
+            'kodeMingguRPS' => 'PNT49721064',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
             'id_bentuk' => '1',
@@ -6838,42 +6838,44 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'a. jenis jenis jurnal 
                                 b. pengutipan yang tepat',
         ]);
+
+         /*manpro
+        Minggu_RPS::create([
+            'id_rps' => 'MNG3102106',
+            'kodeMingguRPS' => 'MNG31021061',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3 x 50",
+            'pengalaman_belajar' => 'Mampu menjelaskan definisi proyek, manajemen proyek dan peran Manajemen Proyek secara umum Mampu menjelaskan fitur-fitur pada software untuk manajemen proyek',
+            'bahan_kajian' => 'Pengenalan manajemen proyek',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'MNG3102106',
+            'kodeMingguRPS' => 'MNG31021062',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => '5',
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "3 x 50",
+            'pengalaman_belajar' => 'Mampu menganalisis proses yang dibutuhkan dan hal-hal apa saja yang perlu diintegrasikan agar proyek dapat berjalan dengan baik dan lancar',
+            'bahan_kajian' => 'Mengelola proyek secara terintegrasi dan berkelanjutan dari tahapan perencanaan hingga penyelesaian proyek (Project Integration Management)',
+        ]);
+
+
         /*
-
-        Minggu_RPS::create([
-            'id_rps' => 'BAE1122105',
-            'kodeMingguRPS' => 'BAE11221057',
-            'id_kriteria_penilaians' => '1',
-            'kodePenilaian' => '0001',
-            'id_bentuk' => '1',
-            'id_media' => '5',
-            'id_metode' => '3',
-            'bobot_nilai' => '5',
-            'kodeSubCPMK' => null,
-            'luring' => true,
-            'penugasan' => '-',
-            'waktuPembelajaran' => "1 x 3 x 50",
-            'pengalaman_belajar' => 'Mahasiswa mampu memahami kata ganti yang digunakan pada bahasa inggris',
-            'bahan_kajian' => 'Relative pronoun as subject, relative pronoun as object, possessive relative clause',
-        ]);
-
-        Minggu_RPS::create([
-            'id_rps' => 'BAE1122105',
-            'kodeMingguRPS' => 'BAE11221058',
-            'id_kriteria_penilaians' => '1',
-            'kodePenilaian' => '0001',
-            'id_bentuk' => '1',
-            'id_media' => '5',
-            'id_metode' => '3',
-            'bobot_nilai' => '5',
-            'kodeSubCPMK' => null,
-            'luring' => true,
-            'penugasan' => '-',
-            'waktuPembelajaran' => "1 x 3 x 50",
-            'pengalaman_belajar' => 'Mahasiswa mampu memahami kata ganti yang digunakan pada bahasa inggris',
-            'bahan_kajian' => 'Relative pronoun as subject, relative pronoun as object, possessive relative clause',
-        ]);
-
         Minggu_RPS::create([
             'id_rps' => 'BAE1122105',
             'kodeMingguRPS' => 'BAE11221059',
