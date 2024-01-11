@@ -285,13 +285,30 @@
             @foreach ($minggu_rps_list as $minggu_rps)
                 <tr>
                     <td class="td-rps">{{ $i + 1 }}</td>
-                    <td class="td-rps">{{ $minggu_rps->kodeSubCPMK }}</td>
+                    <td scope="td-rps">{{ $minggu_rps->kodeSubCPMK }}</td>
                     <td class="td-rps">{{ $minggu_rps->bahan_kajian }}</td>
-                    <td class="td-rps">{{ $minggu_rps->temp_bentuk }}</td>
-                    <td class="td-rps">{{ $minggu_rps->temp_media }}</td>
+                    <td scope="row">
+                        <div class="col">
+                            @if($minggu_rps->id_bentuk)
+                            <p>Bentuk: {{ $minggu_rps->Bentuk->nama_bentuk }}</p>
+                            @endif
+                            @if($minggu_rps->id_metode)
+                            <p>Metode: {{ $minggu_rps->Metode->nama_metode }}</p>
+                            @endif
+                            @if($minggu_rps->penugasan)
+                            <p>Penugasan: {{ $minggu_rps->penugasan }}</p>
+                            @endif
+                            @if($minggu_rps->luring === 1)
+                            <p>Luring</p>
+                            @elseif($minggu_rps->luring === 0)
+                            <p>Daring</p>
+                            @endif
+                        </div>
+                    </td>
+                    <td scope="td-rps">{{ $minggu_rps->Media->nama_media ?? '' }}</td>
                     <td class="td-rps">{{ $minggu_rps->waktuPembelajaran }}</td>
                     <td class="td-rps">{{ $minggu_rps->pengalaman_belajar }}</td>
-                    <td class="td-rps">{{ $minggu_rps->temp_kriteria_penilaian }}</td>
+                    <td scope="td-rps">{{ $minggu_rps->Kriteria_Penilaian->deskripsi_kriteria_penilaians ?? '' }}</td>
                     <td class="td-rps">{{ $minggu_rps->bobot_nilai }}</td>
                     <td class="td-rps">
                         {{ $minggu_pustaka->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->first()->id_pustaka ?? '-' }}
