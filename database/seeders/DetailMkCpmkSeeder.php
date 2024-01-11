@@ -286,6 +286,116 @@ class DetailMkCpmkSeeder extends Seeder
             'kodeCPMK' => 'CPMK049',
         ]);
 
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'ETT301',
+            'kodeCPMK' => 'CPMK050',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SII323',
+            'kodeCPMK' => 'CPMK051',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'PNT497',
+            'kodeCPMK' => 'CPMK052',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MNG206',
+            'kodeCPMK' => 'CPMK053',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MAS235',
+            'kodeCPMK' => 'CPMK054',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SII214',
+            'kodeCPMK' => 'CPMK055',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SII322',
+            'kodeCPMK' => 'CPMK056',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SIS308',
+            'kodeCPMK' => 'CPMK057',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MNG310',
+            'kodeCPMK' => 'CPMK058',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SIC401',
+            'kodeCPMK' => 'CPMK059',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SIC402',
+            'kodeCPMK' => 'CPMK060',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SIR301',
+            'kodeCPMK' => 'CPMK061',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MAS324',
+            'kodeCPMK' => 'CPMK062',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SII404',
+            'kodeCPMK' => 'CPMK063',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SIC404',
+            'kodeCPMK' => 'CPMK064',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SII408',
+            'kodeCPMK' => 'CPMK065',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'MNG402',
+            'kodeCPMK' => 'CPMK066',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'SII317',
+            'kodeCPMK' => 'CPMK067',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'PNT499',
+            'kodeCPMK' => 'CPMK068',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'KLT301',
+            'kodeCPMK' => 'CPMK069',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'KNT401',
+            'kodeCPMK' => 'CPMK070',
+        ]);
+
+        Detail_MK_CPMK::create([
+            'kodeMK' => 'PHP103',
+            'kodeCPMK' => 'CPMK071',
+        ]);
+
         // Detail_MK_CPMK::create([
         //     'kodeMK' => 'SII103',
         //     'kodeCPMK' => 'CPMK011',
