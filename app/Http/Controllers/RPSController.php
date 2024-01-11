@@ -82,10 +82,16 @@ class RPSController extends Controller
         $dosen = User::where('nip', $rps->nip)->first();
         $kodePengampu = Pengampu::all()->where('id_rps', $rps->id_rps)->pluck('nip')->toArray();
         $pengampu = User::whereIn('nip', $kodePengampu)->distinct()->get();
+        $kodeMingguRpsList = Minggu_RPS::all()->where('id_rps', $idRPS)->pluck('kodeMingguRPS')->toArray();
+        $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
+        $kodeCPLList = CPMK::whereIn('kodeCPMK', $kodeCPMKList)->get()->pluck('kodeCPL')->toArray();
+        $list_cpl = CPL_Prodi::whereIn('kodeCPL', $kodeCPLList)->distinct()->get();
 
         $view = view('content.eksporRPS', [
             'title' => 'RPS',
-            'rps_list' => RPS::where("id_rps", $idRPS),
+            'kodeMK' => $kodeMK,
+            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
+            'title' => 'RPS',
             'rps' => RPS::where('id_rps', $idRPS)->first(),
             'dosen' => $dosen,
             'minggu_rps_list' => Minggu_RPS::where("id_rps", $idRPS)->get(),
@@ -96,12 +102,13 @@ class RPSController extends Controller
             'kodeRPS' => $idRPS,
             'teknik_penilaian_list' => Teknik_Penilaian::where("id_rps", $idRPS),
             'detail_rps_list' => Detail_RPS_Penilaian::all(),
+            'minggu_pustaka' => Detail_Pustaka_Minggurps::whereIn('kodeMingguRPS', $kodeMingguRpsList)->get(),
             'list_prasyarat' => $prasyarat,
-            'minggu_pustaka' => Detail_Pustaka_Minggurps::all(),
             'penanggung_jawab' => User::where('nip', $rps->penanggungJawab)->first(),
             'pemeriksa' => User::where('nip', $rps->diperiksa_oleh)->first(),
             'persetujuan' => User::where('nip', $rps->disetujui_oleh)->first(),
-            'dosen_pengampu' => $pengampu
+            'dosen_pengampu' => $pengampu,
+            'list_cpl' => $list_cpl
         ]);
 
         $date_time = date('Y_m_d_H_i_s');
@@ -134,6 +141,10 @@ class RPSController extends Controller
         $prasyarat = Mata_Kuliah::whereIn('kodeMK', $kodePrasyaratList)->distinct()->get();
         $kodePengampu = Pengampu::all()->where('id_rps', $rps->id_rps)->pluck('nip')->toArray();
         $pengampu = User::whereIn('nip', $kodePengampu)->distinct()->get();
+        $kodeMingguRpsList = Minggu_RPS::all()->where('id_rps', $idRPS)->pluck('kodeMingguRPS')->toArray();
+        $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
+        $kodeCPLList = CPMK::whereIn('kodeCPMK', $kodeCPMKList)->get()->pluck('kodeCPL')->toArray();
+        $list_cpl = CPL_Prodi::whereIn('kodeCPL', $kodeCPLList)->distinct()->get();
 
         return view('tampilRPS', [
             'kodeMK' => $kodeMK,
@@ -149,12 +160,13 @@ class RPSController extends Controller
             'kodeRPS' => $idRPS,
             'teknik_penilaian_list' => Teknik_Penilaian::where("id_rps", $idRPS),
             'detail_rps_list' => Detail_RPS_Penilaian::all(),
-            'minggu_pustaka' => Detail_Pustaka_Minggurps::all(),
+            'minggu_pustaka' => Detail_Pustaka_Minggurps::whereIn('kodeMingguRPS', $kodeMingguRpsList)->get(),
             'list_prasyarat' => $prasyarat,
             'penanggung_jawab' => User::where('nip', $rps->penanggungJawab)->first(),
             'pemeriksa' => User::where('nip', $rps->diperiksa_oleh)->first(),
             'persetujuan' => User::where('nip', $rps->disetujui_oleh)->first(),
             'dosen_pengampu' => $pengampu,
+            'list_cpl' => $list_cpl
         ]);
     }
 
