@@ -18,9 +18,13 @@ class MingguRpsSeeder extends Seeder
         //FPB Praktikum
         Minggu_RPS::create([
             'id_rps' => 'SIA2052103',
-            'kodeMingguRPS' => '11',
+            'kodeMingguRPS' => 'SIA20521030',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
@@ -31,9 +35,13 @@ class MingguRpsSeeder extends Seeder
 
         Minggu_RPS::create([
             'id_rps' => 'SIA2052103',
-            'kodeMingguRPS' => '12',
+            'kodeMingguRPS' => 'SIA20521031',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
@@ -45,9 +53,13 @@ class MingguRpsSeeder extends Seeder
         //Statistika Inferensi
         Minggu_RPS::create([
             'id_rps' => 'MAS2342103',
-            'kodeMingguRPS' => '21',
+            'kodeMingguRPS' => 'MAS23421030',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
@@ -58,9 +70,13 @@ class MingguRpsSeeder extends Seeder
 
         Minggu_RPS::create([
             'id_rps' => 'MAS2342103',
-            'kodeMingguRPS' => '22',
+            'kodeMingguRPS' => 'MAS23421031',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
@@ -72,9 +88,13 @@ class MingguRpsSeeder extends Seeder
         //Statistika Deskriptif
         Minggu_RPS::create([
             'id_rps' => 'MAS1182102',
-            'kodeMingguRPS' => '31',
+            'kodeMingguRPS' => 'MAS11821020',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
@@ -85,9 +105,13 @@ class MingguRpsSeeder extends Seeder
 
         Minggu_RPS::create([
             'id_rps' => 'MAS1182102',
-            'kodeMingguRPS' => '32',
+            'kodeMingguRPS' => 'MAS11821021',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
@@ -99,9 +123,13 @@ class MingguRpsSeeder extends Seeder
         //Matriks dan Transformasi Linier
         Minggu_RPS::create([
             'id_rps' => 'MAL1032102',
-            'kodeMingguRPS' => '41',
+            'kodeMingguRPS' => 'MAL10321020',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
@@ -112,9 +140,13 @@ class MingguRpsSeeder extends Seeder
 
         Minggu_RPS::create([
             'id_rps' => 'MAL1032102',
-            'kodeMingguRPS' => '42',
+            'kodeMingguRPS' => 'MAL10321021',
             'id_kriteria_penilaians' => '1',
             'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '4',
+            'id_metode' => '3',
+            'bobot_nilai' => '-',
             'kodeSubCPMK' => 'Sub-CPMK0111',
             'luring' => true,
             'penugasan' => '',
