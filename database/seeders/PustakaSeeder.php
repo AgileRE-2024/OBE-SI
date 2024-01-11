@@ -366,6 +366,14 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'Dirjen Binbaga Budha, Kemenag, Jakarta'
         ],);
 
+        Pustaka::create([
+            'judul' => 'Dhammapada Intisari Ajaran Sang Buddha'
+        ],);
+
+        Pustaka::create([
+            'judul' => 'Hand-Out'
+        ],);
+
         //Agama Katolik I
         Pustaka::create([
             'nama_penulis' => 'Pandin, M.G.R.,',
