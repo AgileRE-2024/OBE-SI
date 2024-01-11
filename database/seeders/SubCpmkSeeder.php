@@ -94,6 +94,27 @@ class SubCpmkSeeder extends Seeder
             ['kodeSubCPMK' => 'Sub-CPMK0228', 'deskripsiSubCPMK' => 'Mahasiswa dapat merancang antarmuka sistem sesuai dengan hasil analisis kebutuhan.', 'kodeCPMK' => 'CPMK014'],
             ['kodeSubCPMK' => 'Sub-CPMK0229', 'deskripsiSubCPMK' => 'Kompilasi', 'kodeCPMK' => 'CPMK014'],
 
+            //Agama Katolik
+            ['kodeSubCPMK' => 'Sub-CPMK0230', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mendiskusikan (A2) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK002'],
+            ['kodeSubCPMK' => 'Sub-CPMK0231', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mengaitkan (A4) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK002'],
+            
+            //Agama Protestan
+            ['kodeSubCPMK' => 'Sub-CPMK0232', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mendiskusikan (A2) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK001'],
+            
+            // Agama Budha
+            ['kodeSubCPMK' => 'Sub-CPMK0233', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mendiskusikan (A2) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK005'],
+            
+            //Agama Hindu
+            ['kodeSubCPMK' => 'Sub-CPMK0234', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mendiskusikan (A2) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK004'],
+            ['kodeSubCPMK' => 'Sub-CPMK0235', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mengaitkan (A4) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK004'],
+            
+            // Agama Budha
+            ['kodeSubCPMK' => 'Sub-CPMK0236', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mendiskusikan (A2) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK006'],
+            
+            //Agama Islam
+            ['kodeSubCPMK' => 'Sub-CPMK0237', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mendiskusikan (A2) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK003'],
+            ['kodeSubCPMK' => 'Sub-CPMK0238', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mengaitkan (A4) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK003'],
+            
             //047
             // 1. RPS Bahasa Indonesia 
             // 1. RPS Biologi Dasar
