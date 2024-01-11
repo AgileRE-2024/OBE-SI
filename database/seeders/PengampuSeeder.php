@@ -352,8 +352,6 @@ class PengampuSeeder extends Seeder
             'nip' => '197102111997021001', // pak hendra dulu
         ]);
 
-// <<<<<<< HEAD
-// <<<<<<< HEAD
         //etika profesi
         Pengampu::create([
             'id_rps' => 'ETT3012106',
@@ -449,10 +447,6 @@ class PengampuSeeder extends Seeder
             'nip' => '198410272010122005', 
         ]);
 
-
-// =======
-// =======
-// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
         //047
         // 1. RPS Bahasa Indonesia 
         Pengampu::create([
@@ -497,9 +491,43 @@ class PengampuSeeder extends Seeder
             'kodeMK' => 'BAE112',
             'nip' => '197102111997021001', // pak hendra dulu
         ]);
-// <<<<<<< HEAD
-// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-// =======
-// >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
+
+        // RPS Agama
+        Pengampu::create([
+            'id_rps' => 'AGP1012101',
+            'kodeMK' => 'AGP101',
+            'nip' => '111111111111117', 
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'AGK1012101',
+            'kodeMK' => 'AGK101',
+            'nip' => '111111111111117', 
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'AGC1012101',
+            'kodeMK' => 'AGC101',
+            'nip' => '111111111111117', 
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'AGB1012101',
+            'kodeMK' => 'AGB101',
+            'nip' => '111111111111117', 
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'AGH1012101',
+            'kodeMK' => 'AGK101',
+            'nip' => '111111111111117', 
+        ]);
+
+        Pengampu::create([
+            'id_rps' => 'AGI1012101',
+            'kodeMK' => 'AGI101',
+            'nip' => '111111111111117', 
+        ]);
+
     }
 }
