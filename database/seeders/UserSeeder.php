@@ -432,6 +432,15 @@ class UserSeeder extends Seeder
             'status' => "Aktif Bekerja"
         ]);
         
-
+        User::create([
+            'nip' => '111111111111117', //dummy
+            'jabatanDosen' => 'Dosen',
+            'namaProdi' => 'S1 Sistem Informasi',
+            'namaDosen' => 'Tim MKWU',
+            'password' => bcrypt('coba1234'), //password coba1234
+            'email' => '111111111111117@fst.unair.ac.id', //dummy
+            'role' => 0,
+            'status' => "Aktif Bekerja"
+        ]);
     }
 }
