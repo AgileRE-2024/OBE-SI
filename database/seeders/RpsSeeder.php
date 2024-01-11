@@ -402,9 +402,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '197102111997021001',
-            'penanggungJawab' => '197102111997021001',
-            'dosenPengampu' => '["197102111997021001"]',
+            'dibuat_oleh' => '111111111111117',
+            'penanggungJawab' => '111111111111117',
+            'dosenPengampu' => '["111111111111117"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -417,9 +417,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '197102111997021001',
-            'penanggungJawab' => '197102111997021001',
-            'dosenPengampu' => '["197102111997021001"]',
+            'dibuat_oleh' => '111111111111117',
+            'penanggungJawab' => '111111111111117',
+            'dosenPengampu' => '["111111111111117"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -432,9 +432,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '197102111997021001',
-            'penanggungJawab' => '197102111997021001',
-            'dosenPengampu' => '["197102111997021001"]',
+            'dibuat_oleh' => '111111111111117',
+            'penanggungJawab' => '111111111111117',
+            'dosenPengampu' => '["111111111111117"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -447,9 +447,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '197102111997021001',
-            'penanggungJawab' => '197102111997021001',
-            'dosenPengampu' => '["197102111997021001"]',
+            'dibuat_oleh' => '111111111111117',
+            'penanggungJawab' => '111111111111117',
+            'dosenPengampu' => '["111111111111117"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -462,9 +462,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '197102111997021001',
-            'penanggungJawab' => '197102111997021001',
-            'dosenPengampu' => '["197102111997021001"]',
+            'dibuat_oleh' => '111111111111117',
+            'penanggungJawab' => '111111111111117',
+            'dosenPengampu' => '["111111111111117"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -477,9 +477,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '197102111997021001',
-            'penanggungJawab' => '197102111997021001',
-            'dosenPengampu' => '["197102111997021001"]',
+            'dibuat_oleh' => '111111111111117',
+            'penanggungJawab' => '111111111111117',
+            'dosenPengampu' => '["111111111111117"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
