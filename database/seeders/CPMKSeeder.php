@@ -16,6 +16,42 @@ class CPMKSeeder extends Seeder
      */
     public function run()
     {
+        CPMK::create([
+            'kodeCPMK' => 'CPMK001',
+            'deskripsiCPMK' => 'Setelah mengikuti perkuliahan, mahasiswa dapat : a). mengimplementasikan berbagai macam cara memperkuat Iman dan Takwa, b). mengembangkan akhlak mulia serta c). menjadikan ajaran Kristen Protestan sebagai landasan berfikir & berperilaku dalam pengembangan profesi.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK002',
+            'deskripsiCPMK' => 'Setelah mengikuti perkuliahan, mahasiswa dapat : a). mengimplementasikan berbagai macam cara memperkuat Iman dan Takwa, b). mengembangkan akhlak mulia serta c). menjadikan ajaran Katolik sebagai landasan berfikir & berperilaku dalam pengembangan profesi.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK003',
+            'deskripsiCPMK' => 'Setelah mengikuti perkuliahan, mahasiswa dapat : a). mengimplementasikan berbagai macam cara memperkuat Iman dan Takwa, b). mengembangkan akhlak mulia serta c). menjadikan ajaran Islam sebagai landasan berfikir & berperilaku dalam pengembangan profesi.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK004',
+            'deskripsiCPMK' => 'Setelah mengikuti perkuliahan, mahasiswa dapat : a). mengimplementasikan berbagai macam cara memperkuat Iman dan Takwa, b). mengembangkan akhlak mulia serta c). menjadikan ajaran Hindu sebagai landasan berfikir & berperilaku dalam pengembangan profesi.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK005',
+            'deskripsiCPMK' => 'Setelah mengikuti perkuliahan, mahasiswa dapat : a). mengimplementasikan berbagai macam cara memperkuat Iman dan Takwa, b). mengembangkan akhlak mulia serta c). menjadikan ajaran Budha sebagai landasan berfikir & berperilaku dalam pengembangan profesi.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK006',
+            'deskripsiCPMK' => 'Setelah mengikuti perkuliahan, mahasiswa dapat : a). mengimplementasikan berbagai macam cara memperkuat Iman dan Takwa, b). mengembangkan akhlak mulia serta c). menjadikan ajaran Konghucu sebagai landasan berfikir & berperilaku dalam pengembangan profesi.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
         // CPMK::create([
         //     'kodeCPMK' => 'CPMK011',
         //     'deskripsiCPMK' => 'Mampu memahami konsep dasar sistem informasi',
