@@ -85,7 +85,7 @@ class MataKuliahSeeder extends Seeder
             Kinematika dan Dinamika gerak benda,
             Usaha dan Energi, Sistem Partikel dan Momentum, Mekanika Fluida, Kesetimbangan Statik Benda Tegar, Rotasi, Gravitasi, Osilasi,
             Gelombang dan Bunyi, Temperatur dan Termodinamika.", "S1 Sistem Informasi"],
-            // ['PHP103', 'Logika dan Pemikiran Kritis', 2, 2, 1, 1, null, null, "S1 Sistem Informasi"],
+            ['PHP103', 'Logika dan Pemikiran Kritis', 2, 2, 1, 1, null, null, "S1 Sistem Informasi"],
             ['MAL103', 'Matriks dan Transformasi Linier', 2, 2, 1, 1, null, '<p>Mata kuliah ini menjelaskan tentang:&nbsp;</p><ol><li>Persamaan Linier, Aljabar Linier&nbsp;</li><li>Matriks: Sifat-sifat matriks, Determinan Matriks, Inverse matriks, Operasi Baris Elementer</li><li>Analisis varians satu arah (Anova sederhana) dan Analisis varians dua arah</li><li>Sistem Persamaan Linier</li><li>Vektor</li><li>Eigen Value, Eigen Vektor</li><li>Transformasi Linier</li>', "S1 Sistem Informasi"],
             ['MAT101', 'Algoritma dan Pemrograman', 3, 2, 1, 1, null, "Mahasiswa mendapatkan materi mengenai:
 
