@@ -1124,6 +1124,21 @@ class PustakaSeeder extends Seeder
             'penerbit' => 'http://ilearning.oracle.com'
         ],);
 
+        //Pembangunan Perangkat Lunak
+        Pustaka::create([
+            'nama_penulis' => 'Raharjana, Indra Kharisma',
+            'tahun' => 2017, 
+            'judul' => 'Pengembangan Sistem Informasi Menggunakan Metodologi Agile',
+            'penerbit' => 'Deepublish'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Roger R. Pressman',
+            'tahun' => 2001, 
+            'judul' => 'Software Enginering : A Practioners Approach',
+            'penerbit' => 'RS. Presmann and Assosiation'
+        ],);
+
         //Pemrograman Berorientasi Objek Teori & Praktikum
         Pustaka::create([
             'nama_penulis' => 'Barry J. Holmes and Daniel T. Joyce',

@@ -208,7 +208,19 @@ class MataKuliahSeeder extends Seeder
             ['MNW401', 'Kewirausahaan dan Bisnis Sistem Informasi', 2, 5, 1, 1, null, "<p>Mata kuliah ini membahas tentang:</p><ol><li>Menjadi Wirausaha</li><li>Berpikir Perubahan dan Kreatif</li><li>Berorientasi pada Tindakan</li><li>Pengambilan Resiko dan Kepemimpinan</li><li>Etika Bisnis</li><li>Faktor “X”</li><li>Mencari Gagasan Usaha</li><li>Pemasaran</li><li>Manajemen Keuangan dan Pembiayaan Usaha</li><li>Memulai Sebuah Usaha Baru</li><li>Perencanaan Bisnis dan Contoh Rencana Bisnis</li></ol>", "S1 Sistem Informasi"],
             ['SII208', 'Desain Interaksi', 2, 5, 1, 1, 'SII301', "<p>Mata kuliah ini membahas tentang:</p><ol><li>Pengantar desain interaksi</li><li>Konsep interaksi</li><li>Aspek Cognitive</li><li>Interaksi Sosial</li><li>Interaksi Emosional</li><li>Sistem Interaktif</li><li>Data Gathering, analysis, interpretation, and presentation</li><li>Analisa kebutuhan</li><li>Designing, prototyping, and construction</li><li>Evaluasi</li></ol>", "S1 Sistem Informasi"],
             ['SII209', 'Desain Interaksi (Praktikum)', 1, 5, 2, 1, 'SII301', null, "S1 Sistem Informasi"],
-            ['SII318', 'Pembangunan Perangkat Lunak', 2, 5, 1, 1, 'SII301', null, "S1 Sistem Informasi"],
+            ['SII318', 'Pembangunan Perangkat Lunak', 2, 5, 1, 1, 'SII301', 
+            "<p>Mata kuliah ini membahas tentang :</p><ol>
+            <li>Konsep dan Isu dalam Desain dan Pembangunan Perangkat Lunak;</li>
+            <li>Manajemen Kebutuhan Perangkat Lunak;</li>
+            <li>Strategi Pengembangan Perangkat Lunak;</li>
+            <li>Strategi Implementasi Desain Perangkat Lunak;</li>
+            <li>Monitoring Pembangunan Perangkat Lunak;</li>
+            <li>Pengujian Perangkat Lunak;</li>
+            <li>Penyusunan Dokumen Pendukung Perangkat Lunak;</li>
+            <li>Serah Terima Perangkat Lunak (Instalasi, Konfigurasi, Training, & Support).</li>
+            Secara berkelompok mahasiswa diminta untuk membangun perangkat lunak dengan studi kasus tertentu (project based). Pembahasan
+            dan penugasan proyek perangkat lunak ini terintegrasi dengan mata kuliah Pembangunan Perangkat Lunak (Praktikum).</ol>"
+            , "S1 Sistem Informasi"],
             ['SII319', 'Pembangunan Perangkat Lunak (Praktikum)', 1, 5, 2, 1, 'SII301', null, "S1 Sistem Informasi"],
             ['SID303', 'Analisis dan Visualisasi Data', 2, 5, 1, 1, 'SIC201', null, "S1 Sistem Informasi"],
             ['SID304', 'Analisis dan Visualisasi Data (Praktikum)', 1, 5, 2, 1, 'SIC201', null, "S1 Sistem Informasi"],
