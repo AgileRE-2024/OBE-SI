@@ -15,21 +15,21 @@ class DetailMkCpmkSeeder extends Seeder
      */
     public function run()
     {
-        Detail_MK_CPMK::create([
-            'kodeMK' => 'SII103',
-            'kodeCPMK' => 'CPMK011',
-        ]);
-        Detail_MK_CPMK::create([
-            'kodeMK' => 'PHP103',
-            'kodeCPMK' => 'CPMK011',
-        ]);
-        Detail_MK_CPMK::create([
-            'kodeMK' => 'SII103',
-            'kodeCPMK' => 'CPMK012',
-        ]);
-        Detail_MK_CPMK::create([
-            'kodeMK' => 'SII103',
-            'kodeCPMK' => 'CPMK013',
-        ]);
+        // Detail_MK_CPMK::create([
+        //     'kodeMK' => 'SII103',
+        //     'kodeCPMK' => 'CPMK011',
+        // ]);
+        // Detail_MK_CPMK::create([
+        //     'kodeMK' => 'PHP103',
+        //     'kodeCPMK' => 'CPMK011',
+        // ]);
+        // Detail_MK_CPMK::create([
+        //     'kodeMK' => 'SII103',
+        //     'kodeCPMK' => 'CPMK012',
+        // ]);
+        // Detail_MK_CPMK::create([
+        //     'kodeMK' => 'SII103',
+        //     'kodeCPMK' => 'CPMK013',
+        // ]);
     }
 }

@@ -16,137 +16,137 @@ class CPMKSeeder extends Seeder
      */
     public function run()
     {
-        CPMK::create([
-            'kodeCPMK' => 'CPMK011',
-            'deskripsiCPMK' => 'Mampu memahami konsep dasar sistem informasi',
-            'kodeCPL' => 'CPL-01'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK011',
+        //     'deskripsiCPMK' => 'Mampu memahami konsep dasar sistem informasi',
+        //     'kodeCPL' => 'CPL-01'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK012',
-            'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
-            'kodeCPL' => 'CPL-02'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK012',
+        //     'deskripsiCPMK' => 'Mampu menganalisis proses dan sistem organisasi',
+        //     'kodeCPL' => 'CPL-02'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK013',
-            'deskripsiCPMK' => 'Mampu menilai proses dan sistem pengelolaan data pada organisas',
-            'kodeCPL' => 'CPL-01'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK013',
+        //     'deskripsiCPMK' => 'Mampu menilai proses dan sistem pengelolaan data pada organisas',
+        //     'kodeCPL' => 'CPL-01'
+        // ]);
 
         CPMK::create([
             'kodeCPMK' => 'CPMK014',
             'deskripsiCPMK' => 'Mampu menilai peran sistem informasi dalam memberikan rekomendasi pengambilan keputusan di organisasi',
-            'kodeCPL' => 'CPL-01'
+            'kodeCPL' => 'LO-01'
         ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK021',
-            'deskripsiCPMK' => 'Mampu merancang database',
-            'kodeCPL' => 'CPL-02'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK021',
+        //     'deskripsiCPMK' => 'Mampu merancang database',
+        //     'kodeCPL' => 'CPL-02'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK022',
-            'deskripsiCPMK' => 'Mampu menggunakan database',
-            'kodeCPL' => 'CPL-02'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK022',
+        //     'deskripsiCPMK' => 'Mampu menggunakan database',
+        //     'kodeCPL' => 'CPL-02'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK023',
-            'deskripsiCPMK' => ' Mampu mengolah data dengan alat dan teknik pengolahan data',
-            'kodeCPL' => 'CPL-02'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK023',
+        //     'deskripsiCPMK' => ' Mampu mengolah data dengan alat dan teknik pengolahan data',
+        //     'kodeCPL' => 'CPL-02'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK024',
-            'deskripsiCPMK' => 'Mampu menganalisa data dengan alat dan teknik pengolahan data',
-            'kodeCPL' => 'CPL-02'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK024',
+        //     'deskripsiCPMK' => 'Mampu menganalisa data dengan alat dan teknik pengolahan data',
+        //     'kodeCPL' => 'CPL-02'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK031',
-            'deskripsiCPMK' => 'Mampu memahami berbagai metodologi pengembangan sistem',
-            'kodeCPL' => 'CPL-03'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK031',
+        //     'deskripsiCPMK' => 'Mampu memahami berbagai metodologi pengembangan sistem',
+        //     'kodeCPL' => 'CPL-03'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK032',
-            'deskripsiCPMK' => 'Mampu menggunakan berbagai alat pengembangan sistem',
-            'kodeCPL' => 'CPL-03'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK032',
+        //     'deskripsiCPMK' => 'Mampu menggunakan berbagai alat pengembangan sistem',
+        //     'kodeCPL' => 'CPL-03'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK033',
-            'deskripsiCPMK' => 'Mampu menganalisa kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi',
-            'kodeCPL' => 'CPL-03'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK033',
+        //     'deskripsiCPMK' => 'Mampu menganalisa kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi',
+        //     'kodeCPL' => 'CPL-03'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK041',
-            'deskripsiCPMK' => 'Mampu membuat perencanaan infrastruktur TI, arsitektur jaringan, serta layanan fisik/cloud',
-            'kodeCPL' => 'CPL-04'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK041',
+        //     'deskripsiCPMK' => 'Mampu membuat perencanaan infrastruktur TI, arsitektur jaringan, serta layanan fisik/cloud',
+        //     'kodeCPL' => 'CPL-04'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK042',
-            'deskripsiCPMK' => 'Mampu menganalisis konsep identifikasi, otentikasi, otorisasi akses dalam konteks keamanan sistem',
-            'kodeCPL' => 'CPL-04'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK042',
+        //     'deskripsiCPMK' => 'Mampu menganalisis konsep identifikasi, otentikasi, otorisasi akses dalam konteks keamanan sistem',
+        //     'kodeCPL' => 'CPL-04'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK051',
-            'deskripsiCPMK' => 'Mampu memahami kode etik dalam penggunaan informasi data pada perancangan, implementasi dan penggunaan suatu sistem',
-            'kodeCPL' => 'CPL-05'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK051',
+        //     'deskripsiCPMK' => 'Mampu memahami kode etik dalam penggunaan informasi data pada perancangan, implementasi dan penggunaan suatu sistem',
+        //     'kodeCPL' => 'CPL-05'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK052',
-            'deskripsiCPMK' => 'Mampu menerapkan kode etik dalam penggunaan informasi data pada perancangan, implementasi dan penggunaan suatu sistem',
-            'kodeCPL' => 'CPL-05'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK052',
+        //     'deskripsiCPMK' => 'Mampu menerapkan kode etik dalam penggunaan informasi data pada perancangan, implementasi dan penggunaan suatu sistem',
+        //     'kodeCPL' => 'CPL-05'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK061',
-            'deskripsiCPMK' => 'Mampu merencanakan sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi jangka panjang',
-            'kodeCPL' => 'CPL-06'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK061',
+        //     'deskripsiCPMK' => 'Mampu merencanakan sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi jangka panjang',
+        //     'kodeCPL' => 'CPL-06'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK062',
-            'deskripsiCPMK' => 'Mampu menerapkan sistem informasi untuk mencapai tujuan dan sasaran organisasi jangka pendek',
-            'kodeCPL' => 'CPL-06'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK062',
+        //     'deskripsiCPMK' => 'Mampu menerapkan sistem informasi untuk mencapai tujuan dan sasaran organisasi jangka pendek',
+        //     'kodeCPL' => 'CPL-06'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK063',
-            'deskripsiCPMK' => 'Mampu memelihara sistem informasi organisasi untuk mencapai tujuan organisasi jangka pendek.',
-            'kodeCPL' => 'CPL-06'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK063',
+        //     'deskripsiCPMK' => 'Mampu memelihara sistem informasi organisasi untuk mencapai tujuan organisasi jangka pendek.',
+        //     'kodeCPL' => 'CPL-06'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK064',
-            'deskripsiCPMK' => 'Mampu meningkatkan layanan sistem informasi yang strategis secara jangka pendek.',
-            'kodeCPL' => 'CPL-06'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK064',
+        //     'deskripsiCPMK' => 'Mampu meningkatkan layanan sistem informasi yang strategis secara jangka pendek.',
+        //     'kodeCPL' => 'CPL-06'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK071',
-            'deskripsiCPMK' => 'Mampu memahami konsep, teknik dan metodologi manajemen proyek sistem informasi',
-            'kodeCPL' => 'CPL-07'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK071',
+        //     'deskripsiCPMK' => 'Mampu memahami konsep, teknik dan metodologi manajemen proyek sistem informasi',
+        //     'kodeCPL' => 'CPL-07'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK072',
-            'deskripsiCPMK' => 'Mampu mengidentifikasi konsep, teknik dan metodologi manajemen proyek sistem informasi',
-            'kodeCPL' => 'CPL-07'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK072',
+        //     'deskripsiCPMK' => 'Mampu mengidentifikasi konsep, teknik dan metodologi manajemen proyek sistem informasi',
+        //     'kodeCPL' => 'CPL-07'
+        // ]);
 
-        CPMK::create([
-            'kodeCPMK' => 'CPMK073',
-            'deskripsiCPMK' => 'Mampu mengidentifikasi konsep, teknik dan metodologi manajemen proyek sistem informasi',
-            'kodeCPL' => 'CPL-07'
-        ]);
+        // CPMK::create([
+        //     'kodeCPMK' => 'CPMK073',
+        //     'deskripsiCPMK' => 'Mampu mengidentifikasi konsep, teknik dan metodologi manajemen proyek sistem informasi',
+        //     'kodeCPL' => 'CPL-07'
+        // ]);
 
         // Detail_MK_CPMK::create([
         //     'kodeMK' => 'MK01',
