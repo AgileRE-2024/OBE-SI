@@ -640,7 +640,7 @@ class RpsSeeder extends Seeder
         RPS::create([
             'id_rps' => 'SIC4022107',
             'nip' => '198002172005012001', // bu indah
-            'kodeMK' => '',
+            'kodeMK' => 'SIC402',
             'tahunAjaran' => 2021,
             'semester' => 7,
             'diperiksa_oleh' => '197102111997021001', // pak hendra

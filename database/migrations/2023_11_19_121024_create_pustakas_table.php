@@ -17,8 +17,8 @@ return new class extends Migration
             $table->increments('id_pustaka');
             $table->string('nama_penulis', 100)->nullable();
             $table->integer('tahun')->nullable();
-            $table->string('judul', 150);
-            $table->string('penerbit', 100)->nullable();
+            $table->string('judul', 300);
+            $table->string('penerbit', 300)->nullable();
             $table->string('referensi', 200)->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();

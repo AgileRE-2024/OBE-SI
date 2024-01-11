@@ -559,8 +559,7 @@ class PustakaSeeder extends Seeder
         Pustaka::create([
             'nama_penulis' => 'Hill, Joshua B., and Nancy E. Marion',
             'tahun' => 2016, 
-            'judul' => 'Introduction to Cybercrime: Computer Crimes, Laws, and Policing in the 21st Century:
-            Computer Crimes, Laws, and Policing in the 21st Century.',
+            'judul' => 'Introduction to Cybercrime: Computer Crimes, Laws, and Policing in the 21st Century: Computer Crimes, Laws, and Policing in the 21st Century.',
             'penerbit' => 'ABC-CLIO'
         ],);
 
