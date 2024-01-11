@@ -285,7 +285,12 @@
             @foreach ($minggu_rps_list as $minggu_rps)
                 <tr>
                     <td class="td-rps">{{ $i + 1 }}</td>
-                    <td scope="td-rps">{{ $minggu_rps->kodeSubCPMK }}</td>
+                    {{-- <td scope="td-rps">{{ $minggu_rps->kodeSubCPMK }}</td> --}}
+                    @if($minggu_rps->SubCPMK)
+                    <td scope="row">{{ $minggu_rps->SubCPMK->deskripsiSubCPMK }}</td>
+                    @else
+                    <td scope="row"></td>
+                    @endif
                     <td class="td-rps">{{ $minggu_rps->bahan_kajian }}</td>
                     <td scope="row">
                         <div class="col">
