@@ -52,6 +52,334 @@ class CPMKSeeder extends Seeder
             'kodeCPL' => 'LO-01' # dummy
         ]);
 
+        CPMK::create([
+            'kodeCPMK' => 'CPMK007',
+            'deskripsiCPMK' => 'Mahasiswa mampu membangun paradigma baru dalam dirinya sendiri berdasar nilai-nilai Pancasila melalui
+            kemampuan menjelaskan proses sejarah, kedudukan dan hakikat sila-sila Pancasila, merespon persoalan aktual
+            bangsa dan negara, dan menerapkan nilai-nilai Pancasila dalam kehidupan berbangsa dan bermasyarakat dengan
+            capaian akhir mahasiswa mampu:
+            1. memecahkan (C4) masalah-masalah kebangsaan terkait Pancasila,
+            2. merancang (C6) project kebangsaan sebagai berkontribusi dalam peningkatan mutu kehidupan bermasyarakat, berbangsa, bernegara, dan kemajuan peradaban berdasarkan Pancasila',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK008',
+            'deskripsiCPMK' => 'Pada akhir perkuliahan ini, diharapkan mahasiswa mampu menganalisis masalah-masalah kontekstual kebangsaan,
+            dengan mengembangkan sikap positif dan menampilkan perilaku sebagai cerminan: (i) semangat kebangsaan dan cinta tanah air, (ii) demokrasi berkeadaban, dan (iii) kesadaran hukum dan keragaman.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK009',
+            'deskripsiCPMK' => 'Mahasiswa dapat menguraikan komposisi materi, reaksi dasar dan perhitungan, serta senyawa karbon',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK010',
+            'deskripsiCPMK' => 'Mahasiswa memiliki pengetahuan, pengertian, & pemahaman tentang konsep-konsep dan prinsip-prinsip dasar Biologi serta
+            kaitannya dengan ilmu-ilmu lain sehingga memiliki wawasan biologi secara menyeluruh.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK011',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah Kalkulus, mahasiswa diharapkan dapat menggunakan konsep-konsep kalkulus, khususnya dalam ilmu kehayatan.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK012',
+            'deskripsiCPMK' => 'Mahasiswa mampu (1) menjelaskan sejarah, kedudukan, dan fungsi bahasa Indonesia dalam kehidupan berbangsa dan
+            bernegara; (2) menggunakan bahasa Indonesia untuk mengungkapkan pikiran, gagasan, dan sikap ilmiah ke dalam berbagai
+            bentuk karya ilmiah yang berkualitas (memenuhi syarat objektivitas, koherensi, kohesi, efektivitas, efisiensi, dan komunikatif);
+            (3) memanfaatkan soft skills kemahiran berbahasa Indonesia untuk pengembangan dirinya sebagai INTELEKTUAL MUDA
+            yang berwawasan entrepreneurship',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK013',
+            'deskripsiCPMK' => 'Mahasiswa mampu menggunakan data dan referensi ilmiah untuk mengambil keputusan dan mempersuasi',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK014',
+            'deskripsiCPMK' => 'Mahasiswa mampu menjelaskan konsep teoritis bidang pengetahuan Sistem Informasi secara umum.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+        
+        CPMK::create([
+            'kodeCPMK' => 'CPMK015',
+            'deskripsiCPMK' => 'Mahasiswa mampu menyelesaikan persoalan-persoalan fisis yang berkaitan dengan Mekanika Newton, Gelombang serta Termodinamika.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK016',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah Matriks dan Transformasi Linier, mahasiswa mampu menyelesaikan Operasi Matrik, Sistem
+            Persamaan Linier, Operasi Vektor, dan Aljabar Linier Numerik (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK017',
+            'deskripsiCPMK' => 'Mahasiswa mampu membuat algoritma dan mengimplementasikannya pada bahasa pemprograman (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK018',
+            'deskripsiCPMK' => 'Mahasiswa mampu membuat algoritma dan mengimplementasikannya pada bahasa pemprograman',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK019',
+            'deskripsiCPMK' => '1. Mampu menerapkan kerjasama dan berkolaborasi interdisiplin, membina kerjasama berdasarkan kompetensi dalam
+            menyelesaikan masalah di dalam kehidupan bermasyrakat baik berupa masalah kesehatan, sosilan dan humaniora.
+            2. Mampu melakukan komunikasi yang efektif dan menggunakan keterampilan interpersonal dalam kehidupan bermasyarakat
+            3. Mampu menggunakan langkah-langkah pengambilan keputusan etis dan legal.
+            4. Mampu mengevaluasi dampak pemberian pelayanan kepada masyarakat dari hasil kolaborasi dan kerjasama interprofesi.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK020',
+            'deskripsiCPMK' => '1. Mampu memahami dan mengembangkan diri serta meningkatkan kapasitas belajarnya;
+            2. Mampu memimpin dan bekerjasama dalam tim;
+            3. Mampu meningkatkan mutu sumber daya yang dimiliki untuk pengembangan organisasi, jaringan kerja dan
+            bertanggungjawab atas pekerjaan sesuai etik profesi;
+            4. Mampu menginternalisasi nilai, norma, etik akademik, semangat kemandirian, kejuangan, dan kewirausahaan
+            sesuai prinsip dasar civitas akademika UNAIR HEBAT dan Excellent with Morallity',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK021',
+            'deskripsiCPMK' => 'Mahasiswa mampu meringkas dan menyajikan informasi numerik sehingga menjadi jelas dan berguna (K2).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK022',
+            'deskripsiCPMK' => 'Mahasiswa mengenal kosa kata khusus dalam wacana sains dan teknologi yang disusun dalam struktur gramatika yang lazim
+            digunakan untuk penulisan sains dan teknologi sehingga mahasiswa memahami wacana tersebut untuk membantu dalam
+            kegiatan membaca buku ajar dalam bidangnya dan mampu menjawab pertanayaan baik secara lisan maupun tulisan.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK023',
+            'deskripsiCPMK' => 'Mahasiswa diharapkan dapat melakukan pemodelan dan perbaikan proses bisnis (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK024',
+            'deskripsiCPMK' => 'Mahasiswa diharapkan dapat melakukan pemodelan dan perbaikan proses bisnis dengan menggunakan tools yang sesuai (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK025',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah Basis Data, mahasiswa diharapkan dapat membangun model basis data relasional
+            secara benar dan tepat sesuai studi kasus tertentu. Mahasiswa diharapkan dapat:
+            a) Menunjukkan sikap bertanggung jawab atas pekerjaan di bidang keahliannya secara mandiri
+            b) Menjelaskan prinsip-prinsip dasar dalam pengembangan basis data
+            c) Mengidentifikasi dan merancang basis data sesuai dengan kebutuhan organisasi
+            d) Mengimplementasikan rancangan basis data pada suatu DBMS
+            e) Menjelaskan prinsip-prinsip dasar dari integritas, keamanan dan tingkat kerahasiaan data pada suatu basis
+            data',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK026',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, mahasiswa diharapkan mampu membangun model basis data relasional secara benar dan tepat sesuai
+            studi kasus tertentu',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK027',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini mahasiswa diharapkan dapat menggunakan Konsep Pemrograman Berorientasi Obyek
+            dengan benar (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK028',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini mahasiswa diharapkan dapat membuat modul yang di tulis dalam bahasa pemrograman yang
+            berorientasi pada obyek (K3)',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK029',
+            'deskripsiCPMK' => 'Mahasiswa mampu mengambil kesimpulan dari data sampel (K2).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK030',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah Sistem Operasi, Mahasiswa diharapkan mampu menentukan kebutuhan
+            sistem operasi dari sistem komputer (K4).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK031',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini mahasiswa diharapkan dapat menyelesaikan permasalahan praktis dalam matematika diskrit.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK032',
+            'deskripsiCPMK' => 'Mahasiswa diharapkan dapat menggunakan metode yang tepat untuk membuat rancangan sistem informasi berdasarkan
+            requirement yang ditentukan (K3)',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK033',
+            'deskripsiCPMK' => 'Setelah mengikuti Mata Ajar ini, mahasiswa diharapkan dapat menentukan algoritma pembelajaran mesin pada kasus tertentu.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK034',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah praktikum pembelajaran mesin, mahasiswa diharapkan dapat menggunakan algoritma pembelajaran
+            mesin pada kasus tertentu. Mahasiswa diharapkan dapat:
+            a. Memahami konsep data
+            b. Menggunakan transformasi data untuk preprosessing data sesuai dengan kasus tertentu
+            c. Menggunakan algoritma klasifikasi dan clustering pada kasus tertentu
+            d. Menggunakan algoritma optimasi pada kasus tertentu',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK035',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, Mahasiswa dapat menerapkan konsep, teori dan aturan-aturan yang berlaku dalam
+            perancangan jaringan komputer sebagai dasar untuk membangun sebuah jaringan komputer untuk dapat menunjang
+            pengembangan teknologi informasi (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK036',
+            'deskripsiCPMK' => 'Mahasiswa diharapkan dapat mengintegrasikan prinsip-prinsip sistem enterprise ke dalam operasional organisasi agar menjadi
+            lebih efektif dan efisien (K4)',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK037',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, mahasiswa diharapkan mampu menggunakan konsep kepemimpinan dan manajemen
+            organisasi dalam studi kasus tertentu. (K3)',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK038',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, mahasiswa diharapkan mampu mengembangkan aplikasi berbasis mobile (K3)',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK039',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, Mahasiswa dapat menerapkan konsep, teori dan aturan-aturan yang berlaku dalam
+pemrograman web untuk membangun web sederhana untuk dapat menunjang pengembangan teknologi informasi (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK040',
+            'deskripsiCPMK' => 'Mahasiswa diharapkan dapat menggunakan teknologi terbaru dalam menyusun inovasi untuk menyelesaikan permasalahan
+            sistem informasi (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK041',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini mahasiswa mampu menyusun beberapa paragraph mengenai suatu topik dan esai secara
+            sistematis. (K3)',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK042',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini mahasiswa semester 5 diharapkan dapat:
+            1. membedakan jenis-jenis serangan siber dan dapat membuat simulasi jaringan sederhana yang aman sesuai kebutuhan dengan
+            menerapkan konsep security.
+            2. memahami teori tentang manajemen risiko dan pentingnya aturan, terutama yang berkaitan dengan keamanan organisasi.
+            3. mengenal konsep tentang incident handling dan mampu menerapkan checklist untuk keamanan jaringan di dalam simulasi.
+            4. mengidentifikasi serangan yang terjadi pada jaringan Virtual Machine (VM) menggunakan Sguil, Elsa, security onion dan
+            Wireshark.
+            5. menerapkan prosedur NIST 800-61r2.',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK043',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, mahasiswa diharapkan mampu menyusun proposal bisnis sesuai konsep kewirausahaan di
+            bidang sistem informasi (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK044',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, mahasiswa diharapkan mampu menerapkan prinsip-prinsip desain interaksi dalam
+            merancang sistem',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK045',
+            'deskripsiCPMK' => 'Setelah mengikuti mata kuliah ini, mahasiswa diharapkan dapat merancang desain interaksi dengan menggunakan tools (K3).',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK046',
+            'deskripsiCPMK' => 'Setelah mengikuti mata ajaran ini mahasiswa semester 6 diharapkan mampu membangun Perangkat Lunak dengan baik,
+            membuat dokumen pengembangan sistem informasi, dan melakukan pengujian perangkat lunak secara baik',
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK047',
+            'deskripsiCPMK' => "Setelah mengikuti mata kuliah ini, mahasiswa diharapkan mampu menganalisis data dan membuat visualisasi hasil analisis
+            data",
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK048',
+            'deskripsiCPMK' => "Setelah mengikuti mata kuliah praktikum analisa dan visualisasi data, mahasiswa diharapkan dapat membuat analasisa dan visualisasi
+            data berdasarkan metode dan data yang digunakan. Mahasiswa diharapkan dapat:
+            a. Menunjukkan sikap bertanggung jawab atas pekerjaan di bidang keahliannya secara mandiri
+            c. Membuat preprosessing data dengan mengeksplorasi data yang digunakan
+            b. Membuat visualisasi data berdasarkan metode dan datanya
+            c. Menjelaskan analisa data berdasarkan visualisasi data yang telah dibuat",
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK049',
+            'deskripsiCPMK' => "Setelah mengikuti mata kuliah ini mahasiswa diharapkan dapat menggunakan kerangka kerja arsitektur enterprise untuk
+            perencanaan sistem informasi strategis yang selaras dengan strategi bisnis organisasi (K3).",
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
+
+        CPMK::create([
+            'kodeCPMK' => 'CPMK050',
+            'deskripsiCPMK' => "Setelah mengikuti mata kuliah ini mahasiswa diharapkan dapat menggunakan kerangka kerja arsitektur enterprise untuk
+            perencanaan sistem informasi strategis yang selaras dengan strategi bisnis organisasi (K3).",
+            'kodeCPL' => 'LO-01' # dummy
+        ]);
         // CPMK::create([
         //     'kodeCPMK' => 'CPMK011',
         //     'deskripsiCPMK' => 'Mampu memahami konsep dasar sistem informasi',
