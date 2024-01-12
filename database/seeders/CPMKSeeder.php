@@ -1,16 +1,16 @@
 <?php
- 
+
 namespace Database\Seeders;
- 
+
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\CPMK;
 use App\Models\Detail_MK_CPMK;
- 
+
 class CPMKSeeder extends Seeder
 {
     use WithoutModelEvents;
- 
+
     /**
      * Run the CPMK seeders.
      */
@@ -110,7 +110,7 @@ class CPMKSeeder extends Seeder
             'deskripsiCPMK' => 'Mahasiswa mampu menjelaskan konsep teoritis bidang pengetahuan Sistem Informasi secara umum.',
             'kodeCPL' => 'LO-03'
         ]);
-        
+
         // SEMESTER 2
         CPMK::create([
             'kodeCPMK' => 'CPMK015',
@@ -542,7 +542,7 @@ class CPMKSeeder extends Seeder
             ilmu pengetahuan modern.",
             'kodeCPL' => 'LO-02'
         ]);
-        
+
         // CPMK::create([
         //     'kodeCPMK' => 'CPMK011',
         //     'deskripsiCPMK' => 'Mampu memahami konsep dasar sistem informasi',
@@ -748,12 +748,12 @@ class CPMKSeeder extends Seeder
         //     'kodeMK' => 'MK10',
         //     'kodeCPMK' => 'CPMK033',
         // ]);
-        
+
         // Detail_MK_CPMK::create([
         //     'kodeMK' => 'MK16',
         //     'kodeCPMK' => 'CPMK033',
         // ]);
-        
+
         // Detail_MK_CPMK::create([
         //     'kodeMK' => 'MK17',
         //     'kodeCPMK' => 'CPMK033',
@@ -803,7 +803,7 @@ class CPMKSeeder extends Seeder
         //     'kodeMK' => 'MK21',
         //     'kodeCPMK' => 'CPMK052',
         // ]);
-        
+
         // Detail_MK_CPMK::create([
         //     'kodeMK' => 'MK10',
         //     'kodeCPMK' => 'CPMK061',
@@ -818,7 +818,7 @@ class CPMKSeeder extends Seeder
         //     'kodeMK' => 'MK13',
         //     'kodeCPMK' => 'CPMK061',
         // ]);
-        
+
         // Detail_MK_CPMK::create([
         //     'kodeMK' => 'MK15',
         //     'kodeCPMK' => 'CPMK062',

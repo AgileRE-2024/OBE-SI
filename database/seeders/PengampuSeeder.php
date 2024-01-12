@@ -252,7 +252,7 @@ class PengampuSeeder extends Seeder
         // ]);
 
         //TKTI
-        
+
         // Pengampu::create([
         //     'id_rps' => 'SII3232106',
         //     'kodeMK' => 'SII323',
@@ -260,7 +260,7 @@ class PengampuSeeder extends Seeder
         // ]);
 
         //TKI
-        
+
         // Pengampu::create([
         //     'id_rps' => 'SII3222106',
         //     'kodeMK' => 'SII322',
@@ -356,7 +356,7 @@ class PengampuSeeder extends Seeder
         Pengampu::create([
             'id_rps' => 'ETT3012106',
             'kodeMK' => 'ETT301',
-            'nip' => '198410272010122005', 
+            'nip' => '198410272010122005',
         ]);
 
 
@@ -364,125 +364,125 @@ class PengampuSeeder extends Seeder
         Pengampu::create([
             'id_rps' => 'MNG2062106',
             'kodeMK' => 'MNG206',
-            'nip' => '198110282006041003', 
+            'nip' => '198110282006041003',
         ]);
 
         //manajemen layanan ti
         Pengampu::create([
             'id_rps' => 'MNG2062106',
             'kodeMK' => 'MNG206',
-            'nip' => '198105082005012001', 
+            'nip' => '198105082005012001',
         ]);
 
         //adb
         Pengampu::create([
             'id_rps' => 'MAS3242107',
             'kodeMK' => 'MAS324',
-            'nip' => '197102111997021001', 
+            'nip' => '197102111997021001',
         ]);
 
          //adb
          Pengampu::create([
             'id_rps' => 'MAS3242107',
             'kodeMK' => 'MAS324',
-            'nip' => '198002172005012001', 
+            'nip' => '198002172005012001',
         ]);
 
          //computer vision
          Pengampu::create([
             'id_rps' => 'SIC4042107',
             'kodeMK' => 'SIC404',
-            'nip' => '198002172005012001', 
+            'nip' => '198002172005012001',
         ]);
 
         //computer vision
         Pengampu::create([
             'id_rps' => 'SIC4042107',
             'kodeMK' => 'SIC404',
-            'nip' => '197107122008122001', 
+            'nip' => '197107122008122001',
         ]);
 
           //data mining
           Pengampu::create([
             'id_rps' => 'SIC4022107',
             'kodeMK' => 'SIC402',
-            'nip' => '198002172005012001', 
+            'nip' => '198002172005012001',
         ]);
 
          //biomedik
          Pengampu::create([
             'id_rps' => 'SIR3012107',
             'kodeMK' => 'SIR301',
-            'nip' => '197102111997021001', 
+            'nip' => '197102111997021001',
         ]);
 
-         //manajemen risiko 
+         //manajemen risiko
          Pengampu::create([
             'id_rps' => 'MNG4022107',
             'kodeMK' => 'MNG402',
-            'nip' => '198105082005012001', 
+            'nip' => '198105082005012001',
         ]);
 
 
-        //manajemen risiko 
+        //manajemen risiko
         Pengampu::create([
             'id_rps' => 'MNG4022107',
             'kodeMK' => 'MNG402',
-            'nip' => '198002172005012001', 
+            'nip' => '198002172005012001',
         ]);
 
 
-        //pengujian perangkat lunak 
+        //pengujian perangkat lunak
         Pengampu::create([
             'id_rps' => 'SII4082107',
             'kodeMK' => 'SII408',
-            'nip' => '198110282006041003', 
+            'nip' => '198110282006041003',
         ]);
 
-        
-        //ehealth 
+
+        //ehealth
         Pengampu::create([
             'id_rps' => 'SII3172107',
             'kodeMK' => 'SII317',
-            'nip' => '198410272010122005', 
+            'nip' => '198410272010122005',
         ]);
 
         //047
-        // 1. RPS Bahasa Indonesia 
+        // 1. RPS Bahasa Indonesia
         Pengampu::create([
             'id_rps' => 'BAI1012101',
             'kodeMK' => 'BAI101',
-            'nip' => '111111111111111', 
+            'nip' => '111111111111111',
         ]);
         // 1. RPS Biologi Dasar
         Pengampu::create([
             'id_rps' => 'BID1082101',
             'kodeMK' => 'BID108',
-            'nip' => '111111111111112', 
+            'nip' => '111111111111112',
         ]);
         // 1. RPS Data dan Pustaka
         Pengampu::create([
             'id_rps' => 'SIP1072101',
             'kodeMK' => 'SIP107',
-            'nip' => '111111111111113', 
+            'nip' => '111111111111113',
         ]);
         // 1. RPS Kalkulus
         Pengampu::create([
             'id_rps' => 'MAA1012101',
             'kodeMK' => 'MAA101',
-            'nip' => '111111111111114', 
+            'nip' => '111111111111114',
         ]);
         // 1. RPS Kewarganegaraan
         Pengampu::create([
             'id_rps' => 'NOP1012101',
             'kodeMK' => 'NOP101',
-            'nip' => '111111111111115', 
+            'nip' => '111111111111115',
         ]);
         // 1. RPS Kimia Dasar
         Pengampu::create([
             'id_rps' => 'KID1072101',
             'kodeMK' => 'KID107',
-            'nip' => '111111111111116', 
+            'nip' => '111111111111116',
         ]);
 
         //Bahasa Inggris 2
@@ -496,38 +496,55 @@ class PengampuSeeder extends Seeder
         Pengampu::create([
             'id_rps' => 'AGP1012101',
             'kodeMK' => 'AGP101',
-            'nip' => '111111111111117', 
+            'nip' => '111111111111117',
         ]);
 
         Pengampu::create([
             'id_rps' => 'AGK1012101',
             'kodeMK' => 'AGK101',
-            'nip' => '111111111111117', 
+            'nip' => '111111111111117',
         ]);
 
         Pengampu::create([
             'id_rps' => 'AGC1012101',
             'kodeMK' => 'AGC101',
-            'nip' => '111111111111117', 
+            'nip' => '111111111111117',
         ]);
 
         Pengampu::create([
             'id_rps' => 'AGB1012101',
             'kodeMK' => 'AGB101',
-            'nip' => '111111111111117', 
+            'nip' => '111111111111117',
         ]);
 
         Pengampu::create([
             'id_rps' => 'AGH1012101',
             'kodeMK' => 'AGK101',
-            'nip' => '111111111111117', 
+            'nip' => '111111111111117',
         ]);
 
         Pengampu::create([
             'id_rps' => 'AGI1012101',
             'kodeMK' => 'AGI101',
-            'nip' => '111111111111117', 
+            'nip' => '111111111111117',
         ]);
+
+        // RPS Analisis dan Visualisasi Data
+        // Pengampu::create([
+        //     'id_rps' => 'SID3032107',
+        //     'kodeMK' => 'SID303',
+        //     'nip' => '197102111997021001',
+        // ]);
+
+        // Pengampu::create([
+        //     'id_rps' => 'SID3032107',
+        //     'kodeMK' => 'SID303',
+        //     'nip' => '197102111997021001',
+        // ]);
+
+
+
+
 
     }
 }
