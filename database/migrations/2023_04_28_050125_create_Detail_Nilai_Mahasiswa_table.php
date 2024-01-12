@@ -32,6 +32,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Detail_Nilai_Mahasiwa');
+        Schema::table('Detail_Nilai_Mahasiswa', function (Blueprint $table) {
+            $table->dropForeign('detail_nilai_mahasiswa_nim_foreign');
+        });
+
+        Schema::dropIfExists('Detail_Nilai_Mahasiswa');
     }
 };

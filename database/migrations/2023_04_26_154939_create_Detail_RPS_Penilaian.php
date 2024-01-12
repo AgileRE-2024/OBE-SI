@@ -28,7 +28,12 @@ return new class extends Migration
      * @return void
      */
     public function down()
-    {
-        Schema::dropIfExists('Detail_RPS');
-    }
+{
+    Schema::table('detail_rps_penilaian', function (Blueprint $table) {
+        $table->dropForeign('detail_rps_penilaian_kodepenilaian_foreign');
+    });
+
+    Schema::dropIfExists('detail_rps_penilaian');
+}
+
 };

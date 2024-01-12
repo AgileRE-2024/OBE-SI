@@ -132,7 +132,7 @@ class RpsSeeder extends Seeder
             'dibuat_oleh' => '198206062007101001',
             'penanggungJawab' => '198206062007101001',
             'dosenPengampu' => '["198206062007101001", "198105082005012001"]',
-            'detail_penilaian' => '<p><strong>Penilaian yang diberikan berdasarkan kriteria berikut:&nbsp;</strong></p><p>1. Nilai Akhir diperoleh melalui rumus&nbsp;</p><p>35% Tugas + 30% UTS +30% UAS + 5% Softskill&nbsp;</p><p>Tugas dalam mata kuliah audit sistem informasi berkaitan dengan penyusunan dokumen perangkat audit yang dilakukan secara berkelompok menggunakan studi kasus tertentu. Setiap kelompok mahasiswa menyusun dan melakukan simulasi audit dengan studi kasus yang berbeda-beda. Perbedaan studi kasus ditentukan dari ruang lingkup audit yang dipilih, standar/kerangka kerja yang digunakan, dan bidang bisnis organisasi yang diaudit. Setiap tugas dipresentasikan pada pertemuan yang telah ditentukan, yang hasilnya digunakan sebagai dasar untuk menentukan nilai tugas (sebesar 35%). Hasil akhir dari keseluruhan tugas, akan dipresentasikan secara komprehensif oleh setiap kelompok pada saat UAS, dan menjadi nilai UAS (sebesar 30%). Sehingga prosentase nilai yang diperoleh dari pembelajaran partisipatif dan kolaboratif melalui studi kasus adalah 65%.&nbsp;</p><p>2. Pengelompokan nilai adalah sebagai berikut:</p><figure class="table"><table><tbody><tr><td>Nilai</td><td>Point</td><td>Rentang Skor</td></tr><tr><td>4</td><td>A</td><td>75 - 100</td></tr><tr><td>3.5</td><td>AB</td><td>70 - 74,99</td></tr><tr><td>3</td><td>B</td><td>65 - 69,99</td></tr><tr><td>2.5</td><td>BC</td><td>60 - 64,99</td></tr><tr><td>2</td><td>C</td><td>55 - 59,99</td></tr><tr><td>1</td><td>D</td><td>40 - 54,99</td></tr><tr><td>0</td><td>E</td><td>0 - 39,99</td></tr></tbody></table></figure><p>&nbsp;</p><p><strong>Deskripsi komponen penilaian:</strong></p><p>1. Penyusunan dokumen perangkat audit&nbsp;</p><p>Mahasiswa diminta untuk membuat dokumen perangkat audit yang minimal berupa: dokumen rencana audit, audit program, dan laporan audit. Studi kasus ditentukan berdasarkan ruang lingkup audit, standar/kerangka kerja yang digunakan, dan bidang bisnis organisasi yang diaudit. Setiap perangkan audit yang dihasilkan, harus dipresentasikan pada sesi pertemuan yang telah ditentukan dan menjadi dasar untuk penilaian komponen tugas.&nbsp;</p><p>2. UTS&nbsp;</p><p>UTS diselenggarakan sesuai dengan jadwal UTS yang telah ditetapkan oleh Universitas Airlangga. Bentuk soal UTS adalah uraian dan pilihan ganda.&nbsp;</p><p>3. UAS&nbsp;</p><p>UAS diselenggarakan sesuai dengan jadwal UAS yang telah ditetapkan oleh Universitas Airlangga. Bentuk soal UAS adalah pembahasan secara komprehensif terkait penyusunan dokumen perangkat audit dan simulasi pelaksanaan audit oleh setiap kelompok.</p>',
+            'detail_penilaian' => '<p>&nbsp;</p><p><strong>Penilaian yang diberikan berdasarkan kriteria berikut:&nbsp;</strong></p><p>1. Nilai Akhir diperoleh melalui rumus&nbsp;</p><p>35% Tugas + 30% UTS +30% UAS + 5% Softskill&nbsp;</p><p>Tugas dalam mata kuliah audit sistem informasi berkaitan dengan penyusunan dokumen perangkat audit yang dilakukan secara berkelompok menggunakan studi kasus tertentu. Setiap kelompok mahasiswa menyusun dan melakukan simulasi audit dengan studi kasus yang berbeda-beda. Perbedaan studi kasus ditentukan dari ruang lingkup audit yang dipilih, standar/kerangka kerja yang digunakan, dan bidang bisnis organisasi yang diaudit. Setiap tugas dipresentasikan pada pertemuan yang telah ditentukan, yang hasilnya digunakan sebagai dasar untuk menentukan nilai tugas (sebesar 35%). Hasil akhir dari keseluruhan tugas, akan dipresentasikan secara komprehensif oleh setiap kelompok pada saat UAS, dan menjadi nilai UAS (sebesar 30%). Sehingga prosentase nilai yang diperoleh dari pembelajaran partisipatif dan kolaboratif melalui studi kasus adalah 65%.&nbsp;</p><p>2. Pengelompokan nilai adalah sebagai berikut:</p><figure class="table"><table><tbody><tr><td>Nilai</td><td>Point</td><td>Rentang Skor</td></tr><tr><td>4</td><td>A</td><td>75 - 100</td></tr><tr><td>3.5</td><td>AB</td><td>70 - 74,99</td></tr><tr><td>3</td><td>B</td><td>65 - 69,99</td></tr><tr><td>2.5</td><td>BC</td><td>60 - 64,99</td></tr><tr><td>2</td><td>C</td><td>55 - 59,99</td></tr><tr><td>1</td><td>D</td><td>40 - 54,99</td></tr><tr><td>0</td><td>E</td><td>0 - 39,99</td></tr></tbody></table></figure><p>&nbsp;</p><p><strong>Deskripsi komponen penilaian:</strong></p><p>1. Penyusunan dokumen perangkat audit&nbsp;</p><p>Mahasiswa diminta untuk membuat dokumen perangkat audit yang minimal berupa: dokumen rencana audit, audit program, dan laporan audit. Studi kasus ditentukan berdasarkan ruang lingkup audit, standar/kerangka kerja yang digunakan, dan bidang bisnis organisasi yang diaudit. Setiap perangkan audit yang dihasilkan, harus dipresentasikan pada sesi pertemuan yang telah ditentukan dan menjadi dasar untuk penilaian komponen tugas.&nbsp;</p><p>2. UTS&nbsp;</p><p>UTS diselenggarakan sesuai dengan jadwal UTS yang telah ditetapkan oleh Universitas Airlangga. Bentuk soal UTS adalah uraian dan pilihan ganda.&nbsp;</p><p>3. UAS&nbsp;</p><p>UAS diselenggarakan sesuai dengan jadwal UAS yang telah ditetapkan oleh Universitas Airlangga. Bentuk soal UAS adalah pembahasan secara komprehensif terkait penyusunan dokumen perangkat audit dan simulasi pelaksanaan audit oleh setiap kelompok.</p>',
         ]);
         //pemograman mobile prak
         RPS::create([
@@ -402,9 +402,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '111111111111117',
-            'penanggungJawab' => '111111111111117',
-            'dosenPengampu' => '["111111111111117"]',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -417,9 +417,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '111111111111117',
-            'penanggungJawab' => '111111111111117',
-            'dosenPengampu' => '["111111111111117"]',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -432,9 +432,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '111111111111117',
-            'penanggungJawab' => '111111111111117',
-            'dosenPengampu' => '["111111111111117"]',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -447,9 +447,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '111111111111117',
-            'penanggungJawab' => '111111111111117',
-            'dosenPengampu' => '["111111111111117"]',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -462,9 +462,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '111111111111117',
-            'penanggungJawab' => '111111111111117',
-            'dosenPengampu' => '["111111111111117"]',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -477,9 +477,9 @@ class RpsSeeder extends Seeder
             'semester' => 1,
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
-            'dibuat_oleh' => '111111111111117',
-            'penanggungJawab' => '111111111111117',
-            'dosenPengampu' => '["111111111111117"]',
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -493,7 +493,7 @@ class RpsSeeder extends Seeder
             'diperiksa_oleh' => '197609012003121001',
             'disetujui_oleh' => '197603242002121001',
             'dibuat_oleh' => '197102111997021001', // pak hendra dulu
-            'penanggungJawab' => '196508061992031002', 
+            'penanggungJawab' => '196508061992031002',
             'dosenPengampu' => '["197102111997021001"]', // pak hendra dulu
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
@@ -508,8 +508,8 @@ class RpsSeeder extends Seeder
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
             'dibuat_oleh' => '197102111997021001', // pak hendra dulu
-            'penanggungJawab' => '197102111997021001', 
-            'dosenPengampu' => '["197102111997021001"]', 
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -523,8 +523,8 @@ class RpsSeeder extends Seeder
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
             'dibuat_oleh' => '196004211986011001', // pak kartono dulu
-            'penanggungJawab' => '196004211986011001', 
-            'dosenPengampu' => '["196004211986011001"]', 
+            'penanggungJawab' => '196004211986011001',
+            'dosenPengampu' => '["196004211986011001"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -538,8 +538,8 @@ class RpsSeeder extends Seeder
             'diperiksa_oleh' => '197102111997021001',
             'disetujui_oleh' => '196901091993031000',
             'dibuat_oleh' => '196004211986011001', // pak kartono dulu
-            'penanggungJawab' => '196004211986011001', 
-            'dosenPengampu' => '["196004211986011001","198105082005012001","197101042008121001","198206062007101001","197812172005012001","197107122008122001","199203222019032018"]', 
+            'penanggungJawab' => '196004211986011001',
+            'dosenPengampu' => '["196004211986011001","198105082005012001","197101042008121001","198206062007101001","197812172005012001","197107122008122001","199203222019032018"]',
             'detail_penilaian' => 'NA = Tugas (25%), UTS (30%), UAS (35%), SoftSkill (10%)',
         ]);
 
@@ -608,7 +608,7 @@ class RpsSeeder extends Seeder
         //adb
         RPS::create([
             'id_rps' => 'MAS3242107',
-            'nip' => '197102111997021001', 
+            'nip' => '197102111997021001',
             'kodeMK' => 'MAS324',
             'tahunAjaran' => 2021,
             'semester' => 7,
@@ -666,7 +666,7 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = Tugas (20%), Kuis (15%), UTS (30%), UAS (30%), Soft skills (5%)',
         ]);
 
-          //manajemen risiko 
+          //manajemen risiko
           RPS::create([
             'id_rps' => 'MNG4022107',
             'nip' => '198105082005012001', // bu eva
@@ -711,7 +711,39 @@ class RpsSeeder extends Seeder
             'penanggungJawab' => '198410272010122005',
             'dosenPengampu' => '["198410272010122005"]',
             'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), SoftSkill (5%)',
-        ]); 
+        ]);
+
+        //Daffa
+        //Sistem Operasi (Praktikum)
+        RPS::create([
+            'id_rps' => 'SIJ2032107',
+            'nip' => '197801262006041001', // pak badrus
+            'kodeMK' => 'SIJ203',
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '197801262006041001',
+            'penanggungJawab' => '197801262006041001',
+            'dosenPengampu' => '["197801262006041001"]',
+            'detail_penilaian' => 'NA = Tugas (45%), UTS (25%), UAS (25%), SoftSkill (5%)',
+        ]);
+
+        //Fahira
+        //Analisis dan Visualisasi Data
+        RPS::create([
+            'id_rps' => 'SID3032107',
+            'nip' => '197102111997021001', // pak hendra
+            'kodeMK' => 'SID303',
+            'tahunAjaran' => 2021,
+            'semester' => 3,
+            'diperiksa_oleh' => '197102111997021001', // pak hendra
+            'disetujui_oleh' => '196901091993031000', // pak eridani
+            'dibuat_oleh' => '197102111997021001',
+            'penanggungJawab' => '197102111997021001',
+            'dosenPengampu' => '["197102111997021001"]',
+            'detail_penilaian' => 'NA = Tugas (20%), Kuis (15%), UTS (30%), UAS (30%), SoftSkill (5%)',
+        ]);
 
 
         //DI Praktikum
@@ -873,7 +905,7 @@ class RpsSeeder extends Seeder
             'detail_penilaian' => 'NA = Tugas (30%), UTS (30%), UAS (35%), Softskill (5%)',
         ]);*/
     //047
-    // 1. RPS Bahasa Indonesia 
+    // 1. RPS Bahasa Indonesia
     RPS::create([
         'id_rps' => 'BAI1012101',
         'nip' => '197102111997021001', // pak hendra dulu
