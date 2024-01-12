@@ -183,10 +183,7 @@ class PustakaSeeder extends Seeder
         ]);
 
         Pustaka::create([
-            'nama_penulis' => null,
-            'tahun' => null,
             'judul' => 'Modul Tutorial Matlab',
-            'penerbit' => ''
         ]);
 
         //Pengantar Kolaborasi Keilmuan

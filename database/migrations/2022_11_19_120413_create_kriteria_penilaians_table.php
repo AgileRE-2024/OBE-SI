@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id('id_kriteria_penilaians');
             $table->string('nama_kriteria_penilaians',30)->nullable();
             $table->string('indikatorPenilaian',50)->nullable();
-            $table->string('deskripsi_kriteria_penilaians',100)->nullable();
+            $table->string('deskripsi_kriteria_penilaians',200)->nullable();
             $table->timestamps();
         });
     }
