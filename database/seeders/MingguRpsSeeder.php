@@ -7436,9 +7436,246 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menuliskan abstrak berdasarkan aturan dalam bahasa inggris',
             'bahan_kajian' => 'Abstract',
         ]);
+
+        //Basis Data
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210301',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
         
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210302',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
 
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210303',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
 
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210304',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210305',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210306',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210307',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210308',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210309',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210310',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210311',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210312',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210313',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+
+        Minggu_RPS::create([
+            'id_rps' => 'SID2012103',
+            'kodeMingguRPS' => 'SID201210314',
+            'id_kriteria_penilaians' => '1',
+            'kodePenilaian' => '0001',
+            'id_bentuk' => '1',
+            'id_media' => '5',
+            'id_metode' => '3',
+            'bobot_nilai' => null,
+            'kodeSubCPMK' => null,
+            'luring' => true,
+            'penugasan' => '-',
+            'waktuPembelajaran' => "Kamis, jam ke 5-6 (10.40-12.30)",
+            'pengalaman_belajar' => null,
+            'bahan_kajian' => '1, 2, 3, 4',
+        ]);
+        
         //Metodologi Penelitian
         
         // Minggu_RPS::create([
