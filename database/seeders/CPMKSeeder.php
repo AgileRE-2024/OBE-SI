@@ -543,11 +543,6 @@ class CPMKSeeder extends Seeder
             'kodeCPL' => 'LO-02'
         ]);
 
-        CPMK::create(['kodeCPMK' => 'CPMK072',
-                        'deskripsiCPMK' => "Setelah mengikuti mata kuliah Sistem Operasi, Mahasiswa diharapkan mampu menentukan kebutuhan
-                        sistem operasi dari sistem komputer (K4).",
-                        'kodeCPL' => 'LO-14']);
-
         // CPMK::create([
         //     'kodeCPMK' => 'CPMK011',
         //     'deskripsiCPMK' => 'Mampu memahami konsep dasar sistem informasi',

@@ -530,11 +530,11 @@ class PengampuSeeder extends Seeder
         ]);
 
         // RPS Analisis dan Visualisasi Data
-        Pengampu::create([
-            'id_rps' => 'SID3032107',
-            'kodeMK' => 'SID303',
-            'nip' => '197102111997021001',
-        ]);
+        // Pengampu::create([
+        //     'id_rps' => 'SID3032107',
+        //     'kodeMK' => 'SID303',
+        //     'nip' => '197102111997021001',
+        // ]);
 
         // Pengampu::create([
         //     'id_rps' => 'SID3032107',

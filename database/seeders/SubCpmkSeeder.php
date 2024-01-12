@@ -116,19 +116,19 @@ class SubCpmkSeeder extends Seeder
             ['kodeSubCPMK' => 'Sub-CPMK0238', 'deskripsiSubCPMK' => 'Mahasiswa mampu menunjukkan (C3), mengaitkan (A4) dan mengerjakan (P4).', 'kodeCPMK' => 'CPMK003'],
 
             //Sistem Operasi Praktikum kode dummy
-            ['kodeSubCPMK' => 'Sub-CPMK0239', 'deskripsiSubCPMK' => 'Mahasiswa mampu Memahami struktur dasar sistem komputer dan Sistem operasi komputer serta perkembangan dan fungsi fungsinya.', 'kodeCPMK' => 'CPMK072'],
-            ['kodeSubCPMK' => 'Sub-CPMK0240', 'deskripsiSubCPMK' => 'MANAJEMEN PROSES Mahasiswa dapat memahami konsep dasar manajemen prosesor dan Komunikasi antar proses, dan Proses dalam sistem terdistribusi.', 'kodeCPMK' => 'CPMK072'],
-            ['kodeSubCPMK' => 'Sub-CPMK0241', 'deskripsiSubCPMK' => 'TEKNIK PENJADWALAN PROSESOR Mahasiswa dapat memahami macam-macam teknik penjadwalan prosesor satu tingkat maupun multi tingkat,serta metode evaluasi penjadwalan.', 'kodeCPMK' => 'CPMK072'],
-            ['kodeSubCPMK' => 'Sub-CPMK0242', 'deskripsiSubCPMK' => 'MANAJEMEN MEMORI Mahasiswa dapat memahami memori, penggunaan memori, dan teknik pengalokasian memori', 'kodeCPMK' => 'CPMK072'],
-            ['kodeSubCPMK' => 'Sub-CPMK0243', 'deskripsiSubCPMK' => 'SISTEM FILE (BERKAS) Mahasiswa dapat
-            mengetahui tentang file,
-            directory, sekuritas file, dan
-            implementasi sistem file', 'kodeCPMK' => 'CPMK072'],
-            ['kodeSubCPMK' => 'Sub-CPMK0244', 'deskripsiSubCPMK' => 'Mahasiswa mampu
-            mengkonfigurasi dan
-            mengelola sistem operasi
-            berbasis windows, linux dan
-            Java Virtual Machine', 'kodeCPMK' => 'CPMK072'],
+            // ['kodeSubCPMK' => 'Sub-CPMK0239', 'deskripsiSubCPMK' => 'Mahasiswa mampu Memahami struktur dasar sistem komputer dan Sistem operasi komputer serta perkembangan dan fungsi fungsinya.', 'kodeCPMK' => 'CPMK072'],
+            // ['kodeSubCPMK' => 'Sub-CPMK0240', 'deskripsiSubCPMK' => 'MANAJEMEN PROSES Mahasiswa dapat memahami konsep dasar manajemen prosesor dan Komunikasi antar proses, dan Proses dalam sistem terdistribusi.', 'kodeCPMK' => 'CPMK072'],
+            // ['kodeSubCPMK' => 'Sub-CPMK0241', 'deskripsiSubCPMK' => 'TEKNIK PENJADWALAN PROSESOR Mahasiswa dapat memahami macam-macam teknik penjadwalan prosesor satu tingkat maupun multi tingkat,serta metode evaluasi penjadwalan.', 'kodeCPMK' => 'CPMK072'],
+            // ['kodeSubCPMK' => 'Sub-CPMK0242', 'deskripsiSubCPMK' => 'MANAJEMEN MEMORI Mahasiswa dapat memahami memori, penggunaan memori, dan teknik pengalokasian memori', 'kodeCPMK' => 'CPMK072'],
+            // ['kodeSubCPMK' => 'Sub-CPMK0243', 'deskripsiSubCPMK' => 'SISTEM FILE (BERKAS) Mahasiswa dapat
+            // mengetahui tentang file,
+            // directory, sekuritas file, dan
+            // implementasi sistem file', 'kodeCPMK' => 'CPMK072'],
+            // ['kodeSubCPMK' => 'Sub-CPMK0244', 'deskripsiSubCPMK' => 'Mahasiswa mampu
+            // mengkonfigurasi dan
+            // mengelola sistem operasi
+            // berbasis windows, linux dan
+            // Java Virtual Machine', 'kodeCPMK' => 'CPMK072'],
 
 
 
