@@ -83,35 +83,35 @@ class PustakaSeeder extends Seeder
         //FPB Praktikum
         Pustaka::create([
             'nama_penulis' => 'Mathias Weske',
-            'tahun' => '2007',
+            'tahun' => 2007,
             'judul' => 'Business Process Management: Concepts, Languages, Architectures',
             'penerbit' => 'Springer'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'J.Jeston and J.Nelis',
-            'tahun' => '2006',
+            'tahun' => 2006,
             'judul' => 'Business Process Management, Practical Guidelines to Successful Implementation',
             'penerbit' => 'Elsevier'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Mike Havey',
-            'tahun' => '2005',
+            'tahun' => 2005,
             'judul' => 'Essential Business Process Modeling',
             'penerbit' => 'O’Reilly'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Tore Dyba et al',
-            'tahun' => '2004',
+            'tahun' => 2004,
             'judul' => 'Process Improvement in Practice',
             'penerbit' => 'Kluwer Academic Publishers'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Margaret May',
-            'tahun' => '2003',
+            'tahun' => 2003,
             'judul' => 'Business Process Management: Integration to Web-Enabled Environment',
             'penerbit' => 'Prentice Hall'
         ]);
@@ -119,21 +119,21 @@ class PustakaSeeder extends Seeder
         //Statistika Inferensi
         Pustaka::create([
             'nama_penulis' => 'Walpole, RE',
-            'tahun' => '1995',
+            'tahun' => 1995,
             'judul' => 'Pengantar Statistika, Edisi III',
             'penerbit' => 'Gramedia, Jakarta'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Johnson and Wichern',
-            'tahun' => '2002',
+            'tahun' => 2002,
             'judul' => 'Applied Multivariate Statistical Analysis',
             'penerbit' => 'Prentice Hall'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Sharma, Subash',
-            'tahun' => '1996',
+            'tahun' => 1996,
             'judul' => 'Applied Multivariate Technique',
             'penerbit' => 'John Wiley & Sons, Inc. New York'
         ]);
@@ -141,21 +141,21 @@ class PustakaSeeder extends Seeder
         //Statistika Deskriptif
         Pustaka::create([
             'nama_penulis' => 'Johnson and Wichern',
-            'tahun' => '2002',
+            'tahun' => 2002,
             'judul' => 'Applied Multivariate Statistical Analysis',
             'penerbit' => 'Prentice Hall'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Sharma, Subash',
-            'tahun' => '1996',
+            'tahun' => 1996,
             'judul' => 'Applied Multivariate Technique',
             'penerbit' => 'John Wiley & Sons, Inc. New York'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Lebart, Morineau and Warwick',
-            'tahun' => '1984',
+            'tahun' => 1984,
             'judul' => 'Multivariate Descriptive Statistical Analysis, Correspondence Analysis and Related Techiniques for large matrices',
             'penerbit' => 'Wiley'
         ]);
@@ -163,64 +163,64 @@ class PustakaSeeder extends Seeder
         //Matriks dan Transformasi Linier
         Pustaka::create([
             'nama_penulis' => 'Leon, S.J',
-            'tahun' => '2001',
+            'tahun' => 2001,
             'judul' => 'Aljabar Linear dan Aplikasinya, Edisi 5',
             'penerbit' => 'Erlangga, Jakarta'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Anton, H., and Rorres, C.',
-            'tahun' => '2000',
+            'tahun' => 2000,
             'judul' => 'Aljabar Linear Elementer Versi Aplikasi, Edisi 8',
             'penerbit' => 'Erlangga, Jakarta'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Anton, H.',
-            'tahun' => '1991',
+            'tahun' => 1991,
             'judul' => 'Aljabar Linear Elementer, Edisi Kelima',
             'penerbit' => 'Erlangga, Jakarta'
         ]);
 
-        // Pustaka::create([
-        //     'nama_penulis' => '',
-        //     'tahun' => '',
-        //     'judul' => 'Modul Tutorial Matlab',
-        //     'penerbit' => ''
-        // ]);
+        Pustaka::create([
+            'nama_penulis' => null,
+            'tahun' => null,
+            'judul' => 'Modul Tutorial Matlab',
+            'penerbit' => ''
+        ]);
 
         //Pengantar Kolaborasi Keilmuan
         Pustaka::create([
             'nama_penulis' => 'Hammick, M, Freeth, D, Koppel, I, Reeves, S & Barr, H',
-            'tahun' => '2007',
+            'tahun' => 2007,
             'judul' => 'A Best evidence systematic review of interproffesional education: BEME Guide no 9 Med Teach',
             'penerbit' => ''
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Word Health Organization',
-            'tahun' => '2010',
+            'tahun' => 2010,
             'judul' => 'Framework for action on interprofesional Education & Collaborative Practice',
             'penerbit' => ''
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Bosh, B, dan Mansell, H',
-            'tahun' => '2015',
+            'tahun' => 2015,
             'judul' => 'Interprofessional collaboration in health care Lesson to be leared from competitive sport',
             'penerbit' => ''
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Interprofessional Education Collaborative Expert Panel',
-            'tahun' => '2011',
+            'tahun' => 2011,
             'judul' => 'Core Competencies for interprofessional collaborative practice : Report of an expert panel',
             'penerbit' => 'Wangsington, DC: Interproffessiomal Eduvation Collaborative'
         ]);
 
         Pustaka::create([
             'nama_penulis' => 'Thistlethwaite J., Moran M',
-            'tahun' => '2010',
+            'tahun' => 2010,
             'judul' => 'Learning Outcome for Interprofesional Care',
             'penerbit' => ''
         ]);
@@ -1122,6 +1122,21 @@ class PustakaSeeder extends Seeder
             'tahun' => 2016,
             'judul' => 'Oracle Design and Programming with SQL',
             'penerbit' => 'http://ilearning.oracle.com'
+        ],);
+
+        //Pembangunan Perangkat Lunak
+        Pustaka::create([
+            'nama_penulis' => 'Raharjana, Indra Kharisma',
+            'tahun' => 2017, 
+            'judul' => 'Pengembangan Sistem Informasi Menggunakan Metodologi Agile',
+            'penerbit' => 'Deepublish'
+        ],);
+
+        Pustaka::create([
+            'nama_penulis' => 'Roger R. Pressman',
+            'tahun' => 2001, 
+            'judul' => 'Software Enginering : A Practioners Approach',
+            'penerbit' => 'RS. Presmann and Assosiation'
         ],);
 
         //Pemrograman Berorientasi Objek Teori & Praktikum
