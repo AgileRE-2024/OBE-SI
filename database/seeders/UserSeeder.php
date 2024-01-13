@@ -431,7 +431,7 @@ class UserSeeder extends Seeder
             'role' => 0,
             'status' => "Aktif Bekerja"
         ]);
-        
+
         User::create([
             'nip' => '111111111111117', //dummy
             'jabatanDosen' => 'Dosen',

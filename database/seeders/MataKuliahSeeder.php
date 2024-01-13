@@ -41,7 +41,7 @@ class MataKuliahSeeder extends Seeder
             aksiologis bagi perilaku mahasiswa dalam kehidupan berkeluarga, bermasyarakat, berbangsa dan bernegara.", "S1 Sistem Informasi"],
             ['KID107', 'Kimia Dasar', 2, 1, 1, 1, null, "Pembelajaran kimia dasar ini membahas tentang :Struktur atom dan sistem periodik ; ikatan kimia : Ikatan ionik, kovalen, koordinasi
             Ikatan hidrogen; stoikhiometri ; redoks dan termokimia ; laju reaksi kesetimbangan reaksi, Larutan : jenis dan konsentrasi ; sifat
-            
+
             koligatif larutan ; teori dan pH asam - basa ; Hidrokarbon alifatis dan aromatis; Alkil dan aril halida; Alkohol dan Eter; Aldehida dan
             Keton; Asam karboksilat serta Amina.", "S1 Sistem Informasi"],
             ['BID108', 'Biologi Dasar', 2, 1, 1, 1, null, "Hakekat biologi, Keanekaragaman organisme, Klasifikasi organisme, Organisme dengan lingkungannya (termasuk Adaptasi pada
@@ -90,7 +90,7 @@ class MataKuliahSeeder extends Seeder
             ['MAT101', 'Algoritma dan Pemrograman', 3, 2, 1, 1, null, "Mahasiswa mendapatkan materi mengenai:
 
             a. Pengantar Algoritma dan Pemrograman dan Flowchart
-            
+
             b. Variabel dan Operator
             c. Conditional IF
             d. Looping FOR
@@ -104,7 +104,7 @@ class MataKuliahSeeder extends Seeder
             ['MAT102', 'Algoritma dan Pemrograman (Praktikum)', 2, 2, 2, 1, null, "Mahasiswa mendapatkan materi mengenai:
 
             a. Pengantar Algoritma dan Pemrograman dan Flowchart
-            
+
             b. Variabel dan Operator
             c. Conditional IF
             d. Looping FOR
@@ -120,7 +120,7 @@ class MataKuliahSeeder extends Seeder
             ['MAS118', 'Statistika Deskriptif', 3, 2, 1, 1, null, '<p>Mata kuliah ini menjelaskan tentang:&nbsp;</p><ol><li>Visualisasi data dengan membuat dan menginterpretasikan grafik&nbsp;</li><li>Central Tendency: menghitung dan menginterpretasi-kan ukuran pemusatan data&nbsp;</li><li>Variability: mengukur penyebaran data menggunakan rentang dan deviasi standar serta mengidentifikasi outlier dalam data set menggunakan konsep rentang interkuartil&nbsp;</li><li>Kemiringan dan Keruncingan&nbsp;</li><li>Variabel random dan distribusi probabilitas : distribusi diskrit dan kontinu&nbsp;</li><li>Sampling Distribusi : menerapkan konsep probabilitas dan normalisasi untuk set data sampel</li><li>Deskripsi data untuk data data multivariate</li><ol type="a"><li>Vilsualisasi data dengan grafik</li><li>Principal Komponent Analysis</li><li>Cluster Analysis</li><li>Analisis Korespondensi</li>', "S1 Sistem Informasi"],
             ['BAE111', 'Bahasa Inggris I', 2, 2, 1, 2, null, "Wacana-wacana bahasa inggris yang berkaiatan dengan sains dan teknologi. Wacana-wacana yang berkaiatan dengan penggunaan
             gramatika bahasa.", "S1 Sistem Informasi"],
-            ['SIA204', 'Fungsi dan Proses Bisnis', 2, 3, 1, 1, 'SII103', "<p>Mata kuliah ini menjelaskan tentang:</p> 
+            ['SIA204', 'Fungsi dan Proses Bisnis', 2, 3, 1, 1, 'SII103', "<p>Mata kuliah ini menjelaskan tentang:</p>
             <ol>
             <li>Pengenalan fungsi dan proses bisnis</li>
             <li>Proses bisnis umum dalam organisasi (Human Resource, Produksi, Marketing, dan Keuangan)</li>
@@ -197,7 +197,22 @@ class MataKuliahSeeder extends Seeder
             ['SIJ202', 'Jaringan Komputer', 3, 4, 1, 1, 'SIJ201', null, "S1 Sistem Informasi"],
             ['SIJ204', 'Jaringan Komputer(Praktikum)', 1, 4, 2, 1, 'SIJ201', "<p>Materi yang dibahas dalam praktikum ini adalah:</p><ol><li>Alat dan perangkat jaringan komputer (dasar jaringan komputer)</li><li>Perangkat lunak praktikum jaringan komputer (Packet Tracert/ GNS3)</li><li>Subnetting</li><li>Routing</li><li>DHCP</li><li>Samba Server</li><li>Web Server</li><li>FTP Server</li><li>Domain Name System</li><li>Monitoring</li></ol>", "S1 Sistem Informasi"],
             ['SIS202', 'Sistem Enterprise', 2, 4, 1, 1, 'SIA204', "<p>Mata kuliah disampaikan melalui ceramah, diskusi, dan pemberian tugas, membahas tentang: Software Enterprise Resource Planning (ERP); Modul Sistem Enterprise (manufacturing, supply chain management/SCM, finansial, proyek, human resource management, customer relationship management/CRM; Mengelola Informasi dalam Enterprise (Transaction processing systems, decision support system, executive information); Enterprise Modeling dan Business Process Re-engineering.</p>", "S1 Sistem Informasi"],
-            ['MNM203', 'Kepemimpinan dan Manajemen Organisasi', 3, 4, 1, 1, null, null, "S1 Sistem Informasi"],
+
+            ['MNM203', 'Kepemimpinan dan Manajemen Organisasi', 3, 4, 1, 1, null, "<p>Mata kuliah ini membahas tentang:</p>
+            <ol>
+                <li><b>Manajer dalam Kegiatan Manajemen</b></li>
+                <li><b>Fungsi Perencanaan dan Pengambilan Keputusan</b></li>
+                <li><b>Manajemen Strategi Perusahaan</b></li>
+                <li><b>Desain dan Struktur Organisasi</b></li>
+                <li><b>Kekuasaan, Wewenang, Tanggung Jawab, dan Delegasi</b></li>
+                <li><b>Manajemen Sumber Daya Manusia</b></li>
+                <li><b>Faktor Individu dan Organisasi</b></li>
+                <li><b>Motivasi dan Kepemimpinan</b></li>
+                <li><b>Kelompok Kerja dan Komunikasi dalam Organisasi</b></li>
+                <li><b>Pengawasan dan Pengendalian</b></li>
+                <li><b>Manajemen Organisasi</b></li>
+            </ol>", "S1 Sistem Informasi"],
+
             ['SIS204', 'Pemrograman Web', 2, 4, 1, 1, 'MAT101', "<p>Materi yang dibahas dalam mata kuliah ini adalah:<ol><li>Konsep pemrograman web</li><li>Dasar HTML</li><li>Frontend Programming (CSS, Javascript)</li><li>Dasar-dasar PHP</li><li>OOP PHP</li><li>Backend Programming (Framework PHP)</li></ol></p>", "S1 Sistem Informasi"],
             ['SIS205', 'Pemrograman Web (Praktikum)', 1, 4, 2, 1, 'MAT101', "<p>Materi yang dibahas dalam mata kuliah ini adalah:<ol><li>Konsep pemrograman web</li><li>Dasar HTML</li><li>Frontend Programming (CSS, Javascript)</li><li>Dasar-dasar PHP</li><li>OOP PHP</li><li>Backend Programming (Framework PHP)</li></ol></p>", "S1 Sistem Informasi"],
             ['SIS304', 'Pemrograman Mobile', 2, 4, 1, 1, 'SIR201', "<p>Materi yang dibahas dalam mata kuliah ini adalah: <ol><li>Pengenalan Flutter</li><li>Dasar pemrograman Dart</li><li>Struktur Flutter</li><li>Mengembangkan UI dengan Flutter</li><li>Stateless dan Stateful Widget</li><li>Akses Database</li></ol></p>", "S1 Sistem Informasi"],
@@ -222,7 +237,10 @@ class MataKuliahSeeder extends Seeder
             dan penugasan proyek perangkat lunak ini terintegrasi dengan mata kuliah Pembangunan Perangkat Lunak (Praktikum).</ol>"
             , "S1 Sistem Informasi"],
             ['SII319', 'Pembangunan Perangkat Lunak (Praktikum)', 1, 5, 2, 1, 'SII301', null, "S1 Sistem Informasi"],
-            ['SID303', 'Analisis dan Visualisasi Data', 2, 5, 1, 1, 'SIC201', null, "S1 Sistem Informasi"],
+            ['SID303', 'Analisis dan Visualisasi Data', 2, 5, 1, 1, 'SIC201', "Mata kuliah disampaikan secara tatap muka, membahas tentang pengantar visualisasi data, eksplorasi data, model-model visualisasi
+            data, high-dimensional visualization, multivariate visualization, visualizing tree dan forest, smoothing technique, visualisasi klaster
+            analisis, eksplorasi grafis data bisnis. Studi kasus diberikan dalam penganalisaan dan visualisasi data.
+            ", "S1 Sistem Informasi"],
             ['SID304', 'Analisis dan Visualisasi Data (Praktikum)', 1, 5, 2, 1, 'SIC201', null, "S1 Sistem Informasi"],
             ['SIA301', 'Perencanaan Arsitektur Perusahaan', 2, 5, 1, 1, 'SII301', null, "S1 Sistem Informasi"],
             ['SIA302', 'Perencanaan Arsitektur Perusahaan (Praktikum)', 1, 5, 2, 1, 'SII301', null, "S1 Sistem Informasi"],
@@ -295,7 +313,7 @@ class MataKuliahSeeder extends Seeder
                 <li><b>Sales Channel Analytics</b></li>
                 <li><b>Behavior Analysis</b></li>
             </ul>
-            
+
             <p>Studi kasus diberikan dalam penganalisaan data bisnis.</p>
             ", "S1 Sistem Informasi"],
             ['SII404', 'Audit Sistem Informasi', 3, 7, 1, 0, null, "<p>Materi disajikan dalam bentuk ceramah, diskusi, dan studi kasus, yang meliputi:&nbsp;</p><ol><li>Pendahuluan Audit Sistem Informasi&nbsp;</li><li>Perencanaan Audit Sistem Informasi&nbsp;</li><li>Identifikasi Resiko dan Kendali&nbsp;</li><li>Pelaksanaan Audit: Evaluasi Kendali dan Pengumpulan Bukti (Evidence)&nbsp;</li><li>Dokumentasi dan penyusunan laporan hasil audit&nbsp;</li><li>Verifikasi kelayakan prosedur dan dokumentasi audit&nbsp;</li><li>Penyusunan rekomendasi hasil audit&nbsp;</li><li>Identifikasi tindak lanjut audit&nbsp;</li><li>Verifikasi kelayakan tindak lanjut audit&nbsp;</li></ol><p>Studi kasus dilakukan terkait penyusunan dokumen perangkat audit, yang harus dibuat oleh auditor dengan mengacu ke standar atau kerangka kerja tertentu, pada ruang lingkup tertentu, dan domain bisnis tertentu.</p>", "S1 Sistem Informasi"],
@@ -324,7 +342,7 @@ class MataKuliahSeeder extends Seeder
                 <li><b>Implementasi Pengujian Sistem dan Kakas untuk pengujian PL</b></li>
                 <li><b>Perkembangan terkini terkait riset/praktik pengujian PL</b></li>
             </ol>
-            
+
             <p>Studi kasus (case method) dilakukan terkait pengujian perangkat lunak terutama untuk teknik black box dan white box testing, implementasi menggunakan kakas (misalnya melakukan unit testing, atau Behavior-driven development), dan juga menyusun dokumen pengujian untuk proyek perangkat lunak sebagai final project. Final proyek bisa juga berupa draft paper terkait pengujian perangkat lunak.</p>
             ", "S1 Sistem Informasi"],
             ['MNG402', 'Manajemen Resiko Teknologi Informasi', 3, 7, 1, 0, null, "<p>Materi disajikan dalam bentuk ceramah, diskusi, dan studi kasus, yang meliputi:</p>

@@ -29,6 +29,7 @@ class CplProdiSeeder extends Seeder
             ['kodeCPL' => 'LO-11', 'deskripsiCPL' => 'Mampu menjelaskan konsep matematika dan statistika yang digunakan dalam sistem informasi', 'referensiCPL' => '-'],
             ['kodeCPL' => 'LO-12', 'deskripsiCPL' => 'Mampu mengidentifikasi peluang yang diciptakan oleh inovasi teknologi informasi menjadi nilai organisasi yang berkelanjutan melalui proses yang sistematis', 'referensiCPL' => '-'],
             ['kodeCPL' => 'LO-13', 'deskripsiCPL' => 'Mampu menggunakan konsep logika dan algoritma untuk memecahkan permasalahan serta menerapkannya ke dalam beberapa bahasa pemrograman', 'referensiCPL' => '-'],
+            // ['kodeCPL' => 'LO-14', 'deskripsiCPL' => 'Menunjukkan sikap bertanggung jawab atas pekerjaan di bidang keahliannya secara mandiri', 'referensiCPL' => '-'],
         ];
 
         foreach ($cpls as $item) {
