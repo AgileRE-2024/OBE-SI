@@ -85,5 +85,35 @@ class KriteriaPenilaianSeeder extends Seeder
             'deskripsi_kriteria_penilaians' => 'Kemampuan memahami pengertian transformasi linier, syarat transformasi linier, dan menyajikan transformasi liner',
         ]);
 
+        kriteria_penilaian::create([
+            'id_kriteria_penilaians' => '14',
+            'deskripsi_kriteria_penilaians' => '1. Menunjukkan sikap curiousity, disiplin, teliti dan berpikir kritis dalam pembelajaran.',
+        ]);
+
+        kriteria_penilaian::create([
+            'id_kriteria_penilaians' => '15',
+            'deskripsi_kriteria_penilaians' => 'Kriteria penilaian Tes MC, menjawab evaluasi secara langsung 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat.',
+        ]);
+
+        kriteria_penilaian::create([
+            'id_kriteria_penilaians' => '16',
+            'deskripsi_kriteria_penilaians' => '1. Mahasiswa mampu menjelaskan konsep komunikasi 2. Proses komunikasi dan kerjasama interdisipliner 3. Mahasiswa aktif bertanya.',
+        ]);
+        
+        kriteria_penilaian::create([
+            'id_kriteria_penilaians' => '17',
+            'deskripsi_kriteria_penilaians' => 'Kriteria penilaian Tes MC 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat.',
+        ]);
+        
+        kriteria_penilaian::create([
+            'id_kriteria_penilaians' => '18',
+            'deskripsi_kriteria_penilaians' => 'Kriteria penilaian Tes MC dan Quiz 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat.',
+        ]);
+
+        kriteria_penilaian::create([
+            'id_kriteria_penilaians' => '19',
+            'deskripsi_kriteria_penilaians' => 'Kriteria penilaian Tes MC, output project 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat. 3. Produk luaran project',
+        ]);
+
     }
 }

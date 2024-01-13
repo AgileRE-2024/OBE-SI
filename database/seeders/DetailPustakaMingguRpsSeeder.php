@@ -353,6 +353,91 @@ class DetailPustakaMingguRpsSeeder extends Seeder
             ['id_pustaka' => '22', 'kodeMingguRPS' => 'MAL103210200', 'detail_pustaka' => null],
             ['id_pustaka' => '23', 'kodeMingguRPS' => 'MAL103210200', 'detail_pustaka' => null],
             ['id_pustaka' => '24', 'kodeMingguRPS' => 'MAL103210200', 'detail_pustaka' => null],
+
+            //Pengantar Kolaborasi Keilmuan
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
+            
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210202', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210202', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210202', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210202', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210202', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210203', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210203', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210203', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210203', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210203', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210204', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210204', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210204', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210204', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210204', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210205', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210205', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210205', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210205', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210205', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210206', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210206', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210206', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210206', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210206', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210207', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210207', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210207', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210207', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210207', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210208', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210208', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210208', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210208', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210208', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210209', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210209', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210209', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210209', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210209', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210210', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210210', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210210', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210210', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210210', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210211', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210211', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210211', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210211', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210211', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210212', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210212', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210212', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210212', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210212', 'detail_pustaka' => null],
+
+            ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210213', 'detail_pustaka' => null],
+            ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210213', 'detail_pustaka' => null],
+            ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210213', 'detail_pustaka' => null],
+            ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210213', 'detail_pustaka' => null],
+            ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210213', 'detail_pustaka' => null],
         ];
 
         Detail_Pustaka_Minggurps::insert($data);

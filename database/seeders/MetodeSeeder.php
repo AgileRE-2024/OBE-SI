@@ -30,5 +30,11 @@ class MetodeSeeder extends Seeder
             'id_metode' => '3',
             'nama_metode' => 'Case Based Learning',
         ],);
+
+        Metode::create([
+            'id_metode' => '4',
+            'nama_metode' => 'Video conference dan SDL',
+        ],);
+
     }
 }

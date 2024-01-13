@@ -325,6 +325,27 @@ class SubCpmkSeeder extends Seeder
             ['kodeSubCPMK' => 'Sub-CPMK0308', 'deskripsiSubCPMK' => 'Mahasiswa mampu menghitung Vector, menghitung sudut vektor', 'kodeCPMK' => 'CPMK016'],
             ['kodeSubCPMK' => 'Sub-CPMK0309', 'deskripsiSubCPMK' => 'Mahasiswa mampu membuat matriks Eigen Value dan Eigen Vektor', 'kodeCPMK' => 'CPMK016'],
             ['kodeSubCPMK' => 'Sub-CPMK0310', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami pengertian transformasi linier, syarat transformasi linier dan matriks penyajian transformasi linier', 'kodeCPMK' => 'CPMK016'],
+
+            //Komunikasi dan Pengembangan Diri
+            ['kodeSubCPMK' => 'Sub-CPMK0311', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu menyimpulkan latar belakang dan arti penting keterampilan dasar dalam berkomunikasi, mengenal potensi diri, mengembangkan sifat kritis, dan mempoosisikan diri secara efektif dalam organisasi kemahasiswaan sebagai bekal untuk menanamkan rasa kesadaran dan kepercayaan diri sebagai mahasiswa berkarakter HEBAT', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0312', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu mengadaptasi Model 7 kebiasaan Stephen Covey dalam keseharian dengan baik', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0313', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu menginterpretasikan manajemen waktu, manajemen diri dalam Self Directed Learning dengan benar', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0314', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu menginterpretasikan Model Pengenalan Diri dalam Peta Jalan Pengembangan Diri pribadi', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0315', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu memilih dan memilah strategi umpan balik yang sesuai dalam berbagai situasi komunikasi dengan tepat', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0316', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu menerapkan kecerdasan emosi dalam berkomunikasi', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0317', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu mengapilkasikan sikap kritis dan empati dengan menghasilkan proposal PKM yang berkualitas dan kolaboratif', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0318', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu menganalisis peran assertivitas dalam bersosialisasi dan berorganisasi dengan benar', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0319', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu mengilustrasikan Analisis Transaksional dalam berkomunikasi dengan tepat', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0320', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu menerapkan atau menunjukkan ketrampilan bernegosiasi dalam berbagai situasi atau konflik dengan luwes dalam sebuah project kegiatan', 'kodeCPMK' => 'CPMK020'],
+            ['kodeSubCPMK' => 'Sub-CPMK0321', 'deskripsiSubCPMK' => 'Mahasiswa semester 2 mampu menyimpulkan hubungan antara Manajemen Waktu dengan Pengembangan Diri dalam dunia kerja dengan tepat', 'kodeCPMK' => 'CPMK020'],
+
+            //Pengantar Kolaborasi Keilmuan
+            ['kodeSubCPMK' => 'Sub-CPMK0322', 'deskripsiSubCPMK' => 'Mahasiswa Universitas Airlangga Semester II mampu menjelaskan latar belakang dan pentingnya membangun karakter serta motivasi kerjasama dan kolaborasi interdisiplin dalam menyelesaiakam masalah kehidupan bermasyrakat secara global', 'kodeCPMK' => 'CPMK019'],
+            ['kodeSubCPMK' => 'Sub-CPMK0323', 'deskripsiSubCPMK' => 'Mahasiswa Universitas Airlangga Semester II mampu menjelaskan Konsep interprofessional education (IPE) dan peran interdisiplin dalam IPE', 'kodeCPMK' => 'CPMK019'],
+            ['kodeSubCPMK' => 'Sub-CPMK0324', 'deskripsiSubCPMK' => 'Mahasiswa Universitas Airlangga Semester II mampu menjelaskan proses komunikasi dan kerjasama dalam tim interdisipliner dan dinamika kelompok', 'kodeCPMK' => 'CPMK019'],
+            ['kodeSubCPMK' => 'Sub-CPMK0325', 'deskripsiSubCPMK' => 'Mahasiswa Universitas Airlangga Semester II mampu menjelaskan komunikasi kolaborasi interdisiplin dalam menghadapi permasalahan kehidupan di masyarakat', 'kodeCPMK' => 'CPMK019'],
+            ['kodeSubCPMK' => 'Sub-CPMK0326', 'deskripsiSubCPMK' => 'Mahasiswa Universitas Airlangga Semester II mampu menjelaskan konsep komunitas dan layanan komunitas berdasarkan, prinsip- prinsip legal etis dan lintas budaya dalam kolaborasi', 'kodeCPMK' => 'CPMK019'],
+            ['kodeSubCPMK' => 'Sub-CPMK0327', 'deskripsiSubCPMK' => 'Mahasiswa Universitas Airlangga Semester II mampu mengaplikasikan kolaborasi interdisiplin berdasarkan prinsip saling bekerjasama, saling menghargai dan percaya diri', 'kodeCPMK' => 'CPMK019'],
         ];
 
         foreach ($subs as $sub) {
