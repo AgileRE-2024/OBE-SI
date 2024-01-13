@@ -271,6 +271,140 @@ class SubCpmkSeeder extends Seeder
             // 1. RPS Kalkulus
             // 1. RPS Kewarganegaraan
             // 1. RPS Kimia Dasar
+
+            //etika profesi
+            ['kodeSubCPMK' => 'Sub-CPMK0601', 'deskripsiSubCPMK' => 'Mahasiswa mampu mendefinisikan pengertian etika, membedakan etika dan etiket, membedakan etika dan moralitas, menyebutkan pentingnya etika untuk bidang TI', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0602', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan menguraikan profesi dan kompetensi bidang Teknologi Informasi dan Komunikasi ', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0603', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan menguraikan profesi dan kompetensi bidang Teknologi Informasi dan Komunikasi', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0604', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan asosiasi dan sertifikasi bidang Teknologi Informasi dan Komunikasi', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0605', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan etika di dunia maya (Internet)', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0606', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan tentang cybercrime', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0607', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan tentang cybercrime', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0608', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisis aturan hukum dan regulasi terkait etika profesi dalam bidang teknologi informasi dan komunikasi', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0609', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisis aturan hukum dan regulasi terkait etika profesi dalam bidang teknologi informasi dan komunikasi', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0610', 'deskripsiSubCPMK' => 'Mahasiswa mampu menentukan etika yang sesuai dalam pemanfaatan media sosial', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0611', 'deskripsiSubCPMK' => 'Mahasiswa mampu menguraikan penerapan data analytics di Internet dan etikanya', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0612', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisis isu-isu etika pada penerapan Teknologi Informasi dan Komunikasi yang tepat di bidang bisnis, kesehatan, dan pemerintahan', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0613', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisis isu-isu etika pada penerapan Teknologi Informasi dan Komunikasi yang tepat di bidang bisnis, kesehatan, dan pemerintahan', 'kodeCPMK' => 'CPMK050'],
+            ['kodeSubCPMK' => 'Sub-CPMK0614', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisis isu-isu etika pada penerapan Teknologi Informasi dan Komunikasi yang tepat di bidang bisnis, kesehatan, dan pemerintahan', 'kodeCPMK' => 'CPMK050'],
+            
+            
+            
+            //manajemen layanan ti
+            ['kodeSubCPMK' => 'Sub-CPMK0621', 'deskripsiSubCPMK' => 'Pendahuluan', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0622', 'deskripsiSubCPMK' => 'Service Management as a Practice', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0623', 'deskripsiSubCPMK' => 'Proses Bisnis', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0624', 'deskripsiSubCPMK' => 'Value Creation', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0625', 'deskripsiSubCPMK' => 'Operational', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0626', 'deskripsiSubCPMK' => 'Operational', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0627', 'deskripsiSubCPMK' => 'Operational', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0628', 'deskripsiSubCPMK' => 'Service Strategy', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0629', 'deskripsiSubCPMK' => 'Service Design', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0630', 'deskripsiSubCPMK' => 'Service Transition', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0631', 'deskripsiSubCPMK' => 'Service Operation', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0632', 'deskripsiSubCPMK' => 'Continual Service Improvement', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0633', 'deskripsiSubCPMK' => 'Riset Terkait Manajemen Layanan TI', 'kodeCPMK' => 'CPMK053'],
+            ['kodeSubCPMK' => 'Sub-CPMK0634', 'deskripsiSubCPMK' => 'Riset Terkait Manajemen Layanan TI', 'kodeCPMK' => 'CPMK053'],
+            
+            
+            //adb
+            ['kodeSubCPMK' => 'Sub-CPMK0701', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan memahami konsep data perusahaan', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0702', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan tentang konsep presentasi data', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0703', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan menguraikan jenis-jenis data warehouse', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0704', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami dan menjelaskan analisa konsumen', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0705', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami dan menjelaskan pendapatan yang akan diperoleh masa mendatang', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0706', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami dan menjelaskan pendapatan yang akan diperoleh masa mendatang', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0707', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami pemanfaatan sumber daya manusia dan staff', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0708', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami kebutuhan dalam bisnis', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0709', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami kebutuhan dalam bisnis', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0710', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan manajemen risiko dan keuangan', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0711', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami dan menjelaskan manajemen pasokan dalam analisis data bisnis', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0712', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami dan menjelaskan record penjualan', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0713', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisa perilaku bisnis', 'kodeCPMK' => 'CPMK062'],
+            ['kodeSubCPMK' => 'Sub-CPMK0714', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisa perilaku bisnis', 'kodeCPMK' => 'CPMK062'],
+
+            //computer vision
+            ['kodeSubCPMK' => 'Sub-CPMK0715', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami apa yang disebut dengan pemrosesan citra digital', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0716', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami konsep dasar citra digital', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0717', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode yang terdapat pada image sampling dan reconstruction', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0718', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode yang terdapat pada image enhancement di domain Spatial', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0719', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode yang terdapat pada image enhancement di domain Frequency', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0720', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode untuk melakukan image restoration', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0721', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode pada edge detection', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0722', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode pada image feature extraction', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0723', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode pada image segmentation', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0724', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode pada image detection and registration', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0725', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode pemrosesan citra berwarna', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0726', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode klasifikasi citra', 'kodeCPMK' => 'CPMK064'],
+            ['kodeSubCPMK' => 'Sub-CPMK0727', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami metode klasterisasi citra', 'kodeCPMK' => 'CPMK064'],
+
+
+            //data mining
+
+            ['kodeSubCPMK' => 'Sub-CPMK0728', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan latar belakang munculnya teknik data mining, serta tahapan-tahapan umum dalam proses data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0729', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan definisi data, pengertian attributes dan objects, types of data, data quality, data preprocessing', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0730', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan teknik-teknik merepresentasikan data', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0731', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan proses awal yang dilakukan terhadap data agar dapat menjadi inputan yang baik dalam teknik data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0732', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan teknik klasifikasi dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0733', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan teknik klasifikasi dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0734', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan teknik klasifikasi dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0735', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan teknik klustering dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0736', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan teknik klustering dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0737', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami teknik/metoda analisis asosiasi dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0738', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami teknik/metoda analisis asosiasi dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0739', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami teknik/metoda analisis asosiasi dalam data mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0740', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan Text Mining dan Web Mining', 'kodeCPMK' => 'CPMK060'],
+            ['kodeSubCPMK' => 'Sub-CPMK0741', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan gambaran aplikasi data mining dalam berbagai bidang', 'kodeCPMK' => 'CPMK060'],
+
+
+
+            //biomedik
+
+            ['kodeSubCPMK' => 'Sub-CPMK0742', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami konsep informatika biomedik', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0743', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami konsep informatika biomedik', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0744', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan memahami data-data biomedis', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0745', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan memahami data-data biomedis', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0746', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan memahami data-data biomedis', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0747', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan memahami data-data biomedis', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0748', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan memahami data-data biomedis', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0749', 'deskripsiSubCPMK' => 'Mahasiswa mampu menjelaskan dan memahami data-data biomedis', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0750', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisa pemodelan data biomedik', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0751', 'deskripsiSubCPMK' => 'Mahasiswa mampu menganalisa pemodelan data biomedik', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0752', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami standar dalam informatika biomedik', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0753', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami standar dalam informatika biomedik', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0754', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami informatika pencitraan medik', 'kodeCPMK' => 'CPMK061'],
+            ['kodeSubCPMK' => 'Sub-CPMK0755', 'deskripsiSubCPMK' => 'Mahasiswa mampu memahami informatika pencitraan medik', 'kodeCPMK' => 'CPMK061'],
+
+
+
+            //manajemen risiko
+            
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK066'],
+
+
+
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK064'],
+
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK064'],
+
+            ['kodeSubCPMK' => 'Sub-CPMK07', 'deskripsiSubCPMK' => '', 'kodeCPMK' => 'CPMK064'],
+
+
+
+
         ];
 
         foreach ($subs as $sub) {
