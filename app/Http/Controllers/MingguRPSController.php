@@ -13,7 +13,7 @@ use App\Models\Mata_Kuliah;
 use App\Models\SubCPMK;
 use App\Models\Metode;
 use App\Models\Bentuk;
-use App\Models\kriteria_penilaian;
+use App\Models\Kriteria_Penilaian;
 use App\Models\Media;
 use App\Models\Teknik_Penilaian;
 use Illuminate\Support\Facades\Validator;

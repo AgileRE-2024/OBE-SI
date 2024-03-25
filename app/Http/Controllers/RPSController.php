@@ -207,7 +207,7 @@ class RPSController extends Controller
         date_default_timezone_set('Asia/Jakarta');
         $date_time = date('Y_m_d_H_i_s');
         $date = date('d-m-Y');
-        $view =  view('content.eksporRPSList', [
+        $view =  view('content.eksporRpsList', [
             'title' => 'DAFTAR RPS',
             'rps_list' => RPS::all(),
             'date_time' => $date,
