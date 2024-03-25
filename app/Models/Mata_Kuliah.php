@@ -9,7 +9,7 @@ class Mata_Kuliah extends Model
     protected $primaryKey = 'kodeMK';
     // protected $nullable = 'mat_kodeMK';
     public $incrementing = false;
-    protected $table = 'Mata_Kuliah';
+    protected $table = 'mata_kuliah';
     protected $fillable = [
         'kodeMK', 'namaProdi', 'nip', 'namaMK', 'jenisMK', 'sks', 'ects', 'mat_kodeMK', 'semester', 'kategoriMK', 'deskripsiMK', 'prasyaratTambahan', 'penanggung_jawab', 'pengampu', 'deleted_at'
     ];

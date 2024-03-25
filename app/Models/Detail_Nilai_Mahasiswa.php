@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_Nilai_Mahasiswa extends Model
 {
-    protected $table = 'Detail_Nilai_Mahasiswa';
+    protected $table = 'detail_nilai_mahasiswa';
     public $incrementing = false;
     protected $fillable = [
         'id_rps','nilaiPerTeknik','kodePenilaian','nim'

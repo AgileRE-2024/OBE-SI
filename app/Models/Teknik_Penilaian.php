@@ -8,7 +8,7 @@ class Teknik_Penilaian extends Model
 {
     protected $primaryKey = 'kodePenilaian';
     public $incrementing = false;
-    protected $table = 'Teknik_Penilaian';
+    protected $table = 'teknik_penilaian';
     protected $fillable = [
         'kodePenilaian', 'teknikPenilaian', 'bobotPenilaian', 'kriteriaPenilaian', 'tahapPenilaian', 'instrumenPenilaian'
     ];

@@ -8,7 +8,7 @@ class Minggu_RPS extends Model
 {
     protected $primaryKey = 'kodeMingguRPS';
     public $incrementing = false;
-    protected $table = 'Minggu_RPS';
+    protected $table = 'minggu_rps';
     protected $fillable = [
         'kodeMingguRPS', 'id_rps', 'id_kriteria_penilaians', 'kodePenilaian', 'kodeSubCPMK', 'mingguKe','deleted_at', 'luring', 'penugasan','waktuPembelajaran','pengalaman_belajar','bahan_kajian'
     ];

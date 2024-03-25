@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_Penilaian_RPS extends Model
 {
-    protected $table = 'Detail_RPS';
+    protected $table = 'detail_rps';
     protected $fillable = ['kodeRPS', 'kodePenilaian'];
 
     public function Mahasiswa(){

@@ -9,7 +9,7 @@ class CPL_SN_Dikti extends Model
 {
     protected $primaryKey = 'kodeCPLSN';
     public $incrementing = false;
-    protected $table = 'CPL_SN_Dikti';
+    protected $table = 'cpl_sn_dikti';
     protected $fillable = [
         'kodeCPLSN', 'deskripsiSN', 'sumberSN', "kategoriSN", "jenisSN", 'deleted_at'
     ];

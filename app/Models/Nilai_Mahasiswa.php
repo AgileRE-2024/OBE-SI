@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nilai_Mahasiswa extends Model
 {
-    protected $table = 'Nilai_Mahasiswa';
+    protected $table = 'nilai_mahasiswa';
     protected $primaryKey = 'kodeNilai';
     public $incrementing = false;
     protected $fillable = ['kodeNilai','nim', 'kodeKelas', 'kodeRPS', 'semesterAmbil', 'nilaiAkhir'];

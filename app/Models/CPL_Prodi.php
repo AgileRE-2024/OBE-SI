@@ -9,7 +9,7 @@ class CPL_Prodi extends Model
 {
     protected $primaryKey = 'kodeCPL';
     public $incrementing = false;
-    protected $table = 'CPL_Prodi';
+    protected $table = 'cpl_prodi';
     protected $fillable = [
         'kodeCPL', "deskripsiCPL", "referensiCPL","deleted_at"
     ];

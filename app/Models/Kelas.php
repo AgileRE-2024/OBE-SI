@@ -8,7 +8,7 @@ class Kelas extends Model
 {
     protected $primaryKey = 'kodeKelas';
     public $incrementing = false;
-    protected $table = 'Kelas';
+    protected $table = 'kelas';
     protected $fillable = [
         'kodeKelas', 'id_rps', 'namaKelas', 'jadwal', 'kuota','kodeMK','deleted_at'
     ];

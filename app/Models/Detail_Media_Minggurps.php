@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_Media_Minggurps extends Model
 {
-    protected $table = 'detail_media_mingguRPS';
+    protected $table = 'detail_media_minggurps';
     protected $fillable = [
         'id_media', 'kodeMingguRPS'
     ];

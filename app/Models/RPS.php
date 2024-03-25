@@ -12,7 +12,7 @@ class RPS extends Model
 
     protected $primaryKey = 'id_rps';
     public $incrementing = false;
-    protected $table = 'RPS';
+    protected $table = 'rps';
     protected $fillable = [
         'id_rps', 'nip','kodeMK', 'kodeRPS', 'tahunAjaran', 'semester', 'diperiksa_oleh', 'disetujui_oleh', 'dibuat_oleh', 'penanggungJawab','dosenPengampu','detail_penilaian'
     ];

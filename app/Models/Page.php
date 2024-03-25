@@ -9,7 +9,7 @@ class Page extends Model
 {
     protected $primaryKey = 'pemetaan';
     public $incrementing = false;
-    protected $table = 'Page';
+    protected $table = 'page';
     protected $fillable = [
         'pemetaan', 'deskripsi'
     ];

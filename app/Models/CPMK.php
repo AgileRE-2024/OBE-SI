@@ -8,7 +8,7 @@ class CPMK extends Model
 {
     protected $primaryKey = 'kodeCPMK';
     public $incrementing = false;
-    protected $table = 'CPMK';
+    protected $table = 'cpmk';
     protected $fillable = [
         'kodeCPMK', 'deskripsiCPMK','kodeCPL','deleted_at'
     ];

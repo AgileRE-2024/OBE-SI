@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_Metode_Minggurps extends Model
 {
-    protected $table = 'detail_metode_mingguRPS';
+    protected $table = 'detail_metode_minggurps';
     protected $fillable = [
         'id_metode', 'kodeMingguRPS'
     ];

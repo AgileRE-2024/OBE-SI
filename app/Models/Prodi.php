@@ -8,7 +8,7 @@ class Prodi extends Model
 {
     protected $primaryKey = 'namaProdi';
     public $incrementing = false;
-    protected $table = 'Prodi';
+    protected $table = 'prodi';
     protected $fillable = [
         'namaProdi', 'fakultas','namaPT', 'akreditasi', 'jenjangPendidikan','gelarLulusan','visi', 'misi','tujuan', 'deleted_at'
     ];

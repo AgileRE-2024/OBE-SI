@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_BK_MK extends Model
 {
-    protected $table = 'Detail_BK_MK';
+    protected $table = 'detail_bk_mk';
     protected $fillable = ['kodeBK', 'kodeMK'];
     public $timestamps = false;
 }

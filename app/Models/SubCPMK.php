@@ -8,7 +8,7 @@ class SubCPMK extends Model
 {
     protected $primaryKey = 'kodeSubCPMK';
     public $incrementing = false;
-    protected $table = 'SubCPMK';
+    protected $table = 'subcpmk';
     protected $fillable = [
         'kodeSubCPMK', 'deskripsiSubCPMK','kodeCPMK','deleted_at'
     ];

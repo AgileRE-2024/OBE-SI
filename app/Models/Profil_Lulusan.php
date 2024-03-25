@@ -8,7 +8,7 @@ class Profil_Lulusan extends Model
 {
     protected $primaryKey = 'kodePL';
     public $incrementing = false;
-    protected $table = 'Profil_Lulusan';
+    protected $table = 'profil_lulusan';
     protected $fillable = [
         'kodePL', 'deskripsiPL', 'namaPL'
     ];
