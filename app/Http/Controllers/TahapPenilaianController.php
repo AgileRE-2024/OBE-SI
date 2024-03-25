@@ -22,7 +22,7 @@ class TahapPenilaianController extends Controller
     {
         return view('content.tahap_penilaian.tahap_penilaian', [
             'title' => 'Mekanisme dan Tahap Penilaian',
-            'list_tahun_ajaran' => DB::select('SELECT DISTINCT tahunAjaran FROM RPS ORDER BY tahunAjaran DESC'),
+            'list_tahun_ajaran' => DB::select('SELECT DISTINCT tahunAjaran FROM rps ORDER BY tahunAjaran DESC'),
         ]);
     }
 

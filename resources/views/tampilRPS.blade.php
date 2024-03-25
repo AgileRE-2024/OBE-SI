@@ -128,7 +128,7 @@
         <tr>
             @if ($dosen)
             <td class="td-rps">
-                Fakultas {{ $dosen->prodi->fakultas }}
+                Fakultas {{ $dosen->prodi->fakultas ?? '-' }}
             </td>
             @else
             <td></td>

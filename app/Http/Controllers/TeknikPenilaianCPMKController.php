@@ -28,7 +28,7 @@ class TeknikPenilaianCPMKController extends Controller
     {
         return view('content.teknik_penilaian_cpmk.teknik_penilaian', [
             'title' => 'Teknik Penilaian CPMK',
-            'list_tahun_ajaran' => DB::select('SELECT DISTINCT tahunAjaran FROM RPS ORDER BY tahunAjaran DESC'),
+            'list_tahun_ajaran' => DB::select('SELECT DISTINCT tahunAjaran FROM rps ORDER BY tahunAjaran DESC'),
         ]);
     }
     /**

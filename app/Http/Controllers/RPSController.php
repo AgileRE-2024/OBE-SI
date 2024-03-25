@@ -87,7 +87,7 @@ class RPSController extends Controller
         $kodeCPLList = CPMK::whereIn('kodeCPMK', $kodeCPMKList)->get()->pluck('kodeCPL')->toArray();
         $list_cpl = CPL_Prodi::whereIn('kodeCPL', $kodeCPLList)->distinct()->get();
 
-        $view = view('content.eksporRPS', [
+        $view = view('content.EksporRPS', [
             'title' => 'RPS',
             'kodeMK' => $kodeMK,
             'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
