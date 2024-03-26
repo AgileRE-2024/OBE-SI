@@ -73,9 +73,9 @@
                         <a href="/forgot-password" id="hyperReset" style="text-align:center; margin: 0 0 0 0; color: white; text-decoration-line:underline;"><b>Klik disini</b></a>
                     </p>
 
-                    <p class="mt-4">Belum punya akun?
+                    <!-- <p class="mt-4">Belum punya akun?
                         <a href="/register" id="hyperReset" style="text-align:center; margin: 0 0 0 0; color: white; text-decoration-line:underline;"><b>Daftar</b></a>
-                    </p>
+                    </p> -->
                 </center>
             </form>
         </div>
