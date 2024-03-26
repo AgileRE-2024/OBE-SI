@@ -30,6 +30,19 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Program Studi</label>
+                        <select name="prodi" id='prodi' class="form-select">
+                            <option value="" disabled>-- Program Studi --</option>
+                            @foreach ($prodi as $prod)
+                                <option value="{{ $prod->namaProdi }}" @if(old('prodi', $user->namaProdi) == $prod->namaProdi) selected @endif>{{ $prod->namaProdi }}</option>
+                            @endforeach
+                        </select>
+                        @error('prodi')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label>Jabatan</label>
                         <input type="text" name="jabatanDosen" class="form-control" placeholder="Jabatan" value="{{ old('Jabatan') ? old('Jabatan') : $user->jabatanDosen }}">
                         @error('jabatanDosen')

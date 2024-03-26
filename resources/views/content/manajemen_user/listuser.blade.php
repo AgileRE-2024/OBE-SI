@@ -19,14 +19,14 @@
                 {{ session('success') }}
             </div>
         @endif
-        {{-- @if (auth()->user()->role == 1)
+        @if (auth()->user()->role == 2)
             <div class="d-flex justify-content-start pt-2">
                 <div>
-                    <a class="btn btn-dark" href="{{ route('kurikulum.data.add_cpl_prodi') }}"><i class="bi bi-plus-square">
+                    <a class="btn btn-dark" href="{{ route('createUser') }}"><i class="bi bi-plus-square">
                         </i>Tambah</a>
                 </div>
             </div>
-        @endif --}}
+        @endif
         {{-- <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
                 <a class="btn btn-outline-danger" href="{{ route('kurikulum.data.export_cpl_prodi', ['pdf']) }}"><i
@@ -46,9 +46,10 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 15%">NIP
                         </th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Nama</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Prodi</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Jabatan</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Role</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Email</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Email</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Status</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Delete</th>
@@ -63,6 +64,8 @@
                             {{ $user->nip }}</td>
                         <td scope="row">
                             {{ $user->namaDosen }}</td>
+                        <td scope="row">
+                            {{ $user->namaProdi }}</td>
                         <td scope="row">
                             {{ $user->jabatanDosen }}
                         </td>
