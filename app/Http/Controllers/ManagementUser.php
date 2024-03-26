@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -18,7 +19,9 @@ class ManagementUser extends Controller
 
     public function create()
     {
-        return view('content.manajemen_user.register');
+        $title = 'Create user';
+        $prodi = Prodi::all();
+        return view('content.manajemen_user.createuser', compact('title', 'prodi'));
     }
 
     public function store(Request $request)
@@ -28,23 +31,27 @@ class ManagementUser extends Controller
             'jabatanDosen' => 'required|string',
             'namaDosen' => 'required|string',
             'email' => 'required|email|unique:users,email',
-            'password1' => 'required',
-            'confirm_password' => 'required|same:password1',
+            'password' => 'required',
+            'prodi' => 'required|string',
+            'role' => 'required|in:0,1,2,3',
+            'status' => 'required|string',
+
         ]);
+
 
         // Simpan data ke dalam tabel
         $user = User::create([
             'nip' => $request->nip,
-            'namaProdi' => $request->namaProdi,
+            'namaProdi' => $request->prodi,
             'jabatanDosen' => $request->jabatanDosen,
             'namaDosen' => $request->namaDosen,
             'email' => $request->email,
             'password' => bcrypt($request->password1),
-            'role' => 0,
-            'status' => 'Aktif Bekerja',
+            'role' => $request->role,
+            'status' => $request->status,
         ]);
 
-        return redirect()->route('login')->with('status', 'Pengguna berhasil ditambahkan!');
+        return redirect()->route('listuser')->with('success', 'Pengguna berhasil ditambahkan!');
     }
 
     public function show($nip)
@@ -56,8 +63,9 @@ class ManagementUser extends Controller
     public function edit($nip)
     {
         $user = User::find($nip);
-        $title = 'edituser';
-        return view('content.manajemen_user.edituser', compact('user','title'));
+        $title = 'Edit user';
+        $prodi = Prodi::all();
+        return view('content.manajemen_user.edituser', compact('user','title', 'prodi'));
     }
 
     public function update(Request $request, $nip)
@@ -70,6 +78,7 @@ class ManagementUser extends Controller
             'email' => 'required|email',
             'role' => 'required|in:0,1,2,3',
             'status' => 'required|string',
+            'prodi' => 'required|string',
         ]);
     } else {
         $validator = Validator::make($request->all(), [
@@ -79,6 +88,7 @@ class ManagementUser extends Controller
             'email' => 'required|email|unique:users,email,' . $nip,
             'role' => 'required|in:0,1,2,3',
             'status' => 'required|string',
+            'prodi' => 'required|string',
         ]);
     }
     if (User::where('nip', $request->nip)->exists() && $request->nip != $nip) {
@@ -96,6 +106,7 @@ class ManagementUser extends Controller
         'email' => $request->email,
         'role' => $request->role,
         'status' => $request->status,
+        'namaProdi' => $request->prodi
     ]);
     return redirect()->route('listuser')->with('success', 'Pengguna berhasil diperbarui!');
     }
