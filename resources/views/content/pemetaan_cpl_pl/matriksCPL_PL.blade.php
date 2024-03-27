@@ -67,7 +67,7 @@
                                         name="checkbox_{{ $cpl->kodeCPL }}-{{ $pl->kodePL }}"
                                         value="{{ $cpl->kodeCPL }}&{{ $pl->kodePL }}"
                                         @if ($pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->where('kodePL', '===', $pl->kodePL)->count()) checked @endif
-                                        @if (auth()->user()->role != 1) disabled @endif>
+                                        @if (auth()->user()->role == 0 || auth()->user()->role == 2) disabled @endif>
                                 </td>
                             @endforeach
                         </tr>
