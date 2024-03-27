@@ -116,21 +116,6 @@
                             pattern="[0-9]+(\.[0-9]+)?">
                     </div>
 
-                    {{-- <div class="form-group">
-                        <label>Prasyarat Mata Kuliah</label>
-                        @error('mat_kodeMK')
-                            <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror
-                        <select name="mat_kodeMK" class="form-control">
-                            <option value="" selected disabled>-- Pilih MK Prasyarat --</option>
-                            @foreach ($mks as $mk)
-                                <option value="{{ $mk->kodeMK }}">
-                                    {{ $mk->namaMK }}</option>
-                            @endforeach
-                            <option value="">Tidak ada Prasyarat</option>
-                        </select>
-                    </div> --}}
-
                     <div id="dynamicAddRemove">
                         <div class="d-flex justify-content-between mb-2">
                             <label>Prasyarat Mata Kuliah</label>
