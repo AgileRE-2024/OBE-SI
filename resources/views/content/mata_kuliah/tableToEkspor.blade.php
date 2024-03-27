@@ -92,7 +92,7 @@
                             {{ $mk->semester }}
                         </td>
                         <td scope="row">
-                            {{ $mk->deskripsiMK }}
+                            {!! $mk->deskripsiMK ?? '-' !!}
                         </td>
                     </tr>
                 @endforeach
