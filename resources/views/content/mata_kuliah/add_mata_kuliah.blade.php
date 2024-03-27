@@ -4,8 +4,6 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Tambah Mata Kuliah</h6>
-            {{-- <a href="/tambahpl" class="float-right btn btn-sm btn-dark"><i
-    class="fa fa-fw fa-plus-circle"></i> Tambah PL</a> --}}
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
@@ -30,10 +28,8 @@
                         @error('kodeMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        {{-- <input type="text" name="kodeMK" class="form-control" placeholder="Kode Mata Kuliah"
-                            pattern="[A-Za-z0-9]+" maxlength="4"> --}}
                         <input type="text" name="kodeMK" class="form-control"
-                            placeholder="Kode Mata Kuliah (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
+                            placeholder="Kode Mata Kuliah (Masukkan huruf besar dan angka saja)" pattern="[A-Z0-9-]+"
                             maxlength="10" minlength="2" title="Harap masukkan huruf besar dan angka saja"
                             oninput="updateInput(this);">
                     </div>
@@ -127,7 +123,6 @@
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
                             <select name="mat_kodeMK[]" id="mat_kodeMK" class="form-select mb-1">
-                                {{-- <option value="" @if (!$mk->mat_kodeMK) selected @endif disabled>-- Pilih MK Prasyarat --</option> --}}
                                 <option value="" disabled selected>-- Pilih MK Prasyarat --</option>
                                     @foreach ($mks as $mk)
                                     <option value="{{ $mk->kodeMK }}">
@@ -148,13 +143,12 @@
                         $("#dynamic-ar").click(function () {
                             ++i;
                             $("#dynamicAddRemove").append(
-                                '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="mat_kodeMK[' + i + ']" id="judul_pustaka" class="form-select mb-1"><option value="" @if (!$mk->mat_kodeMK) selected @endif disabled>-- Pilih MKPrasyarat --</option>@foreach ($mks as $item)<option value="{{ $item->kodeMK }}" @if ($mk->mat_kodeMK == $item->kodeMK) selected @endif>{{ $item->namaMK }}</option>@endforeach</select></td></div>'
+                                '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="mat_kodeMK[' + i + ']" id="judul_pustaka" class="form-select mb-1"><option value="" selected disabled>-- Pilih MKPrasyarat --</option>@foreach ($mks as $item)<option value="{{ $item->kodeMK }}" @if ($mk->mat_kodeMK == $item->kodeMK) selected @endif>{{ $item->namaMK }}</option>@endforeach</select></td></div>'
                             );
                         });
                         $(document).on('click', '.remove-input-field', function () {
                             $(this).parents('.dynamic').remove();
                         });
-
                     </script>
 
                     <div class="form-group">
