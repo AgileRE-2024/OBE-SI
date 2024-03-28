@@ -85,25 +85,11 @@ class MataKuliahController extends Controller
         ]);
 
         if ($validator->fails()) {
-            // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
         }
-
-        if ($request->mat_kodeMK == null) {
-            $mat_kodeMK = null;
-        } else {
-            $mat_kodeMK = $request->mat_kodeMK;
-        }
-
-        if ($request->prasyarat_tambahan == null) {
-            $prasyarat_tambahan = null;
-        } else {
-            $prasyarat_tambahan = $request->prasyarat_tambahan;
-        }
-
+        
         Mata_Kuliah::create([
             'kodeMK' => $request->kodeMK,
-            'mat_kodeMK' => $mat_kodeMK,
             'namaProdi' => $request->namaProdi,
             'namaMK' => $request->namaMK,
             'jenisMK' => (int)$request->jenisMK,
@@ -112,10 +98,10 @@ class MataKuliahController extends Controller
             'ects' => (float)$request->ects,
             'semester' => (int)$request->semester,
             'deskripsiMK' => $request->deskripsi,
-            'prasyaratTambahan' => $prasyarat_tambahan,
+            'prasyaratTambahan' => $request->prasyarat_tambahan,
         ]);
-
-        if ($mat_kodeMK != null){
+        
+        if ($request->mat_kodeMK != null){
             foreach ($request->mat_kodeMK as $value) {
                 // $prasyarat[] = $value;
                 Prasyarat::create([
