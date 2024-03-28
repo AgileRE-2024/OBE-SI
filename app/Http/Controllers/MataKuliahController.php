@@ -207,8 +207,13 @@ class MataKuliahController extends Controller
         } elseif (Detail_MK_CPMK::where('kodeMK', $mk)->exists()) {
             return redirect()->route('kurikulum.data.mata_kuliah')->with('error', 'Mata Kuliah masih berelasi dengan CPL.');
         }else {
-            $mk = Mata_Kuliah::where('kodeMK', $mk)->first();
-            $mk->delete();
+            $matkul = Mata_Kuliah::where('kodeMK', $mk)->first();
+            $prasyarat = Prasyarat::where('kodeMK', $mk)->get();
+            
+            foreach ($prasyarat as $value) {
+                $value->delete();
+            }
+            $matkul->delete();
             return redirect()->route('kurikulum.data.mata_kuliah')->with('success', 'Mata Kuliah berhasil dihapus');
         }
     }
