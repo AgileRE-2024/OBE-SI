@@ -13,11 +13,11 @@ class Bahan_Kajian extends Model
 
     public function CPL_Prodi()
     {
-        return $this->belongsToMany(CPL_Prodi::class, 'Detail_CPLProdi_BK', 'kodeBK', 'kodeCPL');
+        return $this->belongsToMany(CPL_Prodi::class, 'detail_cplprodi_bk', 'kodeBK', 'kodeCPL');
     }
 
     public function Mata_Kuliah()
     {
-        return $this->belongsToMany(Mata_Kuliah::class, 'Detail_BK_MK', 'kodeBK', 'kodeMK');
+        return $this->belongsToMany(Mata_Kuliah::class, 'detail_bk_mk', 'kodeBK', 'kodeMK');
     }
 }

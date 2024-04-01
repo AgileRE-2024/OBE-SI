@@ -16,7 +16,7 @@ class Mata_Kuliah extends Model
 
     public function Bahan_Kajian()
     {
-        return $this->belongsToMany(Bahan_Kajian::class, 'Detail_BK_MK', 'kodeMK', 'kodeBK');
+        return $this->belongsToMany(Bahan_Kajian::class, 'detail_bk_mk', 'kodeMK', 'kodeBK');
     }
 
     // public function Mata_Kuliah()
@@ -31,7 +31,7 @@ class Mata_Kuliah extends Model
 
     public function CPMK()
     {
-        return $this->belongsToMany(CPMK::class, 'Detail_MK_CPMK', 'kodeMK', 'kodeCPMK');
+        return $this->belongsToMany(CPMK::class, 'detail_mk_cpmk', 'kodeMK', 'kodeCPMK');
     }
 
     public function Kelas()
