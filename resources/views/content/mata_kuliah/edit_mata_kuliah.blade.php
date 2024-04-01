@@ -106,7 +106,7 @@
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="number" name="sks" class="form-control" placeholder="SKS Mata Kuliah"
-                            value="{{ old('sks') ? old('sks') : $mk->sks }}" min="0" max="4">
+                            value="{{ old('sks') ? old('sks') : $mk->sks }}" min="0" max="6">
                     </div>
 
                     <div class="form-group">
