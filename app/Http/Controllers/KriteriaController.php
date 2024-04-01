@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\kriteria_penilaian;
+use App\Models\Kriteria_Penilaian;
 
 class KriteriaController extends Controller
 {
