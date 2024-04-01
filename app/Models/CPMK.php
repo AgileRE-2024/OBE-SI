@@ -20,7 +20,7 @@ class CPMK extends Model
 
     public function Mata_Kuliah()
     {
-        return $this->belongsToMany(Mata_Kuliah::class, 'Detail_MK_CPMK', 'kodeCPMK', 'kodeMK');
+        return $this->belongsToMany(Mata_Kuliah::class, 'detail_mk_cpmk', 'kodeCPMK', 'kodeMK');
     }
 
     public function SubCPMK()

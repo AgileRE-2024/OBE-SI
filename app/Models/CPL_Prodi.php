@@ -16,17 +16,17 @@ class CPL_Prodi extends Model
 
     public function CPL_SN_Dikti()
     {
-        return $this->belongsToMany(CPL_SN_Dikti::class, 'Detail_SN_CPLProdi', 'kodeCPL', 'kodeCPLSN');
+        return $this->belongsToMany(CPL_SN_Dikti::class, 'detail_sn_cplprodi', 'kodeCPL', 'kodeCPLSN');
     }
 
     public function Profil_Lulusan()
     {
-        return $this->belongsToMany(Profil_Lulusan::class, 'Detail_PL_CPLProdi', 'kodeCPL', 'kodePL');
+        return $this->belongsToMany(Profil_Lulusan::class, 'detail_pl_cplprodi', 'kodeCPL', 'kodePL');
     }
 
     public function Bahan_Kajian()
     {
-        return $this->belongsToMany(Bahan_Kajian::class, 'Detail_CPLProdi_BK', 'kodeCPL', 'kodeBK');
+        return $this->belongsToMany(Bahan_Kajian::class, 'detail_cplprodi_bk', 'kodeCPL', 'kodeBK');
     }
 
     public function CPMK()
