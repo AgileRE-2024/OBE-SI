@@ -103,7 +103,7 @@ class MataKuliahController extends Controller
         
         if ($request->mat_kodeMK != null){
             foreach ($request->mat_kodeMK as $value) {
-                // $prasyarat[] = $value;
+                // dd($value);
                 Prasyarat::create([
                     'kodeMK' => $request->kodeMK,
                     'mat_kodeMK' => $value

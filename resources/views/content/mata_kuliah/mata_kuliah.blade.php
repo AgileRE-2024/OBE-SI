@@ -69,28 +69,16 @@
                                 {{ $mk->namaProdi }}
                             </td>
                             <td scope="row" style="width:10%">
-                                @if ($mk->mat_kodeMK)
-                                    @if($mk->mat_kodeMK == '[null]')
-                                        {{ '-' }}
-                                    @else
-                                        @if ($mk->Prasyarat == null)
-                                            {{ $mk->mat_kodeMK }}
-                                        @else
-                                            {{-- Jika Sudah dimigrasi di tabel prasyarat, gunakan kode di bawah --}}
-                                            {{-- {{ $mk->Prasyarat->mat_kodeMK }} --}}
-                                            @for ($kode=2; $kode<=strlen($mk->mat_kodeMK); $kode+=9)
-                                                {{-- {{ $kode }} --}}
-                                                {{ substr($mk->mat_kodeMK, $kode, 6) }}
-                                            @endfor
-                                            
-                                        @endif
-                                    @endif
+                                @if ($mk->Prasyarat)
+                                    @foreach($mk->Prasyarat as $prasyrt)
+                                        {{ $prasyrt->mat_kodeMK }}
+                                    @endforeach
                                 @else
-                                    {{ '-' }}
+                                    {{'-'}}
                                 @endif
                             </td>
                             <td scope="row" style="width:10%">
-                                {{ $mk->prasyaratTambahan }}
+                                {{ $mk->prasyaratTambahan ?? '-' }}
                             </td>
                             <td scope="row">
                                 @if ($mk->jenisMK == '1')

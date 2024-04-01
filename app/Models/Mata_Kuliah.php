@@ -41,7 +41,7 @@ class Mata_Kuliah extends Model
 
     public function Prasyarat()
     {
-        return $this->belongsTo(Prasyarat::class, 'kodeMK', 'kodeMK');
+        return $this->hasMany(Prasyarat::class, 'kodeMK', 'kodeMK');
     }
 
     public function User(){
