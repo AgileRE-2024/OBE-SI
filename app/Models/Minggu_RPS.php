@@ -60,4 +60,9 @@ class Minggu_RPS extends Model
         //relasi many to one
         return $this->belongsTo(Teknik_Penilaian_RPS::class, 'id_teknik_penilaian', 'id_teknik_penilaian');
     }
+
+    public function Instrumen_Penilaian(){
+        //relasi many to one
+        return $this->belongsTo(Instrumen_Penilaian::class, 'id_instrumen_penilaian', 'id_instrumen_penilaian');
+    }
 }
