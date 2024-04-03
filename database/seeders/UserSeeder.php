@@ -176,7 +176,7 @@ class UserSeeder extends Seeder
             'namaDosen' => 'Dr. Indra Kharisma R, S.Kom., M.T.',
             'password' => bcrypt('coba1234'), //password coba123
             'email' => 'indra.kharisma@fst.unair.ac.id',
-            'role' => 0,
+            'role' => 3,
             'status' => "Aktif Bekerja"
         ]);
         User::create([

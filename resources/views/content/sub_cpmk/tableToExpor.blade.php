@@ -34,7 +34,9 @@
                     <th class="align-middle" scope="col" style="width: 5%">No</th>
                     <th class="align-middle" scope="col" style="width: 15%">Kode Sub CPMK</th>
                     <th class="align-middle" scope="col" style="width: 15%">Kode CPMK</th>
-                    <th class="align-middle" scope="col" style="width: 45%">Deskripsi Sub CPMK</th>
+                    <th class="align-middle" scope="col" style="width: 15%">Deskripsi Sub CPMK</th>
+                    <th class="align-middle" scope="col" style="width: 15%">Kriteria Penilaian</th>
+                    <th class="align-middle" scope="col" style="width: 15%">Indikator Penilaian</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,6 +52,12 @@
                         </td>
                         <td scope="row">
                             {{ $subcpmk->deskripsiSubCPMK }}
+                        </td>
+                        <td scope="row">
+                            {{ $subcpmk->kriteriaPenilaian }}
+                        </td>
+                        <td scope="row">
+                            {{ $subcpmk->indikatorPenilaian }}
                         </td>
                     </tr>
                 @endforeach

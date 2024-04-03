@@ -30,13 +30,17 @@ class SubCPMKController extends Controller
         $request->validate([
             'kodeSubCPMK' => 'required|unique:subcpmk,kodeSubCPMK',
             'deskripsiSubCPMK' => 'required',
-            'kodeCPMK' => 'required'
+            'kodeCPMK' => 'required',
+            'kriteriaPenilaian' => 'required',
+            'indikatorPenilaian' => 'required',
         ]);
 
         SubCPMK::create([
             'kodeSubCPMK' => $request->kodeSubCPMK,
             'deskripsiSubCPMK' => $request->deskripsiSubCPMK,
-            'kodeCPMK' => $request->kodeCPMK
+            'kodeCPMK' => $request->kodeCPMK,
+            'kriteriaPenilaian' => $request->kriteriaPenilaian,
+            'indikatorPenilaian' => $request->indikatorPenilaian,
         ]);
 
         return redirect()->route('kurikulum.data.sub_cpmk')->with('success', 'Sub CPMK berhasil ditambahkan!');
@@ -55,7 +59,9 @@ class SubCPMKController extends Controller
         $request->validate([
             'kodeSubCPMK' => 'required',
             'deskripsiSubCPMK' => 'required',
-            'kodeCPMK' => 'required'
+            'kodeCPMK' => 'required',
+            'kriteriaPenilaian' => 'required',
+            'indikatorPenilaian' => 'required',
         ]);
 
         if ($request->kodeSubCPMK != $subcpmk) {
@@ -67,7 +73,9 @@ class SubCPMKController extends Controller
         SubCPMK::where('kodeSubCPMK', $subcpmk)->update([
             'kodeSubCPMK' => $request->kodeSubCPMK,
             'deskripsiSubCPMK' => $request->deskripsiSubCPMK,
-            'kodeCPMK' => $request->kodeCPMK
+            'kodeCPMK' => $request->kodeCPMK,
+            'kriteriaPenilaian' => $request->kriteriaPenilaian,
+            'indikatorPenilaian' => $request->indikatorPenilaian,
         ]);
 
         return redirect()->route('kurikulum.data.sub_cpmk')->with('success', 'Sub CPMK berhasil diubah!');

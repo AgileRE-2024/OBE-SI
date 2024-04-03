@@ -48,7 +48,23 @@
                         @error('deskripsiSubCPMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea name="deskripsiSubCPMK" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah">{{ old('deskripsiSubCPMK') ? old('deskripsiSubCPMK') : $subcpmk->deskripsiSubCPMK }}</textarea>
+                        <textarea name="deskripsiSubCPMK" row="3" class="form-control" placeholder="Deskripsi Sub CPMK">{{ old('deskripsiSubCPMK') ? old('deskripsiSubCPMK') : $subcpmk->deskripsiSubCPMK }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kriteria Penilaian</label>
+                        @error('kriteriaPenilaian')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <textarea name="kriteriaPenilaian" row="3" class="form-control" placeholder="Kriteria Penilaian">{{ old('kriteriaPenilaian') ? old('kriteriaPenilaian') : $subcpmk->kriteriaPenilaian }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Indikator Penilaian</label>
+                        @error('indikatorPenilaian')
+                            <p style="color: #BF2C45">{{ $message }}</p>
+                        @enderror
+                        <textarea name="indikatorPenilaian" row="3" class="form-control" placeholder="Indikator Penilaian">{{ old('indikatorPenilaian') ? old('indikatorPenilaian') : $subcpmk->indikatorPenilaian }}</textarea>
                     </div>
 
                     <div class="form-group pt-4">
