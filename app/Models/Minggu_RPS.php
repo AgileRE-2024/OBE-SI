@@ -10,7 +10,7 @@ class Minggu_RPS extends Model
     public $incrementing = false;
     protected $table = 'minggu_rps';
     protected $fillable = [
-        'kodeMingguRPS', 'id_rps', 'id_kriteria_penilaians', 'kodePenilaian', 'kodeSubCPMK', 'mingguKe','deleted_at', 'luring', 'penugasan','waktuPembelajaran','pengalaman_belajar','bahan_kajian'
+        'kodeMingguRPS', 'id_rps', 'id_teknik_penilaian', 'kodePenilaian', 'kodeSubCPMK', 'mingguKe','deleted_at', 'luring', 'penugasan','waktuPembelajaran','pengalaman_belajar','bahan_kajian'
     ];
 
     public function SubCPMK()
@@ -54,5 +54,10 @@ class Minggu_RPS extends Model
     public function Kriteria_Penilaian(){
         //relasi many to one
         return $this->belongsTo(Kriteria_Penilaian::class, 'id_kriteria_penilaians', 'id_kriteria_penilaians');
+    }
+
+    public function Teknik_Penilaian_RPS(){
+        //relasi many to one
+        return $this->belongsTo(Teknik_Penilaian_RPS::class, 'id_teknik_penilaian', 'id_teknik_penilaian');
     }
 }
