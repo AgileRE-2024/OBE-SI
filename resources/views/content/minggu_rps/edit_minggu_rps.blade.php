@@ -57,17 +57,15 @@
 
                         <div class="form-group">
                             <label>Metode Pembelajaran</label>
-                            @error('bentukPembelajaran')
+                            @error('metodePembelajaran')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
-                            <select name="id_metode" id='bentukPembelajaran' class="form-select">
-                                <option value="" selected disabled>-- Pilih Metode Pembelajaran --</option>
-                                @foreach ($metode as $item)
-                                <option value="{{ $item->id_metode }}"
-                                    {{ $item->id_metode ==  $minggu_rps->id_metode ? 'selected' : ''}}>
-                                    {{ $item->nama_metode }}</option>
-                                @endforeach
-                            </select>
+                            @foreach ($metode as $item)
+                                <div>
+                                    <input type="checkbox" name="metode[]" value="{{ $item->id_metode }}">
+                                    <label style="font-weight: normal;">{{ $item->nama_metode }}</label>
+                                </div>
+                            @endforeach
                         </div>
 
                         <div class="form-group">
@@ -130,7 +128,7 @@
                                 value="{{ $minggu_rps->pengalaman_belajar }}">{{ old('pengalaman_belajar') ? old('pengalaman_belajar') : $minggu_rps->pengalaman_belajar }}</textarea>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>Kriteria Penilaian</label>
                             @error('id_kriteria_penilaians')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
@@ -143,7 +141,7 @@
                                     {{ $item->nama_kriteria_penilaians }}</option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
                             <label>Bobot Nilai</label>

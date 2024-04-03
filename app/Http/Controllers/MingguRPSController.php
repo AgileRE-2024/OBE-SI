@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Detail_RPS;
 use App\Models\pustaka;
 use App\Models\Detail_Pustaka_Minggurps;
+use App\Models\Detail_Metode_Minggurps;
 use App\Models\Mata_Kuliah;
 use App\Models\SubCPMK;
 use App\Models\Metode;
@@ -53,7 +54,7 @@ class MingguRPSController extends Controller
         $metode = Metode::all();
         $bentuk = Bentuk::all();
         $media = Media::all();
-        $kriteria = kriteria_penilaian::all();
+        // $kriteria = kriteria_penilaian::all();
         
         return view('content.minggu_rps.edit_minggu_rps', [
             'title' => 'Edit Minggu RPS',
@@ -64,7 +65,7 @@ class MingguRPSController extends Controller
             'metode' => $metode,
             'bentuk' => $bentuk,
             'media' => $media,
-            'kriteria' => $kriteria
+            // 'kriteria' => $kriteria
         ]);
     }
 
@@ -77,22 +78,19 @@ class MingguRPSController extends Controller
      */
     public function updateMingguRPS(Request $request, $kodeMingguRPS)
     {
+        dd($request);
         $kodeRPS = substr($kodeMingguRPS, 0, 10);
         $kodeMK = substr($kodeRPS, 0, 6);
-
-        // dd($request);
 
         $request->validate([
             'kodeSubCPMK' => 'required',
             'bahan_kajian' => 'required',
             'id_bentuk' => 'required',
-            'id_metode' => 'required',
             'penugasan' => 'required',
             'luring' => 'required',
             'id_media' => 'required',
             'waktuPembelajaran' => 'required',
             'pengalaman_belajar' => 'required',
-            'id_kriteria_penilaians' => 'required',
             'bobot_nilai' => 'required',
         ]);
 
@@ -100,13 +98,11 @@ class MingguRPSController extends Controller
             'kodeSubCPMK' => $request->input('kodeSubCPMK'),
             'bahan_kajian' => $request->input('bahan_kajian'),
             'id_bentuk' => $request->input('id_bentuk'),
-            'id_metode' => $request->input('id_metode'),
             'penugasan' => $request->input('penugasan'),
             'luring' => $request->input('luring'),
             'id_media' => $request->input('id_media'),
             'waktuPembelajaran' => $request->input('waktuPembelajaran'),
             'pengalaman_belajar' => $request->input('pengalaman_belajar'),
-            'id_kriteria_penilaians' => $request->input('id_kriteria_penilaians'),
             'bobot_nilai' => $request->input('bobot_nilai'),
         ];
 
@@ -114,9 +110,10 @@ class MingguRPSController extends Controller
 
         $pustaka = Detail_Pustaka_Minggurps::where('kodeMingguRPS', $kodeMingguRPS);
         $pustaka->delete();
+        $metode = Detail_Metode_Minggurps::where('kodeMingguRPS', $kodeMingguRPS);
+        $metode->delete();
         
         foreach ($request->pustaka as $value) {
-            // dd($value['judul']);
             if($value['judul']) {
                 $data = [
                     'id_pustaka' => $value['judul'],
@@ -124,6 +121,16 @@ class MingguRPSController extends Controller
                     'detail_pustaka' => $value['referensi'],
                 ];
                 Detail_Pustaka_Minggurps::create($data);
+            }
+        }
+
+        foreach ($request->metode as $value) {
+            if($value) {
+                $data = [
+                    'id_metode' => $value,
+                    'kodeMingguRPS' => $kodeMingguRPS,
+                ];
+                Detail_Metode_Minggurps::create($data);
             }
         }
 
