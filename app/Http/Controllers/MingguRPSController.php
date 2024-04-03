@@ -15,8 +15,9 @@ use App\Models\SubCPMK;
 use App\Models\Metode;
 use App\Models\Bentuk;
 use App\Models\Kriteria_Penilaian;
+use App\Models\Instrumen_Penilaian;
 use App\Models\Media;
-use App\Models\Teknik_Penilaian;
+use App\Models\Teknik_Penilaian_RPS;
 use Illuminate\Support\Facades\Validator;
 
 class MingguRPSController extends Controller
@@ -54,7 +55,8 @@ class MingguRPSController extends Controller
         $metode = Metode::all();
         $bentuk = Bentuk::all();
         $media = Media::all();
-        // $kriteria = kriteria_penilaian::all();
+        $teknik_penilaian = Teknik_Penilaian_RPS::all();
+        $instrumen_penilaian = Instrumen_Penilaian::all();
         
         return view('content.minggu_rps.edit_minggu_rps', [
             'title' => 'Edit Minggu RPS',
@@ -65,7 +67,8 @@ class MingguRPSController extends Controller
             'metode' => $metode,
             'bentuk' => $bentuk,
             'media' => $media,
-            // 'kriteria' => $kriteria
+            'teknik_penilaian' => $teknik_penilaian,
+            'instrumen_penilaian' => $instrumen_penilaian
         ]);
     }
 
@@ -103,6 +106,9 @@ class MingguRPSController extends Controller
             'waktuPembelajaran' => $request->input('waktuPembelajaran'),
             'pengalaman_belajar' => $request->input('pengalaman_belajar'),
             'bobot_nilai' => $request->input('bobot_nilai'),
+            'id_teknik_penilaian' => $request->input('teknik_penilaian'),
+            'bobot_nilai' => $request->input('bobot_nilai'),
+            'id_instrumen_penilaian' => $request->input('instrumen_penilaian')
         ];
 
         Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->update($data);

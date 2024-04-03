@@ -1,6 +1,19 @@
 @extends('layout.dashboard')
 
 @section('content')
+<script>
+$(document).ready(function() {
+  $('#teknik_penilaian').change(function() {
+    if ($(this).val() == 'teknik_penilaian') {
+      $('#div_bobot').show();
+      $('#div_instrumen').show();
+    } else {
+      $('#div_bobot').show();
+      $('#div_instrumen').show();
+    }
+  });
+});
+</script>
 
 <div class="content px-4">
     <div class="content px-4">
@@ -144,6 +157,20 @@
                         </div> --}}
 
                         <div class="form-group">
+                            <label>Teknik Penilaian</label>
+                            @error('teknik_penilaian')
+                            <h6 style="color: #BF2C45">{{ $message }}</h6>
+                            @enderror
+                            <select name="teknik_penilaian" id='teknik_penilaian' class="form-select">
+                                <option value="" selected disabled>-- Pilih Teknik Penilaian --</option>
+                                @foreach ($teknik_penilaian as $item)
+                                <option value="{{ $item->id_teknik_penilaian }}" {{ $item->id_teknik_penilaian ==  $minggu_rps->id_teknik_penilaian ? 'selected' : ''}}>
+                                    {{ $item->nama_teknik_penilaian }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="div_bobot" @if($minggu_rps->bobot_nilai == null) style="display:none" @endif>
                             <label>Bobot Nilai</label>
                             @error('bobot_nilai')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
@@ -151,6 +178,21 @@
                             <input type="text" name="bobot_nilai" class="form-control" placeholder="Bobot Nilai"
                                 value="{{ $minggu_rps->bobot_nilai }}">
                         </div>
+
+                        <div class="form-group" id="div_instrumen" @if($minggu_rps->id_instrumen_penilaian == null) style="display:none" @endif>
+                            <label>Instrumen Penilaian</label>
+                            @error('instrumen_penilaian')
+                            <h6 style="color: #BF2C45">{{ $message }}</h6>
+                            @enderror
+                            <select name="instrumen_penilaian" id='instrumen_penilaian' class="form-select">
+                                <option value="" selected disabled>-- Pilih Instrumen Penilaian --</option>
+                                @foreach ($instrumen_penilaian as $item)
+                                <option value="{{ $item->id_instrumen_penilaian }}" {{ $item->id_instrumen_penilaian ==  $minggu_rps->id_instrumen_penilaian ? 'selected' : ''}}>
+                                    {{ $item->nama_instrumen_penilaian }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div id="dynamicAddRemove">
                             <div class="d-flex justify-content-between mb-2">
                                 <label>Referensi</label>
