@@ -55,6 +55,8 @@ use App\Http\Controllers\TeknikPenilaianCPMKController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\ManagementUser;
+use App\Http\Controllers\TeknikPenilaianRPSController;
+use App\Http\Controllers\InstrumenPenilaianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -260,6 +262,18 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
             Route::get('/editKriteria/{kriteria}', [KriteriaController::class, 'edit'])->name('edit_kriteria');
             Route::put('/editKriteria/{kriteria}', [KriteriaController::class, 'update'])->name('update_kriteria');
             Route::get('/deleteKriteria/{kriteria}', [KriteriaController::class, 'delete'])->name('delete_kriteria');
+
+            Route::get('/addTeknik', [TeknikPenilaianRPSController::class, 'addTeknik'])->name('add_teknik');
+            Route::post('/addTeknik', [TeknikPenilaianRPSController::class, 'storeTeknik'])->name('store_teknik');
+            Route::get('/editTeknik/{Teknik}', [TeknikPenilaianRPSController::class, 'edit'])->name('edit_teknik');
+            Route::put('/editTeknik/{Teknik}', [TeknikPenilaianRPSController::class, 'update'])->name('update_teknik');
+            Route::get('/deleteTeknik/{Teknik}', [TeknikPenilaianRPSController::class, 'delete'])->name('delete_teknik');
+            
+            Route::get('/addInstrumen', [InstrumenPenilaianController::class, 'addInstrumen'])->name('add_instrumen');
+            Route::post('/addInstrumen', [InstrumenPenilaianController::class, 'storeInstrumen'])->name('store_instrumen');
+            Route::get('/editInstrumen/{instrumen}', [InstrumenPenilaianController::class, 'edit'])->name('edit_instrumen');
+            Route::put('/editInstrumen/{instrumen}', [InstrumenPenilaianController::class, 'update'])->name('update_instrumen');
+            Route::get('/deleteInstrumen/{instrumen}', [InstrumenPenilaianController::class, 'delete'])->name('delete_instrumen');
         });
         
 
@@ -286,6 +300,7 @@ Route::prefix('/dashboard/kurikulum')->name('kurikulum.')->group(function () {
 
         Route::get('/pustaka', [PustakaController::class, 'index'])->name('pustaka');
         Route::get('/metode', [MetodeController::class, 'index'])->name('metode');
+        Route::get('/teknik', [TeknikPenilaianRPSController::class, 'index'])->name('teknik_penilaian');
         Route::get('/kriteria', [KriteriaController::class, 'index'])->name('kriteria');
     }); 
 }); Route::get('/exportExcelPustaka', [PustakaController::class,'export_excel'])->name('export_excel_pustaka');
