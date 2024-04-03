@@ -138,11 +138,11 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('kurikulum.data.kriteria') }}" class="nav-link"
-                                        @if (URL::current() === route('kurikulum.data.kriteria')) style="background-color: #989898; color: black;" @endif>
+                                    <a href="{{ route('kurikulum.data.teknik_penilaian') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.data.teknik_penilaian')) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
                                             <i class="bi bi-caret-right-fill"></i>
-                                            Kriteria Penilaian
+                                            Teknik Penilaian
                                         </p>
                                     </a>
                                 </li>

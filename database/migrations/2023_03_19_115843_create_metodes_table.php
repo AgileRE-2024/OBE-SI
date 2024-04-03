@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('metodes', function (Blueprint $table) {
             $table->id('id_metode');
-            $table->string('nama_metode',30)->nullable();
+            $table->string('nama_metode',100)->nullable();
             $table->string('deskripsi_metode',100)->nullable();
             $table->timestamps();
         });
