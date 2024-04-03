@@ -162,7 +162,7 @@
                                 <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
                                 <select name="pustaka[0][judul]" id="judul_pustaka" class="form-select mb-1">
-                                    <option value="" selected disabled>-- Pilih Pustaka --</option>
+                                    <option value="" selected>-- Pilih Pustaka --</option>
                                     @foreach ($pustaka as $item)
                                     <option value="{{ $item->id_pustaka }}">{{ $item->judul }}</option>
                                     @endforeach

@@ -78,7 +78,6 @@ class MingguRPSController extends Controller
      */
     public function updateMingguRPS(Request $request, $kodeMingguRPS)
     {
-        dd($request);
         $kodeRPS = substr($kodeMingguRPS, 0, 10);
         $kodeMK = substr($kodeRPS, 0, 6);
 
