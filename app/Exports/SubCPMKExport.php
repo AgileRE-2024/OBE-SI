@@ -20,13 +20,13 @@ class SubCPMKExport implements FromCollection, WithHeadings, WithStyles
      */
     public function collection()
     {
-        return SubCPMK::all('kodeSubCPMK', 'kodeCPMK', 'deskripsiSubCPMK');
+        return SubCPMK::all('kodeSubCPMK', 'kodeCPMK', 'deskripsiSubCPMK', 'kriteriaPenilaian', 'indikatorPenilaian');
     }
 
     public function headings(): array
     {
         return [
-            'Kode Sub CPMK', 'Kode CPMK', 'Deskripsi Sub CPMK'
+            'Kode Sub CPMK', 'Kode CPMK', 'Deskripsi Sub CPMK', 'Kriteria Penilaian', 'Indikator Penilaian'
         ];
     }
 
@@ -50,7 +50,7 @@ class SubCPMKExport implements FromCollection, WithHeadings, WithStyles
             ]);
 
         // Center aligment checklist
-        $columns = ['A', 'B', 'C'];
+        $columns = ['A', 'B', 'C', 'D', 'E'];
 
         $range = "A2:G{$highestRow}";
         foreach ($columns as $column) {
@@ -76,6 +76,8 @@ class SubCPMKExport implements FromCollection, WithHeadings, WithStyles
         $sheet->getColumnDimension('A')->setWidth(15);
         $sheet->getColumnDimension('B')->setWidth(15);
         $sheet->getColumnDimension('C')->setWidth(50);
+        $sheet->getColumnDimension('D')->setWidth(50);
+        $sheet->getColumnDimension('E')->setWidth(50);
         // Memindahkan cursor ke cell A1
         $sheet->getStyle('A1');
     }

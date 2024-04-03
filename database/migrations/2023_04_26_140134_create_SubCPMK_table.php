@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('deskripsiSubCPMK');
             $table->char('kodeCPMK', 10);
             $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
+            $table->text('kriteriaPenilaian');
+            $table->text('indikatorPenilaian');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

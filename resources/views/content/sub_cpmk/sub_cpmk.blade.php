@@ -34,8 +34,10 @@
                 <tr>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Kode Sub CPMK</th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Sub CPMK</th>
+                    <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Deskripsi Sub CPMK</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode CPMK</th>
+                    <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Kriteria Penilaian</th>
+                    <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Indikator Penilaian</th>
                     @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
@@ -57,6 +59,12 @@
                     </td>
                     <td scope="row">
                         {{ $subcpmk->kodeCPMK }}
+                    </td>
+                    <td scope="row">
+                        {{ $subcpmk->kriteriaPenilaian }}
+                    </td>
+                    <td scope="row">
+                        {{ $subcpmk->indikatorPenilaian }}
                     </td>
                     @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                     <td scope="row">
