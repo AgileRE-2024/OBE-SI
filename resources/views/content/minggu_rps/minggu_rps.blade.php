@@ -26,7 +26,7 @@
                     <th class="align-middle" scope="col" rowspan="2" style="width: 5%">Minggu Ke-</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Sub-Capaian Mata Kuliah
                     </th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Bahan Kajian
+                    <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Pokok Bahasan
                     </th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Bentuk dan Metode Pembelajaran
                     </th>
@@ -39,7 +39,7 @@
                     </th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Kriteria Penilaian dan Indikator
                     </th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Bobot Nilai
+                    <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Teknik Penilaian
                     </th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Referensi
                     </th>
@@ -84,8 +84,19 @@
                     <td scope="row">{{ $minggurps->Media->nama_media ?? '' }}</td>
                     <td scope="row">{{ $minggurps->waktuPembelajaran }}</td>
                     <td scope="row">{{ $minggurps->pengalaman_belajar }}</td>
-                    <td scope="row">{{ $minggurps->Kriteria_Penilaian->deskripsi_kriteria_penilaians ?? '' }}</td>
-                    <td scope="row">{{ $minggurps->bobot_nilai }}</td>
+                    <td scope="row">
+                        @if($minggurps->kodeSubCPMK)
+                            <p>Kriteria penilaian: {{ $minggurps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
+                            <p>Indikator: {{ $minggurps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
+                        @endif
+                    </td>
+                    <td scope="row">
+                        @if($minggurps->id_teknik_penilaian)
+                            <p>Teknik penilaian: {{ $minggurps->Teknik_Penilaian_RPS->nama_teknik_penilaian ?? '-' }}</p>
+                            <p>Instrumen penilaian: {{ $minggurps->Instrumen_Penilaian->nama_instrumen_penilaian ?? '-' }}</p>
+                            <p>Bobot nilai: {{ $minggurps->bobot_nilai ?? '-' }}</p>
+                        @endif
+                    </td>
                     <td scope="row">
                         @if($minggurps->Pustaka)
                         @foreach($minggurps->PustakaMingguRPS as $pmItem)

@@ -245,13 +245,13 @@
                 Kemampuan Akhir yang diharapkan di setiap tahapan pembelajaran
                 (Sub-Capaian Mata Kuliah)
                 (C, A, P)</th>
-            <th class="table-header" style="width : 14%">Bahan Kajian</th>
+            <th class="table-header" style="width : 14%">Pokok Bahasan</th>
             <th class="table-header" style="width : 14%">Bentuk dan Metode Pembelajaran</th>
             <th class="table-header" style="width : 7%">Media</th>
             <th class="table-header" style="width : 7%">Waktu</th>
             <th class="table-header" style="width : 10%">Pengalaman belajar mahasiswa</th>
             <th class="table-header" style="width : 10%">Kriteria Penilaian dan Indikator (hard dan soft skills)</th>
-            <th class="table-header" style="width : 7%">Bobot Nilai</th>
+            <th class="table-header" style="width : 7%">Teknik Penilaian</th>
             <th class="table-header" style="width : 16%">Referensi</th>
         </tr>
         <tr style="height : 50px; background-color: lightblue">
@@ -289,8 +289,19 @@
             <td class="td-rps">{{ $minggu_rps->Media->nama_media ?? '' }}</td>
             <td class="td-rps">{{ $minggu_rps->waktuPembelajaran ?? '-' }}</td>
             <td class="td-rps">{{ $minggu_rps->pengalaman_belajar ?? '-' }}</td>
-            <td class="td-rps">{{ $minggu_rps->Kriteria_Penilaian->deskripsi_kriteria_penilaians ?? '' }}</td>
-            <td class="td-rps">{{ $minggu_rps->bobot_nilai ?? '-' }}</td>
+            <td class="td-rps">
+                @if($minggu_rps->kodeSubCPMK)
+                    <p>Kriteria penilaian: {{ $minggu_rps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
+                    <p>Indikator: {{ $minggu_rps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
+                @endif
+            </td>
+            <td class="td-rps">
+                @if($minggu_rps->id_teknik_penilaian)
+                    <p>Teknik penilaian: {{ $minggu_rps->Teknik_Penilaian_RPS->nama_teknik_penilaian ?? '-' }}</p>
+                    <p>Instrumen penilaian: {{ $minggu_rps->Instrumen_Penilaian->nama_instrumen_penilaian ?? '-' }}</p>
+                    <p>Bobot nilai: {{ $minggu_rps->bobot_nilai ?? '-' }}</p>
+                @endif
+            </td>
             <td class="td-rps">
                 @foreach($minggu_pustaka->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS) as $pustaka)
                 <div style="margin-bottom: 10px; font-style:italic">
