@@ -249,12 +249,12 @@
                                 <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
                                 @php
-                                $pustakaIds = $minggu_rps->Pustaka->pluck('id_pustaka')->toArray();
+                                $pustakaId = $minggu_rps->Pustaka->first()->id_pustaka;
                                 @endphp
                                 <select name="pustaka[0][judul]" id="judul_pustaka" class="form-select mb-1">
                                     <option value="" selected>-- Pilih Pustaka --</option>
                                     @foreach($pustaka as $item)
-                                    <option value="{{ $item->id_pustaka }}" @if(in_array($item->id_pustaka, $pustakaIds)) selected @break @endif>{{ $item->judul }}</option>
+                                    <option value="{{ $item->id_pustaka }}" @if($item->id_pustaka == $pustakaId) selected @endif>{{ $item->judul }}</option>
                                     @endforeach
                                 </select>
                                 @error('referensi_pustaka')
