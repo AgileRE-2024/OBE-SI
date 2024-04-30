@@ -251,7 +251,7 @@
                                 @enderror
                                 @php
                                     $firstPustakaId = null;
-                                    if ($minggu_rps->Pustaka) {
+                                    if ($minggu_rps->Pustaka && $minggu_rps->Pustaka->isNotEmpty()) {
                                     $firstPustakaId = $minggu_rps->Pustaka->first()->id_pustaka;
                                     }
                                 @endphp
