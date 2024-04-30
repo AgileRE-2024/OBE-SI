@@ -68,8 +68,11 @@
                             @if($minggurps->id_bentuk)
                             <p>Bentuk: {{ $minggurps->Bentuk->nama_bentuk }}</p>
                             @endif
-                            @if($minggurps->id_metode)
-                            <p>Metode: {{ $minggurps->Metode->nama_metode }}</p>
+                            @if($minggurps->Metode()->count() > 0)
+                                <p>Metode:</p>
+                                    @foreach($minggurps->Metode as $item)
+                                    <p>{{ $item->nama_metode }}</p>
+                                    @endforeach
                             @endif
                             @if($minggurps->penugasan)
                             <p>Penugasan: {{ $minggurps->penugasan }}</p>

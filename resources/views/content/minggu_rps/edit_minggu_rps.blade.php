@@ -2,24 +2,70 @@
 
 @section('content')
 <script>
-$(document).ready(function() {
-  $('#teknik_penilaian').change(function() {
-    if ($(this).val() == 'teknik_penilaian') {
-      $('#div_bobot').show();
-      $('#div_instrumen').show();
-    } else {
-      $('#div_bobot').show();
-      $('#div_instrumen').show();
-    }
-  });
-});
+    $(document).ready(function () {
+        $('#teknik_penilaian').change(function () {
+            if ($(this).val() == 'teknik_penilaian') {
+                $('#div_bobot').show();
+                $('#div_instrumen').show();
+            } else {
+                $('#div_bobot').show();
+                $('#div_instrumen').show();
+            }
+        });
+    });
+
 </script>
+
+<!-- JavaScript Dynamic Field Teknik Penilaian -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        @foreach($minggu_rps->Pustaka as $index => $pustaka_mingguRPS)
+        $("#dynamicAddRemove").append(
+            '<div class="dynamic">' +
+            '<div class="d-flex justify-content-end">' +
+            '<button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button>' +
+            '</div>' +
+            '<td>' +
+            '<select name="pustaka[{{ $index }}][judul]" id="judul_pustaka" class="form-select mb-1">' +
+            '<option value="" selected disabled>-- Pilih Pustaka --</option>' +
+            '@foreach ($pustaka as $item)' +
+            '<option value="{{ $item->id_pustaka }}" @if($item->id_pustaka == $pustaka_mingguRPS->id_pustaka) selected @endif>{{ $item->judul }}</option>' +
+            '@endforeach' +
+            '</select>' +
+            '</td>' +
+            '<td>' +
+            '<textarea rows="3" name="pustaka[{{ $index }}][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value="">{{ $pustaka_mingguRPS->referensi }}</textarea>' +
+            '</td>' +
+            '</div>'
+        );
+        @endforeach
+    });
+
+    var i = 0;
+    $("#dynamic-ar").click(function () {
+        ++i;
+        $("#dynamicAddRemove").append(
+            '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="pustaka[' +
+            i +
+            '][judul]" id="judul_pustaka" class="form-select mb-1"><option value="" selected disabled>-- Pilih Pustaka --</option>@foreach ($pustaka as $item)<option value="{{ $item->id_pustaka }}">{{ $pustaka[$loop->index]->judul }}</option>@endforeach</select></td><td><textarea rows="3" name="pustaka[' +
+            i +
+            '][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value=""></textarea></td></div>'
+        );
+    });
+    $(document).on('click', '.remove-input-field', function () {
+        $(this).parents('.dynamic').remove();
+    });
+
+</script>
+
 
 <div class="content px-4">
     <div class="content px-4">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Edit Minggu RPS {{$minggu_rps->kodeMingguRPS}}</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Edit Minggu RPS {{ $minggu_rps->kodeMingguRPS }}</h6>
             </div>
             <div class="card-body" style="width: auto">
                 <div class="col-sm-8">
@@ -35,10 +81,11 @@ $(document).ready(function() {
                             @enderror
                             <select name="kodeSubCPMK" id='kodeSubCPMK' class="form-select">
                                 <option value="">-- Pilih Sub CMPK --</option>
-                                @foreach ($scpmk as $item)
+                                @foreach($scpmk as $item)
                                 <option value="{{ $item->kodeSubCPMK }}"
-                                    {{ $item->kodeSubCPMK ==  $minggu_rps->kodeSubCPMK ? 'selected' : ''}}>
-                                    {{ $scpmk[$loop->index]->kodeSubCPMK }} {{ $scpmk[$loop->index]->deskripsiSubCPMK }}
+                                    {{ $item->kodeSubCPMK ==  $minggu_rps->kodeSubCPMK ? 'selected' : '' }}>
+                                    {{ $scpmk[$loop->index]->kodeSubCPMK }}
+                                    {{ $scpmk[$loop->index]->deskripsiSubCPMK }}
                                 </option>
                                 @endforeach
                             </select>
@@ -59,10 +106,10 @@ $(document).ready(function() {
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
                             <select name="id_bentuk" id='bentukPembelajaran' class="form-select">
-                            <option value="" selected disabled>-- Pilih Bentuk Pembelajaran --</option>
-                                @foreach ($bentuk as $item)
+                                <option value="" selected disabled>-- Pilih Bentuk Pembelajaran --</option>
+                                @foreach($bentuk as $item)
                                 <option value="{{ $item->id_bentuk }}"
-                                    {{ $item->id_bentuk ==  $minggu_rps->id_bentuk ? 'selected' : ''}}>
+                                    {{ $item->id_bentuk ==  $minggu_rps->id_bentuk ? 'selected' : '' }}>
                                     {{ $item->nama_bentuk }}</option>
                                 @endforeach
                             </select>
@@ -73,11 +120,15 @@ $(document).ready(function() {
                             @error('metodePembelajaran')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
-                            @foreach ($metode as $item)
-                                <div>
-                                    <input type="checkbox" name="metode[]" value="{{ $item->id_metode }}">
-                                    <label style="font-weight: normal;">{{ $item->nama_metode }}</label>
-                                </div>
+                            @foreach($metode as $item)
+                            <div>
+                                @php
+                                $metodeIds = $minggu_rps->Metode->pluck('id_metode')->toArray();
+                                @endphp
+                                <input type="checkbox" name="metode[]" value="{{ $item->id_metode }}"
+                                    @if(in_array($item->id_metode, $metodeIds)) checked @endif>
+                                <label style="font-weight: normal;">{{ $item->nama_metode }}</label>
+                            </div>
                             @endforeach
                         </div>
 
@@ -101,8 +152,9 @@ $(document).ready(function() {
                                 $options=[1, 0];
                                 $opsi=['Luring','Daring']
                                 @endphp
-                                @foreach ($options as $item)
-                                <option value="{{ $item }}"{{ ($minggu_rps->luring ?? 1) == $item ? 'selected' : '' }}>{{ $opsi[$loop->index] }}</option>
+                                @foreach($options as $item)
+                                <option value="{{ $item }}" {{ ($minggu_rps->luring ?? 1) == $item ? 'selected' : '' }}>
+                                    {{ $opsi[$loop->index] }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -114,8 +166,9 @@ $(document).ready(function() {
                             @enderror
                             <select name="id_media" id='id_media' class="form-select">
                                 <option value="" selected disabled>-- Pilih Media Pembelajaran --</option>
-                                @foreach ($media as $item)
-                                <option value="{{ $item->id_media }}" {{ $item->id_media ==  $minggu_rps->id_media ? 'selected' : ''}}>
+                                @foreach($media as $item)
+                                <option value="{{ $item->id_media }}"
+                                    {{ $item->id_media ==  $minggu_rps->id_media ? 'selected' : '' }}>
                                     {{ $item->nama_media }}</option>
                                 @endforeach
                             </select>
@@ -141,21 +194,6 @@ $(document).ready(function() {
                                 value="{{ $minggu_rps->pengalaman_belajar }}">{{ old('pengalaman_belajar') ? old('pengalaman_belajar') : $minggu_rps->pengalaman_belajar }}</textarea>
                         </div>
 
-                        {{-- <div class="form-group">
-                            <label>Kriteria Penilaian</label>
-                            @error('id_kriteria_penilaians')
-                            <h6 style="color: #BF2C45">{{ $message }}</h6>
-                            @enderror
-                            <select name="id_kriteria_penilaians" id='id_kriteria_penilaians' class="form-select">
-                                <option value="" selected disabled>-- Pilih Kriteria Penilaian --</option>
-                                @foreach ($kriteria as $item)
-                                <option value="{{ $item->id_kriteria_penilaians }}"
-                                    {{ $item->id_kriteria_penilaians ==  $minggu_rps->id_kriteria_penilaians ? 'selected' : ''}}>
-                                    {{ $item->nama_kriteria_penilaians }}</option>
-                                @endforeach
-                            </select>
-                        </div> --}}
-
                         <div class="form-group">
                             <label>Teknik Penilaian</label>
                             @error('teknik_penilaian')
@@ -163,14 +201,16 @@ $(document).ready(function() {
                             @enderror
                             <select name="teknik_penilaian" id='teknik_penilaian' class="form-select">
                                 <option value="" selected disabled>-- Pilih Teknik Penilaian --</option>
-                                @foreach ($teknik_penilaian as $item)
-                                <option value="{{ $item->id_teknik_penilaian }}" {{ $item->id_teknik_penilaian ==  $minggu_rps->id_teknik_penilaian ? 'selected' : ''}}>
+                                @foreach($teknik_penilaian as $item)
+                                <option value="{{ $item->id_teknik_penilaian }}"
+                                    {{ $item->id_teknik_penilaian ==  $minggu_rps->id_teknik_penilaian ? 'selected' : '' }}>
                                     {{ $item->nama_teknik_penilaian }}</option>
                                 @endforeach
                             </select>
                         </div>
-                        
-                        <div class="form-group" id="div_bobot" @if($minggu_rps->bobot_nilai == null) style="display:none" @endif>
+
+                        <div class="form-group" id="div_bobot" @if($minggu_rps->bobot_nilai == null)
+                            style="display:none" @endif>
                             <label>Bobot Nilai</label>
                             @error('bobot_nilai')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
@@ -179,15 +219,17 @@ $(document).ready(function() {
                                 value="{{ $minggu_rps->bobot_nilai }}">
                         </div>
 
-                        <div class="form-group" id="div_instrumen" @if($minggu_rps->id_instrumen_penilaian == null) style="display:none" @endif>
+                        <div class="form-group" id="div_instrumen" @if($minggu_rps->id_instrumen_penilaian == null)
+                            style="display:none" @endif>
                             <label>Instrumen Penilaian</label>
                             @error('instrumen_penilaian')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
                             <select name="instrumen_penilaian" id='instrumen_penilaian' class="form-select">
                                 <option value="" selected disabled>-- Pilih Instrumen Penilaian --</option>
-                                @foreach ($instrumen_penilaian as $item)
-                                <option value="{{ $item->id_instrumen_penilaian }}" {{ $item->id_instrumen_penilaian ==  $minggu_rps->id_instrumen_penilaian ? 'selected' : ''}}>
+                                @foreach($instrumen_penilaian as $item)
+                                <option value="{{ $item->id_instrumen_penilaian }}"
+                                    {{ $item->id_instrumen_penilaian ==  $minggu_rps->id_instrumen_penilaian ? 'selected' : '' }}>
                                     {{ $item->nama_instrumen_penilaian }}</option>
                                 @endforeach
                             </select>
@@ -205,37 +247,17 @@ $(document).ready(function() {
                                 @enderror
                                 <select name="pustaka[0][judul]" id="judul_pustaka" class="form-select mb-1">
                                     <option value="" selected>-- Pilih Pustaka --</option>
-                                    @foreach ($pustaka as $item)
+                                    @foreach($pustaka as $item)
                                     <option value="{{ $item->id_pustaka }}">{{ $item->judul }}</option>
                                     @endforeach
                                 </select>
                                 @error('referensi_pustaka')
                                 <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <textarea rows="3" name="pustaka[0][referensi]" id="referensi_pustaka" class="form-control"
-                                    placeholder="Keterangan Pustaka" value=""></textarea>
+                                <textarea rows="3" name="pustaka[0][referensi]" id="referensi_pustaka"
+                                    class="form-control" placeholder="Keterangan Pustaka" value=""></textarea>
                             </div>
                         </div>
-
-
-                        <!-- JavaScript -->
-                        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-                        <script
-                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js">
-                        </script>
-                        <script type="text/javascript">
-                            var i = 0;
-                            $("#dynamic-ar").click(function () {
-                                ++i;
-                                $("#dynamicAddRemove").append(
-                                    '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="pustaka[' + i + '][judul]" id="judul_pustaka" class="form-select mb-1"><option value="" selected disabled>-- Pilih Pustaka --</option>@foreach ($pustaka as $item)<option value="{{ $item->id_pustaka }}">{{ $pustaka[$loop->index]->judul }}</option>@endforeach</select></td><td><textarea rows="3" name="pustaka[' + i + '][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value=""></textarea></td></div>'
-                                );
-                            });
-                            $(document).on('click', '.remove-input-field', function () {
-                                $(this).parents('.dynamic').remove();
-                            });
-
-                        </script>
 
                         <div class="form-group pt-4">
                             <button type="submit" name="submit" value="submit" id="confirm"

@@ -29,7 +29,7 @@ class Minggu_RPS extends Model
 
     public function Metode()
     {
-        return $this->belongsTo(Metode::class, 'id_metode', 'id_metode');
+        return $this->belongsToMany(Metode::class, 'detail_metode_minggurps', 'kodeMingguRPS', 'id_metode');
     }
 
     public function Media()
