@@ -20,7 +20,7 @@
 
     // Fungsi untuk old value pustaka
     $(document).ready(function () {
-        @foreach($minggu_rps->Pustaka as $index => pustaka_mingguRPS)
+        @foreach($minggu_rps->Pustaka as $index => $pustaka_mingguRPS)
         @if($index != 0)
             $("#dynamicAddRemove").append(
                 '<div class="dynamic">' +
