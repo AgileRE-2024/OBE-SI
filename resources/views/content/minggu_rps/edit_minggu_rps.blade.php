@@ -1,65 +1,68 @@
 @extends('layout.dashboard')
 
 @section('content')
-<script>
-    $(document).ready(function () {
-        $('#teknik_penilaian').change(function () {
-            if ($(this).val() == 'teknik_penilaian') {
-                $('#div_bobot').show();
-                $('#div_instrumen').show();
-            } else {
-                $('#div_bobot').show();
-                $('#div_instrumen').show();
-            }
-        });
-    });
 
-</script>
-
-<!-- JavaScript Dynamic Field Teknik Penilaian -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        @foreach($minggu_rps->Pustaka as $index => $pustaka_mingguRPS)
-        $("#dynamicAddRemove").append(
-            '<div class="dynamic">' +
-            '<div class="d-flex justify-content-end">' +
-            '<button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button>' +
-            '</div>' +
-            '<td>' +
-            '<select name="pustaka[{{ $index }}][judul]" id="judul_pustaka" class="form-select mb-1">' +
-            '<option value="" selected disabled>-- Pilih Pustaka --</option>' +
-            '@foreach ($pustaka as $item)' +
-            '<option value="{{ $item->id_pustaka }}" @if($item->id_pustaka == $pustaka_mingguRPS->id_pustaka) selected @endif>{{ $item->judul }}</option>' +
-            '@endforeach' +
-            '</select>' +
-            '</td>' +
-            '<td>' +
-            '<textarea rows="3" name="pustaka[{{ $index }}][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value="">{{ $pustaka_mingguRPS->referensi }}</textarea>' +
-            '</td>' +
-            '</div>'
-        );
-        @endforeach
-    });
+    document.addEventListener("DOMContentLoaded", function ()) {
+        // Fungsi untuk bobot dan instrumen penilaian
+        $(document).ready(function () {
+            $('#teknik_penilaian').change(function () {
+                if ($(this).val() == 'teknik_penilaian') {
+                    $('#div_bobot').show();
+                    $('#div_instrumen').show();
+                } else {
+                    $('#div_bobot').show();
+                    $('#div_instrumen').show();
+                }
+            });
+        });
 
-    var i = 0;
-    $("#dynamic-ar").click(function () {
-        ++i;
-        $("#dynamicAddRemove").append(
-            '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="pustaka[' +
-            i +
-            '][judul]" id="judul_pustaka" class="form-select mb-1"><option value="" selected disabled>-- Pilih Pustaka --</option>@foreach ($pustaka as $item)<option value="{{ $item->id_pustaka }}">{{ $pustaka[$loop->index]->judul }}</option>@endforeach</select></td><td><textarea rows="3" name="pustaka[' +
-            i +
-            '][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value=""></textarea></td></div>'
-        );
-    });
-    $(document).on('click', '.remove-input-field', function () {
-        $(this).parents('.dynamic').remove();
-    });
+        // Fungsi untuk old value pustaka
+        $(document).ready(function () {
+            @foreach($minggu_rps-> Pustaka as $index => $pustaka_mingguRPS)
+            $("#dynamicAddRemove").append(
+                '<div class="dynamic">' +
+                '<div class="d-flex justify-content-end">' +
+                '<button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button>' +
+                '</div>' +
+                '<td>' +
+                '<select name="pustaka[{{ $index }}][judul]" id="judul_pustaka" class="form-select mb-1">' +
+                '<option value="" selected disabled>-- Pilih Pustaka --</option>' +
+                '@foreach ($pustaka as $item)' +
+                '<option value="{{ $item->id_pustaka }}" @if($item->id_pustaka == $pustaka_mingguRPS->id_pustaka) selected @endif>{{ $item->judul }}</option>' +
+                '@endforeach' +
+                '</select>' +
+                '</td>' +
+                '<td>' +
+                '<textarea rows="3" name="pustaka[{{ $index }}][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value="">{{ $pustaka_mingguRPS->referensi }}</textarea>' +
+                '</td>' +
+                '</div>'
+            );
+            @endforeach
+        });
+
+        // Fungsi untuk add field input pustaka
+        var i = 0;
+        $(document).on('click', '#dynamic-ar', function () {
+            ++i;
+            $("#dynamicAddRemove").append(
+                '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="pustaka[' +
+                i +
+                '][judul]" id="judul_pustaka" class="form-select mb-1"><option value="" selected disabled>-- Pilih Pustaka --</option>@foreach ($pustaka as $item)<option value="{{ $item->id_pustaka }}">{{ $pustaka[$loop->index]->judul }}</option>@endforeach</select></td><td><textarea rows="3" name="pustaka[' +
+                i +
+                '][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value=""></textarea></td></div>'
+            );
+        });
+
+        // Fungsi untuk delete field input pustaka
+        $(document).on('click', '.remove-input-field', function () {
+            $(this).parents('.dynamic').remove();
+        });
+    }
 
 </script>
-
 
 <div class="content px-4">
     <div class="content px-4">
@@ -270,4 +273,5 @@
         </div>
     </div>
 </div>
+
 @endsection
