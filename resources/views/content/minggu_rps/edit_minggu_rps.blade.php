@@ -39,7 +39,7 @@
                 '<textarea rows="3" name="pustaka[{{ $index }}][referensi]" class="form-control mb-3" placeholder="Keterangan Pustaka" value="">{{ $pustaka_mingguRPS->referensi }}</textarea>' +
                 '</td>' +
                 '</div>'
-            ); <
+            );
         @endif
         @endforeach
     });
