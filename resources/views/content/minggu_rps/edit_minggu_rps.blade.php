@@ -5,7 +5,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
-    // document.addEventListener("DOMContentLoaded", function ()) {
         // Fungsi untuk bobot dan instrumen penilaian
         $(document).ready(function () {
             $('#teknik_penilaian').change(function () {
@@ -22,6 +21,7 @@
         // Fungsi untuk old value pustaka
         $(document).ready(function () {
             @foreach($minggu_rps-> Pustaka as $index => $pustaka_mingguRPS)
+            @if($index != 0)
             $("#dynamicAddRemove").append(
                 '<div class="dynamic">' +
                 '<div class="d-flex justify-content-end">' +
@@ -40,6 +40,7 @@
                 '</td>' +
                 '</div>'
             );
+            @endif
             @endforeach
         });
 
@@ -60,7 +61,6 @@
         $(document).on('click', '.remove-input-field', function () {
             $(this).parents('.dynamic').remove();
         });
-    // }
 
 </script>
 
