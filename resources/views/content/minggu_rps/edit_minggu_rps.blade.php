@@ -20,12 +20,8 @@
 
     // Fungsi untuk old value pustaka
     $(document).ready(function () {
-        <
-        blade foreach | ( % 24 minggu_rps - % 3 E % 20 Pustaka % 20 as % 20 % 24 index % 20 % 3 D % 3 E % 20 %
-                24 pustaka_mingguRPS) % 0 D >
-            <
-            blade
-        if |( % 24 index % 20! % 3 D % 200) % 0 D >
+        @foreach($minggu_rps->Pustaka as $index => pustaka_mingguRPS)
+        @if($index != 0)
             $("#dynamicAddRemove").append(
                 '<div class="dynamic">' +
                 '<div class="d-flex justify-content-end">' +
@@ -44,8 +40,8 @@
                 '</td>' +
                 '</div>'
             ); <
-        /blade endif|%0D> <
-        /blade endforeach|%0D>
+        @endif
+        @endforeach
     });
 
     // Fungsi untuk add field input pustaka
