@@ -128,8 +128,7 @@
                                     @php
                                         $metodeIds = $minggu_rps->Metode->pluck('id_metode')->toArray();
                                     @endphp
-                                    <input type="checkbox" name="metode[]" value="{{ $item->id_metode }}" <blade
-                                        if|(in_array(%24item-%3Eid_metode%2C%20%24metodeIds))%20checked%20%40endif%3E%0D>
+                                    <input type="checkbox" name="metode[]" value="{{ $item->id_metode }}" @if(in_array($item->id_metode, $metodeIds)) checked @endif>
                                     <label style="font-weight: normal;">{{ $item->nama_metode }}</label>
                                 </div>
                             @endforeach
