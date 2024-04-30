@@ -254,7 +254,7 @@
                                 <select name="pustaka[0][judul]" id="judul_pustaka" class="form-select mb-1">
                                     <option value="" selected>-- Pilih Pustaka --</option>
                                     @foreach($pustaka as $item)
-                                    <option value="{{ $item->id_pustaka }}" @if($item->id_pustaka == $pustakaId) selected @endif>{{ $item->judul }}</option>
+                                    <option value="{{ $item->id_pustaka }}" @if($pustakaId && $item->id_pustaka == $pustakaId) selected @endif>{{ $item->judul }}</option>
                                     @endforeach
                                 </select>
                                 @error('referensi_pustaka')
