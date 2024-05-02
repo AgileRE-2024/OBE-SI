@@ -57,6 +57,7 @@ use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\ManagementUser;
 use App\Http\Controllers\TeknikPenilaianRPSController;
 use App\Http\Controllers\InstrumenPenilaianController;
+use App\Http\Controllers\KomponenPenilaianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -370,6 +371,12 @@ Route::group(['middleware' => 'role:dosen,dosen_kurikulum'], function () {
         // Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
 
         Route::get('/mata_kuliah/{kodeRPS}', [RPSController::class, 'detail'])->name('mata_kuliah');
+
+        Route::get('/edit_komponen_penilaian/{id_komponen_penilaian}/{kodeRPS}', [KomponenPenilaianController::class, 'editKomponenPenilaian'])->name('edit_komponen_penilaian');
+        Route::put('/edit_komponen_penilaian/{id_komponen_penilaian}/{kodeRPS}', [KomponenPenilaianController::class, 'updateKomponenPenilaian'])->name('update_komponen_penilaian');
+        Route::get('/add_komponen_penilaian/{kodeRPS}', [KomponenPenilaianController::class, 'addKomponenPenilaian'])->name('add_komponen_penilaian');
+        Route::post('/add_komponen_penilaian/{kodeRPS}', [KomponenPenilaianController::class, 'storeKomponenPenilaian'])->name('store_komponen_penilaian');
+        Route::get('/delete_komponen_penilaian/{id_komponen_penilaian}/{kodeRPS}', [KomponenPenilaianController::class, 'deleteKomponenPenilaian'])->name('delete_komponen_penilaian');
     });
 
     //Upload image teknik penilaian

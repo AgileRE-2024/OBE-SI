@@ -41,12 +41,12 @@ class DatabaseSeeder extends Seeder
         $this->call(PrasyaratSeeder::class);
         $this->call(CPMKSeeder::class);
         $this->call(SubCpmkSeeder::class);
-        // $this->call(KriteriaPenilaianSeeder::class);
+        $this->call(KriteriaPenilaianSeeder::class);
         $this->call(PustakaSeeder::class);
         $this->call(BentukSeeder::class);
         $this->call(MetodeSeeder::class);
         $this->call(MediaSeeder::class);
-        // $this->call(TeknikPenilaianSeeder::class);
+        $this->call(TeknikPenilaianSeeder::class);
         $this->call(PageSeeder::class);
         $this->call(MahasiswaSeeder::class);
         $this->call(KelasSeeder::class);

@@ -74,4 +74,8 @@ class RPS extends Model
         return $this->belongsTo(Kelas::class, 'kodeKelas','kodeKelas');
     }
 
+    public function KomponenPenilaian() {
+        return $this->hasMany(Komponen_Penilaian::class, 'id_rps', 'id_rps');
+    }
+
 }

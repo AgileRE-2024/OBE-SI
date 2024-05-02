@@ -16,6 +16,7 @@ use App\Models\RPS;
 use App\Models\SubCPMK;
 use App\Models\Teknik_Penilaian;
 use App\Models\User;
+use App\Models\Komponen_Penilaian;
 use Illuminate\Http\Request;
 use Dompdf\Dompdf;
 use Maatwebsite\Excel\Facades\Excel;
@@ -362,7 +363,8 @@ class RPSController extends Controller
             'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
             'list_cpl' => $semuaCPL,
             'list_cpmk' => $cpmk,
-            'list_prasyarat' => $prasyarat
+            'list_prasyarat' => $prasyarat,
+            'komponen_penilaian' => Komponen_Penilaian::where("id_rps", $kodeRPS)->get(),
         ]);
     }
 

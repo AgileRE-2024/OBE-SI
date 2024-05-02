@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('metodes', function (Blueprint $table) {
-            $table->id('id_metode');
-            $table->string('nama_metode',100);
-            $table->string('deskripsi_metode',1000)->nullable();
+        Schema::create('komponen_penilaian', function (Blueprint $table) {
+            $table->id('id_komponen_penilaian');
+            $table->string('nama_komponen_penilaian',1000);
+            $table->char('id_rps', 10)->nullable();
+            $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('metodes');
+        Schema::dropIfExists('komponen_penilaian');
     }
 };
