@@ -17,7 +17,7 @@ return new class extends Migration
             $table->char('nim',12)->nullable('nim');
             $table->foreign('nim')->references('nim')->on('Mahasiswa');
             $table->char('kodeKelas',9)->nullable('kodeKelas');
-            $table->foreign('kodeKelas')->references('kodeKelas')->on('kelas');
+            $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas');
             $table->unsignedSmallInteger('SemesterAmbil')->nullable();
             $table->unsignedSmallInteger('NilaiAkhir')->nullable();
             $table->timestamps();
