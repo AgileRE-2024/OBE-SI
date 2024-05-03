@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('RPS', function (Blueprint $table) {
+        Schema::create('rps', function (Blueprint $table) {
             $table->char('id_rps',10)->primary();
             // $table->char('kodeRPS', 6)->nullable();
             $table->char('nip', 18)->nullable();
