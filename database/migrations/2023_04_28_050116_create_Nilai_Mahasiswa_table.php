@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreign('nim')->references('nim')->on('Mahasiswa')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('kodeRPS')->references('id_rps')->on('RPS')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeRPS')->references('id_rps')->on('rps')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
