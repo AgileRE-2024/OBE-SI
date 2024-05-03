@@ -19,7 +19,7 @@ return new class extends Migration
             $table->char('nip', 18)->nullable();
             $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict')->onUpdate('cascade');
             $table->char('kodeMK', 10)->nullable();
-            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->foreign('kodeMK')->references('kodeMK')->on('mata_kuliah')->onDelete('restrict');
             $table->year('tahunAjaran')->nullable();
             $table->integer('semester')->nullable();
             $table->String('diperiksa_oleh', 18)->nullable();
@@ -42,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('RPS');
+        Schema::dropIfExists('rps');
     }
 };

@@ -21,7 +21,7 @@ return new class extends Migration
             // $table->timestamps();
             $table->timestamp('created_at')->useCurrent();
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
-            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->foreign('kodeMK')->references('kodeMK')->on('mata_kuliah')->onDelete('restrict');
             $table->foreign('nip')->references('nip')->on('users')->onDelete('restrict');
         });
     }

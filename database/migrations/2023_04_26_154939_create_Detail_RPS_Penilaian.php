@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Detail_RPS_Penilaian', function (Blueprint $table) {
+        Schema::create('detail_rps_penilaian', function (Blueprint $table) {
             $table->char('id_rps',10)->nullable('id_rps');
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
             $table->string('kodePenilaian',10)->nullable();
-            $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('restrict');
+            $table->foreign('kodePenilaian')->references('kodePenilaian')->on('teknik_penilaian')->onDelete('restrict');
             $table->timestamps();
         });
     }

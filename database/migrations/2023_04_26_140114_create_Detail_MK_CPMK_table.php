@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Detail_MK_CPMK', function (Blueprint $table) {
+        Schema::create('detail_mk_cpmk', function (Blueprint $table) {
             $table->id();
             $table->char('kodeMK', 10);
             $table->char('kodeCPMK', 10);
-            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeMK')->references('kodeMK')->on('mata_kuliah')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('cpmk')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Detail_MK_CPMK');
+        Schema::dropIfExists('detail_mk_cpmk');
     }
 };

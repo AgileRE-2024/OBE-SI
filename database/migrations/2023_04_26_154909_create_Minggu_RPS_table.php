@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Minggu_RPS', function (Blueprint $table) {
+        Schema::create('minggu_rps', function (Blueprint $table) {
             $table->char('kodeMingguRPS', 12)->primary('kodeMingguRPS');
             $table->char('id_rps', 10)->nullable();
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_media')->nullable();
             $table->foreign('id_media')->references('id_media')->on('media')->onDelete('restrict');
             $table->char('kodeSubCPMK', 12)->nullable();
-            $table->foreign('kodeSubCPMK')->references('kodeSubCPMK')->on('SubCPMK')->onDelete('restrict');
+            $table->foreign('kodeSubCPMK')->references('kodeSubCPMK')->on('subcpmk')->onDelete('restrict');
             $table->boolean('luring')->nullable();
             $table->string('penugasan', 100)->nullable();
             $table->text('waktuPembelajaran')->nullable();
@@ -40,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Minggu_RPS');
+        Schema::dropIfExists('minggu_rps');
     }
 };

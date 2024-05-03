@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Prasyarat', function (Blueprint $table) {
+        Schema::create('prasyarat', function (Blueprint $table) {
             $table->increments('id_mat_kodeMK');
             $table->char('kodeMK', 10);
-            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->foreign('kodeMK')->references('kodeMK')->on('mata_kuliah')->onDelete('restrict');
             $table->char('mat_kodeMK', 10)->nullable();
-            $table->foreign('mat_kodeMK', 10)->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->foreign('mat_kodeMK', 10)->references('kodeMK')->on('mata_kuliah')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Prasyarat');
+        Schema::dropIfExists('prasyarat');
     }
 };

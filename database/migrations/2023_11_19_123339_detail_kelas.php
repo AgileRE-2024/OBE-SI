@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('detail_kelas', function (Blueprint $table) {
             $table->char('nim',12)->nullable('nim');
-            $table->foreign('nim')->references('nim')->on('Mahasiswa');
+            $table->foreign('nim')->references('nim')->on('mahasiswa');
             $table->char('kodeKelas',9)->nullable('kodeKelas');
-            $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas');
+            $table->foreign('kodeKelas')->references('kodeKelas')->on('kelas');
             $table->unsignedSmallInteger('SemesterAmbil')->nullable();
             $table->unsignedSmallInteger('NilaiAkhir')->nullable();
             $table->timestamps();

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('CPL_SN_Dikti', function (Blueprint $table) {
+        Schema::create('cpl_sn_dikti', function (Blueprint $table) {
             $table->char('kodeCPLSN', 10)->primary();
             $table->text("deskripsiSN");
             $table->char("sumberSN", 8);
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('CPL_SN_Dikti');
+        Schema::dropIfExists('cpl_sn_dikti');
     }
 };

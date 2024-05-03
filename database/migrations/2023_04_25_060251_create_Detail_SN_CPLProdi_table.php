@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Detail_SN_CPLProdi', function (Blueprint $table) {
+        Schema::create('detail_sn_cplprodi', function (Blueprint $table) {
             $table->char('kodeCPLSN', 10);
             $table->char('kodeCPL', 10);
             $table->timestamps();
-            $table->foreign('kodeCPLSN')->references('kodeCPLSN')->on('CPL_SN_Dikti')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeCPLSN')->references('kodeCPLSN')->on('cpl_sn_dikti')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeCPL')->references('kodeCPL')->on('cpl_prodi')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Detail_SN_CPLProdi');
+        Schema::dropIfExists('detail_sn_cplprodi');
     }
 };

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Kelas', function (Blueprint $table) {
+        Schema::create('kelas', function (Blueprint $table) {
             $table->char('kodeKelas',9)->primary('kodeKelas');
             $table->char('id_rps',7)->nullable('id_rps');
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('jadwal');
             $table->integer('kuota');
             $table->char('kodeMK',7);
-            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->foreign('kodeMK')->references('kodeMK')->on('mata_kuliah')->onDelete('restrict');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Kelas');
+        Schema::dropIfExists('kelas');
     }
 };

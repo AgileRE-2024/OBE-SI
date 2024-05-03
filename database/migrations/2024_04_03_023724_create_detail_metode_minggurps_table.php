@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_metode');
             $table->char('kodeMingguRPS', 12);
             $table->foreign('id_metode')->references('id_metode')->on('metodes')->onDelete('restrict');
-            $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
+            $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('minggu_rps')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail__metode__minggurps');
+        Schema::dropIfExists('detail_metode_minggurps');
     }
 };

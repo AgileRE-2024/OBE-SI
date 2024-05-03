@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('CPMK', function (Blueprint $table) {
+        Schema::create('cpmk', function (Blueprint $table) {
             $table->char('kodeCPMK', 10)->primary('kodeCPMK');
             $table->text('deskripsiCPMK');
             $table->char('kodeCPL', 10);
-            $table->foreign('kodeCPL')->references('kodeCPL')->on('CPL_Prodi')->onDelete('restrict');
+            $table->foreign('kodeCPL')->references('kodeCPL')->on('cpl_prodi')->onDelete('restrict');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('CPMK');
+        Schema::dropIfExists('cpmk');
     }
 };

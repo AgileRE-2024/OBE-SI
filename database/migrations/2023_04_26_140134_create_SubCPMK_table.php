@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('SubCPMK', function (Blueprint $table) {
+        Schema::create('subcpmk', function (Blueprint $table) {
             $table->char('kodeSubCPMK', 12)->primary('kodeSubCPMK');
             $table->text('deskripsiSubCPMK');
             $table->char('kodeCPMK', 10);
-            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('CPMK')->onDelete('restrict');
+            $table->foreign('kodeCPMK')->references('kodeCPMK')->on('cpmk')->onDelete('restrict');
             $table->text('kriteriaPenilaian');
             $table->text('indikatorPenilaian');
             $table->timestamp('deleted_at')->nullable();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('SubCPMK');
+        Schema::dropIfExists('subcpmk');
     }
 };

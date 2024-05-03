@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('id_pustaka');
             $table->char('kodeMingguRPS', 12);
             $table->foreign('id_pustaka')->references('id_pustaka')->on('pustakas')->onDelete('restrict');
-            $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('Minggu_RPS')->onDelete('restrict');
+            $table->foreign('kodeMingguRPS')->references('kodeMingguRPS')->on('minggu_rps')->onDelete('restrict');
             $table->text('detail_pustaka')->nullable();
             $table->timestamps();
         });

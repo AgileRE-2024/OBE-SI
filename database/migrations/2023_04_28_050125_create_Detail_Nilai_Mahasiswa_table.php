@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Detail_Nilai_Mahasiswa', function (Blueprint $table) {
+        Schema::create('detail_nilai_mahasiswa', function (Blueprint $table) {
             $table->char('id_rps',16)->nullable();
             $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
             $table->char('nilaiPerTeknik',2);
             $table->string('kodePenilaian',10)->nullable('kodePenilaian');
-            $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('cascade');
+            $table->foreign('kodePenilaian')->references('kodePenilaian')->on('teknik_penilaian')->onDelete('cascade');
             $table->char('nim',12)->nullable();
-            $table->foreign('nim')->references('nim')->on('Mahasiswa')->onDelete('cascade');
+            $table->foreign('nim')->references('nim')->on('mahasiswa')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,10 +32,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('Detail_Nilai_Mahasiswa', function (Blueprint $table) {
+        Schema::table('detail_nilai_mahasiswa', function (Blueprint $table) {
             $table->dropForeign('detail_nilai_mahasiswa_nim_foreign');
         });
 
-        Schema::dropIfExists('Detail_Nilai_Mahasiswa');
+        Schema::dropIfExists('detail_nilai_mahasiswa');
     }
 };

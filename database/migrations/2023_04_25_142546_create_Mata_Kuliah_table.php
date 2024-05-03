@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Mata_Kuliah', function (Blueprint $table) {
+        Schema::create('mata_kuliah', function (Blueprint $table) {
             $table->char('kodeMK', 10)->primary();
             $table->String('namaProdi', 25)->nullable();
             $table->foreign('namaProdi')->references('namaProdi')->on('prodi')->onDelete('restrict');
@@ -45,6 +45,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Mata_Kuliah');
+        Schema::dropIfExists('mata_kuliah');
     }
 };

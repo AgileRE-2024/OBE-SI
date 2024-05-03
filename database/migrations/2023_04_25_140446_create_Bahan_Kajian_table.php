@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Bahan_Kajian', function (Blueprint $table) {
+        Schema::create('bahan_kajian', function (Blueprint $table) {
             $table->char('kodeBK', 10)->primary('kodeBK')->onDelete('restrict')->onUpdate('cascade');
             $table->string("namaBK", 100);
             $table->boolean("kategoriBK");
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Bahan_Kajian');
+        Schema::dropIfExists('bahan_kajian');
     }
 };

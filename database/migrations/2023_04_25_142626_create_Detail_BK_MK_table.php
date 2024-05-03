@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Detail_BK_MK', function (Blueprint $table) {
+        Schema::create('detail_bk_mk', function (Blueprint $table) {
             $table->char('kodeBK', 10);
             $table->char('kodeMK', 10);
             // $table->timestamps();
             $table->timestamp('created_at')->useCurrent();
-            $table->foreign('kodeBK')->references('kodeBK')->on('Bahan_Kajian')->onDelete('restrict');
-            $table->foreign('kodeMK')->references('kodeMK')->on('Mata_Kuliah')->onDelete('restrict');
+            $table->foreign('kodeBK')->references('kodeBK')->on('bahan_kajian')->onDelete('restrict');
+            $table->foreign('kodeMK')->references('kodeMK')->on('mata_kuliah')->onDelete('restrict');
 
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Detail_BK_MK');
+        Schema::dropIfExists('detail_bk_mk');
     }
 };

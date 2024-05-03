@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('Mata_Kuliah', function (Blueprint $table) {
+        Schema::table('mata_kuliah', function (Blueprint $table) {
             $table->float('ects')->nullable();
         });
     }
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('Mata_Kuliah', function (Blueprint $table) {
+        Schema::table('mata_kuliah', function (Blueprint $table) {
             $table->dropColumn('ects');
         });
     }

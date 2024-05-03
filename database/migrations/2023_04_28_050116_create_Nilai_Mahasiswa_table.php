@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Nilai_Mahasiswa', function (Blueprint $table) {
+        Schema::create('nilai_mahasiswa', function (Blueprint $table) {
             $table->String('kodeNilai',10)->primary('kodeNilai');
             $table->char('nim',12);
             $table->char('kodeKelas',9);
@@ -21,8 +21,8 @@ return new class extends Migration
             $table->char('semesterAmbil',2);
             $table->integer('nilaiAkhir')->nullable();
             $table->timestamps();
-            $table->foreign('nim')->references('nim')->on('Mahasiswa')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('kodeKelas')->references('kodeKelas')->on('Kelas')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('nim')->references('nim')->on('mahasiswa')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kodeKelas')->references('kodeKelas')->on('kelas')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('kodeRPS')->references('id_rps')->on('rps')->onDelete('restrict')->onUpdate('cascade');
         });
     }
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Nilai_Mahasiswa');
+        Schema::dropIfExists('nilai_mahasiswa');
     }
 };

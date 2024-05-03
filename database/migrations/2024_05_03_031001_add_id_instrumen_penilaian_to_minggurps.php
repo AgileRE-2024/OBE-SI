@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('Minggu_RPS', function (Blueprint $table) {
+        Schema::table('minggu_rps', function (Blueprint $table) {
                 $table->unsignedInteger('id_instrumen_penilaian')->nullable();
                 $table->unsignedInteger('id_teknik_penilaian')->nullable();
                 $table->unsignedBigInteger('id_komponen_penilaian')->nullable();
