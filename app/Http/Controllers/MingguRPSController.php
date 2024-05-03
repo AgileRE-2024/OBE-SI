@@ -16,6 +16,7 @@ use App\Models\Metode;
 use App\Models\Bentuk;
 use App\Models\Kriteria_Penilaian;
 use App\Models\Instrumen_Penilaian;
+use App\Models\Komponen_Penilaian;
 use App\Models\Media;
 use App\Models\Teknik_Penilaian_RPS;
 use Illuminate\Support\Facades\Validator;
@@ -68,7 +69,8 @@ class MingguRPSController extends Controller
             'bentuk' => $bentuk,
             'media' => $media,
             'teknik_penilaian' => $teknik_penilaian,
-            'instrumen_penilaian' => $instrumen_penilaian
+            'instrumen_penilaian' => $instrumen_penilaian,
+            'komponen_penilaian' => Komponen_Penilaian::where('id_rps', $kodeRPS)
         ]);
     }
 
@@ -108,7 +110,8 @@ class MingguRPSController extends Controller
             'bobot_nilai' => $request->input('bobot_nilai'),
             'id_teknik_penilaian' => $request->input('teknik_penilaian'),
             'bobot_nilai' => $request->input('bobot_nilai'),
-            'id_instrumen_penilaian' => $request->input('instrumen_penilaian')
+            'id_instrumen_penilaian' => $request->input('instrumen_penilaian'),
+            'id_komponen_penilaian' => $request->input('komponen_penilaian')
         ];
 
         Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->update($data);

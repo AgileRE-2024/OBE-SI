@@ -37,8 +37,8 @@
                     </th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Pengalaman belajar mahasiswa
                     </th>
-                    <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Kriteria Penilaian dan Indikator
-                    </th>
+                    <!-- <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Kriteria Penilaian dan Indikator
+                    </th> -->
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Teknik Penilaian
                     </th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Referensi
@@ -87,12 +87,12 @@
                     <td scope="row">{{ $minggurps->Media->nama_media ?? '' }}</td>
                     <td scope="row">{{ $minggurps->waktuPembelajaran }}</td>
                     <td scope="row">{{ $minggurps->pengalaman_belajar }}</td>
-                    <td scope="row">
+                    <!-- <td scope="row">
                         @if($minggurps->kodeSubCPMK)
                             <p>Kriteria penilaian: {{ $minggurps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
                             <p>Indikator: {{ $minggurps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
                         @endif
-                    </td>
+                    </td> -->
                     <td scope="row">
                         @if($minggurps->id_teknik_penilaian)
                             <p>Teknik penilaian: {{ $minggurps->Teknik_Penilaian_RPS->nama_teknik_penilaian ?? '-' }}</p>

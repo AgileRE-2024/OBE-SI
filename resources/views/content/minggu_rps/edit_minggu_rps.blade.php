@@ -5,15 +5,17 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
-    // Fungsi untuk bobot dan instrumen penilaian
+    // Fungsi untuk bobot, instrumen, dan komponen penilaian
     $(document).ready(function () {
         $('#teknik_penilaian').change(function () {
             if ($(this).val() == 'teknik_penilaian') {
                 $('#div_bobot').show();
                 $('#div_instrumen').show();
+                $('#div_komponen').show();
             } else {
                 $('#div_bobot').show();
                 $('#div_instrumen').show();
+                $('#div_komponen').show();
             }
         });
     });
@@ -212,7 +214,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group" id="div_bobot" @if($minggu_rps->bobot_nilai == null)
+                        <div class="form-group" id="div_bobot" @if($minggu_rps->teknik_penilaian == null)
                             style="display:none" @endif>
                             <label>Bobot Nilai</label>
                             @error('bobot_nilai')
@@ -222,7 +224,7 @@
                                 value="{{ $minggu_rps->bobot_nilai }}">
                         </div>
 
-                        <div class="form-group" id="div_instrumen" @if($minggu_rps->id_instrumen_penilaian == null)
+                        <div class="form-group" id="div_instrumen" @if($minggu_rps->id_teknik_penilaian == null)
                             style="display:none" @endif>
                             <label>Instrumen Penilaian</label>
                             @error('instrumen_penilaian')
@@ -234,6 +236,22 @@
                                     <option value="{{ $item->id_instrumen_penilaian }}"
                                         {{ $item->id_instrumen_penilaian ==  $minggu_rps->id_instrumen_penilaian ? 'selected' : '' }}>
                                         {{ $item->nama_instrumen_penilaian }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="div_komponen" @if($minggu_rps->id_teknik_penilaian == null)
+                            style="display:none" @endif>
+                            <label>Komponen Penilaian</label>
+                            @error('komponen_penilaian')
+                                <h6 style="color: #BF2C45">{{ $message }}</h6>
+                            @enderror
+                            <select name="komponen_penilaian" id='komponen_penilaian' class="form-select">
+                                <option value="" selected disabled>-- Pilih Komponen Penilaian --</option>
+                                @foreach($komponen_penilaian as $item)
+                                    <option value="{{ $item->id_komponen_penilaian }}"
+                                        {{ $item->id_komponen_penilaian ==  $minggu_rps->id_komponen_penilaian ? 'selected' : '' }}>
+                                        {{ $item->nama_komponen_penilaian }}</option>
                                 @endforeach
                             </select>
                         </div>
