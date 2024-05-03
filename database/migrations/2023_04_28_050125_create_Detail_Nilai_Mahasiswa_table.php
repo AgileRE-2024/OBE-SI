@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('Detail_Nilai_Mahasiswa', function (Blueprint $table) {
             $table->char('id_rps',16)->nullable();
-            $table->foreign('id_rps')->references('id_rps')->on('RPS')->onDelete('restrict');
+            $table->foreign('id_rps')->references('id_rps')->on('rps')->onDelete('restrict');
             $table->char('nilaiPerTeknik',2);
             $table->string('kodePenilaian',10)->nullable('kodePenilaian');
             $table->foreign('kodePenilaian')->references('kodePenilaian')->on('Teknik_Penilaian')->onDelete('cascade');
