@@ -47,7 +47,7 @@ class MingguRPSController extends Controller
      */
     public function editMingguRPS($kodeMingguRPS)
     {
-        $kodeRPS = substr($kodeMingguRPS, 0, 10);
+        $kodeRPS = substr($kodeMingguRPS, 0, 9);
         $kodeMK = substr($kodeMingguRPS, 0, 6);
         $minggu_rps = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
         $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
