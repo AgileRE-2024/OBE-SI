@@ -47,7 +47,7 @@ class MingguRPSController extends Controller
      */
     public function editMingguRPS($kodeMingguRPS)
     {
-        $kodeRPS = substr($kodeMingguRPS, 0, 9);
+        $kodeRPS = substr($kodeMingguRPS, 0, 10);
         $kodeMK = substr($kodeMingguRPS, 0, 6);
         $minggu_rps = Minggu_RPS::where('kodeMingguRPS', $kodeMingguRPS)->first();
         $kodeCPMKList = Detail_MK_CPMK::all()->where('kodeMK', $kodeMK)->pluck('kodeCPMK')->toArray();
@@ -58,6 +58,7 @@ class MingguRPSController extends Controller
         $media = Media::all();
         $teknik_penilaian = Teknik_Penilaian_RPS::all();
         $instrumen_penilaian = Instrumen_Penilaian::all();
+        $komponen_penilaian = Komponen_Penilaian::where('id_rps', $kodeRPS)->get();
         
         return view('content.minggu_rps.edit_minggu_rps', [
             'title' => 'Edit Minggu RPS',
@@ -70,7 +71,7 @@ class MingguRPSController extends Controller
             'media' => $media,
             'teknik_penilaian' => $teknik_penilaian,
             'instrumen_penilaian' => $instrumen_penilaian,
-            'komponen_penilaian' => Komponen_Penilaian::where('id_rps', $kodeRPS)
+            'komponen_penilaian' => $komponen_penilaian
         ]);
     }
 
