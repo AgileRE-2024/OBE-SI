@@ -85,8 +85,8 @@
                         </div>
                     </td>
                     <td scope="row">{{ $minggurps->Media->nama_media ?? '' }}</td>
-                    <td scope="row">{{ $minggurps->waktuPembelajaran }}</td>
-                    <td scope="row">{{ $minggurps->pengalaman_belajar }}</td>
+                    <td scope="row">{{ $minggurps->waktuPembelajaran ?? '' }}</td>
+                    <td scope="row">{{ $minggurps->pengalaman_belajar ?? '' }}</td>
                     <!-- <td scope="row">
                         @if($minggurps->kodeSubCPMK)
                             <p>Kriteria penilaian: {{ $minggurps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
