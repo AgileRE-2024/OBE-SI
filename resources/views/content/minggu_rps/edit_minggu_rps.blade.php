@@ -214,14 +214,14 @@
                             </select>
                         </div>
 
-                        <div class="form-group" id="div_bobot" @if($minggu_rps->teknik_penilaian == null)
+                        <div class="form-group" id="div_bobot" @if($minggu_rps->id_teknik_penilaian == null)
                             style="display:none" @endif>
                             <label>Bobot Nilai (%)</label>
                             @error('bobot_nilai')
                                 <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
                             <input type="number" name="bobot_nilai" class="form-control" placeholder="Bobot Nilai"
-                                value="{{ $minggu_rps->bobot_nilai }}" min="0" max="100">
+                                value="{{ old('bobot_nilai') ? old('bobot_nilai') : $minggu_rps->bobot_nilai }}" min="0" max="100">
                         </div>
 
                         <div class="form-group" id="div_instrumen" @if($minggu_rps->id_teknik_penilaian == null)
