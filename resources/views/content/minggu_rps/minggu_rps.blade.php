@@ -98,6 +98,7 @@
                             <p>Teknik penilaian: {{ $minggurps->Teknik_Penilaian_RPS->nama_teknik_penilaian ?? '-' }}</p>
                             <p>Instrumen penilaian: {{ $minggurps->Instrumen_Penilaian->nama_instrumen_penilaian ?? '-' }}</p>
                             <p>Bobot nilai: {{ $minggurps->bobot_nilai ?? '-' }}</p>
+                            <p>Komponen penilaian: {{ $minggurps->Komponen_Penilaian->nama_komponen_penilaian ?? '-' }}</p>
                         @endif
                     </td>
                     <td scope="row">
