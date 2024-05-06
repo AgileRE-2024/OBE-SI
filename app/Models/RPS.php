@@ -53,7 +53,7 @@ class RPS extends Model
 
     public function Minggu_RPS()
     {
-        return $this->belongsToMany(Minggu_RPS::class, 'Detail_RPS', 'id_RPS', 'kodeMingguRPS');
+        return $this->hasMany(Minggu_RPS::class, 'id_rps', 'id_rps');
     }
 
     public function Nilai_Mahasiswa()

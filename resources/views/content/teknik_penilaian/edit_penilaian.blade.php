@@ -3,7 +3,7 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Edit Teknik Penilaian</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Edit Deskripsi Komponen Penilaian</h6>
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
@@ -12,11 +12,11 @@
                     @method('put')
 
                     <div class="form-group">
-                        <label>Teknik Penilaian RPS</label>
+                        <label>Deskripsi Komponen Penilaian RPS</label>
                         @error('detail_penilaian')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <textarea name="detail_penilaian" id="editor" class="form-control" placeholder="Teknik Penilaian"
+                        <textarea name="detail_penilaian" id="editor" class="form-control" placeholder="Deskripsi komponen penilaian"
                             value="{{ old('detail_penilaian') ? old('detail_penilaian') : $rps->detail_penilaian }}">{{ old('detail_penilaian') ? old('detail_penilaian') : $rps->detail_penilaian }}</textarea>
                     </div>
                     <div class="form-group pt-4">
