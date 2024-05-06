@@ -236,7 +236,7 @@
     <table class="table table-bordered" style="text-align: center;">
         <tr style="height : 65px; background-color: lightblue">
             <th class="table-header" style="width : 5%">Minggu ke-</th>
-            <th class="table-header" style="width : 13%">
+            <th class="table-header" style="width : 15%">
                 Kemampuan Akhir yang diharapkan di setiap tahapan pembelajaran
                 (Sub-Capaian Mata Kuliah)
                 (C, A, P)</th>
@@ -246,7 +246,7 @@
             <th class="table-header" style="width : 7%">Waktu</th>
             <th class="table-header" style="width : 10%">Pengalaman belajar mahasiswa</th>
             <!-- <th class="table-header" style="width : 10%">Kriteria Penilaian dan Indikator (hard dan soft skills)</th> -->
-            <th class="table-header" style="width : 7%">Teknik Penilaian</th>
+            <th class="table-header" style="width : 15%">Teknik Penilaian</th>
             <th class="table-header" style="width : 15%">Referensi</th>
         </tr>
         <tr style="height : 50px; background-color: lightblue">
@@ -262,7 +262,7 @@
             <!-- <td class="td-rps">10</td> -->
         </tr>
         <?php
-        $i = 0;
+         $i = 0;
         ?>
         @foreach($minggu_rps_list as $minggu_rps)
             <tr>
@@ -295,12 +295,12 @@
                 <td class="td-rps">{{ $minggu_rps->waktuPembelajaran ?? '' }}</td>
                 <td class="td-rps">{{ $minggu_rps->pengalaman_belajar ?? '' }}</td>
                 <!-- <td class="td-rps">
-                    @if($minggu_rps->kodeSubCPMK)
+@if($minggu_rps->kodeSubCPMK)
                         <p>Kriteria penilaian:
                             {{ $minggu_rps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
                         <p>Indikator:
                             {{ $minggu_rps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
-                    @endif
+@endif
                 </td> -->
                 <td class="td-rps">
                     @if($minggu_rps->id_teknik_penilaian)
@@ -329,21 +329,21 @@
             @if($i == 6)
                 <tr>
                     <td class="td-rps">8</td>
-                    <td colspan="10" class="td-rps"> UTS </td>
+                    <td colspan="8" class="td-rps"> UTS </td>
                 </tr>
-                <?php
-        $i += 1;
-        ?>
+                @php
+                    $i += 1;
+                @endphp
             @endif
             @if($i == 14)
                 <tr>
                     <td class="td-rps">16</td>
-                    <td colspan="10" class="td-rps"> UAS </td>
+                    <td colspan="8" class="td-rps"> UAS </td>
                 </tr>
             @endif
-            <?php
-        $i += 1;
-        ?>
+                @php
+                    $i += 1;
+                @endphp
             @if($i == 15)
                 @break
             @endif
@@ -354,7 +354,35 @@
         C. KRITERIA DAN DESKRIPSI PENILAIAN
     </h3>
     <div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
-        {!! $rps->detail_penilaian !!}
+        <p>1. Kriteria Penilaian</p>
+        <div class="mb-0">Penilaian yang diberikan berdasarkan kriteria berikut:</div>
+        <div class="mb-0">Nilai akhir diperoleh melalui rumus</div>
+        <p>
+            @if($rps->KomponenPenilaian)
+                @foreach($rps->KomponenPenilaian as $item)
+                    @php
+                        $totalBobot = 0;
+                    @endphp
+                    @foreach($rps->Minggu_RPS as $minggu)
+                        @if($minggu->id_komponen_penilaian == $item->id_komponen_penilaian)
+                            @php
+                                $totalBobot += $minggu->bobot_nilai;
+                            @endphp
+                        @endif
+                    @endforeach
+                    {{ $item->nama_komponen_penilaian }} ({{ $totalBobot }}%)
+                    @if(!$loop->last)
+                        +
+                    @endif
+                @endforeach
+            @endif
+        </p>
+        <p>2. Deskripsi Komponen Penilaian</p>
+        @if($rps->detail_penilaian)
+            <p>{!! $rps->detail_penilaian !!}</p>
+        @else
+            <p>Belum ada data</p>
+        @endif
     </div>
 
     <h3>

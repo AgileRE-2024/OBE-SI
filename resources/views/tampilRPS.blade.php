@@ -364,9 +364,9 @@
         C. KRITERIA DAN DESKRIPSI PENILAIAN
     </h3>
     <div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
-        <p>Kriteria Penilaian</p>
-        <p>Penilaian yang diberikan berdasarkan kriteria berikut:</p>
-        <p>Nilai akhir diperoleh melalui rumus</p>
+        <p>1. Kriteria Penilaian</p>
+        <div class="mb-0">Penilaian yang diberikan berdasarkan kriteria berikut:</div>
+        <div class="mb-0">Nilai akhir diperoleh melalui rumus</div>
         <p>
             @if($rps->KomponenPenilaian)
                 @foreach($rps->KomponenPenilaian as $item)
@@ -387,7 +387,7 @@
                 @endforeach
             @endif
         </p>
-        <p>Deskripsi Komponen Penilaian</p>
+        <p>2. Deskripsi Komponen Penilaian</p>
         @if($rps->detail_penilaian)
             <p>{!! $rps->detail_penilaian !!}</p>
         @else
