@@ -133,13 +133,13 @@
                 -
             </td>
             <td class="td-rps" style="padding-bottom: 0px;">
-                (tanda tangan)
+                
             </td>
             <td class="td-rps">
-                (tanda tangan)
+                
             </td>
             <td class="td-rps">
-                (tanda tangan)
+                
             </td>
 
         </tr>
