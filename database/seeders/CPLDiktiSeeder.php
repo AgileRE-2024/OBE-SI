@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\CPL_SN_Dikti;
 
-class CplDiktiSeeder extends Seeder
+class CPLDiktiSeeder extends Seeder
 {
     /**
      * Run the database seeds.

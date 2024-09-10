@@ -6,7 +6,7 @@ use App\Models\CPL_Prodi;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CplProdiSeeder extends Seeder
+class CPLProdiSeeder extends Seeder
 {
     /**
      * Run the database seeds.
