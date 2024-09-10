@@ -15,7 +15,7 @@ class PrasyaratSeeder extends Seeder
      */
     public function run()
     {
-        //Sistem Berbasis Pengetahuan
+        /* //Sistem Berbasis Pengetahuan
         Prasyarat::create([
             'kodeMK' => 'SIC401',
             'mat_kodeMK' => 'MAS234',
@@ -108,7 +108,7 @@ class PrasyaratSeeder extends Seeder
             'mat_kodeMK' => 'MAS234',
         ]);
 
-        
+
 
         //Pembangunan Aplikasi Enterprise
         Prasyarat::create([
@@ -187,7 +187,7 @@ class PrasyaratSeeder extends Seeder
         Prasyarat::create([
             'kodeMK' => 'SII317',
             'mat_kodeMK' => 'SII208',
-        ]);
+        ]); */
 
     }
 }
