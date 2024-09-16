@@ -14,10 +14,11 @@ class PemetaanCPLPLTest extends DuskTestCase
      */
     public function login($browser)
     {
-        $browser->pause(500)
-            ->type('nip', '197801262006041001')
+        $browser
             ->pause(500)
-            ->type('password', 'coba123')
+            ->type("nip", "197801262006041001")
+            ->pause(500)
+            ->type("password", "coba123")
             ->pause(500)
             ->click('button[name="tombolLogin"]')
             ->pause(1000);
@@ -26,21 +27,26 @@ class PemetaanCPLPLTest extends DuskTestCase
     /**
      * view matrix
      */
-     public function testView()
-     {
+    public function testView()
+    {
         $this->browse(function (Browser $browser) {
             // Login
-            $browser->visit('http://127.0.0.1:8000/login');
+            $browser->visit("http://127.0.0.1:8000/login");
             $this->login($browser);
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
-            ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
-            ->assertSee('No')
-            ->assertSee('Kode CPL')
-            ->assertSee('CPL')
-            ->assertSee('Profil Lulusan (PL)')
-            ->pause(1000);
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
+                ->assertSee(
+                    "Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)"
+                )
+                ->assertSee("No")
+                ->assertSee("Kode CPL")
+                ->assertSee("CPL")
+                ->assertSee("Profil Lulusan (PL)")
+                ->pause(1000);
         });
-     }
+    }
 
     /**
      * Check one checkbox
@@ -48,19 +54,24 @@ class PemetaanCPLPLTest extends DuskTestCase
     public function testOneCheck(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
-                ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
+                ->assertSee(
+                    "Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)"
+                )
                 ->pause(1000)
-                ->check('#checkbox_CPL-01-PL01')
+                ->check("#checkbox_CPL-01-PL01")
                 ->pause(1000)
-                ->scrollIntoView('#submitbutton')
+                ->scrollIntoView("#submitbutton")
                 ->pause(1000)
-                ->click('#submitbutton')
-                ->waitFor('.swal2-popup')
+                ->click("#submitbutton")
+                ->waitFor(".swal2-popup")
                 ->pause(500)
-                ->click('.swal2-confirm')
+                ->click(".swal2-confirm")
                 ->pause(1000)
-                ->assertSee('Sukses')
+                ->assertSee("Sukses")
                 ->pause(1500);
         });
     }
@@ -71,19 +82,24 @@ class PemetaanCPLPLTest extends DuskTestCase
     public function testUnCheck(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
-                ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
+                ->assertSee(
+                    "Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)"
+                )
                 ->pause(1000)
-                ->uncheck('#checkbox_CPL-01-PL01')
+                ->uncheck("#checkbox_CPL-01-PL01")
                 ->pause(1000)
-                ->scrollIntoView('#submitbutton')
+                ->scrollIntoView("#submitbutton")
                 ->pause(1000)
-                ->click('#submitbutton')
-                ->waitFor('.swal2-popup')
+                ->click("#submitbutton")
+                ->waitFor(".swal2-popup")
                 ->pause(500)
-                ->click('.swal2-confirm')
+                ->click(".swal2-confirm")
                 ->pause(1000)
-                ->assertSee('Sukses')
+                ->assertSee("Sukses")
                 ->pause(1500);
         });
     }
@@ -94,35 +110,40 @@ class PemetaanCPLPLTest extends DuskTestCase
     public function testCheckMoreThanOne(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
-                ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
+                ->assertSee(
+                    "Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)"
+                )
                 ->pause(1000)
-                ->check('#checkbox_CPL-01-PL01')
+                ->check("#checkbox_CPL-01-PL01")
                 ->pause(500)
-                ->check('#checkbox_CPL-02-PL04')
+                ->check("#checkbox_CPL-02-PL04")
                 ->pause(500)
-                ->check('#checkbox_CPL-02-PL03')
+                ->check("#checkbox_CPL-02-PL03")
                 ->pause(500)
-                ->check('#checkbox_CPL-03-PL02')
+                ->check("#checkbox_CPL-03-PL02")
                 ->pause(500)
-                ->check('#checkbox_CPL-03-PL03')
+                ->check("#checkbox_CPL-03-PL03")
                 ->pause(500)
-                ->check('#checkbox_CPL-04-PL02')
+                ->check("#checkbox_CPL-04-PL02")
                 ->pause(500)
-                ->scrollIntoView('#checkbox_CPL-10-PL01')
+                ->scrollIntoView("#checkbox_CPL-10-PL01")
                 ->pause(1000)
-                ->check('#checkbox_CPL-06-PL01')
+                ->check("#checkbox_CPL-06-PL01")
                 ->pause(500)
-                ->check('#checkbox_CPL-07-PL01')
+                ->check("#checkbox_CPL-07-PL01")
                 ->pause(1000)
-                ->scrollIntoView('#submitbutton')
+                ->scrollIntoView("#submitbutton")
                 ->pause(1000)
-                ->click('#submitbutton')
-                ->waitFor('.swal2-popup')
+                ->click("#submitbutton")
+                ->waitFor(".swal2-popup")
                 ->pause(500)
-                ->click('.swal2-confirm')
+                ->click(".swal2-confirm")
                 ->pause(1000)
-                ->assertSee('Sukses')
+                ->assertSee("Sukses")
                 ->pause(1500);
         });
     }
@@ -133,23 +154,28 @@ class PemetaanCPLPLTest extends DuskTestCase
     public function testUnCheckMoreThanOne(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
-                ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
+                ->assertSee(
+                    "Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)"
+                )
                 ->pause(1000)
-                ->uncheck('#checkbox_CPL-01-PL01')
+                ->uncheck("#checkbox_CPL-01-PL01")
                 ->pause(500)
-                ->uncheck('#checkbox_CPL-02-PL04')
+                ->uncheck("#checkbox_CPL-02-PL04")
                 ->pause(500)
-                ->uncheck('#checkbox_CPL-03-PL03')
+                ->uncheck("#checkbox_CPL-03-PL03")
                 ->pause(500)
-                ->scrollIntoView('#submitbutton')
+                ->scrollIntoView("#submitbutton")
                 ->pause(1000)
-                ->click('#submitbutton')
-                ->waitFor('.swal2-popup')
+                ->click("#submitbutton")
+                ->waitFor(".swal2-popup")
                 ->pause(500)
-                ->click('.swal2-confirm')
+                ->click(".swal2-confirm")
                 ->pause(1000)
-                ->assertSee('Sukses')
+                ->assertSee("Sukses")
                 ->pause(1500);
         });
     }
@@ -160,29 +186,34 @@ class PemetaanCPLPLTest extends DuskTestCase
     public function testCheckAndUncheck(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
-                ->assertSee('Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)')
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
+                ->assertSee(
+                    "Matriks Capaian Pembelajaran Lulusan (CPL) & Profil Lulusan (PL)"
+                )
                 ->pause(1000)
-                ->check('#checkbox_CPL-01-PL01')
+                ->check("#checkbox_CPL-01-PL01")
                 ->pause(500)
-                ->check('#checkbox_CPL-02-PL04')
+                ->check("#checkbox_CPL-02-PL04")
                 ->pause(500)
-                ->uncheck('#checkbox_CPL-04-PL02')
+                ->uncheck("#checkbox_CPL-04-PL02")
                 ->pause(500)
-                ->scrollIntoView('#checkbox_CPL-10-PL01')
+                ->scrollIntoView("#checkbox_CPL-10-PL01")
                 ->pause(1000)
-                ->uncheck('#checkbox_CPL-06-PL01')
+                ->uncheck("#checkbox_CPL-06-PL01")
                 ->pause(500)
-                ->uncheck('#checkbox_CPL-07-PL01')
+                ->uncheck("#checkbox_CPL-07-PL01")
                 ->pause(1000)
-                ->scrollIntoView('#submitbutton')
+                ->scrollIntoView("#submitbutton")
                 ->pause(1000)
-                ->click('#submitbutton')
-                ->waitFor('.swal2-popup')
+                ->click("#submitbutton")
+                ->waitFor(".swal2-popup")
                 ->pause(500)
-                ->click('.swal2-confirm')
+                ->click(".swal2-confirm")
                 ->pause(1000)
-                ->assertSee('Sukses')
+                ->assertSee("Sukses")
                 ->pause(1500);
         });
     }
@@ -193,11 +224,16 @@ class PemetaanCPLPLTest extends DuskTestCase
     public function testExportToPDF(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
                 ->pause(500)
                 ->click("#exportPDF")
                 ->pause(1000)
-                ->assertUrlIs('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl/export/pdf')
+                ->assertUrlIs(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl/export/pdf"
+                )
                 ->pause(1000);
 
             // $browser->driver->getKeyboard()->sendKeys(WebDriverKeys::CONTROL, 's');
@@ -206,10 +242,13 @@ class PemetaanCPLPLTest extends DuskTestCase
 
     public function testExportToExcel(): void
     {
-        date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set("Asia/Jakarta");
 
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl')
+            $browser
+                ->visit(
+                    "http://127.0.0.1:8000/dashboard/kurikulum/pemetaan/cpl-pl"
+                )
                 ->pause(500)
                 ->click("#exportExcel")
                 ->pause(1000);

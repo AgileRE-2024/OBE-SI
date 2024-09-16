@@ -12,14 +12,15 @@ class TahapPenilaianTest extends DuskTestCase
      */
     public function login($browser)
     {
-        $browser->pause(500)
-            ->type('nip', '198110282006041003')
+        $browser
             ->pause(500)
-            ->type('password', 'coba123')
+            ->type("nip", "198110282006041003")
+            ->pause(500)
+            ->type("password", "coba123")
             ->pause(500)
             ->click('button[name="tombolLogin"]')
             ->pause(500)
-            ->visit('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian')
+            ->visit("http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian")
             ->pause(1000);
     }
 
@@ -30,7 +31,9 @@ class TahapPenilaianTest extends DuskTestCase
     public function testAccess(): void
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+            $browser->visit(
+                "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+            );
 
             /**
              *  Jika url tidak mengarah yang dituju
@@ -39,25 +42,28 @@ class TahapPenilaianTest extends DuskTestCase
              * maka akan memanggil function login untuk melakukan login
              * */
             try {
-                $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+                $browser->assertUrlIs(
+                    "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+                );
                 $browser->pause(1000);
             } catch (\Exception $e) {
-                $browser->assertUrlIs('http://127.0.0.1:8000/login');
+                $browser->assertUrlIs("http://127.0.0.1:8000/login");
                 $this->login($browser);
             }
 
-            $browser->assertSee('Mekanisme dan Tahap Penilaian')
+            $browser
+                ->assertSee("Mekanisme dan Tahap Penilaian")
                 ->pause(500)
-                ->select('#tahunAjaran')
+                ->select("#tahunAjaran")
                 ->pause(800)
-                ->assertSee('Kode CPL')
-                ->assertSee('Kode CPMK')
-                ->assertSee('Kode MK')
-                ->assertSee('Tahap Penilaian')
-                ->assertSee('Teknik Penilaian')
-                ->assertSee('Instrumen')
-                ->assertSee('Kriteria')
-                ->assertSee('Bobot')
+                ->assertSee("Kode CPL")
+                ->assertSee("Kode CPMK")
+                ->assertSee("Kode MK")
+                ->assertSee("Tahap Penilaian")
+                ->assertSee("Teknik Penilaian")
+                ->assertSee("Instrumen")
+                ->assertSee("Kriteria")
+                ->assertSee("Bobot")
                 ->pause(1000);
         });
     }
@@ -70,7 +76,9 @@ class TahapPenilaianTest extends DuskTestCase
     {
         // Tidak bisa export PDF
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+            $browser->visit(
+                "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+            );
 
             /**
              *  Jika url tidak mengarah yang dituju
@@ -79,22 +87,27 @@ class TahapPenilaianTest extends DuskTestCase
              * maka akan memanggil function login untuk melakukan login
              * */
             try {
-                $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+                $browser->assertUrlIs(
+                    "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+                );
                 $browser->pause(1000);
             } catch (\Exception $e) {
-                $browser->assertUrlIs('http://127.0.0.1:8000/login');
+                $browser->assertUrlIs("http://127.0.0.1:8000/login");
                 $this->login($browser);
             }
 
-            $browser->click('#exportPDF')
-                ->waitFor('.swal2-popup', 10)
-                ->assertSee('Oops')
+            $browser
+                ->click("#exportPDF")
+                ->waitFor(".swal2-popup", 10)
+                ->assertSee("Oops")
                 ->pause(2000);
         });
 
         // Tidak bisa export excel
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+            $browser->visit(
+                "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+            );
 
             /**
              *  Jika url tidak mengarah yang dituju
@@ -103,16 +116,19 @@ class TahapPenilaianTest extends DuskTestCase
              * maka akan memanggil function login untuk melakukan login
              * */
             try {
-                $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+                $browser->assertUrlIs(
+                    "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+                );
                 $browser->pause(1000);
             } catch (\Exception $e) {
-                $browser->assertUrlIs('http://127.0.0.1:8000/login');
+                $browser->assertUrlIs("http://127.0.0.1:8000/login");
                 $this->login($browser);
             }
 
-            $browser->click('#exportExcel')
-                ->waitFor('.swal2-popup', 10)
-                ->assertSee('Oops')
+            $browser
+                ->click("#exportExcel")
+                ->waitFor(".swal2-popup", 10)
+                ->assertSee("Oops")
                 ->pause(2000);
         });
     }
@@ -124,7 +140,9 @@ class TahapPenilaianTest extends DuskTestCase
     {
         // Export PDF
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+            $browser->visit(
+                "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+            );
 
             /**
              *  Jika url tidak mengarah yang dituju
@@ -133,24 +151,29 @@ class TahapPenilaianTest extends DuskTestCase
              * maka akan memanggil function login untuk melakukan login
              * */
             try {
-                $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+                $browser->assertUrlIs(
+                    "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+                );
                 $browser->pause(1000);
             } catch (\Exception $e) {
-                $browser->assertUrlIs('http://127.0.0.1:8000/login');
+                $browser->assertUrlIs("http://127.0.0.1:8000/login");
                 $this->login($browser);
             }
 
-            $browser->select('#tahunAjaran')
+            $browser
+                ->select("#tahunAjaran")
                 ->pause(800)
-                ->click('#exportPDF')
+                ->click("#exportPDF")
                 // ->pause(500)
-                ->assertDontSee('Oops')
+                ->assertDontSee("Oops")
                 ->pause(3000);
         });
 
         // Export Excel
         $this->browse(function (Browser $browser) {
-            $browser->visit('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+            $browser->visit(
+                "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+            );
 
             /**
              *  Jika url tidak mengarah yang dituju
@@ -159,18 +182,21 @@ class TahapPenilaianTest extends DuskTestCase
              * maka akan memanggil function login untuk melakukan login
              * */
             try {
-                $browser->assertUrlIs('http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian');
+                $browser->assertUrlIs(
+                    "http://127.0.0.1:8000/dashboard/penilaian/tahap-penilaian"
+                );
                 $browser->pause(1000);
             } catch (\Exception $e) {
-                $browser->assertUrlIs('http://127.0.0.1:8000/login');
+                $browser->assertUrlIs("http://127.0.0.1:8000/login");
                 $this->login($browser);
             }
 
-            $browser->select('#tahunAjaran')
+            $browser
+                ->select("#tahunAjaran")
                 ->pause(800)
-                ->click('#exportExcel')
+                ->click("#exportExcel")
                 // ->pause(500)
-                ->assertDontSee('Oops')
+                ->assertDontSee("Oops")
                 ->pause(3000);
         });
     }
