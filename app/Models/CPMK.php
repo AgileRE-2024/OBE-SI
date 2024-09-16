@@ -6,25 +6,33 @@ use Illuminate\Database\Eloquent\Model;
 
 class CPMK extends Model
 {
-    protected $primaryKey = 'kodeCPMK';
+    protected $primaryKey = "kodeCPMK";
     public $incrementing = false;
-    protected $table = 'cpmk';
+    protected $table = "cpmk";
     protected $fillable = [
-        'kodeCPMK', 'deskripsiCPMK','kodeCPL','deleted_at'
+        "kodeCPMK",
+        "deskripsiCPMK",
+        "kodeCPL",
+        "deleted_at",
     ];
 
     public function CPL()
     {
-        return $this->belongsTo(CPL_Prodi::class, 'kodeCPL', 'kodeCPL');
+        return $this->belongsTo(CPL_Prodi::class, "kodeCPL", "kodeCPL");
     }
 
     public function Mata_Kuliah()
     {
-        return $this->belongsToMany(Mata_Kuliah::class, 'detail_mk_cpmk', 'kodeCPMK', 'kodeMK');
+        return $this->belongsToMany(
+            Mata_Kuliah::class,
+            "detail_mk_cpmk",
+            "kodeCPMK",
+            "kodeMK"
+        );
     }
 
     public function SubCPMK()
     {
-        return $this->hasMany(SubCPMK::class,'kodeCPMK', 'kodeCPMK');
+        return $this->hasMany(SubCPMK::class, "kodeCPMK", "kodeCPMK");
     }
 }

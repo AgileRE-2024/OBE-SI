@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Teknik_Penilaian_RPS extends Model
+class Kriteria_Penilaian extends Model
 {
-    protected $primaryKey = "id_teknik_penilaian";
+    protected $primaryKey = "id_kriteria_penilaians";
     public $incrementing = false;
-    protected $table = "teknik_penilaian_rps";
+    protected $table = "kriteria_penilaians";
     protected $fillable = [
-        "id_teknik_penilaian",
-        "nama_teknik_penilaian",
-        "deskripsi_teknik_penilaian",
+        "id_kriteria_penilaians",
+        "nama_kriteria_penilaians",
+        "deskripsi_kriteria_penilaians",
     ];
 
     public function Minggu_RPS()
@@ -21,8 +21,8 @@ class Teknik_Penilaian_RPS extends Model
         //relasi one to many
         return $this->hasMany(
             Minggu_RPS::class,
-            "id_teknik_penilaian",
-            "id_teknik_penilaian"
+            "kodePenilaian",
+            "kodePenilaian"
         );
     }
     use HasFactory;

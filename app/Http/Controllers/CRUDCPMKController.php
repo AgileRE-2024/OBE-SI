@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Response;
 use Dompdf\Dompdf;
 use Illuminate\Validation\Rule;
 
-
 class CRUDCPMKController extends Controller
 {
     /**
@@ -23,7 +22,7 @@ class CRUDCPMKController extends Controller
     public function index()
     {
         $cpmk = CPMK::get();
-        return view('content.cpmk.cpmk', ['title' => 'CPMK', 'cpmk' => $cpmk]);
+        return view("content.cpmk.cpmk", ["title" => "CPMK", "cpmk" => $cpmk]);
     }
 
     /**
@@ -32,7 +31,10 @@ class CRUDCPMKController extends Controller
     public function create()
     {
         $cplp = CPL_Prodi::all();
-        return view('content.cpmk.add_cpmk', ['title' => 'Tambah CPMK', 'cplp' => $cplp]);
+        return view("content.cpmk.add_cpmk", [
+            "title" => "Tambah CPMK",
+            "cplp" => $cplp,
+        ]);
     }
 
     /**
@@ -41,9 +43,9 @@ class CRUDCPMKController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'kodeCPMK' => 'required|unique:cpmk,kodeCPMK',
-            'deskripsi' => 'required',
-            'kodeCPL' => 'required'
+            "kodeCPMK" => "required|unique:cpmk,kodeCPMK",
+            "deskripsi" => "required",
+            "kodeCPL" => "required",
         ]);
 
         if ($validator->fails()) {
@@ -51,13 +53,14 @@ class CRUDCPMKController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
         CPMK::create([
-            'kodeCPMK' => $request->kodeCPMK,
-            'deskripsiCPMK' => $request->deskripsi,
-            'kodeCPL' => $request->kodeCPL
+            "kodeCPMK" => $request->kodeCPMK,
+            "deskripsiCPMK" => $request->deskripsi,
+            "kodeCPL" => $request->kodeCPL,
         ]);
 
-        return redirect()->route('kurikulum.data.cpmk')
-            ->with('success', 'CPMK berhasil dibuat.');
+        return redirect()
+            ->route("kurikulum.data.cpmk")
+            ->with("success", "CPMK berhasil dibuat.");
     }
 
     /**
@@ -73,9 +76,13 @@ class CRUDCPMKController extends Controller
      */
     public function edit($cpmk)
     {
-        $cpmk = CPMK::where('kodeCPMK', $cpmk)->first();
+        $cpmk = CPMK::where("kodeCPMK", $cpmk)->first();
         $cplp = CPL_Prodi::all();
-        return view('content.cpmk.edit_cpmk', ['title' => 'Edit CPMK', 'cplp' => $cplp, 'cpmk' => $cpmk]);
+        return view("content.cpmk.edit_cpmk", [
+            "title" => "Edit CPMK",
+            "cplp" => $cplp,
+            "cpmk" => $cpmk,
+        ]);
     }
 
     /**
@@ -85,14 +92,14 @@ class CRUDCPMKController extends Controller
     {
         if ($cpmk == $request->kodeCPMK) {
             $validator = Validator::make($request->all(), [
-                'deskripsi' => 'required',
-                'kodeCPL' => 'required'
+                "deskripsi" => "required",
+                "kodeCPL" => "required",
             ]);
         } else {
             $validator = Validator::make($request->all(), [
-                'kodeCPMK' => 'required|unique:cpmk,kodeCPMK',
-                'deskripsi' => 'required',
-                'kodeCPL' => 'required'
+                "kodeCPMK" => "required|unique:cpmk,kodeCPMK",
+                "deskripsi" => "required",
+                "kodeCPL" => "required",
             ]);
         }
 
@@ -101,20 +108,25 @@ class CRUDCPMKController extends Controller
         }
 
         if ($cpmk == $request->kodeCPMK) {
-            CPMK::where('kodeCPMK', $cpmk)->first()->update([
-                'deskripsiCPMK' => $request->deskripsi,
-                'kodeCPL' => $request->kodeCPL
-            ]);
+            CPMK::where("kodeCPMK", $cpmk)
+                ->first()
+                ->update([
+                    "deskripsiCPMK" => $request->deskripsi,
+                    "kodeCPL" => $request->kodeCPL,
+                ]);
         } else {
-            CPMK::where('kodeCPMK', $cpmk)->first()->update([
-                'kodeCPMK' => $request->kodeCPMK,
-                'deskripsiCPMK' => $request->deskripsi,
-                'kodeCPL' => $request->kodeCPL
-            ]);
+            CPMK::where("kodeCPMK", $cpmk)
+                ->first()
+                ->update([
+                    "kodeCPMK" => $request->kodeCPMK,
+                    "deskripsiCPMK" => $request->deskripsi,
+                    "kodeCPL" => $request->kodeCPL,
+                ]);
         }
 
-        return redirect()->route('kurikulum.data.cpmk')
-            ->with('success', 'CPMK berhasil diedit.');
+        return redirect()
+            ->route("kurikulum.data.cpmk")
+            ->with("success", "CPMK berhasil diedit.");
     }
 
     /**
@@ -122,42 +134,48 @@ class CRUDCPMKController extends Controller
      */
     public function destroy($kodeCPMK)
     {
-        if (Detail_MK_CPMK::where('kodeCPMK', $kodeCPMK)->exists()) {
-            return redirect()->route('kurikulum.data.cpmk')->with('error', 'CPMK masih berelasi dengan MK.');
-        } elseif (SubCPMK::where('kodeCPMK', $kodeCPMK)->exists()) {
-            return redirect()->route('kurikulum.data.cpmk')->with('error', 'CPMK masih berelasi dengan SubCPMK.');
+        if (Detail_MK_CPMK::where("kodeCPMK", $kodeCPMK)->exists()) {
+            return redirect()
+                ->route("kurikulum.data.cpmk")
+                ->with("error", "CPMK masih berelasi dengan MK.");
+        } elseif (SubCPMK::where("kodeCPMK", $kodeCPMK)->exists()) {
+            return redirect()
+                ->route("kurikulum.data.cpmk")
+                ->with("error", "CPMK masih berelasi dengan SubCPMK.");
         } else {
-            $cpmk = CPMK::where('kodeCPMK', $kodeCPMK)->first()->delete();
-            return redirect()->route('kurikulum.data.cpmk')->with('success', 'CPMK berhasil dihapus.');
+            $cpmk = CPMK::where("kodeCPMK", $kodeCPMK)->first()->delete();
+            return redirect()
+                ->route("kurikulum.data.cpmk")
+                ->with("success", "CPMK berhasil dihapus.");
         }
     }
 
     public function export($type)
     {
-        date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set("Asia/Jakarta");
 
-        $view = view('content.cpmk.tableToEkspor', [
-            'title' => 'Tabel CPMK',
-            'cpmk' => CPMK::all(),
+        $view = view("content.cpmk.tableToEkspor", [
+            "title" => "Tabel CPMK",
+            "cpmk" => CPMK::all(),
         ]);
 
-        $date_time = date('Y_m_d_H_i_s');
+        $date_time = date("Y_m_d_H_i_s");
 
-        if ($type === 'pdf') {
+        if ($type === "pdf") {
             $dompdf = new Dompdf();
             $dompdf->loadHtml($view);
-            $dompdf->setPaper('A4', 'landscape');
+            $dompdf->setPaper("A4", "landscape");
 
             $dompdf->render();
 
             $filename = "Tabel CPMK_" . $date_time . ".pdf";
 
             return Response::make($dompdf->output(), 200, [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'inline; filename=' . $filename
+                "Content-Type" => "application/pdf",
+                "Content-Disposition" => "inline; filename=" . $filename,
             ]);
         } else {
-            $filename = "Tabel CPMK_" . $date_time . '.xlsx';
+            $filename = "Tabel CPMK_" . $date_time . ".xlsx";
             return Excel::download(new CPMKExport(), $filename);
         }
     }

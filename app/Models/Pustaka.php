@@ -7,16 +7,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pustaka extends Model
 {
-    protected $primaryKey = 'id_pustaka';
+    protected $primaryKey = "id_pustaka";
     public $incrementing = false;
-    protected $table = 'pustakas';
+    protected $table = "pustakas";
     protected $fillable = [
-        'id_pustaka', 'nama_penulis','tahun','judul','penerbit','referensi','deleted_at'
+        "id_pustaka",
+        "nama_penulis",
+        "tahun",
+        "judul",
+        "penerbit",
+        "referensi",
+        "deleted_at",
     ];
     use HasFactory;
 
     public function Minggu_RPS()
     {
-        return $this->belongsToMany(Minggu_RPS::class, 'detail_pustaka_minggurps', 'id_pustaka', 'kodeMingguRPS');
+        return $this->belongsToMany(
+            Minggu_RPS::class,
+            "detail_pustaka_minggurps",
+            "id_pustaka",
+            "kodeMingguRPS"
+        );
     }
 }

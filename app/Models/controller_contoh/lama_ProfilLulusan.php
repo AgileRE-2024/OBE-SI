@@ -9,10 +9,10 @@ class ProfilLulusan extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $guarded = ["id"];
 
-    public function pemetaanPlCpls(){
-        return $this->hasMany(PemetaanPlCpl::class,'kodePL','kodePL');
+    public function pemetaanPlCpls()
+    {
+        return $this->hasMany(PemetaanPlCpl::class, "kodePL", "kodePL");
     }
-
 }

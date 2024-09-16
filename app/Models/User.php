@@ -13,17 +13,26 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, CanResetPassword;
-    protected $primaryKey = 'nip';
+    protected $primaryKey = "nip";
     public $incrementing = false;
-    protected $table = 'users';
-    protected $fillable = ['nip', 'namaProdi', 'jabatanDosen', 'namaDosen', 'password', 'email','role','status'];
-    protected $hidden = ['remember_token'];
+    protected $table = "users";
+    protected $fillable = [
+        "nip",
+        "namaProdi",
+        "jabatanDosen",
+        "namaDosen",
+        "password",
+        "email",
+        "role",
+        "status",
+    ];
+    protected $hidden = ["remember_token"];
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        "email_verified_at" => "datetime",
     ];
     public function getAuthIdentifierName()
     {
-        return 'nip';
+        return "nip";
     }
 
     public function getAuthIdentifier()
@@ -33,27 +42,28 @@ class User extends Authenticatable
 
     public function RPS_KPS()
     {
-        return $this->hasMany(RPS::class, 'nip', 'kps');
+        return $this->hasMany(RPS::class, "nip", "kps");
     }
 
     public function RPS()
     {
-        return $this->hasMany(RPS::class,'nip','nip');
+        return $this->hasMany(RPS::class, "nip", "nip");
     }
 
-    public function Prodi(){
-        return $this->belongsTo(Prodi::class,'namaProdi', 'namaProdi');
+    public function Prodi()
+    {
+        return $this->belongsTo(Prodi::class, "namaProdi", "namaProdi");
     }
 
-    public function Mata_Kuliah(){
-        return $this->hasMany(Mata_Kuliah::class,'nip', 'nip');
+    public function Mata_Kuliah()
+    {
+        return $this->hasMany(Mata_Kuliah::class, "nip", "nip");
     }
 
     public function Pengampu()
     {
-        return $this->belongsTo(Pengampu::class, 'nip');
+        return $this->belongsTo(Pengampu::class, "nip");
     }
-
 
     // public function RPS1()
     // {
@@ -62,10 +72,10 @@ class User extends Authenticatable
     public function hasRole($role)
     {
         $mapRoles = [
-            0 => 'dosen',
-            1 => 'kurikulum',
-            2 => 'admin',
-            3 => 'dosen_kurikulum'
+            0 => "dosen",
+            1 => "kurikulum",
+            2 => "admin",
+            3 => "dosen_kurikulum",
         ];
         $userRoleName = $mapRoles[$this->role];
         return $userRoleName === $role;

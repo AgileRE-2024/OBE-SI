@@ -6,17 +6,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mahasiswa extends Model
 {
-    protected $primaryKey = 'nim';
+    protected $primaryKey = "nim";
     public $incrementing = false;
-    protected $table = 'mahasiswa';
-    protected $fillable = ['nim', 'namaMahasiswa', 'tahunMasuk','deleted_at'];
+    protected $table = "mahasiswa";
+    protected $fillable = ["nim", "namaMahasiswa", "tahunMasuk", "deleted_at"];
 
     public function Nilai_Mahasiswa()
     {
-        return $this->hasMany(Nilai_Mahasiswa::class,'nim', 'nim');
+        return $this->hasMany(Nilai_Mahasiswa::class, "nim", "nim");
     }
 
-    public function kelas(){
-        return $this->belongsToMany(Mahasiswa::class, 'detail_kelas','nim','kodeKelas');
+    public function kelas()
+    {
+        return $this->belongsToMany(
+            Mahasiswa::class,
+            "detail_kelas",
+            "nim",
+            "kodeKelas"
+        );
     }
 }

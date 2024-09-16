@@ -20,10 +20,10 @@ class Role
     {
         if (!Auth::check()) {
             // I included this check because you have it, but it really should be part of your 'auth' middleware, most likely added as part of a route group.
-            return redirect('login');
+            return redirect("login");
         }
 
-        $user = User::where('nip',auth()->user()->nip)->first();
+        $user = User::where("nip", Auth::user()->nip)->first();
 
         foreach ($roles as $role) {
             // Check if user has the role This check will depend on how your roles are set up
@@ -32,6 +32,6 @@ class Role
             }
         }
 
-        return redirect('login');
+        return redirect("login");
     }
 }

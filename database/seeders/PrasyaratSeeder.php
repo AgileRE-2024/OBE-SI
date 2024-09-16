@@ -188,6 +188,5 @@ class PrasyaratSeeder extends Seeder
             'kodeMK' => 'SII317',
             'mat_kodeMK' => 'SII208',
         ]); */
-
     }
 }

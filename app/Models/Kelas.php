@@ -6,26 +6,37 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kelas extends Model
 {
-    protected $primaryKey = 'kodeKelas';
+    protected $primaryKey = "kodeKelas";
     public $incrementing = false;
-    protected $table = 'kelas';
+    protected $table = "kelas";
     protected $fillable = [
-        'kodeKelas', 'id_rps', 'namaKelas', 'jadwal', 'kuota','kodeMK','deleted_at'
+        "kodeKelas",
+        "id_rps",
+        "namaKelas",
+        "jadwal",
+        "kuota",
+        "kodeMK",
+        "deleted_at",
     ];
 
     public function Mahasiswa()
     {
-        return $this->belongsToMany(Mahasiswa::class, 'detail_kelas', 'kodeKelas', 'nim');
+        return $this->belongsToMany(
+            Mahasiswa::class,
+            "detail_kelas",
+            "kodeKelas",
+            "nim"
+        );
     }
 
     public function Mata_Kuliah()
     {
-        return $this->belongsTo(Mata_Kuliah::class,'kodeMK', 'kodeMK');
+        return $this->belongsTo(Mata_Kuliah::class, "kodeMK", "kodeMK");
     }
 
     public function RPS()
     {
-        return $this->hasMany(RPS::class,'kodeKelas', 'kodeKelas');
+        return $this->hasMany(RPS::class, "kodeKelas", "kodeKelas");
     }
 
     // public function Nilai_Mahasiswa()

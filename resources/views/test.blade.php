@@ -35,19 +35,19 @@
         @foreach ($RPS->Dosen()->get() as $Dosen)
             <h4>{{ $RPS->kodeRPS }} berelasi dengan {{ $Dosen->namaDosen }}</h4>
         @endforeach
-        <h4>Peran Dosen </h4> 
+        <h4>Peran Dosen </h4>
         @foreach ($RPS->Dosen1()->get() as $Dosen)
             <h4>{{ $RPS->kodeRPS }} ada {{ $Dosen->namaDosen }} sebagai {{ $Detail_Peran_Dosen->where('nip', '=', $Dosen->nip)->where('kodeRPS', '=', $RPS->kodeRPS)->first()->peranDosen }}</h4>
         @endforeach
-        <h4>CPMK dari CPL apa? </h4> 
+        <h4>CPMK dari CPL apa? </h4>
         @foreach ($CPMK->CPL()->get() as $CPL)
             <h4>{{ $CPMK->kodeCPMK }} dari {{ $CPL->kodeCPL }}</h4>
         @endforeach
-        <h4>CPMK dari MK apa? </h4> 
+        <h4>CPMK dari MK apa? </h4>
         @foreach ($CPMK->Mata_Kuliah()->get() as $MK)
             <h4>{{ $CPMK->kodeCPMK }} dari {{ $MK->kodeMK }}</h4>
         @endforeach
-        <h4>MK punya CPMK apa? </h4> 
+        <h4>MK punya CPMK apa? </h4>
         @foreach ($MK->CPMK()->get() as $CPMK)
             <h4>{{ $MK->kodeMK }} punya {{ $CPMK->kodeCPMK }}</h4>
         @endforeach

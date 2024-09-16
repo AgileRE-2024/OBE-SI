@@ -1953,7 +1953,7 @@ class MingguRpsSeeder extends Seeder
             4. Pentingnya Etika
             untuk segala Profesi',
         ]);
-            
+
 // =======
 // =======
 // >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
@@ -6030,7 +6030,7 @@ class MingguRpsSeeder extends Seeder
             'id_bentuk' => '1',
             'id_media' => '5',
             'id_metode' => '3',
-            
+
 // <<<<<<< HEAD
 // >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
 // =======
@@ -6042,11 +6042,11 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1 x 3 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu memahami dan menguraikan jenis-jenis kalimat dalam bahasa inggris',
             'bahan_kajian' => 'Type of Sentence',
-        ]); 
+        ]);
 // <<<<<<< HEAD
 // <<<<<<< HEAD
-            
-        
+
+
         Minggu_RPS::create([
             'id_rps' => 'ETT3012106',
             'kodeMingguRPS' => 'ETT30121061',
@@ -6212,7 +6212,7 @@ class MingguRpsSeeder extends Seeder
 
 
 
-        
+
 
         Minggu_RPS::create([
             'id_rps' => 'ETT3012106',
@@ -6253,7 +6253,7 @@ class MingguRpsSeeder extends Seeder
             2. Studi kasus data analytics di Internet
             3. Etika pengumpuluan data masyarakat / user oleh bisnis dan pemerintah
             4. Perlindungan hukum tentang privasi
-            
+
             ',
         ]);
 
@@ -6626,7 +6626,7 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'Customer analysis',
         ]);
 
-       
+
 
         Minggu_RPS::create([
             'id_rps' => 'MAS3242107',
@@ -6782,7 +6782,7 @@ class MingguRpsSeeder extends Seeder
         ]);
 
 
-        
+
         Minggu_RPS::create([
             'id_rps' => 'MAS3242107',
             'kodeMingguRPS' => 'MAS324210713',
@@ -6946,7 +6946,7 @@ class MingguRpsSeeder extends Seeder
             ',
         ]);
 
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SIC4042107',
             'kodeMingguRPS' => 'SIC40421078',
@@ -7038,7 +7038,7 @@ class MingguRpsSeeder extends Seeder
         ]);
 
         //data mining
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SIC4022107',
             'kodeMingguRPS' => 'SIC40221070',
@@ -7057,7 +7057,7 @@ class MingguRpsSeeder extends Seeder
             a. Mining
             b. Definisi & Latar Belakang Data Mining
             c. Tahapan-tahapan Proses Data Mining
-            
+
             ',
         ]);
 
@@ -7081,7 +7081,7 @@ class MingguRpsSeeder extends Seeder
             c. Types of Data
             d. Data Quality
             e. Data Preprocessing
-            
+
             ',
         ]);
 
@@ -7735,7 +7735,7 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'Penilaian Risiko (Risk Assessment)
             - Penilaian Risiko secara kuantitatif
             - Penilaian Risiko secara kualitatif
-            
+
             ',
         ]);
 
@@ -7774,7 +7774,7 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'Analisis Risiko
             ',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'MNG4022107',
             'kodeMingguRPS' => 'MNG40221075',
@@ -7907,7 +7907,7 @@ class MingguRpsSeeder extends Seeder
             'waktuPembelajaran' => "1x3x50'",
             'pengalaman_belajar' => '-',
             'bahan_kajian' => 'Pengembangan metode pengelolaan Risiko, untuk mengatasi permasalahan seperti ketidakpastian, dependensi antar risiko, dependensi antar aset
-            
+
             ',
         ]);
 
@@ -7928,7 +7928,7 @@ class MingguRpsSeeder extends Seeder
             'bahan_kajian' => 'Strategi pengelolaan Risiko
             ',
         ]);
-        
+
         //pengujian perangkat lunak
 
         Minggu_RPS::create([
@@ -8444,7 +8444,7 @@ class MingguRpsSeeder extends Seeder
             ',
         ]);
 
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII3172107',
             'kodeMingguRPS' => 'SII317210711',
@@ -8469,7 +8469,7 @@ class MingguRpsSeeder extends Seeder
             ',
         ]);
 
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SII3172107',
             'kodeMingguRPS' => 'SII317210712',
@@ -8522,7 +8522,7 @@ class MingguRpsSeeder extends Seeder
 // =======
 // =======
 // >>>>>>> 6bca087ef18578b5180c8444a7243ef979fe5ebb
-           
+
 
         Minggu_RPS::create([
             'id_rps' => 'BAE1122105',
@@ -8745,7 +8745,7 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => null,
             'bahan_kajian' => '1, 2, 3, 4',
         ]);
-        
+
         Minggu_RPS::create([
             'id_rps' => 'SID2012103',
             'kodeMingguRPS' => 'SID201210302',
@@ -8966,9 +8966,9 @@ class MingguRpsSeeder extends Seeder
             'pengalaman_belajar' => null,
             'bahan_kajian' => '1, 2, 3, 4',
         ]);
-        
+
         //Metodologi Penelitian
-        
+
         // Minggu_RPS::create([
         //     'id_rps' => 'PNT4972106',
         //     'kodeMingguRPS' => 'PNT49721061',
@@ -9000,7 +9000,7 @@ class MingguRpsSeeder extends Seeder
         //     'penugasan' => '-',
         //     'waktuPembelajaran' => "2 x 2 x 50",
         //     'pengalaman_belajar' => 'Mahasiswa mampu menjelaskan tentang penelitian di bidang sistem informasi ',
-        //     'bahan_kajian' => 'a. Topik Penelitian bidang rekayasa sistem informasi 
+        //     'bahan_kajian' => 'a. Topik Penelitian bidang rekayasa sistem informasi
         //                         b. Topik penelitian bidang Business Intelligence',
         // ]);
 
@@ -9018,7 +9018,7 @@ class MingguRpsSeeder extends Seeder
         //     'penugasan' => '-',
         //     'waktuPembelajaran' => "2 x 2 x 50",
         //     'pengalaman_belajar' => 'Mahasiswa mampu menjelaskan tentang penelitian di bidang sistem informasi ',
-        //     'bahan_kajian' => 'a. Topik Penelitian bidang rekayasa sistem informasi 
+        //     'bahan_kajian' => 'a. Topik Penelitian bidang rekayasa sistem informasi
         //                         b. Topik penelitian bidang Business Intelligence',
         // ]);
 
@@ -9036,7 +9036,7 @@ class MingguRpsSeeder extends Seeder
         //     'penugasan' => '-',
         //     'waktuPembelajaran' => "2 x 2 x 50",
         //     'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-        //     'bahan_kajian' => 'a. jenis jenis jurnal 
+        //     'bahan_kajian' => 'a. jenis jenis jurnal
         //                         b. pengutipan yang tepat',
         // ]);
 
@@ -9123,7 +9123,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9141,7 +9141,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9159,7 +9159,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9177,7 +9177,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9195,7 +9195,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9213,7 +9213,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9231,7 +9231,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9249,7 +9249,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9267,7 +9267,7 @@ class MingguRpsSeeder extends Seeder
             'penugasan' => '-',
             'waktuPembelajaran' => "2 x 2 x 50",
             'pengalaman_belajar' => 'Mahasiswa mampu mempraktikan pencarian dan pemilihan referensi yang tepat serta mengutip dengan benar ',
-            'bahan_kajian' => 'a. jenis jenis jurnal 
+            'bahan_kajian' => 'a. jenis jenis jurnal
                                 b. pengutipan yang tepat',
         ]);
 
@@ -9416,7 +9416,7 @@ class MingguRpsSeeder extends Seeder
 
 
         //047
-        // 1. RPS Bahasa Indonesia 
+        // 1. RPS Bahasa Indonesia
         // 1. RPS Biologi Dasar
         // 1. RPS Data dan Pustaka
         // 1. RPS Kalkulus

@@ -7,10 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
-    protected $primaryKey = 'pemetaan';
+    protected $primaryKey = "pemetaan";
     public $incrementing = false;
-    protected $table = 'page';
-    protected $fillable = [
-        'pemetaan', 'deskripsi'
-    ];
+    protected $table = "page";
+    protected $fillable = ["pemetaan", "deskripsi"];
 }

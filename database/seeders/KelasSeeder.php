@@ -16,11 +16,11 @@ class KelasSeeder extends Seeder
     public function run()
     {
         Kelas::create([
-            'kodeKelas' => 'ABCDLITS6',
-            'namaKelas' => 'Konsep Sistem Informasi Teori',
-            'jadwal' => 'Selasa 7-8',
-            'kuota' => '60',
-            'kodeMK' => 'SII103'
+            "kodeKelas" => "ABCDLITS6",
+            "namaKelas" => "Konsep Sistem Informasi Teori",
+            "jadwal" => "Selasa 7-8",
+            "kuota" => "60",
+            "kodeMK" => "SII103",
         ]);
     }
 }

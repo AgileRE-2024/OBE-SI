@@ -16,13 +16,13 @@ class DetailNilaiMahasiswaSeeder extends Seeder
     public function run()
     {
         Detail_Nilai_Mahasiswa::create([
-            'kodePenilaian' => '0001',
-            'nilaiPerTeknik' => '60',
+            "kodePenilaian" => "0001",
+            "nilaiPerTeknik" => "60",
         ]);
 
         Detail_Nilai_Mahasiswa::create([
-            'kodePenilaian' => '0002',
-            'nilaiPerTeknik' => '40',
+            "kodePenilaian" => "0002",
+            "nilaiPerTeknik" => "40",
         ]);
     }
 }

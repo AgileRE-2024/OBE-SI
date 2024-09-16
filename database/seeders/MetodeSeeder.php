@@ -17,24 +17,23 @@ class MetodeSeeder extends Seeder
     {
         // Metode jangan ditambah, pilihannya cuma 3 ini
         Metode::create([
-            'id_metode' => '1',
-            'nama_metode' => 'Problem Based Learning',
-        ],);
+            "id_metode" => "1",
+            "nama_metode" => "Problem Based Learning",
+        ]);
 
         Metode::create([
-            'id_metode' => '2',
-            'nama_metode' => 'Project Based Learning',
-        ],);
+            "id_metode" => "2",
+            "nama_metode" => "Project Based Learning",
+        ]);
 
         Metode::create([
-            'id_metode' => '3',
-            'nama_metode' => 'Case Based Learning',
-        ],);
+            "id_metode" => "3",
+            "nama_metode" => "Case Based Learning",
+        ]);
 
         Metode::create([
-            'id_metode' => '4',
-            'nama_metode' => 'Video conference dan SDL',
-        ],);
-
+            "id_metode" => "4",
+            "nama_metode" => "Video conference dan SDL",
+        ]);
     }
 }

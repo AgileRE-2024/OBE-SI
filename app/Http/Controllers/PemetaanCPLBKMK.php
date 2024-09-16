@@ -14,7 +14,6 @@ use Dompdf\dompdf;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 
-
 class PemetaanCPLBKMK extends Controller
 {
     //
@@ -25,50 +24,58 @@ class PemetaanCPLBKMK extends Controller
         $mk_list = Mata_Kuliah::all();
         $bk_list = Bahan_Kajian::all();
         $cpl_list = CPL_Prodi::all();
-        return view('content.pemetaan_cpl_bk_mk.matriksCPL_BK_MK', [
-            'title' => 'Pemetaan CPL BK MK',
-            'cpl_list' => CPL_Prodi::all(),
-            'bk_list' => Bahan_Kajian::all(),
-            'mk_list' => Mata_Kuliah::all(),
-            'pemetaan1' => Detail_BK_MK::all(),
-            'pemetaan2' => Detail_CPLProdi_BK::all(),
+        return view("content.pemetaan_cpl_bk_mk.matriksCPL_BK_MK", [
+            "title" => "Pemetaan CPL BK MK",
+            "cpl_list" => CPL_Prodi::all(),
+            "bk_list" => Bahan_Kajian::all(),
+            "mk_list" => Mata_Kuliah::all(),
+            "pemetaan1" => Detail_BK_MK::all(),
+            "pemetaan2" => Detail_CPLProdi_BK::all(),
         ]);
     }
 
     public function exportExcel(Request $request)
     {
-        date_default_timezone_set('Asia/Jakarta');
-        $date_time = date('Y_m_d_H_i_s');
-        $filename = "Pemetaan BK dan MK_" . $date_time . '.xlsx';
-        return Excel::download(new ExportPemetaanCPLBKMK(CPL_Prodi::all(),Bahan_Kajian::all(),Mata_Kuliah::all(),Detail_BK_MK::all(),Detail_CPLProdi_BK::all()), $filename);
+        date_default_timezone_set("Asia/Jakarta");
+        $date_time = date("Y_m_d_H_i_s");
+        $filename = "Pemetaan BK dan MK_" . $date_time . ".xlsx";
+        return Excel::download(
+            new ExportPemetaanCPLBKMK(
+                CPL_Prodi::all(),
+                Bahan_Kajian::all(),
+                Mata_Kuliah::all(),
+                Detail_BK_MK::all(),
+                Detail_CPLProdi_BK::all()
+            ),
+            $filename
+        );
     }
 
     public function exportPdf(Request $request)
     {
-        date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set("Asia/Jakarta");
 
-        $view = view('content.pemetaan_cpl_bk_mk.tableToEkspor', [
-            'title' => 'Pemetaan CPL BK MK',
-            'cpl_list' => CPL_Prodi::all(),
-            'bk_list' => Bahan_Kajian::all(),
-            'mk_list' => Mata_Kuliah::all(),
-            'pemetaan1' => Detail_BK_MK::all(),
-            'pemetaan2' => Detail_CPLProdi_BK::all(),
+        $view = view("content.pemetaan_cpl_bk_mk.tableToEkspor", [
+            "title" => "Pemetaan CPL BK MK",
+            "cpl_list" => CPL_Prodi::all(),
+            "bk_list" => Bahan_Kajian::all(),
+            "mk_list" => Mata_Kuliah::all(),
+            "pemetaan1" => Detail_BK_MK::all(),
+            "pemetaan2" => Detail_CPLProdi_BK::all(),
         ]);
 
-        $date_time = date('Y_m_d_H_i_s');
-            $dompdf = new Dompdf();
-            $dompdf->loadHtml($view);
-            $dompdf->setPaper('A4', 'landscape');
+        $date_time = date("Y_m_d_H_i_s");
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($view);
+        $dompdf->setPaper("A4", "landscape");
 
-            $dompdf->render();
+        $dompdf->render();
 
-            $filename = "Pemetaan CPL BK dan Mk_" . $date_time . ".pdf";
+        $filename = "Pemetaan CPL BK dan Mk_" . $date_time . ".pdf";
 
-            return Response::make($dompdf->output(), 200, [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'inline; filename=' . $filename
-            ]);
-        }
-
+        return Response::make($dompdf->output(), 200, [
+            "Content-Type" => "application/pdf",
+            "Content-Disposition" => "inline; filename=" . $filename,
+        ]);
+    }
 }

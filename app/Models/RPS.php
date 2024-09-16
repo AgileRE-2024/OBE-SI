@@ -5,16 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 // use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
 
-
 class RPS extends Model
 {
     // use HasRichText;
 
-    protected $primaryKey = 'id_rps';
+    protected $primaryKey = "id_rps";
     public $incrementing = false;
-    protected $table = 'rps';
+    protected $table = "rps";
     protected $fillable = [
-        'id_rps', 'nip','kodeMK', 'kodeRPS', 'tahunAjaran', 'semester', 'diperiksa_oleh', 'disetujui_oleh', 'dibuat_oleh', 'penanggungJawab','dosenPengampu','detail_penilaian'
+        "id_rps",
+        "nip",
+        "kodeMK",
+        "kodeRPS",
+        "tahunAjaran",
+        "semester",
+        "diperiksa_oleh",
+        "disetujui_oleh",
+        "dibuat_oleh",
+        "penanggungJawab",
+        "dosenPengampu",
+        "detail_penilaian",
     ];
 
     protected static function booted()
@@ -27,18 +37,16 @@ class RPS extends Model
             $tahunAjaran_part = substr($rps->tahunAjaran, -2);
 
             // Ambil 2 digit semester
-            $semester_part = str_pad($rps->semester, 2, '0', STR_PAD_LEFT);
+            $semester_part = str_pad($rps->semester, 2, "0", STR_PAD_LEFT);
 
             // Gabungkan semua bagian untuk membuat id_rps
             $rps->id_rps = $kodeMK_part . $tahunAjaran_part . $semester_part;
         });
     }
 
-
-
     public function Mata_Kuliah()
     {
-        return $this->belongsTo(Mata_Kuliah::class, 'kodeMK', 'kodeMK');
+        return $this->belongsTo(Mata_Kuliah::class, "kodeMK", "kodeMK");
     }
 
     // public function User()
@@ -53,29 +61,36 @@ class RPS extends Model
 
     public function Minggu_RPS()
     {
-        return $this->hasMany(Minggu_RPS::class, 'id_rps', 'id_rps');
+        return $this->hasMany(Minggu_RPS::class, "id_rps", "id_rps");
     }
 
     public function Nilai_Mahasiswa()
     {
-        return $this->hasMany(Nilai_Mahasiswa::class,'id_RPS', 'id_RPS');
+        return $this->hasMany(Nilai_Mahasiswa::class, "id_RPS", "id_RPS");
     }
 
     public function Teknik_Penilaian()
     {
-        return $this->belongsToMany(Teknik_Penilaian::class, 'Detail_RPS', 'id_RPS', 'kodePenilaian');
+        return $this->belongsToMany(
+            Teknik_Penilaian::class,
+            "Detail_RPS",
+            "id_RPS",
+            "kodePenilaian"
+        );
     }
 
-    public function User(){
-        return $this->belongsTo(User::class, 'nip','nip');
+    public function User()
+    {
+        return $this->belongsTo(User::class, "nip", "nip");
     }
 
-    public function Kelas(){
-        return $this->belongsTo(Kelas::class, 'kodeKelas','kodeKelas');
+    public function Kelas()
+    {
+        return $this->belongsTo(Kelas::class, "kodeKelas", "kodeKelas");
     }
 
-    public function KomponenPenilaian() {
-        return $this->hasMany(Komponen_Penilaian::class, 'id_rps', 'id_rps');
+    public function KomponenPenilaian()
+    {
+        return $this->hasMany(Komponen_Penilaian::class, "id_rps", "id_rps");
     }
-
 }

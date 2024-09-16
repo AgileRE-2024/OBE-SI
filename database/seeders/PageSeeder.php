@@ -16,8 +16,9 @@ class PageSeeder extends Seeder
     public function run()
     {
         Page::create([
-            'pemetaan' => 'cpl-mk',
-            'deskripsi' => 'Pemetaan CPL terhadap MK dilakukan untuk menunjukkan keterhubungan antara mata kuliah terhadap CPL Program Studi pada Tabel 9 Pemetaan CPL terhadap MK.',
+            "pemetaan" => "cpl-mk",
+            "deskripsi" =>
+                "Pemetaan CPL terhadap MK dilakukan untuk menunjukkan keterhubungan antara mata kuliah terhadap CPL Program Studi pada Tabel 9 Pemetaan CPL terhadap MK.",
         ]);
     }
 }

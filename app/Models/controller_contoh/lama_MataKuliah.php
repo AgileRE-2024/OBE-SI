@@ -9,5 +9,5 @@ class MataKuliah extends Model
 {
     use HasFactory;
     use HasFactory;
-    protected $table = 'mata_kuliahs';
+    protected $table = "mata_kuliahs";
 }

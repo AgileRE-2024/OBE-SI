@@ -16,8 +16,13 @@ class SubCpmkSeeder extends Seeder
     public function run()
     {
         $subs = [
-            
-            ['kodeSubCPMK' => 'Sub-CPMK0111', 'deskripsiSubCPMK' => 'Mampu menjelaskan konsep dasar sistem', 'kodeCPMK' => 'CPMK014', 'kriteriaPenilaian' => 'Mampu menjelaskan konsep dasar sistem', 'indikatorPenilaian' => 'Mampu menjelaskan konsep dasar sistem'],
+            [
+                "kodeSubCPMK" => "Sub-CPMK0111",
+                "deskripsiSubCPMK" => "Mampu menjelaskan konsep dasar sistem",
+                "kodeCPMK" => "CPMK014",
+                "kriteriaPenilaian" => "Mampu menjelaskan konsep dasar sistem",
+                "indikatorPenilaian" => "Mampu menjelaskan konsep dasar sistem",
+            ],
             // ['kodeSubCPMK' => 'Sub-CPMK0112', 'deskripsiSubCPMK' => 'Mampu menjelaskan konsep informasi dan sistem informasi', 'kodeCPMK' => 'CPMK014'],
             // ['kodeSubCPMK' => 'Sub-CPMK0121', 'deskripsiSubCPMK' => 'Mampu menganalisis proses organisasi', 'kodeCPMK' => 'CPMK014'],
             // ['kodeSubCPMK' => 'Sub-CPMK0122', 'deskripsiSubCPMK' => 'Mampu menganalisis sistem organisasi', 'kodeCPMK' => 'CPMK014'],
@@ -130,8 +135,6 @@ class SubCpmkSeeder extends Seeder
             // mengelola sistem operasi
             // berbasis windows, linux dan
             // Java Virtual Machine', 'kodeCPMK' => 'CPMK072'],
-
-
 
             //Basis Data
             // ['kodeSubCPMK' => 'Sub-CPMK0239', 'deskripsiSubCPMK' => '- Mampu menjelaskan definisi entitas, instance, atribut

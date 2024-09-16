@@ -7,9 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail_Kelas extends Model
 {
-    protected $table = 'detail_kelas';
-    protected $fillable = [
-        'nim', 'kodeKelas','SemesterAmbil','NilaiAkhir'
-    ];
+    protected $table = "detail_kelas";
+    protected $fillable = ["nim", "kodeKelas", "SemesterAmbil", "NilaiAkhir"];
     use HasFactory;
 }

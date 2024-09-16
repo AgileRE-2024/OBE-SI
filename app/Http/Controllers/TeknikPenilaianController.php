@@ -19,38 +19,38 @@ class TeknikPenilaianController extends Controller
      */
     public function index($kodeRPS, $kodeMK)
     {
-        $rps = RPS::where('id_rps', $kodeRPS)->first();
-        return view('content.teknik_penilaian.teknik_penilaian', [
-            'title' => 'Teknik Penilaian',
-            'rps' => $rps,
-            'kodeRPS' => $kodeRPS,
-            'mata_kuliah' => Mata_Kuliah::where('kodeMK', $kodeMK)->first(),
+        $rps = RPS::where("id_rps", $kodeRPS)->first();
+        return view("content.teknik_penilaian.teknik_penilaian", [
+            "title" => "Teknik Penilaian",
+            "rps" => $rps,
+            "kodeRPS" => $kodeRPS,
+            "mata_kuliah" => Mata_Kuliah::where("kodeMK", $kodeMK)->first(),
         ]);
     }
 
     public function export($type)
     {
-        date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set("Asia/Jakarta");
 
-        $view = view('content.teknik_penilaian.tableToekspor', [
-            'title' => 'Tabel Teknik Penilaian',
-            'tps' => Teknik_Penilaian::all(),
+        $view = view("content.teknik_penilaian.tableToekspor", [
+            "title" => "Tabel Teknik Penilaian",
+            "tps" => Teknik_Penilaian::all(),
         ]);
 
-        $date_time = date('Y_m_d_H_i_s');
+        $date_time = date("Y_m_d_H_i_s");
 
-        if ($type === 'pdf') {
+        if ($type === "pdf") {
             $dompdf = new Dompdf();
             $dompdf->loadHtml($view);
-            $dompdf->setPaper('A4', 'landscape');
+            $dompdf->setPaper("A4", "landscape");
 
             $dompdf->render();
 
             $filename = "Tabel Teknik Penilaian_" . $date_time . ".pdf";
 
             return Response::make($dompdf->output(), 200, [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'inline; filename=' . $filename
+                "Content-Type" => "application/pdf",
+                "Content-Disposition" => "inline; filename=" . $filename,
             ]);
         } else {
             // $filename = "Pemetaan CPL dan PL_" . $date_time . '.xlsx';
@@ -60,33 +60,45 @@ class TeknikPenilaianController extends Controller
 
     public function editTeknikPenilaian($kodeRPS)
     {
-        $rps = RPS::where('id_rps', $kodeRPS)->first();
-        return view('content.teknik_penilaian.edit_penilaian', ['title' => 'Teknik Penilaian','kodeRPS'=>$kodeRPS, 'rps' => $rps]);
+        $rps = RPS::where("id_rps", $kodeRPS)->first();
+        return view("content.teknik_penilaian.edit_penilaian", [
+            "title" => "Teknik Penilaian",
+            "kodeRPS" => $kodeRPS,
+            "rps" => $rps,
+        ]);
     }
 
     public function updateTeknikPenilaian(Request $request, $kodeRPS)
     {
         $kodeMK = substr($kodeRPS, 0, 6);
-        
+
         $request->validate([
-            'detail_penilaian' => 'required',
+            "detail_penilaian" => "required",
         ]);
 
         // Update data rps
         $data = [
-            'detail_penilaian' => $request->input('detail_penilaian'),
+            "detail_penilaian" => $request->input("detail_penilaian"),
         ];
 
         // dd($kodeRPS);
 
-        RPS::where('id_rps', $kodeRPS)->update($data);
+        RPS::where("id_rps", $kodeRPS)->update($data);
 
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS'=>$kodeRPS, 'kodeMK'=>$kodeMK])->with('success', 'Data teknik penilaian berhasil diperbarui');
+        return redirect()
+            ->route("edit_rps.teknik_penilaian", [
+                "kodeRPS" => $kodeRPS,
+                "kodeMK" => $kodeMK,
+            ])
+            ->with("success", "Data teknik penilaian berhasil diperbarui");
     }
 
     public function addTeknikPenilaian($kodeRPS)
     {
-        return view('content.teknik_penilaian.add_penilaian', ['title' => 'Tambah Teknik Penilaian', 'kodeRPS' => $kodeRPS]);
+        return view("content.teknik_penilaian.add_penilaian", [
+            "title" => "Tambah Teknik Penilaian",
+            "kodeRPS" => $kodeRPS,
+        ]);
     }
 
     public function storeTeknikPenilaian(Request $request, $kodeRPS)
@@ -94,22 +106,20 @@ class TeknikPenilaianController extends Controller
         $kodeMK = substr($kodeRPS, 0, 6);
 
         if (Teknik_Penilaian::all()->count() == null) {
-            $kodePenilaian=1;
-        }else{
-            $kodePenilaian=Teknik_Penilaian::all()->last()->kodePenilaian;
-            $kodePenilaian=(int)$kodePenilaian;
+            $kodePenilaian = 1;
+        } else {
+            $kodePenilaian = Teknik_Penilaian::all()->last()->kodePenilaian;
+            $kodePenilaian = (int) $kodePenilaian;
             $kodePenilaian++;
         }
-        
 
         $validator = Validator::make($request->all(), [
-            'teknikPenilaian' => 'required',
-            'bobotPenilaian' => 'required',
-            'kriteriaPenilaian' => 'required',
-            'tahapPenilaian' => 'required',
-            'instrumenPenilaian' => 'required',
-            'kodeRPS' => 'required',
-
+            "teknikPenilaian" => "required",
+            "bobotPenilaian" => "required",
+            "kriteriaPenilaian" => "required",
+            "tahapPenilaian" => "required",
+            "instrumenPenilaian" => "required",
+            "kodeRPS" => "required",
         ]);
 
         if ($validator->fails()) {
@@ -118,16 +128,21 @@ class TeknikPenilaianController extends Controller
         }
 
         Teknik_Penilaian::create([
-            'kodePenilaian' => $kodePenilaian,
-            'teknikPenilaian' => $request->teknikPenilaian,
-            'bobotPenilaian' => $request->bobotPenilaian,
-            'kriteriaPenilaian' => $request->kriteriaPenilaian,
-            'tahapPenilaian' => $request->tahapPenilaian,
-            'instrumenPenilaian' => $request->instrumenPenilaian,
-            'kodeRPS' => $request->kodeRPS,
+            "kodePenilaian" => $kodePenilaian,
+            "teknikPenilaian" => $request->teknikPenilaian,
+            "bobotPenilaian" => $request->bobotPenilaian,
+            "kriteriaPenilaian" => $request->kriteriaPenilaian,
+            "tahapPenilaian" => $request->tahapPenilaian,
+            "instrumenPenilaian" => $request->instrumenPenilaian,
+            "kodeRPS" => $request->kodeRPS,
         ]);
 
-        return redirect()->route('edit_rps.teknik_penilaian', ['kodeRPS' => $kodeRPS, 'kodeMK' => $kodeMK])->with('success', 'Teknik Penilaian berhasil ditambahkan');
+        return redirect()
+            ->route("edit_rps.teknik_penilaian", [
+                "kodeRPS" => $kodeRPS,
+                "kodeMK" => $kodeMK,
+            ])
+            ->with("success", "Teknik Penilaian berhasil ditambahkan");
     }
 
     // public function updateTeknikPenilaian(Request $request, $tp)
@@ -167,17 +182,26 @@ class TeknikPenilaianController extends Controller
     // }
 
     //NEW FUNCTION RICH TEXT
-    public function uploadTeknikPenilaian(Request $request){
-        
-        if($request->hasFile('detail_penilaian')){
-            
-            $originName = $request->file('detail_penilaian')->getClientOriginalName();
+    public function uploadTeknikPenilaian(Request $request)
+    {
+        if ($request->hasFile("detail_penilaian")) {
+            $originName = $request
+                ->file("detail_penilaian")
+                ->getClientOriginalName();
             $fileName = pathinfo($originName, PATHINFO_FILENAME);
-            $extension = $request->file('detail_penilaian')-> getClientOriginalExtension();
-            $fileName = $fileName.'_'.time().'.'.$extension;
-            $request-> file('detail_penilaian')->move(public_path('media'),$fileName);
-            $url = asset('media/'.$fileName);
-            return response()->json(['fileName'=> $fileName,'uploaded'=>1,'url'=>$url]);
+            $extension = $request
+                ->file("detail_penilaian")
+                ->getClientOriginalExtension();
+            $fileName = $fileName . "_" . time() . "." . $extension;
+            $request
+                ->file("detail_penilaian")
+                ->move(public_path("media"), $fileName);
+            $url = asset("media/" . $fileName);
+            return response()->json([
+                "fileName" => $fileName,
+                "uploaded" => 1,
+                "url" => $url,
+            ]);
         }
     }
 }

@@ -6,7 +6,11 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class MatrixCplCpmKmk implements FromCollection, WithHeadings, ShouldAutoSize, WithStyles
+class MatrixCplCpmKmk implements
+    FromCollection,
+    WithHeadings,
+    ShouldAutoSize,
+    WithStyles
 {
     protected $mk;
     protected $cpl;
@@ -22,15 +26,13 @@ class MatrixCplCpmKmk implements FromCollection, WithHeadings, ShouldAutoSize, W
         $data = [];
 
         foreach ($this->mk as $matkul) {
-            $row = [
-                '[' . $matkul->kodeMK . '] ' . $matkul->namaMK,
-            ];
+            $row = ["[" . $matkul->kodeMK . "] " . $matkul->namaMK];
 
             foreach ($this->cpl as $item) {
-                $value = '';
+                $value = "";
                 foreach ($matkul->CPMK as $CPMKfromMK) {
                     if ($CPMKfromMK->CPL == $item) {
-                        $value .= $CPMKfromMK->kodeCPMK . ' ';
+                        $value .= $CPMKfromMK->kodeCPMK . " ";
                     }
                 }
                 $row[] = $value;
@@ -44,7 +46,7 @@ class MatrixCplCpmKmk implements FromCollection, WithHeadings, ShouldAutoSize, W
 
     public function headings(): array
     {
-        $headings = ['Mata Kuliah'];
+        $headings = ["Mata Kuliah"];
 
         foreach ($this->cpl as $item) {
             $headings[] = $item->kodeCPL;
@@ -57,12 +59,13 @@ class MatrixCplCpmKmk implements FromCollection, WithHeadings, ShouldAutoSize, W
     {
         $styles = [
             1 => [
-                'font' => ['bold' => true],
+                "font" => ["bold" => true],
             ],
-            'A1:' . $sheet->getHighestColumn() . '1' => [
-                'fill' => [
-                    'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
-                    'color' => ['rgb' => 'CCCCCC'],
+            "A1:" . $sheet->getHighestColumn() . "1" => [
+                "fill" => [
+                    "fillType" =>
+                        \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
+                    "color" => ["rgb" => "CCCCCC"],
                 ],
             ],
         ];

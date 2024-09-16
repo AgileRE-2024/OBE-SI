@@ -16,9 +16,9 @@ class MahasiswaSeeder extends Seeder
     public function run()
     {
         Mahasiswa::create([
-            'nim' => '082011633100',
-            'namaMahasiswa' => 'Cantika Mantuliti',
-            'tahunMasuk' => '2020',
+            "nim" => "082011633100",
+            "namaMahasiswa" => "Cantika Mantuliti",
+            "tahunMasuk" => "2020",
         ]);
     }
 }

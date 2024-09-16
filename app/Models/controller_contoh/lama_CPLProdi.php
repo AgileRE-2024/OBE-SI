@@ -9,11 +9,11 @@ class CPLProdi extends Model
 {
     use HasFactory;
 
-    protected $table = 'cpl_prodis';
-    protected $guarded = ['id'];
+    protected $table = "cpl_prodis";
+    protected $guarded = ["id"];
 
-    public function pemetaanPlCpls(){
-        return $this->hasMany(PemetaanPlCpl::class,'kodeCPL','kodeCPL');
+    public function pemetaanPlCpls()
+    {
+        return $this->hasMany(PemetaanPlCpl::class, "kodeCPL", "kodeCPL");
     }
-
 }

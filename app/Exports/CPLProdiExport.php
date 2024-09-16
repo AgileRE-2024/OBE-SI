@@ -20,14 +20,12 @@ class CPLProdiExport implements FromCollection, WithHeadings, WithStyles
      */
     public function collection()
     {
-        return CPL_Prodi::all('kodeCPL', 'deskripsiCPL', 'referensiCPL');
+        return CPL_Prodi::all("kodeCPL", "deskripsiCPL", "referensiCPL");
     }
 
     public function headings(): array
     {
-        return [
-            'Kode CPL', 'Deskripsi CPL', 'Referensi CPL'
-        ];
+        return ["Kode CPL", "Deskripsi CPL", "Referensi CPL"];
     }
 
     public function styles(Worksheet $sheet)
@@ -36,46 +34,44 @@ class CPLProdiExport implements FromCollection, WithHeadings, WithStyles
 
         // bold header
         $highestColumn = $sheet->getHighestColumn(1);
-        $sheet->getStyle("A1:{$highestColumn}1")
-            ->applyFromArray([
-                'font' => [
-                    'bold' => true,
-                    'italic' => false,
-                ],
-                'alignment' => [
-                    'horizontal' => Alignment::HORIZONTAL_CENTER,
-                    'vertical' => Alignment::VERTICAL_CENTER,
-                    'wrapText' => true,
-                ],
-            ]);
+        $sheet->getStyle("A1:{$highestColumn}1")->applyFromArray([
+            "font" => [
+                "bold" => true,
+                "italic" => false,
+            ],
+            "alignment" => [
+                "horizontal" => Alignment::HORIZONTAL_CENTER,
+                "vertical" => Alignment::VERTICAL_CENTER,
+                "wrapText" => true,
+            ],
+        ]);
 
         // Center aligment checklist
-        $columns = ['A', 'B', 'C'];
+        $columns = ["A", "B", "C"];
 
         $range = "A2:G{$highestRow}";
         foreach ($columns as $column) {
-            $columnRange = $column . '2:' . $column . $highestRow;
+            $columnRange = $column . "2:" . $column . $highestRow;
             $sheet->getStyle($columnRange)->applyFromArray([
-                'alignment' => [
-                    'horizontal' => Alignment::HORIZONTAL_CENTER,
-                    'vertical' => Alignment::VERTICAL_CENTER,
-                    'wrapText' => true,
+                "alignment" => [
+                    "horizontal" => Alignment::HORIZONTAL_CENTER,
+                    "vertical" => Alignment::VERTICAL_CENTER,
+                    "wrapText" => true,
                 ],
             ]);
         }
         // Memberikan border
-        $sheet->getStyle("A1:{$highestColumn}{$highestRow}")
-            ->applyFromArray([
-                'borders' => [
-                    'allBorders' => [
-                        'borderStyle' => Border::BORDER_THIN,
-                        'color' => ['argb' => '000000'],
-                    ],
+        $sheet->getStyle("A1:{$highestColumn}{$highestRow}")->applyFromArray([
+            "borders" => [
+                "allBorders" => [
+                    "borderStyle" => Border::BORDER_THIN,
+                    "color" => ["argb" => "000000"],
                 ],
-            ]);
-        $sheet->getColumnDimension('B')->setWidth(50);
-        $sheet->getColumnDimension('C')->setWidth(45);
+            ],
+        ]);
+        $sheet->getColumnDimension("B")->setWidth(50);
+        $sheet->getColumnDimension("C")->setWidth(45);
         // Memindahkan cursor ke cell A1
-        $sheet->getStyle('A1');
+        $sheet->getStyle("A1");
     }
 }

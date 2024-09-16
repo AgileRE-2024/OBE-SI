@@ -16,18 +16,18 @@ class BentukSeeder extends Seeder
     public function run()
     {
         Bentuk::create([
-            'id_bentuk' => '1',
-            'nama_bentuk' => 'Kuliah, responsi, tutorial',
-        ],);
+            "id_bentuk" => "1",
+            "nama_bentuk" => "Kuliah, responsi, tutorial",
+        ]);
 
         Bentuk::create([
-            'id_bentuk' => '2',
-            'nama_bentuk' => 'Praktikum',
-        ],);
+            "id_bentuk" => "2",
+            "nama_bentuk" => "Praktikum",
+        ]);
 
         Bentuk::create([
-            'id_bentuk' => '3',
-            'nama_bentuk' => 'Seminar',
-        ],);
+            "id_bentuk" => "3",
+            "nama_bentuk" => "Seminar",
+        ]);
     }
 }

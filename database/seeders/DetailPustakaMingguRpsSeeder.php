@@ -360,7 +360,7 @@ class DetailPustakaMingguRpsSeeder extends Seeder
             ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
             ['id_pustaka' => '28', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
             ['id_pustaka' => '29', 'kodeMingguRPS' => 'MNM107210200', 'detail_pustaka' => null],
-            
+
             ['id_pustaka' => '25', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],
             ['id_pustaka' => '26', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],
             ['id_pustaka' => '27', 'kodeMingguRPS' => 'MNM107210201', 'detail_pustaka' => null],

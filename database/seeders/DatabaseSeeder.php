@@ -10,7 +10,7 @@ use App\Models\Detail_BK_MK;
 use App\Models\Detail_MK_CPMK;
 use App\Models\RPS;
 use App\Models\Pustaka;
-use App\Models\kriteria_penilaian;
+use App\Models\Kriteria_Penilaian;
 use App\Models\Mahasiswa;
 use App\Models\Minggu_RPS;
 use App\Models\Kelas;

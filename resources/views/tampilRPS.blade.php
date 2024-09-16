@@ -180,23 +180,17 @@
             <td class="td-rps">{{ $mk->namaProdi ?? '-' }}</td>
         </tr>
         <tr>
-            <?php
-            $counter = 1;
-            ?>
+            <?php $counter = 1; ?>
             <th class="table-header" style="text-align:left;">6. Capaian Pembelajaran Lulusan (CPL)</th>
             <td class="td-rps">
                 CPL {{ $mk->namaMK }}:
                 @foreach($list_cpl as $cpl)
                     <div>{{ $counter }}. {{ $cpl->kodeCPL }} {{ $cpl->deskripsiCPL }}</div>
-                    <?php
-                $counter += 1;
-                ?>
+                    <?php $counter += 1; ?>
                 @endforeach
             </td>
         </tr>
-        <?php
-        $counter = 1;
-        ?>
+        <?php $counter = 1; ?>
         <tr>
             <th class="table-header" style="text-align:left;">7. Capaian Pembelajaran Mata Kuliah (CPMK)</th>
             <td class="td-rps">
@@ -205,9 +199,7 @@
                     <div>{{ $counter }}.
                         {{ $all_cpmk->where('kodeCPMK', $cpmk->kodeCPMK)->first()->deskripsiCPMK }}
                     </div>
-                    <?php
-                $counter += 1;
-                ?>
+                    <?php $counter += 1; ?>
                 @endforeach
             </td>
         </tr>
@@ -271,9 +263,7 @@
             <td class="td-rps">9</td>
             <!-- <td class="td-rps">10</td> -->
         </tr>
-        <?php
-        $i = 0;
-        ?>
+        <?php $i = 0; ?>
         @foreach($minggu_rps_list as $minggu_rps)
             <tr>
                 <td class="td-rps">{{ $i + 1 }}</td>
@@ -341,9 +331,7 @@
                     <td class="td-rps">8</td>
                     <td colspan="10" class="td-rps"> UTS </td>
                 </tr>
-                <?php
-        $i += 1;
-        ?>
+                <?php $i += 1; ?>
             @endif
             @if($i == 14)
                 <tr>
@@ -351,9 +339,7 @@
                     <td colspan="10" class="td-rps"> UAS </td>
                 </tr>
             @endif
-            <?php
-        $i += 1;
-        ?>
+            <?php $i += 1; ?>
             @if($i == 15)
                 @break
             @endif
@@ -399,16 +385,12 @@
         D. DAFTAR REFERENSI
     </h3>
     <div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
-        <?php
-        $no = 1;
-        ?>
+        <?php $no = 1; ?>
         @foreach($minggu_pustaka->unique('id_pustaka') as $pustaka)
             <div>
                 {{ $no }}. {{ $pustaka->pustaka->nama_penulis }}, {{ $pustaka->pustaka->tahun }},
                 {{ $pustaka->pustaka->judul }}, {{ $pustaka->pustaka->penerbit }}
-                <?php
-            $no += 1;
-            ?>
+                <?php $no += 1; ?>
             </div>
         @endforeach
     </div>

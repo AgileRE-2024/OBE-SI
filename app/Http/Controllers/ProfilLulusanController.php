@@ -17,78 +17,88 @@ class ProfilLulusanController extends Controller
     {
         $pls = Profil_Lulusan::all();
 
-        return view('content.profil_lulusan.profil_lulusan', ['title' => 'Profil Lulusan', 'pls' => $pls]);
+        return view("content.profil_lulusan.profil_lulusan", [
+            "title" => "Profil Lulusan",
+            "pls" => $pls,
+        ]);
     }
 
     public function export($type)
     {
-        date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set("Asia/Jakarta");
 
-        $view = view('content.profil_lulusan.tableToEkspor', [
-            'title' => 'Tabel Profil Lulusan',
-            'pls' => Profil_Lulusan::all(),
+        $view = view("content.profil_lulusan.tableToEkspor", [
+            "title" => "Tabel Profil Lulusan",
+            "pls" => Profil_Lulusan::all(),
         ]);
 
-        $date_time = date('Y_m_d_H_i_s');
+        $date_time = date("Y_m_d_H_i_s");
 
-        if ($type === 'pdf') {
+        if ($type === "pdf") {
             $dompdf = new Dompdf();
             $dompdf->loadHtml($view);
-            $dompdf->setPaper('A4', 'landscape');
+            $dompdf->setPaper("A4", "landscape");
 
             $dompdf->render();
 
             $filename = "Tabel Profil Lulusan_" . $date_time . ".pdf";
 
             return Response::make($dompdf->output(), 200, [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'inline; filename=' . $filename
+                "Content-Type" => "application/pdf",
+                "Content-Disposition" => "inline; filename=" . $filename,
             ]);
         } else {
-            $filename = "Tabel Profil Lulusan_" . $date_time . '.xlsx';
+            $filename = "Tabel Profil Lulusan_" . $date_time . ".xlsx";
             return Excel::download(new ProfilLulusanExport(), $filename);
         }
     }
 
     public function addProfilLulusan()
     {
-        return view('content.profil_lulusan.add_pl', ['title' => 'Tambah Profil Lulusan']);
+        return view("content.profil_lulusan.add_pl", [
+            "title" => "Tambah Profil Lulusan",
+        ]);
     }
 
     public function storeProfilLulusan(Request $request)
     {
         // dd($request->all());
         $data = $request->validate([
-            'kodePL' => 'required|unique:profil_lulusan,kodePL|max:10',
-            'deskripsiPL' => 'required',
-            'namaPL' => 'required',
+            "kodePL" => "required|unique:profil_lulusan,kodePL|max:10",
+            "deskripsiPL" => "required",
+            "namaPL" => "required",
         ]);
 
         // dd($data);
 
         Profil_Lulusan::create($data);
 
-        return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil ditambahkan');
+        return redirect()
+            ->route("kurikulum.data.profil_lulusan")
+            ->with("success", "Profil Lulusan berhasil ditambahkan");
     }
 
     public function edit($pl)
     {
-        $pl = Profil_Lulusan::where('kodePL', $pl)->first();
+        $pl = Profil_Lulusan::where("kodePL", $pl)->first();
 
-        return view('content.profil_lulusan.edit_pl', ['title' => 'Edit Profil Lulusan', 'pl' => $pl]);
+        return view("content.profil_lulusan.edit_pl", [
+            "title" => "Edit Profil Lulusan",
+            "pl" => $pl,
+        ]);
     }
 
     public function update($pl, Request $request)
     {
         if ($request->kodePL == $pl) {
             $validator = Validator::make($request->all(), [
-                'kodePL' => 'required',
-                'deskripsiPL' => 'required',
+                "kodePL" => "required",
+                "deskripsiPL" => "required",
             ]);
         } else {
             $validator = Validator::make($request->all(), [
-                'kodePL' => 'required|unique:profil_lulusan,kodePL',
-                'deskripsiPL' => 'required',
+                "kodePL" => "required|unique:profil_lulusan,kodePL",
+                "deskripsiPL" => "required",
             ]);
         }
         if ($validator->fails()) {
@@ -96,30 +106,43 @@ class ProfilLulusanController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        if (Profil_Lulusan::where('kodePL', $request->kodePL)->exists() && $request->kodePL != $pl) {
-            return redirect()->back()->with('error', 'Kode Profil Lulusan sudah ada');
+        if (
+            Profil_Lulusan::where("kodePL", $request->kodePL)->exists() &&
+            $request->kodePL != $pl
+        ) {
+            return redirect()
+                ->back()
+                ->with("error", "Kode Profil Lulusan sudah ada");
         }
 
-        $pl = Profil_Lulusan::where('kodePL', $pl)->first();
+        $pl = Profil_Lulusan::where("kodePL", $pl)->first();
         $pl->update([
-            'kodePL' => $request->kodePL,
-            'deskripsiPL' => $request->deskripsiPL,
+            "kodePL" => $request->kodePL,
+            "deskripsiPL" => $request->deskripsiPL,
         ]);
 
         $pl->save();
 
-        return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil diubah');
+        return redirect()
+            ->route("kurikulum.data.profil_lulusan")
+            ->with("success", "Profil Lulusan berhasil diubah");
     }
 
     public function delete($pl)
     {
-        if (Detail_PL_CPLProdi::where('kodePL', $pl)->exists()) {
-            return redirect()->route('kurikulum.data.profil_lulusan')->with('error', 'Profil Lulusan masih berelasi dengan CPL Prodi.');
-        }else{
-            $pl = Profil_Lulusan::where('kodePL', $pl)->first();
+        if (Detail_PL_CPLProdi::where("kodePL", $pl)->exists()) {
+            return redirect()
+                ->route("kurikulum.data.profil_lulusan")
+                ->with(
+                    "error",
+                    "Profil Lulusan masih berelasi dengan CPL Prodi."
+                );
+        } else {
+            $pl = Profil_Lulusan::where("kodePL", $pl)->first();
             $pl->delete();
-            return redirect()->route('kurikulum.data.profil_lulusan')->with('success', 'Profil Lulusan berhasil dihapus');
+            return redirect()
+                ->route("kurikulum.data.profil_lulusan")
+                ->with("success", "Profil Lulusan berhasil dihapus");
         }
-
     }
 }

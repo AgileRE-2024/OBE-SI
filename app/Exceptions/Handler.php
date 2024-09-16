@@ -7,14 +7,6 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
-    public function report(Throwable $exception) // <-- USE Throwable HERE
-    {
-        parent::report($exception);
-    }
-    public function render($request, Throwable $exception) // AND HERE
-    {
-        return parent::render($request, $exception);
-    }
     /**
      * A list of exception types with their corresponding custom log levels.
      *
@@ -39,9 +31,9 @@ class Handler extends ExceptionHandler
      * @var array<int, string>
      */
     protected $dontFlash = [
-        'current_password',
-        'password',
-        'password_confirmation',
+        "current_password",
+        "password",
+        "password_confirmation",
     ];
 
     /**
@@ -51,7 +43,7 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
+        $this->reportable(function () {
             //
         });
     }

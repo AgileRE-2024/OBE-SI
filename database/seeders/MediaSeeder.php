@@ -16,28 +16,29 @@ class MediaSeeder extends Seeder
     public function run()
     {
         Media::create([
-            'id_media' => '1',
-            'nama_media' => 'LMS',
-        ],);
+            "id_media" => "1",
+            "nama_media" => "LMS",
+        ]);
 
         Media::create([
-            'id_media' => '2',
-            'nama_media' => 'PPT',
-        ],);
+            "id_media" => "2",
+            "nama_media" => "PPT",
+        ]);
 
         Media::create([
-            'id_media' => '3',
-            'nama_media' => 'Kasus',
-        ],);
+            "id_media" => "3",
+            "nama_media" => "Kasus",
+        ]);
 
         Media::create([
-            'id_media' => '4',
-            'nama_media' => 'LCD, demo komputer, white board',
-        ],);
+            "id_media" => "4",
+            "nama_media" => "LCD, demo komputer, white board",
+        ]);
 
         Media::create([
-            'id_media' => '5',
-            'nama_media' => 'Whiteboard, Perangkat LCD, Software, Komputer/Laptop, dan E-learning',
-        ],);
+            "id_media" => "5",
+            "nama_media" =>
+                "Whiteboard, Perangkat LCD, Software, Komputer/Laptop, dan E-learning",
+        ]);
     }
 }
