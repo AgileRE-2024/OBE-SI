@@ -1,5 +1,15 @@
 # OBE-SI: EduHigh
 
+## Kelompok 2 PPL PRAK I3
+
+| Nama                      | NIM       |
+| ------------------------- | --------- |
+| Ali Ahmad Fahrezy         | 187221042 |
+| Ardisa Vian Rishadin      | 187221066 |
+| Mohammad Afrizal Haykal K | 187221003 |
+| Nabila Azra Reva          | 187221028 |
+| Rizal Ahmad Doni          | 187221096 |
+
 ## Project Kuliah Pembangunan Perangkat Lunak 2024
 
 ### Penjelasan umum deskripsi project
