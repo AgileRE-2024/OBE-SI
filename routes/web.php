@@ -421,27 +421,27 @@ Route::prefix("/dashboard/kurikulum")
             Route::group(
                 ["middleware" => "role:kurikulum,dosen_kurikulum"],
                 function () {
-                    Route::get('learning_outcome', [
+                    Route::get('/learning_outcome', [
                         LearningOutcomeController::class,
                         'index'
                     ])->name('learning_outcome');
                     Route::get('/learning_outcome/add', [
                         LearningOutcomeController::class,
-                        'addLevelLO'
-                    ])->name('add_learning_outcome');
-                    Route::post('learning_outcome/store', [
+                        'addLevelLO'                
+                        ])->name('add_learning_outcome');
+                    Route::post('/learning_outcome/store', [
                         LearningOutcomeController::class,
                         'storeLevelLO'
                     ])->name('store_learning_outcome');
-                    Route::get('learning_outcome/edit/{kode}', [
+                    Route::get('/learning_outcome/edit/{id}', [
                         LearningOutcomeController::class,
                         'edit'
                     ])->name('edit_learning_outcome');
-                    Route::post('learning_outcome/update/{kode}', [
+                    Route::post('/learning_outcome/update/{id}', [
                         LearningOutcomeController::class,
                         'update'
                     ])->name('update_learning_outcome');
-                    Route::delete('learning_outcome/delete/{kode}', [
+                    Route::delete('/learning_outcome/delete/{id}', [
                         LearningOutcomeController::class,
                         'delete'
                     ])->name('delete_learning_outcome');

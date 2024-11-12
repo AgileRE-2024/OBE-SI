@@ -425,12 +425,12 @@ CREATE TABLE IF NOT EXISTS "minggu_rps"(
   );
 
   CREATE TABLE IF NOT EXISTS "level_LO" (
-    "kode" varchar not null,
+    "id" integer not null primary key autoincrement not null,
+    "level" varchar not null,
     "cognitive_level" varchar not null,
     "created_at" datetime,
     "updated_at" datetime,
     "kata_kerja" varchar not null,
-    primary key ("kode")
   );
 
 

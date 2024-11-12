@@ -11,14 +11,8 @@ class Learning_Outcome extends Model
 
     protected $table = 'level_LO';
 
-    protected $primaryKey = 'kode';
-
-    public $incrementing = false;
-
-    protected $keyType = 'integer';
-
     protected $fillable = [
-        'kode',
+        'level',
         'cognitive_level',
         'kata_kerja',
         'created_at',

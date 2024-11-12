@@ -23,7 +23,7 @@
             <thead class="table" style="background-color: lightgray">
                 <tr>
                     <th class="align-middle" scope="col" style="width: 5%">No</th>
-                    <th class="align-middle" scope="col" style="width: 10%">Kode</th>
+                    <th class="align-middle" scope="col" style="width: 10%">Level LO</th>
                     <th class="align-middle" scope="col" style="width: 20%">Cognitive Level</th>
                     <th class="align-middle" scope="col" style="width: 20%">Kata Kerja</th>
                     @if (auth()->user()->role == 1 || auth()->user()->role == 3)
@@ -36,15 +36,15 @@
                 @foreach ($levels as $level)
                 <tr>
                     <td scope="row">{{ $loop->iteration }}</td>
-                    <td scope="row">{{ $level->kode }}</td>
+                    <td scope="row">{{ $level->level }}</td>
                     <td scope="row">{{ $level->cognitive_level }}</td>
                     <td scope="row">{{ $level->kata_kerja }}</td>
                     @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                     <td scope="row">
-                        <a class="btn btn-primary" href="{{ route('kurikulum.data.edit_learning_outcome', $level->kode) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('kurikulum.data.edit_learning_outcome', $level->id) }}">Edit</a>
                     </td>
                     <td scope="row">
-                        <form action="{{ route('kurikulum.data.delete_learning_outcome', $level->kode) }}" method="POST">
+                        <form action="{{ route('kurikulum.data.delete_learning_outcome', $level->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

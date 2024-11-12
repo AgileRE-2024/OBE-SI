@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Learning_Outcome;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 
 class LearningOutcomeController extends Controller
@@ -28,40 +27,44 @@ class LearningOutcomeController extends Controller
 
     public function storeLevelLO(Request $request)
     {
-        $data = $request->validate([
-            "kode" => "required|unique:level_LO,kode|integer",
+        $request->validate([
+            "level" => "required",
             "cognitive_level" => "required",
             "kata_kerja" => "required",
         ]);
 
-        Learning_Outcome::create($data);
+        Learning_Outcome::create([
+            "level" => $request->level,
+            "cognitive_level" => $request->cognitive_level,
+            "kata_kerja" => $request->kata_kerja,
+        ]);
 
         return redirect()
-            ->route("kurikulum.data.learning_outcome")
-            ->with("success", "Level LO berhasil ditambahkan");
+            ->route('kurikulum.data.learning_outcome')
+            ->with('success', 'Learning Outcome berhasil ditambahkan.');
     }
 
-    public function edit($kode)
+    public function edit($id)
     {
-        $level = Learning_Outcome::where("kode", $kode)->first();
+        $level = Learning_Outcome::findOrFail($id);
 
-        return view("content.learning_outcome.edit_level", [
+        return view("content.learning_outcome.edit_learning_outcome", [
             "title" => "Edit Level LO",
             "level" => $level,
         ]);
     }
 
-    public function update($kode, Request $request)
+    public function update($id, Request $request)
     {
-        if ($request->kode == $kode) {
+        if ($request->level == $id) {
             $validator = Validator::make($request->all(), [
-                "kode" => "required|integer",
+                "level" => "required",
                 "cognitive_level" => "required",
                 "kata_kerja" => "required",
             ]);
         } else {
             $validator = Validator::make($request->all(), [
-                "kode" => "required|unique:level_LO,kode|integer",
+                "level" => "required",
                 "cognitive_level" => "required",
                 "kata_kerja" => "required",
             ]);
@@ -70,26 +73,25 @@ class LearningOutcomeController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        $level = Learning_Outcome::where("kode", $kode)->first();
+        $level = Learning_Outcome::findOrFail($id);
         $level->update([
-            "kode" => $request->kode,
+            "level" => $request->level,
             "cognitive_level" => $request->cognitive_level,
             "kata_kerja" => $request->kata_kerja,
         ]);
 
-        $level->save();
-
         return redirect()
             ->route("kurikulum.data.learning_outcome")
-            ->with("success", "Level LO berhasil diubah");
+            ->with("success", "Learning Outcome berhasil diperbarui.");
     }
 
-    public function delete($kode)
+    public function delete($id)
     {
-        $level = Learning_Outcome::where("kode", $kode)->first();
+        $level = Learning_Outcome::findOrFail($id);
         $level->delete();
+
         return redirect()
             ->route("kurikulum.data.learning_outcome")
-            ->with("success", "Level LO berhasil dihapus");
+            ->with("success", "Learning Outcome berhasil dihapus.");
     }
 }

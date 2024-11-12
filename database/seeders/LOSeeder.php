@@ -14,14 +14,14 @@ class LOSeeder extends Seeder
     {
         $levels = [
             [
-                'kode' => 1,
+                'level' => 'LO-2',
                 'cognitive_level' => 'Remember',
                 'kata_kerja' => 'Mengingat',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'kode' => 2,
+                'level' => 'LO-2',
                 'cognitive_level' => 'Understand',
                 'kata_kerja' => 'Memahami',
                 'created_at' => now(),
