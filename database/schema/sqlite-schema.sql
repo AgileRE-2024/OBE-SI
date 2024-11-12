@@ -421,8 +421,18 @@ CREATE TABLE IF NOT EXISTS "minggu_rps"(
   foreign key("id_bentuk") references "bentuks"("id_bentuk") on delete restrict on update no action,
   foreign key("id_media") references "media"("id_media") on delete restrict on update no action,
   foreign key("kodeSubCPMK") references "subcpmk"("kodeSubCPMK") on delete restrict on update no action,
-  primary key("kodeMingguRPS")
-);
+
+  );
+
+  CREATE TABLE IF NOT EXISTS "level_LO" (
+    "kode" varchar not null,
+    "cognitive_level" varchar not null,
+    "created_at" datetime,
+    "updated_at" datetime,
+    "kata_kerja" varchar not null,
+    primary key ("kode")
+  );
+
 
 INSERT INTO migrations VALUES(1,'2012_04_28_150137_create_Prodi_table',1);
 INSERT INTO migrations VALUES(2,'2014_10_12_000000_create_users_table',1);
