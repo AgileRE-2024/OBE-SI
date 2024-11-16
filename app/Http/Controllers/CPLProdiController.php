@@ -71,6 +71,7 @@ class CPLProdiController extends Controller
     {
         return view("content.cpl_prodi.add_cpl_prodi", [
             "title" => "Tambah CPL Prodi",
+            "levels" => ["B-I Mengingat", "B-II Memahami", "B-III Menerapkan", "B-IV Menganalisis", "B-V Mengevaluasi", "B-VI Menciptakan"],
         ]);
     }
 
@@ -80,12 +81,14 @@ class CPLProdiController extends Controller
             "kodeCPL" => "required|unique:cpl_prodi,kodeCPL",
             "deskripsiCPL" => "required",
             "referensiCPL" => "required",
+            "cpl_level" => "required",
         ]);
 
         CPL_Prodi::create([
             "kodeCPL" => $request->kodeCPL,
             "deskripsiCPL" => $request->deskripsiCPL,
             "referensiCPL" => $request->referensiCPL,
+            "cpl_level" => $request->cplLevel,
         ]);
 
         return redirect()

@@ -12,6 +12,7 @@ class CPL_Prodi extends Model
     protected $table = "cpl_prodi";
     protected $fillable = [
         "kodeCPL",
+        "levelCPL",
         "deskripsiCPL",
         "referensiCPL",
         "deleted_at",
