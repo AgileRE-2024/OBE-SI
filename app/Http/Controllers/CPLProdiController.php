@@ -9,6 +9,7 @@ use App\Models\Detail_CPLProdi_BK;
 use App\Models\Detail_PL_CPLProdi;
 use App\Models\Detail_SN_CPLProdi;
 use App\Models\CPMK;
+use App\Models\Learning_Outcomes;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
@@ -60,21 +61,38 @@ class CPLProdiController extends Controller
 
     public function edit($cpl)
     {
+        // Fetch levels and their verbs from the database
+        $learningOutcomes = Learning_Outcomes::all();
+
+        // Prepare the levels and verbs for the frontend
+        $levels = $learningOutcomes->pluck('level_lo')->unique();
+
         $cpl = CPL_Prodi::where("kodeCPL", $cpl)->first();
         return view("content.cpl_prodi.edit_cpl_prodi", [
             "title" => "CPL Prodi",
             "cpl" => $cpl,
-            "levels" => ["B-I Mengingat", "B-II Memahami", "B-III Menerapkan", "B-IV Menganalisis", "B-V Mengevaluasi", "B-VI Menciptakan"],
+            "levels" => $levels,
         ]);
     }
 
     public function addCPLProdi()
     {
+        // Fetch levels and their verbs from the database
+        $learningOutcomes = Learning_Outcomes::all();
+
+        // Prepare the levels and verbs for the frontend
+        $levels = $learningOutcomes->pluck('level_lo')->unique();
+        $verbsByLevel = $learningOutcomes->groupBy('level_lo')->map(function ($items) {
+            return $items->pluck('kata_kerja')->toArray();
+        });
+
         return view("content.cpl_prodi.add_cpl_prodi", [
             "title" => "Tambah CPL Prodi",
-            "levels" => ["B-I Mengingat", "B-II Memahami", "B-III Menerapkan", "B-IV Menganalisis", "B-V Mengevaluasi", "B-VI Menciptakan"],
+            "levels" => $levels,
+            "verbsByLevel" => $verbsByLevel,
         ]);
     }
+
 
     public function storeCPLProdi(Request $request)
     {

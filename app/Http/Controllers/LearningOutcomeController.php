@@ -20,9 +20,16 @@ class LearningOutcomeController extends Controller
 
     public function addLevelLO()
     {
+
+        // Fetch levels and their verbs from the database
+        $learningOutcomes = Learning_Outcomes::all();
+
+        // Prepare the levels and verbs for the frontend
+        $levels = $learningOutcomes->pluck('level_lo')->unique();
+
         return view("content.learning_outcome.add_learning_outcome", [
             "title" => "Tambah Level LO",
-            "levels" => ["B-I Mengingat", "B-II Memahami", "B-III Menerapkan", "B-IV Menganalisis", "B-V Mengevaluasi", "B-VI Menciptakan"],
+            "levels" => $levels,
         ]);
     }
 
@@ -47,9 +54,15 @@ class LearningOutcomeController extends Controller
     {
         $old_level = Learning_Outcomes::findOrFail($id);
 
+        // Fetch levels and their verbs from the database
+        $learningOutcomes = Learning_Outcomes::all();
+
+        // Prepare the levels and verbs for the frontend
+        $levels = $learningOutcomes->pluck('level_lo')->unique();
+
         return view("content.learning_outcome.edit_learning_outcome", [
             "title" => "Edit Level LO",
-            "levels" => ["B-I Mengingat", "B-II Memahami", "B-III Menerapkan", "B-IV Menganalisis", "B-V Mengevaluasi", "B-VI Menciptakan"],
+            "levels" => $levels,
             "old_level" => $old_level,
         ]);
     }

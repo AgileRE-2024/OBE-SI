@@ -28,7 +28,7 @@
                         <select name="cplLevel" class="form-control" id="cplLevel" onchange="toggleDescription()">
                             <option value="" disabled selected>Pilih Level</option>
                             @foreach ($levels as $level)
-                                <option value="{{ $level }}">{{ $level }}</option>
+                                <option value="{{ old('cplLevel') ? old('cplLevel') : $level->level_lo }}">{{ $level }}</option>
                             @endforeach
                         </select>
                     </div>

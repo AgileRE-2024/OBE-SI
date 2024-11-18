@@ -13,7 +13,7 @@
                     <select class="form-control" id="level_lo" name="level_lo" required>
                         @foreach ($levels as $level)
                             @if ($old_level->level_lo == $level)
-                                <option selected value="{{ $level }}">{{ $level }}</option>
+                                <option selected value="{{ old('level_lo') ? old('level_lo') : $level  }}">{{ $level }}</option>
                             @else
                                 <option value="{{ $level }}">{{ $level }}</option>
                             @endif
@@ -22,9 +22,9 @@
                 </div>
                 <div class="form-group">
                     <label for="kata_kerja">Kata Kerja</label>
-                    <input type="text" class="form-control" id="kata_kerja" name="kata_kerja" value="{{ $old_level->kata_kerja }}" required>
+                    <input type="text" class="form-control" id="kata_kerja" name="kata_kerja" value="{{ old('kata_kerja') ? old('kata_kerja') : $old_level->kata_kerja }}" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn btn-primary">Edit</button>
             </form>
         </div>
     </div>

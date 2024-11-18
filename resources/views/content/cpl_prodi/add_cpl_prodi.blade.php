@@ -43,7 +43,7 @@
 
                     <div class="form-group pt-4">
                         <button type="submit" class="btn btn-dark btn-sm" id="submitButton" disabled><i
-                                class="fa fa-fw fa-plus-circle"></i> Tambah CPL</button>
+                                class="fa fa-fw fa-plus-circle"></i>Tambah CPL</button>
                     </div>
                 </form>
             </div>
@@ -51,14 +51,7 @@
     </div>
 
     <script>
-        const verbsByLevel = {
-            "B-I Mengingat": ["pilih", "temukan", "tunjukkan", "ingat", "sebutkan", "apa", "siapa", "milih"],
-            "B-II Memahami": ["klasifikasi", "bandingkan", "demonstrasi", "uraikan", "terangkan", "ringkas"],
-            "B-III Menerapkan": ["terapkan", "bangun", "pilih", "buat", "rencanakan", "gunakan"],
-            "B-IV Menganalisis": ["analisis", "klasifikasikan", "identifikasi", "teliti", "uraikan", "struktur"],
-            "B-V Mengevaluasi": ["nilai", "evaluasi", "tentukan", "uji", "bandingkan", "kritik"],
-            "B-VI Menciptakan": ["cipta", "desain", "rumuskan", "kembangkan", "susun", "prediksi"]
-        };
+        const verbsByLevel = @json($verbsByLevel);
 
         function updateInput(input) {
             input.value = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
@@ -89,7 +82,7 @@
 
             if (!level) return;
 
-            const validVerbs = verbsByLevel[level];
+            const validVerbs = verbsByLevel[level] || [];
             const hasValidVerb = validVerbs.some(verb => description.includes(verb));
 
             if (hasValidVerb) {
@@ -101,4 +94,5 @@
             }
         }
     </script>
+
 @endsection
