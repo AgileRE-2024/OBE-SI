@@ -57,6 +57,15 @@
                             </a>
                             <ul class="nav nav-treeview pl-3">
                                 <li class="nav-item">
+                                    <a href="{{ route('kurikulum.data.learning_outcome') }}" class="nav-link"
+                                        @if (URL::current() === route('kurikulum.data.learning_outcome')) style="background-color: #989898; color: black;" @endif>
+                                        <p style="font-size: 14px">
+                                            <i class="bi bi-caret-right-fill"></i>
+                                            LO
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{ route('kurikulum.data.profil_lulusan') }}" class="nav-link"
                                         @if (URL::current() === route('kurikulum.data.profil_lulusan')) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
