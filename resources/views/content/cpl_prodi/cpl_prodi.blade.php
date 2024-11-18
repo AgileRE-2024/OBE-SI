@@ -33,6 +33,7 @@
                     <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode Capaian Pembelajaran
                     </th>
+                    <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Level LO</th> <!-- Kolom Level LO ditambahkan -->
                     <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Referensi Capaian
                         Pembelajaran</th>
                     <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Capaian
@@ -51,6 +52,9 @@
                     </td>
                     <td scope="row">
                         {{ $cpl->kodeCPL }}
+                    </td>
+                    <td scope="row">
+                    {{ $cpl->levelCPL }} <!-- Menampilkan Level LO -->
                     </td>
                     <td scope="row" style="word-break: break-word;
                             max-width: 75px;">
