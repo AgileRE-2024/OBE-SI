@@ -1,9 +1,9 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4 d-flex"
-    style="background-color: #1F2F4D; position: fixed; justify-content: space-between; flex-direction: column;">
+    style="background-color: #1F2F4D; position: fixed; justify-content: space-between; flex-direction: column; height: 100vh;">
 
     <!-- Sidebar -->
-    <div class="sidebar pt-2">
+    <div class="sidebar pt-2" style="overflow-y: auto;">
         <!-- Sidebar user panel (optional) -->
         <div class="mt-2 mb-2 pt-2 pb-2">
             <div class="text-center" style="color: white">
