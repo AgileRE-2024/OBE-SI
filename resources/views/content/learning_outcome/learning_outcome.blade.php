@@ -24,7 +24,6 @@
                 <tr>
                     <th class="align-middle" scope="col" style="width: 5%">No</th>
                     <th class="align-middle" scope="col" style="width: 10%">Level LO</th>
-                    <th class="align-middle" scope="col" style="width: 20%">Cognitive Level</th>
                     <th class="align-middle" scope="col" style="width: 20%">Kata Kerja</th>
                     @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                     <th class="align-middle" scope="col" style="width: 10%">Edit</th>
@@ -36,8 +35,7 @@
                 @foreach ($levels as $level)
                 <tr>
                     <td scope="row">{{ $loop->iteration }}</td>
-                    <td scope="row">{{ $level->level }}</td>
-                    <td scope="row">{{ $level->cognitive_level }}</td>
+                    <td scope="row">{{ $level->level_lo }}</td>
                     <td scope="row">{{ $level->kata_kerja }}</td>
                     @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                     <td scope="row">

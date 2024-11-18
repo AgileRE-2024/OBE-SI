@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Learning_Outcome extends Model
+class Learning_Outcomes extends Model
 {
     use HasFactory;
-
-    protected $table = 'level_LO';
+    protected $table = 'learning_outcomes';
 
     protected $fillable = [
-        'level',
-        'cognitive_level',
-        'kata_kerja',
-        'created_at',
-        'updated_at',
+        'level_lo',
+        'kata_kerja'
     ];
 }

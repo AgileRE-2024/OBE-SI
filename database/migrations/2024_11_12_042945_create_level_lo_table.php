@@ -11,12 +11,11 @@ class CreateLevelLoTable extends Migration
      */
     public function up(): void
     {
-        Schema::create('level_LO', function (Blueprint $table) {
+        Schema::create('learning_outcomes', function (Blueprint $table) {
             $table->id();
-            $table->string('level');
-            $table->string('cognitive_level');
-            $table->timestamps();
+            $table->enum('level_lo', ["B-I Mengingat", "B-II Memahami", "B-III Menerapkan", "B-IV Menganalisis", "B-V Mengevaluasi", "B-VI Menciptakan"]);
             $table->string('kata_kerja');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +24,6 @@ class CreateLevelLoTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('level_LO');
+        Schema::dropIfExists('learning_outcomes');
     }
 }
