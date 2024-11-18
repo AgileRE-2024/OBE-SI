@@ -64,6 +64,7 @@ class CPLProdiController extends Controller
         return view("content.cpl_prodi.edit_cpl_prodi", [
             "title" => "CPL Prodi",
             "cpl" => $cpl,
+            "levels" => ["B-I Mengingat", "B-II Memahami", "B-III Menerapkan", "B-IV Menganalisis", "B-V Mengevaluasi", "B-VI Menciptakan"],
         ]);
     }
 

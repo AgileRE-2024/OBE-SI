@@ -78,6 +78,7 @@
             }
         }
 
+        document.getElementById('cplLevel').addEventListener('change', validateDescription);
         document.getElementById('deskripsiCPL').addEventListener('input', validateDescription);
 
         function validateDescription() {
