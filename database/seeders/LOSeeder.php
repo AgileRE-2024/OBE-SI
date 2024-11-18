@@ -14,7 +14,7 @@ class LOSeeder extends Seeder
     {
 
         $levels = [
-            ['level_lo' => 'B-I Mengingat', 'kata_kerja' => 'pilih', ''],
+            ['level_lo' => 'B-I Mengingat', 'kata_kerja' => 'pilih'],
             ['level_lo' => 'B-I Mengingat', 'kata_kerja' => 'temukan'],
             ['level_lo' => 'B-I Mengingat', 'kata_kerja' => 'tunjukkan'],
             ['level_lo' => 'B-I Mengingat', 'kata_kerja' => 'ingat'],

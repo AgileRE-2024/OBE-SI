@@ -6,7 +6,7 @@
     <div class="card border" style="background-color: white">
         <div class="card-body" style="font-weight:600;">
             <h3>Edit Kata Kerja Level LO</h3>
-            <form action="{{ route('kurikulum.data.store_learning_outcome') }}" method="POST">
+            <form action="{{ route('kurikulum.data.update_learning_outcome', $old_level->id) }}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="level_lo">Level LO</label>
@@ -22,7 +22,10 @@
                 </div>
                 <div class="form-group">
                     <label for="kata_kerja">Kata Kerja</label>
-                    <input type="text" class="form-control" id="kata_kerja" name="kata_kerja" value="{{ old('kata_kerja') ? old('kata_kerja') : $old_level->kata_kerja }}" required>
+                    <input type="text" name="kata_kerja" class="form-control" value="{{ old('kata_kerja', $level->kata_kerja ?? '') }}">
+                    @error('kata_kerja')
+                        <p style="color: #BF2C45">{{ $message }}</p>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Edit</button>
             </form>

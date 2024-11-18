@@ -40,6 +40,19 @@ class LearningOutcomeController extends Controller
             "kata_kerja" => "required",
         ]);
 
+        // Check if the combination of level_lo and kata_kerja already exists
+        $exists = Learning_Outcomes::where('level_lo', $request->level_lo)
+            ->where('kata_kerja', $request->kata_kerja)
+            ->exists();
+
+        if ($exists) {
+            return redirect()
+                ->back()
+                ->withErrors(['kata_kerja' => 'Kata kerja sudah ada untuk level LO ini.'])
+                ->withInput();
+        }
+
+        // Create a new Learning Outcome
         Learning_Outcomes::create([
             "level_lo" => $request->level_lo,
             "kata_kerja" => $request->kata_kerja,
@@ -49,6 +62,40 @@ class LearningOutcomeController extends Controller
             ->route('kurikulum.data.learning_outcome')
             ->with('success', 'Learning Outcome berhasil ditambahkan.');
     }
+
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            "level_lo" => "required",
+            "kata_kerja" => "required",
+        ]);
+
+        // Check if the combination of level_lo and kata_kerja already exists (excluding the current record)
+        $exists = Learning_Outcomes::where('level_lo', $request->level_lo)
+            ->where('kata_kerja', $request->kata_kerja)
+            ->where('id', '!=', $id) // Exclude the current record
+            ->exists();
+
+        if ($exists) {
+            return redirect()
+                ->back()
+                ->withErrors(['kata_kerja' => 'Kata kerja sudah ada untuk level LO ini.'])
+                ->withInput();
+        }
+
+        // Update the record
+        $level = Learning_Outcomes::findOrFail($id);
+        $level->update([
+            "level_lo" => $request->level_lo,
+            "kata_kerja" => $request->kata_kerja,
+        ]);
+
+        return redirect()
+            ->route('kurikulum.data.learning_outcome')
+            ->with('success', 'Learning Outcome berhasil diubah.');
+    }
+
 
     public function edit($id)
     {

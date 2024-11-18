@@ -19,7 +19,10 @@
                 </div>
                 <div class="form-group">
                     <label for="kata_kerja">Kata Kerja</label>
-                    <input type="text" class="form-control" id="kata_kerja" name="kata_kerja" required>
+                    <input type="text" name="kata_kerja" class="form-control">
+                    @error('kata_kerja')
+                        <p style="color: #BF2C45">{{ $message }}</p>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah</button>
             </form>
