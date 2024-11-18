@@ -4,8 +4,8 @@
 <div class="content px-4">
     <div class="card border" style="background-color: white">
         <div class="card-body" style="font-weight:600;">
-            <h3>Daftar RPS</h3>
-            <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Daftar RPS tahun {{$newestYear}}<b
+            <h3>Daftar RPP</h3>
+            <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Daftar RPP tahun {{$newestYear}}<b
                     style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
         </div>
     </div>
@@ -23,7 +23,7 @@
 <div class="d-flex justify-content-start">
     <div class="pr-3">
         <a class="btn btn-success" href="{{ route('rps_create') }}"><i class="bi bi-plus-square mr-2">
-            </i>Buat RPS</a>
+            </i>Buat RPP</a>
     </div>
     <div class="pr-3">
         <a class="btn btn-outline-danger" href="/dashboard/rps/export/pdf/all"><i class="bi bi-file-earmark-pdf-fill">
@@ -38,7 +38,7 @@
     <table class="table table-bordered" style="text-align: center">
         <thead style="background-color: lightgray">
             <tr>
-                <th class="align-middle" rowspan="2" style="width: 5%">Kode RPS</th>
+                <th class="align-middle" rowspan="2" style="width: 5%">Kode RPP</th>
                 <th class="align-middle" rowspan="2" style="width: 15%">Mata Kuliah</th>
                 <th class="align-middle" rowspan="2" style="width: 10%">Tahun</th>
                 <th class="align-middle" rowspan="2" style="width: 10%">Semester</th>

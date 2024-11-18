@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RPS</title>
+    <title>RPP</title>
     <style>
         /* Default style for portrait mode */
         <blade media|%20print%20%7B%0D><blade page|%20%7B%0D>size: landscape;
@@ -51,7 +51,7 @@
                     width="75" height="75"><br>Universitas Airlangga</th>
             </td>
             <td class="td-rps" colspan="2">
-                Rencana Pembelajaran Semester
+                Rencana Program Pembelajaran (RPP)
             </td>
             <td class="td-rps">
                 Disiapkan oleh
@@ -222,26 +222,25 @@
             </td>
         </tr>
     </table>
-    <h3>
+<h3>
         B. PROGRAM PEMBELAJARAN
     </h3>
     <table class="table table-bordered" style="text-align: center;">
-        <tr style="height : 65px; background-color: lightblue">
-            <th class="table-header" style="width : 5%">Minggu ke-</th>
-            <th class="table-header" style="width : 15%">
-                Kemampuan Akhir yang diharapkan di setiap tahapan pembelajaran
-                (Sub-Capaian Mata Kuliah)
-                (C, A, P)</th>
-            <th class="table-header" style="width : 13%">Pokok Bahasan</th>
-            <th class="table-header" style="width : 13%">Bentuk dan Metode Pembelajaran</th>
-            <th class="table-header" style="width : 7%">Media</th>
-            <th class="table-header" style="width : 7%">Waktu</th>
-            <th class="table-header" style="width : 10%">Pengalaman belajar mahasiswa</th>
-            <!-- <th class="table-header" style="width : 10%">Kriteria Penilaian dan Indikator (hard dan soft skills)</th> -->
-            <th class="table-header" style="width : 15%">Teknik Penilaian</th>
-            <th class="table-header" style="width : 15%">Referensi</th>
-        </tr>
-        <tr style="height : 50px; background-color: lightblue">
+<tr style="height : 50px; background-color: lightblue">
+    <th class="table-header" style="width : 5%">Minggu Ke-</th>
+    <th class="table-header" style="width : 15%">Sub-Capaian Mata Kuliah (SubCPMK)</th>
+    <th class="table-header" style="width : 10%">Bahan Kajian</th>
+    <th class="table-header" style="width : 10%">Bentuk Pembelajaran</th>
+    <th class="table-header" style="width : 10%">Metode Pembelajaran</th>
+    <th class="table-header" style="width : 5%">Kode</th>
+    <th class="table-header" style="width : 10%">Media</th>
+    <th class="table-header" style="width : 5%">Waktu (menit)</th>
+    <th class="table-header" style="width : 10%">Pengalaman belajar mahasiswa</th>
+    <th class="table-header" style="width : 10%">Kriteria Penilaian dan Indikator (hard dan soft skills)</th>
+    <th class="table-header" style="width : 5%">Bobot Nilai(%)</th>
+    <th class="table-header" style="width : 5%">Ref. (nomor)</th>
+</tr>
+        <tr style="height : 50px; background-color: gray">
             <td class="td-rps">1</td>
             <td class="td-rps">2</td>
             <td class="td-rps">3</td>
@@ -251,6 +250,9 @@
             <td class="td-rps">7</td>
             <td class="td-rps">8</td>
             <td class="td-rps">9</td>
+            <td class="td-rps">10</td>
+            <td class="td-rps">11</td>
+            <td class="td-rps">12</td>
             <!-- <td class="td-rps">10</td> -->
         </tr>
         <?php $i = 0; ?>
@@ -260,17 +262,17 @@
                 <td class="td-rps">{{ $minggu_rps->SubCPMK->deskripsiSubCPMK ?? '' }}
                 </td>
                 <td class="td-rps">{{ $minggu_rps->bahan_kajian ?? '' }}</td>
-                <td class="td-rps">
-                    <div class="col">
-                        @if($minggu_rps->id_bentuk)
-                            <p>Bentuk: {{ $minggu_rps->Bentuk->nama_bentuk }}</p>
-                        @endif
-                        @if($minggu_rps->Metode()->count() > 0)
-                            <p>Metode:</p>
-                            @foreach($minggu_rps->Metode as $item)
-                                <p>{{ $item->nama_metode }}</p>
-                            @endforeach
-                        @endif
+               <td class="td-rps">
+            @if($minggu_rps->id_bentuk)
+                <p>{{ $minggu_rps->Bentuk->nama_bentuk }}</p>
+            @endif
+        </td>
+        <td class="td-rps">
+            @if($minggu_rps->Metode()->count() > 0)
+                @foreach($minggu_rps->Metode as $item)
+                    <p>{{ $item->nama_metode }}</p>
+                @endforeach
+            @endif
                         @if($minggu_rps->penugasan)
                             <p>Penugasan: {{ $minggu_rps->penugasan }}</p>
                         @endif
@@ -341,10 +343,67 @@
     </table>
 
     <h3>
-        C. KRITERIA DAN DESKRIPSI PENILAIAN
+        C. REKAPITULASI METODE PENILAIAN
     </h3>
     <div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
-        <p>1. Kriteria Penilaian</p>
+        <table style="width:100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: lightblue;">
+                <th style="border: 1px solid black; padding: 8px; text-align: center;">No</th>
+                <th style="border: 1px solid black; padding: 8px;">Aktivitas Penilaian</th>
+                <th style="border: 1px solid black; padding: 8px; text-align: center;">Kode</th>
+                <th style="border: 1px solid black; padding: 8px;">Deskripsi Penilaian</th>
+                <th style="border: 1px solid black; padding: 8px;">Bobot</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: yellow
+            ;">                
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">1</td>
+                <td style="border: 1px solid black; padding: 8px;">Kegiatan Partisipatif</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">2</td>
+                <td style="border: 1px solid black; padding: 8px;">Keaktifan mahasiswa dalam diskusi kelompok</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+            <tr style="background-color: yellow;">
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">2</td>
+                <td style="border: 1px solid black; padding: 8px;">Hasil Proyek</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">3</td>
+                <td style="border: 1px solid black; padding: 8px;">Proyek mahasiswa (proyek, kasus, masalah)</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">3</td>
+                <td style="border: 1px solid black; padding: 8px;">Tugas</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">4</td>
+                <td style="border: 1px solid black; padding: 8px;">Tugas mandiri dan kelompok</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+             <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">4</td>
+                <td style="border: 1px solid black; padding: 8px;">QUIZ</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">4</td>
+                <td style="border: 1px solid black; padding: 8px;">Kuis harian di kelas</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">5</td>
+                <td style="border: 1px solid black; padding: 8px;">UTS</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">4</td>
+                <td style="border: 1px solid black; padding: 8px;">Ujian Tengah Semester</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">6</td>
+                <td style="border: 1px solid black; padding: 8px;">UAS</td>
+                <td style="border: 1px solid black; padding: 8px; text-align: center;">4</td>
+                <td style="border: 1px solid black; padding: 8px;">Ujian Akhir Semester</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+        </tbody>
+    </table> 
+
+        {{-- <p>1. Kriteria Penilaian</p>
         <div class="mb-0">Penilaian yang diberikan berdasarkan kriteria berikut:</div>
         <div class="mb-0">Nilai akhir diperoleh melalui rumus</div>
         <p>
@@ -372,21 +431,42 @@
             <p>{!! $rps->detail_penilaian !!}</p>
         @else
             <p>Belum ada data</p>
-        @endif
+        @endif --}}
     </div>
 
     <h3>
         D. DAFTAR REFERENSI
     </h3>
-    <div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
-        <?php $no = 1; ?>
-        @foreach($minggu_pustaka->unique('id_pustaka') as $pustaka)
-            <div>
-                {{ $no }}. {{ $pustaka->pustaka->nama_penulis }}, {{ $pustaka->pustaka->tahun }},
-                {{ $pustaka->pustaka->judul }}, {{ $pustaka->pustaka->penerbit }}
+<div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
+    <table style="width:100%; border-collapse: collapse;">
+               <thead>
+            <tr>
+                <th style="border: 1px solid black; padding: 2px; text-align: center; width: 3%;">No</th>
+                <th style="border: 1px solid black; padding: 8px;">Referensi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">1</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">2</td>
+                <td style="border: 1px solid black; padding: 8px;"></td>
+            </tr>
+            <?php $no = 3; ?>
+            @foreach($minggu_pustaka->unique('id_pustaka') as $pustaka)
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px; white-space: nowrap;">{{ $no }}</td>
+                    <td style="border: 1px solid black; padding: 8px; white-space: nowrap;">
+                        {{ $pustaka->pustaka->nama_penulis }}, {{ $pustaka->pustaka->tahun }},
+                        {{ $pustaka->pustaka->judul }}, {{ $pustaka->pustaka->penerbit }}
+                    </td>
+                </tr>
                 <?php $no += 1; ?>
-            </div>
-        @endforeach
+            @endforeach
+        </tbody>
+    </table>
     </div>
 </body>
 

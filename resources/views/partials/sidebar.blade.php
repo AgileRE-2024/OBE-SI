@@ -296,7 +296,7 @@
                         @if (Request::is('*rps*')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-filetype-pdf"></i>
-                            RPS
+                            RPP
                         </p>
                     </a>
                 </li>
