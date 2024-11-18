@@ -94,26 +94,27 @@ class CPLProdiController extends Controller
     }
 
 
-    public function storeCPLProdi(Request $request)
+   public function storeCPLProdi(Request $request)
     {
         $request->validate([
             "kodeCPL" => "required|unique:cpl_prodi,kodeCPL",
             "deskripsiCPL" => "required",
             "referensiCPL" => "required",
-            "cpl_level" => "required",
+            "levelCPL" => "required", // Validasi untuk levelCPL
         ]);
 
         CPL_Prodi::create([
             "kodeCPL" => $request->kodeCPL,
             "deskripsiCPL" => $request->deskripsiCPL,
             "referensiCPL" => $request->referensiCPL,
-            "cpl_level" => $request->cplLevel,
+            "levelCPL" => $request->levelCPL, // Menyimpan levelCPL yang diterima
         ]);
 
         return redirect()
             ->route("kurikulum.data.cpl_prodi")
             ->with("success", "CPL Prodi berhasil ditambahkan");
     }
+
 
     public function updateCPLProdi(Request $request, $cpl)
     {

@@ -18,14 +18,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="cplLevel">Level</label>
-                        <select name="cplLevel" class="form-control" id="cplLevel" onchange="toggleDescription()">
-                            <option disabled selected>Pilih Level</option>
-                            @foreach ($levels as $level)
-                                <option value="{{ $level }}">{{ $level }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+    <label for="cplLevel">Level</label>
+    <select name="levelCPL" class="form-control" id="cplLevel" onchange="toggleDescription()">
+        <option disabled selected>Pilih Level</option>
+        @foreach ($levels as $level)
+            <option value="{{ $level }}">{{ $level }}</option>
+        @endforeach
+    </select>
+</div>
 
                     <div class="form-group">
                         <label for="deskripsiCPL">Deskripsi CPL Prodi</label>
