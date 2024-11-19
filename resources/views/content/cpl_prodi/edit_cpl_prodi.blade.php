@@ -24,11 +24,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="cplLevel">Level</label>
-                        <select name="cplLevel" class="form-control" id="cplLevel" onchange="toggleDescription()">
+                        <label for="levelCPL">Level</label>
+                        <select name="levelCPL" class="form-control" id="levelCPL" onchange="toggleDescription()">
                             <option value="" disabled selected>Pilih Level</option>
                             @foreach ($levels as $level)
-                                <option value="{{ old('cplLevel') ? old('cplLevel') : $level }}">{{ $level }}
+                                <option value="{{ old('levelCPL') ? old('levelCPL') : $level }}">{{ $level }}
                                 </option>
                             @endforeach
                         </select>
@@ -87,7 +87,7 @@
         }
 
         function toggleDescription() {
-            const dropdown = document.getElementById('cplLevel');
+            const dropdown = document.getElementById('levelCPL');
             const description = document.getElementById('deskripsiCPL');
             const submitButton = document.getElementById('submitButton');
 
@@ -100,11 +100,11 @@
             }
         }
 
-        document.getElementById('cplLevel').addEventListener('change', validateDescription);
+        document.getElementById('levelCPL').addEventListener('change', validateDescription);
         document.getElementById('deskripsiCPL').addEventListener('input', validateDescription);
 
         function validateDescription() {
-            const level = document.getElementById('cplLevel').value;
+            const level = document.getElementById('levelCPL').value;
             const description = document.getElementById('deskripsiCPL').value.toLowerCase();
             const submitButton = document.getElementById('submitButton');
             const errorText = document.getElementById('errorText');
