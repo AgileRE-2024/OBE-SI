@@ -17,12 +17,13 @@
                         @error('kodeCPL')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <select name="kodeCPL" id='kodeCPL' class="form-select">
-                            <option value="" selected disabled onselect="onCplSelected(this)">-- Pilih CPL Prodi --
-                            </option>
+                        <select name="kodeCPL" id="kodeCPL" class="form-select" onchange="onCplSelected(this)">
+                            <option value="" selected disabled>-- Pilih CPL Prodi --</option>
                             @foreach ($cplp as $list_cplp)
-                                <option value="{{ $list_cplp->kodeCPL }}">{{ $list_cplp->kodeCPL }} {{ '-' }}
-                                    {{ Illuminate\Support\Str::limit($list_cplp->deskripsiCPL, 40) }}</option>
+                                <option value="{{ $list_cplp->kodeCPL }}" data-level="{{ $list_cplp->levelCPL }}">
+                                    {{ $list_cplp->kodeCPL }} -
+                                    {{ Illuminate\Support\Str::limit($list_cplp->deskripsiCPL, 40) }}
+                                </option>
                             @endforeach
                         </select>
                     </div>
@@ -37,7 +38,7 @@
                         <input type="text" id="kodeCPMK" name="kodeCPMK" class="form-control"
                             placeholder="Kode CPMK (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
                             maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
-                            oninput="updateInput(this);" value="CPMK">
+                            oninput="updateInput(this);">
                     </div>
 
                     <div class="form-group">
