@@ -35,6 +35,8 @@
                     <th class="align-middle" scope="col" style="width: 10%">Kode Capaian
                         Pembelajaran
                     </th>
+                    <th class="align-middle" scope="col" style="width: 10%">Level LO
+                    </th>
                     <th class="align-middle" scope="col" style="width: 10%">Referensi Capaian
                         Pembelajaran</th>
                     <th class="align-middle" scope="col" style="width: 50%">Deskripsi Capaian
@@ -48,6 +50,8 @@
                             {{ $loop->iteration }}</td>
                         <td scope="row">
                             {{ $cpl->kodeCPL }}</td>
+                        <td scope="row">
+                            {{ $cpl->levelCPL }}</td>    
                         <td scope="row">
                             {{ $cpl->referensiCPL }}
                         </td>
