@@ -51,7 +51,8 @@
                         @foreach ($list_cpl as $cpl)
                             <td @if (
                                 $detail_cpl_bk->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0 ||
-                                    $detail_cpl_bk->where('kodeBK', '===', $bk->kodeBK)->count() == 0) style="background-color: yellow;" @endif>
+                                    $detail_cpl_bk->where('kodeBK', '===', $bk->kodeBK)->count() == 0
+                            ) style="background-color: yellow;" @endif>
                                 <input type="checkbox" style="width: 25px; height: 25px; border: none; outline: none;"
                                     @if ($detail_cpl_bk->where('kodeBK', '===', $bk->kodeBK)->where('kodeCPL', '===', $cpl->kodeCPL)->count()) checked @endif>
                             </td>

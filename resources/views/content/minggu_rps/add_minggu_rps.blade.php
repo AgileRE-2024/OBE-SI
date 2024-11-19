@@ -14,16 +14,16 @@
                         $mk = $mk_list->where('kodeMK', $rps->kodeMK)->first();
                         $list_cpmk = collect();
                         $uniqueIds = [];
-                        
+
                         foreach ($mk->CPMK as $cpmk) {
                             $kodeCPMK = $cpmk->kodeCPMK;
                             $deskripsiCPMK = $cpmk->deskripsiCPMK;
-                        
+
                             if (!in_array($kodeCPMK, $uniqueIds)) {
                                 $uniqueIds[] = $kodeCPMK;
                                 $list_cpmk->push([
                                     'kodeCPMK' => $kodeCPMK,
-                                    'deskripsiCPMK' => $deskripsiCPMK,
+                                    'deskripsiCPMK' => $deskripsiCPMK
                                 ]);
                             }
                         }
@@ -45,16 +45,16 @@
                         $mk = $mk_list->where('kodeMK', $rps->kodeMK)->first();
                         $list_cpmk = collect();
                         $uniqueIds = [];
-                        
+
                         foreach ($mk->CPMK as $cpmk) {
                             $kodeCPMK = $cpmk->kodeCPMK;
                             $deskripsiCPMK = $cpmk->deskripsiCPMK;
-                        
+
                             if (!in_array($kodeCPMK, $uniqueIds)) {
                                 $uniqueIds[] = $kodeCPMK;
                                 $list_cpmk->push([
                                     'kodeCPMK' => $kodeCPMK,
-                                    'deskripsiCPMK' => $deskripsiCPMK,
+                                    'deskripsiCPMK' => $deskripsiCPMK
                                 ]);
                             }
                         }
@@ -100,8 +100,7 @@
                         @error('indikatorMingguRPS')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
-                        <textarea  rows="3" name="indikatorMingguRPS" class="form-control"
-                            placeholder="Indikator Minggu RPS"></textarea>
+                        <textarea rows="3" name="indikatorMingguRPS" class="form-control" placeholder="Indikator Minggu RPS"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Kriteria Minggu RPS</label>
@@ -116,8 +115,7 @@
                         @error('deskripsiPembelajaran')
                             <h6 style="color: #BF2C45">{{ $message }}</h6>
                         @enderror
-                        <textarea  rows="3" name="deskripsiPembelajaran" class="form-control"
-                            placeholder="Deskripsi Pembelajaran"></textarea>
+                        <textarea rows="3" name="deskripsiPembelajaran" class="form-control" placeholder="Deskripsi Pembelajaran"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Materi Pembelajaran</label>
@@ -140,8 +138,8 @@
                     </div>
 
                     <div class="form-group pt-4">
-                        <button type="submit" name="submit" value="submit" id="tambahMinggu" class="btn btn-dark btn-sm"><i
-                                class="fa fa-fw fa-plus-circle"></i>
+                        <button type="submit" name="submit" value="submit" id="tambahMinggu"
+                            class="btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i>
                             Tambah Minggu RPS</button>
                     </div>
                 </form>

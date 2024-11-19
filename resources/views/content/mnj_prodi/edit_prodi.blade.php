@@ -25,7 +25,8 @@
                         @error('fakultas')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="fakultas" class="form-control" placeholder="Fakultas" value="{{ old('fakultas') ?? $pd->fakultas }}">
+                        <input type="text" name="fakultas" class="form-control" placeholder="Fakultas"
+                            value="{{ old('fakultas') ?? $pd->fakultas }}">
                     </div>
 
                     <div class="form-group">
@@ -33,7 +34,8 @@
                         @error('namaPT')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="namaPT" class="form-control" placeholder="Nama PT" value="{{ old('namaPT') ?? $pd->namaPT }}">
+                        <input type="text" name="namaPT" class="form-control" placeholder="Nama PT"
+                            value="{{ old('namaPT') ?? $pd->namaPT }}">
                     </div>
 
                     <div class="form-group">
@@ -41,48 +43,54 @@
                         @error('akreditasi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="akreditasi" class="form-control" placeholder="Akreditasi" value="{{ old('akreditasi') ?? $pd->akreditasi }}">
-                    </div> 
+                        <input type="text" name="akreditasi" class="form-control" placeholder="Akreditasi"
+                            value="{{ old('akreditasi') ?? $pd->akreditasi }}">
+                    </div>
 
                     <div class="form-group">
                         <label>Jenjang Pendidikan</label>
                         @error('jenjangPendidikan')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="jenjangPendidikan" class="form-control" placeholder="Jenjang Pendidikan" value="{{ old('jenjangPendidikan') ?? $pd->jenjangPendidikan }}">
-                    </div> 
+                        <input type="text" name="jenjangPendidikan" class="form-control" placeholder="Jenjang Pendidikan"
+                            value="{{ old('jenjangPendidikan') ?? $pd->jenjangPendidikan }}">
+                    </div>
 
                     <div class="form-group">
                         <label>Gelar Lulusan</label>
                         @error('gelarLulusan')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="gelarLulusan" class="form-control" placeholder="Gelar Lulusan" value="{{ old('gelarLulusan') ?? $pd->gelarLulusan }}">
-                    </div> 
+                        <input type="text" name="gelarLulusan" class="form-control" placeholder="Gelar Lulusan"
+                            value="{{ old('gelarLulusan') ?? $pd->gelarLulusan }}">
+                    </div>
 
                     <div class="form-group">
                         <label>Visi</label>
                         @error('visi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="visi" class="form-control" placeholder="Visi" value="{{ old('visi') ?? $pd->visi }}">
-                    </div> 
+                        <input type="text" name="visi" class="form-control" placeholder="Visi"
+                            value="{{ old('visi') ?? $pd->visi }}">
+                    </div>
 
                     <div class="form-group">
                         <label>Misi</label>
                         @error('misi')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="misi" class="form-control" placeholder="Misi" value="{{ old('misi') ?? $pd->misi }}">
-                    </div> 
+                        <input type="text" name="misi" class="form-control" placeholder="Misi"
+                            value="{{ old('misi') ?? $pd->misi }}">
+                    </div>
 
                     <div class="form-group">
                         <label>Tujuan</label>
                         @error('tujuan')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="tujuan" class="form-control" placeholder="Tujuan" value="{{ old('tujuan') ?? $pd->tujuan }}">
-                    </div> 
+                        <input type="text" name="tujuan" class="form-control" placeholder="Tujuan"
+                            value="{{ old('tujuan') ?? $pd->tujuan }}">
+                    </div>
 
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i

@@ -5,7 +5,7 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Edit CPL SN Dikti</h6>
             {{-- <a href="/tambahpl" class="float-right btn btn-sm btn-dark"><i
-                
+
     class="fa fa-fw fa-plus-circle"></i> Tambah PL</a> --}}
         </div>
         <div class="card-body" style="width: auto">

@@ -17,7 +17,8 @@
                         @error('nama_bentuk')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_bentuk" class="form-control" placeholder="Nama bentuk"   value="{{ old('nama_bentuk') ? old('nama_bentuk') : $bentuk->nama_bentuk }}">
+                        <input type="text" name="nama_bentuk" class="form-control" placeholder="Nama bentuk"
+                            value="{{ old('nama_bentuk') ? old('nama_bentuk') : $bentuk->nama_bentuk }}">
                     </div>
 
                     <div class="form-group">
@@ -25,7 +26,8 @@
                         @error('deskripsi_bentuk')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="deskripsi_bentuk" class="form-control" placeholder="Deskripsi"  value="{{ old('deskripsi_bentuk') ? old('deskripsi_bentuk') : $bentuk->deskripsi_bentuk }}">
+                        <input type="text" name="deskripsi_bentuk" class="form-control" placeholder="Deskripsi"
+                            value="{{ old('deskripsi_bentuk') ? old('deskripsi_bentuk') : $bentuk->deskripsi_bentuk }}">
                     </div>
 
                     <div class="form-group pt-4">

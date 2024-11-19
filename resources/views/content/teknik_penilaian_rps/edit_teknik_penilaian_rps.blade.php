@@ -17,7 +17,9 @@
                         @error('nama_teknik_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_teknik_penilaian" class="form-control" placeholder="Nama Teknik Penilaian"   value="{{ old('nama_teknik_penilaian') ? old('nama_teknik_penilaian') : $teknik->nama_teknik_penilaian }}">
+                        <input type="text" name="nama_teknik_penilaian" class="form-control"
+                            placeholder="Nama Teknik Penilaian"
+                            value="{{ old('nama_teknik_penilaian') ? old('nama_teknik_penilaian') : $teknik->nama_teknik_penilaian }}">
                     </div>
 
                     <div class="form-group">
@@ -25,7 +27,8 @@
                         @error('deskripsi_teknik_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="deskripsi_teknik_penilaian" class="form-control" placeholder="Deskripsi"  value="{{ old('deskripsi_teknik_penilaian') ? old('deskripsi_teknik_penilaian') : $teknik->deskripsi_teknik_penilaian }}">
+                        <input type="text" name="deskripsi_teknik_penilaian" class="form-control" placeholder="Deskripsi"
+                            value="{{ old('deskripsi_teknik_penilaian') ? old('deskripsi_teknik_penilaian') : $teknik->deskripsi_teknik_penilaian }}">
                     </div>
 
                     <div class="form-group pt-4">

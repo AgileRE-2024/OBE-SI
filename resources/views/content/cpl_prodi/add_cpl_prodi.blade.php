@@ -12,25 +12,27 @@
                     <div class="form-group">
                         <label for="kodeCPL">Kode CPL Prodi</label>
                         <input type="text" name="kodeCPL" class="form-control"
-                               placeholder="Kode CPL Prodi (Masukkan huruf besar dan angka saja)" pattern="[A-Z0-9-]+"
-                               maxlength="10" title="Harap masukkan huruf besar dan angka saja"
-                               oninput="updateInput(this);" value="LO-">
+                            placeholder="Kode CPL Prodi (Masukkan huruf besar dan angka saja)" pattern="[A-Z0-9-]+"
+                            maxlength="10" title="Harap masukkan huruf besar dan angka saja" oninput="updateInput(this);"
+                            value="LO-">
                     </div>
 
                     <div class="form-group">
-    <label for="cplLevel">Level</label>
-    <select name="levelCPL" class="form-control" id="cplLevel" onchange="toggleDescription()">
-        <option disabled selected>Pilih Level</option>
-        @foreach ($levels as $level)
-            <option value="{{ $level }}">{{ $level }}</option>
-        @endforeach
-    </select>
-</div>
+                        <label for="cplLevel">Level</label>
+                        <select name="levelCPL" class="form-control" id="cplLevel" onchange="toggleDescription()">
+                            <option disabled selected>-- Pilih Level --</option>
+                            @foreach ($levels as $level)
+                                <option value="{{ $level }}">{{ $level }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
                     <div class="form-group">
                         <label for="deskripsiCPL">Deskripsi CPL Prodi</label>
-                        <textarea name="deskripsiCPL" rows="3" class="form-control" placeholder="Deskripsi CPL Prodi" id="deskripsiCPL" disabled></textarea>
-                        <p id="errorText" style="color: #BF2C45; display: none;">Deskripsi harus mengandung setidaknya satu kata kerja yang sesuai dengan level yang dipilih.</p>
+                        <textarea name="deskripsiCPL" rows="3" class="form-control" placeholder="Deskripsi CPL Prodi" id="deskripsiCPL"
+                            disabled></textarea>
+                        <p id="errorText" style="color: #BF2C45; display: none;">Deskripsi harus mengandung setidaknya satu
+                            kata kerja yang sesuai dengan level yang dipilih.</p>
                     </div>
 
                     <div class="form-group">
@@ -94,5 +96,4 @@
             }
         }
     </script>
-
 @endsection

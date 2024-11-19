@@ -17,13 +17,11 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a id="exportPDF" class="btn btn-outline-danger"
-                    href="#"><i class="bi bi-file-earmark-pdf-fill">
+                <a id="exportPDF" class="btn btn-outline-danger" href="#"><i class="bi bi-file-earmark-pdf-fill">
                     </i>Export PDF</a>
             </div>
             <div>
-                <a id="exportExcel" class="btn btn-success"
-                    href="#"><i class="bi bi-file-earmark-excel">
+                <a id="exportExcel" class="btn btn-success" href="#"><i class="bi bi-file-earmark-excel">
                     </i>Export
                     Excel</a>
             </div>
@@ -56,18 +54,18 @@
 
             // Cek apakah sudah ada opsi pada select yang terpilih sebelumnya
             var tahun_ajaran = document.getElementById('tahunAjaran');
-            if(tahun_ajaran.value) {
+            if (tahun_ajaran.value) {
                 getTableDataByTahunAjaran(tahun_ajaran.value);
             } else {
                 exportPDF.onclick = function() {
-                errorPopup();
-                return false;
-            };
+                    errorPopup();
+                    return false;
+                };
 
-            exportExcel.onclick = function() {
-                errorPopup();
-                return false;
-            };
+                exportExcel.onclick = function() {
+                    errorPopup();
+                    return false;
+                };
             }
         });
 
@@ -87,11 +85,17 @@
                 $('#tableData').html(data);
             });
 
-            exportPDF.href = "{{ route('penilaian.tahap_penilaian.export', [':tahun_ajaran','pdf']) }}".replace(':tahun_ajaran', value);
-            exportExcel.href = "{{ route('penilaian.tahap_penilaian.export', [':tahun_ajaran','excel']) }}".replace(':tahun_ajaran', value);
+            exportPDF.href = "{{ route('penilaian.tahap_penilaian.export', [':tahun_ajaran', 'pdf']) }}".replace(
+                ':tahun_ajaran', value);
+            exportExcel.href = "{{ route('penilaian.tahap_penilaian.export', [':tahun_ajaran', 'excel']) }}".replace(
+                ':tahun_ajaran', value);
 
-            exportPDF.onclick = function(){ return true;}
-            exportExcel.onclick = function(){ return true;}
+            exportPDF.onclick = function() {
+                return true;
+            }
+            exportExcel.onclick = function() {
+                return true;
+            }
         }
     </script>
 @endsection

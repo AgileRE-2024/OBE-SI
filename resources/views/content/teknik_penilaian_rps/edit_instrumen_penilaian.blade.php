@@ -8,7 +8,8 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('kurikulum.data.update_instrumen', $instrumen->id_instrumen_penilaian) }}">
+                <form method="post"
+                    action="{{ route('kurikulum.data.update_instrumen', $instrumen->id_instrumen_penilaian) }}">
                     @csrf
                     @method('put')
 
@@ -17,7 +18,9 @@
                         @error('nama_instrumen_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_instrumen_penilaian" class="form-control" placeholder="Nama Instrumen Penilaian"   value="{{ old('nama_instrumen_penilaian') ? old('nama_instrumen_penilaian') : $instrumen->nama_instrumen_penilaian }}">
+                        <input type="text" name="nama_instrumen_penilaian" class="form-control"
+                            placeholder="Nama Instrumen Penilaian"
+                            value="{{ old('nama_instrumen_penilaian') ? old('nama_instrumen_penilaian') : $instrumen->nama_instrumen_penilaian }}">
                     </div>
 
                     <div class="form-group">
@@ -25,7 +28,9 @@
                         @error('deskripsi_instrumen_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="deskripsi_instrumen_penilaian" class="form-control" placeholder="Deskripsi"  value="{{ old('deskripsi_instrumen_penilaian') ? old('deskripsi_instrumen_penilaian') : $instrumen->deskripsi_instrumen_penilaian }}">
+                        <input type="text" name="deskripsi_instrumen_penilaian" class="form-control"
+                            placeholder="Deskripsi"
+                            value="{{ old('deskripsi_instrumen_penilaian') ? old('deskripsi_instrumen_penilaian') : $instrumen->deskripsi_instrumen_penilaian }}">
                     </div>
 
                     <div class="form-group pt-4">

@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Susunan Mata Kuliah</title>
-	<style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-		th, td {
-			text-align: left;
-			padding: 8px;
-			border-bottom: 1px solid #ddd;
-		}
-		th {
-			background-color: #f2f2f2;
-		}
-	</style>
+    <title>Susunan Mata Kuliah</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
+
 <body>
-	<h1>Susunan Mata Kuliah</h1>
-	<table class="table table-bordered" style="text-align: center">
+    <h1>Susunan Mata Kuliah</h1>
+    <table class="table table-bordered" style="text-align: center">
         <thead style="background-color: lightgray">
             <tr>
                 <th>Kode MK</th>
@@ -39,48 +44,50 @@
         </thead>
         <tbody>
             @foreach ($data as $p)
-            <tr>
-                <td>{{ $p->kodeMK }}</td>
-                <td>{{ $p->namaMK }}</td>
-                <td>
-                    @foreach ($p->Bahan_Kajian as $bk)
-                        <div>
-                            <span data-namabk="{{ $bk->namaBK }}">
-                                {{ $bk->kodeBK }}
-                            </span>
-                        </div>
-                    @endforeach
-                </td>
-                <td>{{ $p->sks }}</td>
-                @for($i = 1; $i <= 8; $i++)
+                <tr>
+                    <td>{{ $p->kodeMK }}</td>
+                    <td>{{ $p->namaMK }}</td>
                     <td>
-                        @if(strpos($p->semester, strval($i)) !== false)
-                        <div class="d-flex justify-content-center">
-                            <div class="form-check">
-                                <input style="width:26px;height:26px;" class="form-check-input" type="checkbox" checked>
+                        @foreach ($p->Bahan_Kajian as $bk)
+                            <div>
+                                <span data-namabk="{{ $bk->namaBK }}">
+                                    {{ $bk->kodeBK }}
+                                </span>
                             </div>
-                        </div>
+                        @endforeach
+                    </td>
+                    <td>{{ $p->sks }}</td>
+                    @for ($i = 1; $i <= 8; $i++)
+                        <td>
+                            @if (strpos($p->semester, strval($i)) !== false)
+                                <div class="d-flex justify-content-center">
+                                    <div class="form-check">
+                                        <input style="width:26px;height:26px;" class="form-check-input" type="checkbox"
+                                            checked>
+                                    </div>
+                                </div>
+                            @else
+                                <div class="d-flex justify-content-center">
+                                    <div class="form-check">
+                                        <input style="width:26px;height:26px;" class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                            @endif
+                        </td>
+                    @endfor
+                    <td>
+                        @if ($p->kategoriMK == 1)
+                            {{ 'Wajib' }}
+                        @elseif ($p->kategoriMK == 2)
+                            {{ 'Pilihan' }}
                         @else
-                        <div class="d-flex justify-content-center">
-                            <div class="form-check">
-                                <input style="width:26px;height:26px;" class="form-check-input" type="checkbox">
-                            </div>
-                        </div>
+                            {{ 'MKWK' }}
                         @endif
                     </td>
-                @endfor
-                <td>
-                    @if ($p->kategoriMK == 1)
-                        {{ 'Wajib' }}
-                    @elseif ($p->kategoriMK == 2)
-                        {{ 'Pilihan' }}
-                    @else
-                        {{ 'MKWK' }}
-                    @endif
-                </td>
-            </tr>
+                </tr>
             @endforeach
         </tbody>
     </table>
 </body>
+
 </html>

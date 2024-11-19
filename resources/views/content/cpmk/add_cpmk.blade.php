@@ -13,12 +13,12 @@
                     @csrf
 
                     <div class="form-group">
-                        <label>Kode CPL</label>
+                        <label for="kodeCPL">Kode CPL</label>
                         @error('kodeCPL')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <select name="kodeCPL" id='kodeCPL' class="form-select">
-                            <option value="" selected disabled>-- Pilih CPL Prodi --
+                            <option value="" selected disabled onselect="onCplSelected(this)">-- Pilih CPL Prodi --
                             </option>
                             @foreach ($cplp as $list_cplp)
                                 <option value="{{ $list_cplp->kodeCPL }}">{{ $list_cplp->kodeCPL }} {{ '-' }}
@@ -28,16 +28,22 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Kode CPMK</label>
+                        <label for="kodeCPMK">Kode CPMK</label>
                         @error('kodeCPMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         {{-- <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK"
                             title="Misal CPMK001" pattern="[A-Z0-9]+" minlength="4" maxlength="10"> --}}
-                        <input type="text" name="kodeCPMK" class="form-control"
+                        <input type="text" id="kodeCPMK" name="kodeCPMK" class="form-control"
                             placeholder="Kode CPMK (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
                             maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
                             oninput="updateInput(this);" value="CPMK">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cplLevel">Level CPL</label>
+                        <input type="text" id="cplLevel" name="cplLevel" class="form-control" pattern="[A-Z0-9-]+"
+                            maxlength="10" minlength="4" disabled value="Level CPL">
                     </div>
 
                     <div class="form-group">
@@ -58,6 +64,13 @@
         </div>
     </div>
     <script>
+        function onCplSelected(selectElement) {
+            const selectedOption = selectElement.options[selectElement.selectedIndex];
+            const levelCPL = selectedOption.getAttribute('data-level');
+            const cplLevelInput = document.getElementById('cplLevel');
+            cplLevelInput.value = levelCPL || ''; // Set the levelCPL value or clear if not set
+        }
+
         function updateInput(input) {
             var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
 

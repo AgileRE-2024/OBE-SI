@@ -8,7 +8,7 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('edit_rps.store_teknik_penilaian', ['kodeRPS' => $kodeRPS ]) }}">
+                <form method="post" action="{{ route('edit_rps.store_teknik_penilaian', ['kodeRPS' => $kodeRPS]) }}">
                     @csrf
                     {{-- <div class="form-group">
                         <label>Kode Teknik Penilaian</label>
@@ -39,7 +39,8 @@
                         @error('kriteriaPenilaian')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <input type="text" name="kriteriaPenilaian" class="form-control" placeholder="Kriteria Penilaian">
+                        <input type="text" name="kriteriaPenilaian" class="form-control"
+                            placeholder="Kriteria Penilaian">
                     </div>
                     <div class="form-group">
                         <label>Tahap Penilaian</label>
@@ -59,15 +60,17 @@
                         @error('instrumenPenilaian')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <input type="text" name="instrumenPenilaian" class="form-control" placeholder="Instrumen Penilaian">
+                        <input type="text" name="instrumenPenilaian" class="form-control"
+                            placeholder="Instrumen Penilaian">
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Kode RPS</label>
                         @error('kodeRPS')
                             <h1 style="color: #BF2C45">{{ $message }}</h1>
                         @enderror
-                        <input type="text" name="kodeRPS" class="form-control" placeholder="Kode RPS"  value={{ $kodeRPS }}>
+                        <input type="text" name="kodeRPS" class="form-control" placeholder="Kode RPS"
+                            value={{ $kodeRPS }}>
                     </div>
 
                     <div class="form-group pt-4">

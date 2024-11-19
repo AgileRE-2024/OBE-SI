@@ -51,24 +51,43 @@
                                 $prefix_baru = explode(' ', $baru)[0];
                                 if (strpos($asli, $prefix_baru) === false) {
                                     if (strpos($asli, '-')) {
-                                        if (($prefix_asli === 'Awal' && explode(' ', $asli)[2] !== 'Akhir') || ($prefix_asli !== 'Awal' && explode(' ', $asli)[2] === 'Akhir')) {
+                                        if (
+                                            ($prefix_asli === 'Awal' && explode(' ', $asli)[2] !== 'Akhir') ||
+                                            ($prefix_asli !== 'Awal' && explode(' ', $asli)[2] === 'Akhir')
+                                        ) {
                                             return 'Awal - Akhir Semester';
                                         }
                                         return $asli;
                                     } else {
                                         switch ($prefix_asli) {
                                             case 'Awal':
-                                                return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+                                                return $prefix_asli .
+                                                    ' - ' .
+                                                    $prefix_baru .
+                                                    ' ' .
+                                                    explode(' ', $asli)[1];
 
                                             case 'Tengah':
                                                 if ($prefix_baru == 'Awal') {
-                                                    return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+                                                    return $prefix_baru .
+                                                        ' - ' .
+                                                        $prefix_asli .
+                                                        ' ' .
+                                                        explode(' ', $asli)[1];
                                                 } else {
-                                                    return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+                                                    return $prefix_asli .
+                                                        ' - ' .
+                                                        $prefix_baru .
+                                                        ' ' .
+                                                        explode(' ', $asli)[1];
                                                 }
 
                                             case 'Akhir':
-                                                return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+                                                return $prefix_baru .
+                                                    ' - ' .
+                                                    $prefix_asli .
+                                                    ' ' .
+                                                    explode(' ', $asli)[1];
 
                                             default:
                                                 return $asli;
@@ -98,19 +117,48 @@
                                     foreach ($cpmk->SubCPMK as $subCpmk) {
                                         foreach ($subCpmk->Minggu_RPS as $minggu_rps) {
                                             if ($list_rps->where('kodeMK', $mk->kodeMK)->count()) {
-                                                foreach ($list_detail_rps->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)->where('kodeRPS', $list_rps->firstWhere('kodeMK', $mk->kodeMK)->kodeRPS) as $detail_rps) {
+                                                foreach (
+                                                    $list_detail_rps
+                                                        ->where('kodeMingguRPS', $minggu_rps->kodeMingguRPS)
+                                                        ->where(
+                                                            'kodeRPS',
+                                                            $list_rps->firstWhere('kodeMK', $mk->kodeMK)->kodeRPS
+                                                        )
+                                                    as $detail_rps
+                                                ) {
                                                     $data_teknik_penilaian = $detail_rps->Teknik_Penilaian;
 
                                                     $bobot += $data_teknik_penilaian->bobotPenilaian;
 
-                                                    $tahap_penilaian = setTahapPenilaian($tahap_penilaian, $data_teknik_penilaian->tahapPenilaian);
+                                                    $tahap_penilaian = setTahapPenilaian(
+                                                        $tahap_penilaian,
+                                                        $data_teknik_penilaian->tahapPenilaian
+                                                    );
 
-                                                    $teknik_penilaian = $teknik_penilaian !== '' ? $teknik_penilaian . '; ' . $data_teknik_penilaian->teknikPenilaian : $data_teknik_penilaian->teknikPenilaian;
-                                                    if (!in_array($data_teknik_penilaian->instrumenPenilaian, $instrumen)) {
-                                                        array_push($instrumen, $data_teknik_penilaian->instrumenPenilaian);
+                                                    $teknik_penilaian =
+                                                        $teknik_penilaian !== ''
+                                                            ? $teknik_penilaian .
+                                                                '; ' .
+                                                                $data_teknik_penilaian->teknikPenilaian
+                                                            : $data_teknik_penilaian->teknikPenilaian;
+                                                    if (
+                                                        !in_array(
+                                                            $data_teknik_penilaian->instrumenPenilaian,
+                                                            $instrumen
+                                                        )
+                                                    ) {
+                                                        array_push(
+                                                            $instrumen,
+                                                            $data_teknik_penilaian->instrumenPenilaian
+                                                        );
                                                     }
-                                                    if (!in_array($data_teknik_penilaian->kriteriaPenilaian, $kriteria)) {
-                                                        array_push($kriteria, $data_teknik_penilaian->kriteriaPenilaian);
+                                                    if (
+                                                        !in_array($data_teknik_penilaian->kriteriaPenilaian, $kriteria)
+                                                    ) {
+                                                        array_push(
+                                                            $kriteria,
+                                                            $data_teknik_penilaian->kriteriaPenilaian
+                                                        );
                                                     }
                                                 }
                                             }

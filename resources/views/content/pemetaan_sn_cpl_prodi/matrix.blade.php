@@ -21,6 +21,7 @@
         }
     </style>
 </head>
+
 <body>
     <div style="text-align: center; padding: 20px 0px 20px 0px; font-size: 24px; font-weight: bold;">
         Pemetaan Capaian Pembelajaran Lulusan SN Dikti(CPLSNDikti) dan Capaian Pembelajaran Lulusan Prodi (CPL)
@@ -29,17 +30,20 @@
         <thead style="background-color: black; color: white">
             <tr>
                 <th class="align-middle" scope="col" rowspan="2" style="width: 5% ; text-align: center">No</th>
-                <th class="align-middle" scope="col" rowspan="2" style="width: 10% ; text-align: center">Kode CPLSNDikti</th>
-                <th class="align-middle" scope="col" rowspan="2" style="width: 50% ; text-align: center">CPLSNDikti</th>
-                <th scope="col" colspan="{{ $cplprodi_list->count() }}" style="text-align: center ">Capaian Profil Lulusan Prodi</th>
+                <th class="align-middle" scope="col" rowspan="2" style="width: 10% ; text-align: center">Kode
+                    CPLSNDikti</th>
+                <th class="align-middle" scope="col" rowspan="2" style="width: 50% ; text-align: center">
+                    CPLSNDikti</th>
+                <th scope="col" colspan="{{ $cplprodi_list->count() }}" style="text-align: center ">Capaian Profil
+                    Lulusan Prodi</th>
             </tr>
             <tr>
                 @foreach ($cplprodi_list as $cplprod)
-                <th scope="col">
-                    <span data-bs-toggle="tooltip" data-bs-placement="bottom" style="text-align: left"
-                    title="{{ $cplprod->deskripsiCPL }}">{{ $cplprod->kodeCPL }} </span>
-                    @endforeach
-                </th> 
+                    <th scope="col">
+                        <span data-bs-toggle="tooltip" data-bs-placement="bottom" style="text-align: left"
+                            title="{{ $cplprod->deskripsiCPL }}">{{ $cplprod->kodeCPL }} </span>
+                @endforeach
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -49,20 +53,21 @@
                         {{ $loop->iteration }}</th>
                     <th scope="row" @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow; " @endif>
                         {{ $cpldik->kodeCPLSN }}</th>
-                    <th scope="row"
-                        @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow;" @endif>
+                    <th scope="row" @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow;" @endif>
                         {{ $cpldik->deskripsiSN }}</th>
                     @foreach ($cplprodi_list as $cplprod)
-                    <td @if (
-                        $pemetaan->where('kodeCPL', '===', $cplprod->kodeCPL)->count() == 0 ||
-                            $pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0) style="background-color: yellow;" @endif>
-                        <input type="checkbox" style="width: 25px; height: 25px; border: none; outline: none;"
-                            @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif>
-                    </td>
+                        <td @if (
+                            $pemetaan->where('kodeCPL', '===', $cplprod->kodeCPL)->count() == 0 ||
+                                $pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->count() == 0
+                        ) style="background-color: yellow;" @endif>
+                            <input type="checkbox" style="width: 25px; height: 25px; border: none; outline: none;"
+                                @if ($pemetaan->where('kodeCPLSN', '===', $cpldik->kodeCPLSN)->where('kodeCPL', '===', $cplprod->kodeCPL)->count()) checked @endif>
+                        </td>
                     @endforeach
                 </tr>
             @endforeach
         </tbody>
     </table>
 </body>
+
 </html>

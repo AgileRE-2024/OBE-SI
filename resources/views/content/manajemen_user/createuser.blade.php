@@ -11,7 +11,7 @@
                     @csrf
                     <div class="form-group">
                         <label>NIP</label>
-                        <input type="text" name="nip" class="form-control" placeholder="NIP" value="" >
+                        <input type="text" name="nip" class="form-control" placeholder="NIP" value="">
                         @error('nip')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
@@ -19,7 +19,7 @@
 
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="text" name="password" class="form-control" placeholder="password" value="" >
+                        <input type="text" name="password" class="form-control" placeholder="password" value="">
                         @error('password')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
@@ -27,7 +27,8 @@
 
                     <div class="form-group">
                         <label>Nama Lengkap</label>
-                        <input type="text" name="namaDosen" class="form-control" placeholder="Nama Lengkap" value="">
+                        <input type="text" name="namaDosen" class="form-control" placeholder="Nama Lengkap"
+                            value="">
                         @error('namaDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
@@ -38,7 +39,7 @@
                         <select name="prodi" id='prodi' class="form-select">
                             <option value="" disabled selected>-- Program Studi --</option>
                             @foreach ($prodi as $prod)
-                                <option value="{{ $prod->namaProdi }}" >{{ $prod->namaProdi }}</option>
+                                <option value="{{ $prod->namaProdi }}">{{ $prod->namaProdi }}</option>
                             @endforeach
                         </select>
                         @error('prodi')
@@ -52,7 +53,7 @@
                         @error('jabatanDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                   </div>
+                    </div>
 
                     <div class="form-group">
                         <label>Role</label>
@@ -87,8 +88,6 @@
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                     </div>
-
-
 
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i

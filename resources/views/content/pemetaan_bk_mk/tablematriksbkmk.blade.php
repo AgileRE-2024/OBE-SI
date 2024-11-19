@@ -38,8 +38,7 @@
                 <tr>
                     @foreach ($bk_list as $bk)
                         <th scope="col">
-                            <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                >{{ $bk->kodeBK }}</span>
+                            <span data-bs-toggle="tooltip" data-bs-placement="bottom">{{ $bk->kodeBK }}</span>
                         </th>
                     @endforeach
                 </tr>
@@ -57,7 +56,8 @@
                         @foreach ($bk_list as $bk)
                             <td @if (
                                 $pemetaan->where('kodeBK', '===', $bk->kodeBK)->count() == 0 ||
-                                    $pemetaan->where('kodeMK', '===', $mk->kodeMK)->count() == 0) style="background-color: yellow;" @endif>
+                                    $pemetaan->where('kodeMK', '===', $mk->kodeMK)->count() == 0
+                            ) style="background-color: yellow;" @endif>
                                 <input type="checkbox" style="width: 25px; height: 25px; border: none; outline: none;"
                                     @if ($pemetaan->where('kodeMK', '===', $mk->kodeMK)->where('kodeBK', '===', $bk->kodeBK)->count()) checked @endif>
                             </td>

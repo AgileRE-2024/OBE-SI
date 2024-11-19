@@ -35,7 +35,7 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Misi</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Tujuan</th>
                         @if (auth()->user()->role == 2)
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
+                            <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                         @endif
                     </tr>
                 </thead>
@@ -63,10 +63,10 @@
                             <td scope="row">
                                 {{ $pd->tujuan }}</td>
                             @if (auth()->user()->role == 2)
-                            <td scope="row">    
-                                <a class="btn btn-primary"
-                                    href="{{ route('manajemen.edit_prodi', $pd->namaProdi) }}">Edit</a>
-                            </td>
+                                <td scope="row">
+                                    <a class="btn btn-primary"
+                                        href="{{ route('manajemen.edit_prodi', $pd->namaProdi) }}">Edit</a>
+                                </td>
                             @endif
                         </tr>
                     @endforeach

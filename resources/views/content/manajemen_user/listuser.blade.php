@@ -57,52 +57,52 @@
                 </thead>
                 <tbody>
                     @foreach ($users as $user)
-                    <tr>
-                        <td scope="row">
-                            {{ $loop->iteration }} </td>
-                        <td scope="row">
-                            {{ $user->nip }}</td>
-                        <td scope="row">
-                            {{ $user->namaDosen }}</td>
-                        <td scope="row">
-                            {{ $user->namaProdi }}</td>
-                        <td scope="row">
-                            {{ $user->jabatanDosen }}
-                        </td>
-                        <td scope="row">
-                            @if($user->role == 0)
-                                Dosen
-                            @elseif($user->role == 1)
-                                Kurikulum
-                            @elseif($user->role == 2)
-                                Admin
-                            @elseif($user->role == 3)
-                                Dosen dan Admin
-                            @else
-                                Unknown Role
-                            @endif
-                        </td>
-                        <td scope="row">
-                            {{ $user->email }}
-                        </td>
-                        <td scope="row">
-                            {{ $user->status }}
-                        </td>
-                        <td scope="row">
-                            {{-- @if (auth()->user()->role == 1) --}}
-                            <a class="btn btn-primary" href="{{ Route('editUser',['nip' => $user->nip]) }}">Edit</a>
-                            {{-- @endif --}}
-                        </td>
-                        <td scope="row">
-                            {{-- @if (auth()->user()->role == 1) --}}
-                            <form action="{{ Route('deleteUser',['nip' => $user->nip]) }}" method="POST">
-                                <button class="btn btn-danger" href="">Delete</button>
-                                @method('delete')
-                                @csrf
-                            </form>
-                            {{-- @endif --}}
-                        </td>
-                    </tr>
+                        <tr>
+                            <td scope="row">
+                                {{ $loop->iteration }} </td>
+                            <td scope="row">
+                                {{ $user->nip }}</td>
+                            <td scope="row">
+                                {{ $user->namaDosen }}</td>
+                            <td scope="row">
+                                {{ $user->namaProdi }}</td>
+                            <td scope="row">
+                                {{ $user->jabatanDosen }}
+                            </td>
+                            <td scope="row">
+                                @if ($user->role == 0)
+                                    Dosen
+                                @elseif($user->role == 1)
+                                    Kurikulum
+                                @elseif($user->role == 2)
+                                    Admin
+                                @elseif($user->role == 3)
+                                    Dosen dan Admin
+                                @else
+                                    Unknown Role
+                                @endif
+                            </td>
+                            <td scope="row">
+                                {{ $user->email }}
+                            </td>
+                            <td scope="row">
+                                {{ $user->status }}
+                            </td>
+                            <td scope="row">
+                                {{-- @if (auth()->user()->role == 1) --}}
+                                <a class="btn btn-primary" href="{{ Route('editUser', ['nip' => $user->nip]) }}">Edit</a>
+                                {{-- @endif --}}
+                            </td>
+                            <td scope="row">
+                                {{-- @if (auth()->user()->role == 1) --}}
+                                <form action="{{ Route('deleteUser', ['nip' => $user->nip]) }}" method="POST">
+                                    <button class="btn btn-danger" href="">Delete</button>
+                                    @method('delete')
+                                    @csrf
+                                </form>
+                                {{-- @endif --}}
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>

@@ -39,7 +39,7 @@
                         <th class="align-middle" width="90px">8</th>
                         <th class="align-middle" width="180px">Keterangan</th>
                         @if (auth()->user()->role == 1 || auth()->user()->role == 3)
-                        <th class="align-middle" width="90px">Action</th>
+                            <th class="align-middle" width="90px">Action</th>
                         @endif
                     </tr>
                 </thead>
@@ -184,7 +184,6 @@
             opacity: 1;
             /* transition: opacity 3s; */
             /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
-
         }
 
         span[data-namabk]:hover::before {

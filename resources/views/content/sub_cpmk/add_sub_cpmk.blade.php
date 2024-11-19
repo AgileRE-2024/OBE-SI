@@ -48,7 +48,7 @@
                         @enderror
                         <textarea name="deskripsiSubCPMK" row="3" class="form-control" placeholder="Deskripsi Sub CPMK"></textarea>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Kriteria Penilaian</label>
                         @error('kriteriaPenilaian')
@@ -56,7 +56,7 @@
                         @enderror
                         <textarea name="kriteriaPenilaian" row="3" class="form-control" placeholder="Kriteria Penilaian"></textarea>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Indikator Penilaian</label>
                         @error('indikatorPenilaian')

@@ -8,14 +8,15 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('edit_rps.store_komponen_penilaian', ['kodeRPS' => $kodeRPS ]) }}">
+                <form method="post" action="{{ route('edit_rps.store_komponen_penilaian', ['kodeRPS' => $kodeRPS]) }}">
                     @csrf
                     <div class="form-group">
                         <label>Nama Komponen Penilaian</label>
                         @error('nama_komponen_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_komponen_penilaian" class="form-control" placeholder="Nama komponen penilaian">
+                        <input type="text" name="nama_komponen_penilaian" class="form-control"
+                            placeholder="Nama komponen penilaian">
                     </div>
 
                     <div class="form-group pt-4">

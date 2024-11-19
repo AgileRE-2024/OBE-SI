@@ -48,8 +48,8 @@
                         <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Semester Mata Kuliah</th>
                         <!-- <th class="align-middle" scope="col" rowspan="2" style="width: 50%">Deskripsi Mata Kuliah</th> -->
                         @if (auth()->user()->role == 1 || auth()->user()->role == 3)
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
+                            <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
+                            <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
                         @endif
                     </tr>
                 </thead>
@@ -70,11 +70,11 @@
                             </td>
                             <td scope="row" style="width:10%">
                                 @if ($mk->Prasyarat)
-                                    @foreach($mk->Prasyarat as $prasyrt)
+                                    @foreach ($mk->Prasyarat as $prasyrt)
                                         {{ $prasyrt->mat_kodeMK }}
                                     @endforeach
                                 @else
-                                    {{'-'}}
+                                    {{ '-' }}
                                 @endif
                             </td>
                             <td scope="row" style="width:10%">
@@ -99,23 +99,27 @@
                                 @endif
                             </td>
                             <td scope="row">
-                                @if($mk->sks) {{ $mk->sks }} SKS @endif @if($mk->ects)/ {{ $mk->ects }} ECTS @endif
+                                @if ($mk->sks)
+                                    {{ $mk->sks }} SKS
+                                    @endif @if ($mk->ects)
+                                        / {{ $mk->ects }} ECTS
+                                    @endif
                             </td>
                             <td scope="row">
                                 {{ $mk->semester }}
                             </td>
                             <!-- <td scope="row">
-                                {!! $mk->deskripsiMK !!}
-                            </td> -->
+                                    {!! $mk->deskripsiMK !!}
+                                </td> -->
                             @if (auth()->user()->role == 1 || auth()->user()->role == 3)
-                            <td scope="row">
+                                <td scope="row">
                                     <a class="btn btn-primary"
                                         href="{{ route('kurikulum.data.edit_mata_kuliah', $mk->kodeMK) }}">Edit</a>
-                            </td>
-                            <td scope="row">
+                                </td>
+                                <td scope="row">
                                     <a class="btn btn-danger"
                                         href="{{ route('kurikulum.data.delete_mata_kuliah', $mk->kodeMK) }}">Delete</a>
-                            </td>
+                                </td>
                             @endif
                         </tr>
                     @endforeach

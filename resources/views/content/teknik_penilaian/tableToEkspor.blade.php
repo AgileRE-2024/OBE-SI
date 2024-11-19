@@ -30,14 +30,14 @@
         <table class="table table-bordered" style="text-align: center">
             <thead class="table" style="background-color: lightgray">
                 <tr>
-                    <th class="align-middle" scope="col"  style="width: 5%">No</th>
-                    <th class="align-middle" scope="col"  style="width: 10%">Kode Penilaian</th>
-                    <th class="align-middle" scope="col"  style="width: 10%">Kode RPS</th>
-                    <th class="align-middle" scope="col"  style="width: 25%">Teknik Penilaian</th>
-                    <th class="align-middle" scope="col"  style="width: 10%">Bobot Penilaian</th>
-                    <th class="align-middle" scope="col"  style="width: 30%">Kriteria Penilaian</th>
-                    <th class="align-middle" scope="col"  style="width: 30%">Tahap Penilaian</th>
-                    <th class="align-middle" scope="col"  style="width: 30%">Instrumen Penilaian</th>
+                    <th class="align-middle" scope="col" style="width: 5%">No</th>
+                    <th class="align-middle" scope="col" style="width: 10%">Kode Penilaian</th>
+                    <th class="align-middle" scope="col" style="width: 10%">Kode RPS</th>
+                    <th class="align-middle" scope="col" style="width: 25%">Teknik Penilaian</th>
+                    <th class="align-middle" scope="col" style="width: 10%">Bobot Penilaian</th>
+                    <th class="align-middle" scope="col" style="width: 30%">Kriteria Penilaian</th>
+                    <th class="align-middle" scope="col" style="width: 30%">Tahap Penilaian</th>
+                    <th class="align-middle" scope="col" style="width: 30%">Instrumen Penilaian</th>
                 </tr>
             </thead>
             <tbody>
@@ -72,7 +72,6 @@
         </table>
     </div>
 
-    
 </body>
 
 </html>

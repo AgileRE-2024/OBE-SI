@@ -45,11 +45,11 @@
                         <td scope="row">
                             {{ $loop->iteration }}</td>
                         <td scope="row">
-                            {{ $pustakasi->nama_penulis}}</td>
+                            {{ $pustakasi->nama_penulis }}</td>
                         <td scope="row">
-                            {{ $pustakasi->tahun}}</td>
+                            {{ $pustakasi->tahun }}</td>
                         <td scope="row">
-                            {{ $pustakasi->judul  }}</td>
+                            {{ $pustakasi->judul }}</td>
                         <td scope="row">
                             {{ $pustakasi->penerbit }}</td>
                     </tr>

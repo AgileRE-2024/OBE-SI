@@ -60,7 +60,8 @@
                             @foreach ($pl_list as $pl)
                                 <td @if (
                                     $pemetaan->where('kodePL', '===', $pl->kodePL)->count() == 0 ||
-                                        $pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0) style="background-color: yellow;" @endif><input
+                                        $pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0
+                                ) style="background-color: yellow;" @endif><input
                                         type="checkbox" style="width: 25px; height: 25px;"
                                         id="checkbox_{{ $cpl->kodeCPL }}-{{ $pl->kodePL }}"
                                         onclick="updateTable('{{ $cpl->kodeCPL }}-{{ $pl->kodePL }}')"
@@ -120,7 +121,6 @@
             opacity: 1;
             /* transition: opacity 3s; */
             /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
-
         }
 
         span[itemid]:hover::before {

@@ -17,7 +17,8 @@
                         @error('nama_media')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_media" class="form-control" placeholder="Nama media"   value="{{ old('nama_media') ? old('nama_media') : $media->nama_media }}">
+                        <input type="text" name="nama_media" class="form-control" placeholder="Nama media"
+                            value="{{ old('nama_media') ? old('nama_media') : $media->nama_media }}">
                     </div>
 
                     <div class="form-group">
@@ -25,7 +26,8 @@
                         @error('deskripsi_media')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="deskripsi_media" class="form-control" placeholder="Deskripsi"  value="{{ old('deskripsi_media') ? old('deskripsi_media') : $media->deskripsi_media }}">
+                        <input type="text" name="deskripsi_media" class="form-control" placeholder="Deskripsi"
+                            value="{{ old('deskripsi_media') ? old('deskripsi_media') : $media->deskripsi_media }}">
                     </div>
 
                     <div class="form-group pt-4">

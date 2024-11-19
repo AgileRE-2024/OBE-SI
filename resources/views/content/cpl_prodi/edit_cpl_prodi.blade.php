@@ -28,16 +28,18 @@
                         <select name="cplLevel" class="form-control" id="cplLevel" onchange="toggleDescription()">
                             <option value="" disabled selected>Pilih Level</option>
                             @foreach ($levels as $level)
-                                <option value="{{ old('cplLevel') ? old('cplLevel') : $level }}">{{ $level }}</option>
+                                <option value="{{ old('cplLevel') ? old('cplLevel') : $level }}">{{ $level }}
+                                </option>
                             @endforeach
                         </select>
-
                     </div>
 
                     <div class="form-group">
                         <label for="deskripsiCPL">Deskripsi CPL Prodi</label>
-                        <textarea name="deskripsiCPL" rows="3" class="form-control" placeholder="Deskripsi CPL Prodi" id="deskripsiCPL" disabled>{{ old('deskripsiCPL') ? old('deskripsiCPL') : $cpl->deskripsiCPL }}</textarea>
-                        <p id="errorText" style="color: #BF2C45; display: none;">Deskripsi harus mengandung setidaknya satu kata kerja yang sesuai dengan level yang dipilih.</p>
+                        <textarea name="deskripsiCPL" rows="3" class="form-control" placeholder="Deskripsi CPL Prodi" id="deskripsiCPL"
+                            disabled>{{ old('deskripsiCPL') ? old('deskripsiCPL') : $cpl->deskripsiCPL }}</textarea>
+                        <p id="errorText" style="color: #BF2C45; display: none;">Deskripsi harus mengandung setidaknya satu
+                            kata kerja yang sesuai dengan level yang dipilih.</p>
                     </div>
 
                     <div class="form-group">

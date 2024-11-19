@@ -7,7 +7,8 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('edit_rps.update_teknik_penilaian', $kodeRPS) }}" enctype="multipart/form-data">
+                <form method="post" action="{{ route('edit_rps.update_teknik_penilaian', $kodeRPS) }}"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('put')
 
@@ -30,17 +31,15 @@
     </div>
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor' ),
-            {
-                ckfinder:{
-                    uploadUrl:"{{ route('ckeditor.upload',['_token'=>csrf_token()]) }}",
+            .create(document.querySelector('#editor'), {
+                    ckfinder: {
+                        uploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}",
+                    }
                 }
-            }
-            
+
             )
-            .catch( error => {
-                console.error( error );
-            } );
+            .catch(error => {
+                console.error(error);
+            });
     </script>
 @endsection
-

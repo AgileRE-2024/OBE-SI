@@ -41,8 +41,8 @@
             <tbody>
                 @php
                     use Illuminate\Support\Str;
-                    $mkpunyarelasi=$detailmkcpmk_list->pluck('kodeMK');
-                    $mkfix=$mk_list->whereIn('kodeMK', $mkpunyarelasi);
+                    $mkpunyarelasi = $detailmkcpmk_list->pluck('kodeMK');
+                    $mkfix = $mk_list->whereIn('kodeMK', $mkpunyarelasi);
                 @endphp
                 @foreach ($mkfix as $mk)
                     {{-- Cari rowspan mk --}}
@@ -56,40 +56,45 @@
                         // $rowspanmk = $subcpmk_list->whereIn('kodeCPMK', $cpmkfix)->count();
                     @endphp
                     <tr>
-                    <td rowspan={{ $rowspanmk }}><span itemid="{{ $mk->namaMK }}">{{ $mk->kodeMK }}</td>
-                    
+                        <td rowspan={{ $rowspanmk }}><span itemid="{{ $mk->namaMK }}">{{ $mk->kodeMK }}</td>
 
-                    {{-- looping percpl --}}
-                    @foreach ($cplfix as $cpl)
-                        @php
-                            $cpmkfixs = $cpmk_list->whereIn('kodeCPMK', $cpmkfix)->whereIn('kodeCPL', $cpl)->pluck('kodeCPMK');
-                            $rowspancpl = $subcpmk_list->whereIn('kodeCPMK', $cpmkfixs)->count();
-                            
-                        @endphp
-                        <td rowspan={{ $rowspancpl }}><span itemid="{{ $cpl_list->where('kodeCPL',$cpl)->first()->deskripsiCPL }}">{{ $cpl }}</td>
-                        {{-- looping percpmk --}}
-                        @foreach ($cpmkfixs as $cpmk)
+                        {{-- looping percpl --}}
+                        @foreach ($cplfix as $cpl)
                             @php
-                                $rowspancpmk = $subcpmk_list->whereIn('kodeCPMK', $cpmk)->count();   
-                                $sub=$subcpmk_list->whereIn('kodeCPMK', $cpmk);
+                                $cpmkfixs = $cpmk_list
+                                    ->whereIn('kodeCPMK', $cpmkfix)
+                                    ->whereIn('kodeCPL', $cpl)
+                                    ->pluck('kodeCPMK');
+                                $rowspancpl = $subcpmk_list->whereIn('kodeCPMK', $cpmkfixs)->count();
+
                             @endphp
-                            <td rowspan={{ $rowspancpmk }}>{{ $cpmk }}</td>
-                            <td rowspan={{ $rowspancpmk }}>{{ $cpmk_list->where('kodeCPMK', $cpmk)->first()->deskripsiCPMK }}</td>
-                            <td>{{ $sub->first()->kodeSubCPMK }} <br> {{ $sub->first()->deskripsiSubCPMK }}</td>
+                            <td rowspan={{ $rowspancpl }}><span
+                                    itemid="{{ $cpl_list->where('kodeCPL', $cpl)->first()->deskripsiCPL }}">{{ $cpl }}
+                            </td>
+                            {{-- looping percpmk --}}
+                            @foreach ($cpmkfixs as $cpmk)
+                                @php
+                                    $rowspancpmk = $subcpmk_list->whereIn('kodeCPMK', $cpmk)->count();
+                                    $sub = $subcpmk_list->whereIn('kodeCPMK', $cpmk);
+                                @endphp
+                                <td rowspan={{ $rowspancpmk }}>{{ $cpmk }}</td>
+                                <td rowspan={{ $rowspancpmk }}>
+                                    {{ $cpmk_list->where('kodeCPMK', $cpmk)->first()->deskripsiCPMK }}</td>
+                                <td>{{ $sub->first()->kodeSubCPMK }} <br> {{ $sub->first()->deskripsiSubCPMK }}</td>
+                    </tr>
+                    @if ($sub->count() > 1)
+                        @foreach ($sub->skip(1) as $item)
+                            <tr>
+                                <td>{{ $item->kodeSubCPMK }} <br> {{ $item->deskripsiSubCPMK }}</td>
                             </tr>
-                            @if ($sub->count() > 1)
-                                @foreach ($sub->skip(1) as $item)
-                                    <tr>
-                                        <td>{{ $item->kodeSubCPMK }} <br> {{ $item->deskripsiSubCPMK }}</td>
-                                    </tr>
-                                @endforeach
-                            @endif
                         @endforeach
-                    @endforeach
+                    @endif
+                @endforeach
+                @endforeach
                 @endforeach
             </tbody>
         </table>
-        
+
     </div>
 </body>
 

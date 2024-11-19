@@ -38,7 +38,6 @@
         table {
             border-collapse: collapse;
         }
-
     </style>
 </head>
 
@@ -119,7 +118,7 @@
         </tr>
 
         <tr>
-            @if($dosen)
+            @if ($dosen)
                 <td class="td-rps">
                     Fakultas {{ $dosen->prodi->fakultas }}
                 </td>
@@ -174,7 +173,7 @@
             <th class="table-header" style="text-align:left;">6. Capaian Pembelajaran Lulusan (CPL)</th>
             <td class="td-rps">
                 CPL {{ $mk->namaMK }}:
-                @foreach($list_cpl as $cpl)
+                @foreach ($list_cpl as $cpl)
                     <div>{{ $counter }}. {{ $cpl->kodeCPL }} {{ $cpl->deskripsiCPL }}</div>
                     <?php $counter += 1; ?>
                 @endforeach
@@ -185,7 +184,7 @@
             <th class="table-header" style="text-align:left;">7. Capaian Pembelajaran Mata Kuliah (CPMK)</th>
             <td class="td-rps">
                 Capaian pembelajaran mata kuliah {{ $mk->namaMK }}:
-                @foreach($mk_cpmk as $cpmk)
+                @foreach ($mk_cpmk as $cpmk)
                     <div>{{ $counter }}.
                         {{ $all_cpmk->where('kodeCPMK', $cpmk->kodeCPMK)->first()->deskripsiCPMK }}
                     </div>
@@ -200,7 +199,7 @@
         <tr>
             <th class="table-header" style="text-align:left;">9. Prasyarat (bila ada)</th>
             <td class="td-rps">
-                @foreach($list_prasyarat as $prasyarat)
+                @foreach ($list_prasyarat as $prasyarat)
                     <div>
                         {{ $prasyarat->kodeMK }} {{ $prasyarat->namaMK }}
                     </div>
@@ -214,7 +213,7 @@
         <tr>
             <th class="table-header" style="text-align:left;">11. Dosen Pengampu</th>
             <td class="td-rps">
-                @foreach($dosen_pengampu as $pengampu)
+                @foreach ($dosen_pengampu as $pengampu)
                     <div>
                         {{ $pengampu->namaDosen }}
                     </div>
@@ -254,7 +253,7 @@
             <!-- <td class="td-rps">10</td> -->
         </tr>
         <?php $i = 0; ?>
-        @foreach($minggu_rps_list as $minggu_rps)
+        @foreach ($minggu_rps_list as $minggu_rps)
             <tr>
                 <td class="td-rps">{{ $i + 1 }}</td>
                 <td class="td-rps">{{ $minggu_rps->SubCPMK->deskripsiSubCPMK ?? '' }}
@@ -262,19 +261,19 @@
                 <td class="td-rps">{{ $minggu_rps->bahan_kajian ?? '' }}</td>
                 <td class="td-rps">
                     <div class="col">
-                        @if($minggu_rps->id_bentuk)
+                        @if ($minggu_rps->id_bentuk)
                             <p>Bentuk: {{ $minggu_rps->Bentuk->nama_bentuk }}</p>
                         @endif
-                        @if($minggu_rps->Metode()->count() > 0)
+                        @if ($minggu_rps->Metode()->count() > 0)
                             <p>Metode:</p>
-                            @foreach($minggu_rps->Metode as $item)
+                            @foreach ($minggu_rps->Metode as $item)
                                 <p>{{ $item->nama_metode }}</p>
                             @endforeach
                         @endif
-                        @if($minggu_rps->penugasan)
+                        @if ($minggu_rps->penugasan)
                             <p>Penugasan: {{ $minggu_rps->penugasan }}</p>
                         @endif
-                        @if($minggu_rps->luring === 1)
+                        @if ($minggu_rps->luring === 1)
                             <p>Luring</p>
                         @elseif($minggu_rps->luring === 0)
                             <p>Daring</p>
@@ -285,15 +284,15 @@
                 <td class="td-rps">{{ $minggu_rps->waktuPembelajaran ?? '' }}</td>
                 <td class="td-rps">{{ $minggu_rps->pengalaman_belajar ?? '' }}</td>
                 <!-- <td class="td-rps">
-@if($minggu_rps->kodeSubCPMK)
-                        <p>Kriteria penilaian:
+@if ($minggu_rps->kodeSubCPMK)
+<p>Kriteria penilaian:
                             {{ $minggu_rps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
                         <p>Indikator:
                             {{ $minggu_rps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
 @endif
                 </td> -->
                 <td class="td-rps">
-                    @if($minggu_rps->id_teknik_penilaian)
+                    @if ($minggu_rps->id_teknik_penilaian)
                         <p>Teknik penilaian:
                             {{ $minggu_rps->Teknik_Penilaian_RPS->nama_teknik_penilaian ?? '' }}
                         </p>
@@ -307,8 +306,8 @@
                     @endif
                 </td>
                 <td class="td-rps">
-                    @if($minggu_rps->PustakaMingguRPS)
-                        @foreach($minggu_rps->PustakaMingguRPS as $pmItem)
+                    @if ($minggu_rps->PustakaMingguRPS)
+                        @foreach ($minggu_rps->PustakaMingguRPS as $pmItem)
                             <p style="font-style:italic;" class="mb-0 pb-0">{{ $pmItem->Pustaka->judul }}</p>
                             <p class="mt-0 pt-0">{{ $pmItem->referensi }}</p>
                         @endforeach
@@ -316,7 +315,7 @@
                     <!-- {{ $minggu_pustaka->where('kodeMinggu_RPS', $minggu_rps->kodeMinggu_RPS)->first()->id_pustaka ?? '-' }} -->
                 </td>
             </tr>
-            @if($i == 6)
+            @if ($i == 6)
                 <tr>
                     <td class="td-rps">8</td>
                     <td colspan="8" class="td-rps"> UTS </td>
@@ -325,69 +324,69 @@
                     $i += 1;
                 @endphp
             @endif
-            @if($i == 14)
+            @if ($i == 14)
                 <tr>
                     <td class="td-rps">16</td>
                     <td colspan="8" class="td-rps"> UAS </td>
                 </tr>
             @endif
-                @php
-                    $i += 1;
-                @endphp
-            @if($i == 15)
-                @break
-            @endif
-        @endforeach
-    </table>
+            @php
+                $i += 1;
+            @endphp
+            @if ($i == 15)
+            @break
+        @endif
+    @endforeach
+</table>
 
-    <h3>
-        C. KRITERIA DAN DESKRIPSI PENILAIAN
-    </h3>
-    <div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
-        <p>1. Kriteria Penilaian</p>
-        <div class="mb-0">Penilaian yang diberikan berdasarkan kriteria berikut:</div>
-        <div class="mb-0">Nilai akhir diperoleh melalui rumus</div>
-        <p>
-            @if($rps->KomponenPenilaian)
-                @foreach($rps->KomponenPenilaian as $item)
-                    @php
-                        $totalBobot = 0;
-                    @endphp
-                    @foreach($rps->Minggu_RPS as $minggu)
-                        @if($minggu->id_komponen_penilaian == $item->id_komponen_penilaian)
-                            @php
-                                $totalBobot += $minggu->bobot_nilai;
-                            @endphp
-                        @endif
-                    @endforeach
-                    {{ $item->nama_komponen_penilaian }} ({{ $totalBobot }}%)
-                    @if(!$loop->last)
-                        +
+<h3>
+    C. KRITERIA DAN DESKRIPSI PENILAIAN
+</h3>
+<div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
+    <p>1. Kriteria Penilaian</p>
+    <div class="mb-0">Penilaian yang diberikan berdasarkan kriteria berikut:</div>
+    <div class="mb-0">Nilai akhir diperoleh melalui rumus</div>
+    <p>
+        @if ($rps->KomponenPenilaian)
+            @foreach ($rps->KomponenPenilaian as $item)
+                @php
+                    $totalBobot = 0;
+                @endphp
+                @foreach ($rps->Minggu_RPS as $minggu)
+                    @if ($minggu->id_komponen_penilaian == $item->id_komponen_penilaian)
+                        @php
+                            $totalBobot += $minggu->bobot_nilai;
+                        @endphp
                     @endif
                 @endforeach
-            @endif
-        </p>
-        <p>2. Deskripsi Komponen Penilaian</p>
-        @if($rps->detail_penilaian)
-            <p>{!! $rps->detail_penilaian !!}</p>
-        @else
-            <p>Belum ada data</p>
+                {{ $item->nama_komponen_penilaian }} ({{ $totalBobot }}%)
+                @if (!$loop->last)
+                    +
+                @endif
+            @endforeach
         @endif
-    </div>
+    </p>
+    <p>2. Deskripsi Komponen Penilaian</p>
+    @if ($rps->detail_penilaian)
+        <p>{!! $rps->detail_penilaian !!}</p>
+    @else
+        <p>Belum ada data</p>
+    @endif
+</div>
 
-    <h3>
-        D. DAFTAR REFERENSI
-    </h3>
-    <div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
-        <?php $no = 1; ?>
-        @foreach($minggu_pustaka->unique('id_pustaka') as $pustaka)
-            <div>
-                {{ $no }}. {{ $pustaka->pustaka->nama_penulis }}, {{ $pustaka->pustaka->tahun }},
-                {{ $pustaka->pustaka->judul }}, {{ $pustaka->pustaka->penerbit }}
-                <?php $no += 1; ?>
-            </div>
-        @endforeach
-    </div>
+<h3>
+    D. DAFTAR REFERENSI
+</h3>
+<div style="margin-left:10px; font-family:'Times New Roman', Times, serif">
+    <?php $no = 1; ?>
+    @foreach ($minggu_pustaka->unique('id_pustaka') as $pustaka)
+        <div>
+            {{ $no }}. {{ $pustaka->pustaka->nama_penulis }}, {{ $pustaka->pustaka->tahun }},
+            {{ $pustaka->pustaka->judul }}, {{ $pustaka->pustaka->penerbit }}
+            <?php $no += 1; ?>
+        </div>
+    @endforeach
+</div>
 </body>
 
 </html>

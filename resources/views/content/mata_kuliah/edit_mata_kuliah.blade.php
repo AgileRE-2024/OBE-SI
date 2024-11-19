@@ -19,8 +19,9 @@
                         @enderror
                         <select name="namaProdi" id='namaProdi' class="form-select">
                             <option value="" selected disabled>-- Pilih Program Studi --</option>
-                            @foreach($prodiList as $namaProdi)
-                                <option value="{{ $namaProdi }}" {{ $mk->namaProdi == $namaProdi ? 'selected' : '' }}>{{ $namaProdi }}</option>
+                            @foreach ($prodiList as $namaProdi)
+                                <option value="{{ $namaProdi }}" {{ $mk->namaProdi == $namaProdi ? 'selected' : '' }}>
+                                    {{ $namaProdi }}</option>
                             @endforeach
                             </option>
                         </select>
@@ -56,7 +57,6 @@
                         <textarea name="deskripsi" id="editor" row="3" class="form-control" placeholder="Deskripsi Mata Kuliah"
                             value="{{ old('deskripsi') ? old('deskripsi') : $mk->deskripsiMK }}">{{ old('deskripsi') ? old('deskripsi') : $mk->deskripsiMK }}</textarea>
                     </div>
-
 
                     <div class="form-group">
                         <label>Kategori Mata Kuliah</label>
@@ -142,38 +142,36 @@
                         </div>
                         <div class="form-group">
                             @error('mat_kodeMK')
-                            <h6 style="color: #BF2C45">{{ $message }}</h6>
+                                <h6 style="color: #BF2C45">{{ $message }}</h6>
                             @enderror
                             <select name="mat_kodeMK[]" id="mat_kodeMK" class="form-select mb-1">
                                 {{-- <option value="" @if (!$mk->mat_kodeMK) selected @endif disabled>-- Pilih MK Prasyarat --</option> --}}
                                 <option value="" disabled selected>-- Pilih MK Prasyarat --</option>
-                                    @foreach ($mks as $item)
+                                @foreach ($mks as $item)
                                     <option value="{{ $item->kodeMK }}" @if ($mk->mat_kodeMK == $item->kodeMK) selected @endif>
                                         {{ $item->namaMK }}</option>
-                                    @endforeach
+                                @endforeach
                                 <option value="">Tidak ada Prasyarat</option>
                             </select>
                         </div>
                     </div>
 
-
                     <!-- JavaScript -->
                     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-                    <script
-                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js">
-                    </script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
                     <script type="text/javascript">
                         var i = 0;
-                        $("#dynamic-ar").click(function () {
+                        $("#dynamic-ar").click(function() {
                             ++i;
                             $("#dynamicAddRemove").append(
-                                '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="mat_kodeMK[' + i + ']" id="judul_pustaka" class="form-select mb-1"><option value="" @if (!$mk->mat_kodeMK) selected @endif disabled>-- Pilih MKPrasyarat --</option>@foreach ($mks as $item)<option value="{{ $item->kodeMK }}" @if ($mk->mat_kodeMK == $item->kodeMK) selected @endif>{{ $item->namaMK }}</option>@endforeach</select></td></div>'
+                                '<div class="dynamic"><div class="d-flex justify-content-end"><button type="button" class="btn btn-outline-danger remove-input-field mb-2">Delete</button></div><td><select name="mat_kodeMK[' +
+                                i +
+                                ']" id="judul_pustaka" class="form-select mb-1"><option value="" @if (!$mk->mat_kodeMK) selected @endif disabled>-- Pilih MKPrasyarat --</option>@foreach ($mks as $item)<option value="{{ $item->kodeMK }}" @if ($mk->mat_kodeMK == $item->kodeMK) selected @endif>{{ $item->namaMK }}</option>@endforeach</select></td></div>'
                             );
                         });
-                        $(document).on('click', '.remove-input-field', function () {
+                        $(document).on('click', '.remove-input-field', function() {
                             $(this).parents('.dynamic').remove();
                         });
-
                     </script>
 
                     <div class="form-group">
@@ -181,12 +179,13 @@
                         @error('prasyarat_tambahan')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <textarea name="prasyarat_tambahan" row="3" class="form-control" placeholder="Prasyarat Tambahan Mata Kuliah">{{ old('prasyarat_tambahan') ? old('prasyarat_tambahan') : $mk->prasyaratTambahan }}</textarea>
+                        <textarea name="prasyarat_tambahan" row="3" class="form-control"
+                            placeholder="Prasyarat Tambahan Mata Kuliah">{{ old('prasyarat_tambahan') ? old('prasyarat_tambahan') : $mk->prasyaratTambahan }}</textarea>
                     </div>
 
                     <div class="form-group pt-4">
-                        <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i
-                                class="fa fa-fw fa-plus-circle"></i>
+                        <button type="submit" name="submit" value="submit" id="submit"
+                            class="btn btn-dark btn-sm"><i class="fa fa-fw fa-plus-circle"></i>
                             Confirm</button>
                     </div>
                 </form>
@@ -195,16 +194,15 @@
     </div>
     <script>
         ClassicEditor
-            .create( document.querySelector( '#editor' ),
-            {
-                ckfinder:{
-                    uploadUrl:"{{ route('ckeditor.upload',['_token'=>csrf_token()]) }}",
+            .create(document.querySelector('#editor'), {
+                    ckfinder: {
+                        uploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}",
+                    }
                 }
-            }
-            
+
             )
-            .catch( error => {
-                console.error( error );
-            } );
+            .catch(error => {
+                console.error(error);
+            });
     </script>
 @endsection

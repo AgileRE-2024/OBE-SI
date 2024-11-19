@@ -37,9 +37,9 @@
                     @foreach ($list_kolom as $tp)
                         <th scope="col">
                             {{-- <span itemid="{{ $tp }}"> --}}
-                                {{ $tp}}
+                            {{ $tp }}
                             {{-- </span> --}}
-                            </th>
+                        </th>
                     @endforeach
                 </tr>
             </thead>
@@ -53,24 +53,43 @@
                                 $prefix_baru = explode(' ', $baru)[0];
                                 if (strpos($asli, $prefix_baru) === false) {
                                     if (strpos($asli, '-')) {
-                                        if (($prefix_asli === 'Awal' && explode(' ', $asli)[2] !== 'Akhir') || ($prefix_asli !== 'Awal' && explode(' ', $asli)[2] === 'Akhir')) {
+                                        if (
+                                            ($prefix_asli === 'Awal' && explode(' ', $asli)[2] !== 'Akhir') ||
+                                            ($prefix_asli !== 'Awal' && explode(' ', $asli)[2] === 'Akhir')
+                                        ) {
                                             return 'Awal - Akhir Semester';
                                         }
                                         return $asli;
                                     } else {
                                         switch ($prefix_asli) {
                                             case 'Awal':
-                                                return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+                                                return $prefix_asli .
+                                                    ' - ' .
+                                                    $prefix_baru .
+                                                    ' ' .
+                                                    explode(' ', $asli)[1];
 
                                             case 'Tengah':
                                                 if ($prefix_baru == 'Awal') {
-                                                    return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+                                                    return $prefix_baru .
+                                                        ' - ' .
+                                                        $prefix_asli .
+                                                        ' ' .
+                                                        explode(' ', $asli)[1];
                                                 } else {
-                                                    return $prefix_asli . ' - ' . $prefix_baru . ' ' . explode(' ', $asli)[1];
+                                                    return $prefix_asli .
+                                                        ' - ' .
+                                                        $prefix_baru .
+                                                        ' ' .
+                                                        explode(' ', $asli)[1];
                                                 }
 
                                             case 'Akhir':
-                                                return $prefix_baru . ' - ' . $prefix_asli . ' ' . explode(' ', $asli)[1];
+                                                return $prefix_baru .
+                                                    ' - ' .
+                                                    $prefix_asli .
+                                                    ' ' .
+                                                    explode(' ', $asli)[1];
 
                                             default:
                                                 return $asli;
@@ -85,40 +104,49 @@
 
                     $iteration = 0;
                 @endphp
-                    @foreach ($list_cpl as $cpl)
+                @foreach ($list_cpl as $cpl)
                     @foreach ($cpl->CPMK as $cpmk)
-                    @foreach($cpmk->Mata_Kuliah as $mk)
-                        <tr>
-                            @php
-                                $iteration++;
-                            @endphp
-                            <th scope="row">{{ $iteration }}</th>
-                            <th scope="row" class="text-start"><span itemid="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span></th>
-                            <th scope="row" class="text-start"><span itemid="{{ $mk->namaMK }}"> {{ $mk->kodeMK  }}</span></th>
-                            <th scope="row" class="text-start"><span itemid="{{ $cpmk->deskripsiCPMK }}"> {{ $cpmk->kodeCPMK  }}</span></th>
-                            @foreach ($list_kolom as $tp)
-                            @php
-                                    $checked = false;
-                                    foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
-                                        foreach ($detail_rps->where('kodePenilaian',$ltp->kodePenilaian) as $minggu) {
-                                            foreach ($list_minggurps->where('kodeMingguRPS',$minggu->kodeMingguRPS) as $subCpmks) {
-                                                if($subCpmks->SubCPMK->CPMK->kodeCPMK == $cpmk->kodeCPMK) {
-                                                    $checked = true;
+                        @foreach ($cpmk->Mata_Kuliah as $mk)
+                            <tr>
+                                @php
+                                    $iteration++;
+                                @endphp
+                                <th scope="row">{{ $iteration }}</th>
+                                <th scope="row" class="text-start"><span
+                                        itemid="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span></th>
+                                <th scope="row" class="text-start"><span itemid="{{ $mk->namaMK }}">
+                                        {{ $mk->kodeMK }}</span></th>
+                                <th scope="row" class="text-start"><span itemid="{{ $cpmk->deskripsiCPMK }}">
+                                        {{ $cpmk->kodeCPMK }}</span></th>
+                                @foreach ($list_kolom as $tp)
+                                    @php
+                                        $checked = false;
+                                        foreach ($list_teknikpenilaian->where('teknikPenilaian', $tp) as $ltp) {
+                                            foreach (
+                                                $detail_rps->where('kodePenilaian', $ltp->kodePenilaian)
+                                                as $minggu
+                                            ) {
+                                                foreach (
+                                                    $list_minggurps->where('kodeMingguRPS', $minggu->kodeMingguRPS)
+                                                    as $subCpmks
+                                                ) {
+                                                    if ($subCpmks->SubCPMK->CPMK->kodeCPMK == $cpmk->kodeCPMK) {
+                                                        $checked = true;
+                                                    }
                                                 }
                                             }
                                         }
-                                    }
-                                @endphp
-                                    <td><input type="checkbox" name="" id="" @if($checked) checked @endif disabled></td>
-                            @endforeach  
-                        </tr>
+                                    @endphp
+                                    <td><input type="checkbox" name="" id=""
+                                            @if ($checked) checked @endif disabled></td>
+                                @endforeach
+                            </tr>
+                        @endforeach
                     @endforeach
-                    @endforeach
-                    @endforeach 
+                @endforeach
             </tbody>
         </table>
     </div>
 </body>
 
 </html>
-

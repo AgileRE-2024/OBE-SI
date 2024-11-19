@@ -15,7 +15,8 @@
                         @error('nama_instrumen_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_instrumen_penilaian" class="form-control" placeholder="Nama Instrumen Penilaian">
+                        <input type="text" name="nama_instrumen_penilaian" class="form-control"
+                            placeholder="Nama Instrumen Penilaian">
                     </div>
 
                     <div class="form-group">
@@ -23,7 +24,8 @@
                         @error('deskripsi_instrumen_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="deskripsi_instrumen_penilaian" class="form-control" placeholder="Deskripsi">
+                        <input type="text" name="deskripsi_instrumen_penilaian" class="form-control"
+                            placeholder="Deskripsi">
                     </div>
 
                     <div class="form-group pt-4">

@@ -17,7 +17,8 @@
                         @error('nama_metode')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_metode" class="form-control" placeholder="Nama metode"   value="{{ old('nama_metode') ? old('nama_metode') : $metode->nama_metode }}">
+                        <input type="text" name="nama_metode" class="form-control" placeholder="Nama metode"
+                            value="{{ old('nama_metode') ? old('nama_metode') : $metode->nama_metode }}">
                     </div>
 
                     <div class="form-group">
@@ -25,7 +26,8 @@
                         @error('deskripsi_metode')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="deskripsi_metode" class="form-control" placeholder="Deskripsi"  value="{{ old('deskripsi_metode') ? old('deskripsi_metode') : $metode->deskripsi_metode }}">
+                        <input type="text" name="deskripsi_metode" class="form-control" placeholder="Deskripsi"
+                            value="{{ old('deskripsi_metode') ? old('deskripsi_metode') : $metode->deskripsi_metode }}">
                     </div>
 
                     <div class="form-group pt-4">

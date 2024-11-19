@@ -23,7 +23,8 @@
                         @error('deskripsi_teknik_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="deskripsi_teknik_penilaian" class="form-control" placeholder="Deskripsi">
+                        <input type="text" name="deskripsi_teknik_penilaian" class="form-control"
+                            placeholder="Deskripsi">
                     </div>
 
                     <div class="form-group pt-4">

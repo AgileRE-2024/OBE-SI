@@ -13,10 +13,14 @@
         </div>
         <div class="d-flex justify-content-end pt-2">
             <div class="pr-3">
-                <a class="btn btn-outline-danger" id="exportPDFButton" href="{{ route ('kurikulum.pemetaan.cetakpdfcplmk') }}"><i class="bi bi-file-earmark-pdf-fill"> </i>Export PDF</a>
+                <a class="btn btn-outline-danger" id="exportPDFButton"
+                    href="{{ route('kurikulum.pemetaan.cetakpdfcplmk') }}"><i class="bi bi-file-earmark-pdf-fill">
+                    </i>Export PDF</a>
             </div>
             <div>
-                <a class="btn btn-success" id="exportExcelButton" href="{{ route('kurikulum.pemetaan.cetakexcelcplmk') }}"><i class="bi bi-file-earmark-excel"> </i>Export Excel</a>
+                <a class="btn btn-success" id="exportExcelButton"
+                    href="{{ route('kurikulum.pemetaan.cetakexcelcplmk') }}"><i class="bi bi-file-earmark-excel"> </i>Export
+                    Excel</a>
             </div>
         </div>
         <br>
@@ -37,7 +41,7 @@
                             </span>
                             {{-- <span data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="{{ $cpl->deskripsiCPL }}">{{ $cpl->kodeCPL }}</span> --}}
-                            </th>
+                        </th>
                     @endforeach
                 </tr>
             </thead>
@@ -58,7 +62,12 @@
                             @php
                                 $isTrue = false;
                                 foreach ($list_cpmk->where('kodeCPL', $cpl->kodeCPL) as $cpmk) {
-                                    if ($detail_mk_cpmk->where('kodeMK', $mk->kodeMK)->where('kodeCPMK', $cpmk->kodeCPMK)->count()) {
+                                    if (
+                                        $detail_mk_cpmk
+                                            ->where('kodeMK', $mk->kodeMK)
+                                            ->where('kodeCPMK', $cpmk->kodeCPMK)
+                                            ->count()
+                                    ) {
                                         $isTrue = true;
                                         break;
                                     }
@@ -66,7 +75,8 @@
                                 $isTrueArray[$cpl->kodeCPL] = $isTrue; // Simpan status isTrue ke dalam array
                             @endphp
                             <td>
-                                <input type="checkbox" id="{{ $mk->kodeMK }}_{{ $cpl->kodeCPL }}" disabled @if ($isTrue) checked @endif>
+                                <input type="checkbox" id="{{ $mk->kodeMK }}_{{ $cpl->kodeCPL }}" disabled
+                                    @if ($isTrue) checked @endif>
                             </td>
                         @endforeach
                     </tr>
@@ -76,13 +86,13 @@
 
     </div>
     <style>
-
         /* Style the tooltip */
         span[itemid] {
             position: relative;
             cursor: pointer;
             /* display: inline-block; */
         }
+
         span[itemid]:hover::after {
             content: attr(itemid);
             /* overflow: hidden; */
@@ -108,6 +118,7 @@
             /* transition: opacity 3s; */
             /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
         }
+
         span[itemid]:hover::before {
             content: "";
             border-style: solid;
@@ -121,8 +132,6 @@
             /* transition: opacity 0.3s ease, visibility 0s linear 0.3s; */
         }
 
-
-
         input[type="checkbox"] {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -133,8 +142,9 @@
             height: 25px;
             outline: none;
             cursor: pointer;
-            position: relative ;
+            position: relative;
         }
+
         input[type="checkbox"]:checked::before {
             content: "\2714";
             font-size: 14px;
@@ -148,15 +158,14 @@
             background-color: white;
             border-color: #686565;
         }
-
-        </style>
-        <script>
+    </style>
+    <script>
         let getIdCheckbox = document.getElementById("color")
         changeColor = () => {
-            if (getIdCheckbox.checked == true){
+            if (getIdCheckbox.checked == true) {
                 document.getElementById("red").style.color = 'red'
                 document.getElementById("green").style.color = 'green'
-            }else {
+            } else {
                 document.getElementById("red").style.color = 'white'
                 document.getElementById("green").style.color = 'white'
             }

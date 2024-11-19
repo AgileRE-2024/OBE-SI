@@ -57,7 +57,8 @@
                         @foreach ($pl_list as $pl)
                             <td @if (
                                 $pemetaan->where('kodePL', '===', $pl->kodePL)->count() == 0 ||
-                                    $pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0) style="background-color: yellow;" @endif>
+                                    $pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->count() == 0
+                            ) style="background-color: yellow;" @endif>
                                 <input type="checkbox" style="width: 25px; height: 25px; border: none; outline: none;"
                                     @if ($pemetaan->where('kodeCPL', '===', $cpl->kodeCPL)->where('kodePL', '===', $pl->kodePL)->count()) checked @endif>
                             </td>

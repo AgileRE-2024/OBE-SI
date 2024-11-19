@@ -8,7 +8,8 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form method="post" action="{{ route('edit_rps.update_komponen_penilaian', ['id_komponen_penilaian' => $komponen_penilaian->id_komponen_penilaian, 'kodeRPS' => $kodeRPS]) }}">
+                <form method="post"
+                    action="{{ route('edit_rps.update_komponen_penilaian', ['id_komponen_penilaian' => $komponen_penilaian->id_komponen_penilaian, 'kodeRPS' => $kodeRPS]) }}">
                     @csrf
                     @method('put')
 
@@ -17,7 +18,9 @@
                         @error('nama_komponen_penilaian')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="nama_komponen_penilaian" class="form-control" placeholder="Nama komponen penilaian"   value="{{ old('nama_komponen_penilaian') ? old('nama_komponen_penilaian') : $komponen_penilaian->nama_komponen_penilaian }}">
+                        <input type="text" name="nama_komponen_penilaian" class="form-control"
+                            placeholder="Nama komponen penilaian"
+                            value="{{ old('nama_komponen_penilaian') ? old('nama_komponen_penilaian') : $komponen_penilaian->nama_komponen_penilaian }}">
                     </div>
 
                     <div class="form-group pt-4">

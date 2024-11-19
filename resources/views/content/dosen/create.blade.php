@@ -12,7 +12,7 @@
             <div class="col-sm-8">
                 <form method="POST" action="{{ route('edit_rps.store_peran_dosen', ['kodeRPS' => $kodeRPS]) }}">
                     @csrf
-                {{-- <div class="form-group">
+                    {{-- <div class="form-group">
                     <label>NIP</label>
                     @error('nip')
                         <h6 style="color: #BF2C45">{{ $message }}</h6>
@@ -24,21 +24,21 @@
                         @endforeach
                     </select>
                 </div> --}}
-                <div class="form-group">
-                    <label>Dosen</label>
-                    @error('nip')
-                        <h6 style="color: #BF2C45">{{ $message }}</h6>
-                    @enderror
-                    <select name="nip" id='nip' class="form-select">
-                        <option value="">-- Pilih Dosen --</option>
-                        @foreach ($dosen as $item)
-                            <option value="{{ $item->nip }}">{{ $item->nip }} -
-                                {{ $item->namaDosen }}</option>
-                        @endforeach
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label>Dosen</label>
+                        @error('nip')
+                            <h6 style="color: #BF2C45">{{ $message }}</h6>
+                        @enderror
+                        <select name="nip" id='nip' class="form-select">
+                            <option value="">-- Pilih Dosen --</option>
+                            @foreach ($dosen as $item)
+                                <option value="{{ $item->nip }}">{{ $item->nip }} -
+                                    {{ $item->namaDosen }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
-                <div class="form-group">
+                    <div class="form-group">
                         <label>Peran Dosen</label>
                         @error('peranDosen')
                             <p style="color: #BF2C45">{{ $message }}</p>
@@ -50,7 +50,7 @@
                             <option value="Koordinator BK">Koordinator BK</option>
                             <option value="Dosen Pengampu">Dosen Pengampu</option>
                         </select>
-                </div>
+                    </div>
 
                     <div class="form-group pt-4">
                         <button type="submit" name="submit" value="submit" id="submit" class="btn btn-dark btn-sm"><i
@@ -58,7 +58,7 @@
                             Confirm</button>
                     </div>
                 </form>
-                
+
             </div>
         </div>
     </div>

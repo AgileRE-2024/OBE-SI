@@ -51,7 +51,7 @@
                         <td scope="row">
                             {{ $cpl->kodeCPL }}</td>
                         <td scope="row">
-                            {{ $cpl->levelCPL }}</td>    
+                            {{ $cpl->levelCPL }}</td>
                         <td scope="row">
                             {{ $cpl->referensiCPL }}
                         </td>

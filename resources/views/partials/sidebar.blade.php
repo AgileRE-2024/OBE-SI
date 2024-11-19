@@ -36,11 +36,9 @@
                 @endphp
 
                 <li id="kurikulum"
-                    @if (Str::startsWith(request()->route()->getName(),
-                            'kurikulum')) class="nav-item menu-open" @else class="nav-item" @endif>
+                    @if (Str::startsWith(request()->route()->getName(), 'kurikulum')) class="nav-item menu-open" @else class="nav-item" @endif>
                     <a href="{{ route('kurikulum.data.profil_lulusan') }}" class="nav-link"
-                        @if (Str::startsWith(request()->route()->getName(),
-                                'kurikulum')) style="background-color: #F6D743; color: black;" @endif>
+                        @if (Str::startsWith(request()->route()->getName(), 'kurikulum')) style="background-color: #F6D743; color: black;" @endif>
                         <p>
                             <i class="bi bi-files"></i>
                             Kurikulum
@@ -203,7 +201,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('kurikulum.pemetaan.organisasi_mata_kuliah') }}" class="nav-link"
+                                    <a href="{{ route('kurikulum.pemetaan.organisasi_mata_kuliah') }}"
+                                        class="nav-link"
                                         @if (URL::current() === route('kurikulum.pemetaan.organisasi_mata_kuliah')) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
                                             <i class="bi bi-caret-right-fill"></i>
@@ -212,7 +211,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('kurikulum.pemetaan.cpl_sndikti_cpl_prodi') }}" class="nav-link"
+                                    <a href="{{ route('kurikulum.pemetaan.cpl_sndikti_cpl_prodi') }}"
+                                        class="nav-link"
                                         @if (URL::current() === route('kurikulum.pemetaan.cpl_sndikti_cpl_prodi')) style="background-color: #989898; color: black;" @endif>
                                         <p style="font-size: 14px">
                                             <i class="bi bi-caret-right-fill"></i>
