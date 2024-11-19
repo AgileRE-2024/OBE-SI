@@ -121,12 +121,14 @@ class CPLProdiController extends Controller
         if ($request->kodeCPL == $cpl) {
             $validator = Validator::make($request->all(), [
                 "kodeCPL" => "required",
-                "deskripsiCPL" => "required",
+                "levelCPL" => "required",
+                "deskripsiCPL" => "required",   
                 "referensiCPL" => "required",
             ]);
         } else {
             $validator = Validator::make($request->all(), [
                 "kodeCPL" => "required|unique:cpl_prodi,kodeCPL",
+                "levelCPL" => "required",
                 "deskripsiCPL" => "required",
                 "referensiCPL" => "required",
             ]);
@@ -147,6 +149,7 @@ class CPLProdiController extends Controller
         $cpl = CPL_Prodi::where("kodeCPL", $cpl)->first();
         $cpl->update([
             "kodeCPL" => $request->kodeCPL,
+            "levelCPL" => $request->levelCPL,
             "deskripsiCPL" => $request->deskripsiCPL,
             "referensiCPL" => $request->referensiCPL,
         ]);
