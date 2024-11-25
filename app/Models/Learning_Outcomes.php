@@ -8,10 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Learning_Outcomes extends Model
 {
     use HasFactory;
-    protected $table = 'learning_outcomes';
+    protected $table = "learning_outcomes";
 
-    protected $fillable = [
-        'level_lo',
-        'kata_kerja'
-    ];
+    protected $fillable = ["level_lo", "kata_kerja"];
 }

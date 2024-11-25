@@ -294,13 +294,13 @@
                     <td class="td-rps">{{ $minggu_rps->waktuPembelajaran ?? '' }}</td>
                     <td class="td-rps">{{ $minggu_rps->pengalaman_belajar ?? '' }}</td>
                     <!-- <td class="td-rps">
-    @if ($minggu_rps->kodeSubCPMK)
+        @if ($minggu_rps->kodeSubCPMK)
     <p>Kriteria penilaian:
-                                {{ $minggu_rps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
-                            <p>Indikator:
-                                {{ $minggu_rps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
+                                    {{ $minggu_rps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
+                                <p>Indikator:
+                                    {{ $minggu_rps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
     @endif
-                    </td> -->
+                        </td> -->
                     <td class="td-rps">
                         @if ($minggu_rps->id_teknik_penilaian)
                             <p>Teknik penilaian:

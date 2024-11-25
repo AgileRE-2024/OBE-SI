@@ -83,7 +83,8 @@
             });
 
             exportPDF.href = "{{ route('penilaian.export', [':tahun_ajaran', 'pdf']) }}".replace(':tahun_ajaran', value);
-            exportExcel.href = "{{ route('penilaian.export', [':tahun_ajaran', 'excel']) }}".replace(':tahun_ajaran', value);
+            exportExcel.href = "{{ route('penilaian.export', [':tahun_ajaran', 'excel']) }}".replace(':tahun_ajaran',
+            value);
 
             exportPDF.onclick = function() {
                 return true;

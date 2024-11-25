@@ -165,7 +165,8 @@
 
                     </td>
                     <td class="align-middle" colspan="3" style="width: 25%">
-                        <br><br>TTD<br>{{ $dosen_list->where('nip', '=', $rps->kps)->first()->namaDosen ?? '-' }}</td>
+                        <br><br>TTD<br>{{ $dosen_list->where('nip', '=', $rps->kps)->first()->namaDosen ?? '-' }}
+                    </td>
                 </tr>
                 @php
                     $list_cpl = collect();

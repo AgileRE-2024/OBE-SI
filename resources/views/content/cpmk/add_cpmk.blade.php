@@ -48,6 +48,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="cplLevel">Level CPMK</label>
+                        <select name="levelCPL" class="form-control" id="cplLevel" onchange="toggleDescription()">
+                            <option disabled selected>-- Pilih Level --</option>
+                            @foreach ($levels as $level)
+                                <option value="{{ $level }}">{{ $level }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label>Deskripsi CPMK</label>
                         @error('deskripsi')
                             <p style="color: #BF2C45">{{ $message }}</p>

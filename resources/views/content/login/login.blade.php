@@ -79,8 +79,8 @@
                             </p>
 
                             <!-- <p class="mt-4">Belum punya akun?
-                            <a href="/register" id="hyperReset" style="text-align:center; margin: 0 0 0 0; color: white; text-decoration-line:underline;"><b>Daftar</b></a>
-                        </p> -->
+                                <a href="/register" id="hyperReset" style="text-align:center; margin: 0 0 0 0; color: white; text-decoration-line:underline;"><b>Daftar</b></a>
+                            </p> -->
                         </center>
                     </form>
                 </div>

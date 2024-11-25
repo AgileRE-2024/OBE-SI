@@ -8,6 +8,7 @@ use App\Models\CPMK;
 use App\Models\CPL_Prodi;
 use App\Models\SubCPMK;
 use App\Models\Detail_MK_CPMK;
+use App\Models\Learning_Outcomes;
 use Illuminate\Support\Facades\Validator;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
@@ -30,6 +31,19 @@ class CRUDCPMKController extends Controller
      */
     public function create()
     {
+        // Fetch levels and their verbs from the database
+        $learningOutcomes = Learning_Outcomes::all();
+
+        // Prepare the levels and verbs for the frontend
+        $levels = $learningOutcomes->pluck("level_lo")->unique();
+        // Prepare the levels and verbs for the frontend
+        $levels = $learningOutcomes->pluck("level_lo")->unique();
+        $verbsByLevel = $learningOutcomes
+            ->groupBy("level_lo")
+            ->map(function ($items) {
+                return $items->pluck("kata_kerja")->toArray();
+            });
+
         $cplp = CPL_Prodi::all();
         return view("content.cpmk.add_cpmk", [
             "title" => "Tambah CPMK",

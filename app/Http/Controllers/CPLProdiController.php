@@ -65,7 +65,7 @@ class CPLProdiController extends Controller
         $learningOutcomes = Learning_Outcomes::all();
 
         // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck('level_lo')->unique();
+        $levels = $learningOutcomes->pluck("level_lo")->unique();
 
         $cpl = CPL_Prodi::where("kodeCPL", $cpl)->first();
         return view("content.cpl_prodi.edit_cpl_prodi", [
@@ -81,10 +81,12 @@ class CPLProdiController extends Controller
         $learningOutcomes = Learning_Outcomes::all();
 
         // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck('level_lo')->unique();
-        $verbsByLevel = $learningOutcomes->groupBy('level_lo')->map(function ($items) {
-            return $items->pluck('kata_kerja')->toArray();
-        });
+        $levels = $learningOutcomes->pluck("level_lo")->unique();
+        $verbsByLevel = $learningOutcomes
+            ->groupBy("level_lo")
+            ->map(function ($items) {
+                return $items->pluck("kata_kerja")->toArray();
+            });
 
         return view("content.cpl_prodi.add_cpl_prodi", [
             "title" => "Tambah CPL Prodi",
@@ -93,8 +95,7 @@ class CPLProdiController extends Controller
         ]);
     }
 
-
-   public function storeCPLProdi(Request $request)
+    public function storeCPLProdi(Request $request)
     {
         $request->validate([
             "kodeCPL" => "required|unique:cpl_prodi,kodeCPL",
@@ -115,14 +116,13 @@ class CPLProdiController extends Controller
             ->with("success", "CPL Prodi berhasil ditambahkan");
     }
 
-
     public function updateCPLProdi(Request $request, $cpl)
     {
         if ($request->kodeCPL == $cpl) {
             $validator = Validator::make($request->all(), [
                 "kodeCPL" => "required",
                 "levelCPL" => "required",
-                "deskripsiCPL" => "required",   
+                "deskripsiCPL" => "required",
                 "referensiCPL" => "required",
             ]);
         } else {

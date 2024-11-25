@@ -20,12 +20,11 @@ class LearningOutcomeController extends Controller
 
     public function addLevelLO()
     {
-
         // Fetch levels and their verbs from the database
         $learningOutcomes = Learning_Outcomes::all();
 
         // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck('level_lo')->unique();
+        $levels = $learningOutcomes->pluck("level_lo")->unique();
 
         return view("content.learning_outcome.add_learning_outcome", [
             "title" => "Tambah Level LO",
@@ -41,14 +40,16 @@ class LearningOutcomeController extends Controller
         ]);
 
         // Check if the combination of level_lo and kata_kerja already exists
-        $exists = Learning_Outcomes::where('level_lo', $request->level_lo)
-            ->where('kata_kerja', $request->kata_kerja)
+        $exists = Learning_Outcomes::where("level_lo", $request->level_lo)
+            ->where("kata_kerja", $request->kata_kerja)
             ->exists();
 
         if ($exists) {
             return redirect()
                 ->back()
-                ->withErrors(['kata_kerja' => 'Kata kerja sudah ada untuk level LO ini.'])
+                ->withErrors([
+                    "kata_kerja" => "Kata kerja sudah ada untuk level LO ini.",
+                ])
                 ->withInput();
         }
 
@@ -59,10 +60,9 @@ class LearningOutcomeController extends Controller
         ]);
 
         return redirect()
-            ->route('kurikulum.data.learning_outcome')
-            ->with('success', 'Learning Outcome berhasil ditambahkan.');
+            ->route("kurikulum.data.learning_outcome")
+            ->with("success", "Learning Outcome berhasil ditambahkan.");
     }
-
 
     public function update(Request $request, $id)
     {
@@ -72,15 +72,17 @@ class LearningOutcomeController extends Controller
         ]);
 
         // Check if the combination of level_lo and kata_kerja already exists (excluding the current record)
-        $exists = Learning_Outcomes::where('level_lo', $request->level_lo)
-            ->where('kata_kerja', $request->kata_kerja)
-            ->where('id', '!=', $id) // Exclude the current record
+        $exists = Learning_Outcomes::where("level_lo", $request->level_lo)
+            ->where("kata_kerja", $request->kata_kerja)
+            ->where("id", "!=", $id) // Exclude the current record
             ->exists();
 
         if ($exists) {
             return redirect()
                 ->back()
-                ->withErrors(['kata_kerja' => 'Kata kerja sudah ada untuk level LO ini.'])
+                ->withErrors([
+                    "kata_kerja" => "Kata kerja sudah ada untuk level LO ini.",
+                ])
                 ->withInput();
         }
 
@@ -92,10 +94,9 @@ class LearningOutcomeController extends Controller
         ]);
 
         return redirect()
-            ->route('kurikulum.data.learning_outcome')
-            ->with('success', 'Learning Outcome berhasil diubah.');
+            ->route("kurikulum.data.learning_outcome")
+            ->with("success", "Learning Outcome berhasil diubah.");
     }
-
 
     public function edit($id)
     {
@@ -105,7 +106,7 @@ class LearningOutcomeController extends Controller
         $learningOutcomes = Learning_Outcomes::all();
 
         // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck('level_lo')->unique();
+        $levels = $learningOutcomes->pluck("level_lo")->unique();
 
         return view("content.learning_outcome.edit_learning_outcome", [
             "title" => "Edit Level LO",

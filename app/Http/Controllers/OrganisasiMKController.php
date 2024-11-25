@@ -137,7 +137,9 @@ class OrganisasiMKController extends Controller
 
         $pdf = PDF::loadView(
             "content.pemetaan_organisasi_mk.organisasi_mk_pdf",
-            ["data" => $data]
+            [
+                "data" => $data,
+            ]
         )->setPaper("a4", "landscape");
         return $pdf->download($filename);
     }

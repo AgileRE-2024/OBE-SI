@@ -418,429 +418,429 @@ Route::prefix("/dashboard/kurikulum")
         Route::prefix("/data")
             ->name("data.")
             ->group(function () {
-            Route::group(
-                ["middleware" => "role:kurikulum,dosen_kurikulum"],
-                function () {
-                    Route::get('/learning_outcome', [
-                        LearningOutcomeController::class,
-                        'index'
-                    ])->name('learning_outcome');
-                    Route::get('/learning_outcome/add', [
-                        LearningOutcomeController::class,
-                        'addLevelLO'                
-                        ])->name('add_learning_outcome');
-                    Route::post('/learning_outcome/store', [
-                        LearningOutcomeController::class,
-                        'storeLevelLO'
-                    ])->name('store_learning_outcome');
-                    Route::get('/learning_outcome/edit/{id}', [
-                        LearningOutcomeController::class,
-                        'edit'
-                    ])->name('edit_learning_outcome');
-                    Route::post('/learning_outcome/update/{id}', [
-                        LearningOutcomeController::class,
-                        'update'
-                    ])->name('update_learning_outcome');
-                    Route::delete('/learning_outcome/delete/{id}', [
-                        LearningOutcomeController::class,
-                        'delete'
-                    ])->name('delete_learning_outcome');
-                    Route::get("/addProfilLulusan", [
-                        ProfilLulusanController::class,
-                        "addProfilLulusan",
-                    ])->name("add_pl");
-                    Route::post("/addProfilLulusan", [
-                        ProfilLulusanController::class,
-                        "storeProfilLulusan",
-                    ])->name("store_pl");
-                    Route::get("/editProfilLulusan/{pl}", [
-                        ProfilLulusanController::class,
-                        "edit",
-                    ])->name("edit_pl");
-                    Route::put("/editProfilLulusan/{pl}", [
-                        ProfilLulusanController::class,
-                        "update",
-                    ])->name("update_pl");
-                    Route::get("/deleteProfilLulusan/{pl}", [
-                        ProfilLulusanController::class,
-                        "delete",
-                    ])->name("delete_pl");
+                Route::group(
+                    ["middleware" => "role:kurikulum,dosen_kurikulum"],
+                    function () {
+                        Route::get("/learning_outcome", [
+                            LearningOutcomeController::class,
+                            "index",
+                        ])->name("learning_outcome");
+                        Route::get("/learning_outcome/add", [
+                            LearningOutcomeController::class,
+                            "addLevelLO",
+                        ])->name("add_learning_outcome");
+                        Route::post("/learning_outcome/store", [
+                            LearningOutcomeController::class,
+                            "storeLevelLO",
+                        ])->name("store_learning_outcome");
+                        Route::get("/learning_outcome/edit/{id}", [
+                            LearningOutcomeController::class,
+                            "edit",
+                        ])->name("edit_learning_outcome");
+                        Route::post("/learning_outcome/update/{id}", [
+                            LearningOutcomeController::class,
+                            "update",
+                        ])->name("update_learning_outcome");
+                        Route::delete("/learning_outcome/delete/{id}", [
+                            LearningOutcomeController::class,
+                            "delete",
+                        ])->name("delete_learning_outcome");
+                        Route::get("/addProfilLulusan", [
+                            ProfilLulusanController::class,
+                            "addProfilLulusan",
+                        ])->name("add_pl");
+                        Route::post("/addProfilLulusan", [
+                            ProfilLulusanController::class,
+                            "storeProfilLulusan",
+                        ])->name("store_pl");
+                        Route::get("/editProfilLulusan/{pl}", [
+                            ProfilLulusanController::class,
+                            "edit",
+                        ])->name("edit_pl");
+                        Route::put("/editProfilLulusan/{pl}", [
+                            ProfilLulusanController::class,
+                            "update",
+                        ])->name("update_pl");
+                        Route::get("/deleteProfilLulusan/{pl}", [
+                            ProfilLulusanController::class,
+                            "delete",
+                        ])->name("delete_pl");
 
-                    Route::get("/addCPLDikti", [
-                        CPLDiktiController::class,
-                        "addCPLDikti",
-                    ])->name("add_cpl_dikti");
-                    Route::post("/addCPLDikti", [
-                        CPLDiktiController::class,
-                        "storeCPLDikti",
-                    ])->name("store_cpl_dikti");
-                    Route::get("/editCPLDikti/{cpl}", [
-                        CPLDiktiController::class,
-                        "edit",
-                    ])->name("edit_cpl_dikti");
-                    Route::put("/editCPLDikti/{cpl}", [
-                        CPLDiktiController::class,
-                        "update",
-                    ])->name("update_cpl_dikti");
-                    Route::get("/deleteCPLDikti/{cpl}", [
-                        CPLDiktiController::class,
-                        "delete",
-                    ])->name("delete_cpl_dikti");
+                        Route::get("/addCPLDikti", [
+                            CPLDiktiController::class,
+                            "addCPLDikti",
+                        ])->name("add_cpl_dikti");
+                        Route::post("/addCPLDikti", [
+                            CPLDiktiController::class,
+                            "storeCPLDikti",
+                        ])->name("store_cpl_dikti");
+                        Route::get("/editCPLDikti/{cpl}", [
+                            CPLDiktiController::class,
+                            "edit",
+                        ])->name("edit_cpl_dikti");
+                        Route::put("/editCPLDikti/{cpl}", [
+                            CPLDiktiController::class,
+                            "update",
+                        ])->name("update_cpl_dikti");
+                        Route::get("/deleteCPLDikti/{cpl}", [
+                            CPLDiktiController::class,
+                            "delete",
+                        ])->name("delete_cpl_dikti");
 
-                    Route::get("/addCPLProdi", [
-                        CPLProdiController::class,
-                        "addCPLProdi",
-                    ])->name("add_cpl_prodi");
-                    Route::post("/addCPLProdi", [
-                        CPLProdiController::class,
-                        "storeCPLProdi",
-                    ])->name("store_cpl_prodi");
-                    Route::get("/editCPLProdi/{cpl}", [
-                        CPLProdiController::class,
-                        "edit",
-                    ])->name("edit_cpl_prodi");
-                    Route::put("/editCPLProdi/{cpl}", [
-                        CPLProdiController::class,
-                        "updateCPLProdi",
-                    ])->name("update_cpl_prodi");
-                    Route::get("/deleteCPLProdi/{cpl}", [
-                        CPLProdiController::class,
-                        "deleteCPLProdi",
-                    ])->name("delete_cpl_prodi");
+                        Route::get("/addCPLProdi", [
+                            CPLProdiController::class,
+                            "addCPLProdi",
+                        ])->name("add_cpl_prodi");
+                        Route::post("/addCPLProdi", [
+                            CPLProdiController::class,
+                            "storeCPLProdi",
+                        ])->name("store_cpl_prodi");
+                        Route::get("/editCPLProdi/{cpl}", [
+                            CPLProdiController::class,
+                            "edit",
+                        ])->name("edit_cpl_prodi");
+                        Route::put("/editCPLProdi/{cpl}", [
+                            CPLProdiController::class,
+                            "updateCPLProdi",
+                        ])->name("update_cpl_prodi");
+                        Route::get("/deleteCPLProdi/{cpl}", [
+                            CPLProdiController::class,
+                            "deleteCPLProdi",
+                        ])->name("delete_cpl_prodi");
 
-                    Route::get("/addBahanKajian", [
-                        BahanKajianController::class,
-                        "addBahanKajian",
-                    ])->name("add_bahan_kajian");
-                    Route::post("/addBahanKajian", [
-                        BahanKajianController::class,
-                        "storeBahanKajian",
-                    ])->name("store_bahan_kajian");
-                    Route::get("/editBahanKajian/{bk}", [
-                        BahanKajianController::class,
-                        "editBahanKajian",
-                    ])->name("edit_bahan_kajian");
-                    Route::put("/editBahanKajian/{bk}", [
-                        BahanKajianController::class,
-                        "updateBahanKajian",
-                    ])->name("update_bahan_kajian");
-                    Route::get("/deleteBahanKajian/{bk}", [
-                        BahanKajianController::class,
-                        "deleteBahanKajian",
-                    ])->name("delete_bahan_kajian");
+                        Route::get("/addBahanKajian", [
+                            BahanKajianController::class,
+                            "addBahanKajian",
+                        ])->name("add_bahan_kajian");
+                        Route::post("/addBahanKajian", [
+                            BahanKajianController::class,
+                            "storeBahanKajian",
+                        ])->name("store_bahan_kajian");
+                        Route::get("/editBahanKajian/{bk}", [
+                            BahanKajianController::class,
+                            "editBahanKajian",
+                        ])->name("edit_bahan_kajian");
+                        Route::put("/editBahanKajian/{bk}", [
+                            BahanKajianController::class,
+                            "updateBahanKajian",
+                        ])->name("update_bahan_kajian");
+                        Route::get("/deleteBahanKajian/{bk}", [
+                            BahanKajianController::class,
+                            "deleteBahanKajian",
+                        ])->name("delete_bahan_kajian");
 
-                    Route::get("/addMataKuliah", [
-                        MataKuliahController::class,
-                        "addMataKuliah",
-                    ])->name("add_mata_kuliah");
-                    Route::post("/addMataKuliah", [
-                        MataKuliahController::class,
-                        "storeMataKuliah",
-                    ])->name("store_mata_kuliah");
-                    Route::get("/editMataKuliah/{mk}", [
-                        MataKuliahController::class,
-                        "editMataKuliah",
-                    ])->name("edit_mata_kuliah");
-                    Route::put("/editMataKuliah/{mk}", [
-                        MataKuliahController::class,
-                        "updateMataKuliah",
-                    ])->name("update_mata_kuliah");
-                    Route::get("/deleteMataKuliah/{mk}", [
-                        MataKuliahController::class,
-                        "deleteMataKuliah",
-                    ])->name("delete_mata_kuliah");
+                        Route::get("/addMataKuliah", [
+                            MataKuliahController::class,
+                            "addMataKuliah",
+                        ])->name("add_mata_kuliah");
+                        Route::post("/addMataKuliah", [
+                            MataKuliahController::class,
+                            "storeMataKuliah",
+                        ])->name("store_mata_kuliah");
+                        Route::get("/editMataKuliah/{mk}", [
+                            MataKuliahController::class,
+                            "editMataKuliah",
+                        ])->name("edit_mata_kuliah");
+                        Route::put("/editMataKuliah/{mk}", [
+                            MataKuliahController::class,
+                            "updateMataKuliah",
+                        ])->name("update_mata_kuliah");
+                        Route::get("/deleteMataKuliah/{mk}", [
+                            MataKuliahController::class,
+                            "deleteMataKuliah",
+                        ])->name("delete_mata_kuliah");
 
-                    Route::get("/addCPMK", [
-                        CRUDCPMKController::class,
-                        "create",
-                    ])->name("add_cpmk");
-                    Route::post("/addCPMK", [
-                        CRUDCPMKController::class,
-                        "store",
-                    ])->name("store_cpmk");
-                    Route::get("/editCPMK/{cpmk}", [
-                        CRUDCPMKController::class,
-                        "edit",
-                    ])->name("edit_cpmk");
-                    Route::put("/editCPMK/{cpmk}", [
-                        CRUDCPMKController::class,
-                        "update",
-                    ])->name("update_cpmk");
-                    Route::get("/deleteCPMK/{cpmk}", [
-                        CRUDCPMKController::class,
-                        "destroy",
-                    ])->name("delete_cpmk");
+                        Route::get("/addCPMK", [
+                            CRUDCPMKController::class,
+                            "create",
+                        ])->name("add_cpmk");
+                        Route::post("/addCPMK", [
+                            CRUDCPMKController::class,
+                            "store",
+                        ])->name("store_cpmk");
+                        Route::get("/editCPMK/{cpmk}", [
+                            CRUDCPMKController::class,
+                            "edit",
+                        ])->name("edit_cpmk");
+                        Route::put("/editCPMK/{cpmk}", [
+                            CRUDCPMKController::class,
+                            "update",
+                        ])->name("update_cpmk");
+                        Route::get("/deleteCPMK/{cpmk}", [
+                            CRUDCPMKController::class,
+                            "destroy",
+                        ])->name("delete_cpmk");
 
-                    Route::get("/addSubCPMK", [
-                        SubCPMKController::class,
-                        "addSubCPMK",
-                    ])->name("add_sub_cpmk");
-                    Route::post("/addSubCPMK", [
-                        SubCPMKController::class,
-                        "storeSubCPMK",
-                    ])->name("store_sub_cpmk");
-                    Route::get("/editSubCPMK/{scpmk}", [
-                        SubCPMKController::class,
-                        "editSubCPMK",
-                    ])->name("edit_sub_cpmk");
-                    Route::put("/editSubCPMK/{scpmk}", [
-                        SubCPMKController::class,
-                        "updateSubCPMK",
-                    ])->name("update_sub_cpmk");
-                    Route::get("/deleteSubCPMK/{scpmk}", [
-                        SubCPMKController::class,
-                        "deleteSubCPMK",
-                    ])->name("delete_sub_cpmk");
-                }
-            );
+                        Route::get("/addSubCPMK", [
+                            SubCPMKController::class,
+                            "addSubCPMK",
+                        ])->name("add_sub_cpmk");
+                        Route::post("/addSubCPMK", [
+                            SubCPMKController::class,
+                            "storeSubCPMK",
+                        ])->name("store_sub_cpmk");
+                        Route::get("/editSubCPMK/{scpmk}", [
+                            SubCPMKController::class,
+                            "editSubCPMK",
+                        ])->name("edit_sub_cpmk");
+                        Route::put("/editSubCPMK/{scpmk}", [
+                            SubCPMKController::class,
+                            "updateSubCPMK",
+                        ])->name("update_sub_cpmk");
+                        Route::get("/deleteSubCPMK/{scpmk}", [
+                            SubCPMKController::class,
+                            "deleteSubCPMK",
+                        ])->name("delete_sub_cpmk");
+                    }
+                );
 
-            Route::group(
-                ["middleware" => "role:dosen,dosen_kurikulum"],
-                function () {
-                    Route::get("/addPustaka", [
-                        PustakaController::class,
-                        "addPustaka",
-                    ])->name("add_pustaka");
-                    Route::post("/addPustaka", [
-                        PustakaController::class,
-                        "storePustaka",
-                    ])->name("store_pustaka");
-                    Route::get("/editPustaka/{pustaka}", [
-                        PustakaController::class,
-                        "edit",
-                    ])->name("edit_pustaka");
-                    Route::put("/editPustaka/{pustaka}", [
-                        PustakaController::class,
-                        "update",
-                    ])->name("update_pustaka");
-                    Route::get("/deletePustaka/{pustaka}", [
-                        PustakaController::class,
-                        "delete",
-                    ])->name("delete_pustaka");
+                Route::group(
+                    ["middleware" => "role:dosen,dosen_kurikulum"],
+                    function () {
+                        Route::get("/addPustaka", [
+                            PustakaController::class,
+                            "addPustaka",
+                        ])->name("add_pustaka");
+                        Route::post("/addPustaka", [
+                            PustakaController::class,
+                            "storePustaka",
+                        ])->name("store_pustaka");
+                        Route::get("/editPustaka/{pustaka}", [
+                            PustakaController::class,
+                            "edit",
+                        ])->name("edit_pustaka");
+                        Route::put("/editPustaka/{pustaka}", [
+                            PustakaController::class,
+                            "update",
+                        ])->name("update_pustaka");
+                        Route::get("/deletePustaka/{pustaka}", [
+                            PustakaController::class,
+                            "delete",
+                        ])->name("delete_pustaka");
 
-                    Route::get("/addBentuk", [
-                        BentukController::class,
-                        "addBentuk",
-                    ])->name("add_bentuk");
-                    Route::post("/addBentuk", [
-                        BentukController::class,
-                        "storeBentuk",
-                    ])->name("store_bentuk");
-                    Route::get("/editBentuk/{bentuk}", [
-                        BentukController::class,
-                        "edit",
-                    ])->name("edit_bentuk");
-                    Route::put("/editBentuk/{bentuk}", [
-                        BentukController::class,
-                        "update",
-                    ])->name("update_bentuk");
-                    Route::get("/deleteBentuk/{bentuk}", [
-                        BentukController::class,
-                        "delete",
-                    ])->name("delete_bentuk");
+                        Route::get("/addBentuk", [
+                            BentukController::class,
+                            "addBentuk",
+                        ])->name("add_bentuk");
+                        Route::post("/addBentuk", [
+                            BentukController::class,
+                            "storeBentuk",
+                        ])->name("store_bentuk");
+                        Route::get("/editBentuk/{bentuk}", [
+                            BentukController::class,
+                            "edit",
+                        ])->name("edit_bentuk");
+                        Route::put("/editBentuk/{bentuk}", [
+                            BentukController::class,
+                            "update",
+                        ])->name("update_bentuk");
+                        Route::get("/deleteBentuk/{bentuk}", [
+                            BentukController::class,
+                            "delete",
+                        ])->name("delete_bentuk");
 
-                    Route::get("/addMetode", [
-                        MetodeController::class,
-                        "addMetode",
-                    ])->name("add_metode");
-                    Route::post("/addMetode", [
-                        MetodeController::class,
-                        "storeMetode",
-                    ])->name("store_metode");
-                    Route::get("/editMetode/{Metode}", [
-                        MetodeController::class,
-                        "edit",
-                    ])->name("edit_metode");
-                    Route::put("/editMetode/{Metode}", [
-                        MetodeController::class,
-                        "update",
-                    ])->name("update_metode");
-                    Route::get("/deleteMetode/{Metode}", [
-                        MetodeController::class,
-                        "delete",
-                    ])->name("delete_metode");
+                        Route::get("/addMetode", [
+                            MetodeController::class,
+                            "addMetode",
+                        ])->name("add_metode");
+                        Route::post("/addMetode", [
+                            MetodeController::class,
+                            "storeMetode",
+                        ])->name("store_metode");
+                        Route::get("/editMetode/{Metode}", [
+                            MetodeController::class,
+                            "edit",
+                        ])->name("edit_metode");
+                        Route::put("/editMetode/{Metode}", [
+                            MetodeController::class,
+                            "update",
+                        ])->name("update_metode");
+                        Route::get("/deleteMetode/{Metode}", [
+                            MetodeController::class,
+                            "delete",
+                        ])->name("delete_metode");
 
-                    Route::get("/addMedia", [
-                        MediaController::class,
-                        "addMedia",
-                    ])->name("add_media");
-                    Route::post("/addMedia", [
-                        MediaController::class,
-                        "storeMedia",
-                    ])->name("store_media");
-                    Route::get("/editMedia/{media}", [
-                        MediaController::class,
-                        "edit",
-                    ])->name("edit_media");
-                    Route::put("/editMedia/{media}", [
-                        MediaController::class,
-                        "update",
-                    ])->name("update_media");
-                    Route::get("/deleteMedia/{media}", [
-                        MediaController::class,
-                        "delete",
-                    ])->name("delete_media");
+                        Route::get("/addMedia", [
+                            MediaController::class,
+                            "addMedia",
+                        ])->name("add_media");
+                        Route::post("/addMedia", [
+                            MediaController::class,
+                            "storeMedia",
+                        ])->name("store_media");
+                        Route::get("/editMedia/{media}", [
+                            MediaController::class,
+                            "edit",
+                        ])->name("edit_media");
+                        Route::put("/editMedia/{media}", [
+                            MediaController::class,
+                            "update",
+                        ])->name("update_media");
+                        Route::get("/deleteMedia/{media}", [
+                            MediaController::class,
+                            "delete",
+                        ])->name("delete_media");
 
-                    Route::get("/addKriteria", [
-                        KriteriaController::class,
-                        "addKriteria",
-                    ])->name("add_kriteria");
-                    Route::post("/addKriteria", [
-                        KriteriaController::class,
-                        "storeKriteria",
-                    ])->name("store_kriteria");
-                    Route::get("/editKriteria/{kriteria}", [
-                        KriteriaController::class,
-                        "edit",
-                    ])->name("edit_kriteria");
-                    Route::put("/editKriteria/{kriteria}", [
-                        KriteriaController::class,
-                        "update",
-                    ])->name("update_kriteria");
-                    Route::get("/deleteKriteria/{kriteria}", [
-                        KriteriaController::class,
-                        "delete",
-                    ])->name("delete_kriteria");
+                        Route::get("/addKriteria", [
+                            KriteriaController::class,
+                            "addKriteria",
+                        ])->name("add_kriteria");
+                        Route::post("/addKriteria", [
+                            KriteriaController::class,
+                            "storeKriteria",
+                        ])->name("store_kriteria");
+                        Route::get("/editKriteria/{kriteria}", [
+                            KriteriaController::class,
+                            "edit",
+                        ])->name("edit_kriteria");
+                        Route::put("/editKriteria/{kriteria}", [
+                            KriteriaController::class,
+                            "update",
+                        ])->name("update_kriteria");
+                        Route::get("/deleteKriteria/{kriteria}", [
+                            KriteriaController::class,
+                            "delete",
+                        ])->name("delete_kriteria");
 
-                    Route::get("/addTeknik", [
-                        TeknikPenilaianRPSController::class,
-                        "addTeknik",
-                    ])->name("add_teknik");
-                    Route::post("/addTeknik", [
-                        TeknikPenilaianRPSController::class,
-                        "storeTeknik",
-                    ])->name("store_teknik");
-                    Route::get("/editTeknik/{Teknik}", [
-                        TeknikPenilaianRPSController::class,
-                        "edit",
-                    ])->name("edit_teknik");
-                    Route::put("/editTeknik/{Teknik}", [
-                        TeknikPenilaianRPSController::class,
-                        "update",
-                    ])->name("update_teknik");
-                    Route::get("/deleteTeknik/{Teknik}", [
-                        TeknikPenilaianRPSController::class,
-                        "delete",
-                    ])->name("delete_teknik");
+                        Route::get("/addTeknik", [
+                            TeknikPenilaianRPSController::class,
+                            "addTeknik",
+                        ])->name("add_teknik");
+                        Route::post("/addTeknik", [
+                            TeknikPenilaianRPSController::class,
+                            "storeTeknik",
+                        ])->name("store_teknik");
+                        Route::get("/editTeknik/{Teknik}", [
+                            TeknikPenilaianRPSController::class,
+                            "edit",
+                        ])->name("edit_teknik");
+                        Route::put("/editTeknik/{Teknik}", [
+                            TeknikPenilaianRPSController::class,
+                            "update",
+                        ])->name("update_teknik");
+                        Route::get("/deleteTeknik/{Teknik}", [
+                            TeknikPenilaianRPSController::class,
+                            "delete",
+                        ])->name("delete_teknik");
 
-                    Route::get("/addInstrumen", [
-                        InstrumenPenilaianController::class,
-                        "addInstrumen",
-                    ])->name("add_instrumen");
-                    Route::post("/addInstrumen", [
-                        InstrumenPenilaianController::class,
-                        "storeInstrumen",
-                    ])->name("store_instrumen");
-                    Route::get("/editInstrumen/{instrumen}", [
-                        InstrumenPenilaianController::class,
-                        "edit",
-                    ])->name("edit_instrumen");
-                    Route::put("/editInstrumen/{instrumen}", [
-                        InstrumenPenilaianController::class,
-                        "update",
-                    ])->name("update_instrumen");
-                    Route::get("/deleteInstrumen/{instrumen}", [
-                        InstrumenPenilaianController::class,
-                        "delete",
-                    ])->name("delete_instrumen");
-                }
-            );
+                        Route::get("/addInstrumen", [
+                            InstrumenPenilaianController::class,
+                            "addInstrumen",
+                        ])->name("add_instrumen");
+                        Route::post("/addInstrumen", [
+                            InstrumenPenilaianController::class,
+                            "storeInstrumen",
+                        ])->name("store_instrumen");
+                        Route::get("/editInstrumen/{instrumen}", [
+                            InstrumenPenilaianController::class,
+                            "edit",
+                        ])->name("edit_instrumen");
+                        Route::put("/editInstrumen/{instrumen}", [
+                            InstrumenPenilaianController::class,
+                            "update",
+                        ])->name("update_instrumen");
+                        Route::get("/deleteInstrumen/{instrumen}", [
+                            InstrumenPenilaianController::class,
+                            "delete",
+                        ])->name("delete_instrumen");
+                    }
+                );
 
-            Route::get("/profilLulusan", [
-                ProfilLulusanController::class,
-                "index",
-            ])
-                ->name("profil_lulusan")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
-            Route::get("/profilLulusan/export/{type}", [
-                ProfilLulusanController::class,
-                "export",
-            ])
-                ->name("export_pl")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/profilLulusan", [
+                    ProfilLulusanController::class,
+                    "index",
+                ])
+                    ->name("profil_lulusan")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/profilLulusan/export/{type}", [
+                    ProfilLulusanController::class,
+                    "export",
+                ])
+                    ->name("export_pl")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
 
-            Route::get("/cpl_dikti", [CPLDiktiController::class, "index"])
-                ->name("cpl_sndikti")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
-            Route::get("/cpl_dikti/export/{type}", [
-                CPLDiktiController::class,
-                "export",
-            ])
-                ->name("export_cpl_dikti")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/cpl_dikti", [CPLDiktiController::class, "index"])
+                    ->name("cpl_sndikti")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/cpl_dikti/export/{type}", [
+                    CPLDiktiController::class,
+                    "export",
+                ])
+                    ->name("export_cpl_dikti")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
 
-            Route::get("/cpl_prodi", [CPLProdiController::class, "index"])
-                ->name("cpl_prodi")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
-            Route::get("/cpl_prodi/export/{type}", [
-                CPLProdiController::class,
-                "export",
-            ])
-                ->name("export_cpl_prodi")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/cpl_prodi", [CPLProdiController::class, "index"])
+                    ->name("cpl_prodi")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/cpl_prodi/export/{type}", [
+                    CPLProdiController::class,
+                    "export",
+                ])
+                    ->name("export_cpl_prodi")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
 
-            Route::get("/bahan_kajian", [
-                BahanKajianController::class,
-                "index",
-            ])
-                ->name("bahan_kajian")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
-            Route::get("/bahan_kajian/export/{type}", [
-                BahanKajianController::class,
-                "export",
-            ])
-                ->name("export_bahan_kajian")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/bahan_kajian", [
+                    BahanKajianController::class,
+                    "index",
+                ])
+                    ->name("bahan_kajian")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/bahan_kajian/export/{type}", [
+                    BahanKajianController::class,
+                    "export",
+                ])
+                    ->name("export_bahan_kajian")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
 
-            Route::get("/mata_kuliah", [
-                MataKuliahController::class,
-                "index",
-            ])
-                ->name("mata_kuliah")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
-            Route::get("/mata_kuliah/export/{type}", [
-                MataKuliahController::class,
-                "export",
-            ])
-                ->name("export_mata_kuliah")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/mata_kuliah", [
+                    MataKuliahController::class,
+                    "index",
+                ])
+                    ->name("mata_kuliah")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/mata_kuliah/export/{type}", [
+                    MataKuliahController::class,
+                    "export",
+                ])
+                    ->name("export_mata_kuliah")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
 
-            Route::get("/cpmk", [CRUDCPMKController::class, "index"])
-                ->name("cpmk")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
-            Route::get("/cpmk/export/{type}", [
-                CRUDCPMKController::class,
-                "export",
-            ])
-                ->name("export_cpmk")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/cpmk", [CRUDCPMKController::class, "index"])
+                    ->name("cpmk")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/cpmk/export/{type}", [
+                    CRUDCPMKController::class,
+                    "export",
+                ])
+                    ->name("export_cpmk")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
 
-            Route::get("/sub_cpmk", [SubCPMKController::class, "index"])
-                ->name("sub_cpmk")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
-            Route::get("/sub_cpmk/export/{type}", [
-                SubCPMKController::class,
-                "export",
-            ])
-                ->name("export_sub_cpmk")
-                ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/sub_cpmk", [SubCPMKController::class, "index"])
+                    ->name("sub_cpmk")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
+                Route::get("/sub_cpmk/export/{type}", [
+                    SubCPMKController::class,
+                    "export",
+                ])
+                    ->name("export_sub_cpmk")
+                    ->middleware("role:admin,dosen,kurikulum,dosen_kurikulum");
 
-            Route::get("/pustaka", [
-                PustakaController::class,
-                "index",
-            ])->name("pustaka");
-            Route::get("/metode", [MetodeController::class, "index"])->name(
-                "metode"
-            );
-            Route::get("/teknik", [
-                TeknikPenilaianRPSController::class,
-                "index",
-            ])->name("teknik_penilaian");
-            Route::get("/kriteria", [
-                KriteriaController::class,
-                "index",
-            ])->name("kriteria");
-        });
+                Route::get("/pustaka", [
+                    PustakaController::class,
+                    "index",
+                ])->name("pustaka");
+                Route::get("/metode", [MetodeController::class, "index"])->name(
+                    "metode"
+                );
+                Route::get("/teknik", [
+                    TeknikPenilaianRPSController::class,
+                    "index",
+                ])->name("teknik_penilaian");
+                Route::get("/kriteria", [
+                    KriteriaController::class,
+                    "index",
+                ])->name("kriteria");
+            });
     });
 Route::get("/exportExcelPustaka", [
     PustakaController::class,
@@ -898,7 +898,7 @@ Route::group(
         ])->name("rps.matkul");
         // Route::get('/dashboard/cari_rps', [RPSController::class, 'filterNewestYearSemester'])->name('index');
         // Route::post('/dashboard/cari_rps', [RPSController::class, 'processData'])->name('processForm');
-    
+
         //Export PDF
         Route::get("/dashboard/rps/export/{type}/{kodeRPS}/{kodeMK}", [
             RPSController::class,
@@ -961,7 +961,7 @@ Route::group(["middleware" => "role:dosen,dosen_kurikulum"], function () {
             // Route::post('/addTeknikPenilaian/{kodeRPS}', [TeknikPenilaianController::class, 'storeTeknikPenilaian'])->name('store_teknik_penilaian');
             // Route::get('/deleteTeknikPenilaian/{tp}', [TeknikPenilaianController::class, 'deleteTeknikPenilaian'])->name('delete_teknik_penilaian');
             // Route::get('/teknik_pdf/export/{type}', [TeknikPenilaianController::class, 'export'])->name('export_teknik_penilaian');
-    
+
             Route::get("/minggu_rps/{kodeRPS}/{kodeMK}", [
                 MingguRPSController::class,
                 "index",
@@ -977,7 +977,7 @@ Route::group(["middleware" => "role:dosen,dosen_kurikulum"], function () {
             // Route::get('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'addMingguRPS'])->name('add_minggu_rps');
             // Route::post('/add_minggu_rps/{kodeRPS}', [MingguRPSController::class, 'storeMingguRPS'])->name('store_minggu_rps');
             // Route::get('/delete_minggu_rps/{kodeMingguRPS}/{kodeRPS}', [MingguRPSController::class, 'deleteMingguRPS'])->name('delete_minggu_rps');
-    
+
             Route::get("/peran_dosen/{kodeRPS}/{kodeMK}", [
                 DosenController::class,
                 "index",
@@ -995,7 +995,7 @@ Route::group(["middleware" => "role:dosen,dosen_kurikulum"], function () {
             // Route::get('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'editPeranDosen'])->name('edit_peran_dosen');
             // Route::put('/edit_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'updatePeranDosen'])->name('update_peran_dosen');
             // Route::get('/delete_peran_dosen/{nip}/{kodeRPS}/{peranDosen}', [DosenController::class, 'deletePeranDosen'])->name('delete_peran_dosen');
-    
+
             Route::get("/mata_kuliah/{kodeRPS}", [
                 RPSController::class,
                 "detail",

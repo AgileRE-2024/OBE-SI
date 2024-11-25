@@ -1,15 +1,1 @@
-{
-  "tabWidth": 2,
-  "useTabs": false,
-
-  "plugins": ["@shufo/prettier-plugin-blade", "@prettier/plugin-php"],
-  "overrides": [
-    {
-      "files": ["*.blade.php"],
-      "options": {
-        "parser": "blade",
-        "tabWidth": 4
-      }
-    }
-  ]
-}
+{ "plugins": ["@shufo/prettier-plugin-blade", "@prettier/plugin-php"] }

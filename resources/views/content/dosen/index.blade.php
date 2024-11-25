@@ -108,7 +108,8 @@
                             </tr>
                         @else
                             <tr>
-                                <td rowspan="{{ count($pengampu) + 1 }}" scope="row" style="vertical-align : middle">4</td>
+                                <td rowspan="{{ count($pengampu) + 1 }}" scope="row" style="vertical-align : middle">4
+                                </td>
                                 <td rowspan="{{ count($pengampu) + 1 }}" scope="row" style="vertical-align : middle">
                                     Pengampu MK</td>
                             </tr>

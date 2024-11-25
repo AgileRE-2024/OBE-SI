@@ -177,7 +177,7 @@
                     <th class="align-middle" rowspan="1" style="width: 15%">Tanggal Penyusunan</th>
                 </tr> -->
     <!-- @if ($counterBk == 1)
-                    <tr>
+<tr>
                         <td class="align-middle" rowspan={{ $counterBk }} colspan="2" style="width: 25%">
                             {{ $mk->namaMK }}
                             @if ($mk->jenisMK == 1)
@@ -223,7 +223,7 @@
                             </tr>
 @endif
 @endfor
-                @endif -->
+@endif -->
 
     <!-- {{-- ini dosen --}}
                 @php

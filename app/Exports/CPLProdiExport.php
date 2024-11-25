@@ -15,22 +15,33 @@ class CPLProdiExport implements FromCollection, WithHeadings, WithStyles
 {
     public function collection()
     {
-        $cpls = CPL_Prodi::all("kodeCPL", "levelCPL", "deskripsiCPL", "referensiCPL");
+        $cpls = CPL_Prodi::all(
+            "kodeCPL",
+            "levelCPL",
+            "deskripsiCPL",
+            "referensiCPL"
+        );
         // Menambahkan nomor urut ke setiap data CPL
         return $cpls->map(function ($cpl, $index) {
             return [
-                'no' => $index + 1,  // Menambahkan nomor urut
-                'kodeCPL' => $cpl->kodeCPL,
-                'levelCPL' => $cpl->levelCPL,
-                'deskripsiCPL' => $cpl->deskripsiCPL,
-                'referensiCPL' => $cpl->referensiCPL,
+                "no" => $index + 1, // Menambahkan nomor urut
+                "kodeCPL" => $cpl->kodeCPL,
+                "levelCPL" => $cpl->levelCPL,
+                "deskripsiCPL" => $cpl->deskripsiCPL,
+                "referensiCPL" => $cpl->referensiCPL,
             ];
         });
     }
 
     public function headings(): array
     {
-        return ["No", "Kode CPL", "Level CPL", "Deskripsi CPL", "Referensi CPL"];
+        return [
+            "No",
+            "Kode CPL",
+            "Level CPL",
+            "Deskripsi CPL",
+            "Referensi CPL",
+        ];
     }
 
     public function styles(Worksheet $sheet)

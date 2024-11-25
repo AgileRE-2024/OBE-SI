@@ -26,10 +26,13 @@
                     <div class="form-group">
                         <label for="levelCPL">Level</label>
                         <select name="levelCPL" class="form-control" id="levelCPL" onchange="toggleDescription()">
-                            <option value="" disabled selected>Pilih Level</option>
                             @foreach ($levels as $level)
-                                <option value="{{ old('levelCPL') ? old('levelCPL') : $level }}">{{ $level }}
-                                </option>
+                                @if ($cpl->levelCPL == $level)
+                                    <option selected value="{{ old('level_lo') ? old('level_lo') : $level }}">
+                                        {{ $level }}</option>
+                                @else
+                                    <option value="{{ $level }}">{{ $level }}</option>
+                                @endif
                             @endforeach
                         </select>
                     </div>
