@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Learning_Outcomes;
+use App\Models\Verbs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -10,21 +11,18 @@ class LearningOutcomeController extends Controller
 {
     public function index()
     {
-        $levels = Learning_Outcomes::all();
+        $verbs = Verbs::all();
 
         return view("content.learning_outcome.learning_outcome", [
             "title" => "Learning Outcomes",
-            "levels" => $levels,
+            "levels" => $verbs,
         ]);
     }
 
     public function addLevelLO()
     {
         // Fetch levels and their verbs from the database
-        $learningOutcomes = Learning_Outcomes::all();
-
-        // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck("level_lo")->unique();
+        $levels = Learning_Outcomes::all();
 
         return view("content.learning_outcome.add_learning_outcome", [
             "title" => "Tambah Level LO",
@@ -40,7 +38,7 @@ class LearningOutcomeController extends Controller
         ]);
 
         // Check if the combination of level_lo and kata_kerja already exists
-        $exists = Learning_Outcomes::where("level_lo", $request->level_lo)
+        $exists = Verbs::where("level_lo", $request->level_lo)
             ->where("kata_kerja", $request->kata_kerja)
             ->exists();
 
@@ -53,8 +51,8 @@ class LearningOutcomeController extends Controller
                 ->withInput();
         }
 
-        // Create a new Learning Outcome
-        Learning_Outcomes::create([
+        // Create a new Verbs record
+        Verbs::create([
             "level_lo" => $request->level_lo,
             "kata_kerja" => $request->kata_kerja,
         ]);
@@ -72,7 +70,7 @@ class LearningOutcomeController extends Controller
         ]);
 
         // Check if the combination of level_lo and kata_kerja already exists (excluding the current record)
-        $exists = Learning_Outcomes::where("level_lo", $request->level_lo)
+        $exists = Verbs::where("level_lo", $request->level_lo)
             ->where("kata_kerja", $request->kata_kerja)
             ->where("id", "!=", $id) // Exclude the current record
             ->exists();
@@ -87,7 +85,7 @@ class LearningOutcomeController extends Controller
         }
 
         // Update the record
-        $level = Learning_Outcomes::findOrFail($id);
+        $level = Verbs::findOrFail($id);
         $level->update([
             "level_lo" => $request->level_lo,
             "kata_kerja" => $request->kata_kerja,
@@ -100,18 +98,16 @@ class LearningOutcomeController extends Controller
 
     public function edit($id)
     {
-        $old_level = Learning_Outcomes::findOrFail($id);
+        // Fetch the record from the database
+        $old_verb = Verbs::findOrFail($id);
 
-        // Fetch levels and their verbs from the database
-        $learningOutcomes = Learning_Outcomes::all();
-
-        // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck("level_lo")->unique();
+        // Fetch levels from the database
+        $levels = Learning_Outcomes::all();
 
         return view("content.learning_outcome.edit_learning_outcome", [
             "title" => "Edit Level LO",
             "levels" => $levels,
-            "old_level" => $old_level,
+            "old_verb" => $old_verb,
         ]);
     }
 

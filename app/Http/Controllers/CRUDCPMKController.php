@@ -36,8 +36,6 @@ class CRUDCPMKController extends Controller
 
         // Prepare the levels and verbs for the frontend
         $levels = $learningOutcomes->pluck("level_lo")->unique();
-        // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck("level_lo")->unique();
         $verbsByLevel = $learningOutcomes
             ->groupBy("level_lo")
             ->map(function ($items) {
@@ -48,6 +46,8 @@ class CRUDCPMKController extends Controller
         return view("content.cpmk.add_cpmk", [
             "title" => "Tambah CPMK",
             "cplp" => $cplp,
+            "levels" => $levels,
+            "verbsByLevel" => $verbsByLevel,
         ]);
     }
 

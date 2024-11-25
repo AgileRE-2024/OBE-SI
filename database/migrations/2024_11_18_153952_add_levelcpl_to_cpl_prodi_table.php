@@ -11,8 +11,18 @@ class AddLevelcplToCplProdiTable extends Migration
      */
     public function up(): void
     {
-        Schema::table('cpl_prodi', function (Blueprint $table) {
-            $table->enum('levelCPL', ['B-I Mengingat', 'B-II Memahami', 'B-III Menerapkan', 'B-IV Menganalisis', 'B-V Mengevaluasi', 'B-VI Menciptakan'])->nullable()->after('deskripsiCPL');
+        Schema::table("cpl_prodi", function (Blueprint $table) {
+            $table
+                ->enum("levelCPL", [
+                    "B-I Mengingat",
+                    "B-II Memahami",
+                    "B-III Menerapkan",
+                    "B-IV Menganalisis",
+                    "B-V Mengevaluasi",
+                    "B-VI Menciptakan",
+                ])
+                ->nullable()
+                ->after("deskripsiCPL");
         });
     }
 
@@ -21,8 +31,8 @@ class AddLevelcplToCplProdiTable extends Migration
      */
     public function down(): void
     {
-        Schema::table('cpl_prodi', function (Blueprint $table) {
-            $table->dropColumn('levelCPL');
+        Schema::table("cpl_prodi", function (Blueprint $table) {
+            $table->dropColumn("levelCPL");
         });
     }
 }

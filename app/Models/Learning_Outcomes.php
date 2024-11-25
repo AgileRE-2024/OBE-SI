@@ -10,5 +10,10 @@ class Learning_Outcomes extends Model
     use HasFactory;
     protected $table = "learning_outcomes";
 
-    protected $fillable = ["level_lo", "kata_kerja"];
+    protected $fillable = ["level_lo"];
+
+    public function verbs()
+    {
+        return $this->hasMany(Verbs::class);
+    }
 }

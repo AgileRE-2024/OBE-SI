@@ -36,7 +36,7 @@
                     @foreach ($levels as $level)
                         <tr>
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td scope="row">{{ $level->level_lo }}</td>
+                            <td scope="row">{{ $level->learningOutcomes->level_lo }}</td>
                             <td scope="row">{{ $level->kata_kerja }}</td>
                             @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                                 <td scope="row">
