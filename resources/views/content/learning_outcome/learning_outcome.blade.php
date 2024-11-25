@@ -5,7 +5,7 @@
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>LO (Learning Outcome)</h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Daftar Level Learning Outcome beserta
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Daftar verb Learning Outcome beserta
                     kata-kata kerja
                     yang sesuai<b style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
@@ -33,18 +33,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($levels as $level)
+                    @foreach ($verbs as $verb)
                         <tr>
                             <td scope="row">{{ $loop->iteration }}</td>
-                            <td scope="row">{{ $level->learningOutcomes->level_lo }}</td>
-                            <td scope="row">{{ $level->kata_kerja }}</td>
+                            <td scope="row">{{ $verb->lo->names }}</td>
+                            <td scope="row">{{ $verb->kata_kerja }}</td>
                             @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                                 <td scope="row">
                                     <a class="btn btn-primary"
-                                        href="{{ route('kurikulum.data.edit_learning_outcome', $level->id) }}">Edit</a>
+                                        href="{{ route('kurikulum.data.edit_learning_outcome', $verb->id) }}">Edit</a>
                                 </td>
                                 <td scope="row">
-                                    <form action="{{ route('kurikulum.data.delete_learning_outcome', $level->id) }}"
+                                    <form action="{{ route('kurikulum.data.delete_learning_outcome', $verb->id) }}"
                                         method="POST">
                                         @csrf
                                         @method('DELETE')
