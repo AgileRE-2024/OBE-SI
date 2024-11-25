@@ -13,16 +13,10 @@ class AddLevelcplToCplProdiTable extends Migration
     {
         Schema::table("cpl_prodi", function (Blueprint $table) {
             $table
-                ->enum("levelCPL", [
-                    "B-I Mengingat",
-                    "B-II Memahami",
-                    "B-III Menerapkan",
-                    "B-IV Menganalisis",
-                    "B-V Mengevaluasi",
-                    "B-VI Menciptakan",
-                ])
+                ->foreignId("levelCPL")
+                ->after("kodeCPL")
                 ->nullable()
-                ->after("deskripsiCPL");
+                ->constrained("learning_outcomes");
         });
     }
 

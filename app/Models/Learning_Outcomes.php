@@ -10,10 +10,13 @@ class Learning_Outcomes extends Model
     use HasFactory;
     protected $table = "learning_outcomes";
 
-    protected $fillable = ["level_lo"];
+    public function cplProdi()
+    {
+        return $this->hasMany(CPL_Prodi::class);
+    }
 
     public function verbs()
     {
-        return $this->hasMany(Verbs::class);
+        return $this->hasMany(Verbs::class, "level_lo", "id");
     }
 }

@@ -13,7 +13,7 @@ class CreateLevelLoTable extends Migration
     {
         Schema::create("learning_outcomes", function (Blueprint $table) {
             $table->id();
-            $table->enum("level_lo", [
+            $table->enum("names", [
                 "B-I Mengingat",
                 "B-II Memahami",
                 "B-III Menerapkan",

@@ -11,22 +11,22 @@ class LearningOutcomeController extends Controller
 {
     public function index()
     {
-        $verbs = Verbs::all();
+        $verbs = Verbs::orderBy("level_lo")->get();
 
         return view("content.learning_outcome.learning_outcome", [
             "title" => "Learning Outcomes",
-            "levels" => $verbs,
+            "verbs" => $verbs,
         ]);
     }
 
     public function addLevelLO()
     {
         // Fetch levels and their verbs from the database
-        $levels = Learning_Outcomes::all();
+        $los = Learning_Outcomes::all();
 
         return view("content.learning_outcome.add_learning_outcome", [
             "title" => "Tambah Level LO",
-            "levels" => $levels,
+            "los" => $los,
         ]);
     }
 
@@ -102,11 +102,11 @@ class LearningOutcomeController extends Controller
         $old_verb = Verbs::findOrFail($id);
 
         // Fetch levels from the database
-        $levels = Learning_Outcomes::all();
+        $los = Learning_Outcomes::all();
 
         return view("content.learning_outcome.edit_learning_outcome", [
             "title" => "Edit Level LO",
-            "levels" => $levels,
+            "los" => $los,
             "old_verb" => $old_verb,
         ]);
     }

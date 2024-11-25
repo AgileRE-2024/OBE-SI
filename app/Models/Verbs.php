@@ -10,12 +10,8 @@ class Verbs extends Model
     protected $fillable = ["level_lo", "kata_kerja"];
     public $timestamps = false;
 
-    public function learningOutcomes()
+    public function lo()
     {
-        return $this->belongsTo(
-            Learning_Outcomes::class,
-            "level_lo",
-            "level_lo"
-        );
+        return $this->belongsTo(Learning_Outcomes::class, "level_lo", "id");
     }
 }

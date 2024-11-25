@@ -13,12 +13,12 @@ class LOSeeder extends Seeder
     public function run(): void
     {
         $levels = [
-            ["level_lo" => "B-I Mengingat"],
-            ["level_lo" => "B-II Memahami"],
-            ["level_lo" => "B-III Menerapkan"],
-            ["level_lo" => "B-IV Menganalisis"],
-            ["level_lo" => "B-V Mengevaluasi"],
-            ["level_lo" => "B-VI Menciptakan"],
+            ["names" => "B-I Mengingat"],
+            ["names" => "B-II Memahami"],
+            ["names" => "B-III Menerapkan"],
+            ["names" => "B-IV Menganalisis"],
+            ["names" => "B-V Mengevaluasi"],
+            ["names" => "B-VI Menciptakan"],
         ];
 
         foreach ($levels as $level) {
