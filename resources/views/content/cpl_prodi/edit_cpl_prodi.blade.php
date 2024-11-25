@@ -13,25 +13,27 @@
                     @csrf
                     @method('put')
                     <div class="form-group">
-                        <label>Kode CPL Prodi</label>
+                        <label for="kodeCPL">Kode CPL Prodi</label>
                         @error('kodeCPL')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodeCPL" class="form-control"
+                        <input type="text" name="kodeCPL" class="form-control" id="kodeCPL"
                             placeholder="Kode CPL Prodi (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
                             maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
                             oninput="updateInput(this);" value="{{ old('kodeCPL') ? old('kodeCPL') : $cpl->kodeCPL }}">
                     </div>
 
                     <div class="form-group">
-                        <label for="levelCPL">Level</label>
-                        <select name="levelCPL" class="form-control" id="levelCPL" onchange="toggleDescription()">
-                            @foreach ($levels as $level)
-                                @if ($cpl->levelCPL == $level)
-                                    <option selected value="{{ old('level_lo') ? old('level_lo') : $level }}">
-                                        {{ $level }}</option>
+                        <label for="cplLevel">Level</label>
+                        <select name="levelCPL" class="form-control" id="cplLevel" onchange="toggleDescription()">
+                            @if ($cpl->levelCPL == null)
+                                <option disabled selected>-- Pilih Level --</option>
+                            @endif
+                            @foreach ($los as $lo)
+                                @if ($cpl->levelCPL == $lo->id)
+                                    <option value="{{ $lo->id }}" selected>{{ $lo->names }}</option>
                                 @else
-                                    <option value="{{ $level }}">{{ $level }}</option>
+                                    <option value="{{ $lo->id }}">{{ $lo->names }}</option>
                                 @endif
                             @endforeach
                         </select>
@@ -46,84 +48,26 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Referensi CPL Prodi</label>
+                        <label for="referensiCPL">Referensi CPL Prodi</label>
                         @error('referensiCPL')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
                         <input type="text" name="referensiCPL" class="form-control" placeholder="Referensi CPL Prodi"
-                            value="{{ old('referensiCPL') ? old('referensiCPL') : $cpl->referensiCPL }}">
+                            id="referensiCPL" value="{{ old('referensiCPL') ? old('referensiCPL') : $cpl->referensiCPL }}">
+
                     </div>
 
                     <div class="form-group pt-4">
                         <button type="submit" class="btn btn-dark btn-sm" id="submitButton" disabled><i
-                                class="fa fa-fw fa-plus-circle"></i>Submit</button>
+                                class="fa fa-fw fa-plus-circle"></i>Edit CPL</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <script>
-        function updateInput(input) {
-            var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
-
-            // Terapkan validasi minlength secara manual jika diperlukan
-            if (uppercaseValue.length >= 4) {
-                input.setCustomValidity('');
-            } else {
-                input.setCustomValidity('Panjang minimal adalah 4 karakter');
-            }
-
-            input.value = uppercaseValue;
-        }
-
-        const verbsByLevel = {
-            "B-I Mengingat": ["pilih", "temukan", "tunjukkan", "ingat", "sebutkan", "apa", "siapa", "milih"],
-            "B-II Memahami": ["klasifikasi", "bandingkan", "demonstrasi", "uraikan", "terangkan", "ringkas"],
-            "B-III Menerapkan": ["terapkan", "bangun", "pilih", "buat", "rencanakan", "gunakan"],
-            "B-IV Menganalisis": ["analisis", "klasifikasikan", "identifikasi", "teliti", "uraikan", "struktur"],
-            "B-V Mengevaluasi": ["nilai", "evaluasi", "tentukan", "uji", "bandingkan", "kritik"],
-            "B-VI Menciptakan": ["cipta", "desain", "rumuskan", "kembangkan", "susun", "prediksi"]
-        };
-
-        function updateInput(input) {
-            input.value = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
-        }
-
-        function toggleDescription() {
-            const dropdown = document.getElementById('levelCPL');
-            const description = document.getElementById('deskripsiCPL');
-            const submitButton = document.getElementById('submitButton');
-
-            if (dropdown.value) {
-                description.disabled = false;
-                submitButton.disabled = false;
-            } else {
-                description.disabled = true;
-                submitButton.disabled = true;
-            }
-        }
-
-        document.getElementById('levelCPL').addEventListener('change', validateDescription);
-        document.getElementById('deskripsiCPL').addEventListener('input', validateDescription);
-
-        function validateDescription() {
-            const level = document.getElementById('levelCPL').value;
-            const description = document.getElementById('deskripsiCPL').value.toLowerCase();
-            const submitButton = document.getElementById('submitButton');
-            const errorText = document.getElementById('errorText');
-
-            if (!level) return;
-
-            const validVerbs = verbsByLevel[level];
-            const hasValidVerb = validVerbs.some(verb => description.includes(verb));
-
-            if (hasValidVerb) {
-                errorText.style.display = 'none';
-                submitButton.disabled = false;
-            } else {
-                errorText.style.display = 'block';
-                submitButton.disabled = true;
-            }
-        }
+        const verbsPerLevel = @json($verbsPerLevel);
     </script>
+
+    <script src="{{ asset('assets/js/cpl_validation.js') }}"></script>
 @endsection

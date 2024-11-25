@@ -58,7 +58,7 @@
                                 {{ $cpl->kodeCPL }}
                             </td>
                             <td scope="row">
-                                {{ $cpl->levelCPL }} <!-- Menampilkan Level LO -->
+                                {{ optional($cpl->lo)->names }} <!-- Menampilkan Level LO -->
                             </td>
                             <td scope="row" style="word-break: break-word;
                             max-width: 75px;">

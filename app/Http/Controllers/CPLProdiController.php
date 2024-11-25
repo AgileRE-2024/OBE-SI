@@ -10,6 +10,7 @@ use App\Models\Detail_PL_CPLProdi;
 use App\Models\Detail_SN_CPLProdi;
 use App\Models\CPMK;
 use App\Models\Learning_Outcomes;
+use App\Models\Verbs;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
@@ -62,39 +63,38 @@ class CPLProdiController extends Controller
     public function edit($cpl)
     {
         // Fetch levels and their verbs from the database
-        $learningOutcomes = Learning_Outcomes::all();
+        $los = Learning_Outcomes::with("verbs")->get();
 
-        // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck("level_lo")->unique();
+        // Prepare verbs for the frontend
+        $verbsPerLevel = $los->mapWithKeys(function ($lo) {
+            return [$lo->id => $lo->verbs->pluck("kata_kerja")->toArray()];
+        });
 
         $cpl = CPL_Prodi::where("kodeCPL", $cpl)->first();
         return view("content.cpl_prodi.edit_cpl_prodi", [
             "title" => "CPL Prodi",
             "cpl" => $cpl,
-            "levels" => $levels,
+            "los" => $los,
+            "verbsPerLevel" => $verbsPerLevel,
         ]);
     }
 
     public function addCPLProdi()
     {
         // Fetch levels and their verbs from the database
-        $learningOutcomes = Learning_Outcomes::all();
+        $los = Learning_Outcomes::with("verbs")->get();
 
-        // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck("level_lo")->unique();
-        $verbsByLevel = $learningOutcomes
-            ->groupBy("level_lo")
-            ->map(function ($items) {
-                return $items->pluck("kata_kerja")->toArray();
-            });
+        // Prepare verbs for the frontend
+        $verbsPerLevel = $los->mapWithKeys(function ($lo) {
+            return [$lo->id => $lo->verbs->pluck("kata_kerja")->toArray()];
+        });
 
         return view("content.cpl_prodi.add_cpl_prodi", [
             "title" => "Tambah CPL Prodi",
-            "levels" => $levels,
-            "verbsByLevel" => $verbsByLevel,
+            "los" => $los,
+            "verbsPerLevel" => $verbsPerLevel,
         ]);
     }
-
     public function storeCPLProdi(Request $request)
     {
         $request->validate([

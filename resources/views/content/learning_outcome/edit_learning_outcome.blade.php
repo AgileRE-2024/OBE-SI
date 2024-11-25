@@ -10,12 +10,12 @@
                     <div class="form-group">
                         <label for="level_lo">Level LO</label>
                         <select class="form-control" id="level_lo" name="level_lo" required>
-                            @foreach ($levels as $level)
-                                @if ($old_verb->level_lo == $level->level_lo)
-                                    <option selected value="{{ old('level_lo') ? old('level_lo') : $level->level_lo }}">
-                                        {{ $level }}</option>
+                            @foreach ($los as $lo)
+                                @if ($old_verb->level_lo == $lo->id)
+                                    <option selected value="{{ old('level_lo') ? old('level_lo') : $lo->id }}">
+                                        {{ $lo->names }}</option>
                                 @else
-                                    <option value="{{ $level->id }}">{{ $level->level_lo }}</option>
+                                    <option value="{{ $lo->id }}">{{ $lo->names }}</option>
                                 @endif
                             @endforeach
                         </select>

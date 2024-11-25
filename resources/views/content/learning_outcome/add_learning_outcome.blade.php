@@ -11,8 +11,8 @@
                         <label for="level_lo">Level LO</label>
                         <select class="form-control" id="level_lo" name="level_lo" required>
                             <option value="">-- Pilih Level --</option>
-                            @foreach ($levels as $level)
-                                <option value="{{ $level->id }}">{{ $level->level_lo }}</option>
+                            @foreach ($los as $lo)
+                                <option value="{{ $lo->id }}">{{ $lo->names }}</option>
                             @endforeach
                         </select>
                     </div>

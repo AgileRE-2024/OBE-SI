@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class CPL_Prodi extends Model
@@ -17,6 +16,11 @@ class CPL_Prodi extends Model
         "referensiCPL",
         "deleted_at",
     ];
+
+    public function lo()
+    {
+        return $this->belongsTo(Learning_Outcomes::class, "levelCPL", "id");
+    }
 
     public function CPL_SN_Dikti()
     {
