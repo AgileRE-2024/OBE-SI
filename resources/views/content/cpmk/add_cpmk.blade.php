@@ -37,7 +37,7 @@
                         <input type="text" id="kodeCPMK" name="kodeCPMK" class="form-control"
                             placeholder="Kode CPMK (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
                             maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
-                            oninput="updateInput(this);">
+                            oninput="updateInput(this);" value="CPMK">
                     </div>
 
                     <div class="form-group">
