@@ -14,6 +14,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Response;
 use Dompdf\Dompdf;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Log;
 
 class CRUDCPMKController extends Controller
 {
@@ -22,8 +23,27 @@ class CRUDCPMKController extends Controller
      */
     public function index()
     {
-        $cpmk = CPMK::get();
-        return view("content.cpmk.cpmk", ["title" => "CPMK", "cpmk" => $cpmk]);
+        $cpmks = CPMK::with("CPL")->get(); // Ensure CPMK has a relationship with LO
+        $cplWithIssues = []; // Array to collect LOs with missing level validation
+
+        // Loop through CPMKs grouped by LO
+        foreach ($cpmks->groupBy("kodeCPL") as $cplId => $cpmkGroup) {
+            $cpl = $cpmkGroup->first()->CPL; // Get the associated LO
+            if ($cpl) {
+                $hasMatchingLevel = $cpmkGroup->contains(
+                    fn($cpmk) => $cpmk->levelCPMK == $cpl->levelCPL
+                );
+                if (!$hasMatchingLevel) {
+                    $cplWithIssues[] = $cpl->kodeCPL; // Add LO name with issues
+                }
+            }
+        }
+
+        return view("content.cpmk.cpmk", [
+            "title" => "CPMK",
+            "cpmks" => $cpmks,
+            "cplWithIssues" => $cplWithIssues, // Pass the issues to the view
+        ]);
     }
 
     /**
@@ -32,22 +52,19 @@ class CRUDCPMKController extends Controller
     public function create()
     {
         // Fetch levels and their verbs from the database
-        $learningOutcomes = Learning_Outcomes::all();
+        $los = Learning_Outcomes::with("verbs")->get();
 
-        // Prepare the levels and verbs for the frontend
-        $levels = $learningOutcomes->pluck("level_lo")->unique();
-        $verbsByLevel = $learningOutcomes
-            ->groupBy("level_lo")
-            ->map(function ($items) {
-                return $items->pluck("kata_kerja")->toArray();
-            });
+        // Prepare verbs for the frontend
+        $verbsPerLevel = $los->mapWithKeys(function ($lo) {
+            return [$lo->id => $lo->verbs->pluck("kata_kerja")->toArray()];
+        });
 
-        $cplp = CPL_Prodi::all();
+        $cplps = CPL_Prodi::all();
         return view("content.cpmk.add_cpmk", [
             "title" => "Tambah CPMK",
-            "cplp" => $cplp,
-            "levels" => $levels,
-            "verbsByLevel" => $verbsByLevel,
+            "cplps" => $cplps,
+            "los" => $los,
+            "verbsPerLevel" => $verbsPerLevel,
         ]);
     }
 
@@ -58,17 +75,32 @@ class CRUDCPMKController extends Controller
     {
         $validator = Validator::make($request->all(), [
             "kodeCPMK" => "required|unique:cpmk,kodeCPMK",
-            "deskripsi" => "required",
+            "levelCPMK" => [
+                "required",
+                function ($attribute, $value, $fail) use ($request) {
+                    $cpl = CPL_Prodi::where(
+                        "kodeCPL",
+                        $request->kodeCPL
+                    )->first();
+                    if ($value > $cpl->levelCPL) {
+                        $fail(
+                            "Level CPMK must be the same or lower than Level CPL."
+                        );
+                    }
+                },
+            ],
+            "deskripsiCPMK" => "required",
             "kodeCPL" => "required",
         ]);
 
         if ($validator->fails()) {
-            // flash('error')->error();
             return redirect()->back()->withErrors($validator)->withInput();
         }
+
         CPMK::create([
             "kodeCPMK" => $request->kodeCPMK,
-            "deskripsiCPMK" => $request->deskripsi,
+            "levelCPMK" => $request->levelCPMK,
+            "deskripsiCPMK" => $request->deskripsiCPMK,
             "kodeCPL" => $request->kodeCPL,
         ]);
 
@@ -90,12 +122,22 @@ class CRUDCPMKController extends Controller
      */
     public function edit($cpmk)
     {
-        $cpmk = CPMK::where("kodeCPMK", $cpmk)->first();
-        $cplp = CPL_Prodi::all();
+        // Fetch levels and their verbs from the database
+        $los = Learning_Outcomes::with("verbs")->get();
+
+        // Prepare verbs for the frontend
+        $verbsPerLevel = $los->mapWithKeys(function ($lo) {
+            return [$lo->id => $lo->verbs->pluck("kata_kerja")->toArray()];
+        });
+
+        $old_cpmk = CPMK::where("kodeCPMK", $cpmk)->first();
+        $cplps = CPL_Prodi::all();
         return view("content.cpmk.edit_cpmk", [
             "title" => "Edit CPMK",
-            "cplp" => $cplp,
-            "cpmk" => $cpmk,
+            "cplps" => $cplps,
+            "old_cpmk" => $old_cpmk,
+            "los" => $los,
+            "verbsPerLevel" => $verbsPerLevel,
         ]);
     }
 
@@ -106,13 +148,41 @@ class CRUDCPMKController extends Controller
     {
         if ($cpmk == $request->kodeCPMK) {
             $validator = Validator::make($request->all(), [
-                "deskripsi" => "required",
+                "levelCPMK" => [
+                    "required",
+                    function ($attribute, $value, $fail) use ($request) {
+                        $cpl = CPL_Prodi::where(
+                            "kodeCPL",
+                            $request->kodeCPL
+                        )->first();
+                        if ($value > $cpl->levelCPL) {
+                            $fail(
+                                "Level CPMK must be the same or lower than Level CPL."
+                            );
+                        }
+                    },
+                ],
+                "deskripsiCPMK" => "required",
                 "kodeCPL" => "required",
             ]);
         } else {
             $validator = Validator::make($request->all(), [
                 "kodeCPMK" => "required|unique:cpmk,kodeCPMK",
-                "deskripsi" => "required",
+                "levelCPMK" => [
+                    "required",
+                    function ($attribute, $value, $fail) use ($request) {
+                        $cpl = CPL_Prodi::where(
+                            "kodeCPL",
+                            $request->kodeCPL
+                        )->first();
+                        if ($value > $cpl->levelCPL) {
+                            $fail(
+                                "Level CPMK must be the same or lower than Level CPL."
+                            );
+                        }
+                    },
+                ],
+                "deskripsiCPMK" => "required",
                 "kodeCPL" => "required",
             ]);
         }
@@ -125,7 +195,8 @@ class CRUDCPMKController extends Controller
             CPMK::where("kodeCPMK", $cpmk)
                 ->first()
                 ->update([
-                    "deskripsiCPMK" => $request->deskripsi,
+                    "deskripsiCPMK" => $request->deskripsiCPMK,
+                    "levelCPMK" => $request->levelCPMK,
                     "kodeCPL" => $request->kodeCPL,
                 ]);
         } else {
@@ -133,7 +204,8 @@ class CRUDCPMKController extends Controller
                 ->first()
                 ->update([
                     "kodeCPMK" => $request->kodeCPMK,
-                    "deskripsiCPMK" => $request->deskripsi,
+                    "deskripsiCPMK" => $request->deskripsiCPMK,
+                    "levelCPMK" => $request->levelCPMK,
                     "kodeCPL" => $request->kodeCPL,
                 ]);
         }

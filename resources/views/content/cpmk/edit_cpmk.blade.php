@@ -9,43 +9,63 @@
         </div>
         <div class="card-body" style="width: auto">
             <div class="col-sm-8">
-                <form action="{{ route('kurikulum.data.update_cpmk', $cpmk->kodeCPMK) }}" method="POST">
+                <form action="{{ route('kurikulum.data.update_cpmk', $old_cpmk->kodeCPMK) }}" method="POST">
                     @csrf
                     @method('put')
 
                     <div class="form-group">
-                        <label>Kode CPL</label>
+                        <label for="kodeCPL">Kode CPL</label>
                         @error('kodeCPL')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <select name="kodeCPL" id="kodeCPL" class="form-select">
-                            <option></option>
-                            @foreach ($cplp as $list_cplp)
-                                <option value="{{ $list_cplp->kodeCPL }}"
-                                    {{ old('kodeCPL', $cpmk->kodeCPL) == $list_cplp->kodeCPL ? 'selected' : '' }}>
-                                    {{ $list_cplp->kodeCPL }} {{ '-' }}
-                                    {{ Illuminate\Support\Str::limit($list_cplp->deskripsiCPL, 40) }}
+                        <select name="kodeCPL" id="kodeCPL" class="form-select" onchange="onCplSelected(this)">
+                            @foreach ($cplps as $cplp)
+                                <option value="{{ $cplp->kodeCPL }}" level-limit="{{ $cplp->levelCPL }}"
+                                    level-name="{{ optional($cplp->lo)->names }}"
+                                    {{ old('kodeCPL', $old_cpmk->kodeCPL) == $cplp->kodeCPL ? 'selected' : '' }}>
+                                    {{ $cplp->kodeCPL }} - {{ Illuminate\Support\Str::limit($cplp->deskripsiCPL, 40) }}
                                 </option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>Kode CPMK</label>
+                        <label for="kodeCPMK">Kode CPMK</label>
                         @error('kodeCPMK')
                             <p style="color: #BF2C45">{{ $message }}</p>
                         @enderror
-                        <input type="text" name="kodeCPMK" class="form-control" placeholder="Kode CPMK"
-                            value="{{ old('kodeCPMK', $cpmk->kodeCPMK) }}" pattern="[A-Z0-9]+" minlength="4"
-                            maxlength="10">
+                        <input type="text" id="kodeCPMK" name="kodeCPMK" class="form-control"
+                            placeholder="Kode CPMK (Masukkan huruf besar dan angka saja))" pattern="[A-Z0-9-]+"
+                            maxlength="10" minlength="4" title="Harap masukkan huruf besar dan angka saja"
+                            value="{{ old('kodeCPMK', $old_cpmk->kodeCPMK) }}" oninput="updateInput(this);">
                     </div>
 
                     <div class="form-group">
-                        <label>Deskripsi CPMK</label>
-                        @error('deskripsi')
-                            <p style="color: #BF2C45">{{ $message }}</p>
-                        @enderror
-                        <textarea name="deskripsi" row="3" class="form-control" placeholder="Deskripsi CPMK">{{ old('deskripsi', $cpmk->deskripsiCPMK) }}</textarea>
+                        <label for="cplLevel">Level CPL</label>
+                        <input type="text" id="cplLevel" name="cplLevel" class="form-control" disabled
+                            value="{{ $old_cpmk->CPL->lo->names }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="levelCPMK">Level CPMK</label>
+                        <select name="levelCPMK" class="form-control" id="levelCPMK" onchange="toggleDescription()">
+                            @if ($old_cpmk->levelCPMK == null)
+                                <option disabled selected>-- Pilih Level --</option>
+                            @endif
+                            @foreach ($los as $lo)
+                                <option value="{{ $lo->id }}"
+                                    {{ old('levelCPMK', $old_cpmk->levelCPMK) == $lo->id ? 'selected' : '' }}>
+                                    {{ $lo->names }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deskripsiCPMK">Deskripsi CPMK</label>
+                        <textarea name="deskripsiCPMK" rows="3" class="form-control" placeholder="Deskripsi CPMK" id="deskripsiCPMK"
+                            disabled>{{ $old_cpmk->deskripsiCPMK }}</textarea>
+                        <p id="errorText" style="color: #BF2C45; display: none;">Deskripsi harus mengandung setidaknya satu
+                            kata kerja yang sesuai dengan level yang dipilih.</p>
                     </div>
 
                     <div class="form-group pt-4">
@@ -57,4 +77,94 @@
             </div>
         </div>
     </div>
+    <script>
+        const verbsPerLevel = @json($verbsPerLevel);
+
+        function onCplSelected(selectElement) {
+            const selectedOption = selectElement.options[selectElement.selectedIndex];
+            const levelCPL = selectedOption.getAttribute('level-limit');
+            const levelCPLName = selectedOption.getAttribute('level-name');
+            const cplLevelInput = document.getElementById('cplLevel');
+            const levelCPMKDropdown = document.getElementById('levelCPMK'); // Ensure this ID matches the dropdown
+
+            // Update the displayed levelCPL
+            cplLevelInput.value = levelCPLName || '';
+
+            // Filter options in levelCPMK dropdown
+            const levelCPLValue = parseInt(levelCPL, 10); // Convert to integer
+            Array.from(levelCPMKDropdown.options).forEach(option => {
+                const optionValue = parseInt(option.value, 10);
+                if (!isNaN(optionValue) && optionValue > levelCPLValue) {
+                    option.style.display = 'none'; // Hide options with higher IDs
+                } else {
+                    option.style.display = 'block'; // Show valid options
+                }
+            });
+
+            levelCPMKDropdown.disabled = false; // Enable the dropdown
+
+            // Reset the selected value if it becomes invalid
+            if (levelCPMKDropdown.value && parseInt(levelCPMKDropdown.value, 10) > levelCPLValue) {
+                levelCPMKDropdown.value = '';
+            }
+        }
+
+        function updateInput(input) {
+            var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+
+            // Terapkan validasi minlength secara manual jika diperlukan
+            if (uppercaseValue.length >= 4) {
+                input.setCustomValidity('');
+            } else {
+                input.setCustomValidity('Panjang minimal adalah 4 karakter');
+            }
+
+            input.value = uppercaseValue;
+        }
+
+        function toggleDescription() {
+            const dropdown = document.getElementById("cplLevel");
+            const description = document.getElementById("deskripsiCPMK");
+            const submitButton = document.getElementById("submitButton");
+
+            if (dropdown.value) {
+                description.disabled = false;
+                submitButton.disabled = false;
+            } else {
+                description.disabled = true;
+                submitButton.disabled = true;
+            }
+        }
+
+        document
+            .getElementById("levelCPMK")
+            .addEventListener("change", validateDescription);
+        document
+            .getElementById("deskripsiCPMK")
+            .addEventListener("input", validateDescription);
+
+        function validateDescription() {
+            const level = document.getElementById("levelCPMK").value;
+            const description = document
+                .getElementById("deskripsiCPMK")
+                .value.toLowerCase();
+            const submitButton = document.getElementById("submitButton");
+            const errorText = document.getElementById("errorText");
+
+            if (!level) return;
+
+            const validVerbs = verbsPerLevel[level] || [];
+            const hasValidVerb = validVerbs.some((verb) =>
+                description.includes(verb.toLowerCase()),
+            );
+
+            if (hasValidVerb) {
+                errorText.style.display = "none";
+                submitButton.disabled = false;
+            } else {
+                errorText.style.display = "block";
+                submitButton.disabled = true;
+            }
+        }
+    </script>
 @endsection

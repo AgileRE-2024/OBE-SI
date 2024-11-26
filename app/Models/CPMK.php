@@ -11,10 +11,16 @@ class CPMK extends Model
     protected $table = "cpmk";
     protected $fillable = [
         "kodeCPMK",
+        "levelCPMK",
         "deskripsiCPMK",
         "kodeCPL",
         "deleted_at",
     ];
+
+    public function lo()
+    {
+        return $this->belongsTo(Learning_Outcomes::class, "levelCPMK", "id");
+    }
 
     public function CPL()
     {

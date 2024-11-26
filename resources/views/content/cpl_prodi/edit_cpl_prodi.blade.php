@@ -30,11 +30,9 @@
                                 <option disabled selected>-- Pilih Level --</option>
                             @endif
                             @foreach ($los as $lo)
-                                @if ($cpl->levelCPL == $lo->id)
-                                    <option value="{{ $lo->id }}" selected>{{ $lo->names }}</option>
-                                @else
-                                    <option value="{{ $lo->id }}">{{ $lo->names }}</option>
-                                @endif
+                                <option value="{{ $lo->id }}"
+                                    {{ old('levelCPL', $cpl->levelCPL) == $lo->id ? 'selected' : '' }}>{{ $lo->names }}
+                                </option>
                             @endforeach
                         </select>
                     </div>

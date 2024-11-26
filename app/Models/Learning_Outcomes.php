@@ -12,7 +12,12 @@ class Learning_Outcomes extends Model
 
     public function cplProdi()
     {
-        return $this->hasMany(CPL_Prodi::class);
+        return $this->hasMany(CPL_Prodi::class, "levelCPL", "id");
+    }
+
+    public function cpmk()
+    {
+        return $this->hasMany(CPMK::class, "levelCPMK", "id");
     }
 
     public function verbs()
