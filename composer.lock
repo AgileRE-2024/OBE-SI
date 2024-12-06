@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eff2be0da6f0f765f7143aec0394354f",
+    "content-hash": "4e81a82c014c91d1b762665dd6aaed27",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -6812,16 +6812,16 @@
         },
         {
             "name": "laravel/dusk",
-            "version": "v8.2.5",
+            "version": "v8.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/dusk.git",
-                "reference": "e641800393ce4ad39f0a47133f51aae67ceb01ad"
+                "reference": "c667db6d8795f0ccc8f63d54a7780ce8a0cc3d3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/dusk/zipball/e641800393ce4ad39f0a47133f51aae67ceb01ad",
-                "reference": "e641800393ce4ad39f0a47133f51aae67ceb01ad",
+                "url": "https://api.github.com/repos/laravel/dusk/zipball/c667db6d8795f0ccc8f63d54a7780ce8a0cc3d3c",
+                "reference": "c667db6d8795f0ccc8f63d54a7780ce8a0cc3d3c",
                 "shasum": ""
             },
             "require": {
@@ -6878,9 +6878,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/dusk/issues",
-                "source": "https://github.com/laravel/dusk/tree/v8.2.5"
+                "source": "https://github.com/laravel/dusk/tree/v8.2.11"
             },
-            "time": "2024-08-26T12:34:33+00:00"
+            "time": "2024-11-07T21:51:32+00:00"
         },
         {
             "name": "laravel/pint",
@@ -9285,13 +9285,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.0.2",
         "ext-gd": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
