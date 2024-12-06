@@ -113,8 +113,8 @@ class LearningOutcomeController extends Controller
 
     public function delete($id)
     {
-        $level = Learning_Outcomes::findOrFail($id);
-        $level->delete();
+        $verb = Verbs::findOrFail($id);
+        $verb->delete();
 
         return redirect()
             ->route("kurikulum.data.learning_outcome")
