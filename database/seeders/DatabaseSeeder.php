@@ -34,9 +34,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ProdiSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(BahanKajianSeeder::class);
-        $this->call(CplDiktiSeeder::class);
+        $this->call(CPLDiktiSeeder::class);
         $this->call(ProfilLulusanSeeder::class);
-        $this->call(CplProdiSeeder::class);
+        $this->call(CPLProdiSeeder::class);
         $this->call(MataKuliahSeeder::class);
         $this->call(PrasyaratSeeder::class);
         $this->call(CPMKSeeder::class);
@@ -55,10 +55,11 @@ class DatabaseSeeder extends Seeder
         $this->call(DetailCplPlSeeder::class);
         $this->call(DetailBkMkSeeder::class);
         $this->call(DetailMkCpmkSeeder::class);
-        // $this->call(DetailNilaiMahasiswaSeeder::class);
+        $this->call(DetailNilaiMahasiswaSeeder::class);
         $this->call(RpsSeeder::class);
-        // $this->call(MingguRpsSeeder::class);
+        $this->call(MingguRpsSeeder::class);
         $this->call(PengampuSeeder::class);
-        // $this->call(DetailPustakaMingguRpsSeeder::class);
+        $this->call(DetailPustakaMingguRpsSeeder::class);
+        $this->call(LOSeeder::class);
     }
 }

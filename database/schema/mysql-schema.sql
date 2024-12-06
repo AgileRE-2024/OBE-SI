@@ -386,7 +386,7 @@ CREATE TABLE `minggu_rps` (
   `waktuPembelajaran` text DEFAULT NULL,
   `pengalaman_belajar` text DEFAULT NULL,
   `bahan_kajian` text DEFAULT NULL,
-  `bobot_nilai` int(11) DEFAULT NULL,
+  `bobot_nilai` text DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `id_instrumen_penilaian` int(10) unsigned DEFAULT NULL,
