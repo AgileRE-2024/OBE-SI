@@ -24,8 +24,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="cplLevel">Level</label>
-                        <select name="levelCPL" class="form-control" id="cplLevel" onchange="toggleDescription()">
+                        <label for="levelCPL">Level</label>
+                        <select name="levelCPL" class="form-control" id="levelCPL" onchange="toggleDescription()">
                             @if ($cpl->levelCPL == null)
                                 <option disabled selected>-- Pilih Level --</option>
                             @endif

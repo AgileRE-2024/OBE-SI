@@ -5,7 +5,7 @@ function updateInput(input) {
 }
 
 function toggleDescription() {
-    const dropdown = document.getElementById("cplLevel");
+    const dropdown = document.getElementById("levelCPL");
     const description = document.getElementById("deskripsiCPL");
     const submitButton = document.getElementById("submitButton");
 
@@ -19,14 +19,14 @@ function toggleDescription() {
 }
 
 document
-    .getElementById("cplLevel")
+    .getElementById("levelCPL")
     .addEventListener("change", validateDescription);
 document
     .getElementById("deskripsiCPL")
     .addEventListener("input", validateDescription);
 
 function validateDescription() {
-    const level = document.getElementById("cplLevel").value;
+    const level = document.getElementById("levelCPL").value;
     const description = document
         .getElementById("deskripsiCPL")
         .value.toLowerCase();
