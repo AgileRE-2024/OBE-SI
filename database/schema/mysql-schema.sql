@@ -1,10 +1,10 @@
-/*M!999999\- enable the sandbox mode */
+/*!999999\- enable the sandbox mode */
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*M!100616 SET @OLD_NOTE_VERBOSITY=@@NOTE_VERBOSITY, NOTE_VERBOSITY=0 */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 DROP TABLE IF EXISTS `bahan_kajian`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -328,7 +328,7 @@ CREATE TABLE `mata_kuliah` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `ects` double DEFAULT NULL,
+  `ects` double(8,2) DEFAULT NULL,
   PRIMARY KEY (`kodeMK`),
   KEY `mata_kuliah_namaprodi_foreign` (`namaProdi`),
   KEY `mata_kuliah_penanggung_jawab_foreign` (`penanggung_jawab`),
@@ -386,7 +386,7 @@ CREATE TABLE `minggu_rps` (
   `waktuPembelajaran` text DEFAULT NULL,
   `pengalaman_belajar` text DEFAULT NULL,
   `bahan_kajian` text DEFAULT NULL,
-  `bobot_nilai` int(11) NOT NULL,
+  `bobot_nilai` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `id_instrumen_penilaian` int(10) unsigned DEFAULT NULL,
@@ -655,49 +655,48 @@ CREATE TABLE `users` (
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-/*M!999999\- enable the sandbox mode */
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (1,'2012_04_28_150137_create_Prodi_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (2,'2014_10_12_000000_create_users_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (3,'2014_10_12_100000_create_password_reset_tokens_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (4,'2014_10_12_100000_create_password_resets_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (5,'2019_08_19_000000_create_failed_jobs_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (6,'2019_12_14_000001_create_personal_access_tokens_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (7,'2022_11_19_120413_create_kriteria_penilaians_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (8,'2023_03_19_115843_create_metodes_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (9,'2023_03_19_120025_create_bentuks_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (10,'2023_03_19_120043_create_media_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (11,'2023_04_25_045801_create_CPL_SN_Dikti_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (12,'2023_04_25_050710_create_CPL_Prodi_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (13,'2023_04_25_060251_create_Detail_SN_CPLProdi_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (14,'2023_04_25_133457_create_Profil_Lulusan_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (15,'2023_04_25_133934_create_Detail_PL_CPLProdi_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (16,'2023_04_25_140446_create_Bahan_Kajian_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (17,'2023_04_25_140932_create_Detail_CPLProdi_BK_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (18,'2023_04_25_142546_create_Mata_Kuliah_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (19,'2023_04_25_142626_create_Detail_BK_MK_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (20,'2023_04_26_124622_create_RPS_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (21,'2023_04_26_140047_create_CPMK_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (22,'2023_04_26_140114_create_Detail_MK_CPMK_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (23,'2023_04_26_140134_create_SubCPMK_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (24,'2023_04_26_154908_create_Teknik_Penilaian_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (25,'2023_04_26_154909_create_Minggu_RPS_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (26,'2023_04_26_154939_create_Detail_RPS_Penilaian',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (27,'2023_04_28_045824_create_Mahasiswa_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (28,'2023_04_28_045856_create_Kelas_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (29,'2023_04_28_050116_create_Nilai_Mahasiswa_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (30,'2023_04_28_050125_create_Detail_Nilai_Mahasiswa_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (31,'2023_04_28_150159_create_Page_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (32,'2023_11_19_121024_create_pustakas_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (33,'2023_11_19_121913_create_prasyarat_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (34,'2023_11_19_123339_detail_kelas',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (35,'2023_11_19_142253_detail_pustaka_minggurps',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (36,'2023_12_06_114407_create_pengampu_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (37,'2023_12_10_090729_add_ects_atribut_to__mata__kuliah_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (38,'2024_04_03_023724_create_detail_metode_minggurps_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (39,'2024_04_03_024354_create_teknik_penilaian_rps',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (40,'2024_04_03_030915_create_instrumen_penilaian_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (41,'2024_04_30_080341_create_komponen_penilaians_table',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (42,'2024_05_03_031001_add_id_instrumen_penilaian_to_minggurps',1);
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (43,'2024_05_06_031751_change_bobot_type_in_minggu_rps_table',1);
+/*!999999\- enable the sandbox mode */
+INSERT INTO `migrations` VALUES (1,'2012_04_28_150137_create_Prodi_table',1);
+INSERT INTO `migrations` VALUES (2,'2014_10_12_000000_create_users_table',1);
+INSERT INTO `migrations` VALUES (3,'2014_10_12_100000_create_password_reset_tokens_table',1);
+INSERT INTO `migrations` VALUES (4,'2014_10_12_100000_create_password_resets_table',1);
+INSERT INTO `migrations` VALUES (5,'2019_08_19_000000_create_failed_jobs_table',1);
+INSERT INTO `migrations` VALUES (6,'2019_12_14_000001_create_personal_access_tokens_table',1);
+INSERT INTO `migrations` VALUES (7,'2022_11_19_120413_create_kriteria_penilaians_table',1);
+INSERT INTO `migrations` VALUES (8,'2023_03_19_115843_create_metodes_table',1);
+INSERT INTO `migrations` VALUES (9,'2023_03_19_120025_create_bentuks_table',1);
+INSERT INTO `migrations` VALUES (10,'2023_03_19_120043_create_media_table',1);
+INSERT INTO `migrations` VALUES (11,'2023_04_25_045801_create_CPL_SN_Dikti_table',1);
+INSERT INTO `migrations` VALUES (12,'2023_04_25_050710_create_CPL_Prodi_table',1);
+INSERT INTO `migrations` VALUES (13,'2023_04_25_060251_create_Detail_SN_CPLProdi_table',1);
+INSERT INTO `migrations` VALUES (14,'2023_04_25_133457_create_Profil_Lulusan_table',1);
+INSERT INTO `migrations` VALUES (15,'2023_04_25_133934_create_Detail_PL_CPLProdi_table',1);
+INSERT INTO `migrations` VALUES (16,'2023_04_25_140446_create_Bahan_Kajian_table',1);
+INSERT INTO `migrations` VALUES (17,'2023_04_25_140932_create_Detail_CPLProdi_BK_table',1);
+INSERT INTO `migrations` VALUES (18,'2023_04_25_142546_create_Mata_Kuliah_table',1);
+INSERT INTO `migrations` VALUES (19,'2023_04_25_142626_create_Detail_BK_MK_table',1);
+INSERT INTO `migrations` VALUES (20,'2023_04_26_124622_create_RPS_table',1);
+INSERT INTO `migrations` VALUES (21,'2023_04_26_140047_create_CPMK_table',1);
+INSERT INTO `migrations` VALUES (22,'2023_04_26_140114_create_Detail_MK_CPMK_table',1);
+INSERT INTO `migrations` VALUES (23,'2023_04_26_140134_create_SubCPMK_table',1);
+INSERT INTO `migrations` VALUES (24,'2023_04_26_154908_create_Teknik_Penilaian_table',1);
+INSERT INTO `migrations` VALUES (25,'2023_04_26_154909_create_Minggu_RPS_table',1);
+INSERT INTO `migrations` VALUES (26,'2023_04_26_154939_create_Detail_RPS_Penilaian',1);
+INSERT INTO `migrations` VALUES (27,'2023_04_28_045824_create_Mahasiswa_table',1);
+INSERT INTO `migrations` VALUES (28,'2023_04_28_045856_create_Kelas_table',1);
+INSERT INTO `migrations` VALUES (29,'2023_04_28_050116_create_Nilai_Mahasiswa_table',1);
+INSERT INTO `migrations` VALUES (30,'2023_04_28_050125_create_Detail_Nilai_Mahasiswa_table',1);
+INSERT INTO `migrations` VALUES (31,'2023_04_28_150159_create_Page_table',1);
+INSERT INTO `migrations` VALUES (32,'2023_11_19_121024_create_pustakas_table',1);
+INSERT INTO `migrations` VALUES (33,'2023_11_19_121913_create_prasyarat_table',1);
+INSERT INTO `migrations` VALUES (34,'2023_11_19_123339_detail_kelas',1);
+INSERT INTO `migrations` VALUES (35,'2023_11_19_142253_detail_pustaka_minggurps',1);
+INSERT INTO `migrations` VALUES (36,'2023_12_06_114407_create_pengampu_table',1);
+INSERT INTO `migrations` VALUES (37,'2023_12_10_090729_add_ects_atribut_to__mata__kuliah_table',1);
+INSERT INTO `migrations` VALUES (38,'2024_04_03_023724_create_detail_metode_minggurps_table',1);
+INSERT INTO `migrations` VALUES (39,'2024_04_03_024354_create_teknik_penilaian_rps',1);
+INSERT INTO `migrations` VALUES (40,'2024_04_03_030915_create_instrumen_penilaian_table',1);
+INSERT INTO `migrations` VALUES (41,'2024_04_30_080341_create_komponen_penilaians_table',1);
+INSERT INTO `migrations` VALUES (42,'2024_05_03_031001_add_id_instrumen_penilaian_to_minggurps',1);
