@@ -13,7 +13,7 @@ class Minggu_RPS extends Model
         "kodeMingguRPS",
         "id_rps",
         "id_teknik_penilaian",
-        "id_instrumen_penilaian",
+        "id_kriteria_penilaians",
         "id_komponen_penilaian",
         "bobot_nilai",
         "kodePenilaian",
