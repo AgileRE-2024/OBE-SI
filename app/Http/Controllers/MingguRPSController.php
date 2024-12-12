@@ -59,9 +59,11 @@ class MingguRPSController extends Controller
             ->where("kodeMK", $kodeMK)
             ->pluck("kodeCPMK")
             ->toArray();
+
         $subcpmk = SubCPMK::whereIn("kodeCPMK", $kodeCPMKList)
             ->distinct()
             ->get();
+
         $pustaka = Pustaka::all();
         $metode = Metode::all();
         $bentuk = Bentuk::all();
@@ -101,7 +103,6 @@ class MingguRPSController extends Controller
         $kodeMK = substr($kodeRPS, 0, 6);
 
         $request->validate([
-            "kodeSubCPMK" => "required",
             "bahan_kajian" => "required",
             "id_bentuk" => "required",
             "penugasan" => "required",
@@ -113,7 +114,7 @@ class MingguRPSController extends Controller
         ]);
 
         $data = [
-            "kodeSubCPMK" => $request->input("kodeSubCPMK"),
+            "kodeSubCPMK" => "Kode Placeholder",
             "bahan_kajian" => $request->input("bahan_kajian"),
             "id_bentuk" => $request->input("id_bentuk"),
             "penugasan" => $request->input("penugasan"),

@@ -320,7 +320,7 @@
             @if ($i == 6)
                 <tr>
                     <td class="td-rps">8</td>
-                    <td colspan="8" class="td-rps"> UTS </td>
+                    <td colspan="11" class="td-rps"> UTS </td>
                 </tr>
                 @php
                     $i += 1;
@@ -329,7 +329,7 @@
             @if ($i == 14)
                 <tr>
                     <td class="td-rps">16</td>
-                    <td colspan="8" class="td-rps"> UAS </td>
+                    <td colspan="11" class="td-rps"> UAS </td>
                 </tr>
             @endif
             @php
