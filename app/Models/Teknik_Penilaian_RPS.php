@@ -18,7 +18,6 @@ class Teknik_Penilaian_RPS extends Model
 
     public function Minggu_RPS()
     {
-        //relasi one to many
         return $this->hasMany(
             Minggu_RPS::class,
             "id_teknik_penilaian",

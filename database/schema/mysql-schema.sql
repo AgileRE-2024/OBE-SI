@@ -288,7 +288,7 @@ DROP TABLE IF EXISTS `kriteria_penilaians`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `kriteria_penilaians` (
   `id_kriteria_penilaians` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `nama_kriteria_penilaians` varchar(30) DEFAULT NULL,
+  `nama_kriteria_penilaians` varchar(50) DEFAULT NULL,
   `indikatorPenilaian` varchar(50) DEFAULT NULL,
   `deskripsi_kriteria_penilaians` varchar(200) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -389,7 +389,7 @@ CREATE TABLE `minggu_rps` (
   `bobot_nilai` text DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `id_instrumen_penilaian` int(10) unsigned DEFAULT NULL,
+  `id_kriteria_penilaians` int(10) unsigned DEFAULT NULL,
   `id_teknik_penilaian` int(10) unsigned DEFAULT NULL,
   `id_komponen_penilaian` bigint(20) unsigned DEFAULT NULL,
   PRIMARY KEY (`kodeMingguRPS`),
