@@ -282,31 +282,33 @@
                     @endif
                     </div>
                 </td>
+                <td class="td-rps">{{ $minggu_rps->SubCPMK->kodeSubCPMK ?? '' }}</td>
                 <td class="td-rps">{{ $minggu_rps->Media->nama_media ?? '' }}</td>
                 <td class="td-rps">{{ $minggu_rps->waktuPembelajaran ?? '' }}</td>
                 <td class="td-rps">{{ $minggu_rps->pengalaman_belajar ?? '' }}</td>
                 <!-- <td class="td-rps">
-@if ($minggu_rps->kodeSubCPMK)
+                    @if ($minggu_rps->kodeSubCPMK)
 <p>Kriteria penilaian:
-                            {{ $minggu_rps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
+                        {{ $minggu_rps->SubCPMK->kriteriaPenilaian ?? '-' }}</p>
                         <p>Indikator:
                             {{ $minggu_rps->SubCPMK->indikatorPenilaian ?? '-' }}</p>
 @endif
-                </td> -->
+                        </td> -->
                 <td class="td-rps">
                     @if ($minggu_rps->id_teknik_penilaian)
                         <p>Teknik penilaian:
                             {{ $minggu_rps->Teknik_Penilaian_RPS->nama_teknik_penilaian ?? '' }}
                         </p>
-                        <p>Instrumen penilaian:
-                            {{ $minggu_rps->Instrumen_Penilaian->nama_instrumen_penilaian ?? '' }}
+                        <p>Kriteria penilaian:
+                            {{ $minggu_rps->Kriteria_Penilaian->nama_kriteria_penilaians ?? '' }}
                         </p>
-                        <p>Bobot nilai: {{ $minggu_rps->bobot_nilai ?? '' }}</p>
                         <p>Komponen penilaian:
-                            {{ $minggu_rps->Komponen_Penilaian->nama_komponen_penilaian ?? '' }}
+                            {{ $minggu_rps->Kriteria_Penilaian->indikatorPenilaian ?? '' }}
                         </p>
                     @endif
                 </td>
+                <td class="td-rps">{{ $minggu_rps->bobot_nilai ? $minggu_rps->bobot_nilai . '%' : '' }} </td>
+
                 <td class="td-rps">
                     @if ($minggu_rps->PustakaMingguRPS)
                         @foreach ($minggu_rps->PustakaMingguRPS as $pmItem)

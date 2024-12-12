@@ -111,7 +111,6 @@ class RPSController extends Controller
             "title" => "RPS",
             "kodeMK" => $kodeMK,
             "mata_kuliah" => Mata_Kuliah::where("kodeMK", $kodeMK)->first(),
-            "title" => "RPS",
             "rps" => RPS::where("id_rps", $idRPS)->first(),
             "dosen" => $dosen,
             "minggu_rps_list" => Minggu_RPS::where("id_rps", $idRPS)->get(),
@@ -362,7 +361,7 @@ class RPSController extends Controller
                 ->back()
                 ->withErrors([
                     "kodeRPS" =>
-                        "Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.",
+                    "Kode RPS sudah digunakan untuk kodeMK dan tahun ajaran yang sama.",
                 ])
                 ->withInput();
         }

@@ -211,8 +211,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group" id="div_bobot"
-                                @if ($minggu_rps->id_teknik_penilaian == null) style="display:none" @endif>
+                            <div class="form-group" id="div_bobot">
                                 <label>Bobot Nilai (%)</label>
                                 @error('bobot_nilai')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
@@ -224,35 +223,20 @@
 
                             <div class="form-group" id="div_instrumen"
                                 @if ($minggu_rps->id_teknik_penilaian == null) style="display:none" @endif>
-                                <label>Instrumen Penilaian</label>
-                                @error('instrumen_penilaian')
+                                <label>Kriteria Penilaian</label>
+                                @error('kriteria_penilaian')
                                     <h6 style="color: #BF2C45">{{ $message }}</h6>
                                 @enderror
-                                <select name="instrumen_penilaian" id='instrumen_penilaian' class="form-select">
+                                <select name="kriteria_penilaian" id='kriteria_penilaian' class="form-select">
                                     <option value="" selected disabled>-- Pilih Instrumen Penilaian --</option>
-                                    @foreach ($instrumen_penilaian as $item)
-                                        <option value="{{ $item->id_instrumen_penilaian }}"
-                                            {{ $item->id_instrumen_penilaian == $minggu_rps->id_instrumen_penilaian ? 'selected' : '' }}>
-                                            {{ $item->nama_instrumen_penilaian }}</option>
+                                    @foreach ($kriteria_penilaian as $item)
+                                        <option value="{{ $item->id_kriteria_penilaians }}"
+                                            {{ $item->id_kriteria_penilaians == $minggu_rps->id_kriteria_penilaians ? 'selected' : '' }}>
+                                            {{ $item->nama_kriteria_penilaians }}</option>
                                     @endforeach
                                 </select>
                             </div>
 
-                            <div class="form-group" id="div_komponen"
-                                @if ($minggu_rps->id_teknik_penilaian == null) style="display:none" @endif>
-                                <label>Komponen Penilaian</label>
-                                @error('komponen_penilaian')
-                                    <h6 style="color: #BF2C45">{{ $message }}</h6>
-                                @enderror
-                                <select name="komponen_penilaian" id='komponen_penilaian' class="form-select">
-                                    <option value="" selected disabled>-- Pilih Komponen Penilaian --</option>
-                                    @foreach ($komponen_penilaian as $item)
-                                        <option value="{{ $item->id_komponen_penilaian }}"
-                                            {{ $item->id_komponen_penilaian == $minggu_rps->id_komponen_penilaian ? 'selected' : '' }}>
-                                            {{ $item->nama_komponen_penilaian }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
 
                             <div id="dynamicAddRemove">
                                 <div class="d-flex justify-content-between mb-2">
