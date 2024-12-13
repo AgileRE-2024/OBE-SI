@@ -62,11 +62,9 @@ class MingguRPSController extends Controller
             ->where("kodeMK", $kodeMK)
             ->pluck("kodeCPMK")
             ->toArray();
-
         $subcpmk = SubCPMK::whereIn("kodeCPMK", $kodeCPMKList)
             ->distinct()
             ->get();
-
         $pustaka = Pustaka::all();
         $metode = Metode::all();
         $bentuk = Bentuk::all();
@@ -120,6 +118,7 @@ class MingguRPSController extends Controller
                 "bobot_nilai" => "nullable",
             ]);
 
+
             $data = [
                 "kodeSubCPMK" => $request->input("kodeSubCPMK"),
                 "bahan_kajian" => $request->input("bahan_kajian"),
@@ -131,12 +130,8 @@ class MingguRPSController extends Controller
                 "pengalaman_belajar" => $request->input("pengalaman_belajar"),
                 "bobot_nilai" => $request->input("bobot_nilai"),
                 "id_teknik_penilaian" => $request->input("teknik_penilaian"),
-                "id_kriteria_penilaians" => $request->input(
-                    "kriteria_penilaian"
-                ),
-                "id_komponen_penilaian" => $request->input(
-                    "komponen_penilaian"
-                ),
+                "id_kriteria_penilaians" => $request->input("kriteria_penilaian"),
+                "id_komponen_penilaian" => $request->input("komponen_penilaian"),
             ];
 
             Minggu_RPS::where("kodeMingguRPS", $kodeMingguRPS)->update($data);
@@ -181,7 +176,9 @@ class MingguRPSController extends Controller
                 ->with("success", "Minggu RPS berhasil diedit");
         } catch (\Exception $e) {
             Log::error($e->getMessage());
-            return redirect()->back()->with("error", "Minggu RPS gagal diedit");
+            return redirect()
+                ->back()
+                ->with("error", "Minggu RPS gagal diedit");
         }
     }
 }

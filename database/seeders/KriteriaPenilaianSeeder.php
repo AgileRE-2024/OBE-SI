@@ -15,144 +15,122 @@ class KriteriaPenilaianSeeder extends Seeder
      */
     public function run()
     {
-        // Pemahaman Materi Sistem Berbasis Pengetahuan
+        // Sistem Berbasis Pengetahuan
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Pemahaman Materi Sistem Berbasis Pengetahuan",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Pemahaman materi, kejelasan dalam memahami tugas, keaktifan dalam mengerjakan dan diskusi."
+            "id_kriteria_penilaians" => "1",
+            "nama_kriteria_penilaians" => "Kriteria SBP",
+            "indikatorPenilaian" => "Indikator SBP",
+            "deskripsi_kriteria_penilaians" =>
+                "Pemahaman materi, kejelasan dalam memahami tugas, keaktifan dalam mengerjakan dan diskusi",
         ]);
 
-        // Menjelaskan Fungsi dan Komponen Proses Bisnis
+        //FPB Praktikum
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Menjelaskan Fungsi dan Komponen Proses Bisnis",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan menjelaskan fungsi proses bisnis dan menguraikan komponen-komponen bisnis."
+            "id_kriteria_penilaians" => "2",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan : 1. Menjelaskan fungsi proses bisnis Menguraikan komponen-komponen bisnis",
         ]);
 
-        // Proses Bisnis Umum dalam Organisasi
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Proses Bisnis Umum dalam Organisasi",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan menjelaskan dan menguraikan tentang proses bisnis umum dalam organisasi, termasuk human resource, produksi, marketing, dan keuangan."
+            "id_kriteria_penilaians" => "3",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan : Menjelaskan dan menguraikan tentang proses bisnis umum dalam organisasi mengenai human resource, produksi, marketing, dan keuangan",
         ]);
 
-        // Identifikasi Proses Bisnis Perusahaan
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Identifikasi Proses Bisnis Perusahaan",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan mengidentifikasi proses bisnis perusahaan seperti aplikasi bisnis, rencana bisnis, sistem yang ada, pernyataan misi, sifat bisnis, serta jaringan atau orang-orang dalam organisasi."
+            "id_kriteria_penilaians" => "4",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan : Mengidentifikasi proses bisnis perusahaan a. Aplikasi bisnis b. Rencana bisnis c. Sistem yang ada d. Pernyataan misi e. Sifat bisnis f. Jaringan atau orang-orang dalam organisasi",
         ]);
 
-        // Kemampuan Operasi Matriks Dasar
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Kemampuan Operasi Matriks Dasar",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan menghitung penjumlahan, pengurangan, perkalian, determinan, inverse matriks, dan menghitung eigen value serta eigen vector."
+            "id_kriteria_penilaians" => "5",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan menghitung penjumlahan , pengurangan, perkalian dan kesamaan dua matriks",
         ]);
 
-        // Pemahaman Transformasi Linier
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Pemahaman Transformasi Linier",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan memahami pengertian transformasi linier, syarat transformasi linier, dan menyajikan transformasi linier."
+            "id_kriteria_penilaians" => "6",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan menghitung determinan menggunakan sifat-sifat matrix",
         ]);
 
-        // Sikap Curiosity dan Berpikir Kritis
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Sikap Curiosity dan Berpikir Kritis",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Menunjukkan sikap curiosity, disiplin, teliti, dan berpikir kritis dalam pembelajaran."
+            "id_kriteria_penilaians" => "7",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan menghitung Determinan pada ordo 3x3",
         ]);
 
-        // Kemampuan Komunikasi dan Kolaborasi
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Kemampuan Komunikasi dan Kolaborasi",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Mahasiswa mampu menjelaskan konsep komunikasi, proses komunikasi, kerjasama interdisipliner, dan aktif bertanya."
+            "id_kriteria_penilaians" => "8",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan mengolah data dari inverse matriks",
         ]);
 
-        // Partisipasi dalam Evaluasi dan Diskusi
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Partisipasi dalam Evaluasi dan Diskusi",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Mahasiswa aktif bertanya, mampu memberikan pendapat, dan menghasilkan produk luaran project."
+            "id_kriteria_penilaians" => "9",
+            "deskripsi_kriteria_penilaians" =>
+                "Menggunakan ekspansi laplace utk ordo nxn",
         ]);
 
-        // Kreativitas dalam Penyelesaian Masalah
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Kreativitas dalam Penyelesaian Masalah",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan menghasilkan solusi kreatif dan inovatif terhadap masalah yang diberikan."
+            "id_kriteria_penilaians" => "10",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan mahasiswa menyelesaikan matriks menghitung baris elementer",
         ]);
 
-        // Pengelolaan Waktu dan Tugas
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Pengelolaan Waktu dan Tugas",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan mengelola waktu dengan baik untuk menyelesaikan tugas secara tepat waktu dan efisien."
+            "id_kriteria_penilaians" => "11",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan mahasiswa menghitung, SPL",
         ]);
 
-        // Kemampuan Analisis Data
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Kemampuan Analisis Data",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan menganalisis data secara kuantitatif maupun kualitatif sesuai dengan kebutuhan tugas."
+            "id_kriteria_penilaians" => "12",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan menghitung Eigen Value dan Eigen Vektor",
         ]);
 
-        // Pemahaman Konsep Dasar Pemrograman
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Pemahaman Konsep Dasar Pemrograman",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Pemahaman terhadap konsep dasar pemrograman seperti variabel, logika, dan alur kontrol."
+            "id_kriteria_penilaians" => "13",
+            "deskripsi_kriteria_penilaians" =>
+                "Kemampuan memahami pengertian transformasi linier, syarat transformasi linier, dan menyajikan transformasi liner",
         ]);
 
-        // Kolaborasi dalam Tim
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Kolaborasi dalam Tim",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan bekerja sama dengan anggota tim untuk mencapai tujuan bersama."
+            "id_kriteria_penilaians" => "14",
+            "deskripsi_kriteria_penilaians" =>
+                "1. Menunjukkan sikap curiousity, disiplin, teliti dan berpikir kritis dalam pembelajaran.",
         ]);
 
-        // Kemampuan Menggunakan Teknologi Terkini
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Kemampuan Menggunakan Teknologi Terkini",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan menggunakan teknologi atau perangkat lunak terkini yang relevan dengan tugas yang diberikan."
+            "id_kriteria_penilaians" => "15",
+            "deskripsi_kriteria_penilaians" =>
+                "Kriteria penilaian Tes MC, menjawab evaluasi secara langsung 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat.",
         ]);
 
-        // Pemahaman Dasar-dasar Jaringan Komputer
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Pemahaman Dasar-dasar Jaringan Komputer",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Pemahaman dasar tentang jaringan komputer, termasuk topologi, protokol, dan konsep konektivitas."
+            "id_kriteria_penilaians" => "16",
+            "deskripsi_kriteria_penilaians" =>
+                "1. Mahasiswa mampu menjelaskan konsep komunikasi 2. Proses komunikasi dan kerjasama interdisipliner 3. Mahasiswa aktif bertanya.",
         ]);
 
-        // Kesiapan Menghadapi Perubahan
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Kesiapan Menghadapi Perubahan",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan beradaptasi terhadap perubahan situasi dan kondisi selama proses pembelajaran."
+            "id_kriteria_penilaians" => "17",
+            "deskripsi_kriteria_penilaians" =>
+                "Kriteria penilaian Tes MC 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat.",
         ]);
 
-        // Penerapan Konsep Logika Matematika
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Penerapan Konsep Logika Matematika",
-            "indikatorPenilaian" => "Hard Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan menerapkan konsep logika matematika dalam pemecahan masalah."
+            "id_kriteria_penilaians" => "18",
+            "deskripsi_kriteria_penilaians" =>
+                "Kriteria penilaian Tes MC dan Quiz 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat.",
         ]);
 
-        // Penguasaan Bahasa Inggris Teknis
         Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Penguasaan Bahasa Inggris Teknis",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan memahami dan menggunakan bahasa Inggris dalam konteks teknis dan profesional."
-        ]);
-
-        // Pemanfaatan Sumber Belajar Online
-        Kriteria_Penilaian::create([
-            "nama_kriteria_penilaians" => "Pemanfaatan Sumber Belajar Online",
-            "indikatorPenilaian" => "Soft Skill",
-            "deskripsi_kriteria_penilaians" => "Kemampuan memanfaatkan sumber belajar online seperti e-book, video tutorial, dan forum diskusi untuk mendukung pembelajaran."
+            "id_kriteria_penilaians" => "19",
+            "deskripsi_kriteria_penilaians" =>
+                "Kriteria penilaian Tes MC, output project 1. Mahasiswa aktif bertanya. 2. Mahasiswa mampu memberikan pendapat. 3. Produk luaran project",
         ]);
     }
 }
