@@ -20,6 +20,11 @@ class Learning_Outcomes extends Model
         return $this->hasMany(CPMK::class, "levelCPMK", "id");
     }
 
+    public function subcpmk()
+    {
+        return $this->hasMany(SubCPMK::class, "levelSubCPMK", "id");
+    }
+
     public function verbs()
     {
         return $this->hasMany(Verbs::class, "level_lo", "id");

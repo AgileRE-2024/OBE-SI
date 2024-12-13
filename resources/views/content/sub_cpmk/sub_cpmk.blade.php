@@ -32,16 +32,29 @@
         </div>
 
         <br>
+
+        @if ($cpmkWithIssues)
+            <div class="alert alert-warning">
+                <strong>Warning:</strong> The following CPMKs have no Sub CPMK with a matching level:
+                <ul>
+                    @foreach ($cpmkWithIssues as $cpmk)
+                        <li>{{ $cpmk }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="d-flex">
             <table class="table table-bordered" style="text-align: center">
                 <thead class="table" style="background-color: lightgray">
                     <tr>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 5%">No</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Kode Sub CPMK</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 15%">Level Sub CPMK</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Deskripsi Sub CPMK</th>
-                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode CPMK</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Kriteria Penilaian</th>
                         <th class="align-middle" scope="col" rowspan="2" style="width: 25%">Indikator Penilaian</th>
+                        <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Kode CPMK</th>
                         @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                             <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Edit</th>
                             <th class="align-middle" scope="col" rowspan="2" style="width: 10%">Delete</th>
@@ -57,19 +70,22 @@
                             <td scope="row">
                                 {{ $subcpmk->kodeSubCPMK }}
                             </td>
+                            <td scope="row">
+                                {{ optional($subcpmk->lo)->names }}
+                            </td>
                             <td scope="row"
                                 style="word-break: break-word;
                             max-width: 150px;">
                                 {{ $subcpmk->deskripsiSubCPMK }}
                             </td>
                             <td scope="row">
-                                {{ $subcpmk->kodeCPMK }}
-                            </td>
-                            <td scope="row">
                                 {{ $subcpmk->kriteriaPenilaian }}
                             </td>
                             <td scope="row">
                                 {{ $subcpmk->indikatorPenilaian }}
+                            </td>
+                            <td scope="row">
+                                {{ $subcpmk->kodeCPMK }}
                             </td>
                             @if (auth()->user()->role == 1 || auth()->user()->role == 3)
                                 <td scope="row">

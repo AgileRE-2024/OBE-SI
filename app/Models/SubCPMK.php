@@ -11,12 +11,18 @@ class SubCPMK extends Model
     protected $table = "subcpmk";
     protected $fillable = [
         "kodeSubCPMK",
+        "levelSubCPMK",
         "deskripsiSubCPMK",
-        "kodeCPMK",
         "kriteriaPenilaian",
         "indikatorPenilaian",
+        "kodeCPMK",
         "deleted_at",
     ];
+
+    public function lo()
+    {
+        return $this->belongsTo(Learning_Outcomes::class, "levelSubCPMK", "id");
+    }
 
     public function CPMK()
     {
