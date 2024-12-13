@@ -62,5 +62,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DetailPustakaMingguRpsSeeder::class);
         $this->call(LOSeeder::class);
         $this->call(VerbSeeder::class);
+        $this->call(TeknikPenilaianRPSSeeder::class);
     }
 }
