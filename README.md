@@ -24,7 +24,7 @@ Tools yang perlu diinstal adalah PHP Version minimal 8.4, XAMPP, Composer, dan n
 2. Setelah tools telah terpasang secara sempurna, masuk ke dalam direktori xampp yang dimana file tersebut disimpan saat dilakukan penginstallan pertama kali
 3. Buatlah sebuah folder dengan nama bebas dan masuk ke dalam direktori folder baru tersebut
 4. Klik kanan dan pilih Open in Terminal
-5. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git"
+5. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AgileRE-2024/OBE-SI.git"
 6. Selanjutnya, ketik masuk ke folder OBE-SI dan ketik "composer install"
 7. Selanjutnya, ketik "npm install"
 8. Lalu, ketik "cp .env.example .env"
