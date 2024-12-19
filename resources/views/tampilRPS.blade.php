@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>RPS</title>
+        <title>RPP</title>
         <style>
             table {
                 width: 100%;
@@ -60,7 +60,7 @@
                         width="75" height="75"><br>Universitas Airlangga</th>
                 </td>
                 <td class="td-rps" colspan="2">
-                    Rencana Pembelajaran Semester
+                    Rencana Program Pembelajaran
                 </td>
                 <td class="td-rps">
                     Disiapkan oleh
@@ -79,7 +79,7 @@
 
             <tr>
                 <td class="td-rps" colspan="2">
-                    RPS
+                    RPP
                 </td>
                 <td class="td-rps">
                     PJMK

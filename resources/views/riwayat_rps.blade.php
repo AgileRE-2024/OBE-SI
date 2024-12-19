@@ -5,7 +5,7 @@
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>Riwayat RPS</h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Riwayat RPS matakuliah {{ $mk->namaMK }}<b
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Riwayat RPP matakuliah {{ $mk->namaMK }}<b
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <table class="table table-bordered" style="text-align: center">
                 <thead style="background-color: lightgray">
                     <tr>
-                        <th class="align-middle" rowspan="2" style="width: 5%">Kode RPS</th>
+                        <th class="align-middle" rowspan="2" style="width: 5%">Kode RPP</th>
                         <th class="align-middle" rowspan="2" style="width: 15%">Mata Kuliah</th>
                         <th class="align-middle" rowspan="2" style="width: 10%">Tahun</th>
                         <th class="align-middle" rowspan="2" style="width: 10%">Semester</th>

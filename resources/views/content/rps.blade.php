@@ -7,8 +7,8 @@
         <br><br>
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
-                <h3>Rencana Pembelajaran Semester (RPS)</h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>RPS merupakan dokumen program pembelajaran
+                <h3>Rencana Pembelajaran Semester (RPP)</h3>
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>RPP merupakan dokumen program pembelajaran
                     yang dirancang untuk menghasilkan lulusan yang memiliki kemampuan sesuai CPL yang telah ditetapkan,
                     sehingga harus dapat dijalankan oleh mahasiswa pada setiap tahapan belajar pada mata kuliah terkait.<b
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
@@ -110,7 +110,7 @@
                 @endphp
                 <tr>
                     <th style="text-align: left;" colspan="2" rowspan="2" style="width: 25%">Pengesahan</th>
-                    <th style="text-align: left;" colspan="2">Dosen Pengembang RPS</th>
+                    <th style="text-align: left;" colspan="2">Dosen Pengembang RPP</th>
                     <th style="text-align: left;" colspan="1">Koordinator BK</th>
                     <th style="text-align: left;" colspan="3">Ka Prodi</th>
                 </tr>
@@ -135,7 +135,7 @@
                             {{ $dosen->namaDosen }}
                         @else
                             <div class="alert alert-warning">
-                                Tambahkan Dosen Pengembang RPS
+                                Tambahkan Dosen Pengembang RPP
                             </div>
                         @endif
 

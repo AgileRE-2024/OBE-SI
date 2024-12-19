@@ -7,7 +7,7 @@
         <div class="card border" style="background-color: white">
             <div class="card-body" style="font-weight:600;">
                 <h3>Mata Kuliah</h3>
-                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Identitas mata kuliah RPS<b
+                <h5 style="font-weight: 400;"><b><i class="bi bi-quote"></i></b>Identitas mata kuliah RPP<b
                         style="display:inline-block;transform: scaleX(-1)"><i class="bi bi-quote"></i></b></h5>
             </div>
         </div>
