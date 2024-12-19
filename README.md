@@ -41,7 +41,7 @@ Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
 2. Role Admin (role=2) merupakan role yang mempunyai hak untuk melihat semua fitur yang ada tanpa terlibat dengan Create, Update, dan Delete pada fitur tersebut.
 3. Role Kurikulum (Role=1) merupakan role yang mempunyai hak untuk melakukan Create, Update, dan Delete pada fitur kurikulum.
 4. Role Dosen (Role=0) merupakan role yang mempunyai hak untuk melakukan Create dab Update pada fitur RPS
-5. Username menggunakan nip dan password yang digunakan telah diencrypt yakni coba123 (Pak Indra role Dosen dan Pak Badrus role Kurikulum)
+5. Username menggunakan nip dan password yang digunakan telah diencrypt yakni coba123 atau coba 1234 (Pak Indra role Dosen dan Pak Badrus role Kurikulum)
 
 ### Langkah-langkah pengujian BDD
 
