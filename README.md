@@ -27,12 +27,13 @@ Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
 5. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git"
 6. Selanjutnya, ketik masuk ke folder OBE-SI dan ketik "composer install"
 7. Lalu, ketik "cp .env.example .env"
-8. Buat DB_CONNECTION dalam .env menjadi sqlite, dan commentar kan env DB lainnya
+8. Ubah DB_DATABASE, DB_USERNAME, dan DB_PASSWORD sesuai Database yang diinginkan
 9. Lalu, ketik "php artisan key:generate"
-10. Ketik "php artisan migrate:fresh --seed"
-11. Ketik "php artisan serve"
-12. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000"
-13. Jika terdapat pesan error, coba jalankan "php artisan optimize"
+10. Ketik "php artisan migrate"
+11. Ketik "php artisan db:seed"
+12. Ketik "php artisan serve"
+13. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000"
+14. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 
 ### Langkah-langkah Penggunaan
 
