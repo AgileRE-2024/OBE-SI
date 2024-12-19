@@ -18,7 +18,7 @@ Project ini merupakan sistem informasi untuk kurikulum program studi Sistem Info
 
 ### Petunjuk Instalasi
 
-Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
+Tools yang perlu diinstal adalah PHP Version minimal 8.4, XAMPP, Composer, dan npm.
 
 1. Aktifkan XAMPP dengan membuka XAMPP Control Panel. Tekan tombol "Start" pada module Apache dan MySQL.
 2. Setelah tools telah terpasang secara sempurna, masuk ke dalam direktori xampp yang dimana file tersebut disimpan saat dilakukan penginstallan pertama kali
@@ -26,14 +26,17 @@ Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
 4. Klik kanan dan pilih Open in Terminal
 5. Melakukan clone project GitHub melalui CMD atau terminal dan ketik "git clone https://github.com/AirlanggaOBE/OBE-SI.git"
 6. Selanjutnya, ketik masuk ke folder OBE-SI dan ketik "composer install"
-7. Lalu, ketik "cp .env.example .env"
-8. Ubah DB_DATABASE, DB_USERNAME, dan DB_PASSWORD sesuai Database yang diinginkan
-9. Lalu, ketik "php artisan key:generate"
-10. Ketik "php artisan migrate"
-11. Ketik "php artisan db:seed"
-12. Ketik "php artisan serve"
-13. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000"
-14. Jika terdapat pesan error, coba jalankan "php artisan optimize"
+7. Selanjutnya, ketik "npm install"
+8. Lalu, ketik "cp .env.example .env"
+9. Ubah DB_DATABASE, DB_USERNAME, dan DB_PASSWORD sesuai Database yang diinginkan
+10. Lalu, ketik "php artisan key:generate"
+11. Ketik "php artisan migrate"
+12. Ketik "php artisan db:seed"
+13. Ketik "npm run dev"
+14. Buka terminal baru di folder lokasi yang sama
+15. Ketik "php artisan serve"
+16. Lalu, aplikasi sudah berjalan dan melakukan pencarian di browser "http://127.0.0.1:8000"
+17. Jika terdapat pesan error, coba jalankan "php artisan optimize"
 
 ### Langkah-langkah Penggunaan
 
