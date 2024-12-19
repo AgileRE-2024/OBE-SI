@@ -389,7 +389,7 @@ CREATE TABLE `minggu_rps` (
   `bobot_nilai` text DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `id_kriteria_penilaians` int(10) unsigned DEFAULT NULL,
+  `id_instrumen_penilaian` int(10) unsigned DEFAULT NULL,
   `id_teknik_penilaian` int(10) unsigned DEFAULT NULL,
   `id_komponen_penilaian` bigint(20) unsigned DEFAULT NULL,
   PRIMARY KEY (`kodeMingguRPS`),

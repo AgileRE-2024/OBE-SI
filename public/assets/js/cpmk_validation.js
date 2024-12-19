@@ -30,6 +30,22 @@ function onCplSelected(selectElement) {
     }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const cplDropdown = document.getElementById("kodeCPL");
+    const selectedCPL = cplDropdown.value; // Check if a CPL is already selected
+
+    if (selectedCPL) {
+        // Trigger onCPMKSelected with the currently selected CPL
+        onCplSelected(cplDropdown);
+    }
+
+    // Ensure other fields are validated and updated
+    const levelCPMKDropdown = document.getElementById("levelCPMK");
+    if (levelCPMKDropdown.value) {
+        validateDescription();
+    }
+});
+
 function updateInput(input) {
     var uppercaseValue = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, "");
 
