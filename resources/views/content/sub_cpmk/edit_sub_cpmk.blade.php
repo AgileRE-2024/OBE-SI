@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <label for="cplLevel">Level CPMK</label>
                         <input type="text" id="cplLevel" name="cplLevel" class="form-control" disabled
-                            value="{{ $subcpmk->CPMK->lo->names }}">
+                            value="{{ optional($subcpmk->CPMK->lo)->names }}">
                     </div>
 
                     <div class="form-group">
